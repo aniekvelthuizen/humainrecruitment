@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HumAIn Recruitment — Vacancy Overview Wireframe</title>
+<style>
+  /* ============================================================
+     HumAIn Recruitment — Vacancy Overview WIREFRAME (low-fi, grayscale)
+     Structure adapted from BYBD vacancy overview (filter sidebar +
+     results grid + load more), tuned to HumAIn's positioning.
+     Shares the homepage wireframe style system.
+     ============================================================ */
+
+  :root {
+    --ink:        #18181b;   /* headings / primary */
+    --ink-2:      #3f3f46;   /* strong body */
+    --body:       #52525b;   /* body text */
+    --muted:      #71717a;   /* secondary text */
+    --line:       #d4d4d8;   /* borders */
+    --line-2:     #e4e4e7;   /* light borders */
+    --bg:         #ffffff;
+    --bg-2:       #f4f4f5;   /* section tint */
+    --bg-3:       #ececee;   /* placeholder fill */
+    --radius:     10px;
+    --maxw:       1180px;
+    --ph:         repeating-linear-gradient(135deg, #e7e7ea 0 12px, #efeff1 12px 24px);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--body);
+    background: var(--bg);
+    line-height: 1.55;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 { color: var(--ink); line-height: 1.15; margin: 0 0 .5em; font-weight: 700; letter-spacing: -.02em; }
+  h1 { font-size: clamp(2rem, 4.5vw, 3.3rem); }
+  h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); }
+  h3 { font-size: 1.15rem; }
+  p { margin: 0 0 1rem; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+  section { padding: 72px 0; }
+  .tint { background: var(--bg-2); }
+  .eyebrow {
+    display: inline-block; font-size: .72rem; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--muted); font-weight: 700;
+    border: 1px solid var(--line); border-radius: 100px; padding: 4px 12px; margin-bottom: 16px;
+  }
+  .lead { font-size: 1.08rem; color: var(--ink-2); max-width: 56ch; }
+  .center { text-align: center; }
+  .center .lead { margin-left: auto; margin-right: auto; }
+
+  /* ---- Buttons ---- */
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-weight: 600; font-size: .95rem; padding: 13px 22px;
+    border-radius: 8px; border: 1.5px solid var(--ink); cursor: pointer;
+    transition: transform .12s ease, background .15s ease, color .15s ease;
+    background: var(--ink); color: #fff;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn .arr { transition: transform .15s ease; }
+  .btn:hover .arr { transform: translateX(4px); }
+  .btn--ghost { background: transparent; color: var(--ink); }
+  .btn--ghost:hover { background: var(--ink); color: #fff; }
+  .btn--light { background: #fff; color: var(--ink); border-color: var(--line); }
+  .btn--sm { padding: 9px 16px; font-size: .85rem; }
+  .link-arr { font-weight: 600; color: var(--ink); display: inline-flex; gap: 6px; align-items: center; }
+  .link-arr .arr { transition: transform .15s ease; }
+  .link-arr:hover .arr { transform: translateX(4px); }
+
+  /* ---- Placeholder image box (wireframe style) ---- */
+  .ph {
+    background: var(--ph); border: 1px solid var(--line);
+    border-radius: var(--radius); position: relative;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--muted); font-size: .8rem; min-height: 220px; overflow: hidden;
+  }
+  .ph::after {
+    content: attr(data-label); position: absolute;
+    background: rgba(255,255,255,.85); border: 1px solid var(--line);
+    border-radius: 6px; padding: 4px 10px; font-size: .72rem; letter-spacing: .05em;
+    color: var(--muted); text-transform: uppercase;
+  }
+  .ph--icon { min-height: 0; width: 48px; height: 48px; border-radius: 10px; flex: 0 0 auto; }
+  .ph--icon::after { content: "◇"; font-size: 1.1rem; background: none; border: none; padding: 0; }
+
+  /* ===========================================================
+     HEADER  (identical to homepage)
+     =========================================================== */
+  header.site {
+    position: sticky; top: 0; z-index: 60; background: rgba(255,255,255,.92);
+    backdrop-filter: blur(8px); border-bottom: 1px solid var(--line-2);
+    transition: box-shadow .2s ease;
+  }
+  header.site.scrolled { box-shadow: 0 6px 24px rgba(0,0,0,.06); }
+  .nav { display: flex; align-items: center; gap: 28px; height: 70px; }
+  .logo { display: flex; align-items: baseline; gap: 7px; font-weight: 800; color: var(--ink); font-size: 1.25rem; letter-spacing: -.03em; }
+  .logo .logo-sub { font-weight: 500; font-size: .82rem; letter-spacing: .02em; color: var(--muted); }
+  .nav-links { display: flex; gap: 4px; margin-left: 8px; padding: 0; }
+  .nav-links > li { position: relative; list-style: none; }
+  .nav-links > li > a, .nav-links > li > button {
+    display: inline-flex; align-items: center; gap: 5px; background: none; border: 0;
+    font: inherit; color: var(--ink-2); font-weight: 500; font-size: .92rem;
+    padding: 10px 12px; border-radius: 7px; cursor: pointer;
+  }
+  .nav-links > li > a:hover, .nav-links > li > button:hover,
+  .nav-links > li > a.active { background: var(--bg-2); color: var(--ink); }
+  .caret { width: 7px; height: 7px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg) translate(-1px,-1px); transition: transform .2s; }
+  .has-drop[aria-expanded="true"] .caret { transform: rotate(225deg); }
+  .dropdown {
+    position: absolute; top: calc(100% + 6px); left: 0; min-width: 230px;
+    background: #fff; border: 1px solid var(--line); border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0,0,0,.08); padding: 8px; display: none;
+  }
+  .dropdown.open { display: block; }
+  .dropdown a { display: block; padding: 9px 12px; border-radius: 7px; font-size: .9rem; color: var(--ink-2); }
+  .dropdown a:hover { background: var(--bg-2); color: var(--ink); }
+  .dropdown a small { display: block; color: var(--muted); font-size: .78rem; font-weight: 400; }
+
+  /* ---- Mega menu (Jobs) ---- */
+  .dropdown.mega { width: min(980px, calc(100vw - 48px)); min-width: 0; left: 0; padding: 0; overflow: hidden; }
+  .dropdown.mega .mega-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px 28px; padding: 26px 30px 20px; }
+  .dropdown.mega .mega-col h4 { color: var(--ink); font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin: 0 0 8px; }
+  .dropdown.mega .mega-col a { display: block; padding: 6px 0; font-size: .9rem; color: var(--ink-2); border-radius: 0; }
+  .dropdown.mega .mega-col a:hover { background: none; color: var(--ink); }
+  .dropdown.mega .soon { color: var(--muted); border-color: var(--line); }
+  .dropdown.mega .mega-foot { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 15px; background: var(--bg-2); border-top: 1px solid var(--line-2); font-weight: 600; color: var(--ink); font-size: .92rem; border-radius: 0; }
+  .dropdown.mega .mega-foot:hover { background: var(--bg-3); color: var(--ink); }
+  .dropdown.mega .mega-foot .arr { transition: transform .15s ease; }
+  .dropdown.mega .mega-foot:hover .arr { transform: translateX(4px); }
+
+  .nav-right { margin-left: auto; display: flex; align-items: center; gap: 14px; }
+  .lang { display: flex; border: 1px solid var(--line); border-radius: 7px; overflow: hidden; }
+  .lang button { background: #fff; border: 0; padding: 7px 11px; font: inherit; font-size: .8rem; font-weight: 600; color: var(--muted); cursor: pointer; }
+  .lang button.active { background: var(--ink); color: #fff; }
+  .burger { display: none; flex-direction: column; gap: 4px; background: none; border: 0; cursor: pointer; padding: 8px; }
+  .burger span { width: 22px; height: 2px; background: var(--ink); border-radius: 2px; transition: .2s; }
+
+  /* ===========================================================
+     PAGE HEAD (compact hero + search)
+     =========================================================== */
+  /* breadcrumb bar — sits flush under the sticky nav */
+  .breadcrumb-bar { border-bottom: 1px solid var(--line-2); background: var(--bg); }
+  .breadcrumb { font-size: .8rem; color: var(--muted); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; padding: 10px 0; }
+  .breadcrumb a:hover { color: var(--ink); }
+  .breadcrumb .sep { opacity: .6; }
+
+  .page-head { position: relative; border-bottom: 1px solid var(--line-2); overflow: hidden; }
+  .page-head-bg { position: absolute; inset: 0; background: var(--ph); }
+  .page-head-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(248,248,249,.97) 0%, rgba(248,248,249,.86) 48%, rgba(248,248,249,.55) 100%); }
+  .page-head-inner { position: relative; padding: 52px 0 60px; }
+  .page-head h1 { max-width: 18ch; margin-bottom: .35em; }
+  .page-head .lead { margin-bottom: 26px; }
+
+  /* search bar (same system as homepage) */
+  .search {
+    background: #fff; border: 1px solid var(--line); border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.06); padding: 10px;
+    display: grid; grid-template-columns: 1.6fr 1fr 1fr auto; gap: 8px; max-width: 940px;
+  }
+  .search .field { display: flex; flex-direction: column; padding: 6px 12px; border-radius: 8px; }
+  .search .field + .field { border-left: 1px solid var(--line-2); }
+  .search label { font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 700; margin-bottom: 2px; }
+  .search .control { display: flex; align-items: center; gap: 8px; color: var(--ink); font-size: .92rem; }
+  .search input, .search select { border: 0; outline: 0; font: inherit; color: var(--ink); background: none; width: 100%; padding: 2px 0; }
+  .search .btn { justify-content: center; }
+
+  /* ===========================================================
+     RESULTS LAYOUT — sidebar + grid
+     =========================================================== */
+  .listing { padding: 44px 0 80px; }
+  .listing-grid { display: grid; grid-template-columns: 280px 1fr; gap: 40px; align-items: start; }
+
+  /* --- filter sidebar --- */
+  .filters { }
+  .filter-search { display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 8px; padding: 9px 12px; background: #fff; margin-bottom: 16px; }
+  .filter-search input { border: 0; outline: 0; font: inherit; font-size: .9rem; color: var(--ink); background: none; width: 100%; }
+  .filter-search input::placeholder { color: var(--muted); }
+  .filter-search .ico { color: var(--muted); flex: 0 0 auto; font-size: .95rem; }
+  .filters-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+  .filters-head h2 { font-size: 1.1rem; margin: 0; }
+  .filters-head .reset { font-size: .82rem; color: var(--muted); font-weight: 600; cursor: pointer; }
+  .filters-head .reset:hover { color: var(--ink); text-decoration: underline; }
+  .fgroup { border-top: 1px solid var(--line-2); padding: 6px 0; }
+  .fgroup:first-of-type { border-top: 0; }
+  .fgroup > summary {
+    list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 2px; font-weight: 700; color: var(--ink); font-size: .9rem; letter-spacing: -.01em;
+  }
+  .fgroup > summary::-webkit-details-marker { display: none; }
+  .fgroup > summary .chev { width: 8px; height: 8px; border-right: 1.5px solid var(--muted); border-bottom: 1.5px solid var(--muted); transform: rotate(45deg); transition: transform .2s; margin-right: 4px; }
+  .fgroup[open] > summary .chev { transform: rotate(225deg); }
+  .fopts { display: flex; flex-direction: column; gap: 2px; padding: 2px 2px 12px; }
+  .fopt { display: flex; align-items: center; gap: 9px; font-size: .88rem; color: var(--ink-2); cursor: pointer; padding: 5px 0; }
+  .fopt input { width: 15px; height: 15px; accent-color: var(--ink); cursor: pointer; flex: 0 0 auto; }
+  .fopt .count { margin-left: auto; font-size: .78rem; color: var(--muted); }
+  .fopt:hover { color: var(--ink); }
+  .filters-apply { display: none; }
+
+  /* salary range (visual slider placeholder) */
+  .range-wrap { padding: 6px 2px 14px; }
+  .range-track { position: relative; height: 4px; background: var(--line); border-radius: 4px; margin: 18px 4px; }
+  .range-fill { position: absolute; left: 22%; right: 28%; top: 0; bottom: 0; background: var(--ink); border-radius: 4px; }
+  .range-knob { position: absolute; top: 50%; width: 16px; height: 16px; background: #fff; border: 2px solid var(--ink); border-radius: 50%; transform: translate(-50%,-50%); }
+  .range-vals { display: flex; justify-content: space-between; font-size: .8rem; color: var(--muted); }
+
+  /* --- results column --- */
+  .results-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 18px; }
+  .results-bar .count { font-size: .92rem; color: var(--ink-2); }
+  .results-bar .count b { color: var(--ink); }
+  .results-tools { display: flex; align-items: center; gap: 12px; }
+  .sort { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); }
+  .sort select { font: inherit; font-size: .85rem; color: var(--ink); border: 1px solid var(--line); background: #fff; border-radius: 7px; padding: 7px 10px; cursor: pointer; }
+  .filters-toggle { display: none; }
+
+  /* active filter chips */
+  .active-chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px; }
+  .achip { display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--line); background: #fff; border-radius: 100px; padding: 6px 8px 6px 13px; font-size: .8rem; font-weight: 600; color: var(--ink-2); }
+  .achip button { border: 0; background: var(--bg-2); color: var(--muted); width: 18px; height: 18px; border-radius: 50%; cursor: pointer; font-size: .85rem; line-height: 1; display: grid; place-items: center; }
+  .achip button:hover { background: var(--ink); color: #fff; }
+
+  /* job cards in a grid */
+  .job-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .job {
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
+    display: flex; flex-direction: column; transition: transform .15s, box-shadow .15s, border-color .15s;
+  }
+  .job:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(0,0,0,.06); border-color: var(--ink); }
+  .job .ph { border: 0; border-bottom: 1px solid var(--line); border-radius: 0; min-height: 140px; }
+  .job-body { padding: 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .job-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); border: 1px solid var(--line); border-radius: 5px; padding: 3px 8px; }
+  .tag.new { color: var(--ink); border-color: var(--ink); }
+  .job h3 { font-size: 1.05rem; margin: 0; }
+  .job-meta { font-size: .85rem; color: var(--muted); display: flex; flex-direction: column; gap: 3px; }
+  .job-foot { margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line-2); display: flex; align-items: center; justify-content: space-between; }
+  .job-foot .posted { font-size: .76rem; color: var(--muted); }
+
+  /* lazy load */
+  .load-more { text-align: center; margin-top: 40px; }
+  .load-more .meta { font-size: .82rem; color: var(--muted); margin-top: 14px; }
+  .lazy-spinner { display: flex; justify-content: center; gap: 6px; padding: 16px 0; }
+  .lazy-spinner span { width: 8px; height: 8px; background: var(--line); border-radius: 50%; animation: bounce 1s infinite ease-in-out; }
+  .lazy-spinner span:nth-child(2) { animation-delay: .15s; }
+  .lazy-spinner span:nth-child(3) { animation-delay: .3s; }
+  @keyframes bounce { 0%,80%,100% { transform: scale(.6); opacity:.4; } 40% { transform: scale(1); opacity:1; } }
+
+  /* empty/no-results note */
+  .wf-note { background: var(--bg-2); border: 1px dashed var(--line); border-radius: var(--radius); padding: 14px 16px; font-size: .82rem; color: var(--muted); margin-top: 26px; }
+
+  /* ===========================================================
+     WHY US strip (reused from homepage)
+     =========================================================== */
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .sec-head { max-width: 60ch; }
+  .sec-head.center { margin: 0 auto 44px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; transition: border-color .15s, transform .15s, box-shadow .15s; }
+  .card:hover { border-color: var(--ink); transform: translateY(-3px); box-shadow: 0 14px 30px rgba(0,0,0,.05); }
+  .card h3 { margin-top: 16px; }
+  .card p { font-size: .92rem; margin-bottom: 0; }
+
+  /* ===========================================================
+     CTA banner
+     =========================================================== */
+  .cta-band { background: var(--ink); border-radius: 16px; padding: 48px; color: #fff; display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; }
+  .cta-band h2 { color: #fff; margin: 0 0 .35em; }
+  .cta-band p { color: #c9c9cf; margin: 0; max-width: 52ch; }
+  .cta-band .btn { background: #fff; color: var(--ink); border-color: #fff; }
+  .cta-band .btn:hover { background: transparent; color: #fff; }
+
+  /* ===========================================================
+     FOOTER (identical to homepage)
+     =========================================================== */
+  footer.site { background: var(--ink); color: #c9c9cf; padding: 64px 0 28px; }
+  footer.site h4 { color: #fff; font-size: .82rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 16px; }
+  .foot-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr; gap: 32px; }
+  footer.site a { color: #c9c9cf; font-size: .9rem; display: block; padding: 4px 0; }
+  footer.site a:hover { color: #fff; }
+  footer.site .soon { display: inline-block; font-size: .6rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #9a9aa3; border: 1px solid #3a3a42; border-radius: 100px; padding: 1px 7px; margin-left: 6px; vertical-align: middle; }
+  .foot-brand .logo { color: #fff; margin-bottom: 14px; }
+  .foot-brand p { font-size: .88rem; color: #9a9aa3; max-width: 30ch; }
+  .socials { display: flex; gap: 10px; margin-top: 16px; }
+  .social-li { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 8px; background: #2a2a30; color: #9a9aa3; border: 1px solid #3a3a42; transition: background .15s, color .15s; }
+  .social-li:hover { background: #3a3a42; color: #fff; }
+  .foot-bottom { border-top: 1px solid #2e2e35; margin-top: 44px; padding-top: 22px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: .82rem; color: #8a8a93; }
+  .foot-bottom .legal { display: flex; gap: 18px; flex-wrap: wrap; }
+  .certs { display: flex; gap: 10px; align-items: center; }
+  .certs .ph { width: 56px; height: 36px; min-height: 0; background: #2a2a30; border-color: #3a3a42; }
+  .certs .ph::after { content: "Cert"; color: #8a8a93; }
+
+  /* ===========================================================
+     WIREFRAME NOTE BANNER
+     =========================================================== */
+  .wf-banner { background: var(--ink); color: #fff; font-size: .8rem; text-align: center; padding: 7px 16px; letter-spacing: .03em; }
+  .wf-banner b { font-weight: 700; }
+
+  /* ===========================================================
+     RESPONSIVE
+     =========================================================== */
+  @media (max-width: 980px) {
+    .nav-links, .lang { display: none; }
+    .burger { display: flex; }
+    .nav-links.mobile-open {
+      display: flex; flex-direction: column; position: absolute; top: 70px; left: 0; right: 0;
+      background: #fff; border-bottom: 1px solid var(--line); padding: 12px; gap: 2px; z-index: 70;
+    }
+    .nav-links.mobile-open > li > a, .nav-links.mobile-open > li > button { width: 100%; justify-content: space-between; }
+    .dropdown { position: static; box-shadow: none; border: 0; padding: 0 0 8px 12px; }
+    .dropdown.mega { width: auto; }
+    .dropdown.mega .mega-grid { grid-template-columns: 1fr; gap: 0; padding: 4px 0 4px; }
+    .dropdown.mega .mega-col h4 { margin-top: 12px; }
+    .dropdown.mega .mega-foot { background: none; border: 0; justify-content: flex-start; padding: 10px 0 4px; }
+    .search { grid-template-columns: 1fr; }
+    .search .field + .field { border-left: 0; border-top: 1px solid var(--line-2); }
+    .page-head-overlay { background: linear-gradient(0deg, rgba(248,248,249,.97) 30%, rgba(248,248,249,.8) 100%); }
+    .grid-4 { grid-template-columns: 1fr 1fr; }
+    .foot-grid { grid-template-columns: 1fr 1fr; }
+
+    /* sidebar collapses into a toggleable drawer-ish panel */
+    .listing-grid { grid-template-columns: 1fr; }
+    .filters {
+      position: static; display: none; border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 16px 18px; margin-bottom: 8px; background: #fff;
+    }
+    .filters.open { display: block; }
+    .filters-apply { display: block; margin-top: 10px; width: 100%; justify-content: center; }
+    .filters-toggle { display: inline-flex; }
+    .cta-band { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .job-grid { grid-template-columns: 1fr; }
+    .grid-4, .foot-grid { grid-template-columns: 1fr; }
+    section { padding: 52px 0; }
+    .cta-band { padding: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wf-banner">WIREFRAME — <b>HumAIn Recruitment</b> · Vacancy overview · low-fidelity, grayscale · structure for review (not final design)</div>
+
+<!-- ====================== HEADER ====================== -->
+<header class="site" id="header">
+  <div class="wrap nav">
+    <a href="index.html" class="logo">HumAIn <span class="logo-sub">Recruitment</span></a>
+
+    <ul class="nav-links" id="navLinks">
+      <li>
+        <button class="has-drop" aria-expanded="false" data-drop>Jobs <span class="caret"></span></button>
+        <div class="dropdown mega">
+          <div class="mega-grid">
+            <div class="mega-col">
+              <h4>By discipline</h4>
+              <a href="vacatures.html">Project Controls</a>
+              <a href="vacatures.html">Cost Engineering &amp; Estimating</a>
+              <a href="vacatures.html">Planning &amp; Scheduling</a>
+              <a href="vacatures.html">Document Control</a>
+              <a href="vacatures.html">Contract Management</a>
+              <a href="vacatures.html">Project Management</a>
+            </div>
+            <div class="mega-col">
+              <h4>By sector</h4>
+              <a href="vacatures.html">Oil &amp; Gas</a>
+              <a href="vacatures.html">Energy &amp; Renewables</a>
+              <a href="vacatures.html">Infrastructure</a>
+              <a href="vacatures.html">Logistics</a>
+              <a href="vacatures.html">Maritime / Offshore</a>
+              <a href="vacatures.html">Healthcare <span class="soon">soon</span></a>
+            </div>
+            <div class="mega-col">
+              <h4>By type</h4>
+              <a href="vacatures.html">Permanent</a>
+              <a href="vacatures.html">Secondment</a>
+              <a href="vacatures.html">Project basis</a>
+              <a href="vacatures.html">Interim</a>
+            </div>
+            <div class="mega-col">
+              <h4>By experience</h4>
+              <a href="vacatures.html">5–7 years</a>
+              <a href="vacatures.html">8–12 years</a>
+              <a href="vacatures.html">12+ years</a>
+              <h4 style="margin-top:18px;">By region</h4>
+              <a href="vacatures.html">Zuid-Holland</a>
+              <a href="vacatures.html">Noord-Holland</a>
+              <a href="vacatures.html">International</a>
+            </div>
+          </div>
+          <a class="mega-foot" href="vacatures.html">View all vacancies <span class="arr">→</span></a>
+        </div>
+      </li>
+      <li>
+        <button class="has-drop" aria-expanded="false" data-drop>For Employers <span class="caret"></span></button>
+        <div class="dropdown">
+          <a href="index.html#employers">Permanent placement <small>Search &amp; selection</small></a>
+          <a href="index.html#employers">Secondment <small>Detachering</small></a>
+          <a href="index.html#employers">Project basis <small>Flexible delivery teams</small></a>
+          <a href="index.html#pricing">Transparent pricing <small>See the menu</small></a>
+        </div>
+      </li>
+      <li><a href="index.html#candidates">For Candidates</a></li>
+      <li><a href="index.html#pricing">How We Work</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Language">
+        <button class="active">EN</button>
+        <button>NL</button>
+      </div>
+      <a href="index.html#candidates" class="btn btn--sm">Open application <span class="arr">→</span></a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ====================== BREADCRUMB BAR ====================== -->
+<div class="breadcrumb-bar">
+  <div class="wrap">
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a><span class="sep">›</span><span>Jobs</span>
+    </nav>
+  </div>
+</div>
+
+<!-- ====================== PAGE HEAD ====================== -->
+<section class="page-head" style="padding:0;">
+  <div class="page-head-bg"></div>
+  <div class="page-head-overlay"></div>
+  <div class="wrap page-head-inner">
+    <span class="eyebrow">Open roles</span>
+    <h1>Find your next project role.</h1>
+    <p class="lead">Project controls, cost engineering, planning and related roles inside complex international projects. Filter by sector, type and experience — or drop your CV for roles that aren't advertised yet.</p>
+
+  </div>
+</section>
+
+<!-- ====================== LISTING (sidebar + results) ====================== -->
+<section class="listing">
+  <div class="wrap">
+    <div class="listing-grid">
+
+      <!-- ---------- FILTER SIDEBAR ---------- -->
+      <aside class="filters" id="filters">
+        <div class="filters-head">
+          <h2>Filters</h2>
+          <span class="reset">Reset all</span>
+        </div>
+
+        <!-- Search -->
+        <div class="filter-search">
+          <span class="ico">🔍</span>
+          <input type="text" placeholder="Search by title or company" />
+        </div>
+
+        <!-- Job type -->
+        <details class="fgroup" open>
+          <summary>Job type <span class="chev"></span></summary>
+          <div class="fopts">
+            <label class="fopt"><input type="checkbox" checked /> Permanent <span class="count">(18)</span></label>
+            <label class="fopt"><input type="checkbox" /> Secondment <span class="count">(11)</span></label>
+            <label class="fopt"><input type="checkbox" /> Project basis <span class="count">(7)</span></label>
+            <label class="fopt"><input type="checkbox" /> Interim <span class="count">(4)</span></label>
+          </div>
+        </details>
+
+        <!-- Sector -->
+        <details class="fgroup" open>
+          <summary>Sector <span class="chev"></span></summary>
+          <div class="fopts">
+            <label class="fopt"><input type="checkbox" /> Oil &amp; Gas <span class="count">(14)</span></label>
+            <label class="fopt"><input type="checkbox" /> Energy &amp; Renewables <span class="count">(12)</span></label>
+            <label class="fopt"><input type="checkbox" /> Infrastructure <span class="count">(8)</span></label>
+            <label class="fopt"><input type="checkbox" /> Logistics <span class="count">(5)</span></label>
+            <label class="fopt"><input type="checkbox" /> Maritime / Offshore <span class="count">(3)</span></label>
+          </div>
+        </details>
+
+        <!-- Discipline / specialisation -->
+        <details class="fgroup" open>
+          <summary>Discipline <span class="chev"></span></summary>
+          <div class="fopts">
+            <label class="fopt"><input type="checkbox" /> Project Controls <span class="count">(16)</span></label>
+            <label class="fopt"><input type="checkbox" /> Cost Engineering &amp; Estimating <span class="count">(9)</span></label>
+            <label class="fopt"><input type="checkbox" /> Planning &amp; Scheduling <span class="count">(8)</span></label>
+            <label class="fopt"><input type="checkbox" /> Document Control <span class="count">(4)</span></label>
+            <label class="fopt"><input type="checkbox" /> Contract Management <span class="count">(3)</span></label>
+            <label class="fopt"><input type="checkbox" /> Project Management <span class="count">(6)</span></label>
+          </div>
+        </details>
+
+        <!-- Experience -->
+        <details class="fgroup">
+          <summary>Experience <span class="chev"></span></summary>
+          <div class="fopts">
+            <label class="fopt"><input type="radio" name="exp" /> 5–7 years <span class="count">(13)</span></label>
+            <label class="fopt"><input type="radio" name="exp" checked /> 8–12 years <span class="count">(17)</span></label>
+            <label class="fopt"><input type="radio" name="exp" /> 12+ years <span class="count">(10)</span></label>
+          </div>
+        </details>
+
+        <!-- Salary range -->
+        <details class="fgroup">
+          <summary>Salary range <span class="chev"></span></summary>
+          <div class="range-wrap">
+            <div class="range-track">
+              <div class="range-fill"></div>
+              <div class="range-knob" style="left:22%;"></div>
+              <div class="range-knob" style="left:72%;"></div>
+            </div>
+            <div class="range-vals"><span>€60k</span><span>€120k+</span></div>
+          </div>
+        </details>
+
+        <!-- Region -->
+        <details class="fgroup">
+          <summary>Region <span class="chev"></span></summary>
+          <div class="fopts">
+            <label class="fopt"><input type="checkbox" /> Zuid-Holland <span class="count">(12)</span></label>
+            <label class="fopt"><input type="checkbox" /> Noord-Holland <span class="count">(7)</span></label>
+            <label class="fopt"><input type="checkbox" /> Noord-Brabant <span class="count">(5)</span></label>
+            <label class="fopt"><input type="checkbox" /> International <span class="count">(9)</span></label>
+            <label class="fopt"><input type="checkbox" /> Remote-friendly <span class="count">(6)</span></label>
+          </div>
+        </details>
+
+        <button class="btn filters-apply" id="applyFilters">Show results</button>
+      </aside>
+
+      <!-- ---------- RESULTS ---------- -->
+      <div class="results">
+        <div class="results-bar">
+          <div class="count"><b>40</b> vacancies found</div>
+          <div class="results-tools">
+            <button class="btn btn--light btn--sm filters-toggle" id="filtersToggle">⚙ Filters</button>
+          </div>
+        </div>
+
+        <!-- active filter chips -->
+        <div class="active-chips">
+          <span class="achip">Permanent <button aria-label="Remove">✕</button></span>
+          <span class="achip">8–12 years <button aria-label="Remove">✕</button></span>
+        </div>
+
+        <!-- job grid -->
+        <div class="job-grid" id="jobGrid">
+
+          <article class="job">
+            <div class="ph" data-label="Role image"></div>
+            <div class="job-body">
+              <div class="job-tags"><span class="tag new">New</span><span class="tag">Permanent</span><span class="tag">Energy</span></div>
+              <h3>Project Controls Manager</h3>
+              <div class="job-meta">
+                <span>📍 Rotterdam, NL (hybrid)</span>
+                <span>💼 12+ years experience</span>
+                <span>💶 €90k–€110k</span>
+              </div>
+              <div class="job-foot"><a href="#" class="link-arr">View &amp; apply <span class="arr">→</span></a><span class="posted">2 days ago</span></div>
+            </div>
+          </article>
+
+          <article class="job">
+            <div class="ph" data-label="Role image"></div>
+            <div class="job-body">
+              <div class="job-tags"><span class="tag">Secondment</span><span class="tag">Oil &amp; Gas</span></div>
+              <h3>Senior Cost Engineer</h3>
+              <div class="job-meta">
+                <span>📍 International / remote-friendly</span>
+                <span>💼 8–12 years experience</span>
+                <span>💶 Day rate — on request</span>
+              </div>
+              <div class="job-foot"><a href="#" class="link-arr">View &amp; apply <span class="arr">→</span></a><span class="posted">3 days ago</span></div>
+            </div>
+          </article>
+
+          <article class="job">
+            <div class="ph" data-label="Role image"></div>
+            <div class="job-body">
+              <div class="job-tags"><span class="tag">Project basis</span><span class="tag">Infrastructure</span></div>
+              <h3>Planning / Scheduling Engineer</h3>
+              <div class="job-meta">
+                <span>📍 Amsterdam, NL</span>
+                <span>💼 5–7 years experience</span>
+                <span>💶 €70k–€85k</span>
+              </div>
+              <div class="job-foot"><a href="#" class="link-arr">View &amp; apply <span class="arr">→</span></a><span class="posted">5 days ago</span></div>
+            </div>
+          </article>
+
+          <article class="job">
+            <div class="ph" data-label="Role image"></div>
+            <div class="job-body">
+              <div class="job-tags"><span class="tag new">New</span><span class="tag">Permanent</span><span class="tag">Renewables</span></div>
+              <h3>Project Controls Lead — Offshore Wind</h3>
+              <div class="job-meta">
+                <span>📍 The Hague, NL</span>
+                <span>💼 12+ years experience</span>
+                <span>💶 €100k–€120k</span>
+              </div>
+              <div class="job-foot"><a href="#" class="link-arr">View &amp; apply <span class="arr">→</span></a><span class="posted">1 week ago</span></div>
+            </div>
+          </article>
+
+          <article class="job">
+            <div class="ph" data-label="Role image"></div>
+            <div class="job-body">
+              <div class="job-tags"><span class="tag">Secondment</span><span class="tag">Energy</span></div>
+              <h3>Document Controller</h3>
+              <div class="job-meta">
+                <span>📍 Rotterdam, NL</span>
+                <span>💼 5–7 years experience</span>
+                <span>💶 Day rate — on request</span>
+              </div>
+              <div class="job-foot"><a href="#" class="link-arr">View &amp; apply <span class="arr">→</span></a><span class="posted">1 week ago</span></div>
+            </div>
+          </article>
+
+          <article class="job">
+            <div class="ph" data-label="Role image"></div>
+            <div class="job-body">
+              <div class="job-tags"><span class="tag">Permanent</span><span class="tag">Oil &amp; Gas</span></div>
+              <h3>Contract Manager — EPC Projects</h3>
+              <div class="job-meta">
+                <span>📍 Utrecht, NL (hybrid)</span>
+                <span>💼 8–12 years experience</span>
+                <span>💶 €85k–€105k</span>
+              </div>
+              <div class="job-foot"><a href="#" class="link-arr">View &amp; apply <span class="arr">→</span></a><span class="posted">1 week ago</span></div>
+            </div>
+          </article>
+
+          <article class="job">
+            <div class="ph" data-label="Role image"></div>
+            <div class="job-body">
+              <div class="job-tags"><span class="tag">Project basis</span><span class="tag">Infrastructure</span></div>
+              <h3>Cost Estimator — Rail Infrastructure</h3>
+              <div class="job-meta">
+                <span>📍 Eindhoven, NL</span>
+                <span>💼 8–12 years experience</span>
+                <span>💶 €75k–€95k</span>
+              </div>
+              <div class="job-foot"><a href="#" class="link-arr">View &amp; apply <span class="arr">→</span></a><span class="posted">2 weeks ago</span></div>
+            </div>
+          </article>
+
+          <article class="job">
+            <div class="ph" data-label="Role image"></div>
+            <div class="job-body">
+              <div class="job-tags"><span class="tag">Secondment</span><span class="tag">Maritime</span></div>
+              <h3>Project Planner — Offshore</h3>
+              <div class="job-meta">
+                <span>📍 International / rotation</span>
+                <span>💼 8–12 years experience</span>
+                <span>💶 Day rate — on request</span>
+              </div>
+              <div class="job-foot"><a href="#" class="link-arr">View &amp; apply <span class="arr">→</span></a><span class="posted">2 weeks ago</span></div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- lazy load indicator -->
+        <div class="load-more">
+          <div class="lazy-spinner"><span></span><span></span><span></span></div>
+          <div class="meta">Showing 8 of 40 vacancies</div>
+        </div>
+
+        <p class="wf-note">Wireframe note — vacancies are placeholders. In the live site this list is fed from <b>Bullhorn</b> via n8n into the Webflow CMS; filters map to CMS fields (type, sector, discipline, experience, salary, region). Closed roles are removed in Bullhorn and 301-redirected, never 404. The spinner above represents <b>lazy loading</b> — new results load automatically as the user scrolls down, no button needed.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====================== CV / TALENT POOL CTA ====================== -->
+<section class="tint">
+  <div class="wrap">
+    <div class="cta-band">
+      <div>
+        <h2>Nothing the right fit yet?</h2>
+        <p>Drop your CV in our talent pool. We'll reach out the moment a role matches your profile — including the ones that never get advertised.</p>
+      </div>
+      <a href="index.html#candidates" class="btn">Upload your CV <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== WHY US ====================== -->
+<section>
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Why apply through us</span>
+      <h2>A recruiter who actually knows the work.</h2>
+      <p class="lead">Built on 25 years inside complex international projects — so you're more than a keyword match.</p>
+    </div>
+    <div class="grid-4">
+      <div class="card">
+        <div class="ph ph--icon"></div>
+        <h3>Personal guidance</h3>
+        <p>A real recruiter who understands project controls — not a chatbot, not a CV-scanner.</p>
+      </div>
+      <div class="card">
+        <div class="ph ph--icon"></div>
+        <h3>Honest feedback</h3>
+        <p>Clear context on every role and straight feedback at each step. No ghosting.</p>
+      </div>
+      <div class="card">
+        <div class="ph ph--icon"></div>
+        <h3>Hidden roles</h3>
+        <p>Access to positions that never reach the job boards through our network.</p>
+      </div>
+      <div class="card">
+        <div class="ph ph--icon"></div>
+        <h3>Speed</h3>
+        <p>AI does the busywork in the background, so you hear back fast.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== FOOTER ====================== -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="logo">HumAIn <span class="logo-sub">Recruitment</span></a>
+        <p>Your extended network in international project recruitment. Human core, AI engine.</p>
+        <div class="socials">
+          <a href="#" class="social-li" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452H17.21v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.985V9h3.102v1.561h.046c.432-.82 1.487-1.684 3.059-1.684 3.271 0 3.874 2.153 3.874 4.953v6.622zM5.337 7.433a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6zm1.554 13.019H3.782V9h3.109v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <a href="vacatures.html">Jobs</a>
+        <a href="index.html#employers">For employers</a>
+        <a href="index.html#candidates">For candidates</a>
+        <a href="index.html#pricing">How we work</a>
+        <a href="index.html#about">About us</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Jobs by discipline</h4>
+        <a href="vacatures.html">Project Controls</a>
+        <a href="vacatures.html">Cost Engineering &amp; Estimating</a>
+        <a href="vacatures.html">Planning &amp; Scheduling</a>
+        <a href="vacatures.html">Document Control</a>
+        <a href="vacatures.html">Contract Management</a>
+        <a href="vacatures.html">Project Management</a>
+      </div>
+      <div>
+        <h4>Jobs by sector</h4>
+        <a href="vacatures.html">Oil &amp; Gas</a>
+        <a href="vacatures.html">Energy &amp; Renewables</a>
+        <a href="vacatures.html">Infrastructure</a>
+        <a href="vacatures.html">Logistics</a>
+        <a href="vacatures.html">Healthcare <span class="soon">soon</span></a>
+      </div>
+      <div>
+        <h4>Jobs by type</h4>
+        <a href="vacatures.html">Permanent</a>
+        <a href="vacatures.html">Secondment</a>
+        <a href="vacatures.html">Project basis</a>
+        <h4 style="margin-top:22px;">By experience</h4>
+        <a href="vacatures.html">5–7 years</a>
+        <a href="vacatures.html">8–12 years</a>
+        <a href="vacatures.html">12+ years</a>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <div class="legal">
+        <a href="privacy-cookies.html">Privacy &amp; Cookies</a>
+        <a href="#">Terms &amp; conditions</a>
+        <span>© 2026 HumAIn Recruitment</span>
+      </div>
+      <div class="certs">
+        <span style="font-size:.78rem;">Certifications</span>
+        <div class="ph"></div>
+        <div class="ph"></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Sticky header shadow
+  const header = document.getElementById('header');
+  addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 8));
+
+  // Mobile menu
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => navLinks.classList.toggle('mobile-open'));
+
+  // Dropdowns
+  document.querySelectorAll('[data-drop]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const drop = btn.nextElementSibling;
+      const open = drop.classList.contains('open');
+      document.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open'));
+      document.querySelectorAll('[data-drop]').forEach(b => b.setAttribute('aria-expanded','false'));
+      if (!open) { drop.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+    });
+  });
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open'));
+    document.querySelectorAll('[data-drop]').forEach(b => b.setAttribute('aria-expanded','false'));
+  });
+
+  // Language toggle (visual)
+  document.querySelectorAll('.lang button').forEach(b =>
+    b.addEventListener('click', () => {
+      document.querySelectorAll('.lang button').forEach(x => x.classList.remove('active'));
+      b.classList.add('active');
+    }));
+
+  // Active filter chips — remove (visual)
+  document.querySelectorAll('.achip button').forEach(b =>
+    b.addEventListener('click', () => b.closest('.achip').remove()));
+
+  // Mobile filter drawer toggle
+  const filters = document.getElementById('filters');
+  document.getElementById('filtersToggle').addEventListener('click', () => filters.classList.toggle('open'));
+  document.getElementById('applyFilters').addEventListener('click', () => filters.classList.remove('open'));
+
+</script>
+</body>
+</html>
