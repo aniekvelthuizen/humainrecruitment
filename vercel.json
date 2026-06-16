@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/wireframes/index.html" },
+    { "source": "/vacatures", "destination": "/wireframes/vacatures.html" },
+    { "source": "/privacy-cookies", "destination": "/wireframes/privacy-cookies.html" }
+  ]
+}

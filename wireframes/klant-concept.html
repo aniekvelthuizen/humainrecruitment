@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HumAIn — Klant-concept (door klant gemaakt) — reconstructie</title>
+
+<!--
+  ============================================================
+  KLANT-CONCEPT — reconstructie uit "HumAIn WireFrame.pdf"
+  Dit is de pagina die de KLANT zelf met zijn AI heeft gemaakt.
+  Faithful gereconstrueerd uit de PDF-broncode, zodat de ideeën
+  bekeken kunnen worden voordat ze in onze eigen wireframe gaan.
+
+  Opgeschoond t.o.v. het origineel (alleen om het te laten renderen):
+    - losse `` ``-tekens (AI-typo's) verwijderd
+    - ontbrekende <img src="images/..."> vervangen door placeholders
+    - kapotte div-nesting van de talent-grid hersteld
+    - kleine JS toegevoegd voor de selector-toggle + service-tabs
+  De rest (CSS, copy, structuur) is van de klant.
+  ============================================================
+-->
+
+<style>
+
+/* ===== GLOBAL RESET ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f5f6f8;
+    color: #111;
+}
+
+/* ===== PLACEHOLDERS (vervangen klant-afbeeldingen) ===== */
+.img-ph {
+    background: repeating-linear-gradient(135deg,#e7e7ea 0 10px,#efeff1 10px 20px);
+    border: 1px solid #d4d4d8;
+    display: flex; align-items: center; justify-content: center;
+    color: #9a9aa3; font-size: 10px; letter-spacing: .04em; text-transform: uppercase;
+}
+
+/* TOP BAR */
+.top-bar { background: #f5f6f8; border-bottom: 1px solid #e6e6e6; }
+.top-bar-inner {
+    max-width: 1200px; margin: 0 auto; padding: 0 20px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 14px; color: #aaa; height: 40px;
+}
+.top-right { display: flex; gap: 18px; }
+.top-right a {
+    position: relative; color: #aaa; text-decoration: none;
+    font-size: 14px; transition: color 0.2s ease;
+}
+.top-right a::after {
+    content: ""; position: absolute; left: 0; bottom: -4px;
+    width: 100%; height: 1px; background: rgba(229,57,53,0.9);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+.top-right a:hover { color: #111; }
+.top-right a:hover::after { transform: scaleX(1); }
+
+/* HEADER */
+.header {
+    position: sticky; top: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 20px; background: #f5f6f8; border-bottom: 1px solid #e6e6e6;
+    max-width: 1200px; margin: 0 auto;
+}
+.logo { font-size: 22px; font-weight: bold; color: #111; }
+.nav-links { display: flex; align-items: center; gap: 30px; }
+.nav-links a {
+    color: #555; text-decoration: none; font-size: 16px;
+    transition: 0.25s ease; position: relative;
+}
+.nav-links a::after {
+    content: ""; position: absolute; left: 0; bottom: -6px;
+    width: 100%; height: 2px; background: #e53935;
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.nav-links a:hover { color: #111; }
+.nav-links a:hover::after { transform: scaleX(1); }
+
+/* CTA BUTTON */
+.cta {
+    background: linear-gradient(135deg, #ff5a4f, #e53935);
+    padding: 10px 24px; border-radius: 999px;
+    color: white; font-weight: 600; font-size: 13px;
+    border: none; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 6px;
+    transition: all 0.25s ease; box-shadow: 0 8px 24px rgba(229,57,53,0.35);
+}
+.cta:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 12px 32px rgba(229,57,53,0.5); }
+.cta:active { transform: translateY(0) scale(0.98); box-shadow: 0 4px 12px rgba(229,57,53,0.3); }
+.cta::after { content: "→"; transition: transform 0.2s ease; }
+.cta:hover::after { transform: translateX(4px); }
+
+/* DROPDOWN */
+.dropdown { position: relative; }
+.dropdown-toggle { cursor: pointer; color: #555; text-decoration: none; }
+.dropdown-menu {
+    position: absolute; top: 40px; left: 0;
+    display: flex; gap: 40px; background: #fff; color: #111;
+    padding: 25px 30px; border-radius: 10px; min-width: 380px;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.25);
+    opacity: 0; visibility: hidden; transform: translateY(10px);
+    transition: all 0.25s ease;
+}
+.dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+.dropdown-column { display: flex; flex-direction: column; gap: 8px; }
+.dropdown-column h4 {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+    color: #888; margin-top: 10px; margin-bottom: 8px;
+}
+.dropdown-column a { text-decoration: none; color: #333; font-size: 14px; }
+.dropdown-column a:hover { color: #000; }
+
+@media (max-width: 1000px) { .nav-links { display: none; } }
+
+/* HERO */
+.hero {
+    position: relative;            /* fix: laat de floating card correct positioneren */
+    min-height: 520px;
+    background: #f5f6f8;
+    display: flex; flex-direction: column;
+    align-items: flex-start; justify-content: flex-start;
+    padding: 20px 20px 20px;
+    max-width: 1200px; margin: 0 auto; width: 100%;
+}
+.hero::before { display: none; }
+.hero-content { max-width: 520px; text-align: left; margin: 40px 0 0 0; padding: 0; color: #666; }
+.hero h1 { font-size: 42px; color: #666; }
+.hero p { color: #666; line-height: 1.6; max-width: 500px; }
+
+.hero-buttons { margin-top: 25px; display: flex; gap: 15px; }
+.primary { background: #e53935; padding: 12px 20px; border-radius: 25px; border: none; color: white; cursor: pointer; }
+.secondary { border: 1px solid #aaa; padding: 12px 20px; border-radius: 25px; background: transparent; color: #555; cursor: pointer; }
+
+/* CARD */
+.talent-card {
+    background: #111827; padding: 20px; border-radius: 12px;
+    max-width: 320px; width: 100%;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5); transition: 0.3s ease;
+    color: #fff;
+}
+.hero .talent-card {
+    position: absolute; right: 40px; top: 45%;
+    transform: translateY(-50%); z-index: 2;
+}
+
+/* AUDIENCE OVERLAY */
+.audience-overlay {
+    margin: 0 auto; margin-top: 10px;
+    display: flex; align-items: center; justify-content: center; gap: 15px;
+}
+.audience-title { font-size: 14px; font-weight: 400; color: #666; margin: 0; }
+
+.selector-wrapper { margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 18px; }
+.selector-label { font-size: 14px; color: #666; }
+.selector {
+    position: relative; display: flex;
+    background: #eef1f5; border-radius: 999px; padding: 6px;
+    border: 1px solid #d6dbe3;
+}
+.option {
+    position: relative; z-index: 2; padding: 10px 20px;
+    border: none; border-radius: 999px; background: transparent;
+    color: #555; font-size: 14px; font-weight: 500; cursor: pointer;
+    transition: all 0.25s ease;
+}
+.option.active { color: #2563eb; }
+.slider {
+    position: absolute; top: 6px; left: 6px;
+    height: calc(100% - 12px); width: 43%;
+    background: white; border-radius: 999px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.selector[data-active="1"] .slider { transform: translateX(125%); }
+.option:hover:not(.active) { color: #111; }
+
+/* CARD CONTENT */
+.talent-card.grid { position: relative; }
+.card-row { display: flex; gap: 15px; align-items: flex-start; }
+.card-img { width: 90px; height: 110px; object-fit: cover; border-radius: 10px; flex-shrink: 0; }
+.card-title { font-size: 16px; font-weight: bold; margin-bottom: 2px; }
+.card-name { font-size: 13px; color: #ccc; margin-bottom: 8px; }
+.card-label { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px; }
+.card-logo-ph { width: 80px; height: 24px; margin-bottom: 6px; border-radius: 4px; }
+.card-sector { font-size: 12px; color: #aaa; }
+.card-divider { border-top: 1px solid rgba(255,255,255,0.08); margin: 10px 0; }
+.card-score { font-size: 13px; font-weight: 500; }
+.card-skills { font-size: 11px; color: #aaa; line-height: 1.6; margin-top: 6px; }
+
+/* GRID BELOW HERO */
+.talent-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;
+    max-width: 1200px; margin: 0 auto; padding: 40px;
+}
+.talent-grid .talent-card:nth-child(1) { transform: translateY(20px) translateX(-10px) scale(0.98); box-shadow: 0 10px 40px rgba(0,0,0,0.4); }
+.talent-grid .talent-card:nth-child(2) { transform: translateY(0) scale(1.05); box-shadow: 0 25px 80px rgba(0,0,0,0.8); z-index: 2; }
+.talent-grid .talent-card:nth-child(3) { transform: translateY(20px) translateX(10px) scale(0.98); box-shadow: 0 10px 40px rgba(0,0,0,0.4); }
+.talent-card:hover { transform: translateY(-8px) scale(1.03); box-shadow: 0 30px 90px rgba(0,0,0,0.9); z-index: 3; }
+
+/* LOGO CAROUSEL */
+.logo-section { position: relative; background: #f5f6f8; padding: 30px 0; overflow: hidden; }
+.logo-heading { text-align: center; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #777; margin-bottom: 20px; }
+.logo-section::before, .logo-section::after { content: ""; position: absolute; top: 0; width: 120px; height: 100%; z-index: 2; pointer-events: none; }
+.logo-section::before { left: 0; background: linear-gradient(to right, #f5f6f8, transparent); }
+.logo-section::after { right: 0; background: linear-gradient(to left, #f5f6f8, transparent); }
+.logo-track { display: flex; align-items: center; gap: 80px; width: max-content; animation: scrollLogos 35s linear infinite; will-change: transform; }
+.logo-item .img-ph { height: 32px; width: 110px; opacity: 0.6; transition: all 0.3s ease; border-radius: 4px; }
+.logo-item:hover .img-ph { opacity: 1; transform: scale(1.08); }
+.logo-section:hover .logo-track { animation-play-state: paused; }
+@keyframes scrollLogos { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* PROCESS / HOW IT WORKS */
+.process-section { background: #f5f6f8; padding: 100px 20px; text-align: center; }
+.process-container { max-width: 1200px; margin: 0 auto; }
+.process-title { font-size: 36px; color: #111; margin-bottom: 15px; }
+.process-subtitle { font-size: 15px; color: #555; max-width: 650px; margin: 0 auto 60px; }
+.process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; position: relative; }
+.process-grid::before { content: ""; position: absolute; top: 28px; left: 0; right: 0; height: 1px; background: #ddd; z-index: 0; }
+.process-step { position: relative; z-index: 1; text-align: center; }
+.process-circle { width: 56px; height: 56px; border: 2px solid #4c5bd4; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 18px; color: #4c5bd4; background: #f5f6f8; }
+.process-step h3 { font-size: 16px; color: #111; margin-bottom: 10px; }
+.process-step p { font-size: 14px; color: #666; line-height: 1.6; max-width: 260px; margin: 0 auto; }
+
+/* FEATURES */
+.features-section { background: #f5f6f8; padding: 100px 40px; text-align: center; }
+.features-title { font-size: 36px; color: #111; max-width: 700px; margin: 0 auto 15px; }
+.features-subtitle { color: #555; font-size: 15px; margin-bottom: 60px; }
+.features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; max-width: 1200px; margin: 0 auto; }
+.feature-card { background: white; padding: 30px; border-radius: 14px; border: 1px solid #e6e6e6; text-align: left; transition: all 0.25s ease; }
+.feature-icon { width: 44px; height: 44px; background: #f0f0f0; border-radius: 10px; margin-bottom: 20px; }
+.feature-card h3 { font-size: 16px; color: #111; margin-bottom: 10px; }
+.feature-card p { font-size: 14px; color: #555; line-height: 1.6; }
+.feature-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.08); }
+@media (max-width: 1100px) { .features-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .features-grid { grid-template-columns: 1fr; } }
+
+/* SERVICES */
+.services-section { background: #f5f6f8; padding: 80px 40px; text-align: center; }
+.services-title { font-size: 36px; color: #111; margin-bottom: 10px; }
+.services-subtitle { font-size: 15px; color: #666; max-width: 700px; margin: 0 auto 40px; }
+.services-tabs { display: flex; max-width: 1100px; margin: 0 auto; }
+.tab { flex: 1; padding: 20px; background: #e6e7eb; font-size: 15px; text-align: left; border-right: 1px solid #ddd; cursor: pointer; }
+.tab.active { background: white; border-top: 4px solid #4c5bd4; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; max-width: 1100px; margin: 20px auto; }
+.service-card { background: #ededf0; padding: 25px; text-align: left; }
+.service-card h3 { font-size: 18px; color: #111; margin-bottom: 10px; }
+.service-card p { font-size: 14px; color: #555; line-height: 1.6; }
+.services-btn { margin-top: 20px; padding: 12px 24px; border-radius: 6px; border: 1px solid #ccc; background: white; cursor: pointer; }
+
+/* BENEFITS TICKER */
+.benefits-section { position: relative; background: #f5f6f8; padding: 20px 0; overflow: hidden; }
+.benefits-section::before, .benefits-section::after { content: ""; position: absolute; top: 0; width: 120px; height: 100%; z-index: 2; pointer-events: none; }
+.benefits-section::before { left: 0; background: linear-gradient(to right, #f5f6f8, transparent); }
+.benefits-section::after { right: 0; background: linear-gradient(to left, #f5f6f8, transparent); }
+.benefits-track { display: flex; gap: 60px; width: max-content; animation: scrollBenefits 30s linear infinite; }
+.benefit-item { display: flex; align-items: center; gap: 10px; font-size: 14px; color: #444; white-space: nowrap; }
+.check { color: #16a34a; font-size: 16px; }
+@keyframes scrollBenefits { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.benefits-section:hover .benefits-track { animation-play-state: paused; }
+
+/* TESTIMONIALS */
+.testimonials-section { background: #f5f6f8; padding: 100px 40px; }
+.testimonials-header { text-align: center; font-size: 14px; color: #555; margin-bottom: 40px; }
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1100px; margin: 0 auto; }
+.testimonial-card { background: #ffffff; padding: 30px; border-radius: 10px; border: 1px solid #e6e6e6; }
+.quote { font-size: 36px; color: #4c5bd4; margin-bottom: 10px; }
+.testimonial-card h3 { font-size: 16px; margin-bottom: 10px; color: #111; }
+.testimonial-card p { font-size: 14px; color: #555; line-height: 1.6; margin-bottom: 15px; }
+.stars { color: #f5a623; margin-bottom: 20px; }
+.author { font-weight: bold; font-size: 14px; color: #111; }
+.role { font-size: 12px; color: #777; margin-bottom: 10px; }
+.company { font-size: 18px; font-weight: bold; color: #111; }
+
+/* PRICING */
+.pricing-section { background: #f5f6f8; padding: 100px 40px; text-align: center; }
+.pricing-title { font-size: 36px; color: #111; max-width: 700px; margin: 0 auto 15px; }
+.pricing-subtitle { font-size: 15px; color: #555; max-width: 650px; margin: 0 auto 60px; }
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; max-width: 1100px; margin: 0 auto; }
+.pricing-card { background: #ffffff; padding: 30px; border-radius: 14px; border: 1px solid #e6e6e6; text-align: left; position: relative; transition: 0.25s ease; }
+.pricing-card.featured { border: 2px solid #111; }
+.pricing-card .badge { position: absolute; top: -10px; left: 20px; background: #111; color: white; font-size: 11px; padding: 4px 10px; border-radius: 10px; border: none; margin: 0; }
+.pricing-card h3 { font-size: 18px; color: #111; margin-bottom: 5px; }
+.pricing-desc { font-size: 14px; color: #777; margin-bottom: 20px; }
+.price { font-size: 28px; font-weight: bold; color: #111; }
+.price-note { font-size: 13px; color: #777; }
+.pricing-card ul { margin: 20px 0; padding-left: 18px; }
+.pricing-card li { margin-bottom: 8px; font-size: 14px; }
+.btn-primary { width: 100%; padding: 12px; border-radius: 10px; background: #111; color: white; border: none; font-weight: bold; cursor: pointer; }
+.btn-secondary { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #ccc; background: transparent; cursor: pointer; }
+.pricing-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.08); }
+
+/* CTA BAR */
+.cta-bar { background: #e9eaed; padding: 25px 40px; display: flex; justify-content: center; align-items: center; gap: 20px; }
+.cta-text { font-size: 18px; color: #111; }
+.cta-button { padding: 12px 24px; background: #12b76a; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; }
+.cta-button:hover { background: #0ea35a; }
+
+/* FOOTER */
+.footer-main { background: #0c0f17; padding: 80px 40px 40px; color: #ccc; }
+.footer-grid { display: grid; grid-template-columns: 1.2fr 1fr 1.3fr 1fr 1fr; gap: 40px; max-width: 1200px; margin: 0 auto 40px; }
+.footer-col h4 { font-size: 12px; letter-spacing: 1px; color: #999; margin-bottom: 15px; }
+.footer-col a { display: block; font-size: 14px; color: #ccc; margin-bottom: 10px; text-decoration: none; }
+.footer-col a:hover { color: white; }
+.footer-logo { font-weight: bold; font-size: 16px; margin-bottom: 15px; }
+.footer-text { font-size: 13px; color: #888; margin-bottom: 20px; }
+.footer-icons { display: flex; gap: 10px; }
+.icon-box { width: 36px; height: 36px; background: #1a1f2b; border-radius: 8px; }
+.footer-sub { margin-top: 20px; }
+.footer-col .badge { font-size: 10px; border: 1px solid #555; padding: 2px 6px; border-radius: 6px; margin-left: 6px; color: #aaa; background: none; position: static; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #777; max-width: 1200px; margin: 0 auto; }
+.footer-left { display: flex; gap: 20px; }
+.footer-left a { color: #aaa; text-decoration: none; }
+.footer-right { display: flex; gap: 10px; align-items: center; }
+.cert-box { padding: 6px 10px; border: 1px solid #666; border-radius: 6px; font-size: 11px; color: #aaa; }
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    .talent-grid { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .features-grid { grid-template-columns: repeat(2, 1fr); }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .footer-bottom { flex-direction: column; gap: 10px; }
+}
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero h1 { font-size: 28px; }
+    .hero .talent-card { display: none; }
+}
+
+/* WIREFRAME NOTE BANNER (toegevoegd, niet van klant) */
+.wf-banner { background: #111; color: #fff; font-size: 13px; text-align: center; padding: 8px 16px; letter-spacing: .02em; }
+.wf-banner b { font-weight: 700; }
+</style>
+</head>
+
+<body>
+
+<div class="wf-banner">KLANT-CONCEPT — <b>door de klant zelf gemaakt</b> · gereconstrueerd uit "HumAIn WireFrame.pdf" · referentie voor idee-extractie (niet ons ontwerp)</div>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <div>EN ▾</div>
+        <div class="top-right">
+            <a href="#">Platform</a>
+            <a href="#">Clients</a>
+            <a href="#">Customer Portal</a>
+            <a href="#">Pricing</a>
+            <a href="#">Contact</a>
+            <a href="#">Careers</a>
+        </div>
+    </div>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+    <div class="logo">HumAIn</div>
+
+    <div class="nav-links">
+        <a href="#">Hire an Expert</a>
+        <a href="#">How it Works</a>
+        <a href="#">Insights</a>
+        <a href="#">About Us</a>
+
+        <!-- FOR BUSINESS DROPDOWN -->
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle">For Business ▾</a>
+            <div class="dropdown-menu">
+                <div class="dropdown-column">
+                    <h4>Hiring</h4>
+                    <a href="#">Hire an Expert</a>
+                    <a href="#">Project Delivery Experts</a>
+                    <h4>Services</h4>
+                    <a href="#">Consulting &amp; Services</a>
+                    <a href="#">Project Controls</a>
+                </div>
+                <div class="dropdown-column">
+                    <h4>Platform</h4>
+                    <a href="#">Talent Insights</a>
+                    <a href="#">Customer Portal</a>
+                    <h4>Company</h4>
+                    <a href="#">Pricing</a>
+                    <a href="#">Clients</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="cta">Hire an Expert</button>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+
+    <!-- AUDIENCE OVERLAY -->
+    <div class="audience-overlay">
+        <h2 class="audience-title">I'm looking for</h2>
+        <div class="selector-wrapper">
+            <div class="selector" data-active="0" id="audienceSelector">
+                <button class="option active">Hire an Expert</button>
+                <button class="option">Consulting &amp; Services</button>
+                <div class="slider"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FLOATING CARD -->
+    <div class="talent-card">
+        <div class="card-row">
+            <div class="card-img img-ph">Foto</div>
+            <div>
+                <div class="card-title">Project Director</div>
+                <div class="card-name">Willem Jan Velthuizen</div>
+                <div class="card-label">Previously worked at</div>
+                <div class="card-logo-ph img-ph">Logo</div>
+                <div class="card-sector">Data Centres • £150M+ Projects</div>
+                <div class="card-divider"></div>
+                <div class="card-score">Match Score: <strong style="color:#4caf50;">85%</strong></div>
+                <div class="card-skills">
+                    ✔ Commercial ownership<br>
+                    ✔ Executive stakeholder exposure<br>
+                    ✔ Programme delivery
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO CONTENT -->
+    <div class="hero-content">
+        <h1>Pre-Qualified Project Professionals. Ready for Impact.</h1>
+        <p>
+        We identify, evaluate, and benchmark top project control professionals in the market and distinguishing proven performers from the rest.
+        </p>
+        <div style="margin-top:15px; color:#666;">
+            We go beyond polished resumes to understand how people truly perform in real-world situations. By focusing on demonstrated behavior and early validation by experienced professionals, we uncover genuine capability and not just stated experience.
+            <br><br>
+            Our approach replaces individual opinion with insight from field experts and transforms static talent pools into a continuously validated network of high-performing professionals.
+            <br><br>
+            The result? No guesswork. No AI inflated profiles. Just proven performance when it matters most.
+        </div>
+
+        <div class="hero-buttons">
+            <button class="primary">Hire an Expert</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- TALENT GRID -->
+<div class="talent-grid">
+
+    <!-- CARD 1 -->
+    <div class="talent-card grid">
+        <div class="card-row">
+            <div class="card-img img-ph">Foto</div>
+            <div>
+                <div class="card-title">Cost Manager</div>
+                <div class="card-name">Sophie de Vries</div>
+                <div class="card-label">Previously worked at</div>
+                <div class="card-logo-ph img-ph">Logo</div>
+                <div class="card-divider"></div>
+                <div class="card-score">Match Score: <strong style="color:#4caf50;">82%</strong></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD 2 (featured) -->
+    <div class="talent-card grid">
+        <div class="card-row">
+            <div class="card-img img-ph">Foto</div>
+            <div>
+                <div class="card-title">Project Director</div>
+                <div class="card-name">Willem Jan Velthuizen</div>
+                <div class="card-label">Previously worked at</div>
+                <div class="card-logo-ph img-ph">Logo</div>
+                <div class="card-divider"></div>
+                <div class="card-score">Match Score: <strong style="color:#4caf50;">85%</strong></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="talent-card grid">
+        <div class="card-row">
+            <div class="card-img img-ph">Foto</div>
+            <div>
+                <div class="card-title">Planning Engineer</div>
+                <div class="card-name">Tomasz Nowak</div>
+                <div class="card-label">Previously worked at</div>
+                <div class="card-logo-ph img-ph">Logo</div>
+                <div class="card-divider"></div>
+                <div class="card-score">Match Score: <strong style="color:#4caf50;">79%</strong></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- LOGO CAROUSEL -->
+<div class="logo-section">
+    <div class="logo-heading">TRUSTED BY GLOBAL LEADERS IN ENERGY, INDUSTRY &amp; TECHNOLOGY</div>
+    <div class="logo-wrapper">
+        <div class="logo-track">
+            <div class="logo-item"><div class="img-ph">Logo</div></div>
+            <div class="logo-item featured"><div class="img-ph">Logo</div></div>
+            <div class="logo-item"><div class="img-ph">Logo</div></div>
+            <div class="logo-item"><div class="img-ph">Logo</div></div>
+            <div class="logo-item"><div class="img-ph">Logo</div></div>
+            <div class="logo-item"><div class="img-ph">Logo</div></div>
+            <!-- DUPLICATE FOR LOOP -->
+            <div class="logo-item"><div class="img-ph">Logo</div></div>
+            <div class="logo-item featured"><div class="img-ph">Logo</div></div>
+            <div class="logo-item"><div class="img-ph">Logo</div></div>
+            <div class="logo-item"><div class="img-ph">Logo</div></div>
+            <div class="logo-item"><div class="img-ph">Logo</div></div>
+            <div class="logo-item"><div class="img-ph">Logo</div></div>
+        </div>
+    </div>
+</div>
+
+<!-- FEATURES / WHAT SETS US APART -->
+<div class="features-section">
+    <h2 class="features-title">Built differently. Designed for delivery. Powered by experience.</h2>
+    <p class="features-subtitle">Four things that set us apart from day one.</p>
+
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon"></div>
+            <h3>Pre-Qualified Specialists</h3>
+            <p>Ready before you need them. Continuously identified, benchmarked, and assessed</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"></div>
+            <h3>25–30% lower fees</h3>
+            <p>AI optimises the parts that don't need a human, so we pass the efficiency on to you as a lower fee.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"></div>
+            <h3>Speed in shortlists</h3>
+            <p>Relevant candidates in front of you fast — sourcing and screening run continuously.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"></div>
+            <h3>25–30% lower fees</h3>
+            <p>AI optimises the parts that don't need a human, so we pass the efficiency on to you as a lower fee.</p>
+        </div>
+    </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="process-section">
+    <div class="process-container">
+        <h2 class="process-title">Hiring Project Talent. Simplified.</h2>
+        <p class="process-subtitle">From requirement to placement in a matter of days — powered by AI, guided by experience.</p>
+
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="process-circle">1</div>
+                <h3>Define your requirement</h3>
+                <p>Tell us about your project, scope, timeline and required expertise. We translate this into a structured search profile.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-circle">2</div>
+                <h3>Receive pre-qualified profiles</h3>
+                <p>Our AI sourcing combined with human screening delivers highly relevant candidates within days.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-circle">3</div>
+                <h3>Select and onboard</h3>
+                <p>Interview, select, and onboard with confidence. We support you through the process with clear communication.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CONSULTING & SERVICES -->
+<div class="services-section">
+    <h2 class="services-title">Explore Our Consulting &amp; Services</h2>
+    <p class="services-subtitle">A specialised portfolio of project controls services designed to optimise delivery, reduce risk, and improve performance.</p>
+
+    <div class="services-tabs">
+        <div class="tab active">Project Controls</div>
+        <div class="tab">Staff Augmentation</div>
+        <div class="tab">Advisory</div>
+    </div>
+
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>Project Controls Strategy</h3>
+            <p>Define governance frameworks, reporting structures and delivery standards for complex capital projects.</p>
+        </div>
+        <div class="service-card">
+            <h3>Cost Control &amp; Forecasting</h3>
+            <p>Improve financial visibility through accurate forecasting, cost tracking and variance analysis.</p>
+        </div>
+        <div class="service-card">
+            <h3>Planning &amp; Scheduling</h3>
+            <p>Develop and manage integrated project schedules aligned with key milestones and dependencies.</p>
+        </div>
+        <div class="service-card">
+            <h3>Risk &amp; Performance Management</h3>
+            <p>Identify risks and performance gaps early using structured analysis and project controls insights.</p>
+        </div>
+        <div class="service-card">
+            <h3>Reporting &amp; Dashboards</h3>
+            <p>Deliver clear, executive-level reporting with real-time dashboards and performance tracking.</p>
+        </div>
+        <div class="service-card">
+            <h3>Project Controls Leadership</h3>
+            <p>Deploy Directors, Managers, Cost Controllers and Schedulers to lead and optimise project delivery.</p>
+        </div>
+    </div>
+
+    <button class="services-btn">Lets discuss the requirements</button>
+</div>
+
+<!-- BENEFITS TICKER -->
+<div class="benefits-section">
+    <div class="benefits-track">
+        <div class="benefit-item"><span class="check">✔</span> Interesting employers</div>
+        <div class="benefit-item"><span class="check">✔</span> Strong global network</div>
+        <div class="benefit-item"><span class="check">✔</span> Passion for people</div>
+        <div class="benefit-item"><span class="check">✔</span> Ambitious specialists</div>
+        <!-- DUPLICATE FOR SMOOTH LOOP -->
+        <div class="benefit-item"><span class="check">✔</span> Interesting employers</div>
+        <div class="benefit-item"><span class="check">✔</span> Strong global network</div>
+        <div class="benefit-item"><span class="check">✔</span> Passion for people</div>
+        <div class="benefit-item"><span class="check">✔</span> Ambitious specialists</div>
+    </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="testimonials-section">
+    <div class="testimonials-header">Clients rate HumAIn ★★★★★ 4.9 out of 5 on average based on 1 reviews.</div>
+
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <div class="quote">“</div>
+            <h3>I have been working with HumAIn...</h3>
+            <p>I have been working with HumAIn engineers for several years now. They have all been exceptionally talented, very professional, highly productive, great team players, good communicators, and willing to go above and beyond.</p>
+            <div class="stars">★★★★★</div>
+            <div class="author">Henk</div>
+            <div class="role">Partner</div>
+            <div class="company">COVESTRO</div>
+        </div>
+        <div class="testimonial-card">
+            <div class="quote">“</div>
+            <h3>HumAIn is my go-to source</h3>
+            <p>HumAIn is my go-to source to find high-quality talent I can't find elsewhere. I've been very impressed with the breadth and depth of talent they have been able to deliver.</p>
+            <div class="stars">★★★★★</div>
+            <div class="author">Henk</div>
+            <div class="role">Chief Operations Officer</div>
+            <div class="company">Ingeniva</div>
+        </div>
+        <div class="testimonial-card">
+            <div class="quote">“</div>
+            <h3>Creating an app for the game</h3>
+            <p>With the pressure on and millions watching, HumAIn delivered the talent and expertise needed to launch a brand-new fan engagement platform.</p>
+            <div class="stars">★★★★★</div>
+            <div class="author">Henk</div>
+            <div class="role">VP, Product and Technology</div>
+            <div class="company">Google</div>
+        </div>
+    </div>
+</div>
+
+<!-- PRICING -->
+<div class="pricing-section">
+    <h2 class="pricing-title">Transparent pricing. Pick the model that fits.</h2>
+    <p class="pricing-subtitle">Most agencies hide their numbers. We don't. Here's what each service costs — and why our AI-driven process makes it 25–30% lower than the market.</p>
+
+    <div class="pricing-grid">
+        <div class="pricing-card">
+            <h3>Permanent</h3>
+            <p class="pricing-desc">Search &amp; selection for a permanent hire.</p>
+            <div class="price">from XX%</div>
+            <span class="price-note">/ placement</span>
+            <ul>
+                <li>Full search &amp; shortlist</li>
+                <li>AI-sourced + human-vetted</li>
+                <li>Replacement guarantee</li>
+            </ul>
+            <button class="btn-secondary">Start hiring</button>
+        </div>
+
+        <div class="pricing-card featured">
+            <div class="badge">MOST CHOSEN</div>
+            <h3>Secondment</h3>
+            <p class="pricing-desc">Detacheering for flexible capacity.</p>
+            <div class="price">€XX</div>
+            <span class="price-note">/ hour margin</span>
+            <ul>
+                <li>Transparent hourly margin</li>
+                <li>Fast deployment</li>
+                <li>Ongoing account contact</li>
+            </ul>
+            <button class="btn-primary">Start hiring</button>
+        </div>
+
+        <div class="pricing-card">
+            <h3>Project basis</h3>
+            <p class="pricing-desc">A team for a defined project scope.</p>
+            <div class="price">Custom</div>
+            <span class="price-note">/ scope</span>
+            <ul>
+                <li>Scoped delivery team</li>
+                <li>Defined milestones</li>
+                <li>Fixed, agreed pricing</li>
+            </ul>
+            <button class="btn-secondary">Start hiring</button>
+        </div>
+    </div>
+</div>
+
+<!-- CTA BAR -->
+<div class="cta-bar">
+    <div class="cta-text">Ready to hire pre-qualified Project Delivery Experts?</div>
+    <button class="cta-button">Hire An Expert</button>
+</div>
+
+<!-- FOOTER -->
+<div class="footer-main">
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-logo">HumAIn Recruitment</div>
+            <p class="footer-text">Your extended network in international project recruitment. Human core, AI engine.</p>
+            <div class="footer-icons">
+                <div class="icon-box"></div>
+                <div class="icon-box"></div>
+                <div class="icon-box"></div>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>NAVIGATE</h4>
+            <a href="#">Jobs</a>
+            <a href="#">For employers</a>
+            <a href="#">For candidates</a>
+            <a href="#">How we work</a>
+            <a href="#">About us</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>JOBS BY DISCIPLINE</h4>
+            <a href="#">Project Controls</a>
+            <a href="#">Cost Engineering &amp; Estimating</a>
+            <a href="#">Planning &amp; Scheduling</a>
+            <a href="#">Document Control</a>
+            <a href="#">Contract Management</a>
+            <a href="#">Project Management</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>JOBS BY SECTOR</h4>
+            <a href="#">Oil &amp; Gas</a>
+            <a href="#">Energy &amp; Renewables</a>
+            <a href="#">Infrastructure</a>
+            <a href="#">Logistics</a>
+            <a href="#">Healthcare <span class="badge">SOON</span></a>
+        </div>
+
+        <div class="footer-col">
+            <h4>JOBS BY TYPE</h4>
+            <a href="#">Permanent</a>
+            <a href="#">Secondment</a>
+            <a href="#">Project basis</a>
+            <div class="footer-sub">
+                <h4>BY EXPERIENCE</h4>
+                <a href="#">5–7 years</a>
+                <a href="#">8–12 years</a>
+                <a href="#">12+ years</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-left">
+            <a href="#">Privacy &amp; Cookies</a>
+            <a href="#">Terms &amp; conditions</a>
+            <span>© 2026 HumAIn Recruitment</span>
+        </div>
+        <div class="footer-right">
+            <span>Certifications</span>
+            <div class="cert-box">CERT</div>
+            <div class="cert-box">CERT</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Audience selector toggle (slider beweegt mee) — afgeleid uit klant-CSS .slider
+    const selector = document.getElementById('audienceSelector');
+    selector.querySelectorAll('.option').forEach((opt, i) => {
+        opt.addEventListener('click', () => {
+            selector.querySelectorAll('.option').forEach(o => o.classList.remove('active'));
+            opt.classList.add('active');
+            selector.setAttribute('data-active', String(i));
+        });
+    });
+
+    // Services tabs (de klant had hier nog geen JS voor)
+    document.querySelectorAll('.services-tabs .tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            document.querySelectorAll('.services-tabs .tab').forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+        });
+    });
+</script>
+</body>
+</html>
