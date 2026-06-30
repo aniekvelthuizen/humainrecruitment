@@ -1,6 +1,23 @@
 {
   "rewrites": [
     { "source": "/", "destination": "/wireframes/index.html" },
+    { "source": "/styles.css", "destination": "/wireframes/styles.css" },
+    { "source": "/chrome.js", "destination": "/wireframes/chrome.js" },
+    { "source": "/hire-an-expert.html", "destination": "/wireframes/hire-an-expert.html" },
+    { "source": "/opportunities.html", "destination": "/wireframes/opportunities.html" },
+    { "source": "/talent-insights.html", "destination": "/wireframes/talent-insights.html" },
+    { "source": "/project-delivery-experts.html", "destination": "/wireframes/project-delivery-experts.html" },
+    { "source": "/project-controls.html", "destination": "/wireframes/project-controls.html" },
+    { "source": "/consulting-services.html", "destination": "/wireframes/consulting-services.html" },
+    { "source": "/platform.html", "destination": "/wireframes/platform.html" },
+    { "source": "/about.html", "destination": "/wireframes/about.html" },
+    { "source": "/clients.html", "destination": "/wireframes/clients.html" },
+    { "source": "/how-it-works.html", "destination": "/wireframes/how-it-works.html" },
+    { "source": "/pricing.html", "destination": "/wireframes/pricing.html" },
+    { "source": "/contact.html", "destination": "/wireframes/contact.html" },
+    { "source": "/job-detail.html", "destination": "/wireframes/job-detail.html" },
+    { "source": "/submit-resume.html", "destination": "/wireframes/submit-resume.html" },
+    { "source": "/careers.html", "destination": "/wireframes/careers.html" },
     { "source": "/vacatures", "destination": "/wireframes/vacatures.html" },
     { "source": "/privacy-cookies", "destination": "/wireframes/privacy-cookies.html" }
   ]

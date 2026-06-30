@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HumAIn Recruitment — Opportunities Wireframe</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="wf-banner">WIREFRAME — <b>HumAIn Recruitment</b> · Opportunities · low-fidelity, grayscale · structure for review (not final design)</div>
+
+<!-- HEADER injected by chrome.js -->
+<div data-chrome="header"></div>
+
+<!-- ====================== HEADER (compact + search) ====================== -->
+<section class="subhero">
+  <div class="wrap">
+    <div class="inner">
+      <span class="eyebrow">Opportunities · For Talent</span>
+      <h1>Project delivery roles, ready for you.</h1>
+      <p class="lead">Browse open project-controls roles across energy, infrastructure and renewables. Not seeing the right fit? Submit your resume and we'll match you proactively.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== FILTERS (briefing §18 · Bullhorn: roles pulled in) ====================== -->
+<section style="padding-top:36px; padding-bottom:24px;">
+  <div class="wrap">
+    <form class="filterbar" onsubmit="return false;">
+      <div class="f">
+        <label>Search</label>
+        <input type="text" placeholder="Role, keyword…" />
+      </div>
+      <div class="f">
+        <label>Location</label>
+        <select><option>All locations</option><option>The Netherlands</option><option>International</option><option>Remote-friendly</option></select>
+      </div>
+      <div class="f">
+        <label>Discipline</label>
+        <select><option>All disciplines</option><option>Cost Control</option><option>Planning</option><option>Risk</option><option>Document Control</option></select>
+      </div>
+      <div class="f">
+        <label>Job type</label>
+        <select><option>All types</option><option>Permanent</option><option>Secondment</option><option>Project basis</option></select>
+      </div>
+      <button class="btn">Search <span class="arr">→</span></button>
+    </form>
+
+    <div class="result-head">
+      <span class="count"><b>24</b> open roles · sorted by newest</span>
+      <span class="bh-note">Synced with Bullhorn</span>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== JOB LIST (job_card grid) ====================== -->
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="jobgrid" id="jobGrid">
+
+      <article class="jobcard">
+        <div class="jc-tags"><span class="tag">Permanent</span><span class="tag">Cost Control</span></div>
+        <h3>Project Controls Manager</h3>
+        <div class="jc-meta">
+          <span><span class="ico">📍</span> The Netherlands</span>
+          <span><span class="ico">💼</span> Oil &amp; Gas Sector</span>
+          <span><span class="ico">💰</span> €90k–€110k</span>
+        </div>
+        <p class="jc-desc">Lead cost, planning and reporting performance across a complex capital programme.</p>
+        <div class="jc-foot"><a href="job-detail.html" class="link-arr">Apply Now <span class="arr">→</span></a></div>
+      </article>
+
+      <article class="jobcard">
+        <div class="jc-tags"><span class="tag">Secondment</span><span class="tag">Cost Control</span></div>
+        <h3>Senior Cost Engineer</h3>
+        <div class="jc-meta">
+          <span><span class="ico">📍</span> International / remote-friendly</span>
+          <span><span class="ico">💼</span> Energy &amp; Renewables</span>
+          <span><span class="ico">💰</span> Day rate — on request</span>
+        </div>
+        <p class="jc-desc">Forecasting, cost tracking and variance analysis on multi-currency EPC contracts.</p>
+        <div class="jc-foot"><a href="job-detail.html" class="link-arr">Apply Now <span class="arr">→</span></a></div>
+      </article>
+
+      <article class="jobcard">
+        <div class="jc-tags"><span class="tag">Project basis</span><span class="tag">Planning</span></div>
+        <h3>Planning / Scheduling Engineer</h3>
+        <div class="jc-meta">
+          <span><span class="ico">📍</span> Amsterdam, NL</span>
+          <span><span class="ico">💼</span> Infrastructure &amp; Rail</span>
+          <span><span class="ico">💰</span> €70k–€85k</span>
+        </div>
+        <p class="jc-desc">Build and maintain integrated schedules aligned to milestones and interfaces.</p>
+        <div class="jc-foot"><a href="job-detail.html" class="link-arr">Apply Now <span class="arr">→</span></a></div>
+      </article>
+
+      <article class="jobcard">
+        <div class="jc-tags"><span class="tag">Permanent</span><span class="tag">Risk</span></div>
+        <h3>Risk &amp; Performance Manager</h3>
+        <div class="jc-meta">
+          <span><span class="ico">📍</span> Rotterdam, NL (hybrid)</span>
+          <span><span class="ico">💼</span> Energy Sector</span>
+        </div>
+        <p class="jc-desc">Surface risk and performance gaps early using structured project-controls analysis.</p>
+        <div class="jc-foot"><a href="job-detail.html" class="link-arr">Apply Now <span class="arr">→</span></a></div>
+      </article>
+
+      <article class="jobcard">
+        <div class="jc-tags"><span class="tag">Permanent</span><span class="tag">Planning</span></div>
+        <h3>Project Controls Lead — Offshore Wind</h3>
+        <div class="jc-meta">
+          <span><span class="ico">📍</span> The Hague, NL</span>
+          <span><span class="ico">💼</span> Renewables · Offshore wind</span>
+          <span><span class="ico">💰</span> €100k–€120k</span>
+        </div>
+        <p class="jc-desc">Own the controls function end-to-end on a £150M+ renewables programme.</p>
+        <div class="jc-foot"><a href="job-detail.html" class="link-arr">Apply Now <span class="arr">→</span></a></div>
+      </article>
+
+      <article class="jobcard">
+        <div class="jc-tags"><span class="tag">Secondment</span><span class="tag">Document Control</span></div>
+        <h3>Document Controller</h3>
+        <div class="jc-meta">
+          <span><span class="ico">📍</span> Rotterdam, NL</span>
+          <span><span class="ico">💼</span> Energy Sector</span>
+        </div>
+        <p class="jc-desc">Keep project documentation controlled, traceable and audit-ready throughout delivery.</p>
+        <div class="jc-foot"><a href="job-detail.html" class="link-arr">Apply Now <span class="arr">→</span></a></div>
+      </article>
+
+      <!-- second page (hidden until "load more") -->
+      <article class="jobcard more" hidden>
+        <div class="jc-tags"><span class="tag">Permanent</span><span class="tag">Cost Control</span></div>
+        <h3>Cost Engineer — Renewables</h3>
+        <div class="jc-meta">
+          <span><span class="ico">📍</span> Utrecht, NL</span>
+          <span><span class="ico">💼</span> Offshore wind</span>
+          <span><span class="ico">💰</span> €75k–€90k</span>
+        </div>
+        <p class="jc-desc">Risk-loaded estimating and NEC4 cost forecasting on offshore wind packages.</p>
+        <div class="jc-foot"><a href="job-detail.html" class="link-arr">Apply Now <span class="arr">→</span></a></div>
+      </article>
+
+      <article class="jobcard more" hidden>
+        <div class="jc-tags"><span class="tag">Project basis</span><span class="tag">Planning</span></div>
+        <h3>Primavera P6 Planning Lead</h3>
+        <div class="jc-meta">
+          <span><span class="ico">📍</span> International</span>
+          <span><span class="ico">💼</span> Infrastructure · Rail</span>
+        </div>
+        <p class="jc-desc">Integrated baselining and interface management across rail mega-projects.</p>
+        <div class="jc-foot"><a href="job-detail.html" class="link-arr">Apply Now <span class="arr">→</span></a></div>
+      </article>
+
+      <article class="jobcard more" hidden>
+        <div class="jc-tags"><span class="tag">Permanent</span><span class="tag">Cost Control</span></div>
+        <h3>Project Director</h3>
+        <div class="jc-meta">
+          <span><span class="ico">📍</span> The Netherlands</span>
+          <span><span class="ico">💼</span> Oil &amp; Gas · FPSO</span>
+          <span><span class="ico">💰</span> €130k–€160k</span>
+        </div>
+        <p class="jc-desc">Executive ownership of delivery, commercial and stakeholders on a $500M+ programme.</p>
+        <div class="jc-foot"><a href="job-detail.html" class="link-arr">Apply Now <span class="arr">→</span></a></div>
+      </article>
+
+    </div>
+
+    <div class="center" style="margin-top:36px;">
+      <button class="btn btn--ghost" id="loadMore">Load more roles <span class="arr">↓</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== CTA — Submit Resume ====================== -->
+<section class="cta-band">
+  <div class="wrap">
+    <div class="inner">
+      <span class="eyebrow">No perfect match yet?</span>
+      <h2>Let us find it for you.</h2>
+      <p class="lead">Submit your resume once. Our AI benchmarks it and our recruiters match you to roles before they're even posted.</p>
+      <div class="hero-cta">
+        <a href="#" class="btn">Analyse my Resume <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER injected by chrome.js -->
+<div data-chrome="footer"></div>
+
+<script src="chrome.js"></script>
+<script>
+  // Load more (visual): reveal the hidden second page of roles
+  const loadMore = document.getElementById('loadMore');
+  if (loadMore) loadMore.addEventListener('click', () => {
+    document.querySelectorAll('.jobcard.more').forEach(c => c.hidden = false);
+    loadMore.remove();
+  });
+</script>
+</body>
+</html>

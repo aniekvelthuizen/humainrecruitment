@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HumAIn Recruitment — Contact Wireframe</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="wf-banner">WIREFRAME — <b>HumAIn Recruitment</b> · Contact · low-fidelity, grayscale · structure for review (not final design)</div>
+
+<div data-chrome="header"></div>
+
+<!-- HEADER -->
+<section class="subhero">
+  <div class="wrap">
+    <div class="inner">
+      <span class="eyebrow">Contact</span>
+      <h1>Let's talk.</h1>
+      <p class="lead">Hiring, scoping a project, or exploring a role — tell us what you need and we'll come back within one working day.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FORM + CONTACT DETAILS -->
+<section>
+  <div class="wrap">
+    <div class="contact-split">
+      <!-- Form -->
+      <form class="form" onsubmit="return false;">
+        <p style="margin:-6px 0 16px;"><span class="bh-note">Submits to Bullhorn</span></p>
+        <div class="form-row two">
+          <div class="form-row"><label>First name</label><input type="text" placeholder="First name" /></div>
+          <div class="form-row"><label>Last name</label><input type="text" placeholder="Last name" /></div>
+        </div>
+        <div class="form-row two">
+          <div class="form-row"><label>Email</label><input type="email" placeholder="you@company.com" /></div>
+          <div class="form-row"><label>Phone</label><input type="tel" placeholder="+31 …" /></div>
+        </div>
+        <div class="form-row">
+          <label>I'm contacting you as</label>
+          <select><option>A company looking to hire</option><option>A specialist looking for a role</option><option>Something else</option></select>
+        </div>
+        <div class="form-row"><label>Message</label><textarea placeholder="Tell us about the role, project or question…"></textarea></div>
+        <div class="form-actions">
+          <button class="btn">Send message <span class="arr">→</span></button>
+          <span class="note">We reply within one working day.</span>
+        </div>
+      </form>
+
+      <!-- Details -->
+      <div class="contact-info">
+        <div class="ci-item"><div class="ci-label">Email</div><div class="ci-val">hello@humain-recruitment.com</div></div>
+        <div class="ci-item"><div class="ci-label">Phone</div><div class="ci-val">+31 (0)XX XXX XX XX</div></div>
+        <div class="ci-item"><div class="ci-label">Office</div><div class="ci-val">Rotterdam, The Netherlands</div></div>
+        <div class="ci-item"><div class="ci-label">Hours</div><div class="ci-val">Mon–Fri · 09:00–17:30 CET</div></div>
+        <div class="contact-map"><div class="ph" data-label="Map — office location"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="wrap">
+    <div class="inner">
+      <span class="eyebrow">Prefer to browse first?</span>
+      <h2>Explore what we do.</h2>
+      <div class="hero-cta">
+        <a href="hire-an-expert.html" class="btn">Hire an Expert <span class="arr">→</span></a>
+        <a href="opportunities.html" class="btn btn--ghost">View opportunities <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div data-chrome="footer"></div>
+<script src="chrome.js"></script>
+</body>
+</html>
