@@ -95,10 +95,10 @@
   .ph--icon { min-height: 0; width: 48px; height: 48px; border-radius: 10px; flex: 0 0 auto; }
   .ph--icon::after { content: "◇"; font-size: 1.1rem; background: none; border: none; padding: 0; }
 
-  /* For Business — 3-column mega dropdown (Hiring / Services / Platform) */
-  .dropdown.mega.biz-mega3 { width: 660px; min-width: 0; left: auto; right: 0; }
+  /* For Business — single-column mega dropdown (Hiring / Services / Platform stacked) */
+  .dropdown.mega.biz-mega3 { width: 320px; min-width: 0; left: auto; right: 0; }
   .dropdown.mega.biz-mega3 .mega-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     padding: 22px 28px 20px;
   }
 
@@ -626,12 +626,87 @@
     color: var(--ink); font-weight: 700; font-size: .85rem;
   }
 
+  .steps-row.cols-4 { grid-template-columns: repeat(4, 1fr); }
+  .steps-row.cols-4::before { left: calc(100% / 8); right: calc(100% / 8); }
+
   @media (max-width: 760px) {
     .steps-row { grid-template-columns: 1fr; gap: 32px; }
     .steps-row::before { display: none; }
     .step { text-align: left; }
     .step-circle { margin: 0 0 12px; }
     .step-deliv { display: block; }
+  }
+
+  /* ===========================================================
+     PROCESS SLIDER — How It Works (5-step carousel)
+     =========================================================== */
+  .sec-head-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 28px; }
+  .sec-head-row .sec-head { margin: 0; }
+  .proc-track {
+    display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory;
+    padding-bottom: 8px; scrollbar-width: thin;
+  }
+  .proc-track::-webkit-scrollbar { height: 8px; }
+  .proc-track::-webkit-scrollbar-thumb { background: var(--line); border-radius: 8px; }
+  .proc-card {
+    flex: 0 0 300px; scroll-snap-align: start; background: #fff;
+    border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 22px 22px 24px; display: flex; flex-direction: column;
+    transition: transform .15s, box-shadow .15s;
+  }
+  .proc-card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(0,0,0,.06); }
+  .proc-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+  .proc-icon {
+    width: 40px; height: 40px; border-radius: 50%; background: var(--bg-2); border: 1px solid var(--line);
+    display: grid; place-items: center; font-size: 1.15rem;
+  }
+  .proc-top .step-time { margin: 0; }
+  .proc-step { display: block; font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin-bottom: 6px; }
+  .proc-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+  .proc-card > p { font-size: .9rem; margin-bottom: 16px; }
+  .proc-out { margin-top: auto; padding-top: 14px; border-top: 1px solid var(--line-2); }
+  .proc-out .tc-label { display: block; margin-bottom: 8px; }
+
+  @media (max-width: 760px) {
+    .sec-head-row { flex-direction: column; align-items: flex-start; }
+  }
+
+  /* ===========================================================
+     SCORE BREAKDOWN — stacked weight bar (segments sum to 100%)
+     =========================================================== */
+  .score-stack {
+    display: flex; width: 100%; max-width: 720px; margin: 0 auto;
+    height: 44px; border-radius: var(--radius); overflow: hidden;
+    border: 1px solid var(--line);
+  }
+  .score-seg { height: 100%; border-right: 3px solid var(--bg); }
+  .score-seg:last-child { border-right: none; }
+
+  .score-legend {
+    list-style: none; margin: 28px auto 0; padding: 0; max-width: 640px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px 28px;
+  }
+  .score-legend li { display: flex; align-items: center; gap: 10px; font-size: .88rem; color: var(--ink-2); }
+  .score-legend li b { margin-left: auto; color: var(--ink); font-weight: 800; }
+  .legend-swatch { width: 13px; height: 13px; border-radius: 3px; border: 1px solid var(--line); flex-shrink: 0; }
+
+  @media (max-width: 640px) {
+    .score-legend { grid-template-columns: 1fr; }
+  }
+
+  /* ===========================================================
+     CLIENT JOURNEY — recap strip (icons + day, stats below)
+     =========================================================== */
+  .journey-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; text-align: center; }
+  .jr-col { display: flex; flex-direction: column; align-items: center; }
+  .jr-icon { font-size: 1.9rem; margin-bottom: 12px; line-height: 1; }
+  .jr-label { font-weight: 700; color: var(--ink); font-size: 1rem; margin-bottom: 4px; }
+  .jr-day { font-size: .85rem; color: var(--muted); }
+  .jr-stat { font-weight: 800; font-size: 1.15rem; color: var(--ink); letter-spacing: -.01em; }
+  .journey-divider { border: 0; border-top: 1px solid var(--line); margin: 32px 0; }
+
+  @media (max-width: 760px) {
+    .journey-row { grid-template-columns: repeat(2, 1fr); gap: 28px 20px; }
   }
 
   /* ===========================================================

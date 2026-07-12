@@ -32,7 +32,7 @@
     <div class="split">
       <div class="col-txt">
         <span class="eyebrow">The bar</span>
-        <h2>What "pre-qualified" means here.</h2>
+        <h2>What "HumAIn-qualified" means here.</h2>
         <p class="lead">A pre-qualified expert isn't just available — they're evidenced. We assess delivery track record, technical depth and fit before they enter the pool, and we keep that assessment current.</p>
         <ul class="cred-list">
           <li>Evidenced delivery, not self-reported claims</li>
@@ -49,18 +49,191 @@
 <!-- STEPS — the assessment workflow (recruiter side) -->
 <section class="tint">
   <div class="wrap">
-    <div class="sec-head center">
-      <span class="eyebrow">Our assessment process</span>
-      <h2>Six steps, every expert</h2>
-      <p class="lead">What happens on our side before a name reaches your shortlist.</p>
+    <div class="sec-head-row">
+      <div class="sec-head">
+        <span class="eyebrow">Our assessment process</span>
+        <h2>Nine stages, every expert</h2>
+        <p class="lead">What happens on our side before a name reaches your shortlist — the HumAIn Expert Qualification Framework.</p>
+      </div>
+      <div class="car-nav">
+        <button id="qualPrev" type="button" aria-label="Previous stage">←</button>
+        <button id="qualNext" type="button" aria-label="Next stage">→</button>
+      </div>
     </div>
-    <div class="grid-3">
-      <div class="card"><div class="num">Step 1</div><h3>Source</h3><p>AI scans the market and our network for relevant specialists in the discipline.</p></div>
-      <div class="card"><div class="num">Step 2</div><h3>Recruiter screening</h3><p>An experienced recruiter reviews the profile, the story and the gaps.</p></div>
-      <div class="card"><div class="num">Step 3</div><h3>Technical validation</h3><p>We test real competency and delivery depth — not keyword matches.</p></div>
-      <div class="card"><div class="num">Step 4</div><h3>Market benchmarking</h3><p>The profile is benchmarked against comparable experts on real signals.</p></div>
-      <div class="card"><div class="num">Step 5</div><h3>Reference &amp; track record</h3><p>We verify delivery history and references on past programmes.</p></div>
-      <div class="card"><div class="num">Step 6</div><h3>Scored &amp; pooled</h3><p>An explainable match score is set and the expert enters the pre-qualified pool.</p></div>
+
+    <div class="proc-track" id="qualTrack">
+
+      <article class="proc-card">
+        <div class="proc-top">
+          <span class="proc-icon">📝</span>
+          <span class="step-time">Accept / reject</span>
+        </div>
+        <span class="proc-step">Stage 1</span>
+        <h3>Application &amp; CV Submission</h3>
+        <p>Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location &amp; availability and desired contract type.</p>
+        <div class="proc-out">
+          <span class="tc-label">Assessed</span>
+          <ul class="step-deliv">
+            <li>Project delivery background</li>
+            <li>Relevant discipline</li>
+            <li>Career consistency</li>
+            <li>Language requirements</li>
+            <li>Industry relevance</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="proc-card">
+        <div class="proc-top">
+          <span class="proc-icon">🔍</span>
+          <span class="step-time">Top 30%</span>
+        </div>
+        <span class="proc-step">Stage 2</span>
+        <h3>Profile Screening</h3>
+        <p>Validate career quality and relevance. A recruiter and AI assessment system review career progression, project size, leadership exposure, industry expertise and longevity in roles.</p>
+        <div class="proc-out">
+          <span class="tc-label">Example checks</span>
+          <ul class="step-deliv">
+            <li>Worked on €100M+ projects?</li>
+            <li>Responsible for budgets?</li>
+            <li>Managed teams?</li>
+            <li>Relevant sectors?</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="proc-card">
+        <div class="proc-top">
+          <span class="proc-icon">🕵️</span>
+          <span class="step-time">Top 20%</span>
+        </div>
+        <span class="proc-step">Stage 3</span>
+        <h3>Experience Validation</h3>
+        <p>Verify claimed achievements. Instead of accepting CV statements, HumAIn investigates actual responsibilities, reporting lines, project value, team size and stakeholder complexity.</p>
+        <div class="proc-out">
+          <span class="tc-label">We investigate</span>
+          <ul class="step-deliv">
+            <li>Was candidate lead planner?</li>
+            <li>Team size &amp; duration</li>
+            <li>Reporting lines</li>
+            <li>Outcome achieved</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="proc-card">
+        <div class="proc-top">
+          <span class="proc-icon">🧪</span>
+          <span class="step-time">Scored</span>
+        </div>
+        <span class="proc-step">Stage 4</span>
+        <h3>Technical Assessment</h3>
+        <p>Assess professional competence with discipline-specific testing — Project Controls, Planning &amp; Scheduling, Cost Control and Project Management.</p>
+        <div class="proc-out">
+          <span class="tc-label">Examples by discipline</span>
+          <ul class="step-deliv">
+            <li>Earned Value Management &amp; forecasting</li>
+            <li>Primavera P6 &amp; critical path analysis</li>
+            <li>Cost engineering &amp; variance analysis</li>
+            <li>Governance, risk &amp; stakeholder mgmt</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="proc-card">
+        <div class="proc-top">
+          <span class="proc-icon">🧭</span>
+          <span class="step-time">Scored</span>
+        </div>
+        <span class="proc-step">Stage 5</span>
+        <h3>Behaviour &amp; Performance Assessment</h3>
+        <p>Predict real-world delivery success. Candidates describe a project recovery, a major conflict resolution and a significant project risk.</p>
+        <div class="proc-out">
+          <span class="tc-label">Assessed</span>
+          <ul class="step-deliv">
+            <li>Communication &amp; leadership</li>
+            <li>Decision making &amp; ownership</li>
+            <li>Resilience</li>
+            <li>Stakeholder management</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="proc-card">
+        <div class="proc-top">
+          <span class="proc-icon">☎️</span>
+          <span class="step-time">Verified</span>
+        </div>
+        <span class="proc-step">Stage 6</span>
+        <h3>Reference Validation</h3>
+        <p>Independent verification via references from project directors, functional managers, clients and programme leaders.</p>
+        <div class="proc-out">
+          <span class="tc-label">Questions asked</span>
+          <ul class="step-deliv">
+            <li>Would you hire them again?</li>
+            <li>Biggest strengths?</li>
+            <li>Improvement areas?</li>
+            <li>Level compared to peers?</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="proc-card">
+        <div class="proc-top">
+          <span class="proc-icon">👥</span>
+          <span class="step-time">Approved</span>
+        </div>
+        <span class="proc-step">Stage 7</span>
+        <h3>Expert Review Panel</h3>
+        <p>Human validation. Senior specialists review the CV, assessment results, references and market positioning.</p>
+        <div class="proc-out">
+          <span class="tc-label">They determine</span>
+          <ul class="step-deliv">
+            <li>Seniority level</li>
+            <li>Sector fit</li>
+            <li>Deployment readiness</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="proc-card">
+        <div class="proc-top">
+          <span class="proc-icon">📊</span>
+          <span class="step-time">Ranked</span>
+        </div>
+        <span class="proc-step">Stage 8</span>
+        <h3>Benchmarking &amp; Ranking</h3>
+        <p>Compare professionals against peers across 200+ industry skills — technical capability, leadership, delivery experience and reference strength.</p>
+        <div class="proc-out">
+          <span class="tc-label">Example score</span>
+          <ul class="step-deliv">
+            <li>Technical — 92</li>
+            <li>Leadership — 87</li>
+            <li>Delivery — 95</li>
+            <li>References — 90</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="proc-card">
+        <div class="proc-top">
+          <span class="proc-icon">✅</span>
+          <span class="step-time">Certified</span>
+        </div>
+        <span class="proc-step">Stage 9</span>
+        <h3>Accepted into HumAIn Network</h3>
+        <p>Only candidates that surpass the benchmark enter the pool, with status: Certified HumAIn Expert.</p>
+        <div class="proc-out">
+          <span class="tc-label">Profile includes</span>
+          <ul class="step-deliv">
+            <li>Qualification score</li>
+            <li>Sector &amp; role specialization</li>
+            <li>Availability &amp; mobility</li>
+            <li>Language capability</li>
+          </ul>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
@@ -68,51 +241,266 @@
 <!-- FEATURES — assessment criteria -->
 <section>
   <div class="wrap">
-    <div class="sec-head center">
-      <span class="eyebrow">What we assess</span>
-      <h2>The criteria behind the score</h2>
+    <div class="sec-head-row">
+      <div class="sec-head">
+        <span class="eyebrow">What we assess</span>
+        <h2>The criteria behind the score</h2>
+        <p class="lead">Every professional in the HumAIn network is assessed against a consistent framework that combines experience, capability, commercial impact and verified performance.</p>
+      </div>
+      <div class="car-nav">
+        <button id="assessPrev" type="button" aria-label="Previous criterion">←</button>
+        <button id="assessNext" type="button" aria-label="Next criterion">→</button>
+      </div>
     </div>
-    <div class="grid-4">
-      <div class="card"><div class="ph ph--icon"></div><h3>Delivery evidence</h3><p>Proof of outcomes on real capital projects.</p></div>
-      <div class="card"><div class="ph ph--icon"></div><h3>Technical depth</h3><p>Cost, planning, risk or controls expertise, tested.</p></div>
-      <div class="card"><div class="ph ph--icon"></div><h3>Sector experience</h3><p>Relevant energy, infra or renewables exposure.</p></div>
-      <div class="card"><div class="ph ph--icon"></div><h3>Commercial exposure</h3><p>Ownership of budgets, contracts and stakeholders.</p></div>
-      <div class="card"><div class="ph ph--icon"></div><h3>Soft skills</h3><p>Communication and stakeholder management.</p></div>
-      <div class="card"><div class="ph ph--icon"></div><h3>Availability</h3><p>Realistic start dates and engagement type.</p></div>
-      <div class="card"><div class="ph ph--icon"></div><h3>Language</h3><p>Working languages for the programme.</p></div>
-      <div class="card"><div class="ph ph--icon"></div><h3>References</h3><p>Verified track record from past clients.</p></div>
+
+    <div class="proc-track" id="assessTrack">
+
+      <article class="proc-card">
+        <div class="proc-top">
+          <span class="proc-icon">📈</span>
+          <span class="step-time">1 of 8</span>
+        </div>
+        <span class="proc-step">Criteria 1</span>
+        <h3>Delivery Evidence</h3>
+        <p>Proof of outcomes on real projects. We look beyond responsibilities and focus on measurable contribution — candidates must demonstrate successful delivery on complex projects, programmes or portfolios with clear evidence of impact.</p>
+        <div class="proc-out">
+          <span class="tc-label">We assess</span>
+          <ul class="step-deliv">
+            <li>Project value and complexity</li>
+            <li>Delivery milestones achieved</li>
+            <li>Programme outcomes</li>
+            <li>Track record of execution</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="proc-card">
+        <div class="proc-top">
+          <span class="proc-icon">🧪</span>
+          <span class="step-time">2 of 8</span>
+        </div>
+        <span class="proc-step">Criteria 2</span>
+        <h3>Technical Depth</h3>
+        <p>Demonstrated expertise within the discipline. Technical knowledge is validated against real-world application, not simply certifications or years of experience.</p>
+        <div class="proc-out">
+          <span class="tc-label">We assess</span>
+          <ul class="step-deliv">
+            <li>Cost Management</li>
+            <li>Planning &amp; Scheduling</li>
+            <li>Project Controls</li>
+            <li>Risk &amp; Performance Management</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="proc-card">
+        <div class="proc-top">
+          <span class="proc-icon">🏗️</span>
+          <span class="step-time">3 of 8</span>
+        </div>
+        <span class="proc-step">Criteria 3</span>
+        <h3>Sector Experience</h3>
+        <p>Relevant industry exposure. Specialist industries require specialist knowledge — we assess whether experience aligns with the sectors our clients operate in.</p>
+        <div class="proc-out">
+          <span class="tc-label">We assess</span>
+          <ul class="step-deliv">
+            <li>Oil &amp; Gas</li>
+            <li>Energy &amp; Renewables</li>
+            <li>Infrastructure</li>
+            <li>Industrial &amp; Manufacturing</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="proc-card">
+        <div class="proc-top">
+          <span class="proc-icon">💼</span>
+          <span class="step-time">4 of 8</span>
+        </div>
+        <span class="proc-step">Criteria 4</span>
+        <h3>Commercial Exposure</h3>
+        <p>Understanding business impact. Professionals are evaluated on their ability to balance delivery performance with commercial objectives and stakeholder expectations.</p>
+        <div class="proc-out">
+          <span class="tc-label">We assess</span>
+          <ul class="step-deliv">
+            <li>Budget ownership</li>
+            <li>Contract management</li>
+            <li>Commercial decision-making</li>
+            <li>Executive stakeholder exposure</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="proc-card">
+        <div class="proc-top">
+          <span class="proc-icon">🗣️</span>
+          <span class="step-time">5 of 8</span>
+        </div>
+        <span class="proc-step">Criteria 5</span>
+        <h3>Leadership &amp; Soft Skills</h3>
+        <p>The ability to influence and deliver through people. Technical expertise alone is not enough — we assess communication, leadership, collaboration and decision-making capability.</p>
+        <div class="proc-out">
+          <span class="tc-label">We assess</span>
+          <ul class="step-deliv">
+            <li>Stakeholder management</li>
+            <li>Communication effectiveness</li>
+            <li>Leadership capability</li>
+            <li>Problem solving</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="proc-card">
+        <div class="proc-top">
+          <span class="proc-icon">📅</span>
+          <span class="step-time">6 of 8</span>
+        </div>
+        <span class="proc-step">Criteria 6</span>
+        <h3>Availability &amp; Mobility</h3>
+        <p>Deployment readiness. The best professional is only valuable if they can realistically support a programme when needed.</p>
+        <div class="proc-out">
+          <span class="tc-label">We assess</span>
+          <ul class="step-deliv">
+            <li>Availability date</li>
+            <li>Contract preference</li>
+            <li>Travel flexibility</li>
+            <li>Geographic mobility</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="proc-card">
+        <div class="proc-top">
+          <span class="proc-icon">🌐</span>
+          <span class="step-time">7 of 8</span>
+        </div>
+        <span class="proc-step">Criteria 7</span>
+        <h3>Language Capability</h3>
+        <p>Effective communication in project environments. We verify working proficiency rather than assumed fluency.</p>
+        <div class="proc-out">
+          <span class="tc-label">We assess</span>
+          <ul class="step-deliv">
+            <li>English proficiency</li>
+            <li>Local language requirements</li>
+            <li>Client-facing communication</li>
+            <li>International project readiness</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="proc-card">
+        <div class="proc-top">
+          <span class="proc-icon">☎️</span>
+          <span class="step-time">8 of 8</span>
+        </div>
+        <span class="proc-step">Criteria 8</span>
+        <h3>References &amp; Validation</h3>
+        <p>Independent verification of performance. Every professional is benchmarked against feedback from previous managers, clients and project stakeholders.</p>
+        <div class="proc-out">
+          <span class="tc-label">We assess</span>
+          <ul class="step-deliv">
+            <li>Reference quality</li>
+            <li>Rehire likelihood</li>
+            <li>Peer comparison</li>
+            <li>Consistency of feedback</li>
+          </ul>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
 
-<!-- CONTENT — AI + human in assessment -->
+<!-- SCORE BREAKDOWN — how the final score is calculated -->
 <section class="tint">
   <div class="wrap">
-    <div class="split rev">
-      <div class="col-img"><div class="ph" data-label="Diagram — AI + recruiter assessment" style="min-height:320px;"></div></div>
-      <div class="col-txt">
-        <span class="eyebrow">AI + human</span>
-        <h2>The machine ranks. The recruiter judges.</h2>
-        <p class="lead">AI does the heavy lifting — sourcing, parsing and benchmarking at scale. Our recruiters apply judgement where it matters: validating the proof and the fit. Together they produce a score you can defend.</p>
-        <div class="hero-cta" style="display:flex; gap:12px; flex-wrap:wrap;">
-          <a href="talent-insights.html" class="btn">See the AI behind it <span class="arr">→</span></a>
-          <a href="hire-an-expert.html" class="link-arr">Start hiring <span class="arr">→</span></a>
-        </div>
+    <div class="sec-head center">
+      <span class="eyebrow">The weighting</span>
+      <h2>How the final score is calculated</h2>
+      <p class="lead">Not every criterion counts equally. Delivery evidence and technical depth carry the most weight — availability and language are qualifying, not decisive.</p>
+    </div>
+
+    <div class="score-stack" role="img" aria-label="Score weighting: Delivery Evidence 25%, Technical Depth 20%, Sector Experience 15%, Leadership &amp; Soft Skills 15%, Commercial Exposure 10%, References 10%, Availability 5%">
+      <div class="score-seg" style="width:25%; background:var(--ink)"></div>
+      <div class="score-seg" style="width:20%; background:var(--ink-2)"></div>
+      <div class="score-seg" style="width:15%; background:var(--body)"></div>
+      <div class="score-seg" style="width:15%; background:var(--muted)"></div>
+      <div class="score-seg" style="width:10%; background:var(--line)"></div>
+      <div class="score-seg" style="width:10%; background:var(--line-2)"></div>
+      <div class="score-seg" style="width:5%; background:var(--bg-3)"></div>
+    </div>
+
+    <ul class="score-legend">
+      <li><span class="legend-swatch" style="background:var(--ink)"></span>Delivery Evidence <b>25%</b></li>
+      <li><span class="legend-swatch" style="background:var(--ink-2)"></span>Technical Depth <b>20%</b></li>
+      <li><span class="legend-swatch" style="background:var(--body)"></span>Sector Experience <b>15%</b></li>
+      <li><span class="legend-swatch" style="background:var(--muted)"></span>Leadership &amp; Soft Skills <b>15%</b></li>
+      <li><span class="legend-swatch" style="background:var(--line)"></span>Commercial Exposure <b>10%</b></li>
+      <li><span class="legend-swatch" style="background:var(--line-2)"></span>References <b>10%</b></li>
+      <li><span class="legend-swatch" style="background:var(--bg-3)"></span>Availability <b>5%</b></li>
+    </ul>
+
+    <p class="center" style="margin:28px 0 0; font-size:.85rem; color:var(--muted);">Placeholder weighting — to confirm with Floyd.</p>
+  </div>
+</section>
+
+<!-- TRUST STATEMENT -->
+<section class="tint">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Trust Statement</span>
+      <h2>Why This Matters</h2>
+      <p class="lead">Traditional recruitment focuses on finding available professionals. We focus on identifying proven performers.</p>
+      <p>Every expert in the HumAIn network is benchmarked against the same framework, creating a consistent qualification score that helps clients make hiring decisions with greater confidence.</p>
+      <p><b>Result:</b> fewer interviews, faster hiring, and better project outcomes.</p>
+    </div>
+
+    <div class="steps-row cols-4">
+      <div class="step">
+        <div class="step-circle">1</div>
+        <h3>How We Qualify The Top 5%</h3>
+      </div>
+      <div class="step">
+        <div class="step-circle">2</div>
+        <h3>The Criteria Behind The Score</h3>
+      </div>
+      <div class="step">
+        <div class="step-circle">3</div>
+        <h3>Accepted Into The HumAIn Network</h3>
+      </div>
+      <div class="step">
+        <div class="step-circle">4</div>
+        <h3>Available For Client Deployment</h3>
       </div>
     </div>
   </div>
 </section>
 
-<!-- STATS -->
+<!-- QUALIFICATION FRAMEWORK FLOW -->
 <section>
   <div class="wrap">
-    <div class="stats">
-      <div class="stat"><div class="big">Top 5%</div><div class="lbl">Make it into the pool</div></div>
-      <div class="stat"><div class="big">6-step</div><div class="lbl">Assessment per expert</div></div>
-      <div class="stat"><div class="big">Always on</div><div class="lbl">Re-assessment cadence</div></div>
-      <div class="stat"><div class="big">Explainable</div><div class="lbl">Match scores</div></div>
+    <div class="sec-head center">
+      <span class="eyebrow">How We Build The Top 5%</span>
+      <h2>The HumAIn Expert Qualification Framework</h2>
+      <p class="lead">Every professional follows the same evidence-based assessment process. At each stage, candidates are validated, benchmarked, and challenged against increasingly demanding criteria before entering the HumAIn Expert Network.</p>
     </div>
-    <p class="center" style="margin:28px 0 0; font-size:.85rem; color:var(--muted);">Placeholder figures — to confirm with Floyd.</p>
+
+    <div class="grid-3">
+      <div class="card"><div class="ph ph--icon"></div><span class="num">Stage 1</span><h3>Application &amp; CV Review</h3><p>Initial Eligibility Check</p></div>
+      <div class="card"><div class="ph ph--icon"></div><span class="num">Stage 2</span><h3>Profile Screening</h3><p>Career Quality &amp; Relevance</p></div>
+      <div class="card"><div class="ph ph--icon"></div><span class="num">Stage 3</span><h3>Experience Validation</h3><p>Verify Project Claims</p></div>
+      <div class="card"><div class="ph ph--icon"></div><span class="num">Stage 4</span><h3>Technical Assessment</h3><p>Professional Competence</p></div>
+      <div class="card"><div class="ph ph--icon"></div><span class="num">Stage 5</span><h3>Behaviour Assessment</h3><p>Delivery Mindset</p></div>
+      <div class="card"><div class="ph ph--icon"></div><span class="num">Stage 6</span><h3>Reference Validation</h3><p>Independent Verification</p></div>
+      <div class="card"><div class="ph ph--icon"></div><span class="num">Stage 7</span><h3>Expert Review Panel</h3><p>Human Specialist Approval</p></div>
+      <div class="card"><div class="ph ph--icon"></div><span class="num">Stage 8</span><h3>Benchmarking &amp; Ranking</h3><p>Peer Comparison</p></div>
+      <div class="card"><div class="ph ph--icon"></div><span class="num">Stage 9</span><h3>Accepted Into Network</h3><p>Certified HumAIn Expert</p></div>
+    </div>
+
+    <div class="sec-head center" style="margin-top:56px;">
+      <h3 style="font-size:1.3rem;">Only Proven Performers Reach Clients</h3>
+      <p>Our process is designed to identify professionals with demonstrated delivery capability, not simply impressive CVs. Every HumAIn Expert has been evaluated, validated, benchmarked, and approved through a consistent qualification framework before joining the network.</p>
+    </div>
   </div>
 </section>
 
@@ -133,5 +521,22 @@
 
 <div data-chrome="footer"></div>
 <script src="chrome.js"></script>
+<script>
+  // ---- Qualification slider: prev/next arrows ----
+  const qualTrack = document.getElementById('qualTrack');
+  const qualStep = 320;
+  document.getElementById('qualNext').onclick =
+    () => qualTrack.scrollBy({ left: qualStep, behavior: 'smooth' });
+  document.getElementById('qualPrev').onclick =
+    () => qualTrack.scrollBy({ left: -qualStep, behavior: 'smooth' });
+
+  // ---- Assessment criteria slider: prev/next arrows ----
+  const assessTrack = document.getElementById('assessTrack');
+  const assessStep = 320;
+  document.getElementById('assessNext').onclick =
+    () => assessTrack.scrollBy({ left: assessStep, behavior: 'smooth' });
+  document.getElementById('assessPrev').onclick =
+    () => assessTrack.scrollBy({ left: -assessStep, behavior: 'smooth' });
+</script>
 </body>
 </html>
