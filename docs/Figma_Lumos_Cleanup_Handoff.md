@@ -15,7 +15,7 @@ Plan: Figma Professional, Full seat. Pagina "Visual design" is groot (>40k nodes
 | 3 Structuur | klaar |
 | 4 Naamgeving | klaar |
 | 5 Componenten en modes | klaar (zie "Fase 5: uitgevoerd"), 2 punten open |
-| 6 Controle en eindrapport | nog te doen |
+| 6 Controle en eindrapport | klaar (zie "Eindrapport fase 6") |
 
 ## Genomen beslissingen
 - **Kleuren:** Purple blue `#250059` = `brand-500`. Grey `#edf1f7` = `light-200`, White = `light-100`, Body `#030b1b` = `dark-900`. Teal, Green, Old pink en Stars zijn extra swatches (`brand-secondary-500`, `brand-accent-500`, `brand-pink-500`, `stars`), niet in de Lumos-basis.
@@ -88,5 +88,39 @@ Werkwijze: named version vooraf, alleen namen/bindingen, controle met pixel-diff
 - **Ontbrekende interactiestaten**: geen hover/focus voor Navbar - Light items, tertiary/back-button (hover = rest), Tab, links, inputvelden (`input/border-focus`).
 - **Mobile-pagina**: geen baseline-screenshots, dus geen pixel-diff voor Sizes=Mobile.
 
-## Voor fase 6
-Scan 02 opnieuw, thema-smoketest (één Base-sectie tijdelijk Dark/Brand zetten), pixel-diff op alle 15 frames plus mobile, fingerprint (script 19) tegen origineel `fDSntIFhtIcXeZn4fExMTA`, eindrapport. Baselines van deze sessie zijn niet bewaard.
+## Eindrapport fase 6 (sessie 2026-10-28)
+
+### Controle tegen het onaangeroerde origineel (`fDSntIFhtIcXeZn4fExMTA`)
+Fingerprint (script 19, tekst, lettergrootte en maat per frame, sectie en variant; 413 rijen Visual design + 27 Mobile) en pixel-diff per paginaframe. Elk verschil is ingedeeld als afgesproken, regressie of ongewijzigd origineel.
+
+**Twee regressies gevonden en hersteld** (beide veroorzaakt doordat een binding op een hoofdcomponent de overrides op de instances wiste):
+1. **Formulierlabels** (51 teksten, Onest SemiBold) waren 14 px in plaats van 12 px. Zichtbaar in Search, Contact, Resume en Opportunities (hoogtes +3 tot +12 px). Teruggezet op 12 px.
+2. **About Us, sectie Team** (`2444:34733`): override `paddingTop=0` en breedte 1512 waren verdwenen (+192 px hoog). Hersteld.
+
+**Daarna**: alle 26 eerder afwijkende rijen zijn identiek aan het origineel en de Mobile-pagina is fingerprint-identiek. Pixel-diff tegen het origineel: About, Contact, Opportunities en Opportunity Detail ≤ 24 px verschil (max 3). Home, Hire en Clients hebben lokale verschillen (≤ 1407 px, max 13) in de grijze functietitels in de reviewkaarten: die gebruiken nu `text` met laagdekking (script 13, afgesproken tolerantie). Resume 56 px subpixelverschuiving door de schaalfactor.
+
+### Wat er in fase 5 en 6 is veranderd (tellingen)
+- **Variantproperties**: 24 sets aangepast (zie "Fase 5: uitgevoerd"), 15 generieke setnamen vervangen, Button gesplitst in `type` + `state`. 56 sets, 0 fouten, 0 dubbele namen, 0 verweesde instances.
+- **Theme-variabelen**: 20 nieuwe `button-*` variabelen, alle 10 Button-varianten gebonden, Button pixel-identiek.
+- **Thema per sectie**: 38 secties/mains met effen achtergrond kregen een Theme-binding en expliciete mode (Base/Brand); 14 gradient-secties kregen gebonden stops en Brand. Mobile: `Sizes=Mobile` op 39 plekken.
+- **Kleuren via Theme (script 13, aangepast)**: 261 knooppunten van swatch naar Theme (`text`, `background`, `background-2`, `button-primary/text`, 2 muted teksten met laagdekking). Het script is aangepast zodat ook bindingen op knooppuntniveau worden meegenomen, maar alleen als alle paints van dat knooppunt omgezet kunnen worden, en met een scope-controle (tekst alleen aan tekstvariabelen).
+- **Thema-smoketest**: een Base-sectie tijdelijk op Dark: achtergrond, koppen, alinea's, kaarten en knoppen schakelen mee. Alleen ongebonden `#000000`/raw tekst (namen en bedrijfsnamen in de reviewkaarten, "See all clients") blijft donker: bekende design slips.
+- **Scan 02** (per sectie, de pagina is >40k nodes): 0 verouderde modes, 0 remote text styles, 0 ontbrekende hoofdcomponenten. Pagina's zelf: 0 ruwe kleuren en 0 teksten zonder style. In de componenten blijven 174 ruwe vullingen, 38 ruwe randen en 135 teksten zonder style over.
+
+### Open beslispunten
+- Header / Home v01 `home` en `variant3`: geen Brand-mode (19 Theme-bindingen zouden van kleur veranderen). Besluit: laten staan, de build behandelt deze header als Brand.
+- Roze eindstop `#e5b8b4` is niet aan `swatch/brand-pink-500` (`#e5bbb7`) gebonden. Besluit: laten staan (design slip).
+- Onbepaalde sets: Card / Opportunity, Card / Service (`services-hover`), Card / Expert, Line, Nav / Base, Header default, Content / Services desktop vs Content / Mobile. Alleen gerapporteerd.
+- `closed|open` op Content / Pricing row en Content / Fee row is afgeleid uit hoogte; controleren.
+- Het lege sjabloonframe `iPhone 17 - 2` (402×874) op de Mobile-pagina bestaat alleen in het origineel; het is in een eerdere fase uit het duplicaat gehaald. Terugzetten kan door het te kopiëren uit het origineel.
+- Typfouten in bestaande namen (`Design comonents`, `Oppertunities`, `Assesment`, `WYSIWIG`) en ~220 placeholder-laagnamen (`_group_wrap`, `Frame 434`…): niet gedaan, buiten fase 5 en 6.
+- Drie losse text styles (`Headings/9xl`, `Body regular/5xl`, `Body regular/4xl`): nog niet besproken.
+
+### Wat de Webflow-build moet weten
+- **Primaire knop** = `Button type=primary` (mint `brand-accent-500`, tekst `dark-900`), hover zit in `state=hover`. Secondary en secondary-white hebben een omlijnde rest en gevulde hover. `button-secondary-white/*`, `button-tertiary/*`, `button-back/*` zijn nieuw (niet in de Lumos-basis).
+- **Device-sets**: `device=desktop|mobile` (Footer ook `desktop-compact`). Content / Services desktop en Content / Mobile zijn aparte sets.
+- **Slide- of hoversets**: Sub menu Item en Footer Item (`state=hover`) zijn echte hover. Tab en Tab / Home zijn `style=plain|outline|filled`. Content / Process step is `style=glass|plain`.
+- **Nog aan swatches/raw gebonden** (themewisseling werkt daar niet): witte tekst in Base-componenten, alle vlakken met 10–50% dekking, `stars`-iconen, gradient-eindstop, `#000000` tekst (~25 plekken), `#050404` knoptekst, remote `Defaults/*`-variabelen in pijl-iconen.
+- **Remote componenten** (niet vervangen): zie "Open na fase 5".
+- **Ontbrekende interactiestaten**: hover/focus voor Navbar items, links, Tab en inputvelden.
+- **Placeholder**: `[Date]` in Privacy & Cookies, `€XX` in tarieven.
