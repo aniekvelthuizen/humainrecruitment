@@ -1,0 +1,6 @@
+{
+  "extraKnownMarketplaces": {
+    "ctc": { "source": { "source": "github", "repo": "Cut-the-Code-Agency/ctc-webflow-devkit" } }
+  },
+  "enabledPlugins": { "webflow-devkit@ctc": true }
+}

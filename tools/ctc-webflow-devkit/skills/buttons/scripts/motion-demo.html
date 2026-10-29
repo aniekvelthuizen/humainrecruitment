@@ -1,0 +1,107 @@
+<!doctype html>
+<!--
+  Button motion demo — copy to the session scratchpad, fill in the TOKENS block (theme colours,
+  font, icon URLs from the Icon Set upload) and the labels, keep 2–3 options, then:
+      open -a "Google Chrome" motion-demo.html
+  The user hovers and picks. Options share the button's real geometry so the feel transfers 1:1.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Button motion</title>
+<style>
+/* ---- TOKENS: replace with the site's values ---- */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400&display=swap');  /* the site's body font */
+:root {
+  --font: 'Jost', sans-serif;
+  --ease: cubic-bezier(.65, .05, .36, 1);
+  --dur: .6s;
+  --icon-arrow: url('ICON_ARROW_URL');     /* default icon */
+  --icon-down: url('ICON_DOWN_URL');       /* a directional icon for the loop option */
+}
+.light { --bg: #f2f2f0; --text: #1a1a1a; --border: #1a1a1a; --line: #e8892b; }   /* theme: background, text, border, accent */
+.dark  { --bg: #1a1a1a; --text: #f2f2f0; --border: #f2f2f0; --line: #e8892b; }
+.brand { --bg: #c4d43c; --text: #1a1a1a; --border: rgba(26,26,26,.2); --line: #1a1a1a; }
+/* ---- end TOKENS ---- */
+
+body { margin: 0; font-family: var(--font); background: #f1f2f1; color: #17241f; }
+h2 { font: 400 14px/1.2 var(--font); letter-spacing: .08em; text-transform: uppercase; margin: 0 0 6px; }
+p.note { font: 300 14px/1.5 var(--font); margin: 0 0 20px; max-width: 48ch; opacity: .7; }
+section { padding: 32px 48px 0; }
+.row { display: grid; grid-template-columns: repeat(3, 1fr); }
+.card { background: var(--bg); padding: 40px; display: flex; flex-direction: column; align-items: flex-start; gap: 28px; }
+
+/* button: primary (lined, full width), .is-text (inline), .is-up (uppercase) */
+.btn { position: relative; display: block; width: 100%; color: var(--text); font-weight: 300; text-decoration: none; cursor: pointer; transition: font-weight .2s; }
+.btn:hover, .btn:focus-visible { font-weight: 400; }
+.el { position: relative; display: flex; min-height: 3rem; padding: .703125rem .25rem .703125rem .5rem; justify-content: space-between; align-items: center; gap: 1.5rem;
+  border-top: .046875rem solid var(--border); border-bottom: .046875rem solid var(--border); box-sizing: border-box; }
+.txt { font-size: .875rem; line-height: 1.5; flex-grow: 1; }
+.ico { width: 1.5rem; flex: none; overflow: hidden; display: flex; }
+.ic { display: block; width: 100%; aspect-ratio: 1; background: currentColor; mask: var(--icon-arrow) center / contain no-repeat; --dx: 1; --dy: -1; }
+.ic.down { mask-image: var(--icon-down); --dx: 0; --dy: 1; }
+.is-text { display: inline-block; width: auto; }
+.is-text .el { border: 0; padding: 0 .125rem; min-height: 0; gap: .25rem; justify-content: flex-start; }
+.is-text .txt { flex-grow: 0; }
+.is-up { display: inline-block; width: auto; font-weight: 400; }
+.is-up .el { border: 0; padding: .25rem 1rem; gap: .5rem; justify-content: flex-start; }
+.is-up .txt { flex-grow: 0; text-transform: uppercase; line-height: .97; }
+.is-up .ico { width: 1.75rem; }
+
+/* option: growth line */
+.line { display: none; }
+.opt-line .line { display: block; position: absolute; left: 0; right: 0; bottom: 0; height: .125rem; background: var(--line);
+  transform: translateY(100%) scaleX(0); transform-origin: right; transition: transform var(--dur) var(--ease); }
+.opt-line .btn:hover .line { transform: translateY(100%) scaleX(1); transform-origin: left; }
+.opt-line .is-up .line { left: 1rem; right: 1rem; }
+
+/* option: letter roll */
+.opt-roll .w { display: inline-block; white-space: nowrap; }
+.opt-roll .c { display: inline-block; overflow: hidden; vertical-align: top; }
+.opt-roll .ci { display: inline-block; position: relative; transition: transform var(--dur) var(--ease); transition-delay: calc(var(--i) * 14ms); }
+.opt-roll .ci::after { content: attr(data-c); position: absolute; left: 0; top: 100%; }
+.opt-roll .btn:hover .ci { transform: translateY(-100%); }
+
+/* option: icon loop */
+@keyframes iconloop { 0% { transform: none } 45% { transform: translate(calc(var(--dx) * 110%), calc(var(--dy) * 110%)) }
+  45.01% { transform: translate(calc(var(--dx) * -110%), calc(var(--dy) * -110%)) } 100% { transform: none } }
+.opt-icon .btn:hover .ic { animation: iconloop calc(var(--dur) * 1.1) var(--ease); }
+
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+</head>
+<body>
+<!-- Each section = one option; combine by adding classes, e.g. class="opt-line opt-roll". -->
+<section class="opt-line"><h2>A — Growth line</h2><p class="note">A line draws under the button, left to right, and retracts on leave.</p></section>
+<div class="row opt-line" data-cards></div>
+<section class="opt-roll"><h2>B — Letter roll</h2><p class="note">Letters roll up one by one and come back from below.</p></section>
+<div class="row opt-roll" data-cards></div>
+<section class="opt-icon"><h2>C — Icon loop</h2><p class="note">The icon leaves in its own direction and comes back from the opposite side.</p></section>
+<div class="row opt-icon" data-cards></div>
+<section class="opt-line opt-roll"><h2>A + B</h2><p class="note">Line and letters together.</p></section>
+<div class="row opt-line opt-roll" data-cards></div>
+
+<script>
+// Labels: replace with the design's copy.
+const LABELS = { primary: ['Get in touch', 'Read the story', 'Get in touch'], text: 'Let’s talk', up: 'View all products' };
+const btn = (cls, label, down) =>
+  `<a class="btn ${cls}"><div class="el"><div class="txt">${label}</div><div class="ico"><span class="ic${down ? ' down' : ''}"></span></div><span class="line"></span></div></a>`;
+document.querySelectorAll('[data-cards]').forEach((row) => {
+  row.innerHTML = ['light', 'dark', 'brand'].map((t, i) =>
+    `<div class="card ${t}">${btn('', LABELS.primary[i])}${btn('is-text', LABELS.text)}${btn('is-up', LABELS.up, true)}</div>`).join('');
+});
+document.querySelectorAll('.opt-roll .txt').forEach((t) => {
+  let i = 0; const words = t.textContent.trim().split(/\s+/); t.textContent = '';
+  words.forEach((word, n) => {
+    if (n) t.append(' ');
+    const w = document.createElement('span'); w.className = 'w';
+    [...word].forEach((ch) => { const c = document.createElement('span'); c.className = 'c';
+      const ci = document.createElement('span'); ci.className = 'ci'; ci.textContent = ch; ci.dataset.c = ch; ci.style.setProperty('--i', i++);
+      c.append(ci); w.append(c); });
+    t.append(w);
+  });
+});
+</script>
+</body>
+</html>

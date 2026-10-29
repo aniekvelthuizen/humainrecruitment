@@ -1,0 +1,8 @@
+{
+  "name": "webflow-devkit",
+  "version": "0.17.0",
+  "description": "Build and change Webflow sites from Figma, a screenshot, a copy document or a brief: skills, references, a browser fixture and guard hooks for the CTC team.",
+  "author": {
+    "name": "Cut The Code"
+  }
+}

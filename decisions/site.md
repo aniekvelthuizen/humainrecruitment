@@ -71,3 +71,7 @@ Why: a button on a dark section must swap colours by itself (kit rule: dark vers
 ## 2026-10-29 — Site-only theme variables for buttons
 Choice: `button-primary/shadow-1…4` (#0000001a, #00000017, #0000000d, #00000003, same in every mode) for Primary's drop shadow, and `button-tertiary/background` (→ `swatch/transparent`).
 Why: colours only through Theme variables; Figma has no variable for the shadow colours or a tertiary background.
+
+## 2026-10-29 — DevKit in the repo
+Choice: the Cut the Code Webflow DevKit is committed as-is in `tools/ctc-webflow-devkit/` (from `ctc-webflow-devkit-main.zip`, md5 `04ef0a7a809e1c6e792c3b425de0a0a8`). A new kit version replaces the folder in one commit.
+Why: owner — every session has the kit without uploading the zip, and the repo records which kit version built the site. Its hooks are not active from there (they only run as an installed plugin).

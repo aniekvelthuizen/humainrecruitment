@@ -1,0 +1,9 @@
+{
+  "name": "webflow-devkit-fixture",
+  "private": true,
+  "type": "module",
+  "description": "Load a published Webflow page, patch a pending change into it, measure and screenshot it at each width.",
+  "dependencies": {
+    "playwright-core": "^1.50.0"
+  }
+}

@@ -1,0 +1,11 @@
+# Source: a brief, no design
+
+The site is the design. A new section or page built from a sentence ("a FAQ under the pricing table", "a /partners page like /customers") takes its structure, type, spacing and components from what the site already has; nothing is invented that the site does not do somewhere.
+
+1. **Pick the exemplar.** Find the section or page on the site that is closest to what is asked: `references/components.json` for a component that already does it, `query_elements` with a text filter for a block on another page, `references/pages.json` for a page of the same kind. Name it in the plan: page, element id, what is copied from it and what differs. Two candidates → one question, with a recommendation. No candidate → the nearest section shell on the target page, and say so. Where the brief contradicts the exemplar ("like /customers, but three columns"), the brief wins on that point and the exemplar on everything else; the difference goes in the plan under `what differs`.
+2. **Read the exemplar, not the class list.** `query_styles` with `include_properties` on its classes across breakpoints, `query_variables` on the resolved ids, its component definition when it is an instance. This is the spec: the same values, the same variables, the same responsive behaviour.
+3. **Locate**, as in [figma.md](figma.md) step 4: page, parent element, before/after which element, and the neighbours above and below. A new page is created from the page of the same kind (folder, template, SEO fields), in the plan.
+4. **Content.** From the brief or a copy file when the user gave one; otherwise realistic placeholder text in the site's language, marked in the plan as placeholder, hidden behind a boolean prop or listed at hand-over — never lorem left on the page.
+5. **Verify against the exemplar** (verify.md §2): snapshot the new block beside the exemplar's, at the design's width and every breakpoint. Shell, type sizes, gaps and colours are equal; the difference is the content and the layout the brief asked for. Then the checklist and §2d as usual, with the exemplar in the place of the design frame.
+
+Then back to the plan step. In the plan, `Source` is the brief in one line and `Exemplar` is the block it copies.

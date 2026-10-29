@@ -1,0 +1,14 @@
+{
+  "name": "ctc",
+  "owner": {
+    "name": "Cut The Code"
+  },
+  "plugins": [
+    {
+      "name": "webflow-devkit",
+      "source": "./",
+      "description": "Build and change Webflow sites from Figma, a screenshot, a copy document or a brief: skills, references, a browser fixture and guard hooks for the CTC team."
+    }
+  ],
+  "description": "Cut The Code plugins for Claude Code."
+}
