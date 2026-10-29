@@ -66,3 +66,8 @@ Primary and Secondary: Chevron Right after the label. Tertiary: Arrow Right befo
 Conflict: Figma's Primary hover only swaps to an identical mint, a near-identical text colour and a smaller shadow (the shadow is not on the site yet: Designer step); the owner found the hover almost invisible.
 Choice: Primary lifts 0.125rem (`button_main_wrap` `transform: translateY(calc(-0.125rem * --_trigger---off))`, wrap transition 200 ms) and on every look the icon nudges 0.25rem to the right (`button_main_icon` `translateX(calc(0.25rem * --_trigger---off))`, in 450 ms / out 250 ms, `cubic-bezier(.65,.05,.36,1)`). Owner, same day: every look lifts the same way (the Secondary/Tertiary `transform: none` overrides were removed).
 Why: owner request; Lumos trigger transforms, no code, reverse cleanly, also on keyboard focus. If it is still too subtle, next step is a colour change (needs a new mint hover swatch).
+
+## 2026-10-29 — Border on the wrap, not the element
+Conflict: the outline (Secondary) showed in the Designer but not on the published site; the element's `border-color: inherit` from the wrap does not survive the site's global CSS (Designer runs no Global Styles).
+Choice: the 0.125rem border, `min-height` and colours all sit on `button_main_wrap` (`display: inline-flex`); `button_main_element` has no border and `flex-grow: 1`. Tertiary: wrap border 0, `min-height: button-size/small`.
+Why: colour and border on the same element need no inheritance; same box size (border-box).
