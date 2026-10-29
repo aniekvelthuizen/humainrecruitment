@@ -1,0 +1,35 @@
+{
+  "client": "humain",
+  "production": false,
+  "branching": false,
+  "site": {
+    "id": "",
+    "name": "",
+    "domains": [],
+    "stagingDomain": null
+  },
+  "figma": {
+    "source": "mcp",
+    "url": "https://www.figma.com/design/18m34a7vzkzopkwGoojmUx/Humain--Lumos-",
+    "fileKey": "18m34a7vzkzopkwGoojmUx",
+    "dir": "references/figma/"
+  },
+  "css": {
+    "system": "lumos",
+    "prefix": "",
+    "notes": "Fresh Lumos starter; confirm after the first site dump."
+  },
+  "dumpedAt": "",
+  "references": {
+    "pages": "references/pages.json",
+    "classes": "references/classes.txt",
+    "variables": "references/variables.json",
+    "components": "references/components.json",
+    "fonts": "references/fonts.json",
+    "cms": "references/cms.json",
+    "figma": "references/figma/",
+    "plans": "references/plans/",
+    "log": "references/log.md"
+  },
+  "decisions": "decisions/"
+}
