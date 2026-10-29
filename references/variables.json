@@ -44,15 +44,15 @@
      "type": "Size",
      "cssName": "--site--margin",
      "value": {
-      "value": 4,
-      "unit": "rem"
+      "type": "custom",
+      "value": "clamp(1.25 * 1rem, ((1.25 - ((4 - 1.25) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((4 - 1.25) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 4 * 1rem)"
      },
      "modeValues": [
       {
        "modeId": "base",
        "value": {
-        "value": 4,
-        "unit": "rem"
+        "type": "custom",
+        "value": "clamp(1.25 * 1rem, ((1.25 - ((4 - 1.25) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((4 - 1.25) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 4 * 1rem)"
        }
       }
      ]
@@ -63,15 +63,15 @@
      "type": "Size",
      "cssName": "--site--gutter",
      "value": {
-      "value": 2,
-      "unit": "rem"
+      "type": "custom",
+      "value": "clamp(1.25 * 1rem, ((1.25 - ((2 - 1.25) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((2 - 1.25) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 2 * 1rem)"
      },
      "modeValues": [
       {
        "modeId": "base",
        "value": {
-        "value": 2,
-        "unit": "rem"
+        "type": "custom",
+        "value": "clamp(1.25 * 1rem, ((1.25 - ((2 - 1.25) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((2 - 1.25) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 2 * 1rem)"
        }
       }
      ]
@@ -2728,15 +2728,15 @@
      "type": "Size",
      "cssName": "--_typography---font-size--h3",
      "value": {
-      "value": 2.25,
-      "unit": "rem"
+      "type": "custom",
+      "value": "clamp(1.875 * 1rem, ((1.875 - ((2.25 - 1.875) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((2.25 - 1.875) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 2.25 * 1rem)"
      },
      "modeValues": [
       {
        "modeId": "base",
        "value": {
-        "value": 2.25,
-        "unit": "rem"
+        "type": "custom",
+        "value": "clamp(1.875 * 1rem, ((1.875 - ((2.25 - 1.875) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((2.25 - 1.875) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 2.25 * 1rem)"
        }
       }
      ]
@@ -2747,15 +2747,15 @@
      "type": "Size",
      "cssName": "--_typography---font-size--h2",
      "value": {
-      "value": 3,
-      "unit": "rem"
+      "type": "custom",
+      "value": "clamp(1.875 * 1rem, ((1.875 - ((3 - 1.875) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((3 - 1.875) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 3 * 1rem)"
      },
      "modeValues": [
       {
        "modeId": "base",
        "value": {
-        "value": 3,
-        "unit": "rem"
+        "type": "custom",
+        "value": "clamp(1.875 * 1rem, ((1.875 - ((3 - 1.875) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((3 - 1.875) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 3 * 1rem)"
        }
       }
      ]
@@ -2766,15 +2766,15 @@
      "type": "Size",
      "cssName": "--_typography---font-size--h1",
      "value": {
-      "value": 3.75,
-      "unit": "rem"
+      "type": "custom",
+      "value": "clamp(2.25 * 1rem, ((2.25 - ((3.75 - 2.25) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((3.75 - 2.25) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 3.75 * 1rem)"
      },
      "modeValues": [
       {
        "modeId": "base",
        "value": {
-        "value": 3.75,
-        "unit": "rem"
+        "type": "custom",
+        "value": "clamp(2.25 * 1rem, ((2.25 - ((3.75 - 2.25) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((3.75 - 2.25) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 3.75 * 1rem)"
        }
       }
      ]
@@ -2785,15 +2785,15 @@
      "type": "Size",
      "cssName": "--_typography---font-size--display",
      "value": {
-      "value": 4.5,
-      "unit": "rem"
+      "type": "custom",
+      "value": "clamp(2.25 * 1rem, ((2.25 - ((4.5 - 2.25) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((4.5 - 2.25) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 4.5 * 1rem)"
      },
      "modeValues": [
       {
        "modeId": "base",
        "value": {
-        "value": 4.5,
-        "unit": "rem"
+        "type": "custom",
+        "value": "clamp(2.25 * 1rem, ((2.25 - ((4.5 - 2.25) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((4.5 - 2.25) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 4.5 * 1rem)"
        }
       }
      ]
