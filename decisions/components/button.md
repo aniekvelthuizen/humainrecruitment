@@ -71,3 +71,7 @@ Why: owner request; Lumos trigger transforms, no code, reverse cleanly, also on 
 Conflict: the outline (Secondary) showed in the Designer but not on the published site; the element's `border-color: inherit` from the wrap does not survive the site's global CSS (Designer runs no Global Styles).
 Choice: the 0.125rem border, `min-height` and colours all sit on `button_main_wrap` (`display: inline-flex`); `button_main_element` has no border and `flex-grow: 1`. Tertiary: wrap border 0, `min-height: button-size/small`.
 Why: colour and border on the same element need no inheritance; same box size (border-box).
+
+## 2026-10-29 — Primary shadow is in
+Choice: the 4-layer shadow (rest, `:hover`, `:focus-within`) is written with the style API on `button_main_wrap`. The API read-back shows only `button-primary/shadow-1`, but the published CSS keeps all four layers: the owner saw the shadow on staging.
+Why: lesson for later — judge a multi-variable value by the published page, not by the read-back.
