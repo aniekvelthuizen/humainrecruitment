@@ -1,4 +1,37 @@
 {
-  "customFonts": [],
-  "note": "No uploaded fonts (data_fonts_tool > list_fonts, 2026-10-29). Google Fonts set in Site settings are not visible through the API."
+  "customFonts": [
+    {
+      "id": "6ae3697494487c4f8c1f87ca",
+      "fontFamily": "Onest",
+      "format": "woff2",
+      "fileName": "Onest-latin-wght.woff2",
+      "axes": [
+        {
+          "tag": "wght",
+          "min": 100,
+          "max": 900,
+          "defaultValue": 400
+        }
+      ],
+      "fileHash": "3db826ed1c5d780edac1a068afa38081",
+      "source": "@fontsource-variable/onest 5.3.1, latin subset, OFL-1.1"
+    },
+    {
+      "id": "6ae369748fd5754ba016c952",
+      "fontFamily": "Vend Sans",
+      "format": "woff2",
+      "fileName": "VendSans-latin-wght.woff2",
+      "axes": [
+        {
+          "tag": "wght",
+          "min": 300,
+          "max": 700,
+          "defaultValue": 400
+        }
+      ],
+      "fileHash": "8f13ee542eb02a311da2b9081f7750fe",
+      "source": "@fontsource-variable/vend-sans 5.3.0, latin subset, OFL-1.1"
+    }
+  ],
+  "note": "Self-hosted variable woff2, no Google Fonts (owner, 2026-10-29)."
 }

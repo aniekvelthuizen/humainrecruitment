@@ -58,3 +58,7 @@ Why: same value, and the formulas keep the system linked.
 
 ## 2026-10-29 — New text-style classes
 Choice: `u-text-style-text-medium`, `u-text-style-label-large`, `u-text-style-label` (names as in the plan), copied from `u-text-style-main` (which in this starter has no `display: flow-root`, so neither do the copies), each set to its Text Style mode. `u-weight-semibold` added (Onest + `font/primary-semibold`).
+
+## 2026-10-29 — Fonts self-hosted, not Google Fonts
+Choice: Onest and Vend Sans as uploaded custom fonts, one variable woff2 per family (wght axis: Onest 100–900, Vend Sans 300–700), Latin subset from Fontsource (OFL-1.1), ~35 KB each. No italics (not in the design).
+Why: owner — Google Fonts is slow. Latin covers Dutch and English; Webflow takes no unicode-range, so latin-ext is left out.
