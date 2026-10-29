@@ -1,0 +1,35 @@
+{
+  "client": "humain",
+  "production": false,
+  "branching": false,
+  "site": {
+    "id": "6ae35364a38b2d71cab8c607",
+    "name": "Humain",
+    "domains": [],
+    "stagingDomain": "humain-d16f03.webflow.io"
+  },
+  "figma": {
+    "source": "mcp",
+    "url": "https://www.figma.com/design/18m34a7vzkzopkwGoojmUx/Humain--Lumos-",
+    "fileKey": "18m34a7vzkzopkwGoojmUx",
+    "dir": "references/figma/"
+  },
+  "css": {
+    "system": "lumos",
+    "prefix": "",
+    "notes": "Lumos starter confirmed by the 2026-10-29 dump (u- utilities, Lumos collections). New classes use no prefix."
+  },
+  "dumpedAt": "2026-10-29T15:00:00Z",
+  "references": {
+    "pages": "references/pages.json",
+    "classes": "references/classes.txt",
+    "variables": "references/variables.json",
+    "components": "references/components.json",
+    "fonts": "references/fonts.json",
+    "cms": "references/cms.json",
+    "figma": "references/figma/",
+    "plans": "references/plans/",
+    "log": "references/log.md"
+  },
+  "decisions": "decisions/"
+}
