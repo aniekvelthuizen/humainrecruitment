@@ -72,6 +72,9 @@ Why: a button on a dark section must swap colours by itself (kit rule: dark vers
 Choice: `button-primary/shadow-1…4` (#0000001a, #00000017, #0000000d, #00000003, same in every mode) for Primary's drop shadow, and `button-tertiary/background` (→ `swatch/transparent`).
 Why: colours only through Theme variables; Figma has no variable for the shadow colours or a tertiary background.
 
+## 2026-10-29 — Section attribute for the nav colour
+Choice: a page section may carry `data-section="dark"` or `data-section="light"` on its wrap; the nav script reads it to decide the bar's text colour over that section. Without it the script reads the background colour (photo or video = dark). Mark a section only when the automatic reading is wrong. Contract and the other `data-nav-*` attributes: `decisions/components/nav.md`.
+
 ## 2026-10-29 — DevKit in the repo
 Choice: the Cut the Code Webflow DevKit is committed as-is in `tools/ctc-webflow-devkit/` (from `ctc-webflow-devkit-main.zip`, md5 `04ef0a7a809e1c6e792c3b425de0a0a8`). A new kit version replaces the folder in one commit.
 Why: owner — every session has the kit without uploading the zip, and the repo records which kit version built the site. Its hooks are not active from there (they only run as an installed plugin).

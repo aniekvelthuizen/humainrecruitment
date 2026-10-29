@@ -1,6 +1,7 @@
 # Designer queue
 
 ## Open
+- [ ] Menu component › the four dropdowns (Expertise, For business, About us, For candidates) › Dropdown settings › turn **off** "Open menu on hover" — API: setting not exposed — recipe: by hand, or the agent once the built-in browser is signed in to Webflow — then: rerun `references/nav-check.mjs` (dropdown opens on click) — 2026-10-29
 - [ ] Button Main › Icon Set instance (in `button_main_icon`) — link its Variant to a new button prop **Icon** (folder Icon); move the **Variant** prop into folder **Button** — API: variant props cannot be created or regrouped — recipe: by hand (purple dot › New property) — then: set Tertiary instances on the Styleguide to Arrow Right — 2026-10-29
 - [ ] Measure on staging (published 2026-10-29; humain-d16f03.webflow.io and cdn.prod.website-files.com are blocked by this environment's network policy) — then: `hover-check.mjs` + `hover-matrix.mjs` on Styleguide › Buttons at 1512 and 402 px, CDN CORS check on the icon masks — 2026-10-29
 - [ ] Global Styles component › embed — check whether the trim CSS reads `--_text-style---trim-top|bottom`; if it has its own values, point it at those variables — API: embed content not returned by `get_all_elements` — recipe: by hand — then: measure a `u-text-style-h2` box against the glyphs — 2026-10-29
