@@ -67,7 +67,8 @@ Werkwijze: named version vooraf, alleen namen/bindingen, controle met pixel-diff
 - `Footer`: `device=desktop|desktop-compact|mobile` (default en variant3 zijn beide desktop).
 - `state=rest|hover`: Sub menu / Assets / Item, Footer / Assets / Item.
 - `state=closed|open`: Nav / Mobile, Search mobile.
-- `style=compact|expanded` (fase 7, eerst `state=closed|open`): Content / Pricing row, Content / Fee row. Neutrale naam omdat uit de hoogte niet vaststaat of het een uitklapper is.
+- `state=closed|open`: Content / Pricing row (bevestigd: klapt open als een FAQ).
+- `style=compact|expanded`: Content / Fee row (bevestigd: geen uitklapper, een andere weergave).
 - `style=plain|outline|filled`: Tab, Tab / Home. `style=glass|plain`: Content / Process step. `type=select|text`: input-simple. `type=role|person|case`: Card / Profile.
 - **Button**: hover zat in `type` (`primary-hover`…). Nu `type=primary|secondary|secondary-white|tertiary|back-button` + `state=rest|hover`.
 - Generieke namen vervangen: Frame 417 → Card / Expert, Frame 429 → Card / Expert match, Frame 608 → Card / Opportunity, Frame 690 → Card / Profile, Prop 1 → Card / Service, Frame 595 → Content / Pricing row, Testimonial 3 → Content / Pricing card, Step 4 → Content / Process step, Frame 614 → Tag / Contract type, Frame 609 → Tag / Location, Frame 654 → Card / Stat, Prop 2 → Card / Process stage, Content / Fee row, Content / Fee row compact, Frame 717 → Contact / Detail item.
@@ -85,7 +86,7 @@ Werkwijze: named version vooraf, alleen namen/bindingen, controle met pixel-diff
 - **Content / Team**: `Property 1/2` ongelijk, Figma weigert aanpassing.
 - **Remote componenten (niet vervangen)**: `2:1 Fixed Aspect Ratio Spacer` (11748×), `Image` (178), `fixed_aspect_ratio` (252), `Logooos` (8 logo's, ~20×), `Arrow icon` (161), `material_icons` (161), `Line` (317), `Button/Link/Default` (185), `Button group` (13), `Icon / LinkedIn` (19), Material-iconen (`chevron_right` 205, `expand_more` 123, `east` 25, `expand_less` 10, `keyboard_arrow_down` 23, `search`, `lock`, `error_outline`), `Divider` (4).
 - **Remote variabelen in knoppen** (laten staan): `Defaults/Body`, `Defaults/Body light`, `Defaults/Dark Grey`, `Brand/Dark purple` (pijl-iconen en hover-tekst van primary).
-- **Content / Pricing row en Content / Fee row**: property heet nu `style=compact|expanded` (default `compact`). In Webflow beoordelen of `expanded` een uitklapstaat is (dan interactie/`state`) of een eigen variant.
+- **Content / Pricing row** = FAQ-uitklapper (`state=closed|open`). **Content / Fee row** = twee weergaven (`style=compact|expanded`), geen interactie.
 - **Design slips**: knoptekst primary `#050404` en hover `#232323` (`Defaults/Dark Grey`) blijven raw; een tweede ongewijzigde bevinding naast de lijst hierboven.
 - **Ontbrekende interactiestaten**: geen hover/focus voor Navbar - Light items, tertiary/back-button (hover = rest), Tab, links, inputvelden (`input/border-focus`).
 - **Mobile-pagina**: geen baseline-screenshots, dus geen pixel-diff voor Sizes=Mobile.
@@ -113,7 +114,7 @@ Fingerprint (script 19, tekst, lettergrootte en maat per frame, sectie en varian
 - Header / Home v01 `home` en `variant3`: geen Brand-mode (19 Theme-bindingen zouden van kleur veranderen). Besluit: laten staan, de build behandelt deze header als Brand.
 - Roze eindstop `#e5b8b4` is niet aan `swatch/brand-pink-500` (`#e5bbb7`) gebonden. Besluit: laten staan (design slip).
 - Onbepaalde sets: Card / Opportunity, Card / Service (`services-hover`), Card / Expert, Line, Nav / Base, Header default, Content / Services desktop vs Content / Mobile. Alleen gerapporteerd.
-- `style=compact|expanded` op Content / Pricing row en Content / Fee row (was `state=closed|open`, afgeleid uit hoogte): in Webflow beoordelen.
+- Pricing row / Fee row: besloten (zie boven). Placeholders `[Date]` en `€XX`: dummy content is goed, tekst wordt in Webflow gevuld. `iPhone 17 - 2`: door de gebruiker uit het origineel verwijderd.
 - Het lege sjabloonframe `iPhone 17 - 2` (402×874) op de Mobile-pagina bestaat alleen in het origineel; het is in een eerdere fase uit het duplicaat gehaald. Terugzetten kan door het te kopiëren uit het origineel.
 - Typfouten in bestaande namen: hersteld in fase 7. ~220 placeholder-laagnamen (`_group_wrap`, `Frame 434`…): niet gedaan.
 - Drie losse text styles: hernoemd in fase 7 (`Display Large`, `Text XX Large`, `Text X Large`).
@@ -124,7 +125,7 @@ Fingerprint (script 19, tekst, lettergrootte en maat per frame, sectie en varian
 - **Slide- of hoversets**: Sub menu Item en Footer Item (`state=hover`) zijn echte hover. Tab en Tab / Home zijn `style=plain|outline|filled`. Content / Process step is `style=glass|plain`.
 - **Nog aan swatches/raw gebonden** (themewisseling werkt daar niet): witte tekst in Base-componenten, alle vlakken met 10–50% dekking, `stars`-iconen, gradient-eindstop, `#050404` knoptekst, 15 zwarte teksten via remote `copy/*`-variabelen (formuliervelden, Section-voorbeelden), remote `Defaults/*`-variabelen in pijl-iconen.
 - **Remote componenten** (niet vervangen): zie "Open na fase 5".
-- **Ontbrekende interactiestaten**: hover/focus voor Navbar items, links, Tab en inputvelden.
+- **Interactiestaten** (fase 7, naar eigen inzicht ontworpen, zie "Afronding"): Navbar-item hover = mint, Tab hover = grijs vlak, Tab / Home hover = lichter vlak, input hover/focus = paarse rand (focus 2 px), tertiary en text-link hover = paars (Base) of mint (Dark/Brand), back-button hover = mint.
 - **Placeholder**: `[Date]` in Privacy & Cookies, `€XX` in tarieven.
 
 ## Afronding (sessie 2026-10-29)
@@ -140,6 +141,12 @@ Alleen in het duplicaat; het origineel is alleen gelezen (fingerprint). Een name
 3. **Zwarte tekst `#000000` → Theme `text` (`#030b1b`)**: 16 tekstlagen / 16 paints in 8 hoofdcomponenten (Contact / Detail item, Card / Opportunity `variant3`/`variant4`, Content / WYSIWYG, Static / Contact form `contact`/`resume`, dynamic-opportunities desktop/mobile). Die renderen via instances op Contact, Careers, Privacy & Cookies, Analyse my resume en Opportunities (desktop en mobile), samen de ~25 plekken. Alleen paints met opacity 1, geen binding op knooppuntniveau, niets binnen instances. Alle instances staan in Theme-mode Base (in Dark/Brand zou `text` wit zijn).
    - Overgeslagen: 15 teksten die al aan remote `copy/*`-variabelen (zwart) hangen (formuliervelden `small=true/false`, Section-voorbeelden `dark-mode=…`, Testimonial-naam).
    - Pixel-diff (baseline vooraf, 11 nodes: 6 paginaframes en 5 componentsets): alleen tekstpixels gewijzigd, max kanaalverschil 27 (= `#000000` → `#030b1b`), verder 0.
-4. **Content / Pricing row en Content / Fee row**: `state=closed|open` → `style=compact|expanded` (default `compact`). Instances: Pricing row 6, Fee row 10, 0 van variant gewisseld. Nav / Mobile en Search mobile staan nog op `state=closed|open`.
+4. **Content / Pricing row en Content / Fee row**: eerst beide `style=compact|expanded`; na akkoord gebruiker is Pricing row teruggezet naar `state=closed|open` (FAQ), Fee row blijft `style=compact|expanded`. Instances: Pricing row 6, Fee row 10, 0 van variant gewisseld.
 5. **Fingerprint tegen het origineel** (tekst, lettergrootte en maat per paginaframe, sectie en componentvariant, gematcht op node-ID): 441 rijen (Visual design 143 paginaframes/secties + 117 Components + 156 Design components en losse sets, Mobile 25), **441 identiek, 0 verschillen, 0 ontbrekend**. Enige verschil op topniveau: het lege frame `iPhone 17 - 2` (alleen in het origineel, mag wegblijven).
+6. **Hover- en focusstaten** (gebruiker: naar eigen inzicht). Bestaande varianten kregen `state=rest`; nieuwe varianten zijn alleen toegevoegd, dus alle instances blijven rest (0 gewisseld, pixel-diff Contact, Careers en Opportunities: 0 px verschil).
+   - `Navbar / Assets / Item`: `active=false, state=hover`, tekst en chevron `swatch/brand-accent-500` (120 instances).
+   - `Tab`: `state=hover` voor `plain` en `outline`, vlak `swatch/dark-900-o10` (21 instances). `filled` = actief tabblad, geen hover.
+   - `Tab / Home`: `state=hover` voor `filled` en `plain`, vlak `swatch/light-100-o50` (rest 40 %) (10 instances).
+   - `input`: `state=rest|hover|focus` voor `small=false|true`, rand `swatch/brand-500`, focus 2 px (51 instances). `input-simple` gebruikt deze input als instance en volgt in Webflow dezelfde klasse.
+   - Button `tertiary` en `text-link`: `*-hover` in Base → `swatch/brand-500`, in Dark/Brand → `swatch/brand-accent-500`. `back-button` hover → `swatch/brand-accent-500`. Er stonden 0 hover-instances op pagina's.
 
