@@ -8,7 +8,7 @@ Conflict: in Figma the bar is not fixed and has one state; it scrolls away with 
 Choice (owner, Aniek): the nav sticks to the top. At the top of the page it is as drawn (transparent, two rows). Scrolling **down**: the top row (language, Contact, Careers) folds away, the bar turns **white** and **more compact**, only the main row stays (links, logo, CTA). Scrolling **up** brings the top row back (wherever on the page); back at the very top it is transparent again.
 Why: owner — nicest behaviour; Figma has no scroll prototype.
 
-## 2026-10-29 — Dropdowns open on click
+## 2026-10-29 — Dropdowns open on click (replaced, see "Hover on desktop, tap on mobile" below)
 Choice: the four desktop dropdowns (Expertise, For business, About us, For candidates) open on click, as the Figma prototype (`ON_CLICK → CHANGE_TO`); hover only changes the link look.
 
 ## 2026-10-29 — Mobile has the same items as desktop (deviation from Figma)
@@ -58,9 +58,19 @@ Menu, dropdown and panel durations: 300 ms (Figma `CHANGE_TO` 0.3 s ease-in-out)
 Why: Webflow styles cannot react to scroll direction or to what lies under the bar; IX3 cannot follow scroll direction anywhere on the page. Code only sets attributes; the look is in the CSS embed next to it. No `requestAnimationFrame` (a hidden tab or webview never runs it).
 Marking a section: give its wrap `data-section="dark"` (or `light`) when the automatic reading is wrong.
 
-## 2026-10-29 — Dropdowns open on hover until a Designer step
-Conflict: the owner chose click (as Figma); the Lumos dropdowns have "Open menu on hover" on, and that setting is not in the API.
-Choice: Designer step queued (four checkboxes); no script workaround.
+## 2026-10-29 — Hover on desktop, tap on mobile (owner review, replaces "click")
+Conflict: the owner now wants all four desktop dropdowns to open on hover; two of the re-used starter dropdowns had hover on, two off. In the mobile panel hover broke switching rows: moving the mouse from Expertise to For business opened For business by hover and the click closed it again. The Menu is one component, so Webflow's per-dropdown "Open menu on hover" setting cannot differ between the bar and the panel, and the API does not expose it.
+Choice: the nav script sets `data-hover="true"` on the dropdowns in `.nav_desktop_wrap` and `"false"` in `.nav_mobile_wrap`, synchronously, before webflow.js reads it at start-up (`config.hover = "true" === data-hover`). No Designer step needed.
+Why: the only way to have hover in the bar and tap in the panel from one component.
+
+## 2026-10-29 — Owner review round 1
+- **Top row:** moved up 6 px so the space above Contact/Careers equals the space between them and the button (36.3 / 36.3 px at 1512): `nav_desktop_layout` padding-top 1.625rem, `nav_sub_list` (Desktop) padding-bottom 0.625rem; the main row did not move.
+- **Folded top row** is also hidden (`opacity: 0; visibility: hidden`), not only folded; the fold's negative margin follows the new padding (-0.625rem).
+- **Scrolled bar** is white at 80 % with a 1rem backdrop blur, so a white dropdown card stands out against it (owner's proposal). While the mobile menu is open the bar is solid white.
+- **Dropdown link hover:** a 1 px line in the text colour grows from left to right (`background-size` 0 → 100 %, 600 ms `cubic-bezier(.65,.05,.36,1)`, as the Tertiary button line) and shrinks back to the left on leave; also on keyboard focus. The line sits 0.5rem under the trimmed text (padding-bottom 0.5rem, margin-bottom -0.5rem so spacing is unchanged). Replaces the opacity hover on dropdown links.
+- **Expertise roles:** two `ul.nav_dropdown_list` in a wrapping `nav_dropdown_columns` (gap 1rem / 2rem) instead of a two-column grid: two columns in the desktop card and on wide panels, one column on phones. `is-columns` removed.
+- **Mobile row content:** `nav_dropdown_main_scroll` base padding-top 0 (space above the first item ≈ space below the last: 25 / 28 px).
+- **Hamburger:** lines 2 px (`nav/hamburger-thickness` → border-width/thick), gap 0.75rem, still 32 × 16.
 
 ## 2026-10-29 — Variables
 `nav/spacing-outer-vertical` → space/0 (bar flush with the top), `nav/spacing-inner-horizontal` → site/margin (Figma 64 / 20 px), `nav/radius` → radius/none, `nav/background` → swatch/light-100 in every Theme mode, `nav/hamburger-gap` → 0.875rem (lines 16 px apart, Figma 32 × 16). `nav/height` stays 5rem (Figma main row 80).
