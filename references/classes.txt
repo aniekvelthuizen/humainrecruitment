@@ -144,6 +144,7 @@ hero_utility-page_text > u-text-style-main
 hero_utility-page_title
 hero_utility-page_title > u-text-style-h2
 hero_utility-page_wrap
+icon_set_wrap
 img
 label
 li

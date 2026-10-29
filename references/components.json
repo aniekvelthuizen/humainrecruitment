@@ -8,12 +8,14 @@
    {
     "id": "09c7e3c3-ab2b-fd29-e9c5-1cf5593e84b9",
     "name": "Text",
-    "type": "textContent"
+    "type": "textContent",
+    "group": "Button"
    },
    {
     "id": "7a270cd6-1eda-e05c-e2c6-afb653d5a2da",
     "name": "Link",
-    "type": "link"
+    "type": "link",
+    "group": "Button"
    },
    {
     "id": "59dad94d-02cf-903d-918f-aeb4aab17371",
@@ -24,7 +26,13 @@
     "id": "66fc8413-5709-4af3-4fa6-3e493d878056",
     "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "group": "Button"
+   },
+   {
+    "id": "e85fd3cf-b68a-383b-33eb-53fbbed4eba4",
+    "name": "Icon Visibility",
+    "type": "boolean",
+    "group": "Icon"
    },
    {
     "id": "b120c579-21b3-f3f5-8c6f-c9c79077c295",
@@ -39,9 +47,7 @@
     "group": "Settings"
    }
   ],
-  "slots": [
-   "Slot"
-  ],
+  "slots": [],
   "variants": [
    {
     "id": "base",
@@ -53,7 +59,7 @@
    },
    {
     "id": "625d5df4-ad91-f7dc-9e2f-2e69f3fd7400",
-    "name": "Link"
+    "name": "Tertiary"
    }
   ]
  },
@@ -2811,6 +2817,34 @@
    {
     "id": "a5b3e188-6ef1-4ba5-621f-ca2971c71171",
     "name": "URL"
+   }
+  ]
+ },
+ {
+  "id": "34be3826-fcbd-cc8d-b23a-ab6d5d256de6",
+  "name": "Icon Set",
+  "group": "SVG",
+  "instanceCount": 117,
+  "props": [
+   {
+    "id": "10f8120e-0a05-bf45-5a92-f6f27c50d665",
+    "name": "Variant",
+    "type": "variant"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Chevron Right"
+   },
+   {
+    "id": "b13d6db9-99f2-6671-c653-1c0e482b4d80",
+    "name": "Arrow Right"
+   },
+   {
+    "id": "93088b2e-b082-2d76-f2cc-e59be1d5f06c",
+    "name": "Arrow Left"
    }
   ]
  }

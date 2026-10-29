@@ -62,3 +62,12 @@ Choice: `u-text-style-text-medium`, `u-text-style-label-large`, `u-text-style-la
 ## 2026-10-29 — Fonts self-hosted, not Google Fonts
 Choice: Onest and Vend Sans as uploaded custom fonts, one variable woff2 per family (wght axis: Onest 100–900, Vend Sans 300–700), Latin subset from Fontsource (OFL-1.1), ~35 KB each. No italics (not in the design).
 Why: owner — Google Fonts is slow. Latin covers Dutch and English; Webflow takes no unicode-range, so latin-ext is left out.
+
+## 2026-10-29 — Buttons follow the theme
+Conflict: Figma has separate `button-secondary-white/*` and `button-back/*` colours for buttons on dark backgrounds; the foundations copied every button colour 1:1 into all three Theme modes.
+Choice: Dark and Brand modes of `button-secondary/*` link to `button-secondary-white/*`, of `button-tertiary/text|accent|text-hover|accent-hover` to `button-back/*`. The `-white` and `back` variables stay (unused by classes) as the Figma mapping. `verify-foundations.py` checks the new values.
+Why: a button on a dark section must swap colours by itself (kit rule: dark version = theme, not variant).
+
+## 2026-10-29 — Site-only theme variables for buttons
+Choice: `button-primary/shadow-1…4` (#0000001a, #00000017, #0000000d, #00000003, same in every mode) for Primary's drop shadow, and `button-tertiary/background` (→ `swatch/transparent`).
+Why: colours only through Theme variables; Figma has no variable for the shadow colours or a tertiary background.

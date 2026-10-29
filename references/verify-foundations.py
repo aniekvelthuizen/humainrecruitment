@@ -103,6 +103,17 @@ for n in ["button-secondary/border", "button-secondary/text", "button-secondary/
 theme["text-link/border"] = theme["border"]
 for n in ["background-hover", "border", "border-hover", "text", "accent"]:
     theme["button-secondary-white/" + n] = ("light-100",) * 3
+# Buttons (2026-10-29-buttons.md): Dark/Brand of Secondary = secondary-white, of Tertiary = back-button
+for n in ["border", "text", "background-hover", "border-hover", "accent"]:
+    theme["button-secondary/" + n] = ("dark-900", "light-100", "light-100")
+for n in ["text-hover", "accent-hover"]:
+    theme["button-secondary/" + n] = ("light-100", "dark-900", "dark-900")
+for n in ["text", "accent"]:
+    theme["button-tertiary/" + n] = ("dark-900", "light-100", "light-100")
+theme["button-tertiary/background"] = ("transparent",) * 3
+sw.update({"shadow-1": "#0000001a", "shadow-2": "#00000017", "shadow-3": "#0000000d", "shadow-4": "#00000003"})
+for i in range(1, 5):
+    theme[f"button-primary/shadow-{i}"] = (f"shadow-{i}",) * 3
 tm = mode_ids["Theme"]
 modes = [("Base", "base"), ("Dark", tm["Dark mode"]), ("Brand", tm["Brand mode"])]
 for n, want in theme.items():
