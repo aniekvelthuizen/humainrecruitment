@@ -21,4 +21,37 @@ clamp(1.25 * 1rem, ((1.25 - ((4 - 1.25) / (var(--site--viewport-max) - var(--sit
 clamp(1.25 * 1rem, ((1.25 - ((2 - 1.25) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((2 - 1.25) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 2 * 1rem)
 ```
 
-Font sizes are added here once Q3 (mobile heading sizes) is answered.
+## Heading sizes
+
+Mobile sizes read from the mobile frames: the same title on desktop and mobile, and the style the designer picked for it on mobile (decisions/site.md, "Mobile heading sizes"). H4, H5, H6 and all body sizes are the same on both and stay static.
+
+| Variable | Mobile (402) | Desktop (1512) | Static value written by API |
+|---|---|---|---|
+| font-size/display | 2.25rem (36 px) | 4.5rem (72 px) | 4.5rem |
+| font-size/h1 | 2.25rem (36 px) | 3.75rem (60 px) | 3.75rem |
+| font-size/h2 | 1.875rem (30 px) | 3rem (48 px) | 3rem |
+| font-size/h3 | 1.875rem (30 px) | 2.25rem (36 px) | 2.25rem |
+
+### font-size/display
+
+```
+clamp(2.25 * 1rem, ((2.25 - ((4.5 - 2.25) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((4.5 - 2.25) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 4.5 * 1rem)
+```
+
+### font-size/h1
+
+```
+clamp(2.25 * 1rem, ((2.25 - ((3.75 - 2.25) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((3.75 - 2.25) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 3.75 * 1rem)
+```
+
+### font-size/h2
+
+```
+clamp(1.875 * 1rem, ((1.875 - ((3 - 1.875) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((3 - 1.875) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 3 * 1rem)
+```
+
+### font-size/h3
+
+```
+clamp(1.875 * 1rem, ((1.875 - ((2.25 - 1.875) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((2.25 - 1.875) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 2.25 * 1rem)
+```

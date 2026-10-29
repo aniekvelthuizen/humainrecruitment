@@ -5,7 +5,7 @@
 The Figma file is already Lumos-named, so almost every Figma variable maps 1:1 onto a Lumos variable: update where the starter has it, create where it does not.
 Colours: 27 swatches and 45 theme colours in three themes (Base → Lumos' light base mode, Dark, Brand).
 Type: Onest for body text, Vend Sans for headings; ten text styles as in Lumos, plus Text Medium, Label and Label Large.
-Only the page margin and gutter scale with the screen in Figma; every font size is the same on mobile and desktop. That is the open question (Q3).
+Page margin, gutter and the Display/H1/H2/H3 sizes scale with the screen; the mobile heading sizes come from the style the designer used for the same title on mobile.
 Blocked on: the Webflow site is not in the connected workspace yet.
 
 Source: https://www.figma.com/design/18m34a7vzkzopkwGoojmUx/Humain--Lumos- (collections Default, Theme, Sizes, Typography, Text Style; 16 text styles)
@@ -80,14 +80,13 @@ New theme variables are created in one call per group, in the order above (they 
 | font/secondary-family | Vend Sans | headings |
 | font/primary-light · regular · medium · semibold · bold | 300 · 400 · 500 · 600 · 700 | **semibold is new**: Figma uses Onest SemiBold ~230× without a variable (house rule: every weight used gets a variable + `u-weight-*`) |
 | font/secondary-semibold · bold | 600 · 700 | |
-| font/mono-family | IBM Plex Mono | **Q5** — used ~280× in the designs with no variable |
 | font-size/* | see below | |
-| line-height/small · medium · large · huge | 1 · 1.1 · 1.3 · 1.5 | + `line-height/heading` 1.25 — **Q2** |
-| letter-spacing/tight · normal | -0.03em · 0 | **Q2** |
+| line-height/small · medium · large · huge | 1 · 1.1 · 1.3 · 1.5 | + `line-height/heading` 1.25 (confirmed) |
+| letter-spacing/tight · normal | -0.03em · 0 | headings use normal (confirmed) |
 | text-transform/none · uppercase · capitalize · lowercase | as named | |
 | font/primary-trim-top · bottom, font/secondary-trim-top · bottom | from the font files (typography.md "Fonts") | computed once the fonts are on the site |
 
-Font sizes (Figma desktop = mobile, written as static rem):
+Font sizes (desktop value written as static rem; fluid ones get their `clamp()` from fluid-values.md):
 
 | Variable | px | rem |
 |---|---|---|
@@ -99,10 +98,10 @@ Font sizes (Figma desktop = mobile, written as static rem):
 | font-size/h6 | 20 | 1.25 |
 | font-size/h5 | 24 | 1.5 |
 | font-size/h4 | 30 | 1.875 |
-| font-size/h3 | 36 | 2.25 |
-| font-size/h2 | 48 | 3 |
-| font-size/h1 | 60 | 3.75 |
-| font-size/display | 72 | 4.5 |
+| font-size/h3 | 36 (mobile 30) | 2.25, fluid 1.875 → 2.25 |
+| font-size/h2 | 48 (mobile 30) | 3, fluid 1.875 → 3 |
+| font-size/h1 | 60 (mobile 36) | 3.75, fluid 2.25 → 3.75 |
+| font-size/display | 72 (mobile 36) | 4.5, fluid 2.25 → 4.5 |
 
 ## 4. Sizes → Lumos `Default` / `Spacing`
 
@@ -125,7 +124,7 @@ Font sizes (Figma desktop = mobile, written as static rem):
 
 ## 5. Text Style modes
 
-Figma's text styles are what the pages use; the Text Style variables in Figma disagree with them on line-height and letter-spacing (Q2). Planned values follow the text styles:
+Figma's text styles are what the pages use; the Text Style variables in Figma disagree with them on line-height and letter-spacing. Owner confirmed: follow the text styles.
 
 | Mode | Size | Line-height | Letter-sp. | Family / weight | Margin top · bottom | Transform | Uses |
 |---|---|---|---|---|---|---|---|
@@ -154,16 +153,17 @@ Not made into text styles: Display Large (128 px, 3×), Text XX Large (48 px, 3�
 | 1 | Text Style line-height | Text styles: H1–H5 125 %, H6 150 %, Display 100 %. Variables: H1/H2/Display → 1, H3–H6 → 1.1 | Follow the text styles (what is applied 1,000+ times); add `line-height/heading` 1.25 |
 | 2 | Text Style letter-spacing | Variables: H3–Display `tight` (-0.03). Text styles: 0 | Follow the text styles: 0 |
 | 3 | Text Small | line-height "auto" in Figma | 1.5 like the other body styles |
-| 4 | Font sizes | Figma's Mobile mode has the same sizes as Desktop — H1 60 px, Display 72 px on a 402 px phone | Q3 |
+| 4 | Font sizes | Figma's Mobile mode has the same sizes as Desktop | Resolved: mobile size per level read from the mobile frames (decisions/site.md) |
 | 5 | Headings with 110 % line-height | ~150 raw text layers use Vend Sans 24/30 at 110 %, outside the text styles | Leave the scale alone; handle per section |
 | 6 | Unstyled Onest sizes | 11, 13, 15, 17, 23 px used without a style (mono labels, card meta) | Per section, on the element's class |
+| 8 | IBM Plex Mono | Only in the `[figma-only]` documentation frames | Not added — Onest and Vend Sans only (owner rule) |
 | 7 | Effect styles "Card", "Card 2", gradients "Humain", "Gradient - Green", "Radial" | No variable type for shadows/gradients | Literal values on the card/section classes when those are built |
 
 ## Missing
 
 - **Webflow site access** — the connected Webflow login only sees the "Jerome" workspace.
-- Fonts on the site: Onest, Vend Sans (both Google Fonts), IBM Plex Mono (Q5) — checked after the site dump.
+- Fonts on the site: Onest, Vend Sans (both Google Fonts) — checked after the site dump.
 
 ## Questions
 
-See the chat round of 2026-10-29 (Q1–Q5).
+All answered on 2026-10-29 (decisions/site.md). Open: Webflow access only.
