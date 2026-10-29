@@ -16,6 +16,7 @@ Plan: Figma Professional, Full seat. Pagina "Visual design" is groot (>40k nodes
 | 4 Naamgeving | klaar |
 | 5 Componenten en modes | klaar (zie "Fase 5: uitgevoerd"), 2 punten open |
 | 6 Controle en eindrapport | klaar (zie "Eindrapport fase 6") |
+| 7 Afronding | klaar (zie "Afronding (sessie 2026-10-29)") |
 
 ## Genomen beslissingen
 - **Kleuren:** Purple blue `#250059` = `brand-500`. Grey `#edf1f7` = `light-200`, White = `light-100`, Body `#030b1b` = `dark-900`. Teal, Green, Old pink en Stars zijn extra swatches (`brand-secondary-500`, `brand-accent-500`, `brand-pink-500`, `stars`), niet in de Lumos-basis.
@@ -25,18 +26,17 @@ Plan: Figma Professional, Full seat. Pagina "Visual design" is groot (>40k nodes
 - **Home B is de definitieve homepage.** Home A is `[figma-only]`.
 - **Remote componenten** (`2:1 Fixed Aspect Ratio Spacer`, `Image`, `Logooos`, `Arrow icon`, `Button/Link/Default`…): niet vervangen, alleen rapporteren.
 - **Remote variabelen met modes** (`Padding x`, `Height`, `copy/*`, `content/*`, `grid/gutter`, `columns/5 Col`): blijven voorlopig remote.
-- **Drie losse text styles** (`Headings/9xl`, `Body regular/5xl`, `Body regular/4xl`, elk 1× gebruikt) staan nog onder hun oude naam. Uiterlijk mag niet te veel veranderen: dit bespreken we samen.
+- **Drie losse text styles** hernoemd (alleen naam, uiterlijk ongewijzigd): `Headings/9xl` → `Display Large` (Vend Sans Bold 128/100%), `Body regular/5xl` → `Text XX Large` (Onest 48/150%), `Body regular/4xl` → `Text X Large` (Onest 36/100%).
 
 ## Nog niet gedaan
 - **Fase 5:** variantproperties met een andere betekenis (script 15, met screenshots en akkoord), hover-varianten binden aan `*-hover` (script 11), thema per sectie (12, 13, 14), Mobile-modes (Sizes = Mobile), remote componenten rapporteren.
-- **Typfouten in bestaande namen** (nog te vragen/bevestigen): `Design comonents`, `Content / Assesment process`, `Dynamic / Oppertunities`, `Header / Oppertunities`, `Content / WYSIWIG`. Alleen in nieuwe laagnamen zijn ze al gecorrigeerd.
 - **~220 placeholder-laagnamen** (`_group_wrap`, `_group`, `_spacer`) en 16 componenten met een generieke eigen naam (`Frame 608`, `Prop 1`, `Prop 2`, `Frame 429`…).
 - **`Content / Team`** heeft ongelijke variantproperties (`Property 1=Experts, Property 2=Team` vs `Property 1=Team`); Figma weigert de set aan te passen. Ontwerpfout in Figma zelf.
 - **Mobile-pagina:** geen baseline-screenshots; alleen kleuren/maten gekoppeld, teksten zonder style niet verwerkt.
 - **Eindcontrole (fase 6):** scan 02 opnieuw, thema-smoketest, pixel-diff, fingerprint (script 19) tegen de oorspronkelijke versie, eindrapport.
 
 ## Design slips (niet aangepast, voor het gesprek)
-- Zwarte tekst `#000000` (net buiten tolerantie van `text` `#030b1b`): "24 open roles", "We reply within one working day", WYSIWYG-teksten (~25 plekken). Knoptekst `#050404`.
+- ~~Zwarte tekst `#000000`~~: opgelost in fase 7 (gekoppeld aan `text`). Knoptekst `#050404` blijft.
 - Placeholders/debug-kleuren: `#ff0000`, `#d9d9d9` (image-padding helpers).
 - Radii zonder Lumos-variabele: 5, 4, 6, 100, 999, 16777200 (laatste twee = "rond").
 - Padding 64 in componenten (alleen op frames buiten componenten is `site/margin` gebruikt), 128, 256, 12, 6.
@@ -66,7 +66,8 @@ Werkwijze: named version vooraf, alleen namen/bindingen, controle met pixel-diff
 - `type` → `device=desktop|mobile`: Header / Oppertunities, content-cta, content-testimonials, content-pricing, dynamic-open-roles, dynamic-opportunities(-2), Glass cards, 4 UBRS, Page content, Content / Logo marquee.
 - `Footer`: `device=desktop|desktop-compact|mobile` (default en variant3 zijn beide desktop).
 - `state=rest|hover`: Sub menu / Assets / Item, Footer / Assets / Item.
-- `state=closed|open`: Nav / Mobile, Search mobile, Content / Pricing row, Content / Fee row (laatste twee afgeleid uit hoogte: controleren).
+- `state=closed|open`: Nav / Mobile, Search mobile.
+- `style=compact|expanded` (fase 7, eerst `state=closed|open`): Content / Pricing row, Content / Fee row. Neutrale naam omdat uit de hoogte niet vaststaat of het een uitklapper is.
 - `style=plain|outline|filled`: Tab, Tab / Home. `style=glass|plain`: Content / Process step. `type=select|text`: input-simple. `type=role|person|case`: Card / Profile.
 - **Button**: hover zat in `type` (`primary-hover`…). Nu `type=primary|secondary|secondary-white|tertiary|back-button` + `state=rest|hover`.
 - Generieke namen vervangen: Frame 417 → Card / Expert, Frame 429 → Card / Expert match, Frame 608 → Card / Opportunity, Frame 690 → Card / Profile, Prop 1 → Card / Service, Frame 595 → Content / Pricing row, Testimonial 3 → Content / Pricing card, Step 4 → Content / Process step, Frame 614 → Tag / Contract type, Frame 609 → Tag / Location, Frame 654 → Card / Stat, Prop 2 → Card / Process stage, Content / Fee row, Content / Fee row compact, Frame 717 → Contact / Detail item.
@@ -84,6 +85,7 @@ Werkwijze: named version vooraf, alleen namen/bindingen, controle met pixel-diff
 - **Content / Team**: `Property 1/2` ongelijk, Figma weigert aanpassing.
 - **Remote componenten (niet vervangen)**: `2:1 Fixed Aspect Ratio Spacer` (11748×), `Image` (178), `fixed_aspect_ratio` (252), `Logooos` (8 logo's, ~20×), `Arrow icon` (161), `material_icons` (161), `Line` (317), `Button/Link/Default` (185), `Button group` (13), `Icon / LinkedIn` (19), Material-iconen (`chevron_right` 205, `expand_more` 123, `east` 25, `expand_less` 10, `keyboard_arrow_down` 23, `search`, `lock`, `error_outline`), `Divider` (4).
 - **Remote variabelen in knoppen** (laten staan): `Defaults/Body`, `Defaults/Body light`, `Defaults/Dark Grey`, `Brand/Dark purple` (pijl-iconen en hover-tekst van primary).
+- **Content / Pricing row en Content / Fee row**: property heet nu `style=compact|expanded` (default `compact`). In Webflow beoordelen of `expanded` een uitklapstaat is (dan interactie/`state`) of een eigen variant.
 - **Design slips**: knoptekst primary `#050404` en hover `#232323` (`Defaults/Dark Grey`) blijven raw; een tweede ongewijzigde bevinding naast de lijst hierboven.
 - **Ontbrekende interactiestaten**: geen hover/focus voor Navbar - Light items, tertiary/back-button (hover = rest), Tab, links, inputvelden (`input/border-focus`).
 - **Mobile-pagina**: geen baseline-screenshots, dus geen pixel-diff voor Sizes=Mobile.
@@ -111,16 +113,33 @@ Fingerprint (script 19, tekst, lettergrootte en maat per frame, sectie en varian
 - Header / Home v01 `home` en `variant3`: geen Brand-mode (19 Theme-bindingen zouden van kleur veranderen). Besluit: laten staan, de build behandelt deze header als Brand.
 - Roze eindstop `#e5b8b4` is niet aan `swatch/brand-pink-500` (`#e5bbb7`) gebonden. Besluit: laten staan (design slip).
 - Onbepaalde sets: Card / Opportunity, Card / Service (`services-hover`), Card / Expert, Line, Nav / Base, Header default, Content / Services desktop vs Content / Mobile. Alleen gerapporteerd.
-- `closed|open` op Content / Pricing row en Content / Fee row is afgeleid uit hoogte; controleren.
+- `style=compact|expanded` op Content / Pricing row en Content / Fee row (was `state=closed|open`, afgeleid uit hoogte): in Webflow beoordelen.
 - Het lege sjabloonframe `iPhone 17 - 2` (402×874) op de Mobile-pagina bestaat alleen in het origineel; het is in een eerdere fase uit het duplicaat gehaald. Terugzetten kan door het te kopiëren uit het origineel.
-- Typfouten in bestaande namen (`Design comonents`, `Oppertunities`, `Assesment`, `WYSIWIG`) en ~220 placeholder-laagnamen (`_group_wrap`, `Frame 434`…): niet gedaan, buiten fase 5 en 6.
-- Drie losse text styles (`Headings/9xl`, `Body regular/5xl`, `Body regular/4xl`): nog niet besproken.
+- Typfouten in bestaande namen: hersteld in fase 7. ~220 placeholder-laagnamen (`_group_wrap`, `Frame 434`…): niet gedaan.
+- Drie losse text styles: hernoemd in fase 7 (`Display Large`, `Text XX Large`, `Text X Large`).
 
 ### Wat de Webflow-build moet weten
 - **Primaire knop** = `Button type=primary` (mint `brand-accent-500`, tekst `dark-900`), hover zit in `state=hover`. Secondary en secondary-white hebben een omlijnde rest en gevulde hover. `button-secondary-white/*`, `button-tertiary/*`, `button-back/*` zijn nieuw (niet in de Lumos-basis).
 - **Device-sets**: `device=desktop|mobile` (Footer ook `desktop-compact`). Content / Services desktop en Content / Mobile zijn aparte sets.
 - **Slide- of hoversets**: Sub menu Item en Footer Item (`state=hover`) zijn echte hover. Tab en Tab / Home zijn `style=plain|outline|filled`. Content / Process step is `style=glass|plain`.
-- **Nog aan swatches/raw gebonden** (themewisseling werkt daar niet): witte tekst in Base-componenten, alle vlakken met 10–50% dekking, `stars`-iconen, gradient-eindstop, `#000000` tekst (~25 plekken), `#050404` knoptekst, remote `Defaults/*`-variabelen in pijl-iconen.
+- **Nog aan swatches/raw gebonden** (themewisseling werkt daar niet): witte tekst in Base-componenten, alle vlakken met 10–50% dekking, `stars`-iconen, gradient-eindstop, `#050404` knoptekst, 15 zwarte teksten via remote `copy/*`-variabelen (formuliervelden, Section-voorbeelden), remote `Defaults/*`-variabelen in pijl-iconen.
 - **Remote componenten** (niet vervangen): zie "Open na fase 5".
 - **Ontbrekende interactiestaten**: hover/focus voor Navbar items, links, Tab en inputvelden.
 - **Placeholder**: `[Date]` in Privacy & Cookies, `€XX` in tarieven.
+
+## Afronding (sessie 2026-10-29)
+Alleen in het duplicaat; het origineel is alleen gelezen (fingerprint). Een named version kon niet via de API worden opgeslagen (`saveVersionHistoryAsync` niet ondersteund); de automatische versiegeschiedenis van Figma geldt.
+
+1. **Typfouten in bestaande namen**: 22 namen hersteld, 0 fouten, 0 dubbele variantnamen. Alleen hoofdcomponenten, sets, secties en losse lagen (niets binnen instances).
+   - Secties: `Design comonents` → `Design components`, `Content / Assesment process` → `Content / Assessment process`, `Dynamic / Oppertunities` → `Dynamic / Opportunities`, `Page content / Oppertunity detail` → `Page content / Opportunity detail`, `Content / WYSIWIG` → `Content / WYSIWYG`.
+   - Componenten/sets: `Content / Assessment process`, `Content / WYSIWYG`, `Header / Opportunities`.
+   - Variantwaarden in Header default: `type=oppertunity` → `type=opportunity`, `type=oppertunity-mobile` → `type=opportunity-mobile`.
+   - Lagen in Content / WYSIWYG: 4× `content-wysiwyg_content`, 4× `content-wysiwyg_title`, 4× `content-wysiwyg_text`.
+   - Mobile, Designs, Presentation en Brand: 0 treffers. Naslag-scan: 0 resterend.
+2. **Text styles**: `Headings/9xl` → `Display Large`, `Body regular/5xl` → `Text XX Large`, `Body regular/4xl` → `Text X Large`. Alleen hernoemd, eigenschappen ongewijzigd.
+3. **Zwarte tekst `#000000` → Theme `text` (`#030b1b`)**: 16 tekstlagen / 16 paints in 8 hoofdcomponenten (Contact / Detail item, Card / Opportunity `variant3`/`variant4`, Content / WYSIWYG, Static / Contact form `contact`/`resume`, dynamic-opportunities desktop/mobile). Die renderen via instances op Contact, Careers, Privacy & Cookies, Analyse my resume en Opportunities (desktop en mobile), samen de ~25 plekken. Alleen paints met opacity 1, geen binding op knooppuntniveau, niets binnen instances. Alle instances staan in Theme-mode Base (in Dark/Brand zou `text` wit zijn).
+   - Overgeslagen: 15 teksten die al aan remote `copy/*`-variabelen (zwart) hangen (formuliervelden `small=true/false`, Section-voorbeelden `dark-mode=…`, Testimonial-naam).
+   - Pixel-diff (baseline vooraf, 11 nodes: 6 paginaframes en 5 componentsets): alleen tekstpixels gewijzigd, max kanaalverschil 27 (= `#000000` → `#030b1b`), verder 0.
+4. **Content / Pricing row en Content / Fee row**: `state=closed|open` → `style=compact|expanded` (default `compact`). Instances: Pricing row 6, Fee row 10, 0 van variant gewisseld. Nav / Mobile en Search mobile staan nog op `state=closed|open`.
+5. **Fingerprint tegen het origineel** (tekst, lettergrootte en maat per paginaframe, sectie en componentvariant, gematcht op node-ID): 441 rijen (Visual design 143 paginaframes/secties + 117 Components + 156 Design components en losse sets, Mobile 25), **441 identiek, 0 verschillen, 0 ontbrekend**. Enige verschil op topniveau: het lege frame `iPhone 17 - 2` (alleen in het origineel, mag wegblijven).
+
