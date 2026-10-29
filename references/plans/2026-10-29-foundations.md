@@ -6,7 +6,7 @@ The Figma file is already Lumos-named, so almost every Figma variable maps 1:1 o
 Colours: 27 swatches and 45 theme colours in three themes (Base → Lumos' light base mode, Dark, Brand).
 Type: Onest for body text, Vend Sans for headings; ten text styles as in Lumos, plus Text Medium, Label and Label Large.
 Page margin, gutter and the Display/H1/H2/H3 sizes scale with the screen; the mobile heading sizes come from the style the designer used for the same title on mobile.
-Blocked on: the Webflow site is not in the connected workspace yet.
+Status 2026-10-29: written through the API and verified by script (log.md); fluid formulas wait for the Variables panel.
 
 Source: https://www.figma.com/design/18m34a7vzkzopkwGoojmUx/Humain--Lumos- (collections Default, Theme, Sizes, Typography, Text Style; 16 text styles)
 Frames: desktop 1512 px, mobile 402 px → `site/viewport-min` 25.125, `site/viewport-max` 94.5 (rem numbers)
@@ -161,9 +161,9 @@ Not made into text styles: Display Large (128 px, 3×), Text XX Large (48 px, 3�
 
 ## Missing
 
-- **Webflow site access** — the connected Webflow login only sees the "Jerome" workspace.
+- ~~Webflow site access~~ — resolved 2026-10-29 (site Humain, `6ae35364a38b2d71cab8c607`).
 - Fonts on the site: Onest, Vend Sans (both Google Fonts) — checked after the site dump.
 
 ## Questions
 
-All answered on 2026-10-29 (decisions/site.md). Open: Webflow access only.
+All answered on 2026-10-29 (decisions/site.md). None open.

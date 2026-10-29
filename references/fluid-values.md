@@ -4,6 +4,16 @@ Typed into the Variables panel (the API refuses formulas). Viewport range from t
 
 Only the variables below. Everything else is static.
 
+## Paste steps (Designer)
+
+`site/viewport-min` 25.125 and `site/viewport-max` 94.5 are already set (API, 2026-10-29).
+
+1. Designer › Variables panel (V).
+2. Collection **default** › `site/margin` › click the value › paste the formula below › Enter. Same for `site/gutter`.
+3. Collection **Typography** › `font-size/display`, `h1`, `h2`, `h3` › same.
+4. Each value then shows as a formula; the panel preview at 1512 px wide must equal the desktop value.
+5. Tell Claude; it re-dumps `variables.json` and runs `references/verify-foundations.py` (the "fluid still static" list must be empty).
+
 | Variable | Mobile (402) | Desktop (1512) | Static value written by API |
 |---|---|---|---|
 | site/margin | 1.25rem (20 px) | 4rem (64 px) | 4rem |

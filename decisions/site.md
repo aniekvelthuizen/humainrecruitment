@@ -39,3 +39,22 @@ Why: owner rule — the styleguide uses Vend Sans and Onest only; no other fonts
 ## 2026-10-29 — Extra text styles
 Choice: Text Medium, Label and Label Large become Text Style modes with their own `u-text-style-*` class. Display Large, Text X Large, Text XX Large do not (3–7 uses; sized per section).
 Why: each of the three is used 100+ times. Confirmed by the owner.
+
+## 2026-10-29 — Site linked
+Choice: Webflow site "Humain" (`6ae35364a38b2d71cab8c607`), staging `humain-d16f03.webflow.io` (from the site's short name; `get_site` returns no staging field). The Theme collection already had a `Brand mode`; that is the Figma Brand theme (no new mode created).
+
+## 2026-10-29 — Label letter-spacing as a variable
+Conflict: the plan gives Label / Label Large 0.1em letter-spacing but no variable for it.
+Choice: new `letter-spacing/wide` = 0.1em in Typography; both Label modes link to it.
+Why: Text Style values stay links, never literals.
+
+## 2026-10-29 — Trims on a starter without trim variables
+Conflict: this Lumos starter has no trim variables and no trim on the `u-text-style-*` classes (the Global Styles embed is not readable through the API).
+Choice: `font/primary-trim-top|bottom` (Onest 0.3745 / 0.3325 em) and `font/secondary-trim-top|bottom` (Vend Sans 0.35 / 0.35 em), computed from the Google Fonts files (hhea ascent/descent, OS/2 cap height, typography.md formula). Text Style gets `trim-top` / `trim-bottom`: body modes link the Onest pair, Display and H1–H6 the Vend Sans pair. Whether the Global Styles embed reads `--_text-style---trim-*` is a Designer check (designer-queue).
+
+## 2026-10-29 — Lumos formulas kept
+Choice: `max-width/main` keeps Lumos' `calc(var(--site--viewport-max) * 1rem)` (= 94.5rem with viewport-max 94.5) instead of a static 94.5rem; `max-width/full`, `site/column-width`, `nav/height-total`, `focus/offset-inner`, `radius/round` untouched. `section-space/page-top` (not in Figma) keeps its Lumos clamp.
+Why: same value, and the formulas keep the system linked.
+
+## 2026-10-29 — New text-style classes
+Choice: `u-text-style-text-medium`, `u-text-style-label-large`, `u-text-style-label` (names as in the plan), copied from `u-text-style-main` (which in this starter has no `display: flow-root`, so neither do the copies), each set to its Text Style mode. `u-weight-semibold` added (Onest + `font/primary-semibold`).

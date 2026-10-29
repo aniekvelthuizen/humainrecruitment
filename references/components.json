@@ -1,0 +1,2817 @@
+[
+ {
+  "id": "824b76d0-0ddb-5ed5-8ae6-09771aaa568a",
+  "name": "Button Main",
+  "group": "Button",
+  "instanceCount": 117,
+  "props": [
+   {
+    "id": "09c7e3c3-ab2b-fd29-e9c5-1cf5593e84b9",
+    "name": "Text",
+    "type": "textContent"
+   },
+   {
+    "id": "7a270cd6-1eda-e05c-e2c6-afb653d5a2da",
+    "name": "Link",
+    "type": "link"
+   },
+   {
+    "id": "59dad94d-02cf-903d-918f-aeb4aab17371",
+    "name": "Variant",
+    "type": "variant"
+   },
+   {
+    "id": "66fc8413-5709-4af3-4fa6-3e493d878056",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "b120c579-21b3-f3f5-8c6f-c9c79077c295",
+    "name": "Clickable Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "ca21525e-e135-452b-f247-ea0390a2a221",
+    "name": "Button Type",
+    "type": "boolean",
+    "group": "Settings"
+   }
+  ],
+  "slots": [
+   "Slot"
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Primary"
+   },
+   {
+    "id": "e85564cd-af30-a478-692b-71732aefb3ab",
+    "name": "Secondary"
+   },
+   {
+    "id": "625d5df4-ad91-f7dc-9e2f-2e69f3fd7400",
+    "name": "Link"
+   }
+  ]
+ },
+ {
+  "id": "ef6f7715-7082-0e78-9b80-b290d4fc5f0f",
+  "name": "Button Play",
+  "group": "Button",
+  "instanceCount": 5,
+  "props": [
+   {
+    "id": "83194c10-6941-a340-0227-973a3bb8ad35",
+    "name": "Variant",
+    "type": "variant"
+   },
+   {
+    "id": "74fae974-c32d-5212-8652-f1082eff2330",
+    "name": "Text",
+    "type": "textContent"
+   },
+   {
+    "id": "7f9b9d9a-f1e9-5c66-9bb2-26df9a33cb17",
+    "name": "Link",
+    "type": "link"
+   },
+   {
+    "id": "6de59664-d8d2-b96c-c871-a9aaf766790b",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "92472fef-fd6c-4630-b999-d97bf281530d",
+    "name": "Classes",
+    "type": "string",
+    "group": "Settings"
+   },
+   {
+    "id": "7f7f5770-a323-9d6c-3fc6-12c5c5278e69",
+    "name": "Pressed",
+    "type": "boolean",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Primary / Medium"
+   },
+   {
+    "id": "ab355ea0-b722-2f23-3507-f0290f710e57",
+    "name": "Secondary / Medium"
+   },
+   {
+    "id": "d47b6b31-1410-4123-4cbe-47472b6d649d",
+    "name": "Primary / Large"
+   },
+   {
+    "id": "3970b3f9-2fa6-52d8-098a-2260caaa12bb",
+    "name": "Secondary / Large"
+   }
+  ]
+ },
+ {
+  "id": "973d4f8d-b9e1-3d51-3d84-7a9efc662c8f",
+  "name": "Icon Arrow",
+  "group": "SVG",
+  "instanceCount": 41,
+  "props": [
+   {
+    "id": "4110ac31-e9af-1f67-65b2-82b1b11ed64c",
+    "name": "Direction",
+    "type": "variant"
+   },
+   {
+    "id": "96878d32-3666-b957-6720-453c31d8d5dd",
+    "name": "Size",
+    "type": "variant"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Right"
+   },
+   {
+    "id": "dc469724-71a3-14e1-b5d5-1294323411ce",
+    "name": "Left"
+   },
+   {
+    "id": "b18a0fcd-abb0-329e-47f4-79155dd8284a",
+    "name": "Top"
+   },
+   {
+    "id": "caa8b8e9-e8ec-6eb3-4526-30f19f7326f5",
+    "name": "Bottom"
+   }
+  ]
+ },
+ {
+  "id": "9d2d1e50-103f-d310-b352-08c163e684c9",
+  "name": "Icon Arrow Full",
+  "group": "SVG",
+  "instanceCount": 18,
+  "props": [
+   {
+    "id": "8b583aae-a6cd-af1d-7e88-12f339a69761",
+    "name": "Variant",
+    "type": "variant"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Right"
+   },
+   {
+    "id": "1c3f028b-116e-d4eb-db7f-8484491bbf2e",
+    "name": "Left"
+   },
+   {
+    "id": "a0a4b133-f837-5340-6c98-04b1518f150d",
+    "name": "Top"
+   },
+   {
+    "id": "5939aeba-b378-ecdc-f1bc-b6970df2be03",
+    "name": "Bottom"
+   }
+  ]
+ },
+ {
+  "id": "0b86bbf2-83a2-3b1b-20e3-c535c15c9297",
+  "name": "Global Guides",
+  "group": "Global",
+  "instanceCount": 5,
+  "props": [],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "3c7de3d6-58ac-a383-9a7c-2b483f0bf7d0",
+  "name": "Typography Eyebrow",
+  "group": "Typography",
+  "instanceCount": 14,
+  "props": [
+   {
+    "id": "d2a49f5c-3268-a975-733f-44e8cda24efd",
+    "name": "Text",
+    "type": "richText"
+   },
+   {
+    "id": "9e59a499-6fa0-a087-fd32-b8b3be12bfc9",
+    "name": "Margin Bottom",
+    "type": "number"
+   },
+   {
+    "id": "1a3c854a-26b7-1631-f35e-3366f6bce451",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "625bf776-8cb1-fa1f-a6f9-6b7f7ac28358",
+  "name": "Starter JS",
+  "group": "Utility",
+  "instanceCount": 0,
+  "props": [],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "fc7624c6-48da-610a-1f56-983264845d2d",
+  "name": "Starter CSS",
+  "group": "Utility",
+  "instanceCount": 0,
+  "props": [],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "0254e612-9509-0757-3332-f6be61ca6889",
+  "name": "Clickable",
+  "group": "Utility",
+  "instanceCount": 172,
+  "props": [
+   {
+    "id": "d5d5b95f-f511-ea4d-05da-3fb36c2061e0",
+    "name": "Variant",
+    "type": "variant"
+   },
+   {
+    "id": "18d8382b-6caa-397d-3f7a-8f1ca802696b",
+    "name": "Visibility",
+    "type": "boolean"
+   },
+   {
+    "id": "15bde6c1-9aad-9550-ed91-b6cb1afa189a",
+    "name": "Screen Reader Text",
+    "type": "textContent"
+   },
+   {
+    "id": "b6016031-ccf9-3efa-2abc-f13bad7d1f38",
+    "name": "Link",
+    "type": "link"
+   },
+   {
+    "id": "94a960fe-48a4-6c76-b2ae-2339da2798af",
+    "name": "Button Type",
+    "type": "boolean"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Focus Ring Outside"
+   },
+   {
+    "id": "b793638f-e9bb-2cea-c2d9-27bf5a1f754a",
+    "name": "Focus Ring Inside"
+   }
+  ]
+ },
+ {
+  "id": "6988c782-9d84-f50b-88aa-e362ff213d22",
+  "name": "Space Switcher",
+  "group": "Variant Switcher",
+  "instanceCount": 32,
+  "props": [
+   {
+    "id": "6c14af0c-7d93-c86c-7e8c-95100cb81cf2",
+    "name": "Variant",
+    "type": "variant"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "None"
+   },
+   {
+    "id": "41fc0c0a-cac3-53c9-9802-6a916e3fb342",
+    "name": "Even"
+   },
+   {
+    "id": "d422cbd0-f212-c815-68df-63414354c21d",
+    "name": "Small"
+   },
+   {
+    "id": "60a7ad7d-02b0-6682-95a5-2218e6fd1490",
+    "name": "Main"
+   },
+   {
+    "id": "8cc18b30-4618-8767-0111-f6abfe45aaa3",
+    "name": "Large"
+   },
+   {
+    "id": "e359d2da-de19-6775-b122-3e06f925f39e",
+    "name": "Page Top"
+   }
+  ]
+ },
+ {
+  "id": "9cd849af-5c85-da69-3983-2e49dba72900",
+  "name": "Section",
+  "group": "Wrapper",
+  "instanceCount": 16,
+  "props": [
+   {
+    "id": "6166da2b-1990-56f2-4fdf-c8abca528b1a",
+    "name": "Theme",
+    "type": "variant"
+   },
+   {
+    "id": "47f89cc1-c690-5052-46fc-da934938cc33",
+    "name": "Padding Top",
+    "type": "variant"
+   },
+   {
+    "id": "a89be678-5d7d-c6e9-66ad-7d4b011b0f05",
+    "name": "Padding Bottom",
+    "type": "variant"
+   },
+   {
+    "id": "e11a8e7d-d0b1-7cfa-8be3-f4c0d404190a",
+    "name": "Height",
+    "type": "boolean"
+   },
+   {
+    "id": "9f3da66c-9c7a-c3b7-0696-363a71705ac3",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "e5afb29e-4dce-71a6-b87b-5dd0bbe1f905",
+    "name": "ID",
+    "type": "id",
+    "group": "Settings"
+   },
+   {
+    "id": "9d50b922-a467-b677-e600-e0ddd6cd80aa",
+    "name": "Container Classes",
+    "type": "string",
+    "group": "Settings"
+   }
+  ],
+  "slots": [
+   "Container Slot",
+   "Slot"
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Inherit"
+   },
+   {
+    "id": "4b83425a-ad2e-5ba3-86e8-b873d9cdc82a",
+    "name": "Light"
+   },
+   {
+    "id": "b9b3ef95-b878-3cc3-ad92-f524d65596b0",
+    "name": "Dark"
+   },
+   {
+    "id": "514db4f8-f551-0224-14f2-f1fdb99b51c9",
+    "name": "Brand"
+   }
+  ]
+ },
+ {
+  "id": "ef0597e2-9ec1-c890-ceba-f61926a36e78",
+  "name": "Button Wrapper",
+  "group": "Wrapper",
+  "instanceCount": 32,
+  "props": [
+   {
+    "id": "7df7d82c-6a46-6aec-72ba-6f235900fa32",
+    "name": "Margin Top",
+    "type": "number"
+   },
+   {
+    "id": "d56cf1bf-62db-07e6-3acb-32718b1f5284",
+    "name": "Margin Bottom",
+    "type": "number"
+   },
+   {
+    "id": "bf91e063-a216-37b7-6186-9efb801c30ad",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "cad31ee9-6406-593c-2394-2b5e0909f6f6",
+    "name": "Style",
+    "type": "string",
+    "group": "Settings"
+   }
+  ],
+  "slots": [
+   "Slot"
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "b9130e59-aa4e-07ef-a822-eda529bf75ca",
+  "name": "Typography Heading",
+  "group": "Typography",
+  "instanceCount": 38,
+  "props": [
+   {
+    "id": "76273518-63b5-3848-40cd-8ad0c6067d18",
+    "name": "Text",
+    "type": "richText"
+   },
+   {
+    "id": "9b073cb9-c1b8-2c4e-1e1e-fa98533256a4",
+    "name": "Variant",
+    "type": "variant"
+   },
+   {
+    "id": "6e104e9a-c0db-75d4-b6ed-a8614fa001cf",
+    "name": "Max Width",
+    "type": "number"
+   },
+   {
+    "id": "1dcaba84-994f-84a1-6ff1-e3c544755081",
+    "name": "Margin Bottom",
+    "type": "number"
+   },
+   {
+    "id": "c650d0a5-0017-e184-2f2e-c71f2375a4f3",
+    "name": "Tidy Text",
+    "type": "boolean"
+   },
+   {
+    "id": "9d920bb5-f84e-74c0-c4f0-8d7f56abd9bf",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "b72bea2f-087a-342a-cc7a-67402f0a7a6f",
+    "name": "Classes",
+    "type": "string",
+    "group": "Settings"
+   },
+   {
+    "id": "a18975a8-4357-ae6b-a114-3f7af38b8de1",
+    "name": "ID",
+    "type": "id",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Inherit"
+   },
+   {
+    "id": "3fbd0d32-5675-1947-73b3-abb16c1fb986",
+    "name": "Text Small"
+   },
+   {
+    "id": "9027c8ae-1ba5-f702-ea6e-4a1c3fca9f64",
+    "name": "Text Main"
+   },
+   {
+    "id": "74a3180a-e505-b452-032f-599c8e557249",
+    "name": "Text Large"
+   },
+   {
+    "id": "823daff2-fd84-8da0-4ed1-92a39b869ad0",
+    "name": "H6"
+   },
+   {
+    "id": "326a9562-3263-06da-e8ef-16981fd70f1c",
+    "name": "H5"
+   },
+   {
+    "id": "7c7eb163-b37d-338d-2369-5eae7e6d458a",
+    "name": "H4"
+   },
+   {
+    "id": "701c4b6c-37cf-de59-d80d-80a1822c4994",
+    "name": "H3"
+   },
+   {
+    "id": "433d40c6-c261-f13f-c899-61d2cadf150f",
+    "name": "H2"
+   },
+   {
+    "id": "792802b6-ccdb-f982-5023-5fa970cf03d0",
+    "name": "H1"
+   },
+   {
+    "id": "41c609dc-9c80-9eef-75df-03bf0eea00b4",
+    "name": "Display"
+   }
+  ]
+ },
+ {
+  "id": "99ca2e6d-2b82-bb82-6df8-bd4932d075bd",
+  "name": "Typography Paragraph",
+  "group": "Typography",
+  "instanceCount": 37,
+  "props": [
+   {
+    "id": "1a52e4bc-3278-9643-82b1-cfa819b4570a",
+    "name": "Text",
+    "type": "richText"
+   },
+   {
+    "id": "4e33e904-7e2a-6463-0eef-5719f108b265",
+    "name": "Variant",
+    "type": "variant"
+   },
+   {
+    "id": "dc33d40a-caf1-af84-9353-0335b7334cd6",
+    "name": "Max Width",
+    "type": "number"
+   },
+   {
+    "id": "00256c80-0145-8704-9f72-b40164d463fa",
+    "name": "Margin Bottom",
+    "type": "number"
+   },
+   {
+    "id": "29dd0d7e-be38-1daa-dbea-a4a17f4109da",
+    "name": "Tidy Text",
+    "type": "boolean"
+   },
+   {
+    "id": "b0f07643-4c27-1148-6e4e-4bf856ee3ba7",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "5cd4b3be-c550-c496-0668-aee9824c2dd5",
+    "name": "Classes",
+    "type": "string",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Inherit"
+   },
+   {
+    "id": "4099173f-f581-635c-a5fe-cf4a89c62029",
+    "name": "Text Small"
+   },
+   {
+    "id": "61d538b2-709c-eb7a-4258-8c0890dc07fc",
+    "name": "Text Main"
+   },
+   {
+    "id": "fdb8e663-01e0-aae6-13eb-e6dfca16b689",
+    "name": "Text Large"
+   },
+   {
+    "id": "b8555f10-fa7d-e9ba-e262-f9aa44c27c1c",
+    "name": "H6"
+   },
+   {
+    "id": "5c484503-e2a0-ac99-680d-56013d859efa",
+    "name": "H5"
+   },
+   {
+    "id": "93e8af18-8413-e3ac-0442-72629401a3db",
+    "name": "H4"
+   },
+   {
+    "id": "ad482112-9d0e-852c-0f6e-ba1e5a3aee59",
+    "name": "H3"
+   },
+   {
+    "id": "efb733fe-da83-69a3-ea4a-b3f2f89d0389",
+    "name": "H2"
+   },
+   {
+    "id": "3ddfa43e-abc1-422e-6e6d-23dfb7da71f3",
+    "name": "H1"
+   },
+   {
+    "id": "eee56f15-d7ce-d101-2f8c-83b3bbd55d4a",
+    "name": "Display"
+   }
+  ]
+ },
+ {
+  "id": "cfe16031-f44d-4a67-3ea7-9298adf7238a",
+  "name": "Block",
+  "group": "Wrapper",
+  "instanceCount": 0,
+  "props": [
+   {
+    "id": "4a40534b-0b41-efea-4a8a-02c6d39a9ae2",
+    "name": "Visibility",
+    "type": "visibility"
+   },
+   {
+    "id": "55ce36d0-6387-6d72-c58c-8663f0b9bad0",
+    "name": "Classes",
+    "type": "string"
+   },
+   {
+    "id": "79f22146-ea0c-858d-f929-54abc72a2419",
+    "name": "Style",
+    "type": "string"
+   },
+   {
+    "id": "2ac1c436-173e-7b5c-9c8c-faff425035d6",
+    "name": "Attribute Name",
+    "type": "string"
+   },
+   {
+    "id": "0488e49e-60f2-4ef0-e1ed-cedb36483e1c",
+    "name": "Attribute Value",
+    "type": "string"
+   }
+  ],
+  "slots": [
+   "Slot content"
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "39a856c3-f857-7c26-307f-b73399139f4a",
+  "name": "Check UI",
+  "group": "Miscellaneous",
+  "instanceCount": 5,
+  "props": [
+   {
+    "id": "eb369db0-57be-e32b-56b0-e0d9a9d9292e",
+    "name": "Type",
+    "type": "boolean"
+   },
+   {
+    "id": "ad5a1c11-5be0-7b8e-c294-b05d018ff3d0",
+    "name": "Label",
+    "type": "textContent"
+   },
+   {
+    "id": "74ea5995-c144-55d6-8764-af19c5f8ab6a",
+    "name": "Name",
+    "type": "string"
+   },
+   {
+    "id": "ff445480-32d9-18a7-adc8-b6c46609bf85",
+    "name": "Value",
+    "type": "string"
+   },
+   {
+    "id": "5de02a9e-4c0a-1553-819f-4bd0fb13e279",
+    "name": "Required",
+    "type": "boolean"
+   },
+   {
+    "id": "e36d554e-9517-2ca1-2cc1-9b827f9598bc",
+    "name": "Checked",
+    "type": "boolean"
+   },
+   {
+    "id": "ceea9dae-1800-0050-d339-30851b2ad651",
+    "name": "Variant",
+    "type": "variant",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Checkbox"
+   },
+   {
+    "id": "05ff758a-80c8-4344-649b-149f87b62cc9",
+    "name": "Toggle"
+   },
+   {
+    "id": "e3978449-fef8-38a6-7f29-4e26ca4f8f53",
+    "name": "Button"
+   },
+   {
+    "id": "c18f59b8-0331-9f8c-c106-08818710cc20",
+    "name": "Radio"
+   }
+  ]
+ },
+ {
+  "id": "c2fd5c20-65cf-6b26-fc6c-059fb6547f9c",
+  "name": "Form Radio",
+  "group": "Form",
+  "instanceCount": 3,
+  "props": [
+   {
+    "id": "c3778b1c-e9f9-7ed9-b7c9-f987a278ddb0",
+    "name": "Label",
+    "type": "textContent"
+   },
+   {
+    "id": "207e711d-e904-8e4c-bb4c-1b2c0cce9aab",
+    "name": "Group Name",
+    "type": "string"
+   },
+   {
+    "id": "82500bdf-2775-56fa-f63d-4e461782f210",
+    "name": "Required",
+    "type": "boolean"
+   },
+   {
+    "id": "793b639e-b4e5-b1e3-a686-b2f0d43eb299",
+    "name": "Checked",
+    "type": "boolean"
+   },
+   {
+    "id": "51c4c59b-1108-cb29-21c7-430147ed6656",
+    "name": "Style",
+    "type": "variant"
+   },
+   {
+    "id": "60faa401-72b4-1e29-a82a-724be14e77dc",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "d6834db7-1bc2-49fc-602e-afbce8e72fa7",
+    "name": "Role",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "f40177ce-d565-49b5-cf28-b289c9b9bf6c",
+    "name": "Submission Value",
+    "type": "string",
+    "group": "Settings"
+   },
+   {
+    "id": "731df109-e5e2-67fc-44a6-93053bc16a41",
+    "name": "Classes",
+    "type": "string",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "4691487f-404c-ddef-cd99-f79676913b7a",
+  "name": "Content Wrapper",
+  "group": "Wrapper",
+  "instanceCount": 4,
+  "props": [
+   {
+    "id": "939b4cec-eeb4-435c-14dd-3d7c4bfab190",
+    "name": "Variant",
+    "type": "variant"
+   },
+   {
+    "id": "94ad3988-544b-a395-b44a-e89b531c663a",
+    "name": "Visibility",
+    "type": "visibility",
+    "group": "Settings"
+   },
+   {
+    "id": "f42dc87e-16bd-9c7c-dd22-249769aac817",
+    "name": "Classes",
+    "type": "string",
+    "group": "Settings"
+   },
+   {
+    "id": "04e224f1-5f0b-a3a9-8e01-149915ca9ee8",
+    "name": "Style",
+    "type": "string",
+    "group": "Settings"
+   }
+  ],
+  "slots": [
+   "Slot"
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Inherit"
+   },
+   {
+    "id": "e85a4315-14bc-e5ef-0d3e-2c8c9ed7d2f1",
+    "name": "Left"
+   },
+   {
+    "id": "4f54624e-ceb1-0769-a238-365d5e220b70",
+    "name": "Center"
+   },
+   {
+    "id": "405b6754-709a-81de-bf32-f0102c0c7aa2",
+    "name": "Right"
+   },
+   {
+    "id": "e98b91c1-a8bf-9b6d-a119-f398c9e3f46b",
+    "name": "Center Mobile"
+   }
+  ]
+ },
+ {
+  "id": "7d7894ee-390d-226d-3dd5-a9571f6c41f5",
+  "name": "Grid",
+  "group": "Wrapper",
+  "instanceCount": 8,
+  "props": [
+   {
+    "id": "25c90e4e-020d-1ddc-99a3-9b4abbbc508c",
+    "name": "Large Screen",
+    "type": "number"
+   },
+   {
+    "id": "3a931472-3bfd-9bb7-aac0-6c944a5b2275",
+    "name": "Medium Screen",
+    "type": "number"
+   },
+   {
+    "id": "e3b256f0-ce29-e4ec-b236-4969b12d77d2",
+    "name": "Small Screen",
+    "type": "number"
+   },
+   {
+    "id": "6bd48592-c348-efdc-42e9-e51457233889",
+    "name": "Smallest Screen",
+    "type": "number"
+   },
+   {
+    "id": "36a4b313-b94e-f017-af51-587183913231",
+    "name": "Variant",
+    "type": "variant"
+   },
+   {
+    "id": "9096b999-5678-82ea-54ac-a9a75692666d",
+    "name": "Minimum Column Size",
+    "type": "number"
+   },
+   {
+    "id": "3689ffff-f111-058d-a84d-3411da37d359",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "627d0b36-e41d-bf6f-08c8-00ecca7226d1",
+    "name": "Classes",
+    "type": "string",
+    "group": "Settings"
+   },
+   {
+    "id": "f53522d8-67ed-0b1a-c605-0f66c49a1990",
+    "name": "Style",
+    "type": "string",
+    "group": "Settings"
+   },
+   {
+    "id": "6e2de88a-9a3d-df15-8e6e-14fc195c0c6f",
+    "name": "Role",
+    "type": "boolean",
+    "group": "Settings"
+   }
+  ],
+  "slots": [
+   "Slot"
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Default"
+   },
+   {
+    "id": "b8204f2e-764d-b421-dc96-2c59d3054271",
+    "name": "Self Contained"
+   },
+   {
+    "id": "d58244bf-290f-ebb3-3aa0-352d6fa8e84f",
+    "name": "Autofit"
+   },
+   {
+    "id": "129319ac-a2cd-9e88-2ebd-a33b4bb85fa5",
+    "name": "Autofill"
+   }
+  ]
+ },
+ {
+  "id": "40c5c120-b67e-abdf-9581-f3dc48d20a3c",
+  "name": "Form Fieldset",
+  "group": "Form",
+  "instanceCount": 6,
+  "props": [
+   {
+    "id": "eb5cbdc2-04db-ea24-498f-7ea1421a920b",
+    "name": "Text",
+    "type": "textContent"
+   },
+   {
+    "id": "760b4142-154a-2f18-170c-ea9506d7d5ff",
+    "name": "Layout",
+    "type": "variant"
+   },
+   {
+    "id": "73d54d34-13fb-ff06-c431-075189d94142",
+    "name": "Legend Style",
+    "type": "variant"
+   },
+   {
+    "id": "bd710964-8a52-ee93-c544-b42c99ea8c12",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "e4e27a05-32e5-10bc-9928-e450660645d3",
+    "name": "Slot Role",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "20e08b85-1743-b125-6ac4-37715a887598",
+    "name": "Classes",
+    "type": "string",
+    "group": "Settings"
+   }
+  ],
+  "slots": [
+   "Slot"
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Flex Vertical"
+   },
+   {
+    "id": "ccbf2df7-16d0-30d7-0afb-0df098785596",
+    "name": "Flex Horizontal"
+   },
+   {
+    "id": "14c165fa-7397-02ef-8dc0-6e307b6c980f",
+    "name": "Grid 2 Column"
+   },
+   {
+    "id": "5fdb0361-c340-58a0-00d3-b0e0b17257ad",
+    "name": "Grid 3 Column"
+   }
+  ]
+ },
+ {
+  "id": "50094686-3809-242d-2cc1-5c609bf19df4",
+  "name": "Form Textarea",
+  "group": "Form",
+  "instanceCount": 1,
+  "props": [
+   {
+    "id": "29486535-f71e-3cf8-c511-96438f6ff049",
+    "name": "Label",
+    "type": "textContent"
+   },
+   {
+    "id": "1f83b501-41d1-9c43-cb16-19fe40874ef5",
+    "name": "Placeholder",
+    "type": "string"
+   },
+   {
+    "id": "9cfc80d8-c99d-34d4-0f41-cac99acd5870",
+    "name": "Default Value",
+    "type": "string"
+   },
+   {
+    "id": "a31662ff-2e3b-3cf4-b381-e3f0157e0396",
+    "name": "Required",
+    "type": "boolean"
+   },
+   {
+    "id": "f993a75a-7920-e5b9-af3c-38fc2ad0d702",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "60100283-15ad-1ee4-6d92-9bcc9a78445c",
+    "name": "Submission Name",
+    "type": "string",
+    "group": "Settings"
+   },
+   {
+    "id": "7c930ef1-908c-f43a-1917-9f5f04635940",
+    "name": "Label Variant",
+    "type": "variant",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "f4898e4a-ac54-c8bb-94d2-4d0cfbb94746",
+  "name": "Form Select",
+  "group": "Form",
+  "instanceCount": 5,
+  "props": [
+   {
+    "id": "580f89f8-d7d9-297b-76d6-b2f3a9398ec0",
+    "name": "Label",
+    "type": "textContent"
+   },
+   {
+    "id": "19760056-e2b7-e34b-bfc8-aed3d045cf83",
+    "name": "Required",
+    "type": "boolean"
+   },
+   {
+    "id": "36e008d8-3c7a-a16c-754d-55dbf03ea419",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "b9828001-e520-8b3f-fb69-2b9f347c92aa",
+    "name": "Allow Multi Select",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "814dbc83-9f33-e81c-f818-124e97690661",
+    "name": "Submission Name",
+    "type": "string",
+    "group": "Settings"
+   },
+   {
+    "id": "e2cc703f-e6ac-f763-4dc2-7e49321f0bca",
+    "name": "Label Style",
+    "type": "variant",
+    "group": "Settings"
+   }
+  ],
+  "slots": [
+   "Slot"
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "68b8d65e-3c81-d6e1-09cb-3761bfce6da6",
+  "name": "Form Select Option",
+  "group": "Form",
+  "instanceCount": 29,
+  "props": [
+   {
+    "id": "2311c220-55b4-a91b-7b32-4dda52b26add",
+    "name": "Text",
+    "type": "textContent"
+   },
+   {
+    "id": "26e443cb-54b4-662a-6d9c-37203b93a1b9",
+    "name": "Value",
+    "type": "string"
+   },
+   {
+    "id": "5323f3f5-be69-e700-e84d-dbd124b10de9",
+    "name": "Selected by default",
+    "type": "boolean"
+   },
+   {
+    "id": "a2e5dc4e-0677-d11c-829d-b675e3b61013",
+    "name": "Visibility",
+    "type": "visibility",
+    "group": "Settings"
+   },
+   {
+    "id": "cf0eda83-38ea-d975-4702-53bdd356bbf5",
+    "name": "Hidden",
+    "type": "boolean",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "24cdd811-e229-c75c-a667-4d66445404ee",
+  "name": "Typography Tag",
+  "group": "Typography",
+  "instanceCount": 1,
+  "props": [
+   {
+    "id": "9432753d-2788-e263-1be6-29717324d813",
+    "name": "Text",
+    "type": "textContent"
+   },
+   {
+    "id": "0273a003-89b4-fd48-6f81-c3192895243d",
+    "name": "Visibility",
+    "type": "visibility",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "15027333-0d6a-85d7-af87-d03add4a968b",
+  "name": "Logo",
+  "group": "SVG",
+  "instanceCount": 16,
+  "props": [
+   {
+    "id": "b34a83d0-1f71-1e4d-081a-3c0399ba4617",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "0ff2ad81-5ea1-423a-8e87-ea34bde68c87",
+    "name": "Style",
+    "type": "string",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "ba476a33-ce72-737e-dc76-bf1182371201",
+  "name": "Visual Video",
+  "group": "Visual",
+  "instanceCount": 0,
+  "props": [
+   {
+    "id": "c45b9448-2901-afe1-0ec8-a792f6e5246d",
+    "name": "Url",
+    "type": "string"
+   },
+   {
+    "id": "cb04b5a4-b14f-2fbc-8493-1024e8b57998",
+    "name": "Variant",
+    "type": "variant"
+   },
+   {
+    "id": "45096b64-f59c-f34d-f54f-4c2728379a37",
+    "name": "Video Fit",
+    "type": "boolean"
+   },
+   {
+    "id": "a9ff7800-92ca-b6a1-3e4c-57613bbd81e4",
+    "name": "Corners",
+    "type": "boolean"
+   },
+   {
+    "id": "04d0c530-79ca-fe8a-7ee0-4458c7af3ae2",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "7c1235c2-1310-bd03-2bca-4d41501d3164",
+    "name": "Autoplay",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "d0206cc9-fc4e-53ac-136d-7da1ad8fdb16",
+    "name": "Loop",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "1b1ce351-38a5-0d67-fb11-270eec438e23",
+    "name": "Muted",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "56239ef6-ce12-a95e-5abf-3b3e29c25aae",
+    "name": "Style",
+    "type": "string",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Wide 2 / 1"
+   },
+   {
+    "id": "0b00a75a-35ba-66c2-fce0-21c117d62ce0",
+    "name": "Wide 16 / 9"
+   },
+   {
+    "id": "a9490bed-5b56-7b46-8413-993d16d77e88",
+    "name": "Wide 3 / 2"
+   },
+   {
+    "id": "8157ca33-45d5-df1a-bd25-894298c8e117",
+    "name": "Wide 5 / 4"
+   },
+   {
+    "id": "ec7f8a9f-99ac-b5a5-140b-730400a62670",
+    "name": "Square 1 / 1"
+   },
+   {
+    "id": "f3f45657-6a73-93f9-25db-a80af56ad72a",
+    "name": "Tall 4 / 5"
+   },
+   {
+    "id": "c3ccbb6c-6fa7-1113-0f2e-08b77dffca68",
+    "name": "Tall 2 / 3"
+   },
+   {
+    "id": "db26956a-7929-76af-05b0-02971cbab2f4",
+    "name": "Cover"
+   }
+  ]
+ },
+ {
+  "id": "219abfbb-a07c-d448-250c-6bdda9f81a14",
+  "name": "Media Overlay",
+  "group": "Visual",
+  "instanceCount": 3,
+  "props": [
+   {
+    "id": "f938dc12-5258-40e7-07d5-701551ddbb9e",
+    "name": "Variant",
+    "type": "variant"
+   },
+   {
+    "id": "00f06371-55ed-02ff-9922-cc11bdafdaa8",
+    "name": "Visibility",
+    "type": "visibility",
+    "group": "Settings"
+   },
+   {
+    "id": "93fd6e68-07f9-3f28-8aed-3ed32bd83b95",
+    "name": "Overlay Strength",
+    "type": "number",
+    "group": "Settings"
+   },
+   {
+    "id": "5e9b4d1c-cbaa-21c4-0722-865e2e4f36d4",
+    "name": "Classes",
+    "type": "string",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   },
+   {
+    "id": "9653c0cc-21fc-fb82-1373-c98b1644e5a8",
+    "name": "Gradient"
+   }
+  ]
+ },
+ {
+  "id": "f6291c55-7146-0e47-b2f4-77ff85d63d60",
+  "name": "Contact Form",
+  "group": "Form",
+  "instanceCount": 1,
+  "props": [
+   {
+    "id": "ccd3f838-07f6-c116-8703-1505980fe7a9",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "ddab0158-e1d2-8fe1-ee3c-0850fd28b732",
+    "name": "Classes",
+    "type": "string",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "baf5fd6d-12da-786a-f303-1676d3e63f09",
+  "name": "Slider",
+  "group": "Interactive",
+  "instanceCount": 2,
+  "props": [
+   {
+    "id": "9af63a7f-5438-6cac-b11b-9a5465fdccfd",
+    "name": "Variant",
+    "type": "variant"
+   },
+   {
+    "id": "80445a8d-8311-88ce-48d5-71b012bd1aea",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "f8cc216e-c84b-7fbf-2e30-6b8910de0796",
+    "name": "Classes",
+    "type": "string",
+    "group": "Settings"
+   },
+   {
+    "id": "df9bd427-a960-8c5b-e1ed-335acfba877f",
+    "name": "Scroll in Designer",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "694ed6ee-39f1-ac84-a6e3-bc19df6c8f26",
+    "name": "Controls",
+    "type": "visibility",
+    "group": "Settings"
+   },
+   {
+    "id": "a064bccc-cfc3-6c68-10ad-8db51a53be7d",
+    "name": "Follow Finger",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "6fd69ced-9d79-d311-d542-7ec3717f4f7d",
+    "name": "Free Mode",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "d4cb2d0c-bf08-6800-1230-9951c1ada087",
+    "name": "Mousewheel",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "4be66041-2bdd-884d-32b9-7ef8db896812",
+    "name": "Slide To Clicked Slide",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "20c759b2-8100-71da-0080-060940a04e60",
+    "name": "Speed",
+    "type": "number",
+    "group": "Settings"
+   },
+   {
+    "id": "f0ec339f-0173-33ce-1c48-e9a2ece49be4",
+    "name": "Large Screen",
+    "type": "number"
+   },
+   {
+    "id": "3940bcec-d58b-0707-8e7c-4041456fa8d5",
+    "name": "Medium Screen",
+    "type": "number"
+   },
+   {
+    "id": "20bc321d-7115-f3c7-8b1f-7bc075ddff2d",
+    "name": "Small Screen",
+    "type": "number"
+   },
+   {
+    "id": "7f583aec-68ef-3b84-dc2b-bf2eaa999809",
+    "name": "Extra Small Screen",
+    "type": "number"
+   }
+  ],
+  "slots": [
+   "Slot"
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Overflow Visible"
+   },
+   {
+    "id": "bfb8c45c-dbfa-13cc-2dfc-0c02a34504e4",
+    "name": "Overflow Hidden"
+   },
+   {
+    "id": "b8ee48da-439e-7156-5d2e-5b4f080e200e",
+    "name": "Crop Left"
+   }
+  ]
+ },
+ {
+  "id": "a861c456-45ea-fe24-ab52-c63303a056e4",
+  "name": "Global Styles",
+  "group": "Global",
+  "instanceCount": 7,
+  "props": [],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "7941d471-12eb-22ce-6420-784e5a3b04f8",
+  "name": "Card Primary",
+  "group": "Card",
+  "instanceCount": 33,
+  "props": [
+   {
+    "id": "b8c139c4-494c-1c28-d827-f525248870f8",
+    "name": "Heading",
+    "type": "textContent"
+   },
+   {
+    "id": "f424ce58-1432-4493-b296-c51cf6c8c7dc",
+    "name": "Paragraph",
+    "type": "richText"
+   },
+   {
+    "id": "d6ec5f4b-bc21-16ee-a743-2a2cd22a2a03",
+    "name": "Button Text",
+    "type": "textContent"
+   },
+   {
+    "id": "d28cd67e-0ce6-aed7-1ad3-14a0dba51742",
+    "name": "Screen Reader Text",
+    "type": "textContent"
+   },
+   {
+    "id": "bb5c3a86-443d-2095-8245-be4cf5e00804",
+    "name": "Link",
+    "type": "link"
+   },
+   {
+    "id": "cd6a4e4d-d941-f45c-4c16-55d03bbc56ab",
+    "name": "Image",
+    "type": "image"
+   },
+   {
+    "id": "3268fbae-5eb0-86b0-534a-c61ed07d8106",
+    "name": "Card Type",
+    "type": "variant"
+   },
+   {
+    "id": "e7862449-c03e-69d2-af91-c97200e56c38",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "2db94e97-9459-09a8-daf6-426cdd8f40fa",
+    "name": "Role",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "fa373c18-6bd1-301c-ab09-b6353299d47d",
+    "name": "Heading Tag",
+    "type": "headingTag",
+    "group": "Settings"
+   },
+   {
+    "id": "1b8b3666-cb54-f635-bae3-5985204eeab8",
+    "name": "Wrapper Classes",
+    "type": "string",
+    "group": "Settings"
+   },
+   {
+    "id": "7219df95-2957-5773-7b20-71db6256f364",
+    "name": "Wrapper Style",
+    "type": "string",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Default"
+   },
+   {
+    "id": "51efa20c-c7be-48fe-973a-11367f19d622",
+    "name": "Cover"
+   },
+   {
+    "id": "da648fa9-bbba-c8cb-e549-1d22cb8af97b",
+    "name": "Stacked"
+   }
+  ]
+ },
+ {
+  "id": "bb0688d1-65b6-14b6-81e5-21e2cd39bbd0",
+  "name": "Button Arrow",
+  "group": "Button",
+  "instanceCount": 13,
+  "props": [
+   {
+    "id": "bb0688d1-65b6-14b6-81e5-21e2cd39bbd9",
+    "name": "Variant",
+    "type": "variant"
+   },
+   {
+    "id": "6f1d1fca-ea56-0081-e679-5bd3fb54baf2",
+    "name": "Arrow Direction",
+    "type": "variant"
+   },
+   {
+    "id": "74fae974-c32d-5212-8652-f1082eff2330",
+    "name": "Text",
+    "type": "textContent"
+   },
+   {
+    "id": "7f9b9d9a-f1e9-5c66-9bb2-26df9a33cb17",
+    "name": "Link",
+    "type": "link"
+   },
+   {
+    "id": "4c3eb646-8455-4cc6-6d88-adeb71f7a1b0",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "ad0ebc7c-5c1f-13b7-ce62-8aea3b64ee0c",
+    "name": "Classes",
+    "type": "string",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Primary / Medium"
+   },
+   {
+    "id": "bb0688d1-65b6-14b6-81e5-21e2cd39bbda",
+    "name": "Secondary / Medium"
+   },
+   {
+    "id": "d7d7e32c-ac47-de0c-eb2d-07f19dfa19d2",
+    "name": "Primary / Large"
+   },
+   {
+    "id": "6c75cae2-0734-1bbf-191f-bfe0f8ed1797",
+    "name": "Secondary / Large"
+   }
+  ]
+ },
+ {
+  "id": "e58f0b22-9dc9-edee-5b39-1f735f22e366",
+  "name": "Accordion List",
+  "group": "Interactive",
+  "instanceCount": 1,
+  "props": [
+   {
+    "id": "0cada543-340c-4238-5197-d443d1c12060",
+    "name": "Preview Content",
+    "type": "boolean"
+   },
+   {
+    "id": "179b7836-cd91-d637-6b1e-235c243e3774",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "e79125f9-cd38-453c-38bd-817ca040bd18",
+    "name": "Classes",
+    "type": "string",
+    "group": "Settings"
+   },
+   {
+    "id": "4868b674-2f4a-22c1-d988-43d096b8fe78",
+    "name": "Style",
+    "type": "string",
+    "group": "Settings"
+   },
+   {
+    "id": "714120ad-6349-81b4-b28a-866a0e573819",
+    "name": "Close Previous",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "b284cdc4-bc82-c93e-0b0e-6e31305c2a19",
+    "name": "Close On Second Click",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "778d62c0-181a-c5d7-cf69-556a3ccf8484",
+    "name": "Open On Hover",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "b62ea76c-9df4-5724-d8d7-5479b998cba2",
+    "name": "Open By Default: Item #",
+    "type": "number",
+    "group": "Settings"
+   }
+  ],
+  "slots": [
+   "Slot"
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "7125454f-d020-9f09-d88b-18afae6035c6",
+  "name": "Accordion Item",
+  "group": "Interactive",
+  "instanceCount": 9,
+  "props": [
+   {
+    "id": "c1eb0ac0-16f2-e44d-5ce4-afed40a49aa3",
+    "name": "Heading",
+    "type": "textContent"
+   },
+   {
+    "id": "38070ead-f98f-7e58-624f-e8a4d1a76c35",
+    "name": "Paragraph",
+    "type": "richText"
+   },
+   {
+    "id": "8c4b6011-a133-1488-ba57-6896b98e7c48",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "364ccc26-c7f2-88db-34d2-727bb4a02006",
+    "name": "Classes",
+    "type": "string",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "43ba6c77-0f82-87dd-2627-66c30f96fd0b",
+  "name": "Nav",
+  "group": "Global",
+  "instanceCount": 5,
+  "props": [
+   {
+    "id": "4996e232-c6bc-b649-139d-7314c61ae5e7",
+    "name": "Position",
+    "type": "boolean"
+   },
+   {
+    "id": "cbaa0adb-0d21-1ef7-dd07-7920d0a51c23",
+    "name": "Breakpoint",
+    "type": "number"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Default"
+   }
+  ]
+ },
+ {
+  "id": "f898fa14-e9c4-646a-b332-c95900470afa",
+  "name": "Menu",
+  "group": "Miscellaneous",
+  "instanceCount": 10,
+  "props": [
+   {
+    "id": "ff0600e1-1d70-83b4-c673-07c1a69e7e69",
+    "name": "Variant",
+    "type": "variant"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Mobile"
+   },
+   {
+    "id": "23049969-09ac-2789-520b-3c6ae895bbc6",
+    "name": "Desktop"
+   }
+  ]
+ },
+ {
+  "id": "2f85113a-1fe0-0576-7e21-f2db3933ca88",
+  "name": "Nav Banner",
+  "group": "Miscellaneous",
+  "instanceCount": 5,
+  "props": [
+   {
+    "id": "c628c2a5-4df8-fb0c-9731-5ec8311da89e",
+    "name": "Visibility",
+    "type": "boolean"
+   },
+   {
+    "id": "62a6c03b-00f8-441b-d5d5-2f3633852b50",
+    "name": "Text",
+    "type": "textContent"
+   },
+   {
+    "id": "3bec8c2a-4578-8fcb-0989-11de1074c2fd",
+    "name": "Link",
+    "type": "link"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "77d4fd3a-1a20-3e92-dec1-0c3f0f4977a4",
+  "name": "Modal",
+  "group": "Interactive",
+  "instanceCount": 1,
+  "props": [
+   {
+    "id": "4f2f48e2-bd75-4865-bc87-b0442584b287",
+    "name": "Variant",
+    "type": "variant"
+   },
+   {
+    "id": "0633dcdf-a592-b415-680f-231ccdb9057f",
+    "name": "Show In Designer",
+    "type": "boolean"
+   },
+   {
+    "id": "3d555208-de16-7789-9522-8187c304c6ac",
+    "name": "Modal ID",
+    "type": "string"
+   },
+   {
+    "id": "1cb17819-f760-cc2a-1a1e-7536b5fe2a26",
+    "name": "Visibility",
+    "type": "visibility",
+    "group": "Settings"
+   },
+   {
+    "id": "67d179d4-ce97-2b94-b884-220c7f515bbd",
+    "name": "Classes",
+    "type": "string",
+    "group": "Settings"
+   }
+  ],
+  "slots": [
+   "Slot"
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Small"
+   },
+   {
+    "id": "ce8c84b8-072d-28eb-fa41-e255213771e0",
+    "name": "Side Panel"
+   },
+   {
+    "id": "abed2e46-044e-db8d-e420-f41a8503c278",
+    "name": "Full Screen"
+   }
+  ]
+ },
+ {
+  "id": "c144d67f-2c62-4dbf-0fd8-0b6056b717e6",
+  "name": "Button Close",
+  "group": "Button",
+  "instanceCount": 4,
+  "props": [
+   {
+    "id": "c144d67f-2c62-4dbf-0fd8-0b6056b717eb",
+    "name": "Variant",
+    "type": "variant"
+   },
+   {
+    "id": "74fae974-c32d-5212-8652-f1082eff2330",
+    "name": "Text",
+    "type": "textContent"
+   },
+   {
+    "id": "7f9b9d9a-f1e9-5c66-9bb2-26df9a33cb17",
+    "name": "Link",
+    "type": "link"
+   },
+   {
+    "id": "210b8336-94cf-3d3b-5977-29605343f914",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "ad0ebc7c-5c1f-13b7-ce62-8aea3b64ee0c",
+    "name": "Classes",
+    "type": "string",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Primary / Medium"
+   },
+   {
+    "id": "c144d67f-2c62-4dbf-0fd8-0b6056b717ec",
+    "name": "Secondary / Medium"
+   },
+   {
+    "id": "7198e0ca-f9f4-9662-3fe9-d7114404c9cb",
+    "name": "Primary / Large"
+   },
+   {
+    "id": "c6d40e5e-3298-1af4-067d-37896ebd2a45",
+    "name": "Secondary / Large"
+   }
+  ]
+ },
+ {
+  "id": "29394d2f-cd0c-8059-7e15-66f93814999f",
+  "name": "Footer",
+  "group": "Global",
+  "instanceCount": 5,
+  "props": [],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "149ad978-220d-f7e9-ef48-38aa3cb30722",
+  "name": "Tab",
+  "group": "Interactive",
+  "instanceCount": 2,
+  "props": [
+   {
+    "id": "11c846b3-38dc-1b67-f86a-ccfb96f84523",
+    "name": "Variant",
+    "type": "variant"
+   },
+   {
+    "id": "5de4d96a-4c27-0df6-f8fc-ff744a7a33ac",
+    "name": "Preview Content",
+    "type": "boolean"
+   },
+   {
+    "id": "63d32a32-b1f7-59d4-f367-7802c8d5eda1",
+    "name": "Component ID",
+    "type": "string",
+    "group": "Settings"
+   },
+   {
+    "id": "01601341-41ec-ac4a-f82c-69f960209b7a",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "5440f110-97f5-4aec-0701-0053fcb1d439",
+    "name": "Controls",
+    "type": "visibility",
+    "group": "Settings"
+   },
+   {
+    "id": "41c5a638-6881-4747-121f-2ff99e9b4517",
+    "name": "Transition Type",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "de7733f9-7322-df5e-bf9c-dac2c0e9ba9e",
+    "name": "Autoplay",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "e21a76f5-a8d1-c13c-0afd-c61566e8cb7a",
+    "name": "Loop Controls",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "7fd7e213-7726-badd-e26a-44e5b4ed2baf",
+    "name": "Pause On Hover",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "74c75a3e-ad3a-63ec-9c6f-42694fd5016e",
+    "name": "Classes",
+    "type": "string",
+    "group": "Settings"
+   }
+  ],
+  "slots": [
+   "Slot",
+   "Slot",
+   "Slot"
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   },
+   {
+    "id": "490ac534-1fb5-5322-5b2f-0dc20ea2f909",
+    "name": "Horizontal"
+   }
+  ]
+ },
+ {
+  "id": "fadb3dda-30e2-1019-1230-faffe6f79f30",
+  "name": "Tab Link",
+  "group": "Interactive",
+  "instanceCount": 9,
+  "props": [
+   {
+    "id": "48481d7a-05ec-85d9-d7de-daa3bc1d9fe0",
+    "name": "Text",
+    "type": "textContent"
+   },
+   {
+    "id": "1493a6b0-7e7d-f362-f1b2-cada071733a3",
+    "name": "Variant",
+    "type": "variant"
+   },
+   {
+    "id": "2c7948a2-5787-ee46-58ac-cee170f3a9e8",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "30e91f91-253c-ffd9-9108-98df295aaeff",
+    "name": "Item ID",
+    "type": "string",
+    "group": "Settings"
+   },
+   {
+    "id": "80ca96fd-1788-81a0-6a15-468b1e300e94",
+    "name": "Classes",
+    "type": "string",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Link"
+   },
+   {
+    "id": "8ffc88d1-7ba2-15f6-9b67-306f6d86c1bd",
+    "name": "Button"
+   }
+  ]
+ },
+ {
+  "id": "72bf430a-f112-9342-5a92-78c9db50135b",
+  "name": "Typography Plain",
+  "group": "Typography",
+  "instanceCount": 0,
+  "props": [
+   {
+    "id": "2099ba42-5340-fb8d-cff9-5e16277f414f",
+    "name": "Text",
+    "type": "textContent"
+   },
+   {
+    "id": "1aba392c-b3a2-33b1-9f70-9ded99367006",
+    "name": "Variant",
+    "type": "variant"
+   },
+   {
+    "id": "509927e2-e5dc-dad7-dc13-9390c8f0f11e",
+    "name": "Max Width",
+    "type": "number"
+   },
+   {
+    "id": "fcaa67be-00da-f168-0d76-e693645d50ff",
+    "name": "Margin Bottom",
+    "type": "number"
+   },
+   {
+    "id": "46c281d2-38fe-2646-9ef8-7cd1c43455dc",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "63f3f53a-d02c-ee59-a71e-bc1da725afd8",
+    "name": "Style",
+    "type": "string",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Inherit"
+   },
+   {
+    "id": "fe6f474d-1651-566b-eeff-3c86e8cbf153",
+    "name": "Text Small"
+   },
+   {
+    "id": "26cc9f23-e71c-deee-cd61-36dc24f35fae",
+    "name": "Text Main"
+   },
+   {
+    "id": "c8b8ac88-1ac7-e9f6-41cc-82c548bf142d",
+    "name": "Text Large"
+   },
+   {
+    "id": "47e40b0d-02af-2673-f429-546cac42dc5a",
+    "name": "H6"
+   },
+   {
+    "id": "12e93187-f8ac-b1a1-2e50-59d85a6bf516",
+    "name": "H5"
+   },
+   {
+    "id": "f196774e-dbfd-d1b4-1196-b3e824fc5f7d",
+    "name": "H4"
+   },
+   {
+    "id": "7bfbf33b-fb56-d8df-e2d2-8fe65a7f2e44",
+    "name": "H3"
+   },
+   {
+    "id": "9af60b09-c3a1-8c2a-eb78-8e29460ca7a9",
+    "name": "H2"
+   },
+   {
+    "id": "83c598b0-8cc2-f955-1996-fcb8fb10bf70",
+    "name": "H1"
+   },
+   {
+    "id": "8ee37a78-065b-6879-973d-319c65e28313",
+    "name": "Display"
+   }
+  ]
+ },
+ {
+  "id": "86c2893a-48c6-c1d1-7a1d-c1d9f1e2429e",
+  "name": "Form Input",
+  "group": "Form",
+  "instanceCount": 6,
+  "props": [
+   {
+    "id": "a21547a3-feb6-5299-c9d2-87040e07acda",
+    "name": "Input Type",
+    "type": "variant"
+   },
+   {
+    "id": "49de020c-2a2f-cd9e-f9be-ec9481770d82",
+    "name": "Custom Label",
+    "type": "textContent"
+   },
+   {
+    "id": "79284fcc-6fee-0980-a2f7-9515271681c9",
+    "name": "Custom Placeholder",
+    "type": "string"
+   },
+   {
+    "id": "f17950b0-437b-0147-5b8e-5bb08470e519",
+    "name": "Default Value",
+    "type": "string"
+   },
+   {
+    "id": "9bcda5d7-9519-8227-4d48-af652a53c0ed",
+    "name": "Required",
+    "type": "boolean"
+   },
+   {
+    "id": "1cdefd31-61e0-38d0-eceb-4c43f8c7e2de",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "b68d9a88-9f69-3464-634d-83eef89bb7aa",
+    "name": "Submission Name",
+    "type": "string",
+    "group": "Settings"
+   },
+   {
+    "id": "2d65d43e-7557-d0d1-cbb6-95a2cc654cb0",
+    "name": "Label Variant",
+    "type": "variant",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "b4da0210-a11e-8169-6bd3-3724db9bdc24",
+  "name": "Form Label Text",
+  "group": "Form",
+  "instanceCount": 19,
+  "props": [
+   {
+    "id": "b4da0210-a11e-8169-6bd3-3724db9bdc28",
+    "name": "Text",
+    "type": "textContent"
+   },
+   {
+    "id": "558e34e3-97f9-fcda-de85-cbb2f3a7ba4a",
+    "name": "Variant",
+    "type": "variant"
+   },
+   {
+    "id": "9ff40dcb-36de-5dda-76e0-4d8fdedcd1e0",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "a1c36848-fb8f-62e5-16e5-f6a904103179",
+    "name": "Required",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "dd621481-c0c2-e24c-5286-c10187c8be10",
+    "name": "Classes",
+    "type": "string",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Visible"
+   },
+   {
+    "id": "46933b79-cf19-81b4-bc00-8af5c19b08b3",
+    "name": "Hidden"
+   },
+   {
+    "id": "e8e97384-daa0-7ce7-bc12-14efcd69bcd4",
+    "name": "Bold"
+   }
+  ]
+ },
+ {
+  "id": "3763bb36-8635-2157-d0a6-9adad3740030",
+  "name": "Footer Group",
+  "group": "Miscellaneous",
+  "instanceCount": 20,
+  "props": [
+   {
+    "id": "371b40c8-1a98-e4f0-f2f3-7185d7f64931",
+    "name": "Title",
+    "type": "textContent"
+   },
+   {
+    "id": "745290ad-c0fa-9ddb-9e65-81fc6633e28d",
+    "name": "Visibility",
+    "type": "visibility",
+    "group": "Settings"
+   }
+  ],
+  "slots": [
+   "Slot"
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "f5219fe8-69c7-b978-3e87-e9a133727619",
+  "name": "Footer Link",
+  "group": "Miscellaneous",
+  "instanceCount": 80,
+  "props": [
+   {
+    "id": "4b60c499-7b03-f6fe-4a97-098761f9606a",
+    "name": "Text",
+    "type": "textContent"
+   },
+   {
+    "id": "d95ebae6-70ca-4262-a91c-d7f29abd3e6d",
+    "name": "Link",
+    "type": "link"
+   },
+   {
+    "id": "3adba56e-2c8a-dc07-3e3b-bb19d9cfe7e8",
+    "name": "Visibility",
+    "type": "visibility",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "fe24f7c4-38b4-ee27-5ffe-b0e6616f827e",
+  "name": "Visual Image",
+  "group": "Visual",
+  "instanceCount": 21,
+  "props": [
+   {
+    "id": "71ba5ca3-44b2-2c6c-e206-c8e78a8633fc",
+    "name": "Image",
+    "type": "image"
+   },
+   {
+    "id": "5607babe-7080-b9e6-7465-5a2ac0285033",
+    "name": "Variant",
+    "type": "variant"
+   },
+   {
+    "id": "0d39efb2-db97-12b5-6f7f-e30a894f82c4",
+    "name": "Image Fit",
+    "type": "boolean"
+   },
+   {
+    "id": "bffa1f78-9810-59bd-75f8-e8f7d470407b",
+    "name": "Corners",
+    "type": "boolean"
+   },
+   {
+    "id": "551150df-dc69-e908-948e-a34fd4852518",
+    "name": "Loading",
+    "type": "boolean"
+   },
+   {
+    "id": "00fdd282-d794-d172-8dd5-a43777c6687f",
+    "name": "Fetch Priority",
+    "type": "boolean"
+   },
+   {
+    "id": "62243a73-c0a2-3c66-4a9b-72350b312783",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "34a719d1-97f2-a2af-5330-7c5d7819f811",
+    "name": "Alt Text",
+    "type": "altText",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Wide 2 / 1"
+   },
+   {
+    "id": "27d05669-180c-3169-9b64-0eda31f8d4d3",
+    "name": "Wide 16 / 9"
+   },
+   {
+    "id": "57c7d8f5-d942-5de8-0712-e12fff699502",
+    "name": "Wide 3 / 2"
+   },
+   {
+    "id": "8e41429f-9f9e-7697-357e-815bd3e59383",
+    "name": "Wide 5 / 4"
+   },
+   {
+    "id": "a5f35569-5171-ee3d-f7bb-c5b2372249ac",
+    "name": "Square 1 / 1"
+   },
+   {
+    "id": "35ea7d22-774e-1ba9-1dcc-8a392636f83d",
+    "name": "Tall 4 / 5"
+   },
+   {
+    "id": "a93327ec-aace-62d3-860b-21ee12acd25a",
+    "name": "Tall 2 / 3"
+   },
+   {
+    "id": "4972adff-107c-1f37-d19c-526a2bf55c28",
+    "name": "Cover"
+   }
+  ]
+ },
+ {
+  "id": "83e1c15c-c790-5f9b-37bf-063230b20546",
+  "name": "iFrame",
+  "group": "Visual",
+  "instanceCount": 0,
+  "props": [
+   {
+    "id": "e8ac569d-5ae2-8634-5c13-388d4289527f",
+    "name": "Visibility",
+    "type": "visibility"
+   },
+   {
+    "id": "527bd78d-3b94-8d7f-3acc-a1cb41422d6a",
+    "name": "Classes",
+    "type": "string"
+   },
+   {
+    "id": "b8bfc377-c668-18d8-4bc0-ec385b8228bf",
+    "name": "Style",
+    "type": "string"
+   },
+   {
+    "id": "3a70ca77-ee71-c110-960d-e5a332f23876",
+    "name": "URL",
+    "type": "string"
+   },
+   {
+    "id": "5a3086d7-06f9-7f5f-6fbd-2dc1890c9e25",
+    "name": "Title",
+    "type": "string"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "4609fdda-3f8a-fc38-e928-f7583be7ab2c",
+  "name": "Form Range",
+  "group": "Form",
+  "instanceCount": 1,
+  "props": [
+   {
+    "id": "49de020c-2a2f-cd9e-f9be-ec9481770d82",
+    "name": "Label",
+    "type": "textContent"
+   },
+   {
+    "id": "31f98933-c2ac-09be-5abc-f1edd73ceb83",
+    "name": "ID",
+    "type": "string"
+   },
+   {
+    "id": "9c285639-5ce3-b938-29c0-ea6d1d12ed9d",
+    "name": "Value",
+    "type": "number"
+   },
+   {
+    "id": "2c43952d-1b69-568d-110d-db579f2f0914",
+    "name": "Min",
+    "type": "number"
+   },
+   {
+    "id": "d0c901ad-79b1-c414-7212-f05600959650",
+    "name": "Max",
+    "type": "number"
+   },
+   {
+    "id": "1082c6ef-691c-40c1-7004-1267fdf67be7",
+    "name": "Step",
+    "type": "number"
+   },
+   {
+    "id": "ea263261-8190-cbdf-bbf3-141e21298cf4",
+    "name": "Output Unit",
+    "type": "textContent"
+   },
+   {
+    "id": "9a314cf7-2999-22b3-2dd9-8f6a40d43e69",
+    "name": "Required",
+    "type": "boolean"
+   },
+   {
+    "id": "2c5967f3-ffc5-9cd2-50f6-06ed9982c2a2",
+    "name": "Visibility",
+    "type": "visibility",
+    "group": "Settings"
+   },
+   {
+    "id": "b68d9a88-9f69-3464-634d-83eef89bb7aa",
+    "name": "Submission Name",
+    "type": "string",
+    "group": "Settings"
+   },
+   {
+    "id": "2d65d43e-7557-d0d1-cbb6-95a2cc654cb0",
+    "name": "Label Variant",
+    "type": "variant",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "0e88fa35-88e2-6fb5-8e46-3b73deb96f75",
+  "name": "Form Checkbox",
+  "group": "Form",
+  "instanceCount": 2,
+  "props": [
+   {
+    "id": "c3778b1c-e9f9-7ed9-b7c9-f987a278ddb0",
+    "name": "Label",
+    "type": "textContent"
+   },
+   {
+    "id": "68bcf611-509b-69ec-8827-cfff1760d7dd",
+    "name": "Required",
+    "type": "boolean"
+   },
+   {
+    "id": "3373a407-62dc-9117-dfea-865ef039955e",
+    "name": "Checked",
+    "type": "boolean"
+   },
+   {
+    "id": "51c4c59b-1108-cb29-21c7-430147ed6656",
+    "name": "Style",
+    "type": "variant"
+   },
+   {
+    "id": "6e8e98e7-4fd0-b438-3df7-a5b91cd0f3ae",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "6a12eb62-378e-8eef-8289-b753ad910573",
+    "name": "Role",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "207e711d-e904-8e4c-bb4c-1b2c0cce9aab",
+    "name": "Submission Name",
+    "type": "string",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "7079fed5-17cb-c5c6-24bf-0555d09731f4",
+  "name": "Layout",
+  "group": "Wrapper",
+  "instanceCount": 30,
+  "props": [
+   {
+    "id": "d79d1d2a-f1f8-6796-b262-f9bcbc51e82b",
+    "name": "Variant",
+    "type": "variant"
+   },
+   {
+    "id": "c25026d3-11d0-8d63-bb66-eeb99741a5f2",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "44a2215d-9eaf-991c-3c4a-96b94a669ff0",
+    "name": "Classes",
+    "type": "string",
+    "group": "Settings"
+   },
+   {
+    "id": "987708fe-21e0-32a0-d1c7-da81cb6b4d3c",
+    "name": "Column 1 Classes",
+    "type": "string",
+    "group": "Settings"
+   },
+   {
+    "id": "ffd04fd9-98dd-0162-8f2b-0aa5e248a149",
+    "name": "Column 2 Classes",
+    "type": "string",
+    "group": "Settings"
+   }
+  ],
+  "slots": [
+   "Slot",
+   "Slot 2"
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Stack"
+   },
+   {
+    "id": "d69d5003-e9bc-b347-4e02-eb46976beb1c",
+    "name": "Stack Centered"
+   },
+   {
+    "id": "1b1d171f-31c6-739b-bff9-2d7efa9674c4",
+    "name": "Auto Width"
+   },
+   {
+    "id": "558793eb-2b07-490b-9842-2d7e6f6bf325",
+    "name": "Columns"
+   },
+   {
+    "id": "1261a7e4-2c05-3b0b-2126-d399890906b8",
+    "name": "Columns Reversed"
+   },
+   {
+    "id": "81232c92-6578-ef9a-1e3e-35e3204ae0fd",
+    "name": "Sticky Left"
+   },
+   {
+    "id": "4fee4cc0-701f-2817-944f-2c0261b9c2f3",
+    "name": "Breakout"
+   },
+   {
+    "id": "6bb5e515-55a9-1fc8-d29b-ff898d8b40f7",
+    "name": "Breakout Reversed"
+   },
+   {
+    "id": "58b19052-6f23-ab5e-5e89-54288af57e85",
+    "name": "Full"
+   },
+   {
+    "id": "560ed4d9-9e8c-5c39-4619-fc154cdf9f19",
+    "name": "Full Reversed"
+   },
+   {
+    "id": "31f8ed75-2c88-945a-a737-1b9b50b4494b",
+    "name": "Contain"
+   },
+   {
+    "id": "329f6899-ba0f-e4db-0449-3c5b8ba4f388",
+    "name": "Contain Reversed"
+   },
+   {
+    "id": "ebfcdcb1-ac53-1b15-fcb9-eaeda25808f5",
+    "name": "Card"
+   }
+  ]
+ },
+ {
+  "id": "36c4e59e-9d5d-4bbe-5a26-79bcfc357e50",
+  "name": "Dropdown",
+  "group": "Interactive",
+  "instanceCount": 1,
+  "props": [
+   {
+    "id": "f0427a72-8901-aaee-d140-de88a433a734",
+    "name": "Text",
+    "type": "textContent"
+   },
+   {
+    "id": "d13f01de-2d1f-b338-8391-0dc9fd5c22a4",
+    "name": "Preview Content",
+    "type": "boolean"
+   },
+   {
+    "id": "2a74e500-9c46-1d35-4e75-3b7e05d28152",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "6eaaabdb-6916-4189-916c-5008680bc997",
+    "name": "Open On Hover In",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "c8deb444-ea4d-dad6-8f14-8d79311a7236",
+    "name": "Close On Hover Out",
+    "type": "boolean",
+    "group": "Settings"
+   }
+  ],
+  "slots": [
+   "Slot"
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base"
+   }
+  ]
+ },
+ {
+  "id": "072fc246-ed4e-d5ba-7897-928ffb0b0425",
+  "name": "Icon",
+  "group": "SVG",
+  "instanceCount": 98,
+  "props": [
+   {
+    "id": "e11efadc-04d9-4d20-6ee4-ff7a0ea13b51",
+    "name": "Variant",
+    "type": "variant"
+   },
+   {
+    "id": "c7234fb9-4eaf-5be1-8da4-4e1686094ad2",
+    "name": "Visibility",
+    "type": "boolean",
+    "group": "Settings"
+   },
+   {
+    "id": "c0195af9-e27a-bccb-4239-d737dcc53651",
+    "name": "Aria Hidden",
+    "type": "boolean",
+    "group": "Settings"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Full"
+   },
+   {
+    "id": "8f27d1c8-d95a-e3b2-66d1-3a165d05aede",
+    "name": "Small"
+   },
+   {
+    "id": "6c22932d-bc07-1741-25e0-ad3c03857826",
+    "name": "Medium"
+   },
+   {
+    "id": "004e1ee3-faf9-8df4-6b9d-7a8d0aa017b1",
+    "name": "Large"
+   }
+  ]
+ },
+ {
+  "id": "a2a6cccc-29c9-eb5c-4ff8-169481d9c3df",
+  "name": "Input Switcher",
+  "group": "Variant Switcher",
+  "instanceCount": 6,
+  "props": [
+   {
+    "id": "90a045e8-8746-caea-d646-c3e017558360",
+    "name": "Variant",
+    "type": "variant"
+   }
+  ],
+  "slots": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Text"
+   },
+   {
+    "id": "7c461d67-dbf8-c963-3c7e-d2db06efff2f",
+    "name": "First Name"
+   },
+   {
+    "id": "6d5d8bd7-586a-6eda-36ee-9d52b9db04fe",
+    "name": "Last Name"
+   },
+   {
+    "id": "9134e49e-b0e8-0e15-1ba4-46fb620b197f",
+    "name": "Email"
+   },
+   {
+    "id": "bde4c4a1-7391-1c5f-9617-e18d455b3f8d",
+    "name": "Phone"
+   },
+   {
+    "id": "ae431964-f408-c707-73d0-bc6dee9bdb97",
+    "name": "Date"
+   },
+   {
+    "id": "d18cbeac-da6f-52dd-7078-3e0786467d06",
+    "name": "Zip Code"
+   },
+   {
+    "id": "f54cfbe6-450b-27cc-d9ec-7d0be064813a",
+    "name": "Number"
+   },
+   {
+    "id": "36615535-ca2e-c18a-02dd-114d20f1d2d2",
+    "name": "Search"
+   },
+   {
+    "id": "1cacaa8c-b0b3-e130-5130-14b303bc207b",
+    "name": "Password"
+   },
+   {
+    "id": "a5b3e188-6ef1-4ba5-621f-ca2971c71171",
+    "name": "URL"
+   }
+  ]
+ }
+]

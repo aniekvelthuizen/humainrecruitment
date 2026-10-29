@@ -1,0 +1,51 @@
+[
+  {
+    "id": "6ae35365a38b2d71cab8c699",
+    "name": "Home",
+    "slug": "",
+    "parentFolder": null,
+    "isDraft": false
+  },
+  {
+    "id": "6ae35365a38b2d71cab8c69a",
+    "name": "Styleguide",
+    "slug": "styleguide",
+    "parentFolder": null,
+    "isDraft": true
+  },
+  {
+    "id": "6ae35365a38b2d71cab8c69b",
+    "name": "Password",
+    "slug": "401",
+    "parentFolder": null,
+    "isDraft": false
+  },
+  {
+    "id": "6ae35365a38b2d71cab8c69c",
+    "name": "404",
+    "slug": "404",
+    "parentFolder": null,
+    "isDraft": false
+  },
+  {
+    "id": "6ae35365a38b2d71cab8c69d",
+    "name": "Example Components",
+    "slug": "example-components",
+    "parentFolder": null,
+    "isDraft": true
+  },
+  {
+    "id": "6ae35365a38b2d71cab8c69e",
+    "name": "Standard Page",
+    "slug": "static-template-slug-1755266313647",
+    "parentFolder": null,
+    "isDraft": true
+  },
+  {
+    "id": "6ae35365a38b2d71cab8c69f",
+    "name": "Search Results",
+    "slug": "search",
+    "parentFolder": null,
+    "isDraft": false
+  }
+]

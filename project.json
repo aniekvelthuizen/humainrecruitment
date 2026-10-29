@@ -3,10 +3,10 @@
   "production": false,
   "branching": false,
   "site": {
-    "id": "",
-    "name": "",
+    "id": "6ae35364a38b2d71cab8c607",
+    "name": "Humain",
     "domains": [],
-    "stagingDomain": null
+    "stagingDomain": "humain-d16f03.webflow.io"
   },
   "figma": {
     "source": "mcp",
@@ -17,9 +17,9 @@
   "css": {
     "system": "lumos",
     "prefix": "",
-    "notes": "Fresh Lumos starter; confirm after the first site dump."
+    "notes": "Lumos starter confirmed by the 2026-10-29 dump (u- utilities, Lumos collections). New classes use no prefix."
   },
-  "dumpedAt": "",
+  "dumpedAt": "2026-10-29T15:00:00Z",
   "references": {
     "pages": "references/pages.json",
     "classes": "references/classes.txt",
