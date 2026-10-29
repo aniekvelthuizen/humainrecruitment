@@ -29,7 +29,7 @@ Choice: the semantic level stays (an H1 stays an H1); its mobile size is the siz
 - H4, H5, H6 unchanged (same style on mobile)
 Display, H1, H2 and H3 scale fluidly between 402 and 1512 px (`references/fluid-values.md`).
 Why: owner rule — read the designer's mobile choice per title, keep the level.
-Exception: "Trusted by the people who hire." is H1 on desktop and H4 (30) on mobile; H1 follows the majority (36). If that section must be 30 on mobile, it gets an override on its own class.
+No exceptions: every heading of a level gets that level's mobile size, even where a mobile frame drew it differently ("Trusted by the people who hire." is H4 30 on the mobile frame, gets H1 36). Owner: the mobile headings stay in one system; deviating from the design is fine there.
 
 ## 2026-10-29 — Only Onest and Vend Sans
 Conflict: IBM Plex Mono appears in the Figma file.
