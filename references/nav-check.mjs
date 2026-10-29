@@ -63,8 +63,16 @@ for (const w of [1512, 1280, 1279, 991, 402]) {
   rows.quickDownUp = (await ev(`window.scrollTo({top:900,behavior:'instant'})`), await sleep(60), await scrollTo(0));
   if (w >= 1280) {
     const opened = [];
-    for (let i = 0; i < 4; i++) { const [x, y] = await center('.nav_desktop_wrap .w-dropdown-toggle', i); await mouse(x, y); await sleep(700); opened.push(await ev(openState('.nav_desktop_wrap'))); }
+    const gaps = [];
+    for (let i = 0; i < 4; i++) {
+      const [x, y] = await center('.nav_desktop_wrap .w-dropdown-toggle', i); await mouse(x, y); await sleep(700); opened.push(await ev(openState('.nav_desktop_wrap')));
+      const g = await ev(`(() => { const d = document.querySelectorAll('.nav_desktop_wrap .w-dropdown')[${i}]; const t = d.querySelector('.w-dropdown-toggle').getBoundingClientRect(); const c = d.querySelector('.nav_dropdown_main_scroll').getBoundingClientRect(); const b = document.querySelector('.nav_desktop_wrap .button_main_wrap').getBoundingClientRect(); return { toggleToCard: +(c.top - t.bottom).toFixed(1), buttonToCard: +(c.top - b.bottom).toFixed(1), cardMid: [c.x + 30, c.y + 30] }; })()`);
+      for (let s = 1; s <= 5; s++) await mouse(x + (g.cardMid[0] - x) * s / 5, y + (g.cardMid[1] - y) * s / 5);
+      await sleep(600);
+      gaps.push({ toggleToCard: g.toggleToCard, buttonToCard: g.buttonToCard, staysOpenOnMoveIn: await ev(openState('.nav_desktop_wrap')) });
+    }
     rows.hoverOpens = opened;
+    rows.cardGaps = gaps;
     const [x0, y0] = await center('.nav_desktop_wrap .w-dropdown-toggle', 1); await mouse(x0, y0); await sleep(700);
     const linkExpr = `document.querySelectorAll('.nav_desktop_wrap .w-dropdown')[1].querySelectorAll('.nav_dropdown_link')[2]`;
     const [lx, ly] = await ev(`(() => { const b = ${linkExpr}.getBoundingClientRect(); return [b.x + 20, b.y + b.height / 2]; })()`);
@@ -74,6 +82,7 @@ for (const w of [1512, 1280, 1279, 991, 402]) {
     await mouse(5, 600); await sleep(900);
     await ev(`window.scrollTo({top:800,behavior:'instant'})`); await sleep(700);
     const [sx, sy] = await center('.nav_desktop_wrap .w-dropdown-toggle', 1); await mouse(sx, sy); await sleep(800);
+    rows.scrolledCard = await ev(`(() => { const d = document.querySelectorAll('.nav_desktop_wrap .w-dropdown')[1]; const c = d.querySelector('.nav_dropdown_main_scroll').getBoundingClientRect(); const bar = document.querySelector('.nav_desktop_wrap').getBoundingClientRect(); const b = document.querySelector('.nav_desktop_wrap .button_main_wrap').getBoundingClientRect(); return { barToCard: +(c.top - bar.bottom).toFixed(1), buttonToCard: +(c.top - b.bottom).toFixed(1), open: d.querySelector('.w-dropdown-list').classList.contains('w--open') }; })()`);
     await shot(`desktop-${w}-scrolled-dropdown.png`);
     await mouse(5, 600); await ev(`window.scrollTo({top:0,behavior:'instant'})`); await sleep(700);
   } else {

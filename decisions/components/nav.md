@@ -72,6 +72,11 @@ Why: the only way to have hover in the bar and tap in the panel from one compone
 - **Mobile row content:** `nav_dropdown_main_scroll` base padding-top 0 (space above the first item ≈ space below the last: 25 / 28 px).
 - **Hamburger:** lines 2 px (`nav/hamburger-thickness` → border-width/thick), gap 0.75rem, still 32 × 16.
 
+## 2026-10-29 — Dropdown card distance (owner review round 2)
+Conflict: the For candidates card almost touched the CTA button above it (2 px); moving all cards 8 px lower fixed that at the top of the page, but in the compact sticky bar the card then lay over the bar's bottom edge (the bar has only 0.625rem padding there).
+Choice: the card hangs a fixed distance below the nearest thing above it. Top of page: `nav_dropdown_main_scroll` (Desktop) margin-top 1.125rem = 10 px below the button. Sticky bar: margin-top 1.875rem in the state CSS = 8 px below the bar's bottom edge. The gap is margin inside the dropdown list, so moving the mouse from the toggle into the card keeps it open (measured).
+Why: one value cannot fit both bar heights; tying the card to the bar edge when sticky keeps the same breathing room in both states.
+
 ## 2026-10-29 — Variables
 `nav/spacing-outer-vertical` → space/0 (bar flush with the top), `nav/spacing-inner-horizontal` → site/margin (Figma 64 / 20 px), `nav/radius` → radius/none, `nav/background` → swatch/light-100 in every Theme mode, `nav/hamburger-gap` → 0.875rem (lines 16 px apart, Figma 32 × 16). `nav/height` stays 5rem (Figma main row 80).
 
