@@ -1,6 +1,6 @@
 # HumAIn Recruitment — Webflow
 
-Client repo for the webflow-devkit plugin (Cut the Code). Read `project.json` first: it says which site, whether it is production, and where every reference lives. `wireframes/` and `docs/` hold the earlier wireframes and the project brief.
+Client repo for the webflow-devkit plugin (Cut the Code). The kit itself is in `tools/ctc-webflow-devkit/` (read its skills from there; `${CLAUDE_PLUGIN_ROOT}` = that folder). Read `project.json` first: it says which site, whether it is production, and where every reference lives. `wireframes/` and `docs/` hold the earlier wireframes and the project brief.
 
 - Site: Humain (`6ae35364a38b2d71cab8c607`), staging humain-d16f03.webflow.io, not live (`production: false`)
 - Figma: https://www.figma.com/design/18m34a7vzkzopkwGoojmUx/Humain--Lumos-

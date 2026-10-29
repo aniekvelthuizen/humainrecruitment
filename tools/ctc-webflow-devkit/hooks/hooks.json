@@ -1,0 +1,19 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          { "type": "command", "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/session-start.sh\"" }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "mcp__(plugin_[a-z-]+_|claude_ai_)?[Ww]ebflow__data_(style_tool|element_tool|element_builder|element_settings_tool|component_tool|component_props_tool|component_variants_tool|variable_tool|scripts_tool)",
+        "hooks": [
+          { "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/guard.py\"" }
+        ]
+      }
+    ]
+  }
+}
