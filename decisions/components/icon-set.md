@@ -71,3 +71,10 @@ Done by Aniek (via Claude). Exported in Claude in Chrome with the Plugin API (`e
 | CV Submission (`cb979357-6cc2-4787-3ad8-17bf28e09d70`) | `Google icons / type=cv-submission` in `Card / Opportunity` variant3 | `6ae48f50343c721614605852_icon-cv-submission.svg` |
 
 Stage cards on the real pages use 21 further Google icons (manage-accounts, handshake, published-with-changes, analytics, gpp-maybe, schema, planning-scheduling, computer, table, monitoring, action-key, fact-check, insert-chart, cv-submission, dashboard-2, call-log, cost-control-forecasting, playlist-add-check-circle, avg-time, …); add them when those pages are built.
+
+## 2026-10-30 — Chevron Down (nav)
+Done by Aniek (via Claude). Variant **Chevron Down** (`cd0e8853-3f95-2575-c389-741dfa3109ef`): the Figma `chevron_right / Style=Filled` path rotated 90° (same glyph as Material `expand_more`), not a new export — the Figma MCP View seat had reached its limit. Used in the four nav dropdown toggles instead of Lumos Icon Arrow (thinner than the design).
+
+| Variant | Figma source | Asset |
+|---|---|---|
+| Chevron Down | `chevron_right / Style=Filled` (`2028:1998`), rotated 90° | `6ae4cb40b5e689b963686b7f_icon-chevron-down.svg` |
