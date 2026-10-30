@@ -292,11 +292,25 @@ Done by Aniek (via Claude), after the four-reviewer pass (`references/audit/2026
 
 Measured on staging after the fixes: Pricing label 20 px clear of the card above at 402; 0 requests to the broken logo URL (3 Google logos on the Expert cards); 11 clickable cards = the 11 with a link; no "View & apply" on the nine button-less variants; Person radius 8 px, Case surface `#030b1b`; heights unchanged (Opportunity 385, Service 230, Discipline 198, Glass 230, Step 202, Opportunity Text 388, Expert 275, Stage 420, Stat 170, Expert Match 145, Glass expert 322 × 128, Pricing 389, Logo 178 × 100, Profiles 459); Glass expert focus/after click: white, title `#030b1b`, logo `invert(0)`; Expert "85" 24 px + "%" 16 px, both `#00806b`; testimonial arrow bottom = company bottom (427).
 
+## 2026-10-30 — No link, no arrow (owner)
+Owner (Aniek): a card without a link must not show the arrow either — it looks clickable while it is not.
+Choice (Aniek, via Claude, in the Designer): one rule for "clickable" everywhere, as native visibility conditions: **`Screen Reader Text is set AND Link is set`**. Lumos' own Clickable only checked Screen Reader Text; the arrow first checked only Link — so they could disagree. Now they cannot.
+- Card Primary: Clickable, `card_primary_corner` (notch + arrow), and the Button Main in `card_primary_button` ("View & apply", also `Button Text is set`). `card_primary_button` is `display: contents`, so nothing is left behind. `card_primary_action` (Expert/Pricing CTA) untouched.
+- Card Testimonial: Clickable (was always on, even with link `#`) and `card_testimonial_arrow`.
+Checked on staging (Example Components): 15 Opportunity cards without link render no corner and no button; every linked card still does; Opportunity height unchanged (385). The API does not show conditions on a plain div (`visibility: true` in the read-back) — check the published HTML instead.
+
+## 2026-10-30 — "Is set" conditions, Experience Icon, image defaults
+Done by Aniek (via Claude, Designer in Chrome).
+- **Is set:** Card Primary Subtitle / Logo / Badge = toggle `is true AND … is set`; List Title, Value Label = `… is set`. Card Testimonial quote (`card_testimonial_text`), avatar, name (on its Typography instance, so the role inside the name wrapper stays), role, company = `… is set`.
+- **Experience Icon:** Card Opportunity Meta row 2 Icon Set → new variant prop **Experience Icon** (Meta, default School), forwarded as Card Primary **Meta › Experience Icon** (`de8b16e6-d1a2-dcf0-1d12-c90099a55035`). Opportunity Text showcase = CV Submission, as in Figma.
+- **Image defaults:** Webflow image props cannot be empty, and Lumos' placeholder returns 403 on staging. New neutral placeholders in the site's assets: `placeholder-logo.svg` (`6ae4bc6bd93dc05bdfe57242`, 160 × 48) as Logo default, `placeholder-image.svg` (`6ae4bc6b1f1aec66ee2fc7a0`, 400 × 400) as Image default. With Logo Visibility on and no logo picked the card now shows a grey placeholder instead of a broken image.
+Checked on staging: all 44 showcase cards render the same parts as before; Opportunity Text row 2 = `cv-submission`; placeholders 200. Not tested: a card with an empty text (the showcase has none).
+
 ## Open — still not done
 
-- **Opportunity Text second-row icon:** Figma shows `cv-submission` (Icon Set variant **CV Submission** exists); the rows of Card Opportunity Meta have fixed icons, so it still shows School. Needs a Designer variant prop on the Meta row-2 Icon Set, forwarded from Card Primary — queued in `references/designer-queue.md`.
+- ~~**Opportunity Text second-row icon**~~ — done 2026-10-30 (Experience Icon prop), see above.
 - **Stage icons:** real pages use 21 different Google icons on the stage cards (manage-accounts, analytics, schema, …); only those already in the Icon Set are available. Add per page when the pages are built (recipe in `icon-set.md`).
-- **"is set" conditions and Title H3 level** for the new parts (Subtitle, List Title, Value Label, Badge, Logo) — Designer steps, same as the older open item below.
+- ~~**"is set" conditions** for the new parts~~ — done 2026-10-30 in the Designer (Subtitle, Logo, List Title, Value Label, Badge; toggles combined with `AND … is set`), see designer-queue Done. Card Testimonial texts done the same day. Still open: older texts (Title, Tags, Meta), Title H3 level.
 
 - ~~**Icon per card**~~ — done 2026-10-30 in the Designer (Claude in Chrome): Icon Set Variant → new Card Primary prop **Icon** (Visual, default Timer); Icon Visibility moved after it via a temporary folder. Checked on staging: the Permanent showcase card renders `icon-person-shield.svg`.
 - ~~**Glass and Step types**~~ — done 2026-10-30, see "Glass and Step" above.
