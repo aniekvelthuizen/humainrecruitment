@@ -58,3 +58,24 @@
 - Measured on staging at 1512 (cards at 440) and 402: Service 440 × 230 (Figma 226), icon/arrow positions equal to Figma, hover veil + arrow checked; Discipline title y 32 (= Figma); Opportunity unchanged (440 × 385, meta 205/237/269, arrow 392/337; mobile 362 × 261). No horizontal scroll at 402.
 - Designer (Claude in Chrome): Icon Set Variant linked to a new Card Primary prop Icon (Visual, default Timer); read back via API; staging card shows Person Shield. Published to staging 3×.
 - Open: glass and step card types.
+
+## 2026-10-30 — Glass and Step cards — Aniek Velthuizen with Claude
+- Card Primary variants **Glass** and **Step** (decisions/components/cards.md "Glass and Step"); Theme `card/glass`, `card/shadow-1…4`; new parts `card_primary_top` / `_badge` / `_value` / `_number`; props Badge Text, Value (folder Step).
+- Icon Set +5 (Assignment, Check Circle from Figma; List Check, Handshake, Outbound from Material Symbols — Figma MCP View-seat limit reached).
+- Example Components: Dark showcase Section with 2 Glass + 2 Step. Published to staging 2×.
+- Measured at 1512 and 402: Glass 440 × 230 (Figma 226), Step 251 × 202 (Figma 200), pill 26 high at y 35 (= Figma); published CSS has the 4-layer shadow and the ring mask; Service, Discipline, Opportunity unchanged.
+
+## 2026-10-30 — Remaining cards — Aniek Velthuizen with Claude
+- Figma inventory through Claude in Chrome (Figma MCP View seat hit its call limit on the first call): Expert, Expert match, Profile, Stat, Process stage, Pricing, Logo, Testimonial 1, Opportunity variant3/4; where each is used on the numbered page frames. Choice per card in `decisions/components/cards.md` ("The remaining cards"): 9 new Card Primary variants (Opportunity Text, Expert, Expert Match, Expert Match Glass, Profile Role/Person/Case — Cover and Stacked reused —, Stat, Stage, Pricing, Logo) and one own component, **Card Testimonial**; slot item **Card Bullet**.
+- Card Primary: wrappers eyebrow / subtitle / logo / list (+ slot Items) / value label / button / action; props Subtitle (+ Visibility), Logo, Logo Alt, List Title, List Visibility, Value Label, Badge Visibility, Salary Visibility; Value and Badge Text moved to their own folders. Trigger reset moved from content to the button wrappers. Swatch `brand-accent-700`.
+- Icon Set +4 (Check, Quote, Star, CV Submission); 5 images uploaded (Google + Agristo logos, two photos, avatar). Assets came out of Figma through a local receiver (Plugin API export → POST to 127.0.0.1 from the Figma tab).
+- Example Components: Light showcase (6 cards) and Dark showcase (5 cards + testimonial). Published to staging 7×.
+- Measured at 1512 and 402 (details in cards.md): Opportunity Text, Stage, Pricing, Testimonial, Expert Match Glass on Figma positions within 0–2 px for the parts with a matching text style; bigger offsets where the site has no 10 px / SemiBold style (listed as deviations). Hover checked with a real mouse on Expert (veil + arrow) and Expert Match Glass (white, dark text and logo). Opportunity, Service, Discipline, Glass, Step unchanged at both widths. No horizontal scroll at 402.
+- Fixed during measuring: price pushed its suffix out of the card (`u-text` min-width 100 %) → `card_primary_number` width auto; glass hover on `element:hover` never fired under the Clickable → moved to the group; bullet text 3 px wider than the card → text holder.
+
+## 2026-10-30 — Card review and fixes — Aniek Velthuizen with Claude
+- Review of all cards with four fresh reviewer agents (`references/audit/2026-10-30-cards.md`): 1 broken, 8 off, 7 tidy, 8 owner questions. Owner: fix 1–16; 17 keep Lumos wrapping, 18 greyscale photo yes, 19/21/23 accept, 20 no capitals, 22 smaller % yes, 24 other Subtitle default yes.
+- Card Primary: Screen Reader Text default empty (cards clickable only with a link); button hidden in the nine button-less variants; Logo Visibility toggle (broken default image no longer requested); Theme `card/accent` and `card/logo-invert`; Value Unit; Subtitle default "Job title"; Pricing label room; no stretching for Expert Match/Glass/Logo; Profile Person/Case radius and surface; literals → variables; dead overrides removed. Card Testimonial: arrow aligned, role class, rating for screen readers, avatar decorative.
+- Designer step for the Logo default blocked by Webflow's bot check in Chrome (not attempted to bypass); solved through the toggle instead.
+- Published to staging 6×; re-measured (cards.md "Review fixes"): all fixed items confirmed, all heights unchanged.
+- Fresh re-check (2 reviewers): all fixed items confirmed. Found and fixed: broken Lumos Image placeholder on Profile cards (Image Visibility, default off), % baseline, "Match score" label spill, Glass expert photo grey after a click (Theme `card/photo-grayscale`), dead corner CSS. Published 3× more; 0 broken image requests in the page HTML.

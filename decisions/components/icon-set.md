@@ -47,4 +47,27 @@ Done by Aniek (via Claude). The six Google icons used by `Card / Service` instan
 | Person Shield (`a7cc4fcd-9915-73fa-2304-c8e73037e398`) | `type=person-shield` (`2236:4973`) | `6ae44d9d953315857d3fcb0a_icon-person-shield.svg` |
 | Person Check (`7ae9dd7a-36c6-f6c7-1838-00f738fda3f3`) | `type=person-check` (`2063:4449`) | `6ae44d9dd24ed7bc928eaa56_icon-person-check.svg` |
 
-Not added yet: the icons only used on the Components page or by the Step card (`assignment`, `list-alt-check`, `handshake`, `check-circle`, `outbound`, `percent`, `shield`, `dashboards`, `planning-scheduling`). Add them when those cards or sections are built.
+Step-card icons, added the same day:
+
+| Variant | Source | Asset |
+|---|---|---|
+| Assignment (`a94e5078-a1e6-deb7-fe22-0b467f820a11`) | Figma `type=assignment…` (`2292:33276`) | `6ae4577c3784203354968bc6_icon-assignment.svg` |
+| Check Circle (`92e61da6-7aae-7d23-e5f6-2fbbcfebbeb9`) | Figma `type=check-circle…` (`2263:7147`) | `6ae4577c957d1e353652df12_icon-check-circle.svg` |
+| List Check (`088f6a31-1655-ca0a-24d3-c97493db8494`) | Google Material Symbols `list_alt_check`, outlined wght 100 24 px | `6ae4577c639655423bf504e0_icon-list-check.svg` |
+| Handshake (`e1df746a-9fd3-e026-f3c7-38353e82d183`) | Material Symbols `handshake`, outlined wght 100 24 px | `6ae4577c58b3d6d9495d17b8_icon-handshake.svg` |
+| Outbound (`14304292-9851-5c57-bb80-fe5f3bcf4340`) | Material Symbols `outbound`, outlined wght 100 24 px | `6ae4577c2c6c9d592af07d2f_icon-outbound.svg` |
+
+The last three came from `fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/<name>/wght100/24px.svg` because the Figma MCP hit the View-seat call limit mid-export; the Figma layer names (`…fill0-wght100-grad0-opsz24`) say this is the same icon at the same settings.
+Still not added (Components page only): `percent`, `shield`, `dashboards`, `planning-scheduling`.
+
+## 2026-10-30 — Icons for the remaining cards
+Done by Aniek (via Claude). Exported in Claude in Chrome with the Plugin API (`exportAsync SVG_STRING`) and sent to a local receiver, uploaded (S3 201).
+
+| Variant | Figma source | Asset |
+|---|---|---|
+| Check (`56dbf3ed-ca56-7ea6-9487-d52580e5468c`) | `check_24dp…` in `Card / Expert` bullets (Card Bullet) | `6ae48f5017b14e2300f8e147_icon-check.svg` |
+| Quote (`73e4a5ab-e0b3-74e2-7c39-e696924c7a24`) | the “ mark in `Testimonial 1` (55 × 43, not square: holder 3.4375 × 2.6875 rem) | `6ae48f5035be1598558a8993_icon-quote.svg` |
+| Star (`a272a43c-73ee-a18b-61ec-a627df1801e1`) | one star of `Testimonial 1` (colour `swatch/stars` on the holder) | `6ae48f5035be1598558a89a5_icon-star.svg` |
+| CV Submission (`cb979357-6cc2-4787-3ad8-17bf28e09d70`) | `Google icons / type=cv-submission` in `Card / Opportunity` variant3 | `6ae48f50343c721614605852_icon-cv-submission.svg` |
+
+Stage cards on the real pages use 21 further Google icons (manage-accounts, handshake, published-with-changes, analytics, gpp-maybe, schema, planning-scheduling, computer, table, monitoring, action-key, fact-check, insert-chart, cv-submission, dashboard-2, call-log, cost-control-forecasting, playlist-add-check-circle, avg-time, …); add them when those pages are built.

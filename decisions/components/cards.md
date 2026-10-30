@@ -1,6 +1,6 @@
 # Cards
 
-Card family on the site (from the Figma + current Webflow build, 2026-10-29): job/opportunity cards (Opportunities list, Careers "Join the team", Opportunities/Detail "Similar opportunities"), full-bleed case/cover cards (About/Clients "Selected project work", team member photos), light service cards ("Six disciplines" on Home), testimonial cards (Home + About/Clients "Trusted by the people who hire"). Job/opportunity is the most reused, so it was built first by adapting Lumos `Card Primary` (`7941d471-12eb-22ce-6420-784e5a3b04f8`, group `Card`). Service and Discipline were added as Card Primary variants on 2026-10-30 (below); Cover and Testimonial are not built yet.
+Card family on the site (from the Figma + current Webflow build, 2026-10-29): job/opportunity cards (Opportunities list, Careers "Join the team", Opportunities/Detail "Similar opportunities"), full-bleed case/cover cards (About/Clients "Selected project work", team member photos), light service cards ("Six disciplines" on Home), testimonial cards (Home + About/Clients "Trusted by the people who hire"). Job/opportunity is the most reused, so it was built first by adapting Lumos `Card Primary` (`7941d471-12eb-22ce-6420-784e5a3b04f8`, group `Card`). Service and Discipline were added as Card Primary variants on 2026-10-30 (below); the rest of the family (Expert, Expert Match, Profile, Stat, Stage, Pricing, Logo, Opportunity Text) followed the same day as variants, Testimonial as its own component ("The remaining cards").
 
 ## 2026-10-29 — Card Primary base variant → Opportunity
 
@@ -58,7 +58,7 @@ What changed (all on the base variant = Opportunity):
 - **Surface:** `card_primary_element` background = Theme `background` (Figma binds the card to `background`, light-200), no border, padding `space/6` (24), radius `radius/small` on `card_primary_group`, `min-height: 24.0625rem` (Figma 385, fixed). Mobile (`small`): padding `space/5`, min-height auto.
 - **Notch:** bottom-right cut-out 52 × 51 px with an 8 px concave corner (Figma `Subtract` = card minus a 60 × 60 r8 rectangle at 388/334). Built as a CSS `mask` on `card_primary_element` (two solid bands + one radial-gradient fillet tile), so the section background shows through. Cover and Stacked set `mask-image: none`.
 - **Arrow in the notch:** new component **Card Opportunity Arrow** (`8eeda93a-039f-d99f-fe9d-75974e30d529`, group Card) inside `card_primary_group` after the element (outside the mask): `card_primary_arrow` (48 × 48, bottom-right, `aria-hidden`) › `card_primary_arrow_track` (200 % wide, starts at −100 %) › 2 × `card_primary_arrow_slot` › Icon Set `Arrow Thin`. On hover the track moves `translateX(calc(50% * --_trigger---off))`, so the arrow slides out right while the second one slides in (Figma: two arrows, the first moves out). Built on the page and transformed (builder bug above).
-- **Hover:** Figma `variant-2` = linear gradient white → `#00ffd5` (= `swatch/brand-accent-500`) at ≈131°. `card_primary_visual` is now the hover veil: absolute, behind the content, `background-image: linear-gradient(131deg, #ffffff, #00ffd5)` (literal colours: gradient stops mangle `var()`), `opacity: var(--_trigger---off)`, 400 ms ease. `card_primary_image` is `display: none` in the base; Cover/Stacked set it back to `block` and the veil's gradient to `none` (Stacked also `position: relative`, opacity 1). Hover only fires when the card has a Link (Lumos `hover-if-clickable`).
+- **Hover:** Figma `variant-2` = linear gradient white → `#00ffd5` (= `swatch/brand-accent-500`) at ≈131°. `card_primary_visual` is now the hover veil: absolute, behind the content, `background-image: linear-gradient(131deg, #ffffff, #00ffd5)` (literal colours: gradient stops mangle `var()`), `opacity: var(--_trigger---off)`, 400 ms ease. `card_primary_image` is `display: none` in the base; Cover/Stacked set it back to `block` and the veil's gradient to `none` (Stacked also `position: relative`, opacity 1). Hover only fires when the card is clickable (Lumos `hover-if-clickable`), i.e. when Screen Reader Text is filled — since 2026-10-30 its default is empty (see "Review fixes").
 - **Tags:** outlined pills — no fill, 1 px border Theme `border` (Figma `swatch/dark-900-o25`; `border` is o20 in Base and follows the theme), padding 0.125rem / `space/3`, gap `space/1`. Tag texts' Margin Bottom 0. **This replaces the 2026-10-30 pill-background choice below.**
 - **Meta:** icons 2rem at full opacity in Theme `text`; rows min-height 2rem, gap `space/3`, no gap between rows; texts Typography Plain **Text Main** (was Text Small), Margin Bottom 0. Icons are the Figma ones (see `icon-set.md`): location, **school** (experience), euro. Salary default is now `90k – 110k` (the € is the icon).
 - **Button:** Button Main → **Tertiary**, Icon Visibility off ("View & apply" as text, like Figma's `Button` frame with its arrow hidden). This replaced a conditional Variant binding from the Lumos starter, so Cover/Stacked now also show Tertiary.
@@ -107,10 +107,11 @@ card_primary_group
   card_primary_element
     card_primary_visual (hover veil, unchanged)
     card_primary_content
-      card_primary_icon   › Icon Set (default variant Timer)        NEW, base display none
+      card_primary_top    › card_primary_icon › Icon Set (Icon prop) + card_primary_badge › Typography Plain   (top row added with Step)
       card_primary_kicker › Card Opportunity Tags                    NEW wrapper, Service/Discipline: none
       card_primary_header › Typography Heading (Variant now Inherit)
       card_primary_text   › Typography Paragraph (Text Main, Max Width -1, MB 0, u-text-trim-off)   base display none
+      card_primary_value  › Typography Paragraph (Value)              added with Step, base display none
       card_primary_details› Card Opportunity Meta                    NEW wrapper, Service/Discipline: none
       Button Main
   card_primary_corner (aria-hidden) › Card Opportunity Arrow         NEW wrapper, positions the arrow
@@ -145,12 +146,162 @@ Deviations from Figma:
 - The button icon is the Button Main default (chevron); Figma draws an arrow. Follows the open Button Main "Icon" prop item in `designer-queue.md`.
 - During the Service arrow slide the outgoing arrow (the track's second slot) is briefly visible while the corner fades in.
 
+## 2026-10-30 — Glass and Step: two more Card Primary variants
+
+Done by Aniek (via Claude), on the owner's "ga door met de glass card en stap card".
+Choice: **Glass** (`f468fc62-f377-72da-d066-559d6d1a8ba5`, copy of Service) and **Step** (`3be1dc22-578f-78f3-1b88-693087bd06ca`, copy of Glass). Card Primary now has Opportunity, Cover, Stacked, Service, Discipline, Glass, Step.
+Why: both are types of the Figma `Card / Service` set with the same anatomy (icon, title, text) on a different surface; Step adds a pill and a large value.
+
+Figma (instances on real pages, read for their overrides):
+- `default` = glass: `swatch/light-100-o25` + background blur 40 + a faint 5-layer drop shadow, text full colour (not muted). Home B "One wrong hire costs…" (on a light gradient), About "Values" (dark, plus a white→transparent→white 1 px stroke). Home B "3 UBRS" and Hire an expert override the fill to light-200 — that is the **Service** look without a link; use Service there.
+- `variant4` = step: on About / How it works every instance is glass on the dark gradient — white 20 %, the gradient stroke, blur, shadow, padding 24, white text, pill stroke white, value 36 px full white. 251 × 200.
+
+Built:
+- **Theme variables:** `card/glass` (Base `light-100-o25`, Dark/Brand `light-100-o20`), `card/shadow-1…4` (`#0000000d`, `#0000000a`, `#00000008`, `#00000003`, same in every mode).
+- **Glass** element: `background-color card/glass`, `backdrop-filter: blur(20px)` (Figma blur radius 40 = CSS 20), `box-shadow` four layers on `card/shadow-1…4` (API read-back shows only the first variable; the published CSS has all four — same as the button shadow). Text opacity 1. Corner arrow hidden. `card_primary_visual` (the hover veil elsewhere) becomes the **gradient ring**: `linear-gradient(131deg, #fff, transparent 51%, #fff)`, padding 1 px, `mask-image` two solid layers with `mask-clip: content-box, border-box` + `mask-composite: exclude`, opacity 1, no transition. So Glass and Step have no hover (Figma has none).
+- **Step** = Glass with padding `space/6` all round (also at small), pill and value on, body text off.
+- **New parts** (all card-owned): `card_primary_top` (flex row, space-between, centred; base none, Service/Glass/Step flex) now holds `card_primary_icon` and `card_primary_badge` (pill: 26 px high, padding-x `space/3`, 1 px Theme `border`, `radius/round`; base none, Step flex) › Typography Plain (Text Small, MB 0). `card_primary_value` (after the text; base none, Step flex, grows, content at the bottom) › Typography Paragraph (Inherit, Max Width -1, MB 0, Classes `card_primary_number u-text-trim-off`). `card_primary_number` = `font-size 2.25rem`, `line-height 1` on the Onest body style — Figma's "Text X Large", which `site.md` keeps as a per-section size, not a Text Style mode. (The API refuses custom properties such as `--_text-style---font-size`; a later class beats the Lumos Inherit class.)
+- **Props** (folder Step): `Badge Text` (textContent, "Day 1"), `Value` (richText, "30 min").
+- **Icon Set:** +5 icons (`icon-set.md`).
+
+Measured on staging (Example Components, Dark showcase `079f24e9-5e1c-0c3d-a08e-7797135af6fa`, 2 Glass + 2 Step):
+- Glass 440 × 230 (Figma 226): icon 24/32, title y 104, text y 150 — as Service; bg `rgba(255,255,255,.2)` on Dark, blur 20 px, 4-layer shadow, ring mask `exclude`, text white.
+- Step 251 × 202 (Figma 200): icon 24/24, pill 26 high at y 35 (= Figma), 57 / 77 wide (Figma 60 / 79), title y 96, value y 142 h 36 (Figma 138) in Onest 36/36.
+- Mobile 402: Glass 362 × 230, Step 362 × 202, no horizontal scroll. Service, Discipline and Opportunity re-measured: unchanged.
+
+Deviations:
+- Pill border is Theme `border` (Base dark-900-o20, Dark white 20 %); Figma uses dark-900-o10 on white and solid white on dark.
+- The ring shows on every Glass card; Figma's Home B glass has no stroke (on a light gradient the white ring is barely visible).
+- Glass fill on Dark/Brand is white 20 % (How it works); Figma's Values card on dark keeps 25 %.
+- Titles again 4 px taller per line (line-height 1.25 vs 1.1).
+
+## 2026-10-30 — The remaining cards: nine more Card Primary variants, Card Bullet, Card Testimonial
+
+Done by Aniek (via Claude). Owner: "kijk goed of je varianten kan maken op huidige cards; als dat niet kan, nieuw component maken."
+Figma read through Claude in Chrome (Plugin API in the page; the Figma MCP View seat hit its call limit on the first call). Only frames without `[figma-only]` counted; the `Components` / `Design components` frames are library pages, the numbered frames are the real pages.
+
+### Choice per Figma card
+
+| Figma | Where on real pages | Webflow | Why |
+|---|---|---|---|
+| `Card / Opportunity` variant3/4 (body text) | 14. Careers (internal vacancy) | Card Primary **Opportunity Text** (`593e63f3-eb70-0fa5-9361-ced74b61a8ae`) | Same card as Opportunity; meta rows move up and a body text appears — a layout the editor picks. |
+| `Card / Expert` (`2188:5829`) + hover | 1. Home B header | Card Primary **Expert** (`1aaef925-4e08-358f-77f8-023e87a986b7`) | Same surface, notch, arrow and mint hover as Opportunity. |
+| `Card / Expert match` default (`2032:406`) | 2. Hire an expert (dark, 440 × 114) | Card Primary **Expert Match** (`f38e2c4b-dfef-de93-5f7f-2ceac5b25942`) | Horizontal photo card; uses Image, Title, Subtitle, Logo, Value — no props that only it would use. |
+| `Card / Expert match` variant5 + hover variant6 | 1. Home B header (glass, 322 × 128) | Card Primary **Expert Match Glass** (`db14855c-5ff9-72f6-d763-5fa81cf9ca36`) | Glass look of the same card. variant-2/variant3 (80 high) and `mobile` only occur on the Components frame — not built. |
+| `Card / Profile` role / person / case (`2292:8774`) | 5. Project-controls (role), 6. About Us team (person), 7. Clients "Selected project work" (case, 440 × 459) | Card Primary **Profile Role** (`51efa20c-…`, was Lumos *Cover*), **Profile Person** (`da648fa9-…`, was Lumos *Stacked*), **Profile Case** (`4f9f3e39-1bc1-9449-3a9f-0e6731f0b940`) | Full-bleed photo cards — what Lumos' Cover/Stacked were for, so their ids are reused (kit base.md step 3). The case card is the "cover/case card"; the team photos are Profile Person. |
+| `Card / Stat` (`2236:4871`) | 2. Hire an expert, 6. About Us | Card Primary **Stat** (`1955d209-3754-0beb-0aff-0aa281947bd3`) | Title + text only; no new props. |
+| `Card / Process stage` (`2256:11517`) | 3. Hire Project Delivery Experts (assessment + grid), 4. Consulting-services, 5. Project-controls | Card Primary **Stage** (`ac964b19-9c2a-86e8-bae8-4aa1fb724559`) | Step's anatomy (icon + pill + title + text) on white, plus a stage label and a checklist. Figma's booleans map onto Badge Visibility, Subtitle Visibility, List Visibility. |
+| `Content / Pricing card` default (`2066:5015`) | 2. Hire an expert, 9. About Us / Rates | Card Primary **Pricing** (`e456e423-cfdc-f648-97ad-b114e2932acd`) | Glass surface + pill + value + checklist + button — all parts Card Primary has. variant-2 (wide row) only on Components/Design components — not built. |
+| `Card - Logo` (`2041:5693`) | 1. Home B, 7. Clients, 8. How it works (logo marquee) | Card Primary **Logo** (`3e46987f-7db5-1e2f-ccf8-a2e7b7bcbfcf`) | Just the Image prop in a 100 px tile. The Figma "Arrow icon" in the tile is hidden. |
+| `Testimonial 1` (`2063:4554`) | 1. Home B, 2. Hire an expert, 7. Clients ("Trusted by the people who hire") | **Card Testimonial** (new component `19e313dd-1063-d30b-cbb7-8f61fb4704e1`, group Card) | Own data (quote, rating, avatar, name, role, company): as a variant it would add six props that do nothing in every other variant — lumos-rules §10 exception. Built from Lumos parts (Typography, Icon Set, Clickable). |
+| `quote` (`2710:56905`) | — | not a card | A blockquote with a left rule; belongs to rich text, not the card family. |
+
+Card Primary now has 16 variants: Opportunity, Opportunity Text, Expert, Expert Match, Expert Match Glass, Profile Role, Profile Person, Profile Case, Service, Discipline, Glass, Step, Stage, Stat, Pricing, Logo.
+
+### Structure added to Card Primary (all card-owned, so variant styles reach them)
+
+```
+card_primary_content
+  card_primary_top › icon + card_primary_badge      (badge Typography Plain now Inherit; size = Text Style mode on the badge, base Text Small)
+  card_primary_eyebrow › Typography Plain (Subtitle)  NEW — Stage: label above the title
+  card_primary_kicker / card_primary_header
+  card_primary_subtitle › Typography Plain (Subtitle) NEW — Expert, Expert Match, Profile Person: below the title
+  card_primary_logo › Image (Logo, Logo Alt)          NEW
+  card_primary_text › Typography Paragraph            Paragraph now Inherit; card_primary_text carries the mode (base = Text Main)
+  card_primary_list                                   NEW — Stage, Expert, Pricing
+    card_primary_list_title › Typography Plain (List Title)
+    card_primary_items › slot "Items" (u-display-contents) for Card Bullet
+  card_primary_value › card_primary_value_label (Value Label) + Paragraph (Value)
+  card_primary_details › Card Opportunity Meta
+  card_primary_button (display: contents) › Button Main Tertiary   NEW wrapper so a variant can hide it
+  card_primary_action › Button Main (Primary)         NEW — Pricing
+```
+- **Value size moved to the wrapper:** `card_primary_number` is now `font-size/line-height/font-weight: inherit`, `width: auto`, `min-width: 0`; `card_primary_value` carries `2.25rem / 1` (Step unchanged) and each variant sets its own (Expert 1.5rem semibold green, Pricing 3rem Vend Sans bold via the H2 mode).
+- **Trigger reset moved:** the Base Trigger mode that kept the Tertiary underline still on card hover now sits on `card_primary_button` and `card_primary_action` instead of `card_primary_content`, so content parts (the glass logo) can react to the card hover. Checked on staging: published CSS has the reset on the button wrapper.
+- **New swatch** `swatch/brand-accent-700` = `#00806b` (Figma's raw green of the match score).
+- Salary row: new prop `Salary Visibility` on Card Opportunity Meta (bound to the third row), forwarded from Card Primary (folder Meta).
+
+### Props added to Card Primary
+
+| Folder | Prop | Type | Default |
+|---|---|---|---|
+| Content | Subtitle | textContent | "Previously worked at" |
+| Content | Subtitle Visibility | boolean | true (both subtitle wrappers) |
+| Visual | Logo · Logo Alt | image · altText | – · "Google" |
+| Badge | Badge Text (moved from Step) · Badge Visibility | text · boolean | "Day 1" · true |
+| List | List Title · List Visibility | text · boolean | "Assessed" · true |
+| Value | Value (moved from Step) · Value Label | richText · text | "30 min" · "Match score" |
+| Meta | Salary Visibility | boolean | true |
+| (slot) | Items | slot of Card Bullet | empty (Webflow has no default slot content) |
+
+**Card Bullet** (`c362b655-eec3-8fb0-cab5-12d5426df53e`): `card_bullet` › `card_bullet_icon` (Icon Set Check, 19 px) + `card_bullet_text.u-text-trim-off` › Typography Plain (Text Small). Prop `Text` (Content). Built by filling a blank component with the element builder (`create_blank_component` + builder on the component root, then `set_style` on the root) — `transform_element_to_component` cannot reach elements inside a component.
+
+**Card Testimonial** props: Content `Quote` (rich text) · Visual `Rating Visibility` · Person `Avatar`, `Avatar Alt`, `Name`, `Role`, `Company` · Link `Link`, `Screen Reader Text`. Hover: the arrow circle nudges 0.25 rem on the Lumos trigger (site button language); the whole card is the Clickable.
+
+### Variant notes
+- **Opportunity Text:** kicker/header `order -2`, details `order -1`, text visible at full colour with `margin-top -0.875rem` (meta keeps its own 22 px bottom padding). Salary row off per instance.
+- **Expert:** white (`background-2`), notch/arrow/mint hover from the base, title H6, subtitle/value label Label, list gap 0. Button Text must be empty on instances (the Tertiary hides itself).
+- **Expert Match:** Theme Dark on the element, surface `card/background`, row layout, `card_primary_visual` becomes the 78 × 98 photo with the small notch (same mask recipe as the base, 19 × 22 cut, r6), logo white by `filter`, title Text Medium. **Expert Match Glass:** Glass surface, 77 × 96 photo, padding 16; hover sits on `card_primary_group` (the Clickable is a sibling over the element, so `element:hover` never fires): group Theme Dark → Base on `:hover`, group background white under the glass, `color` re-declared on the group; logo `brightness(0) invert(var(--_trigger---on))`.
+- **Profile Role/Person/Case:** Theme Dark, `min-height 28.6875rem` (459), padding on the content, which also carries the gradient (`180deg`, Figma transform = top→bottom): Role `#250059`, Person/Case `#000` (literal: gradient stops mangle `var()`). Image `object-fit: cover`; Lumos' hover zoom on the image kept. Case shows the pill (Label, white 20 % border).
+- **Stat:** transparent, centred, title H2 in Theme `heading-accent`, text Text Large at 50 %.
+- **Stage:** `background-2`, padding `space/5`, pill/eyebrow/list title Label, list with a 1 px Theme `border` top rule.
+- **Pricing:** from Glass; pill becomes the filled "Most chosen" label (brand-500, white, r4) absolutely above the card; title H4; content gap `space/8`; value row H2 3rem + Text Small suffix; Tertiary hidden, Primary shown.
+- **Logo:** element transparent, 6.25 rem high, image `contain`, content hidden.
+
+### Measured on staging (Example Components, new Light section `2efec565-0c4a-c84e-d6e7-82643866a748` and Dark section `5afdc06c-6a19-ae87-718f-3d8b795beaf6`; 1512 wide, cards 440)
+- Opportunity Text: meta rows y 190 / 222 (= Figma), text y 278 (= Figma), label y 350 (= Figma), height 385–388.
+- Expert: title 24, subtitle 62, logo 96 (Figma 86), bullets 136 (126), value 215 (199); hover = mint veil + arrow slide (real mouse hover).
+- Stage: top 20, pill 36 high (Figma 34), stage label y 84, title y 118 (= Figma), bullets 21 + 4 gap (Figma 19 + 4).
+- Stat: title 48 px (mobile 30), caption 20 px at 50 %.
+- Profile: text ends 32 above the bottom (= Figma), title H5 24 px, white on the gradient.
+- Expert Match Glass: photo 77 × 96 at 16/16 (= Figma), height 128 at 402 (= Figma); hover → white, title `#030b1b`, logo `invert(0)`.
+- Pricing: label "Most chosen" y −30, 145 × 44 (= Figma), title y 24 h 38 (= Figma), price y 110 (= Figma), suffix x 129 (Figma 130), button y 317 (Figma 297).
+- Testimonial: quote mark 32/32 55 × 43, stars 339/62 69 × 13, text y 99 — all = Figma.
+- 402: no horizontal scroll; widths 362; Expert Match 145, Glass 128, Logo 100, Stat 148.
+- Unchanged: Opportunity 385 (tags 27, meta 205/237/269, label 349, arrow 337; mobile 261), Service 230 (mobile 254), Discipline 198, Glass 230, Step 202 (pill 57 × 26 at 35, value y 142).
+
+### Deviations from Figma
+- Text sizes the site has no style for: subtitle and "Match score" 10 px Light → Label 12 px uppercase; Expert/Expert Match name Onest SemiBold 16–20 → H6 (Vend Sans) on Expert, Text Medium (regular) on Expert Match. The heading weight comes from the Text Style mode, and the title class is shared by all variants.
+- Profile Person job title is regular, not SemiBold (same reason).
+- Stat colour is Theme `heading-accent` (`#1e0047`), Figma `brand-500` (`#250059`).
+- Stage rule is Theme `border` (o20), Figma o10. Highlighted stage cards (mint or brand gradient on one card in a row) are not a variant — not built.
+- Pricing price box is 48 high (Figma 34), so the list and button sit 14–20 px lower.
+- Expert Match Glass has no gradient stroke (the ring lives on `card_primary_visual`, which is the photo here). Its hover is CSS `:hover` on the group, not Lumos "hover-if-clickable".
+- Not built: Expert Match variant-2/variant3/`mobile`, Pricing variant-2 — they only appear on the Components frames.
+- Lumos Example Components still has old Cover/Stacked instances; they now render as Profile Role/Person.
+
+## 2026-10-30 — Review fixes (owner picked 1–16 and answered 17–24)
+
+Done by Aniek (via Claude), after the four-reviewer pass (`references/audit/2026-10-30-cards.md`).
+
+- **Clickable only when meant to be:** Card Primary `Screen Reader Text` default is now empty (tooltip: fill it with the Link to make the card clickable). Lumos hides the Clickable when it is empty, so link-less cards (Stage, Stat, Profile, Logo, Expert Match) get no pointer, no Tab stop and no "Learn More", and `hover-if-clickable` no longer fires. Showcase cards that are links in Figma got a real Link and a text that matches the card ("View & apply: …", "View expert profile: …").
+- **Button per variant:** `card_primary_button` is `display: none` in Expert, Expert Match (+Glass), Profile ×3, Stat, Stage and Logo (no button in Figma). Opportunity, Opportunity Text, Service, Discipline, Glass, Step keep it (empty Button Text still hides it).
+- **Logo:** new `Logo Visibility` (Visual, default off) on the logo wrapper. The image prop's fallback is a broken URL (`/webflow-prod-assets/…`, 403) that every card requested hidden; a hidden element is not rendered, so the request is gone. Expert cards: turn it on and pick the logo. Re-picking the prop default in the Designer was blocked by Webflow's bot check in Chrome.
+- **Logo colour from the theme:** new Theme number `card/logo-invert` (Base 0, Dark/Brand 1); Expert Match and Glass logos use `brightness(0) invert(var)`. So the logo is white on dark and dark on white, also after a click or on keyboard focus.
+- **Expert Match Glass:** hover **and** `:focus-within` on the group switch to Base + white; photo `grayscale(var(--_trigger---on))` — black-and-white at rest, colour on hover (owner: as Figma). Radius `radius/medium`.
+- **Theme accent:** new Theme colour `card/accent` (Base `brand-accent-700` #00806b, Dark/Brand `brand-accent-500`) for the Expert match score.
+- **Smaller unit:** new `card_primary_unit` › Typography Paragraph (Value Unit, rich text, folder Value, default "%"), shown only in Expert at 16 px (owner: as Figma). Expert Value is "85".
+- **Subtitle default** "Job title" (owner); Expert and Expert Match instances fill "Previously worked at".
+- **Layout:** Pricing group `margin-top 1.875rem` (room for the label when cards stack); Expert Match, Glass expert and Logo `card_primary_wrap` `height auto`, `align-self flex-start` (no stretching in a mixed row); Profile Person/Case lost the Lumos Stacked `radius 0` and got Theme `background` as surface.
+- **Testimonial:** arrow `align-self: flex-end`, border width `border-width/thick`; role in its own `card_testimonial_role` (opacity .5, Text Small) instead of an inline style; screen-reader text "Rated 5 out of 5" (`u-sr-only`); `Avatar Alt` default empty (decorative, name is next to it).
+- **Tidy:** bullet and Stage list gaps `space/1`, Pricing pill padding `space/3`, value label `space/1`, ring padding `border-width/main`; dead overrides removed (Stage ring, Logo header/text/kicker/details/icon, Person/Case subtitle weight); Pricing price size and weight now read the H2 text style variables (fluid). The ring's `#fff` stays literal for the same reason as the gradients (stops mangle `var()`).
+- **Owner kept:** Lumos balanced wrapping on titles (17); Expert Match offsets from the 12 px labels (19); company not in capitals (20); testimonial name on two lines on a phone (21); Opportunity Text 3 px lower (23).
+- **Image:** same fix as the logo — new `Image Visibility` (Visual, default off) on `card_primary_image`; Lumos' Image fallback (`placeholder.60f9b1840c.svg`) returns 403 and showed a broken-image icon on Profile cards without a photo. Turn it on for Profile, Expert Match and Logo cards and pick the image. After publish: 0 placeholders and 0 broken logo URLs in the page HTML, 6 intended images.
+- **After the fresh re-check** (two reviewers, both confirmed every fixed item): Expert value row `align-items: baseline` so "85" and "%" share a baseline; "Match score" label `width: min-content` (was 2.625rem, the text spilled out; now 48 px box, 8 px to "85"); Glass expert photo uses Theme number `card/photo-grayscale` (Base 0, Dark/Brand 1) so it is colour whenever the card is white — also after a mouse click, which `--_trigger---on` missed; dead corner positioning removed from Expert Match, Glass expert, Pricing, Logo, Stage. Recorded, not changed: Expert subtitle `margin-top -0.5rem` (pulls the 8 px Figma gap out of the 16 px content gap) and value sizes 1.5rem / 1rem.
+- **Not ours to fix:** the published CSS carries 472 placeholders for deleted trim variables (`--_text-style---trim-top\<deleted|…\>`). No style references them (API query); Webflow writes them itself. Harmless (invalid custom-property names).
+
+Measured on staging after the fixes: Pricing label 20 px clear of the card above at 402; 0 requests to the broken logo URL (3 Google logos on the Expert cards); 11 clickable cards = the 11 with a link; no "View & apply" on the nine button-less variants; Person radius 8 px, Case surface `#030b1b`; heights unchanged (Opportunity 385, Service 230, Discipline 198, Glass 230, Step 202, Opportunity Text 388, Expert 275, Stage 420, Stat 170, Expert Match 145, Glass expert 322 × 128, Pricing 389, Logo 178 × 100, Profiles 459); Glass expert focus/after click: white, title `#030b1b`, logo `invert(0)`; Expert "85" 24 px + "%" 16 px, both `#00806b`; testimonial arrow bottom = company bottom (427).
+
 ## Open — still not done
 
-- ~~**Icon per card**~~ — done 2026-10-30 in the Designer (Claude in Chrome): Icon Set Variant → new Card Primary prop **Icon** (Visual, default Timer); Icon Visibility moved after it via a temporary folder. Checked on staging: the Permanent showcase card renders `icon-person-shield.svg`.
-- **Glass (`default`) and Step (`variant4`) types** of `Card / Service`: not built. Glass is a surface on gradient sections (could be a Theme mode or a variant); Step has a pill and a big value (its own variant, About / How it works). Owner's call which first.
+- **Opportunity Text second-row icon:** Figma shows `cv-submission` (Icon Set variant **CV Submission** exists); the rows of Card Opportunity Meta have fixed icons, so it still shows School. Needs a Designer variant prop on the Meta row-2 Icon Set, forwarded from Card Primary — queued in `references/designer-queue.md`.
+- **Stage icons:** real pages use 21 different Google icons on the stage cards (manage-accounts, analytics, schema, …); only those already in the Icon Set are available. Add per page when the pages are built (recipe in `icon-set.md`).
+- **"is set" conditions and Title H3 level** for the new parts (Subtitle, List Title, Value Label, Badge, Logo) — Designer steps, same as the older open item below.
 
-- **Body-text type** (Figma `variant3`/`variant4`, Careers internal vacancy "Recruitment Consultant"): tags Full-time/Recruitment, 2 meta rows (location + `cv-submission` icon), a body paragraph, no salary. Needs a Text prop + Salary Visibility (and the `cv-submission` icon) on the Opportunity variant — not built yet.
+- ~~**Icon per card**~~ — done 2026-10-30 in the Designer (Claude in Chrome): Icon Set Variant → new Card Primary prop **Icon** (Visual, default Timer); Icon Visibility moved after it via a temporary folder. Checked on staging: the Permanent showcase card renders `icon-person-shield.svg`.
+- ~~**Glass and Step types**~~ — done 2026-10-30, see "Glass and Step" above.
+
+- ~~**Body-text type**~~ — done 2026-10-30 as the variant Opportunity Text (see "The remaining cards"); only its second-row icon is still open.
 - ~~**Arrow on Cover/Stacked**~~ — done 2026-10-30: `card_primary_corner` is `display: none` on Cover and Stacked.
 
 - **Variant prop rename**: "Card Type" should ideally be renamed `Variant` in the Designer (props.md convention). Tried: Properties-panel label click, hover, the "..." → Edit settings dialog (that's the *component's* Name/Group/Description, not the prop), and Open component → Settings tab (that's the *selected element's* settings, not the prop schema). Did not find where Webflow exposes a rename for the variant-type prop specifically — worth asking the owner or checking Webflow's own docs/support next time rather than guessing further. Not blocking (cosmetic only, instance panel still works fine with the label "Card Type").
