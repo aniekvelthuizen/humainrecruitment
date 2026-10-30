@@ -8,6 +8,7 @@
 - [ ] Styleguide page — visual pass of colours (Base / Dark / Brand) and type scale — 2026-10-29
 
 ## Done
+- [x] Card Primary › `card_primary_icon` › Icon Set instance — link its Variant to a new Card Primary prop **Icon** (folder Visual, before Icon Visibility, default Timer) — API: variant props cannot be created — recipe: by hand (purple dot › New property) — then: set the Service showcase cards on Example Components to Timer / Person Shield, read back with `get_component` — 2026-10-30, done in the Designer the same day, read back: `get_component` shows Icon (variant, Visual, default Timer); staging card renders Person Shield
 - [x] Button Main › `button_main_wrap` — box-shadow (4 layers, rest + `:hover` + `:focus-within`, colours `button-primary/shadow-1…4`) — 2026-10-29, done through the style API after all (read-back shows only `shadow-1`, published CSS is complete), read back: owner saw the shadow on staging
 - [x] Variables panel › fluid formulas — pasted by the owner — 2026-10-29, read back: fresh dump + verify-foundations.py (360 passed, no pending fluid)
 - [x] Fonts — Onest and Vend Sans uploaded as variable woff2 through the API (not Google Fonts) — 2026-10-29, 0 min in the Designer, read back: `list_fonts` (2 fonts, wght axes)

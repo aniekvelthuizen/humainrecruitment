@@ -34,3 +34,17 @@ Choice (Aniek, via Claude): exported the Figma icons (Plugin API `exportAsync SV
 | Arrow Thin | `arrow_right_alt_24dp…wght100` in `Card / Opportunity` | `6ae445277d1b8d55e11b0b15_icon-arrow-thin.svg` |
 
 Adding an icon: export (Figma Plugin API) or fetch straight from Material Symbols (`raw.githubusercontent.com/marella/material-symbols/main/svg/400/<style>/<name>[-fill].svg`) → upload → `create_variant` → `set_variant_styles` mask-image → add a row here.
+
+## 2026-10-30 — Service card icons
+Done by Aniek (via Claude). The six Google icons used by `Card / Service` instances on real pages (Home B, Hire an expert) plus the set's default, exported from Figma (vector cut out with `download_assets`, re-placed at its offset in a 24 × 24 viewBox, fill `#000` for the mask), uploaded (S3 201).
+
+| Variant | Figma source | Asset |
+|---|---|---|
+| Timer (`845bdc6b-3e2c-39ca-9c61-748ac5bd1eb3`) | `Google icons / type=timer…` (`2045:11308`), Card / Service default | `6ae44d9d9c5e45fc9739a6a3_icon-timer.svg` |
+| Schedule Outline (`617c4729-3dad-90d1-3ddd-b1da77f73bc9`) | `type=schedule…` (`2710:56139`) — outline, unlike the older filled `Schedule` | `6ae44d9d58b3d6d9495a076b_icon-schedule-outline.svg` |
+| Project Controls (`c1ebe063-5bdb-5c9c-76e2-5f5bb99105ea`) | `type=project-controls-strategy` (`2063:4454`) | `6ae44d9d091eb04f52a8b9ee_icon-project-controls.svg` |
+| Person Search (`9454cfd3-2996-eadd-7125-e7a007c57d86`) | `type=person-search…` (`2045:11310`) | `6ae44d9d953315857d3fcaf8_icon-person-search.svg` |
+| Person Shield (`a7cc4fcd-9915-73fa-2304-c8e73037e398`) | `type=person-shield` (`2236:4973`) | `6ae44d9d953315857d3fcb0a_icon-person-shield.svg` |
+| Person Check (`7ae9dd7a-36c6-f6c7-1838-00f738fda3f3`) | `type=person-check` (`2063:4449`) | `6ae44d9dd24ed7bc928eaa56_icon-person-check.svg` |
+
+Not added yet: the icons only used on the Components page or by the Step card (`assignment`, `list-alt-check`, `handshake`, `check-circle`, `outbound`, `percent`, `shield`, `dashboards`, `planning-scheduling`). Add them when those cards or sections are built.

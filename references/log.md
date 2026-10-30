@@ -49,3 +49,12 @@
 
 ## 2026-10-29 — Navigation, owner review round 2 — Aniek Velthuizen with Claude
 - Dropdown cards 8 px lower (button → card 2 → 10 px at the top of the page); in the sticky bar the card now hangs 8 px below the bar's edge (was ~4 px over it). Measured at 1512 and 1280 with `references/nav-check.mjs` (`cardGaps`, `scrolledCard`): all four cards 10 px under the button and stay open when the mouse moves in; sticky: bar → card 8 px. Console clean.
+
+## 2026-10-30 — Service card (Card Primary variants) — Aniek Velthuizen with Claude
+- Figma `Card / Service` (`2058:4302`) read with the MCP (`aniek@cutthecode.com`): 5 variants; real-page uses: `discipline` (Home B), `default` glass (Home B, Hire an expert), `variant4` step (How it works); `services` + hover on the Components page. Choice and structure: `decisions/components/cards.md` (2026-10-30 "Service card").
+- Card Primary: variants **Service** + **Discipline**; wrappers `card_primary_icon` / `_kicker` / `_text` / `_details` / `_corner`; props Text, Icon Visibility, Button Icon Visibility; title size moved to `card_primary_header` (Typography Heading → Inherit). The element builder now works inside component definitions.
+- Icon Set: 6 Figma icons added (`icon-set.md`).
+- Example Components: new Light Section with 3 Card Primary (2 Service, 1 Discipline). Published to staging 2×.
+- Measured on staging at 1512 (cards at 440) and 402: Service 440 × 230 (Figma 226), icon/arrow positions equal to Figma, hover veil + arrow checked; Discipline title y 32 (= Figma); Opportunity unchanged (440 × 385, meta 205/237/269, arrow 392/337; mobile 362 × 261). No horizontal scroll at 402.
+- Designer (Claude in Chrome): Icon Set Variant linked to a new Card Primary prop Icon (Visual, default Timer); read back via API; staging card shows Person Shield. Published to staging 3×.
+- Open: glass and step card types.

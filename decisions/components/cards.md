@@ -1,6 +1,6 @@
 # Cards
 
-Card family on the site (from the Figma + current Webflow build, 2026-10-29): job/opportunity cards (Opportunities list, Careers "Join the team", Opportunities/Detail "Similar opportunities"), full-bleed case/cover cards (About/Clients "Selected project work", team member photos), light service cards ("Six disciplines" on Home), testimonial cards (Home + About/Clients "Trusted by the people who hire"). Job/opportunity is the most reused, so it was built first by adapting Lumos `Card Primary` (`7941d471-12eb-22ce-6420-784e5a3b04f8`, group `Card`). Cover, Service and Testimonial are not built yet.
+Card family on the site (from the Figma + current Webflow build, 2026-10-29): job/opportunity cards (Opportunities list, Careers "Join the team", Opportunities/Detail "Similar opportunities"), full-bleed case/cover cards (About/Clients "Selected project work", team member photos), light service cards ("Six disciplines" on Home), testimonial cards (Home + About/Clients "Trusted by the people who hire"). Job/opportunity is the most reused, so it was built first by adapting Lumos `Card Primary` (`7941d471-12eb-22ce-6420-784e5a3b04f8`, group `Card`). Service and Discipline were added as Card Primary variants on 2026-10-30 (below); Cover and Testimonial are not built yet.
 
 ## 2026-10-29 — Card Primary base variant → Opportunity
 
@@ -89,10 +89,69 @@ Choice (Aniek, via Claude): both now use Theme variables, no fixed swatch.
 Why: kit/site rule — a dark version is the theme, not a variant, and colours go through Theme variables (see `decisions/site.md`, "Buttons follow the theme"). In Base mode the pill is pixel-identical to before; it only changes where the card itself changes. The alternative (pill always light, text forced dark) was dropped: a light pill on a dark card is a fixed exception the theme can't reach. Figma was not re-checked for a job card on a dark section (no MCP access to the file); none of the card's known places (Opportunities, Careers, Similar opportunities) were noted as dark.
 Checked on staging after publish: Dark — white on dark-900, contrast 19.7:1; Base — dark-900 on light-200, 17.4:1. Brand mode not checked (no Brand section on the page).
 
+## 2026-10-30 — Service card = variants of Card Primary, not a new component
+
+Done by Aniek (via Claude). Owner: "variant of the Opportunity card, then it becomes a general card — or a new component, your call."
+Choice: two new variants on Card Primary — **Service** (`3b6e60b2-47c5-cd32-1a79-d647857cb88a`) and **Discipline** (`12b6b2e8-8886-3f97-ab63-4701a5d34841`). Card Primary is now the site's general card; Opportunity stays the base variant.
+Why: the Figma `Card / Service` set (`2058:4302`) has the same look as Opportunity — light-200 surface, `radius/small`, the white → mint hover at the same angle, Typography texts, a Tertiary button. Kit rule: a card that looks like an existing one is a variant of Card Primary, never a copy. A separate component would duplicate the surface, hover, Clickable and Theme wiring.
+
+Figma source and where it is used (Visual design page, `[figma-only]` frames skipped):
+- `services` (`2058:4303`) + its hover `services-hover` (`2184:4813`) → **Service**: icon 48, title, muted text, hover = gradient + an arrow that slides in top-right. Used on the Components page "Content / Services" (desktop + mobile).
+- `discipline` (`2710:56919`) + hover `Prop 1/Variant5` (`2710:56928`) → **Discipline**: no icon, 24 px padding, title, text, Tertiary "→ View". Used on **1. Home B** ("Content / Services desktop", 6 roles).
+- `default` (`2041:11259`, glass `light-100-o25`) — Home B "4 UBRS" / "3 UBRS", Hire an expert, Values; pages override its fill per instance (glass on gradients, light-200 on white). **Not built** — see Open.
+- `variant4` (`2292:33162`, step card: icon + "Day 1" pill + title + big value) — About / How it works. **Not built** — see Open.
+
+Structure (all card-owned, so variant styles reach them; the element builder now works inside a component definition — the 2026-10-29 builder bug is gone):
+```
+card_primary_group
+  card_primary_element
+    card_primary_visual (hover veil, unchanged)
+    card_primary_content
+      card_primary_icon   › Icon Set (default variant Timer)        NEW, base display none
+      card_primary_kicker › Card Opportunity Tags                    NEW wrapper, Service/Discipline: none
+      card_primary_header › Typography Heading (Variant now Inherit)
+      card_primary_text   › Typography Paragraph (Text Main, Max Width -1, MB 0, u-text-trim-off)   base display none
+      card_primary_details› Card Opportunity Meta                    NEW wrapper, Service/Discipline: none
+      Button Main
+  card_primary_corner (aria-hidden) › Card Opportunity Arrow         NEW wrapper, positions the arrow
+  Clickable
+```
+- **Title size per variant:** Typography Heading → Variant **Inherit**; the Text Style mode moved to the card-owned `card_primary_header`: base H4 (small: H6, moved off `card_primary_title`), Service/Discipline H5 (24 px, also on small). One title, one prop.
+- **Arrow:** `card_primary_arrow` is no longer absolute; `card_primary_corner` places it. Base: bottom-right as before. Service: `top space/7`, `right space/6`, `opacity` = Trigger `off` with a 400 ms fade (the existing track slide makes it slide in, as in Figma). Discipline, Cover, Stacked: `display: none` (closes the old "arrow on Cover/Stacked" item).
+- **Service element:** `min-height auto`, padding `space/7` / `space/6` (also at small, where the base has its own values), `mask-image: none` (no notch). Content `justify-content: flex-start`; header `flex-grow 0`, `padding-top space/2` (Figma's 8 px above the title); text `flex-grow 1` so a button lands at the bottom in equal-height rows. **Discipline** = Service with padding `space/6` all round, icon and corner hidden.
+- **Muted text:** `card_primary_text` `opacity: 0.5` on Theme `text` (= Figma `dark-900-o50` on Base, and follows the theme).
+- **Icons:** six Figma Google icons added to Icon Set (see `icon-set.md`).
+
+Props (Card Primary, added):
+
+| Folder | Prop | Type | Default |
+|---|---|---|---|
+| Content | Text | richText | "Ready before you need them. Continuously identified, benchmarked, and assessed." |
+| Visual | Icon | variant (Icon Set) | Timer — made in the Designer (purple dot › New Variant property), prop `1a7c898f-6a77-7f09-c10c-d0831732500c` |
+| Visual | Icon Visibility | boolean | true (bound to `card_primary_icon` visibility) |
+| Button | Button Icon Visibility | boolean | false (bound to Button Main's Icon Visibility; Opportunity keeps no icon, Discipline's "→ View" sets it true) |
+
+The button hides itself when Button Text is empty (Lumos conditional) — a Service card without a button = empty Button Text.
+
+Measured on staging (Example Components, new Light showcase section `c259fe8d-6316-de3e-1987-4e151741c3f9` with 3 cards; card forced to Figma's 440 px):
+- Service desktop 440 × 230 (Figma 226): icon 24/32 48 × 48 (= Figma), title y 104 h 30 (Figma 104 h 26), text y 150 (146), arrow on hover 368/32 (= Figma). Hover checked: mint veil + arrow slides in.
+- Discipline: title y 32 (= Figma), natural height 198 (Figma 194), "→ View" 61.6 × 32 (Figma 59 × 32).
+- Mobile 402: Service 362 × 230–254, Discipline 362 × 198, padding as desktop, no horizontal scroll.
+- Opportunity unchanged after the restructure: 440 × 385, tags 27, meta rows 205/237/269, arrow 392/337, title 30 px; mobile 362 × 261, title 20 px.
+
+Deviations from Figma:
+- Titles are 4 px taller per line: H5 uses the site's heading line-height 1.25, Figma's card title is 1.1 (site rule "text styles win", `site.md`).
+- Discipline hover keeps the "View" button and its 24 px padding; Figma's hover frame drops the button and pads 32 (a layout jump on hover).
+- The button icon is the Button Main default (chevron); Figma draws an arrow. Follows the open Button Main "Icon" prop item in `designer-queue.md`.
+- During the Service arrow slide the outgoing arrow (the track's second slot) is briefly visible while the corner fades in.
+
 ## Open — still not done
 
+- ~~**Icon per card**~~ — done 2026-10-30 in the Designer (Claude in Chrome): Icon Set Variant → new Card Primary prop **Icon** (Visual, default Timer); Icon Visibility moved after it via a temporary folder. Checked on staging: the Permanent showcase card renders `icon-person-shield.svg`.
+- **Glass (`default`) and Step (`variant4`) types** of `Card / Service`: not built. Glass is a surface on gradient sections (could be a Theme mode or a variant); Step has a pill and a big value (its own variant, About / How it works). Owner's call which first.
+
 - **Body-text type** (Figma `variant3`/`variant4`, Careers internal vacancy "Recruitment Consultant"): tags Full-time/Recruitment, 2 meta rows (location + `cv-submission` icon), a body paragraph, no salary. Needs a Text prop + Salary Visibility (and the `cv-submission` icon) on the Opportunity variant — not built yet.
-- **Arrow on Cover/Stacked:** hide it there (an `Arrow Visibility` prop bound per variant, or rebuild those variants) when they get their own pass.
+- ~~**Arrow on Cover/Stacked**~~ — done 2026-10-30: `card_primary_corner` is `display: none` on Cover and Stacked.
 
 - **Variant prop rename**: "Card Type" should ideally be renamed `Variant` in the Designer (props.md convention). Tried: Properties-panel label click, hover, the "..." → Edit settings dialog (that's the *component's* Name/Group/Description, not the prop), and Open component → Settings tab (that's the *selected element's* settings, not the prop schema). Did not find where Webflow exposes a rename for the variant-type prop specifically — worth asking the owner or checking Webflow's own docs/support next time rather than guessing further. Not blocking (cosmetic only, instance panel still works fine with the label "Card Type").
 - **Prop folder order**: Tags/Meta/Content currently sit *after* the pre-existing Button Text/Screen Reader Text/Link/Image/Card Type/Settings group in the Properties panel, not before as props.md's "Content → Visual → part folders → Link → Settings" order would suggest. Needs the HTML5-drag reorder pass (webflow-mcp.md §11) if the order matters enough to the owner to justify it — it's a nice-to-have, not broken.
