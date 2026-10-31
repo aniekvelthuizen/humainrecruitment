@@ -130,3 +130,9 @@
 - Designer (Claude in Chrome): Button Main's Icon Set Variant → new variant prop Icon (folder Icon, default Chevron Right); Variant prop into folder Button; folder/prop order fixed. Styleguide Tertiary buttons (3) set to Arrow Right with the API.
 - Published to staging 1×. Icon variants counted on all 18 pages before/after: only the 3 Styleguide Tertiary icons changed; Example Components cards unchanged (`card-check.mjs`). Record: `decisions/components/button.md` "Icon prop and folders".
 - 2026-10-31 — Aniek (via Claude): owner OK for the arrow in cards. Card Primary's Tertiary button set to Icon = Arrow Right (API, inside the definition); published to staging; only the Discipline card's icon changed ("→ View" as in Figma `2710:56919`), 45 cards same geometry.
+
+## 2026-10-31 — Card split clean-up — Aniek Velthuizen with Claude
+- Dead variant CSS from `duplicate_component` removed from the `card_primary_*` classes: 55 class × variant × breakpoint × pseudo combinations read from the published CSS, props removed with `set_variant_styles` (50) and Theme/Text Style modes with `remove_style_variable_mode` (17), read back empty. Published CSS: 96 → 0 rules with those variant ids on `card_primary_*`.
+- Card Primary defaults from Figma `Card / Service`: Title "Pre-Qualified Specialists" (H3, Designer in Chrome), Button Text "View" (API). No instance used the old defaults.
+- Designer (Claude in Chrome; footer session asked first, it was not using the Designer): 13 showcase card titles `<p>` → H3; showcase order restored with ⌘X/⌘V (Light and Dark grids as before the split).
+- Published to staging 2×. `card-check.mjs` vs `after-phase4/` (`after-cleanup/`): 402 all 45 identical within 1 px; 1512 42 identical, 3 only taller/shorter from the restored grid rows. Card `<h3>` 36 → 49. Record: `decisions/components/cards.md` "Card split clean-up".
