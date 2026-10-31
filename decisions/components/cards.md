@@ -20,7 +20,7 @@ Structure added inside `card_primary_content`, before/after the existing `card_p
 | Content | Title | richText | "Project Controls Manager" |
 | Tags | Tag 1 Text | textContent | "Permanent" |
 | Tags | Tag 2 Text | textContent | "Energy" |
-| Tags | Tags Visibility | boolean | true (binding not yet wired — see Designer-only below) |
+| Tags | Tags Visibility | boolean | true (wired 2026-10-30, see Designer-only below) |
 | Meta | Location Text | textContent | "Rotterdam, NL (hybrid)" |
 | Meta | Experience Text | textContent | "12+ years experience" |
 | Meta | Salary Text | textContent | "€90k – 110k" |
@@ -310,7 +310,7 @@ Checked on staging: all 44 showcase cards render the same parts as before; Oppor
 
 - ~~**Opportunity Text second-row icon**~~ — done 2026-10-30 (Experience Icon prop), see above.
 - **Stage icons:** real pages use 21 different Google icons on the stage cards (manage-accounts, analytics, schema, …); only those already in the Icon Set are available. Add per page when the pages are built (recipe in `icon-set.md`).
-- ~~**"is set" conditions** for the new parts~~ — done 2026-10-30 in the Designer (Subtitle, Logo, List Title, Value Label, Badge; toggles combined with `AND … is set`), see designer-queue Done. Card Testimonial texts done the same day. Still open: older texts (Title, Tags, Meta), Title H3 level.
+- ~~**"is set" conditions** for the new parts~~ — done 2026-10-30 in the Designer (Subtitle, Logo, List Title, Value Label, Badge; toggles combined with `AND … is set`), see designer-queue Done. Card Testimonial texts done the same day. Older texts (Title, Tags, Meta) and the Title H3 level done 2026-10-31, see "Props tidy-up".
 
 - ~~**Icon per card**~~ — done 2026-10-30 in the Designer (Claude in Chrome): Icon Set Variant → new Card Primary prop **Icon** (Visual, default Timer); Icon Visibility moved after it via a temporary folder. Checked on staging: the Permanent showcase card renders `icon-person-shield.svg`.
 - ~~**Glass and Step types**~~ — done 2026-10-30, see "Glass and Step" above.
@@ -318,7 +318,20 @@ Checked on staging: all 44 showcase cards render the same parts as before; Oppor
 - ~~**Body-text type**~~ — done 2026-10-30 as the variant Opportunity Text (see "The remaining cards"); only its second-row icon is still open.
 - ~~**Arrow on Cover/Stacked**~~ — done 2026-10-30: `card_primary_corner` is `display: none` on Cover and Stacked.
 
-- **Variant prop rename**: "Card Type" should ideally be renamed `Variant` in the Designer (props.md convention). Tried: Properties-panel label click, hover, the "..." → Edit settings dialog (that's the *component's* Name/Group/Description, not the prop), and Open component → Settings tab (that's the *selected element's* settings, not the prop schema). Did not find where Webflow exposes a rename for the variant-type prop specifically — worth asking the owner or checking Webflow's own docs/support next time rather than guessing further. Not blocking (cosmetic only, instance panel still works fine with the label "Card Type").
-- **Prop folder order**: Tags/Meta/Content currently sit *after* the pre-existing Button Text/Screen Reader Text/Link/Image/Card Type/Settings group in the Properties panel, not before as props.md's "Content → Visual → part folders → Link → Settings" order would suggest. Needs the HTML5-drag reorder pass (webflow-mcp.md §11) if the order matters enough to the owner to justify it — it's a nice-to-have, not broken.
-- **Native "is set" conditions**: every text prop should show/hide by "is set" rather than always-visible (props.md rule 6) — not yet done for Title, Tag 1/2, Location/Experience/Salary. Lower priority: all fields are expected to always be filled for a real job posting, so this mainly matters once the Careers internal-card variant (no salary) is actually placed on a page.
-- Not yet measured pixel-for-pixel against Figma at 1440/375, no hover states built, and not yet placed on any real page — **Opportunities and Careers are still empty, un-built sections in Webflow** (confirmed again this session: both pages are just Nav + one empty Section + Footer). Placing the card on those pages, wiring real job content, and building the surrounding page chrome (search/filter bar, grid, hero, CTA banner) is a separate, bigger task — not part of "build the cards."
+- ~~**Variant prop rename**~~ — done 2026-10-31: Properties panel › click the prop › Property settings › Name (see "Props tidy-up").
+- ~~**Prop folder order**~~ — done 2026-10-31 (see "Props tidy-up").
+- ~~**Native "is set" conditions** on Title, Tag 1/2, Location/Experience/Salary~~ — done 2026-10-31 (see "Props tidy-up").
+- **Showcase titles:** 17 of the 44 cards on Example Components have their own Title text, which the API stored as a paragraph; they stay `<p>` (same size and weight, the variant sets it). Real pages get the heading level per instance when their content goes in (Properties › Title › Edit Rich Text › H3).
+- **Placing the cards:** the cards are only on Example Components. Opportunities and Careers are still empty sections; placing the cards there with real content is part of building those pages, not of the cards.
+
+## 2026-10-31 — Props tidy-up (Aniek Velthuizen, via Claude)
+
+Finishes the open Designer items on Card Primary and its two sub-components.
+
+- **Folders (API, `update_prop`):** Link and Screen Reader Text → folder **Link**; Button Text → **Button** (Button Icon Visibility moved out and back so it follows); Image → **Visual** (Image Visibility out and back so it follows Image).
+- **Folder order (Designer, `moveFolder`):** Variant → Content → Visual → Tags → Meta → List → Value → Badge → Button → Link → Settings. Slot **Items** moved into List (List Title, Items, List Visibility).
+- **Names (Designer, Property settings › Name):** variant prop `Card Type` → **Variant**; the Clickable's attributes prop `Clickable Attributes` → **Link Attributes**, in Link after Screen Reader Text.
+- **"is set" (Designer):** Card Opportunity Tags: each pill `Tag N Text is set` (the row keeps its Tags Visibility toggle; with both tags empty, turn the toggle off). Card Opportunity Meta: Location row `Location Text is set`, Experience row `Experience Text is set`, Salary row `Salary Visibility = true AND Salary Text is set`. Card Primary: `card_primary_header` `Title is set`.
+- **Title level:** the Title default rich text is H3 again (it had become a paragraph after the Typography Heading swap). Instances without their own title render `<h3>`; 17 showcase cards with their own title stay `<p>` (see Open).
+
+Read back: `get_component` (names, folders); Designer panel order; staging Example Components after publishing: 44 cards, 44 headers, 88 tags, 131 meta rows (the one card with Salary Visibility off), 27 `<h3>` titles; H3 and P titles have the same size per variant.
