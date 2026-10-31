@@ -75,3 +75,7 @@ Why: colour and border on the same element need no inheritance; same box size (b
 ## 2026-10-29 — Primary shadow is in
 Choice: the 4-layer shadow (rest, `:hover`, `:focus-within`) is written with the style API on `button_main_wrap`. The API read-back shows only `button-primary/shadow-1`, but the published CSS keeps all four layers: the owner saw the shadow on staging.
 Why: lesson for later — judge a multi-variable value by the published page, not by the read-back.
+
+## 2026-10-30 — Nav CTA 4 px wider than Figma (owner, Aniek)
+Conflict: in the desktop nav, "Request a shortlist" (Button Main, Secondary) is 235 px wide vs 231 in Figma, so it and "For candidates" sit 4 px further left (measured at 1512 in the nav review).
+Choice: accepted as is. The difference comes from Button Main's own padding; narrowing it would change every button on the site.
