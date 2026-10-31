@@ -1,5 +1,7 @@
 # Kit issues
 
+Not filed — owner (Aniek, 2026-10-31): improving the devkit is not part of this project.
+
 ## Unfiled — 2026-10-31
 
 Not filed yet: `gh issue create` on Cut-the-Code-Agency/ctc-webflow-devkit was blocked by this session's permissions. File with the command below once the owner confirms (Aniek Velthuizen, via Claude).
