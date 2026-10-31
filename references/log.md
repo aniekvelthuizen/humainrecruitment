@@ -94,3 +94,39 @@
 
 ## 2026-10-31 — Card props tidy-up — Aniek Velthuizen with Claude
 - Last open card items done (`decisions/components/cards.md` "Props tidy-up"): props in folders and in convention order, Card Type → Variant, Clickable Attributes → Link Attributes, slot Items in List (API + Designer in Chrome); "is set" conditions on Title, tags and meta rows; Title default H3 again. Published to staging 1×; read back on Example Components: 44 cards, all parts as before, 27 `<h3>` titles (17 showcase cards with their own title stay `<p>`, same look).
+
+## 2026-10-31 — Card Primary split, plan — Aniek Velthuizen with Claude
+- Read-only inventory: Card Primary 16 variants, 37 props, 52 instances counted by Webflow; found 45 (44 on Example Components = 18 own showcase + 26 Lumos demos, 1 on Home), 7 unexplained. Element tree and slot contents read back.
+- Plan `references/plans/2026-10-31-card-split.md`: Card Primary (content) + Card Opportunity + Card Expert + Card Profile + Logo Tile, own classes per component, Card Arrow shared; phases with backup, snapshot, `card-check.mjs` baseline and a pilot checkpoint; kit-issue draft in §10. Choice recorded in `decisions/components/cards.md` (proposed). Nothing on the site changed; waiting for the owner's OK and 5 answers.
+
+## 2026-10-31 — Card Primary split, pilot Card Opportunity — Aniek Velthuizen with Claude
+- Owner OK on the plan. Webflow backup "Before Card Primary split (Aniek, 2026-10-31)". Snapshot of the published CSS, HTML and all 44 instance values in `references/audit/2026-10-31-card-split/`; baseline of all 45 cards at 1512 and 402 with the new `references/card-check.mjs`.
+- Duplicate test on a throwaway component (removed): variants + variant styles, prop ids, wrap bindings and conditions all survive `duplicate_component`.
+- Card Opportunity Arrow → Card Arrow; arrow, tag and meta classes renamed. Card Opportunity built as a duplicate with own `card_opportunity_*` classes, variants Default / With Text, 16 props removed. Two cards placed in the Light showcase next to the old ones; published to staging 2×.
+- `references/card-diff.mjs`: identical within 1 px at 402; at 1512 only the grid-row stretch differs. Elements per card 83 → 45–50.
+- Designer (Claude in Chrome): condition `Text is set` added; folder order and the leftover Icon prop queued. Kit issue written to `references/kit-issues.md` (filing on GitHub was blocked by the session's permissions).
+
+## 2026-10-31 — Card Primary split, Card Expert / Card Profile / Logo Tile — Aniek Velthuizen with Claude
+- Owner: "ga door". Card Expert (Expert, Match, Match Glass) and Card Profile (Role, Person, Case) as duplicates with own classes; Logo Tile built fresh. Variant overrides read per class from the API; shadow and filter values from the published CSS. Batched prop renames on Card Expert landed on the wrong prop: repaired one prop per call, read back.
+- New cards placed after the old ones in the Light and Dark showcase grids; published to staging 2×; measured at 1512 and 402: identical within 1 px apart from grid-row stretch; Logo 66 → 2 elements, Profile 66 → 19.
+- Designer items queued (leftover variant props, Expert Name H3, folder order). Old Card Primary cards and variants untouched.
+
+## 2026-10-31 — Card Primary split, phase 3 (convert) — Aniek Velthuizen with Claude
+- 34 old Card Primary instances on Example Components replaced (Lumos demo grids and sliders 1:1, showcase cards by the phase 1–2 cards) and removed; stray Card Primary in Home's body (after page_wrap) removed. Showcase grid order changed (API cannot anchor on an instance in a slot).
+- Published to staging; `card-check.mjs` against the baseline: 402 all identical within 1 px (Logo Tile: fewer wrappers), 1512 identical except row-height changes from the new order. 3243 → 1792 elements on the page's cards.
+- Card Primary keeps 10 content cards; its 9 moved variants are now unused (Webflow still counts 7 phantom instances). Next: phase 4.
+
+## 2026-10-31 — Card Primary split, phase 4 (slim down) — Aniek Velthuizen with Claude
+- Webflow backup "Before Card Primary phase 4 (Aniek, 2026-10-31)"; fresh baseline of all 45 cards + CSS model in `references/audit/2026-10-31-card-split/before-phase4/`.
+- Card Primary rebased to Service: base classes = old base ⊕ Service, each remaining variant rewritten as its difference from the new base (script from the published CSS, written with the style/variant API, title modes with `remove_style_variable_mode`). Service cards switched to `base`; checked on staging before removing anything (rebase identical, only the to-be-removed tags/meta showed).
+- Removed: image, kicker/Tags, subtitle, logo, unit, details/Meta (+ 7 classes); 13 props; variants Opportunity Text, Expert, Expert Match (+ Glass), Profile Role/Person/Case, Logo, Service. Subtitle → Eyebrow (+ Visibility), same ids; Eyebrow and Value Label defaults emptied. Base renamed Service. Published to staging 2×.
+- Measured: 45 of 45 cards identical within 1 px at 1512 and 402, rest and hover; 10 content cards 754 → 399 elements, no job text left in their HTML. Designer: Experience Icon variant prop queued. Record: `decisions/components/cards.md` "Phase 4".
+
+## 2026-10-31 — Card split, Designer pass — Aniek Velthuizen with Claude
+- Designer (Claude in Chrome, component canvas): leftover variant props deleted on Card Primary, Card Opportunity, Card Expert and Card Profile (trash icon on the prop row); Card Expert Name default H3; Card Expert attributes prop "Score Label" renamed back to Card Attributes in Settings; folder and prop order fixed on all four.
+- Read back with `get_component`; published to staging 1×; `card-check.mjs`: 45 cards unchanged, expert names `<h3>`. Record: `decisions/components/cards.md` "Designer pass after the split".
+
+## 2026-10-31 — Button Main Icon prop — Aniek Velthuizen with Claude
+- Designer (Claude in Chrome): Button Main's Icon Set Variant → new variant prop Icon (folder Icon, default Chevron Right); Variant prop into folder Button; folder/prop order fixed. Styleguide Tertiary buttons (3) set to Arrow Right with the API.
+- Published to staging 1×. Icon variants counted on all 18 pages before/after: only the 3 Styleguide Tertiary icons changed; Example Components cards unchanged (`card-check.mjs`). Record: `decisions/components/button.md` "Icon prop and folders".
+- 2026-10-31 — Aniek (via Claude): owner OK for the arrow in cards. Card Primary's Tertiary button set to Icon = Arrow Right (API, inside the definition); published to staging; only the Discipline card's icon changed ("→ View" as in Figma `2710:56919`), 45 cards same geometry.
