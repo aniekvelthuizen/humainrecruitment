@@ -454,6 +454,7 @@ Owner (Aniek) chose "fix all + recommended" on `references/audit/2026-10-31-card
 **Settings props on Logo Tile and Card Testimonial (item 7, partly)**
 - Added **Visibility** (root visibility) and **Role** (None / List Item; `role="listitem"` via a conditional attribute name, as on the Lumos cards). Logo Tile `68adfcc2-…` / `41e214a5-…`, Testimonial `2e973d18-…` / `512f5de0-…`.
 - **Not added: Wrapper Classes / Wrapper Style.** Both roots are a Block (div); a Block cannot carry a custom `class` or `style` attribute. That needs a Custom Element root, i.e. rebuilding each as a new component (new id). Not worth it now: a marquee or list wraps each tile/card in its own item anyway. Revisit when a page needs extra classes on the root.
+- **Owner (Aniek), 2026-10-31:** Wrapper Classes / Style on these two are not needed, and no further card review after these fixes (measured: card-check and hover/focus 19/19). The cards are done; what is left (real content, stage icons, placing cards on Opportunities / Careers, heading levels per instance) belongs to building those pages.
 
 **Owner choices recorded (Q1, Q5–Q7)**
 - Q1: Card Opportunity keeps the notch cut-out without a link (it is the card's shape; real vacancies always link).
