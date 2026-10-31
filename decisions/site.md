@@ -75,6 +75,21 @@ Why: colours only through Theme variables; Figma has no variable for the shadow 
 ## 2026-10-29 — Section attribute for the nav colour
 Choice: a page section may carry `data-section="dark"` or `data-section="light"` on its wrap; the nav script reads it to decide the bar's text colour over that section. Without it the script reads the background colour (photo or video = dark). Mark a section only when the automatic reading is wrong. Contract and the other `data-nav-*` attributes: `decisions/components/nav.md`.
 
+## 2026-10-30 — Light sections are white (Base `background` → light-100)
+Conflict: in Figma all 15 page frames and 36 of ~50 top-level sections are `background-2` (white); only 7 sections use `background` (light-200), the rest are gradients. Lumos paints a Light section, `u-theme-light`, `u-section` and `body` with Theme `background`, which the foundations had set to light-200 (1:1 with the Figma variable name). Light-200 cards vanished on every default Light section.
+Choice (Aniek, via Claude; owner: "kies jij maar"): Theme `background` in **Base mode** now points to `swatch/light-100` (white). Dark (`dark-900`) and Brand (`brand-500`) are unchanged. Cards keep Figma's light-200 through their own `card/background` variable (`decisions/components/cards.md`).
+Why: one variable, the Lumos way; the site's light sections now match the Figma pages, and the card shows as designed.
+Consequences: the Figma variable `background` (light-200) no longer equals the site's Base `background` — `verify-foundations.py` will report this one mismatch; it is intended. Figma's 7 light-200 sections need their own route when those pages are built (e.g. a fourth Theme mode "Light Grey" with `background` = light-200) — not made yet. Anything else that painted Base `background` (body, `nav_skip_wrap`, `form_range_thumb_element`, `u-background-1`, the Cover card placeholder) is white now too.
+Example Components: the 4-card showcase Section (`3057630f-9ab6-4cc6-3104-ef64eb67c98a`) is set to Theme **Light** as the light card example; the rest of the page stays dark (body `u-theme-dark`).
+
+## 2026-10-30 — Figma MCP has access now
+Owner gave the Figma MCP account (`aniek@cutthecode.com`) edit access to `18m34a7vzkzopkwGoojmUx`. Use the MCP first; Claude in Chrome signed in as `aniekvelthuizen@gmail.com` (Plugin API `window.figma` works there) stays the fallback. The entry below is history.
+
+## 2026-10-29 — Figma MCP has no access to this file; use the browser instead
+Conflict: the Figma MCP server's own connected account cannot open `18m34a7vzkzopkwGoojmUx` ("Looks like you don't have edit access to this file").
+Choice: view the Figma file through the built-in/Claude-in-Chrome browser instead, signed in as `aniekvelthuizen@gmail.com` (saved to memory). Reading structure (layer names, component props, icon names) this way works; nothing that needs the Figma MCP's own read/write calls (`get_design_context`, `download_assets`, …) is available until the MCP connector itself is re-shared.
+Why: unblocks Figma inspection without waiting on a re-share; also means icon/asset exports that normally go through the MCP Plugin API are done another way (see `decisions/components/icon-set.md`).
+
 ## 2026-10-29 — DevKit in the repo
 Choice: the Cut the Code Webflow DevKit is committed as-is in `tools/ctc-webflow-devkit/` (from `ctc-webflow-devkit-main.zip`, md5 `04ef0a7a809e1c6e792c3b425de0a0a8`). A new kit version replaces the folder in one commit.
 Why: owner — every session has the kit without uploading the zip, and the repo records which kit version built the site. Its hooks are not active from there (they only run as an installed plugin).
