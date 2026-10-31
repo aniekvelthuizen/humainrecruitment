@@ -427,3 +427,36 @@ Last open items of the split (phase 4 "Open" above and the first designer-queue 
 Measured on staging (`after-cleanup/` against `after-phase4/`, cards paired by class + text because the order changed): **402: 45 of 45 identical within 1 px, rest and hover. 1512: 42 identical; Expert, Stat and Testimonial differ only in height** (grid-row stretch from the restored order; the Testimonial is back at 1008,271 440×459, exactly its pre-split box). `<h3>` in the cards 36 → 49 (+13). No horizontal scroll, no console errors.
 
 Kit note: the `richTextHeading` recipe looks for a "Close" button with text below y 300; the Rich Text Editor's close button has only `aria-label="Close"`, so the recipe leaves the editor open and the change is not committed. Close it with `button[aria-label="Close"]` inside the dialog. A synthetic click on the H3 bar button failed once (Card Profile Case); a real click worked.
+
+## 2026-10-31 — Review fixes, phase 5 (Aniek Velthuizen, via Claude)
+Owner (Aniek) chose "fix all + recommended" on `references/audit/2026-10-31-cards-review.md` (items 1–18, Q1–Q7). API through the Data API, Designer steps in Claude in Chrome (no other session was in the Designer).
+
+**Defaults and props**
+- Link default is now empty (`mode: url`, no target) on Card Primary, Opportunity, Expert, Profile and Testimonial; Testimonial Screen Reader Text default empty. A new card is not a link until the editor fills both. No instance relied on "#" (checked in the published HTML first). `clear_default_value` does not clear a link default; `default_link: {to: ""}` does.
+- Card Opportunity Text default empty (it was a stray "\n\n"; `clear_default_value` on rich text gives "Default Rich Text Content", so set `rich_text_inner_text: ""`). The API's component listing can still show "\n\n" for it; the prop record reads "".
+- Card Expert: Photo Visibility default **on** (Expert hides the photo with CSS anyway), Logo Alt default empty. Logo Tile: Logo Alt default empty, showcase tile alt "Agristo".
+- **New alt props (Q2):** Card Expert **Photo Alt** (`8ed93209-a4ca-cc04-9c4f-ab01090a4ca0`, Visual) and Card Profile **Image Alt** (`db740c12-1dee-b0ac-f967-c97f1155da06`, Visual), default empty (decorative unless filled), bound to the image's alt.
+- Tooltips: Card Primary Button Text; Card Expert Photo, Photo Visibility, List Visibility, Label, Score (which variants use them); Testimonial Screen Reader Text (same wording as the other cards); Logo Tile Logo. Slot props take no tooltip through the API.
+- Panel order = card order: Card Primary Content Eyebrow → Eyebrow Visibility → Title → Text; Card Profile Title → Subtitle → Subtitle Visibility → Text, Image → Image Alt → Image Visibility; Card Expert Visual Photo → Photo Alt → Photo Visibility → Logo → Logo Alt → Logo Visibility and folder List before Score; Card Opportunity Meta Location → Experience Icon → Experience → Salary → Salary Visibility. Folders Tags and Meta on the two Opportunity sub-components (API).
+
+**Conditions (Designer)**
+- `card_primary_eyebrow` = `Eyebrow Visibility is true AND Eyebrow is set` (the empty 16 px band is gone); `card_opportunity_kicker` bound to Tags Visibility.
+- Pricing's `card_primary_action` = `Screen Reader Text is set AND Link is set`, the same clickable rule as everywhere: no dead button on a Pricing card without a link.
+
+**Styles**
+- Opportunity meta rows are a grid `auto minmax(0, 1fr)`: Typography Plain's `min-width: 100%` now resolves against the text column, so the text no longer runs past the card (was 18–22 px). Chosen over a Style prop on the text (inline style) and over a nested selector.
+- Pricing hover: the Lumos trigger reset (`Trigger` mode base) is off `card_primary_action`, so the Primary button lifts with the card hover. Pricing's `card_primary_element` is `z-index: 4; pointer-events: none` so the "Most chosen" label sits above the card's focus ring (clicks and hover pass through to the Clickable). On `card_primary_content` it had no effect: the element's `backdrop-filter` makes it its own stacking context.
+- Match Glass: no photo zoom on hover (Q3). Keyboard ring: Lumos colours every focus ring `var(--_theme---text)`, and Glass switches the group to the light theme on `:focus-within` (white card), so the ring turned dark on the dark section. Now `.clickable_link:focus-visible { outline-color: currentColor }` (the card's click layer only; on every other card that is the same colour, checked: 7 rings unchanged in Light, Dark and Brand), `card_expert_group:focus-within` in Glass sets `color` white (`swatch light-100`), and `card_expert_element` carries its own theme text colour so the card text stays dark on the white card. First try (theme mode moved from group to element) made the hover text white on white and was reverted.
+- Logo Tile: root is now `logo_tile_wrap` (the unnamed div is gone); `width: max-content` (Q4, tile as wide as its logo; a marquee's gap sets the spacing); image `filter: brightness(0) invert(card/logo-invert)` like the Expert logos, so any logo shows in the theme's text colour. Leftover position/overflow/radius/align-self removed. Through the style API the filter is written with `@var_variable-<id>` inside the string; a plain `var(--…)` is turned into a bare variable.
+- Leftovers removed: Opportunity text opacity .5 and element gap; Profile `card_profile_top` (pill moved into the content, class deleted), the pill's Case values moved into its base, text opacity 1 and the small-breakpoint mode copies on `card_profile_header` / `card_expert_header`; Expert `card_expert_list_title` (unused) and the small min-height copy. Profile text gap `space/3`. Testimonial role Typography: Variant and Style overrides reset (only Text and Margin Bottom stay overridden, as on every text).
+- Kept on purpose: the empty `card_*_title` classes (a hook on every card, set through the Typography Classes prop); Expert Match subtitle and Glass hover use swatches directly (fixed-theme cards, the colour must not follow the section).
+
+**Settings props on Logo Tile and Card Testimonial (item 7, partly)**
+- Added **Visibility** (root visibility) and **Role** (None / List Item; `role="listitem"` via a conditional attribute name, as on the Lumos cards). Logo Tile `68adfcc2-…` / `41e214a5-…`, Testimonial `2e973d18-…` / `512f5de0-…`.
+- **Not added: Wrapper Classes / Wrapper Style.** Both roots are a Block (div); a Block cannot carry a custom `class` or `style` attribute. That needs a Custom Element root, i.e. rebuilding each as a new component (new id). Not worth it now: a marquee or list wraps each tile/card in its own item anyway. Revisit when a page needs extra classes on the root.
+
+**Owner choices recorded (Q1, Q5–Q7)**
+- Q1: Card Opportunity keeps the notch cut-out without a link (it is the card's shape; real vacancies always link).
+- Q5: Card Expert stays 25 px taller than Figma (bullet line height 21 vs 19, Glass subtitle gap) — accepted like the other text-style differences.
+- Q6: Testimonial role/company/arrow 2–6 px lower than Figma (line height) — accepted.
+- Q7: Testimonial always shows 5 stars — kept (every Figma use shows 5).
