@@ -1,1 +1,95 @@
-{"collections": []}
+{
+  "dumpedAt": "2026-11-01",
+  "collections": [
+    {
+      "id": "6ae719db261aa6a726507c82",
+      "displayName": "Experts",
+      "singularName": "Expert",
+      "slug": "experts",
+      "usedBy": [
+        "Expert Row List",
+        "Expert Panel List (Hero Experts, Home)"
+      ],
+      "fields": [
+        {
+          "slug": "name",
+          "displayName": "Name",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "slug",
+          "displayName": "Slug",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "company",
+          "displayName": "Company",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "company-logo",
+          "displayName": "Company Logo",
+          "type": "Image",
+          "required": true
+        },
+        {
+          "slug": "photo",
+          "displayName": "Photo",
+          "type": "Image",
+          "required": true
+        },
+        {
+          "slug": "hero-photo",
+          "displayName": "Hero Photo",
+          "type": "Image",
+          "required": true
+        },
+        {
+          "slug": "bullet-1",
+          "displayName": "Bullet 1",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "bullet-2",
+          "displayName": "Bullet 2",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "bullet-3",
+          "displayName": "Bullet 3",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "match-score",
+          "displayName": "Match Score",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "quote",
+          "displayName": "Quote",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "order",
+          "displayName": "Order",
+          "type": "Number",
+          "required": true
+        },
+        {
+          "slug": "show-in-hero",
+          "displayName": "Show in Hero",
+          "type": "Switch",
+          "required": false
+        }
+      ]
+    }
+  ]
+}
