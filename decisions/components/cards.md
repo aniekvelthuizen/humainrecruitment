@@ -461,3 +461,6 @@ Owner (Aniek) chose "fix all + recommended" on `references/audit/2026-10-31-card
 - Q5: Card Expert stays 25 px taller than Figma (bullet line height 21 vs 19, Glass subtitle gap) — accepted like the other text-style differences.
 - Q6: Testimonial role/company/arrow 2–6 px lower than Figma (line height) — accepted.
 - Q7: Testimonial always shows 5 stars — kept (every Figma use shows 5).
+
+## 2026-11-01 — Card Expert Name and Score are plain text (Aniek Velthuizen, via Claude)
+For the Experts CMS (Home hero) the Name and Score of `Card Expert` became Typography Plain in holder divs (`card_expert_title` / `card_expert_number` + `u-text-trim-off` combo); props Name and Score are now plain text with the same names, folders and defaults. Details, the restored Match "85%" override and the "Name is set" condition that had to be reset: `hero-experts.md`. Example Components measured before/after: no change in size, text or text boxes.

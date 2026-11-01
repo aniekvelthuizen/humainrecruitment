@@ -184,3 +184,16 @@
 - New Theme colour `glow/mint`; 8 classes + 5 empty combos; section built in `page_wrap`, closed into **Stagger Cards** (`d411ac47-…`, group Sections) with props Eyebrow / Title / Text and a Card Primary slot, moved into `page_main` after Hero Experts; 3 × Card Primary Glass in the slot (icons Schedule Outline, Project Controls, Person Search; Role off). Card titles set to H3 in the Designer (Claude in Chrome).
 - Fixes after the first measure: cards stretched to the stepped row (326 → 230, `height: auto` in the embed), cards had no `listitem` role.
 - Published to staging 3×. `references/stagger-check.mjs` at 1512 / 1280 / 991 / 767 / 402: header and card positions within 0.5 px of Figma (cards 230 vs 226, known Glass height), no sideways scroll, no text outside a card, 3 × `<h3>` + `listitem`, one `h1` on the page, no console errors.
+
+## 2026-11-01 — Home hero, owner round 2 (Aniek Velthuizen, via Claude)
+- Hero Experts embed: the expert row loops (Swiper 8 loop, enabled after the Lumos init), is centred at every width and starts on card 3 everywhere; the selected card is white; no card hover on touch screens.
+- Arrows: Lumos trigger `hover focus`, icon nudge as Button Main.
+- `hero-experts_content` ≥ 1280: 36rem, no shrink → title on 3 lines.
+- Published to staging and measured (see the audit file). Open: how expert content is entered (CMS proposal).
+
+## 2026-11-01 — Hero experts from the CMS (Aniek Velthuizen, via Claude)
+- Owner chose the CMS. New collection **Experts** (11 fields, 3 published items from Figma). Two list components, `Expert Row List` (in the Slider slot) and `Expert Panel List` (in the stage), same filter (Show in Hero) and sort (Order); made into components in the Designer via Claude in Chrome, then placed in Hero Experts; the fixed cards and panels removed.
+- `Card Expert`: Name and Score now plain-text Typography so CMS fields bind; Example Components' Match score override restored; header condition reset to visible.
+- Script: panels by order, start on the middle expert.
+- Published to staging 3×. Measured: row and panel in sync (click, arrows, swipe, loop), no sideways scroll, no console errors; Example Components expert cards unchanged. Fresh reviewer ran (audit file).
+- Review fixes, published 2× more: 1/2 experts (no white clones, no loop/arrows with 1, full row with 2), panel list roles removed, hero photo eager, cms.json refreshed. Records corrected (Example Components names were `<h3>`).
