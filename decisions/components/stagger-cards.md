@@ -46,7 +46,7 @@ Folders in visual order: **Eyebrow** (Text «The risk», Visibility on) · **Tit
 
 ## 2026-11-01 — Review (fresh reviewer agent, from the published page)
 Passed: spacing at 1512 and 402 as the table above; no sideways scroll or text outside a card at 2560–402; one h1, then h2 and 3 × h3; list with 3 listitems; muted title part ≈ 3.7 : 1 (AA for large text), eyebrow ≈ 19 : 1; glow pixel-equal to Figma at the bottom centre; hidden Text prop not in the DOM. Not checked by the reviewer (no API access): props — bindings and defaults were read back in this session.
-Open, for the owner:
+Owner (Aniek, 2026-11-01): all three are fine as built ("1: prima, 2: prima zo, 3: prima") — rows of three, the shared Glass look, the step in the section's CSS embed. The block is done.
 1. **Card count**: the section is built for rows of three. A 4th card starts a new row under card 1 (with card 1's step band above it); 2 cards leave the right third empty. Figma Home A draws 4 cards in one row — not built.
 2. **Glass look on white**: cards render white (255) where Figma shows 249 grey, and the site shadow is a little stronger (5/4/3/1 % vs Figma 2/2/1/0/0 %). Shared with every Glass card (`card/glass`, `card/shadow-*`); not changed here.
 3. **Layout CSS in an embed**: the step (nth-child 3n+2 / 3n) and `height: auto` live in the section's own CSS embed, as Hero Experts does. Webflow classes have no nth-child(3n) state and cannot style slot children, so plain classes cannot do it; moving it to site-wide Custom Code is the alternative.
