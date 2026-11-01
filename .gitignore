@@ -4,3 +4,6 @@ memory/
 .tmp/
 .env
 **/.env
+
+# Screenshots from card-check.mjs runs (the JSON measurements are kept)
+references/audit/**/*.png
