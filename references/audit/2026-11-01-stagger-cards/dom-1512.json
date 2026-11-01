@@ -1,0 +1,104 @@
+{
+ "html": "<section data-stagger-cards=\"\" data-section=\"light\" class=\"stagger-cards_wrap u-theme-light\"><div class=\"stagger-cards_contain u-container\"><div class=\"stagger-cards_header\"><p class=\"stagger-cards_eyebrow u-text-style-label-large\">The risk</p><h2 class=\"stagger-cards_title u-text-style-h1\"><span>One wrong hire costs </span><span class=\"stagger-cards_muted\">more than a year of fees.</span></h2></div><div role=\"list\" class=\"stagger-cards_list\"><div class=\"u-display-contents\"><div data-wf--card-primary--variant=\"glass\" role=\"listitem\" class=\"card_primary_wrap\"><div data-trigger=\"hover-if-clickable focus\" class=\"card_primary_group\"><div class=\"card_primary_element w-variant-f468fc62-f377-72da-d066-559d6d1a8ba5\"><div class=\"card_primary_visual w-variant-f468fc62-f377-72da-d066-559d6d1a8ba5\"></div><div class=\"card_primary_content\"><div class=\"card_primary_top\"><div class=\"card_primary_icon\"><div aria-hidden=\"true\" data-wf--icon-set--variant=\"schedule-outline\" class=\"icon_set_wrap w-variant-617c4729-3dad-90d1-3ddd-b1da77f73bc9\"></div></div><div class=\"card_primary_badge\"><p data-wf--typography-plain--variant=\"inherit\" data-number=\"-1\" class=\"u-text u-margin-bottom-0\"><span>Day 1</span></p></div></div><div class=\"card_primary_header\"><div data-number=\"-1\" data-wf--typography-heading--variant=\"inherit\" class=\"u-heading w-richtext card_primary_title u-text-trim-off u-margin-bottom-0\"><h3>A wrong hire surfaces late.</h3></div></div><div class=\"card_primary_text w-variant-f468fc62-f377-72da-d066-559d6d1a8ba5\"><div data-number=\"-1\" data-wf--typography-paragraph--variant=\"inherit\" class=\"u-text u-rich-text w-richtext u-text-trim-off u-margin-bottom-0\"><p>By the time the schedule slips, you have lost months you cannot recover.</p></div></div><div class=\"card_primary_list\"><div class=\"card_primary_list_title\"><p data-wf--typography-plain--variant=\"inherit\" data-number=\"-1\" class=\"u-text u-margin-bottom-0\"><span>Assessed</span></p></div><div class=\"card_primary_items\"><div class=\"u-display-contents\"></div></div></div><div class=\"card_primary_value\"><div data-number=\"-1\" data-wf--typography-paragraph--variant=\"inherit\" class=\"u-text u-rich-text w-richtext card_primary_number u-text-trim-off u-margin-bottom-0\"><p>30 min</p></div></div><div class=\"card_primary_button\"></div></div></div></div></div><div data-wf--card-primary--variant=\"glass\" role=\"listitem\" class=\"card_primary_wrap\"><div data-trigger=\"hover-if-clickable focus\" class=\"card_primary_group\"><div class=\"card_primary_element w-variant-f468fc62-f377-72da-d066-559d6d1a8ba5\"><div class=\"card_primary_visual w-variant-f468fc62-f377-72da-d066-559d6d1a8ba5\"></div><div class=\"card_primary_content\"><div class=\"card_primary_top\"><div class=\"card_primary_icon\"><div aria-hidden=\"true\" data-wf--icon-set--variant=\"project-controls\" class=\"icon_set_wrap w-variant-c1ebe063-5bdb-5c9c-76e2-5f5bb99105ea\"></div></div><div class=\"card_primary_badge\"><p data-wf--typography-plain--variant=\"inherit\" data-number=\"-1\" class=\"u-text u-margin-bottom-0\"><span>Day 1</span></p></div></div><div class=\"card_primary_header\"><div data-number=\"-1\" data-wf--typography-heading--variant=\"inherit\" class=\"u-heading w-richtext card_primary_title u-text-trim-off u-margin-bottom-0\"><h3>The process runs through HR.</h3></div></div><div class=\"card_primary_text w-variant-f468fc62-f377-72da-d066-559d6d1a8ba5\"><div data-number=\"-1\" data-wf--typography-paragraph--variant=\"inherit\" class=\"u-text u-rich-text w-richtext u-text-trim-off u-margin-bottom-0\"><p>Your project needs someone now, and the intake takes weeks.</p></div></div><div class=\"card_primary_list\"><div class=\"card_primary_list_title\"><p data-wf--typography-plain--variant=\"inherit\" data-number=\"-1\" class=\"u-text u-margin-bottom-0\"><span>Assessed</span></p></div><div class=\"card_primary_items\"><div class=\"u-display-contents\"></div></div></div><div class=\"card_primary_value\"><div data-number=\"-1\" data-wf--typography-paragraph--variant=\"inherit\" class=\"u-text u-rich-text w-richtext card_primary_number u-text-trim-off u-margin-bottom-0\"><p>30 min</p></div></div><div class=\"card_primary_button\"></div></div></div></div></div><div data-wf--card-primary--variant=\"glass\" role=\"listitem\" class=\"card_primary_wrap\"><div data-trigger=\"hover-if-clickable focus\" class=\"card_primary_group\"><div class=\"card_primary_element w-variant-f468fc62-f377-72da-d066-559d6d1a8ba5\"><div class=\"card_primary_visual w-variant-f468fc62-f377-72da-d066-559d6d1a8ba5\"></div><div class=\"card_primary_content\"><div class=\"card_primary_top\"><div class=\"card_primary_icon\"><div aria-hidden=\"true\" data-wf--icon-set--variant=\"person-search\" class=\"icon_set_wrap w-variant-9454cfd3-2996-eadd-7125-e7a007c57d86\"></div></div><div class=\"card_primary_badge\"><p data-wf--typography-plain--variant=\"inherit\" data-number=\"-1\" class=\"u-text u-margin-bottom-0\"><span>Day 1</span></p></div></div><div class=\"card_primary_header\"><div data-number=\"-1\" data-wf--typography-heading--variant=\"inherit\" class=\"u-heading w-richtext card_primary_title u-text-trim-off u-margin-bottom-0\"><h3>A CV says little about behaviour.</h3></div></div><div class=\"card_primary_text w-variant-f468fc62-f377-72da-d066-559d6d1a8ba5\"><div data-number=\"-1\" data-wf--typography-paragraph--variant=\"inherit\" class=\"u-text u-rich-text w-richtext u-text-trim-off u-margin-bottom-0\"><p>Real capability shows under pressure, and paper never shows that.</p></div></div><div class=\"card_primary_list\"><div class=\"card_primary_list_title\"><p data-wf--typography-plain--variant=\"inherit\" data-number=\"-1\" class=\"u-text u-margin-bottom-0\"><span>Assessed</span></p></div><div class=\"card_primary_items\"><div class=\"u-display-contents\"></div></div></div><div class=\"card_primary_value\"><div data-number=\"-1\" data-wf--typography-paragraph--variant=\"inherit\" class=\"u-text u-rich-text w-richtext card_primary_number u-text-trim-off u-margin-bottom-0\"><p>30 min</p></div></div><div class=\"card_primary_button\"></div></div></div></div></div></div></div></div><div class=\"u-embed-css w-embed\"><style> /* Stagger Cards: each card keeps its own height (cards are height: 100% by default, which would stretch them to the stepped row). */ [data-stagger-cards] .stagger-cards_list > * > * { height: auto; } /* From 992px the 2nd and 3rd card of every three step down (Figma 48 / 96). */ @media (min-width: 992px) { [data-stagger-cards] .stagger-cards_list > * > :nth-child(3n+2) { margin-top: var(--_spacing---space--8); } [data-stagger-cards] .stagger-cards_list > * > :nth-child(3n) { margin-top: var(--_spacing---section-space--main); } } </style></div></section>",
+ "classes": [
+  "stagger-cards_contain",
+  "u-container",
+  "stagger-cards_header",
+  "stagger-cards_eyebrow",
+  "u-text-style-label-large",
+  "stagger-cards_title",
+  "u-text-style-h1",
+  "stagger-cards_muted",
+  "stagger-cards_list",
+  "u-display-contents",
+  "card_primary_wrap",
+  "card_primary_group",
+  "card_primary_element",
+  "w-variant-f468fc62-f377-72da-d066-559d6d1a8ba5",
+  "card_primary_visual",
+  "card_primary_content",
+  "card_primary_top",
+  "card_primary_icon",
+  "icon_set_wrap",
+  "w-variant-617c4729-3dad-90d1-3ddd-b1da77f73bc9",
+  "card_primary_badge",
+  "u-text",
+  "u-margin-bottom-0",
+  "card_primary_header",
+  "u-heading",
+  "w-richtext",
+  "card_primary_title",
+  "u-text-trim-off",
+  "card_primary_text",
+  "u-rich-text",
+  "card_primary_list",
+  "card_primary_list_title",
+  "card_primary_items",
+  "card_primary_value",
+  "card_primary_number",
+  "card_primary_button",
+  "w-variant-c1ebe063-5bdb-5c9c-76e2-5f5bb99105ea",
+  "w-variant-9454cfd3-2996-eadd-7125-e7a007c57d86",
+  "u-embed-css",
+  "w-embed",
+  "stagger-cards_wrap",
+  "u-theme-light"
+ ],
+ "css": [
+  "https://cdn.prod.website-files.com/6ae35364a38b2d71cab8c607/css/humain-d16f03.webflow.shared.c62955bd8.css",
+  "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+ ],
+ "headings": [
+  "H1 Pre‑Qualified Project Professionals. The top 5% of",
+  "H2 One wrong hire costs more than a year of fees. [SC]",
+  "H3 A wrong hire surfaces late. [SC]",
+  "H3 The process runs through HR. [SC]",
+  "H3 A CV says little about behaviour. [SC]",
+  "H2 The top 5% found before you need them.",
+  "H2 Footer",
+  "H3 For business",
+  "H3 Company",
+  "H3 For Talent"
+ ],
+ "embeds": [
+  "\n/* Stagger Cards: each card keeps its own height (cards are height: 100% by default, which would stretch them to the stepped row). */\n[data-stagger-cards] .stagger-cards_list > * > * { height: auto; }\n/* From 992px the 2nd and 3rd card of every three step down (Figma 48 / 96). */\n@media (min-width: 992px) {\n  [data-stagger-cards] .stagger-cards_list > * > :nth-child(3n+2) { margin-top: var(--_spacing---space--8); }\n  [data-stagger-cards] .stagger-cards_list > * > :nth-child(3n) { margin-top: var(--_spacing---section-space--main); }\n}\n"
+ ],
+ "wrap": {
+  "padding-top": "134px",
+  "padding-bottom": "128px",
+  "background-color": "rgb(255, 255, 255)",
+  "position": "relative",
+  "overflow": "visible"
+ },
+ "eyebrow": {
+  "color": "rgb(3, 11, 27)",
+  "font-size": "16px",
+  "font-weight": "400",
+  "opacity": "1",
+  "margin-top": "0px",
+  "margin-bottom": "0px"
+ },
+ "title": {
+  "color": "rgb(3, 11, 27)",
+  "margin-top": "0px",
+  "margin-bottom": "0px",
+  "text-wrap": "balance"
+ },
+ "muted": {
+  "color": "rgb(3, 11, 27)",
+  "opacity": "0.5"
+ },
+ "card": {
+  "box-shadow": "rgba(0, 0, 0, 0.05) 0px 3px 7px 0px, rgba(0, 0, 0, 0.04) 0px 12px 12px 0px, rgba(0, 0, 0, 0.03) 0px 28px 17px 0px, rgba(0, 0, 0, 0.01) 0px 49px 20px 0px",
+  "background-color": "rgba(255, 255, 255, 0.25)",
+  "border-radius": "8px",
+  "padding-top": "32px",
+  "padding-left": "24px"
+ },
+ "cardTitle": {
+  "font-size": "24px",
+  "line-height": "30px",
+  "text-wrap": "balance",
+  "color": "rgb(3, 11, 27)"
+ }
+}

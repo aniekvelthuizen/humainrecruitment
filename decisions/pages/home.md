@@ -9,3 +9,7 @@ Why: Home B is the page frame not marked `[figma-only]`.
 
 ## 2026-10-31 — Page structure
 `page_wrap` › Global Styles · Global Guides · **Nav** · `page_main` › **Hero Experts** · **Footer** — the same order as the other pages (nav decision Q1: the Nav goes on Home with the homepage build). The Lumos starter block (Style Guide logo, heading, buttons) was removed.
+
+## 2026-11-01 — «The risk» under the hero
+Plan: `references/plans/2026-11-01-home-risk.md`. Figma `Content / 4 UBRS` (`2710:48617`), directly under the header on 1. Home B. Built as **Stagger Cards** (`decisions/components/stagger-cards.md`), in `page_main` after Hero Experts. Home B copy at every width (the mobile frame draws Home A's «What sets us apart» with 4 cards — not built, as with the hero).
+Page now: `page_wrap` › Global Styles · Global Guides · Nav · `page_main` › Hero Experts · **Stagger Cards** · … · Footer. (Another session was building `sticky-steps_wrap` and a Collection List on Home at the same time, outside `page_main`; not touched here.)
