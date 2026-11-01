@@ -1,0 +1,169 @@
+{
+ "results": {
+  "992": {
+   "viewport": 992,
+   "scrollWidth": 992,
+   "height": 845,
+   "top": 1357,
+   "eyebrow": [
+    43.4,
+    134,
+    905.2,
+    11.3
+   ],
+   "title": [
+    43.4,
+    178.3,
+    905.2,
+    95.1
+   ],
+   "text": null,
+   "header": [
+    43.4,
+    134,
+    905.2,
+    139.4
+   ],
+   "list": [
+    43.4,
+    337.4,
+    905.2,
+    380
+   ],
+   "cards": [
+    {
+     "box": [
+      43.4,
+      337.4,
+      280.4,
+      284
+     ],
+     "role": "listitem",
+     "h3": 1,
+     "bg": "rgba(255, 255, 255, 0.25)",
+     "blur": "blur(20px)"
+    },
+    {
+     "box": [
+      355.8,
+      385.4,
+      280.4,
+      284
+     ],
+     "role": "listitem",
+     "h3": 1,
+     "bg": "rgba(255, 255, 255, 0.25)",
+     "blur": "blur(20px)"
+    },
+    {
+     "box": [
+      668.2,
+      433.4,
+      280.4,
+      284
+     ],
+     "role": "listitem",
+     "h3": 1,
+     "bg": "rgba(255, 255, 255, 0.25)",
+     "blur": "blur(20px)"
+    }
+   ],
+   "cardText": [
+    "A wrong hire surfaces late. By the time the schedule slips, you have lost months you cannot recover.",
+    "The process runs through HR. Your project needs someone now, and the intake takes weeks.",
+    "A CV says little about behaviour. Real capability shows under pressure, and paper never shows that."
+   ],
+   "overflow": [],
+   "titleFont": "\"Vend Sans\" 48.7568px/60.9459px 700 ~2 lines",
+   "titleTag": "H2",
+   "muted": "0.5",
+   "eyebrowFont": "16px/24px uppercase ls 1.6px",
+   "bg": "radial-gradient(58.28% 52.94% at 50% 105.94%, rgba(0, 229, 229, 0.4) 49.5%, rgba(0, 0, 0, 0) 100%)",
+   "h1count": 1,
+   "listRole": "list"
+  },
+  "1100": {
+   "viewport": 1100,
+   "scrollWidth": 1100,
+   "height": 850,
+   "top": 1338,
+   "eyebrow": [
+    47.7,
+    134,
+    1004.7,
+    11.3
+   ],
+   "title": [
+    47.7,
+    178.3,
+    1004.7,
+    99.6
+   ],
+   "text": null,
+   "header": [
+    47.7,
+    134,
+    1004.7,
+    143.9
+   ],
+   "list": [
+    47.7,
+    341.9,
+    1004.7,
+    380
+   ],
+   "cards": [
+    {
+     "box": [
+      47.7,
+      341.9,
+      313.5,
+      284
+     ],
+     "role": "listitem",
+     "h3": 1,
+     "bg": "rgba(255, 255, 255, 0.25)",
+     "blur": "blur(20px)"
+    },
+    {
+     "box": [
+      393.2,
+      389.9,
+      313.5,
+      260
+     ],
+     "role": "listitem",
+     "h3": 1,
+     "bg": "rgba(255, 255, 255, 0.25)",
+     "blur": "blur(20px)"
+    },
+    {
+     "box": [
+      738.8,
+      437.9,
+      313.6,
+      284
+     ],
+     "role": "listitem",
+     "h3": 1,
+     "bg": "rgba(255, 255, 255, 0.25)",
+     "blur": "blur(20px)"
+    }
+   ],
+   "cardText": [
+    "A wrong hire surfaces late. By the time the schedule slips, you have lost months you cannot recover.",
+    "The process runs through HR. Your project needs someone now, and the intake takes weeks.",
+    "A CV says little about behaviour. Real capability shows under pressure, and paper never shows that."
+   ],
+   "overflow": [],
+   "titleFont": "\"Vend Sans\" 51.0919px/63.8649px 700 ~2 lines",
+   "titleTag": "H2",
+   "muted": "0.5",
+   "eyebrowFont": "16px/24px uppercase ls 1.6px",
+   "bg": "radial-gradient(58.28% 52.94% at 50% 105.94%, rgba(0, 229, 229, 0.4) 49.5%, rgba(0, 0, 0, 0) 100%)",
+   "h1count": 1,
+   "listRole": "list"
+  }
+ },
+ "errors": []
+}

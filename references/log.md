@@ -177,3 +177,10 @@
 - Owner: "zorg dat de nav dezelfde breedte heeft als de content" (screenshot at a wide screen). Measured at 1920: nav content 268–1652 (1384), hero/footer `u-container` 204–1716 (1512).
 - `nav/max-width-outer` → alias of `max-width/full` (was `max-width/main`). `custom_value` `calc(max-width/main + 2 × nav/spacing-inner-horizontal)` was refused twice (internal error), so the cap moved to the inner layout that already had it. `variables.json` updated for this one variable.
 - Published to staging 1×. Measured: nav content edges equal the hero and footer at 2560 / 1920 / 1512 / 1280, also scrolled (white bar still full width, back to transparent at the top); mobile bar unchanged at 991 / 375; no sideways scroll. Decision in `decisions/components/nav.md`.
+
+## 2026-11-01 — Home «The risk» (Stagger Cards) — Aniek Velthuizen with Claude
+- Figma `Content / 4 UBRS` (Home B `2710:48617`) read in Claude in Chrome with the Plugin API (Figma MCP at its call limit after one call); spec + pictures in `references/figma/home-risk/`. Plan `references/plans/2026-11-01-home-risk.md`; owner answers: content decides card height (Q1), plain section like the hero (Q2).
+- Webflow through the claude.ai Webflow connector (the local `webflow` connector only lists Core and THDV).
+- New Theme colour `glow/mint`; 8 classes + 5 empty combos; section built in `page_wrap`, closed into **Stagger Cards** (`d411ac47-…`, group Sections) with props Eyebrow / Title / Text and a Card Primary slot, moved into `page_main` after Hero Experts; 3 × Card Primary Glass in the slot (icons Schedule Outline, Project Controls, Person Search; Role off). Card titles set to H3 in the Designer (Claude in Chrome).
+- Fixes after the first measure: cards stretched to the stepped row (326 → 230, `height: auto` in the embed), cards had no `listitem` role.
+- Published to staging 3×. `references/stagger-check.mjs` at 1512 / 1280 / 991 / 767 / 402: header and card positions within 0.5 px of Figma (cards 230 vs 226, known Glass height), no sideways scroll, no text outside a card, 3 × `<h3>` + `listitem`, one `h1` on the page, no console errors.
