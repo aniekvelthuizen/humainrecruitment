@@ -93,3 +93,7 @@ Why: unblocks Figma inspection without waiting on a re-share; also means icon/as
 ## 2026-10-29 — DevKit in the repo
 Choice: the Cut the Code Webflow DevKit is committed as-is in `tools/ctc-webflow-devkit/` (from `ctc-webflow-devkit-main.zip`, md5 `04ef0a7a809e1c6e792c3b425de0a0a8`). A new kit version replaces the folder in one commit.
 Why: owner — every session has the kit without uploading the zip, and the repo records which kit version built the site. Its hooks are not active from there (they only run as an installed plugin).
+
+## 2026-10-31 — One brand gradient for footer and hero
+Choice (Aniek, via Claude): the Theme variables `footer/gradient-start | -middle | -end` are renamed **`gradient/brand-start | brand-middle | brand-end`** (same ids; the footer's CSS follows the rename). Used by `footer_wrap` and `hero-experts_wrap`. Details: `decisions/components/hero-experts.md`.
+Why: Figma's footer and Home header use the same three-stop gradient; one set of variables, named for what it is.
