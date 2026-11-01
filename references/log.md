@@ -159,3 +159,8 @@
 - Nav alignment measured: aligned up to 1512; above it the nav (1384 content) is narrower than every `u-container` section (1512). Left for a separate nav session.
 - Published to staging 6×. Measured: arrow next → Chance centred and panel 3 shown; a real mouse click on a card → centred + panel; arrows visible at 1512 and 2560; no sideways scroll at 2560–402; buttons `<button>`; one h1; no console errors.
 - Re-review (two fresh reviewers): fixed items confirmed. New items fixed and re-measured: track limited to `max-width/main` (arrows in the fade at 1920/2560), phones start on card 1, re-centre when crossing 768, `aria-disabled` arrows keep focus, marquee clones synced to the original's animation time (+ re-fill on logo load), small tidies. Published 2× more. Open for the owner: selected-card look, arrow hover, 1100–1279 panel spacing.
+
+## 2026-11-01 — Nav as wide as the content — Aniek Velthuizen with Claude
+- Owner: "zorg dat de nav dezelfde breedte heeft als de content" (screenshot at a wide screen). Measured at 1920: nav content 268–1652 (1384), hero/footer `u-container` 204–1716 (1512).
+- `nav/max-width-outer` → alias of `max-width/full` (was `max-width/main`). `custom_value` `calc(max-width/main + 2 × nav/spacing-inner-horizontal)` was refused twice (internal error), so the cap moved to the inner layout that already had it. `variables.json` updated for this one variable.
+- Published to staging 1×. Measured: nav content edges equal the hero and footer at 2560 / 1920 / 1512 / 1280, also scrolled (white bar still full width, back to transparent at the top); mobile bar unchanged at 991 / 375; no sideways scroll. Decision in `decisions/components/nav.md`.

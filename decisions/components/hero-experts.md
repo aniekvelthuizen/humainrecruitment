@@ -53,5 +53,5 @@ Hero Experts: Text (Content). Everything else (title with its two-tone span, but
 - No pause control (owner, 2026-10-31). Title line height stays Text Main 150 % (Figma 130 %): a raw line-height on the class breaks the site's text trim.
 - Spacing: padding-top `space/8` (phone `space/7` top and bottom), title → logos 5 px, phone title padding `site/margin`.
 
-## 2026-10-31 — Nav is narrower than the site container above 1512 (open, other session)
+## 2026-10-31 — Nav is narrower than the site container above 1512 (solved 2026-11-01, see nav.md)
 Measured: up to 1512 the hero text lines up with the nav. Wider, the nav content stays 1384 px wide while the hero, the footer and every `u-container` section are 1512 px (e.g. 1920: nav from x 268, hero/footer from x 204). The nav is the odd one out, so the nav gets widened to `u-container` — in its own session (owner: nav changes in a separate chat). The hero is not narrowed.

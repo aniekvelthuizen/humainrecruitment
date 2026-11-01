@@ -636,13 +636,13 @@
      "type": "Size",
      "cssName": "--nav--max-width-outer",
      "value": {
-      "id": "variable-9a293d2d-cc23-77d2-c897-a56204290e4e"
+      "id": "variable-190dd393-bc86-6500-a8be-86f8ff6b051b"
      },
      "modeValues": [
       {
        "modeId": "base",
        "value": {
-        "id": "variable-9a293d2d-cc23-77d2-c897-a56204290e4e"
+        "id": "variable-190dd393-bc86-6500-a8be-86f8ff6b051b"
        }
       }
      ]
