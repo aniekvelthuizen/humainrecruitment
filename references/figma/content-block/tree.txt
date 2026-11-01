@@ -1,0 +1,801 @@
+
+===== 2249:8033
+CO "content-location=true, small=false, list=true" 1512x1072 @20,1709 AL:HORIZONTAL gap32 pad192/64/192/64 align:SPACE_BETWEEN/MIN sz:FIXED/HUG clip fill:#ffffff@100 {paddingLeft→site/margin,paddingTop→section-space/large,paddingRight→site/margin,paddingBottom→section-space/large,fills→background-2}
+  FR "content-content-block_content-wrapper" 558x688 @64,192 AL:HORIZONTAL gap32 pad0/0/0/0 align:MIN/MIN sz:FIXED/HUG {itemSpacing→grid/gutter}
+    IN "Assets / Content" 528x688 @0,0 AL:VERTICAL gap24 pad0/0/0/0 align:MIN/MIN sz:FIXED/HUG ⇒Assets / Content [dark-mode:false, list:true] props{Show Paragraph:true; Show Sublabel:true; Title:Medium length section heading; Show Title:true; Show Buttons:true; Show Divider:false; Paragraph:Lorem ipsum dolor sit amet consectetur. ; Sublabel:Tagline} {itemSpacing→content/title-body,width→columns/5 Col}
+      FR "assets-content_sublabel-title" 528x160 @0,0 AL:VERTICAL gap16 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→content/subtitle-title}
+        TE "assets-content_text" 528x24 @0,0 sz:FILL/HUG fill:#000000@100 «Tagline» Onest Regular 16/150% case:UPPER align:LEFT TS:Label Large {fills→copy/subheader,fontSize→font-size/text-main,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+        TE "assets-content_title" 528x120 @0,40 sz:FILL/HUG fill:#000000@100 «Medium length section heading» Vend Sans Bold 48/125% case:ORIGINAL align:LEFT TS:H2 {fills→copy/header,fontSize→font-size/h2,fontStyle→font/secondary-bold,fontFamily→font/secondary-family}
+      IN "Divider" 1440x1 @0,114 HIDDEN sz:FIXED/FIXED fill:#bdbdbd@100 ⇒Divider [Property 1:Default] {fills→defaults/grays/gray-400}
+      FR "assets-content_paragraph-buttons" 528x504 @0,184 AL:VERTICAL gap48 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→content/body-button}
+        FR "assets-content_group_wrap" 528x408 @0,0 AL:VERTICAL gap32 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→content/general-paragraph}
+          TE "assets-content_text" 528x150 @0,0 sz:FILL/HUG fill:#000000@100 «Lorem ipsum dolor sit amet consectetur. Eget massa enim erat mi tristique facilisis at fermentum. Pretium eget quis mattis nisl nisi a sapien id tempus. Platea pulvinar posuere tristique arcu vel. Cursus ante nullam lobortis nibh nec. » Onest Regular 20/150% case:ORIGINAL align:LEFT TS:Text Large {fills→copy/body,fontSize→font-size/text-large,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+          FR "assets-content_group_wrap" 528x226 @0,182 AL:HORIZONTAL gap32 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→grid/gutter}
+            FR "assets-content_list" 248x226 @0,0 AL:VERTICAL gap16 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→4}
+              IN "content-spec-list-item" 248x54 @0,0 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Scelerisque in in imperdiet} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,15 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x54 @32,0 sz:FILL/HUG fill:#000000@100 «Scelerisque in in imperdiet» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,70 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Malesuada integer enim} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «Malesuada integer enim» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,113 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:In pretium quis faucibus} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «In pretium quis faucibus» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,156 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:In pretium quis faucibus} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «In pretium quis faucibus» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,199 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:In pretium quis faucibus} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «In pretium quis faucibus» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+            FR "assets-content_list" 248x199 @280,0 AL:VERTICAL gap16 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→4}
+              IN "content-spec-list-item" 248x27 @0,0 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Quam viverra enim} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «Quam viverra enim» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,43 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Magna pulvinar ac non} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «Magna pulvinar ac non» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,86 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Sit nibh sit ut non nullam} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «Sit nibh sit ut non nullam» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,129 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Sit nibh sit ut non nullam} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «Sit nibh sit ut non nullam» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,172 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Sit nibh sit ut non nullam} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «Sit nibh sit ut non nullam» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+        IN "Button group" 354x48 @0,456 AL:HORIZONTAL gap16 pad0/0/0/0 align:MIN/CENTER sz:HUG/HUG ⇒Button group [Property 1:Default] props{First button:true; Third button:false; Second button:true} {itemSpacing→4}
+          IN "Button" 169x48 @0,0 AL:HORIZONTAL gap0 pad8/16/8/16 align:CENTER/CENTER sz:HUG/FIXED r9999 fill:#00ffd5@100+#ffffff@20 fx:DROP_SHADOW 8 0,4 #000000@10+DROP_SHADOW 14 0,14 #000000@9+DROP_SHADOW 19 0,32 #000000@5+DROP_SHADOW 23 0,56 #000000@1+DROP_SHADOW 25 0,88 #000000@0 ⇒Button [type:primary, state:rest] props{Icon:2028:1998; Icon right:true; Icon left:false; Label:true; Text:Button text} {paddingLeft→Padding x,paddingTop→space/2,paddingRight→Padding x,paddingBottom→space/2,height→Height,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round,fills→button-primary/background}
+            IN "chevron_right" 24x24 @16,12 HIDDEN sz:FIXED/FIXED clip fill: ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#ffffff@100 {fills→Defaults/Body light}
+            FR "button_text" 113x27 @16,11 AL:HORIZONTAL gap0 pad0/8/0/8 align:CENTER/CENTER sz:HUG/HUG {paddingLeft→space/2,paddingRight→space/2}
+              TE "button_text" 97x27 @8,0 sz:HUG/HUG fill:#050404@100 «Button text» Onest Medium 18/150% case:ORIGINAL align:LEFT {fontSize→font-size/text-medium}
+            IN "chevron_right" 24x24 @129,12 sz:FIXED/FIXED clip ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→button-primary/accent}
+          IN "Button" 169x48 @185,0 AL:HORIZONTAL gap0 pad8/16/8/16 align:CENTER/CENTER sz:HUG/FIXED r9999 stroke2:#030b1b@100 ⇒Button [type:secondary, state:rest] props{Icon:2028:1998; Icon right:true; Icon left:false; Label:true; Text:Button text} {paddingLeft→Padding x,paddingTop→space/2,paddingRight→Padding x,paddingBottom→space/2,height→Height,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round,strokeTopWeight→border-width/thick,strokeBottomWeight→border-width/thick,strokeLeftWeight→border-width/thick,strokeRightWeight→border-width/thick,strokes→button-secondary/border}
+            IN "chevron_right" 24x24 @16,12 HIDDEN sz:FIXED/FIXED clip fill: ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#1a1a1a@100 {fills→Defaults/Body}
+            FR "button_text" 113x27 @16,11 AL:HORIZONTAL gap0 pad0/8/0/8 align:CENTER/CENTER sz:HUG/HUG {paddingLeft→space/2,paddingRight→space/2}
+              TE "button_text" 97x27 @8,0 sz:HUG/HUG fill:#030b1b@100 «Button text» Onest Medium 18/150% case:ORIGINAL align:LEFT {fills→button-secondary/text,fontSize→font-size/text-medium}
+            IN "chevron_right" 24x24 @129,12 sz:FIXED/FIXED clip ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#1a1a1a@100 {fills→Defaults/Body}
+          IN "Button" 99x32 @230,0 HIDDEN AL:HORIZONTAL gap8 pad0/0/0/0 align:CENTER/CENTER sz:HUG/FIXED ⇒Button [type:tertiary, state:rest] props{Icon right:true; Icon left:false; Icon:2028:1998; Label:true; Text:Button text} {itemSpacing→space/2,paddingLeft→space/0,paddingTop→radius/none,paddingRight→space/0,paddingBottom→radius/none,height→space/7}
+            FR "button_group" 13x10 @0,11 AL:HORIZONTAL gap10 pad0/0/0/0 align:CENTER/CENTER sz:FIXED/FIXED r9999 {itemSpacing→space/3,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round}
+              IN "east" 16x16 @-1,-3 sz:FIXED/FIXED clip fill: ⇒east [Style:Filled]
+                VE "Vector" 13x9 @1,3 sz:FIXED/FIXED fill:#030b1b@100 {fills→button-tertiary/accent}
+            FR "button_text" 87x24 @21,4 AL:HORIZONTAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:HUG/HUG
+              TE "button_text" 87x24 @0,0 sz:HUG/HUG fill:#030b1b@100 «Button text» Onest Medium 16/150% case:ORIGINAL align:LEFT {fills→button-tertiary/text,fontSize→font-size/text-main}
+              IN "Line" 87x1 @0,23 AL:HORIZONTAL gap10 pad0/0/0/0 align:MIN/MIN sz:FIXED/HUG ABS clip ⇒Line [Property 1:Default]
+                FR "Frame 411" 0x1 @0,0 sz:FIXED/FIXED op0 clip fill:#030b1b@100 {fills→button-tertiary/accent}
+  FR "content-content-block_control-image-size-with-padding" 676x451 @772,192 AL:VERTICAL gap10 pad0/0/0/0 align:MIN/MIN sz:FIXED/FIXED {itemSpacing→space/3}
+    GR "content-content-block_group_wrap" 676x451 @0,0 sz:FIXED/FIXED ABS
+      BO "Subtract" 676x451 @0,0 sz:FIXED/FIXED r16 fill:#ff0000@100
+        RE "Rectangle 8" 676x451 @0,0 sz:FIXED/FIXED ABS fill:#d9d9d9@100
+        RE "Rectangle 9" 86x86 @590,365 sz:FIXED/FIXED ABS fill:#d9d9d9@100
+      IN "Image" 676x451 @0,0 AL:HORIZONTAL gap10 pad0/0/0/0 align:MIN/MIN sz:FIXED/HUG ⇒Image
+        IN "fixed_aspect_ratio" 676x451 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG fill:IMAGE/FILL ⇒fixed_aspect_ratio [Aspect Ratio:3:2 | 2:3, Orientation:Landscape]
+          FR "3:1" 676x225 @0,0 AL:HORIZONTAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG
+            IN "fixed_aspect_ratio" 225x225 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 225x225 @225,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 225x225 @451,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+          FR "3:1" 676x225 @0,225 AL:HORIZONTAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG
+            IN "fixed_aspect_ratio" 225x225 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 225x225 @225,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 225x225 @451,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+
+===== 2249:8013
+CO "content-location=true, small=false, list=false" 1512x834 @20,20 AL:HORIZONTAL gap32 pad192/64/192/64 align:SPACE_BETWEEN/MIN sz:FIXED/HUG clip fill:#ffffff@100 {paddingLeft→site/margin,paddingTop→section-space/large,paddingRight→site/margin,paddingBottom→section-space/large,fills→background-2}
+  FR "content-content-block_content-wrapper" 558x400 @64,192 AL:HORIZONTAL gap32 pad0/0/0/0 align:MIN/MIN sz:FIXED/HUG {itemSpacing→grid/gutter}
+    IN "Assets / Content" 558x400 @0,0 AL:VERTICAL gap24 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒Assets / Content [dark-mode:false, list:false] props{Show Paragraph:true; Show Sublabel:true; Title:Medium length section heading; Show Title:true; Show Buttons:true; Show Divider:false; Paragraph:Lorem ipsum dolor sit amet consectetur. ; Sublabel:Tagline} {itemSpacing→space/6}
+      FR "assets-content_sublabel-title" 558x160 @0,0 AL:VERTICAL gap16 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→content/subtitle-title}
+        TE "assets-content_text" 558x24 @0,0 sz:FILL/HUG fill:#000000@100 «Tagline» Onest Regular 16/150% case:UPPER align:LEFT TS:Label Large {fills→copy/subheader,fontSize→font-size/text-main,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+        TE "assets-content_title" 558x120 @0,40 sz:FILL/HUG fill:#000000@100 «Medium length section heading» Vend Sans Bold 48/125% case:ORIGINAL align:LEFT TS:H2 {fills→copy/header,fontSize→font-size/h2,fontStyle→font/secondary-bold,fontFamily→font/secondary-family}
+      IN "Divider" 1440x1 @0,114 HIDDEN sz:FIXED/FIXED fill:#bdbdbd@100 ⇒Divider [Property 1:Default] {fills→defaults/grays/gray-400}
+      FR "assets-content_paragraph-buttons" 558x216 @0,184 AL:VERTICAL gap48 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→content/body-button}
+        TE "assets-content_text" 558x120 @0,0 sz:FILL/HUG fill:#000000@100 «Lorem ipsum dolor sit amet consectetur. Eget massa enim erat mi tristique facilisis at fermentum. Pretium eget quis mattis nisl nisi a sapien id tempus. Platea pulvinar posuere tristique arcu vel. Cursus ante nullam lobortis nibh nec. » Onest Regular 20/150% case:ORIGINAL align:LEFT TS:Text Large {fills→copy/body,fontSize→font-size/text-large,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+        IN "Button group" 354x48 @0,168 AL:HORIZONTAL gap16 pad0/0/0/0 align:MIN/CENTER sz:HUG/HUG ⇒Button group [Property 1:Default] props{First button:true; Third button:false; Second button:true} {itemSpacing→4}
+          IN "Button" 169x48 @0,0 AL:HORIZONTAL gap0 pad8/16/8/16 align:CENTER/CENTER sz:HUG/FIXED r9999 fill:#00ffd5@100+#ffffff@20 fx:DROP_SHADOW 8 0,4 #000000@10+DROP_SHADOW 14 0,14 #000000@9+DROP_SHADOW 19 0,32 #000000@5+DROP_SHADOW 23 0,56 #000000@1+DROP_SHADOW 25 0,88 #000000@0 ⇒Button [type:primary, state:rest] props{Icon:2028:1998; Icon right:true; Icon left:false; Label:true; Text:Button text} {paddingLeft→Padding x,paddingTop→space/2,paddingRight→Padding x,paddingBottom→space/2,height→Height,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round,fills→button-primary/background}
+            IN "chevron_right" 24x24 @16,12 HIDDEN sz:FIXED/FIXED clip fill: ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#ffffff@100 {fills→Defaults/Body light}
+            FR "button_text" 113x27 @16,11 AL:HORIZONTAL gap0 pad0/8/0/8 align:CENTER/CENTER sz:HUG/HUG {paddingLeft→space/2,paddingRight→space/2}
+              TE "button_text" 97x27 @8,0 sz:HUG/HUG fill:#050404@100 «Button text» Onest Medium 18/150% case:ORIGINAL align:LEFT {fontSize→font-size/text-medium}
+            IN "chevron_right" 24x24 @129,12 sz:FIXED/FIXED clip ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→button-primary/accent}
+          IN "Button" 169x48 @185,0 AL:HORIZONTAL gap0 pad8/16/8/16 align:CENTER/CENTER sz:HUG/FIXED r9999 stroke2:#030b1b@100 ⇒Button [type:secondary, state:rest] props{Icon:2028:1998; Icon right:true; Icon left:false; Label:true; Text:Button text} {paddingLeft→Padding x,paddingTop→space/2,paddingRight→Padding x,paddingBottom→space/2,height→Height,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round,strokeTopWeight→border-width/thick,strokeBottomWeight→border-width/thick,strokeLeftWeight→border-width/thick,strokeRightWeight→border-width/thick,strokes→button-secondary/border}
+            IN "chevron_right" 24x24 @16,12 HIDDEN sz:FIXED/FIXED clip fill: ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#1a1a1a@100 {fills→Defaults/Body}
+            FR "button_text" 113x27 @16,11 AL:HORIZONTAL gap0 pad0/8/0/8 align:CENTER/CENTER sz:HUG/HUG {paddingLeft→space/2,paddingRight→space/2}
+              TE "button_text" 97x27 @8,0 sz:HUG/HUG fill:#030b1b@100 «Button text» Onest Medium 18/150% case:ORIGINAL align:LEFT {fills→button-secondary/text,fontSize→font-size/text-medium}
+            IN "chevron_right" 24x24 @129,12 sz:FIXED/FIXED clip ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#1a1a1a@100 {fills→Defaults/Body}
+          IN "Button" 99x32 @230,0 HIDDEN AL:HORIZONTAL gap8 pad0/0/0/0 align:CENTER/CENTER sz:HUG/FIXED ⇒Button [type:tertiary, state:rest] props{Icon right:true; Icon left:false; Icon:2028:1998; Label:true; Text:Button text} {itemSpacing→space/2,paddingLeft→space/0,paddingTop→radius/none,paddingRight→space/0,paddingBottom→radius/none,height→space/7}
+            FR "button_group" 13x10 @0,11 AL:HORIZONTAL gap10 pad0/0/0/0 align:CENTER/CENTER sz:FIXED/FIXED r9999 {itemSpacing→space/3,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round}
+              IN "east" 16x16 @-1,-3 sz:FIXED/FIXED clip fill: ⇒east [Style:Filled]
+                VE "Vector" 13x9 @1,3 sz:FIXED/FIXED fill:#030b1b@100 {fills→button-tertiary/accent}
+            FR "button_text" 87x24 @21,4 AL:HORIZONTAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:HUG/HUG
+              TE "button_text" 87x24 @0,0 sz:HUG/HUG fill:#030b1b@100 «Button text» Onest Medium 16/150% case:ORIGINAL align:LEFT {fills→button-tertiary/text,fontSize→font-size/text-main}
+              IN "Line" 87x1 @0,23 AL:HORIZONTAL gap10 pad0/0/0/0 align:MIN/MIN sz:FIXED/HUG ABS clip ⇒Line [Property 1:Default]
+                FR "Frame 411" 0x1 @0,0 sz:FIXED/FIXED op0 clip fill:#030b1b@100 {fills→button-tertiary/accent}
+  FR "content-content-block_control-image-size-with-padding" 676x450 @772,192 AL:VERTICAL gap10 pad0/0/0/0 align:MIN/MIN sz:FIXED/FIXED {itemSpacing→space/3}
+    GR "content-content-block_group_wrap" 676x451 @0,0 sz:FIXED/FIXED ABS
+      BO "Subtract" 676x451 @0,0 sz:FIXED/FIXED r16 fill:#ff0000@100
+        RE "Rectangle 8" 676x451 @0,0 sz:FIXED/FIXED ABS fill:#d9d9d9@100
+        RE "Rectangle 9" 86x86 @590,365 sz:FIXED/FIXED ABS fill:#d9d9d9@100
+      IN "Image" 676x451 @0,0 AL:HORIZONTAL gap10 pad0/0/0/0 align:MIN/MIN sz:FIXED/HUG ⇒Image
+        IN "fixed_aspect_ratio" 676x451 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG fill:IMAGE/FILL ⇒fixed_aspect_ratio [Aspect Ratio:3:2 | 2:3, Orientation:Landscape]
+          FR "3:1" 676x225 @0,0 AL:HORIZONTAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG
+            IN "fixed_aspect_ratio" 225x225 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 225x225 @225,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 225x225 @451,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+          FR "3:1" 676x225 @0,225 AL:HORIZONTAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG
+            IN "fixed_aspect_ratio" 225x225 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 225x225 @225,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 225x225 @451,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+
+===== 2249:8023
+CO "content-location=false, small=false, list=false" 1512x835 @20,864 AL:HORIZONTAL gap32 pad192/64/192/64 align:SPACE_BETWEEN/MIN sz:FIXED/HUG clip fill:#ffffff@100 {paddingLeft→site/margin,paddingTop→section-space/large,paddingRight→site/margin,paddingBottom→section-space/large,fills→background-2}
+  FR "content-content-block_control-image-size-with-padding" 677x451 @64,192 AL:VERTICAL gap10 pad0/0/0/0 align:MIN/MIN sz:FIXED/FIXED {itemSpacing→space/3}
+    GR "content-content-block_group_wrap" 676x451 @0,0 sz:FIXED/FIXED ABS
+      BO "Subtract" 676x451 @0,0 sz:FIXED/FIXED r16 fill:#ff0000@100
+        RE "Rectangle 8" 676x451 @0,0 sz:FIXED/FIXED ABS fill:#d9d9d9@100
+        RE "Rectangle 9" 86x86 @590,365 sz:FIXED/FIXED ABS fill:#d9d9d9@100
+      IN "Image" 677x451 @0,0 AL:HORIZONTAL gap10 pad0/0/0/0 align:MIN/MIN sz:FIXED/HUG ⇒Image
+        IN "fixed_aspect_ratio" 677x451 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG fill:IMAGE/FILL ⇒fixed_aspect_ratio [Aspect Ratio:3:2 | 2:3, Orientation:Landscape]
+          FR "3:1" 677x226 @0,0 AL:HORIZONTAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG
+            IN "fixed_aspect_ratio" 226x226 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 226x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 226x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 226x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 226x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 226x226 @226,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 226x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 226x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 226x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 226x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 226x226 @451,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 226x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 226x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 226x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 226x0 @15,113 sz:FILL/FIXED rot30
+          FR "3:1" 677x226 @0,226 AL:HORIZONTAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG
+            IN "fixed_aspect_ratio" 226x226 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 226x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 226x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 226x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 226x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 226x226 @226,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 226x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 226x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 226x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 226x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 226x226 @451,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 226x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 226x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 226x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 226x0 @15,113 sz:FILL/FIXED rot30
+  FR "content-content-block_content-wrapper" 558x430 @890,192 AL:HORIZONTAL gap32 pad0/0/0/0 align:MAX/MIN sz:FIXED/HUG {itemSpacing→grid/gutter}
+    IN "Assets / Content" 528x430 @30,0 AL:VERTICAL gap24 pad0/0/0/0 align:MIN/MIN sz:FIXED/HUG ⇒Assets / Content [dark-mode:false, list:false] props{Show Paragraph:true; Show Sublabel:true; Title:Medium length section heading; Show Title:true; Show Buttons:true; Show Divider:false; Paragraph:Lorem ipsum dolor sit amet consectetur. ; Sublabel:Tagline} {itemSpacing→space/6,width→columns/5 Col}
+      FR "assets-content_sublabel-title" 528x160 @0,0 AL:VERTICAL gap16 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→content/subtitle-title}
+        TE "assets-content_text" 528x24 @0,0 sz:FILL/HUG fill:#000000@100 «Tagline» Onest Regular 16/150% case:UPPER align:LEFT TS:Label Large {fills→copy/subheader,fontSize→font-size/text-main,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+        TE "assets-content_title" 528x120 @0,40 sz:FILL/HUG fill:#000000@100 «Medium length section heading» Vend Sans Bold 48/125% case:ORIGINAL align:LEFT TS:H2 {fills→copy/header,fontSize→font-size/h2,fontStyle→font/secondary-bold,fontFamily→font/secondary-family}
+      IN "Divider" 1440x1 @0,114 HIDDEN sz:FIXED/FIXED fill:#bdbdbd@100 ⇒Divider [Property 1:Default] {fills→defaults/grays/gray-400}
+      FR "assets-content_paragraph-buttons" 528x246 @0,184 AL:VERTICAL gap48 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→content/body-button}
+        TE "assets-content_text" 528x150 @0,0 sz:FILL/HUG fill:#000000@100 «Lorem ipsum dolor sit amet consectetur. Eget massa enim erat mi tristique facilisis at fermentum. Pretium eget quis mattis nisl nisi a sapien id tempus. Platea pulvinar posuere tristique arcu vel. Cursus ante nullam lobortis nibh nec. » Onest Regular 20/150% case:ORIGINAL align:LEFT TS:Text Large {fills→copy/body,fontSize→font-size/text-large,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+        IN "Button group" 354x48 @0,198 AL:HORIZONTAL gap16 pad0/0/0/0 align:MIN/CENTER sz:HUG/HUG ⇒Button group [Property 1:Default] props{First button:true; Third button:false; Second button:true} {itemSpacing→4}
+          IN "Button" 169x48 @0,0 AL:HORIZONTAL gap0 pad8/16/8/16 align:CENTER/CENTER sz:HUG/FIXED r9999 fill:#00ffd5@100+#ffffff@20 fx:DROP_SHADOW 8 0,4 #000000@10+DROP_SHADOW 14 0,14 #000000@9+DROP_SHADOW 19 0,32 #000000@5+DROP_SHADOW 23 0,56 #000000@1+DROP_SHADOW 25 0,88 #000000@0 ⇒Button [type:primary, state:rest] props{Icon:2028:1998; Icon right:true; Icon left:false; Label:true; Text:Button text} {paddingLeft→Padding x,paddingTop→space/2,paddingRight→Padding x,paddingBottom→space/2,height→Height,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round,fills→button-primary/background}
+            IN "chevron_right" 24x24 @16,12 HIDDEN sz:FIXED/FIXED clip fill: ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#ffffff@100 {fills→Defaults/Body light}
+            FR "button_text" 113x27 @16,11 AL:HORIZONTAL gap0 pad0/8/0/8 align:CENTER/CENTER sz:HUG/HUG {paddingLeft→space/2,paddingRight→space/2}
+              TE "button_text" 97x27 @8,0 sz:HUG/HUG fill:#050404@100 «Button text» Onest Medium 18/150% case:ORIGINAL align:LEFT {fontSize→font-size/text-medium}
+            IN "chevron_right" 24x24 @129,12 sz:FIXED/FIXED clip ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→button-primary/accent}
+          IN "Button" 169x48 @185,0 AL:HORIZONTAL gap0 pad8/16/8/16 align:CENTER/CENTER sz:HUG/FIXED r9999 stroke2:#030b1b@100 ⇒Button [type:secondary, state:rest] props{Icon:2028:1998; Icon right:true; Icon left:false; Label:true; Text:Button text} {paddingLeft→Padding x,paddingTop→space/2,paddingRight→Padding x,paddingBottom→space/2,height→Height,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round,strokeTopWeight→border-width/thick,strokeBottomWeight→border-width/thick,strokeLeftWeight→border-width/thick,strokeRightWeight→border-width/thick,strokes→button-secondary/border}
+            IN "chevron_right" 24x24 @16,12 HIDDEN sz:FIXED/FIXED clip fill: ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#1a1a1a@100 {fills→Defaults/Body}
+            FR "button_text" 113x27 @16,11 AL:HORIZONTAL gap0 pad0/8/0/8 align:CENTER/CENTER sz:HUG/HUG {paddingLeft→space/2,paddingRight→space/2}
+              TE "button_text" 97x27 @8,0 sz:HUG/HUG fill:#030b1b@100 «Button text» Onest Medium 18/150% case:ORIGINAL align:LEFT {fills→button-secondary/text,fontSize→font-size/text-medium}
+            IN "chevron_right" 24x24 @129,12 sz:FIXED/FIXED clip ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#1a1a1a@100 {fills→Defaults/Body}
+          IN "Button" 99x32 @230,0 HIDDEN AL:HORIZONTAL gap8 pad0/0/0/0 align:CENTER/CENTER sz:HUG/FIXED ⇒Button [type:tertiary, state:rest] props{Icon right:true; Icon left:false; Icon:2028:1998; Label:true; Text:Button text} {itemSpacing→space/2,paddingLeft→space/0,paddingTop→radius/none,paddingRight→space/0,paddingBottom→radius/none,height→space/7}
+            FR "button_group" 13x10 @0,11 AL:HORIZONTAL gap10 pad0/0/0/0 align:CENTER/CENTER sz:FIXED/FIXED r9999 {itemSpacing→space/3,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round}
+              IN "east" 16x16 @-1,-3 sz:FIXED/FIXED clip fill: ⇒east [Style:Filled]
+                VE "Vector" 13x9 @1,3 sz:FIXED/FIXED fill:#030b1b@100 {fills→button-tertiary/accent}
+            FR "button_text" 87x24 @21,4 AL:HORIZONTAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:HUG/HUG
+              TE "button_text" 87x24 @0,0 sz:HUG/HUG fill:#030b1b@100 «Button text» Onest Medium 16/150% case:ORIGINAL align:LEFT {fills→button-tertiary/text,fontSize→font-size/text-main}
+              IN "Line" 87x1 @0,23 AL:HORIZONTAL gap10 pad0/0/0/0 align:MIN/MIN sz:FIXED/HUG ABS clip ⇒Line [Property 1:Default]
+                FR "Frame 411" 0x1 @0,0 sz:FIXED/FIXED op0 clip fill:#030b1b@100 {fills→button-tertiary/accent}
+
+===== 2249:8043
+CO "content-location=false, small=false, list=true" 1512x1015 @20,2791 AL:HORIZONTAL gap32 pad192/64/192/64 align:MIN/MIN sz:FIXED/HUG clip fill:#ffffff@100 {itemSpacing→grid/gutter,paddingLeft→site/margin,paddingTop→section-space/large,paddingRight→site/margin,paddingBottom→section-space/large,fills→background-2}
+  FR "content-content-block_control-image-size-with-padding" 794x451 @64,192 AL:VERTICAL gap10 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→space/3}
+    GR "content-content-block_group_wrap" 676x451 @0,0 sz:FIXED/FIXED ABS
+      BO "Subtract" 676x451 @0,0 sz:FIXED/FIXED r16 fill:#ff0000@100
+        RE "Rectangle 8" 676x451 @0,0 sz:FIXED/FIXED ABS fill:#d9d9d9@100
+        RE "Rectangle 9" 86x86 @590,365 sz:FIXED/FIXED ABS fill:#d9d9d9@100
+      IN "Image" 676x451 @0,0 AL:HORIZONTAL gap10 pad0/0/0/0 align:MIN/MIN sz:FIXED/HUG ⇒Image
+        IN "fixed_aspect_ratio" 676x451 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG fill:IMAGE/FILL ⇒fixed_aspect_ratio [Aspect Ratio:3:2 | 2:3, Orientation:Landscape]
+          FR "3:1" 676x225 @0,0 AL:HORIZONTAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG
+            IN "fixed_aspect_ratio" 225x225 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 225x225 @225,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 225x225 @451,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+          FR "3:1" 676x225 @0,225 AL:HORIZONTAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG
+            IN "fixed_aspect_ratio" 225x225 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 225x225 @225,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 225x225 @451,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+  FR "content-content-block_content-wrapper" 558x631 @890,192 AL:HORIZONTAL gap32 pad0/0/0/0 align:MAX/MIN sz:FIXED/HUG {itemSpacing→grid/gutter}
+    IN "Assets / Content" 558x631 @0,0 AL:VERTICAL gap24 pad0/0/0/0 align:MIN/MIN sz:FIXED/HUG ⇒Assets / Content [dark-mode:false, list:true] props{Show Paragraph:true; Show Sublabel:true; Title:Medium length section heading; Show Title:true; Show Buttons:true; Show Divider:false; Paragraph:Lorem ipsum dolor sit amet consectetur. ; Sublabel:Tagline} {itemSpacing→content/title-body}
+      FR "assets-content_sublabel-title" 558x160 @0,0 AL:VERTICAL gap16 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→content/subtitle-title}
+        TE "assets-content_text" 558x24 @0,0 sz:FILL/HUG fill:#000000@100 «Tagline» Onest Regular 16/150% case:UPPER align:LEFT TS:Label Large {fills→copy/subheader,fontSize→font-size/text-main,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+        TE "assets-content_title" 558x120 @0,40 sz:FILL/HUG fill:#000000@100 «Medium length section heading» Vend Sans Bold 48/125% case:ORIGINAL align:LEFT TS:H2 {fills→copy/header,fontSize→font-size/h2,fontStyle→font/secondary-bold,fontFamily→font/secondary-family}
+      IN "Divider" 1440x1 @0,114 HIDDEN sz:FIXED/FIXED fill:#bdbdbd@100 ⇒Divider [Property 1:Default] {fills→defaults/grays/gray-400}
+      FR "assets-content_paragraph-buttons" 558x447 @0,184 AL:VERTICAL gap48 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→content/body-button}
+        FR "assets-content_group_wrap" 558x351 @0,0 AL:VERTICAL gap32 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→content/general-paragraph}
+          TE "assets-content_text" 558x120 @0,0 sz:FILL/HUG fill:#000000@100 «Lorem ipsum dolor sit amet consectetur. Eget massa enim erat mi tristique facilisis at fermentum. Pretium eget quis mattis nisl nisi a sapien id tempus. Platea pulvinar posuere tristique arcu vel. Cursus ante nullam lobortis nibh nec. » Onest Regular 20/150% case:ORIGINAL align:LEFT TS:Text Large {fills→copy/body,fontSize→font-size/text-large,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+          FR "assets-content_group_wrap" 558x199 @0,152 AL:HORIZONTAL gap32 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→grid/gutter}
+            FR "assets-content_list" 263x199 @0,0 AL:VERTICAL gap16 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→4}
+              IN "content-spec-list-item" 263x27 @0,0 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Scelerisque in in imperdiet} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 231x27 @32,0 sz:FILL/HUG fill:#000000@100 «Scelerisque in in imperdiet» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 263x27 @0,43 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Malesuada integer enim} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 231x27 @32,0 sz:FILL/HUG fill:#000000@100 «Malesuada integer enim» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 263x27 @0,86 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:In pretium quis faucibus} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 231x27 @32,0 sz:FILL/HUG fill:#000000@100 «In pretium quis faucibus» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 263x27 @0,129 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:In pretium quis faucibus} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 231x27 @32,0 sz:FILL/HUG fill:#000000@100 «In pretium quis faucibus» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 263x27 @0,172 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:In pretium quis faucibus} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 231x27 @32,0 sz:FILL/HUG fill:#000000@100 «In pretium quis faucibus» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+            FR "assets-content_list" 263x199 @295,0 AL:VERTICAL gap16 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→4}
+              IN "content-spec-list-item" 263x27 @0,0 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Quam viverra enim} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 231x27 @32,0 sz:FILL/HUG fill:#000000@100 «Quam viverra enim» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 263x27 @0,43 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Magna pulvinar ac non} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 231x27 @32,0 sz:FILL/HUG fill:#000000@100 «Magna pulvinar ac non» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 263x27 @0,86 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Sit nibh sit ut non nullam} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 231x27 @32,0 sz:FILL/HUG fill:#000000@100 «Sit nibh sit ut non nullam» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 263x27 @0,129 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Sit nibh sit ut non nullam} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 231x27 @32,0 sz:FILL/HUG fill:#000000@100 «Sit nibh sit ut non nullam» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 263x27 @0,172 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Sit nibh sit ut non nullam} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 231x27 @32,0 sz:FILL/HUG fill:#000000@100 «Sit nibh sit ut non nullam» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+        IN "Button group" 354x48 @0,399 AL:HORIZONTAL gap16 pad0/0/0/0 align:MIN/CENTER sz:HUG/HUG ⇒Button group [Property 1:Default] props{First button:true; Third button:false; Second button:true} {itemSpacing→4}
+          IN "Button" 169x48 @0,0 AL:HORIZONTAL gap0 pad8/16/8/16 align:CENTER/CENTER sz:HUG/FIXED r9999 fill:#00ffd5@100+#ffffff@20 fx:DROP_SHADOW 8 0,4 #000000@10+DROP_SHADOW 14 0,14 #000000@9+DROP_SHADOW 19 0,32 #000000@5+DROP_SHADOW 23 0,56 #000000@1+DROP_SHADOW 25 0,88 #000000@0 ⇒Button [type:primary, state:rest] props{Icon:2028:1998; Icon right:true; Icon left:false; Label:true; Text:Button text} {paddingLeft→Padding x,paddingTop→space/2,paddingRight→Padding x,paddingBottom→space/2,height→Height,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round,fills→button-primary/background}
+            IN "chevron_right" 24x24 @16,12 HIDDEN sz:FIXED/FIXED clip fill: ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#ffffff@100 {fills→Defaults/Body light}
+            FR "button_text" 113x27 @16,11 AL:HORIZONTAL gap0 pad0/8/0/8 align:CENTER/CENTER sz:HUG/HUG {paddingLeft→space/2,paddingRight→space/2}
+              TE "button_text" 97x27 @8,0 sz:HUG/HUG fill:#050404@100 «Button text» Onest Medium 18/150% case:ORIGINAL align:LEFT {fontSize→font-size/text-medium}
+            IN "chevron_right" 24x24 @129,12 sz:FIXED/FIXED clip ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→button-primary/accent}
+          IN "Button" 169x48 @185,0 AL:HORIZONTAL gap0 pad8/16/8/16 align:CENTER/CENTER sz:HUG/FIXED r9999 stroke2:#030b1b@100 ⇒Button [type:secondary, state:rest] props{Icon:2028:1998; Icon right:true; Icon left:false; Label:true; Text:Button text} {paddingLeft→Padding x,paddingTop→space/2,paddingRight→Padding x,paddingBottom→space/2,height→Height,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round,strokeTopWeight→border-width/thick,strokeBottomWeight→border-width/thick,strokeLeftWeight→border-width/thick,strokeRightWeight→border-width/thick,strokes→button-secondary/border}
+            IN "chevron_right" 24x24 @16,12 HIDDEN sz:FIXED/FIXED clip fill: ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#1a1a1a@100 {fills→Defaults/Body}
+            FR "button_text" 113x27 @16,11 AL:HORIZONTAL gap0 pad0/8/0/8 align:CENTER/CENTER sz:HUG/HUG {paddingLeft→space/2,paddingRight→space/2}
+              TE "button_text" 97x27 @8,0 sz:HUG/HUG fill:#030b1b@100 «Button text» Onest Medium 18/150% case:ORIGINAL align:LEFT {fills→button-secondary/text,fontSize→font-size/text-medium}
+            IN "chevron_right" 24x24 @129,12 sz:FIXED/FIXED clip ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#1a1a1a@100 {fills→Defaults/Body}
+          IN "Button" 99x32 @230,0 HIDDEN AL:HORIZONTAL gap8 pad0/0/0/0 align:CENTER/CENTER sz:HUG/FIXED ⇒Button [type:tertiary, state:rest] props{Icon right:true; Icon left:false; Icon:2028:1998; Label:true; Text:Button text} {itemSpacing→space/2,paddingLeft→space/0,paddingTop→radius/none,paddingRight→space/0,paddingBottom→radius/none,height→space/7}
+            FR "button_group" 13x10 @0,11 AL:HORIZONTAL gap10 pad0/0/0/0 align:CENTER/CENTER sz:FIXED/FIXED r9999 {itemSpacing→space/3,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round}
+              IN "east" 16x16 @-1,-3 sz:FIXED/FIXED clip fill: ⇒east [Style:Filled]
+                VE "Vector" 13x9 @1,3 sz:FIXED/FIXED fill:#030b1b@100 {fills→button-tertiary/accent}
+            FR "button_text" 87x24 @21,4 AL:HORIZONTAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:HUG/HUG
+              TE "button_text" 87x24 @0,0 sz:HUG/HUG fill:#030b1b@100 «Button text» Onest Medium 16/150% case:ORIGINAL align:LEFT {fills→button-tertiary/text,fontSize→font-size/text-main}
+              IN "Line" 87x1 @0,23 AL:HORIZONTAL gap10 pad0/0/0/0 align:MIN/MIN sz:FIXED/HUG ABS clip ⇒Line [Property 1:Default]
+                FR "Frame 411" 0x1 @0,0 sz:FIXED/FIXED op0 clip fill:#030b1b@100 {fills→button-tertiary/accent}
+
+===== 2249:8038
+CO "content-location=true, small=true, list=true" 1512x1072 @20,3615 HIDDEN AL:HORIZONTAL gap32 pad192/64/192/64 align:MIN/MIN sz:FIXED/HUG clip fill:#ffffff@100 {itemSpacing→grid/gutter,paddingLeft→site/margin,paddingTop→section-space/large,paddingRight→site/margin,paddingBottom→section-space/large,fills→background-2}
+  FR "content-content-block_content-wrapper" 676x688 @64,192 AL:HORIZONTAL gap32 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→grid/gutter}
+    IN "Assets / Content" 528x688 @0,0 AL:VERTICAL gap24 pad0/0/0/0 align:MIN/MIN sz:FIXED/HUG ⇒Assets / Content [dark-mode:false, list:true] props{Show Paragraph:true; Show Sublabel:true; Title:Medium length section heading; Show Title:true; Show Buttons:true; Show Divider:false; Paragraph:Lorem ipsum dolor sit amet consectetur. ; Sublabel:Tagline} {itemSpacing→content/title-body,width→columns/5 Col}
+      FR "assets-content_sublabel-title" 528x160 @0,0 AL:VERTICAL gap16 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→content/subtitle-title}
+        TE "assets-content_text" 528x24 @0,0 sz:FILL/HUG fill:#000000@100 «Tagline» Onest Regular 16/150% case:UPPER align:LEFT TS:Label Large {fills→copy/subheader,fontSize→font-size/text-main,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+        TE "assets-content_title" 528x120 @0,40 sz:FILL/HUG fill:#000000@100 «Medium length section heading» Vend Sans Bold 48/125% case:ORIGINAL align:LEFT TS:H2 {fills→copy/header,fontSize→font-size/h2,fontStyle→font/secondary-bold,fontFamily→font/secondary-family}
+      IN "Divider" 1440x1 @0,114 HIDDEN sz:FIXED/FIXED fill:#bdbdbd@100 ⇒Divider [Property 1:Default] {fills→defaults/grays/gray-400}
+      FR "assets-content_paragraph-buttons" 528x504 @0,184 AL:VERTICAL gap48 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→content/body-button}
+        FR "assets-content_group_wrap" 528x408 @0,0 AL:VERTICAL gap32 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→content/general-paragraph}
+          TE "assets-content_text" 528x150 @0,0 sz:FILL/HUG fill:#000000@100 «Lorem ipsum dolor sit amet consectetur. Eget massa enim erat mi tristique facilisis at fermentum. Pretium eget quis mattis nisl nisi a sapien id tempus. Platea pulvinar posuere tristique arcu vel. Cursus ante nullam lobortis nibh nec. » Onest Regular 20/150% case:ORIGINAL align:LEFT TS:Text Large {fills→copy/body,fontSize→font-size/text-large,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+          FR "assets-content_group_wrap" 528x226 @0,182 AL:HORIZONTAL gap32 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→grid/gutter}
+            FR "assets-content_list" 248x226 @0,0 AL:VERTICAL gap16 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→4}
+              IN "content-spec-list-item" 248x54 @0,0 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Scelerisque in in imperdiet} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,15 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x54 @32,0 sz:FILL/HUG fill:#000000@100 «Scelerisque in in imperdiet» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,70 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Malesuada integer enim} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «Malesuada integer enim» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,113 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:In pretium quis faucibus} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «In pretium quis faucibus» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,156 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:In pretium quis faucibus} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «In pretium quis faucibus» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,199 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:In pretium quis faucibus} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «In pretium quis faucibus» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+            FR "assets-content_list" 248x199 @280,0 AL:VERTICAL gap16 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→4}
+              IN "content-spec-list-item" 248x27 @0,0 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Quam viverra enim} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «Quam viverra enim» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,43 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Magna pulvinar ac non} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «Magna pulvinar ac non» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,86 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Sit nibh sit ut non nullam} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «Sit nibh sit ut non nullam» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,129 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Sit nibh sit ut non nullam} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «Sit nibh sit ut non nullam» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,172 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Sit nibh sit ut non nullam} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «Sit nibh sit ut non nullam» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+        IN "Button group" 354x48 @0,456 AL:HORIZONTAL gap16 pad0/0/0/0 align:MIN/CENTER sz:HUG/HUG ⇒Button group [Property 1:Default] props{First button:true; Third button:false; Second button:true} {itemSpacing→4}
+          IN "Button" 169x48 @0,0 AL:HORIZONTAL gap0 pad8/16/8/16 align:CENTER/CENTER sz:HUG/FIXED r9999 fill:#00ffd5@100+#ffffff@20 fx:DROP_SHADOW 8 0,4 #000000@10+DROP_SHADOW 14 0,14 #000000@9+DROP_SHADOW 19 0,32 #000000@5+DROP_SHADOW 23 0,56 #000000@1+DROP_SHADOW 25 0,88 #000000@0 ⇒Button [type:primary, state:rest] props{Icon:2028:1998; Icon right:true; Icon left:false; Label:true; Text:Button text} {paddingLeft→Padding x,paddingTop→space/2,paddingRight→Padding x,paddingBottom→space/2,height→Height,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round,fills→button-primary/background}
+            IN "chevron_right" 24x24 @16,12 HIDDEN sz:FIXED/FIXED clip fill: ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#ffffff@100 {fills→Defaults/Body light}
+            FR "button_text" 113x27 @16,11 AL:HORIZONTAL gap0 pad0/8/0/8 align:CENTER/CENTER sz:HUG/HUG {paddingLeft→space/2,paddingRight→space/2}
+              TE "button_text" 97x27 @8,0 sz:HUG/HUG fill:#050404@100 «Button text» Onest Medium 18/150% case:ORIGINAL align:LEFT {fontSize→font-size/text-medium}
+            IN "chevron_right" 24x24 @129,12 sz:FIXED/FIXED clip ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→button-primary/accent}
+          IN "Button" 169x48 @185,0 AL:HORIZONTAL gap0 pad8/16/8/16 align:CENTER/CENTER sz:HUG/FIXED r9999 stroke2:#030b1b@100 ⇒Button [type:secondary, state:rest] props{Icon:2028:1998; Icon right:true; Icon left:false; Label:true; Text:Button text} {paddingLeft→Padding x,paddingTop→space/2,paddingRight→Padding x,paddingBottom→space/2,height→Height,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round,strokeTopWeight→border-width/thick,strokeBottomWeight→border-width/thick,strokeLeftWeight→border-width/thick,strokeRightWeight→border-width/thick,strokes→button-secondary/border}
+            IN "chevron_right" 24x24 @16,12 HIDDEN sz:FIXED/FIXED clip fill: ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#1a1a1a@100 {fills→Defaults/Body}
+            FR "button_text" 113x27 @16,11 AL:HORIZONTAL gap0 pad0/8/0/8 align:CENTER/CENTER sz:HUG/HUG {paddingLeft→space/2,paddingRight→space/2}
+              TE "button_text" 97x27 @8,0 sz:HUG/HUG fill:#030b1b@100 «Button text» Onest Medium 18/150% case:ORIGINAL align:LEFT {fills→button-secondary/text,fontSize→font-size/text-medium}
+            IN "chevron_right" 24x24 @129,12 sz:FIXED/FIXED clip ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#1a1a1a@100 {fills→Defaults/Body}
+          IN "Button" 99x32 @230,0 HIDDEN AL:HORIZONTAL gap8 pad0/0/0/0 align:CENTER/CENTER sz:HUG/FIXED ⇒Button [type:tertiary, state:rest] props{Icon right:true; Icon left:false; Icon:2028:1998; Label:true; Text:Button text} {itemSpacing→space/2,paddingLeft→space/0,paddingTop→radius/none,paddingRight→space/0,paddingBottom→radius/none,height→space/7}
+            FR "button_group" 13x10 @0,11 AL:HORIZONTAL gap10 pad0/0/0/0 align:CENTER/CENTER sz:FIXED/FIXED r9999 {itemSpacing→space/3,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round}
+              IN "east" 16x16 @-1,-3 sz:FIXED/FIXED clip fill: ⇒east [Style:Filled]
+                VE "Vector" 13x9 @1,3 sz:FIXED/FIXED fill:#030b1b@100 {fills→button-tertiary/accent}
+            FR "button_text" 87x24 @21,4 AL:HORIZONTAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:HUG/HUG
+              TE "button_text" 87x24 @0,0 sz:HUG/HUG fill:#030b1b@100 «Button text» Onest Medium 16/150% case:ORIGINAL align:LEFT {fills→button-tertiary/text,fontSize→font-size/text-main}
+              IN "Line" 87x1 @0,23 AL:HORIZONTAL gap10 pad0/0/0/0 align:MIN/MIN sz:FIXED/HUG ABS clip ⇒Line [Property 1:Default]
+                FR "Frame 411" 0x1 @0,0 sz:FIXED/FIXED op0 clip fill:#030b1b@100 {fills→button-tertiary/accent}
+  FR "content-content-block_control-image-size-with-padding" 676x372 @772,192 AL:VERTICAL gap10 pad0/0/0/0 align:MIN/MAX sz:FILL/HUG {itemSpacing→space/3}
+    IN "Image" 558x372 @118,0 AL:HORIZONTAL gap10 pad0/0/0/0 align:MIN/MIN sz:FIXED/FIXED ⇒Image
+      IN "fixed_aspect_ratio" 558x372 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG fill:IMAGE/FILL ⇒fixed_aspect_ratio [Aspect Ratio:3:2 | 2:3, Orientation:Landscape]
+        FR "3:1" 558x186 @0,0 AL:HORIZONTAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG
+          IN "fixed_aspect_ratio" 186x186 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+            IN "2:1 Fixed Aspect Ratio Spacer" 186x93 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+              FR "Aspect Ratio Lock - 30°" 186x0 @12,93 sz:FILL/FIXED rot30
+            IN "2:1 Fixed Aspect Ratio Spacer" 186x93 @0,93 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+              FR "Aspect Ratio Lock - 30°" 186x0 @12,93 sz:FILL/FIXED rot30
+          IN "fixed_aspect_ratio" 186x186 @186,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+            IN "2:1 Fixed Aspect Ratio Spacer" 186x93 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+              FR "Aspect Ratio Lock - 30°" 186x0 @12,93 sz:FILL/FIXED rot30
+            IN "2:1 Fixed Aspect Ratio Spacer" 186x93 @0,93 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+              FR "Aspect Ratio Lock - 30°" 186x0 @12,93 sz:FILL/FIXED rot30
+          IN "fixed_aspect_ratio" 186x186 @372,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+            IN "2:1 Fixed Aspect Ratio Spacer" 186x93 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+              FR "Aspect Ratio Lock - 30°" 186x0 @12,93 sz:FILL/FIXED rot30
+            IN "2:1 Fixed Aspect Ratio Spacer" 186x93 @0,93 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+              FR "Aspect Ratio Lock - 30°" 186x0 @12,93 sz:FILL/FIXED rot30
+        FR "3:1" 558x186 @0,186 AL:HORIZONTAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG
+          IN "fixed_aspect_ratio" 186x186 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+            IN "2:1 Fixed Aspect Ratio Spacer" 186x93 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+              FR "Aspect Ratio Lock - 30°" 186x0 @12,93 sz:FILL/FIXED rot30
+            IN "2:1 Fixed Aspect Ratio Spacer" 186x93 @0,93 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+              FR "Aspect Ratio Lock - 30°" 186x0 @12,93 sz:FILL/FIXED rot30
+          IN "fixed_aspect_ratio" 186x186 @186,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+            IN "2:1 Fixed Aspect Ratio Spacer" 186x93 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+              FR "Aspect Ratio Lock - 30°" 186x0 @12,93 sz:FILL/FIXED rot30
+            IN "2:1 Fixed Aspect Ratio Spacer" 186x93 @0,93 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+              FR "Aspect Ratio Lock - 30°" 186x0 @12,93 sz:FILL/FIXED rot30
+          IN "fixed_aspect_ratio" 186x186 @372,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+            IN "2:1 Fixed Aspect Ratio Spacer" 186x93 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+              FR "Aspect Ratio Lock - 30°" 186x0 @12,93 sz:FILL/FIXED rot30
+            IN "2:1 Fixed Aspect Ratio Spacer" 186x93 @0,93 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+              FR "Aspect Ratio Lock - 30°" 186x0 @12,93 sz:FILL/FIXED rot30
+
+===== INSTANCE 2710:56547
+IN "Content / Content block" 1512x938 @0,3223 AL:HORIZONTAL gap32 pad192/64/192/64 align:SPACE_BETWEEN/MIN sz:FIXED/HUG clip fill:#ffffff@100 ⇒Content / Content block [content-location:true, small:false, list:true] {paddingLeft→site/margin,paddingTop→Vertical space,paddingRight→site/margin,paddingBottom→Vertical space,fills→swatch/light-100}
+  FR "content-content-block_content-wrapper" 558x554 @64,192 AL:HORIZONTAL gap32 pad0/0/0/0 align:MIN/MIN sz:FIXED/HUG {itemSpacing→grid/gutter}
+    IN "Assets / Content" 558x554 @0,0 AL:VERTICAL gap24 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒Assets / Content [dark-mode:false, list:true] props{Show Paragraph:true; Show Sublabel:true; Title:Selected by people
+who did the job.; Show Title:true; Show Buttons:true; Show Divider:false; Paragraph:Floyd has spent twenty years in project ; Sublabel:Practitioner credibility} {itemSpacing→content/title-body}
+      FR "assets-content_sublabel-title" 558x160 @0,0 AL:VERTICAL gap16 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→content/subtitle-title}
+        TE "assets-content_text" 558x24 @0,0 sz:FILL/HUG fill:#000000@100 «Practitioner credibility» Onest Regular 16/150% case:UPPER align:LEFT TS:Label Large {fills→copy/subheader,fontSize→font-size/text-main,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+        TE "assets-content_title" 558x120 @0,40 sz:FILL/HUG «Selected by people
+who did the job.» Vend Sans Bold 48/125% case:ORIGINAL align:LEFT TS:H2 SEGS:[Selected by people
+→#000000][who did the job.→#030b1b] {fills→copy/header,fontSize→font-size/h2,fontStyle→font/secondary-bold,fontFamily→font/secondary-family,textRangeFills→copy/header,textRangeFills→swatch/dark-900-o50}
+      IN "Divider" 1440x1 @0,114 HIDDEN sz:FIXED/FIXED fill:#bdbdbd@100 ⇒Divider [Property 1:Default] {fills→defaults/grays/gray-400}
+      FR "assets-content_paragraph-buttons" 558x370 @0,184 AL:VERTICAL gap48 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→content/body-button}
+        FR "assets-content_group_wrap" 558x274 @0,0 AL:VERTICAL gap32 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→content/general-paragraph}
+          TE "assets-content_text" 558x150 @0,0 sz:FILL/HUG fill:#000000@100 «Floyd has spent twenty years in project controls on capital projects across energy, industry and infrastructure. He has run these teams himself, from planning through cost control. That experience sets the criteria, and the platform makes them scalable.» Onest Regular 20/150% case:ORIGINAL align:LEFT TS:Text Large {fills→copy/body,fontSize→font-size/text-large,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+          FR "assets-content_group_wrap" 558x92 @0,182 AL:HORIZONTAL gap32 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→grid/gutter}
+            FR "assets-content_list" 558x92 @0,0 AL:VERTICAL gap16 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→4}
+              IN "quote" 558x92 @0,0 AL:VERTICAL gap8 pad0/0/0/32 align:CENTER/MIN sz:FILL/HUG strokemixed:#00ffd5@100 ⇒quote [dark-mode:false] props{Icon:2249:6632; label text:Dolor nisi turpis aliquet pellentesque d} {itemSpacing→space/2,paddingLeft→space/7,strokes→swatch/brand-accent-500}
+                TE "quote_text" 526x60 @32,0 sz:FILL/HUG fill:#000000@100 «Aliquet vel mauris pellentesque sagittis suscipit. Ornare molestie tristique bibendum faucibus et mi egestas.» Onest Regular 20/150% case:ORIGINAL align:LEFT TS:Text Large {fills→copy/body,fontSize→font-size/text-large,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+                TE "quote_text" 526x24 @32,68 sz:FILL/HUG fill:#030b1b@50 «Floyd Latumeten» Onest Regular 16/150% case:ORIGINAL align:LEFT TS:Text Main {fills→swatch/dark-900-o50,fontSize→font-size/text-main,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,70 HIDDEN AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FIXED/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Scoped deliverables, not open-ended enga} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x81 @32,0 sz:FILL/HUG fill:#000000@100 «Scoped deliverables, not open-ended engagements» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,113 HIDDEN AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FIXED/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Transparent fee to HumAIn — you always k} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x81 @32,0 sz:FILL/HUG fill:#000000@100 «Transparent fee to HumAIn — you always know the cost» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,156 HIDDEN AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FIXED/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:One point of contact, from match to deli} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x54 @32,0 sz:FILL/HUG fill:#000000@100 «One point of contact, from match to delivery» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,199 HIDDEN AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FIXED/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:In pretium quis faucibus} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «In pretium quis faucibus» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+            FR "assets-content_list" 248x199 @280,0 HIDDEN AL:VERTICAL gap16 pad0/0/0/0 align:MIN/MIN sz:FIXED/HUG {itemSpacing→4}
+              IN "content-spec-list-item" 248x27 @0,0 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Quam viverra enim} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «Quam viverra enim» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,43 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Magna pulvinar ac non} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «Magna pulvinar ac non» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,86 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Sit nibh sit ut non nullam} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «Sit nibh sit ut non nullam» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,129 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Sit nibh sit ut non nullam} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «Sit nibh sit ut non nullam» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,172 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Sit nibh sit ut non nullam} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «Sit nibh sit ut non nullam» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+        IN "Button group" 495x48 @0,322 AL:HORIZONTAL gap16 pad0/0/0/0 align:MIN/CENTER sz:HUG/HUG ⇒Button group [Property 1:Default] props{First button:true; Third button:false; Second button:true} {itemSpacing→4}
+          IN "Button" 195x48 @0,0 AL:HORIZONTAL gap0 pad8/16/8/16 align:CENTER/CENTER sz:HUG/FIXED r9999 fill:#00ffd5@100+#ffffff@20 fx:DROP_SHADOW 8 0,4 #000000@10+DROP_SHADOW 14 0,14 #000000@9+DROP_SHADOW 19 0,32 #000000@5+DROP_SHADOW 23 0,56 #000000@1+DROP_SHADOW 25 0,88 #000000@0 ⇒Button [type:primary, state:rest] props{Icon:2028:1998; Icon right:true; Icon left:false; Label:true; Text:More about us} {paddingLeft→Padding x,paddingTop→space/2,paddingRight→Padding x,paddingBottom→space/2,height→Height,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round,fills→button-primary/background}
+            IN "chevron_right" 24x24 @16,12 HIDDEN sz:FIXED/FIXED clip fill: ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#ffffff@100 {fills→Defaults/Body light}
+            FR "button_text" 139x27 @16,11 AL:HORIZONTAL gap0 pad0/8/0/8 align:CENTER/CENTER sz:HUG/HUG {paddingLeft→space/2,paddingRight→space/2}
+              TE "button_text" 123x27 @8,0 sz:HUG/HUG fill:#050404@100 «More about us» Onest Medium 18/150% case:ORIGINAL align:LEFT {fontSize→font-size/text-medium}
+            IN "chevron_right" 24x24 @155,12 sz:FIXED/FIXED clip ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→button-primary/accent}
+          IN "Button" 284x48 @211,0 AL:HORIZONTAL gap0 pad8/16/8/16 align:CENTER/CENTER sz:HUG/FIXED r9999 stroke2:#030b1b@100 ⇒Button [type:secondary, state:rest] props{Icon:2028:1998; Icon right:true; Icon left:false; Label:true; Text:See what experts deliver} {paddingLeft→Padding x,paddingTop→space/2,paddingRight→Padding x,paddingBottom→space/2,height→Height,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round,strokeTopWeight→border-width/thick,strokeBottomWeight→border-width/thick,strokeLeftWeight→border-width/thick,strokeRightWeight→border-width/thick,strokes→button-secondary/border}
+            IN "chevron_right" 24x24 @16,12 HIDDEN sz:FIXED/FIXED clip fill: ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#1a1a1a@100 {fills→Defaults/Body}
+            FR "button_text" 228x27 @16,11 AL:HORIZONTAL gap0 pad0/8/0/8 align:CENTER/CENTER sz:HUG/HUG {paddingLeft→space/2,paddingRight→space/2}
+              TE "button_text" 212x27 @8,0 sz:HUG/HUG fill:#030b1b@100 «See what experts deliver» Onest Medium 18/150% case:ORIGINAL align:LEFT {fills→button-secondary/text,fontSize→font-size/text-medium}
+            IN "chevron_right" 24x24 @244,12 sz:FIXED/FIXED clip ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#1a1a1a@100 {fills→Defaults/Body}
+          IN "Button" 99x32 @230,0 HIDDEN AL:HORIZONTAL gap8 pad0/0/0/0 align:CENTER/CENTER sz:HUG/FIXED ⇒Button [type:tertiary, state:rest] props{Icon right:true; Icon left:false; Icon:2028:1998; Label:true; Text:Button text} {itemSpacing→space/2,paddingLeft→space/0,paddingTop→radius/none,paddingRight→space/0,paddingBottom→radius/none,height→space/7}
+            FR "button_group" 13x10 @0,11 AL:HORIZONTAL gap10 pad0/0/0/0 align:CENTER/CENTER sz:FIXED/FIXED r9999 {itemSpacing→space/3,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round}
+              IN "east" 16x16 @-1,-3 sz:FIXED/FIXED clip fill: ⇒east [Style:Filled]
+                VE "Vector" 13x9 @1,3 sz:FIXED/FIXED fill:#030b1b@100 {fills→button-tertiary/accent}
+            FR "button_text" 87x24 @21,4 AL:HORIZONTAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:HUG/HUG
+              TE "button_text" 87x24 @0,0 sz:HUG/HUG fill:#030b1b@100 «Button text» Onest Medium 16/150% case:ORIGINAL align:LEFT {fills→button-tertiary/text,fontSize→font-size/text-main}
+              IN "Line" 87x1 @0,23 AL:HORIZONTAL gap10 pad0/0/0/0 align:MIN/MIN sz:FIXED/HUG ABS clip ⇒Line [Property 1:Default]
+                FR "Frame 411" 0x1 @0,0 sz:FIXED/FIXED op0 clip fill:#030b1b@100 {fills→button-tertiary/accent}
+  FR "content-content-block_control-image-size-with-padding" 676x451 @772,192 AL:VERTICAL gap10 pad0/0/0/0 align:MIN/MIN sz:FIXED/FIXED r8 {itemSpacing→space/3}
+    GR "content-content-block_group_wrap" 676x451 @0,0 sz:FIXED/FIXED ABS
+      BO "Subtract" 676x451 @0,0 sz:FIXED/FIXED r16 fill:#ff0000@100
+        RE "Rectangle 8" 676x451 @0,0 sz:FIXED/FIXED ABS fill:#d9d9d9@100
+        RE "Rectangle 9" 86x86 @590,365 sz:FIXED/FIXED ABS fill:#d9d9d9@100
+      IN "Image" 676x451 @0,0 AL:HORIZONTAL gap10 pad0/0/0/0 align:MIN/MIN sz:FIXED/FIXED r8 fill:IMAGE/FILL ⇒Image
+        IN "fixed_aspect_ratio" 676x451 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:3:2 | 2:3, Orientation:Landscape]
+          FR "3:1" 676x225 @0,0 AL:HORIZONTAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG
+            IN "fixed_aspect_ratio" 225x225 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 225x225 @225,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 225x225 @451,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+          FR "3:1" 676x225 @0,225 AL:HORIZONTAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG
+            IN "fixed_aspect_ratio" 225x225 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 225x225 @225,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 225x225 @451,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+
+===== INSTANCE 2710:57507
+IN "Content / Content block" 1512x643 @0,9587 AL:HORIZONTAL gap32 pad0/64/192/64 align:SPACE_BETWEEN/MIN sz:FIXED/HUG clip fill:#ffffff@100 ⇒Content / Content block [content-location:true, small:false, list:true] {paddingLeft→site/margin,paddingTop→Vertical space 0,paddingRight→site/margin,paddingBottom→Vertical space,fills→swatch/light-100}
+  FR "content-content-block_content-wrapper" 558x430 @64,0 AL:HORIZONTAL gap32 pad0/0/0/0 align:MIN/MIN sz:FIXED/HUG {itemSpacing→grid/gutter}
+    IN "Assets / Content" 558x430 @0,0 AL:VERTICAL gap24 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒Assets / Content [dark-mode:false, list:true] props{Show Paragraph:true; Show Sublabel:true; Title:Working in project controls ; Show Title:true; Show Buttons:true; Show Divider:false; Paragraph:Cursus eu et vestibulum donec aliquam ma; Sublabel:for candidates} {itemSpacing→content/title-body}
+      FR "assets-content_sublabel-title" 558x160 @0,0 AL:VERTICAL gap16 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→content/subtitle-title}
+        TE "assets-content_text" 558x24 @0,0 sz:FILL/HUG fill:#000000@100 «for candidates» Onest Regular 16/150% case:UPPER align:LEFT TS:Label Large {fills→copy/subheader,fontSize→font-size/text-main,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+        TE "assets-content_title" 558x120 @0,40 sz:FILL/HUG fill:#000000@100 «Working in project controls » Vend Sans Bold 48/125% case:ORIGINAL align:LEFT TS:H2 {fills→copy/header,fontSize→font-size/h2,fontStyle→font/secondary-bold,fontFamily→font/secondary-family}
+      IN "Divider" 1440x1 @0,114 HIDDEN sz:FIXED/FIXED fill:#bdbdbd@100 ⇒Divider [Property 1:Default] {fills→defaults/grays/gray-400}
+      FR "assets-content_paragraph-buttons" 558x246 @0,184 AL:VERTICAL gap48 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→content/body-button}
+        FR "assets-content_group_wrap" 558x150 @0,0 AL:VERTICAL gap32 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→content/general-paragraph}
+          TE "assets-content_text" 558x150 @0,0 sz:FILL/HUG fill:#000000@100 «Cursus eu et vestibulum donec aliquam mattis ornare nec sollicitudin. Accumsan diam maecenas eget rhoncus urna eget. Pellentesque malesuada nullam lectus ultrices at nullam. Justo in sed amet non morbi. Aliquam vitae ligula in arcu risus fermentum quis pulvinar.» Onest Regular 20/150% case:ORIGINAL align:LEFT TS:Text Large {fills→copy/body,fontSize→font-size/text-large,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+          FR "assets-content_group_wrap" 528x226 @0,182 HIDDEN AL:HORIZONTAL gap32 pad0/0/0/0 align:MIN/MIN sz:FIXED/HUG {itemSpacing→grid/gutter}
+            FR "assets-content_list" 528x62 @0,0 AL:VERTICAL gap16 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→4}
+              IN "quote" 528x62 @0,0 AL:VERTICAL gap8 pad0/0/0/32 align:CENTER/MIN sz:FILL/HUG strokemixed:#00ffd5@100 ⇒quote [dark-mode:false] props{Icon:2249:6632; label text:Freelance Experts from a pre-qualified n} {itemSpacing→space/2,paddingLeft→space/7,strokes→swatch/brand-accent-500}
+                TE "quote_text" 496x30 @32,0 sz:FILL/HUG fill:#000000@100 «Floyd Latumeten» Onest Regular 20/150% case:ORIGINAL align:LEFT TS:Text Large {fills→copy/body,fontSize→font-size/text-large,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+                TE "quote_text" 496x24 @32,38 sz:FILL/HUG fill:#030b1b@50 «Floyd Latumeten» Onest Regular 16/150% case:ORIGINAL align:LEFT TS:Text Main {fills→swatch/dark-900-o50,fontSize→font-size/text-main,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,70 HIDDEN AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FIXED/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Scoped deliverables, not open-ended enga} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x81 @32,0 sz:FILL/HUG fill:#000000@100 «Scoped deliverables, not open-ended engagements» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,113 HIDDEN AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FIXED/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Transparent fee to HumAIn — you always k} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x81 @32,0 sz:FILL/HUG fill:#000000@100 «Transparent fee to HumAIn — you always know the cost» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,156 HIDDEN AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FIXED/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:One point of contact, from match to deli} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x54 @32,0 sz:FILL/HUG fill:#000000@100 «One point of contact, from match to delivery» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,199 HIDDEN AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FIXED/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:In pretium quis faucibus} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «In pretium quis faucibus» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+            FR "assets-content_list" 248x199 @280,0 HIDDEN AL:VERTICAL gap16 pad0/0/0/0 align:MIN/MIN sz:FIXED/HUG {itemSpacing→4}
+              IN "content-spec-list-item" 248x27 @0,0 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Quam viverra enim} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «Quam viverra enim» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,43 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Magna pulvinar ac non} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «Magna pulvinar ac non» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,86 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Sit nibh sit ut non nullam} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «Sit nibh sit ut non nullam» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,129 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Sit nibh sit ut non nullam} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «Sit nibh sit ut non nullam» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+              IN "content-spec-list-item" 248x27 @0,172 AL:HORIZONTAL gap8 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG ⇒content-spec-list-item [dark-mode:false] props{Icon:2249:6632; label text:Sit nibh sit ut non nullam} {itemSpacing→space/2}
+                FR "content-spec-list-item_check-24dp-e3e3e3-fill0-wght400-grad0-opsz24-1-1" 24x24 @0,2 sz:FIXED/FIXED clip fill:
+                  VE "Vector" 16x12 @4,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→text}
+                TE "content-spec-list-item_text" 216x27 @32,0 sz:FILL/HUG fill:#000000@100 «Sit nibh sit ut non nullam» Onest Regular 18/150% case:ORIGINAL align:LEFT TS:Text Medium {fills→copy/body,fontSize→font-size/text-medium,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+        IN "Button group" 450x48 @0,198 AL:HORIZONTAL gap16 pad0/0/0/0 align:MIN/CENTER sz:HUG/HUG ⇒Button group [Property 1:Default] props{First button:true; Third button:false; Second button:true} {itemSpacing→4}
+          IN "Button" 201x48 @0,0 AL:HORIZONTAL gap0 pad8/16/8/16 align:CENTER/CENTER sz:HUG/FIXED r9999 fill:#00ffd5@100+#ffffff@20 fx:DROP_SHADOW 8 0,4 #000000@10+DROP_SHADOW 14 0,14 #000000@9+DROP_SHADOW 19 0,32 #000000@5+DROP_SHADOW 23 0,56 #000000@1+DROP_SHADOW 25 0,88 #000000@0 ⇒Button [type:primary, state:rest] props{Icon:2028:1998; Icon right:true; Icon left:false; Label:true; Text:Analyse my CV} {paddingLeft→Padding x,paddingTop→space/2,paddingRight→Padding x,paddingBottom→space/2,height→Height,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round,fills→button-primary/background}
+            IN "chevron_right" 24x24 @16,12 HIDDEN sz:FIXED/FIXED clip fill: ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#ffffff@100 {fills→Defaults/Body light}
+            FR "button_text" 145x27 @16,11 AL:HORIZONTAL gap0 pad0/8/0/8 align:CENTER/CENTER sz:HUG/HUG {paddingLeft→space/2,paddingRight→space/2}
+              TE "button_text" 129x27 @8,0 sz:HUG/HUG fill:#050404@100 «Analyse my CV» Onest Medium 18/150% case:ORIGINAL align:LEFT {fontSize→font-size/text-medium}
+            IN "chevron_right" 24x24 @161,12 sz:FIXED/FIXED clip ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→button-primary/accent}
+          IN "Button" 233x48 @217,0 AL:HORIZONTAL gap0 pad8/16/8/16 align:CENTER/CENTER sz:HUG/FIXED r9999 stroke2:#030b1b@100 ⇒Button [type:secondary, state:rest] props{Icon:2028:1998; Icon right:true; Icon left:false; Label:true; Text:View opportunities} {paddingLeft→Padding x,paddingTop→space/2,paddingRight→Padding x,paddingBottom→space/2,height→Height,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round,strokeTopWeight→border-width/thick,strokeBottomWeight→border-width/thick,strokeLeftWeight→border-width/thick,strokeRightWeight→border-width/thick,strokes→button-secondary/border}
+            IN "chevron_right" 24x24 @16,12 HIDDEN sz:FIXED/FIXED clip fill: ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#1a1a1a@100 {fills→Defaults/Body}
+            FR "button_text" 177x27 @16,11 AL:HORIZONTAL gap0 pad0/8/0/8 align:CENTER/CENTER sz:HUG/HUG {paddingLeft→space/2,paddingRight→space/2}
+              TE "button_text" 161x27 @8,0 sz:HUG/HUG fill:#030b1b@100 «View opportunities» Onest Medium 18/150% case:ORIGINAL align:LEFT {fills→button-secondary/text,fontSize→font-size/text-medium}
+            IN "chevron_right" 24x24 @193,12 sz:FIXED/FIXED clip ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#1a1a1a@100 {fills→Defaults/Body}
+          IN "Button" 99x32 @230,0 HIDDEN AL:HORIZONTAL gap8 pad0/0/0/0 align:CENTER/CENTER sz:HUG/FIXED ⇒Button [type:tertiary, state:rest] props{Icon right:true; Icon left:false; Icon:2028:1998; Label:true; Text:Button text} {itemSpacing→space/2,paddingLeft→space/0,paddingTop→radius/none,paddingRight→space/0,paddingBottom→radius/none,height→space/7}
+            FR "button_group" 13x10 @0,11 AL:HORIZONTAL gap10 pad0/0/0/0 align:CENTER/CENTER sz:FIXED/FIXED r9999 {itemSpacing→space/3,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round}
+              IN "east" 16x16 @-1,-3 sz:FIXED/FIXED clip fill: ⇒east [Style:Filled]
+                VE "Vector" 13x9 @1,3 sz:FIXED/FIXED fill:#030b1b@100 {fills→button-tertiary/accent}
+            FR "button_text" 87x24 @21,4 AL:HORIZONTAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:HUG/HUG
+              TE "button_text" 87x24 @0,0 sz:HUG/HUG fill:#030b1b@100 «Button text» Onest Medium 16/150% case:ORIGINAL align:LEFT {fills→button-tertiary/text,fontSize→font-size/text-main}
+              IN "Line" 87x1 @0,23 AL:HORIZONTAL gap10 pad0/0/0/0 align:MIN/MIN sz:FIXED/HUG ABS clip ⇒Line [Property 1:Default]
+                FR "Frame 411" 0x1 @0,0 sz:FIXED/FIXED op0 clip fill:#030b1b@100 {fills→button-tertiary/accent}
+  FR "content-content-block_control-image-size-with-padding" 676x451 @772,0 AL:VERTICAL gap10 pad0/0/0/0 align:MIN/MIN sz:FIXED/FIXED r8 {itemSpacing→space/3}
+    GR "content-content-block_group_wrap" 676x451 @0,0 sz:FIXED/FIXED ABS
+      BO "Subtract" 676x451 @0,0 sz:FIXED/FIXED r16 fill:#ff0000@100
+        RE "Rectangle 8" 676x451 @0,0 sz:FIXED/FIXED ABS fill:#d9d9d9@100
+        RE "Rectangle 9" 86x86 @590,365 sz:FIXED/FIXED ABS fill:#d9d9d9@100
+      IN "Image" 676x451 @0,0 AL:HORIZONTAL gap10 pad0/0/0/0 align:MIN/MIN sz:FIXED/FIXED r8 ⇒Image
+        IN "fixed_aspect_ratio" 676x451 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG fill:IMAGE/FILL ⇒fixed_aspect_ratio [Aspect Ratio:3:2 | 2:3, Orientation:Landscape]
+          FR "3:1" 676x225 @0,0 AL:HORIZONTAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG
+            IN "fixed_aspect_ratio" 225x225 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 225x225 @225,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 225x225 @451,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+          FR "3:1" 676x225 @0,225 AL:HORIZONTAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG
+            IN "fixed_aspect_ratio" 225x225 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 225x225 @225,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 225x225 @451,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 225x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 225x0 @15,113 sz:FILL/FIXED rot30
+
+===== INSTANCE 2287:10206
+IN "Content / Content block" 1512x835 @0,2625 AL:HORIZONTAL gap32 pad192/64/192/64 align:SPACE_BETWEEN/MIN sz:FIXED/HUG clip fill:#ffffff@100 ⇒Content / Content block [content-location:false, small:false, list:false] {paddingLeft→site/margin,paddingTop→section-space/large,paddingRight→site/margin,paddingBottom→section-space/large,fills→background-2}
+  FR "content-content-block_control-image-size-with-padding" 677x451 @64,192 AL:VERTICAL gap10 pad0/0/0/0 align:MIN/MIN sz:FIXED/FIXED {itemSpacing→space/3}
+    GR "content-content-block_group_wrap" 676x451 @0,0 sz:FIXED/FIXED ABS
+      BO "Subtract" 676x451 @0,0 sz:FIXED/FIXED r16 fill:#ff0000@100
+        RE "Rectangle 8" 676x451 @0,0 sz:FIXED/FIXED ABS fill:#d9d9d9@100
+        RE "Rectangle 9" 86x86 @590,365 sz:FIXED/FIXED ABS fill:#d9d9d9@100
+      IN "Image" 677x451 @0,0 AL:HORIZONTAL gap10 pad0/0/0/0 align:MIN/MIN sz:FIXED/HUG ⇒Image
+        IN "fixed_aspect_ratio" 677x451 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG fill:IMAGE/FILL ⇒fixed_aspect_ratio [Aspect Ratio:3:2 | 2:3, Orientation:Landscape]
+          FR "3:1" 677x226 @0,0 AL:HORIZONTAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG
+            IN "fixed_aspect_ratio" 226x226 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 226x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 226x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 226x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 226x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 226x226 @226,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 226x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 226x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 226x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 226x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 226x226 @451,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 226x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 226x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 226x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 226x0 @15,113 sz:FILL/FIXED rot30
+          FR "3:1" 677x226 @0,226 AL:HORIZONTAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG
+            IN "fixed_aspect_ratio" 226x226 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 226x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 226x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 226x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 226x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 226x226 @226,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 226x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 226x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 226x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 226x0 @15,113 sz:FILL/FIXED rot30
+            IN "fixed_aspect_ratio" 226x226 @451,0 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒fixed_aspect_ratio [Aspect Ratio:1:1, Orientation:Portrait]
+              IN "2:1 Fixed Aspect Ratio Spacer" 226x113 @0,0 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 226x0 @15,113 sz:FILL/FIXED rot30
+              IN "2:1 Fixed Aspect Ratio Spacer" 226x113 @0,113 AL:VERTICAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG clip ⇒2:1 Fixed Aspect Ratio Spacer
+                FR "Aspect Ratio Lock - 30°" 226x0 @15,113 sz:FILL/FIXED rot30
+  FR "content-content-block_content-wrapper" 558x430 @890,192 AL:HORIZONTAL gap32 pad0/0/0/0 align:MAX/MIN sz:FIXED/HUG {itemSpacing→grid/gutter}
+    IN "Assets / Content" 558x430 @0,0 AL:VERTICAL gap24 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG ⇒Assets / Content [dark-mode:false, list:false] props{Show Paragraph:true; Show Sublabel:true; Title:Tell us where you need help. We deliver ; Show Title:true; Show Buttons:true; Show Divider:false; Paragraph:Need a forecast rebuilt, a baseline set ; Sublabel:How it works} {itemSpacing→space/6,width→columns/5 Col}
+      FR "assets-content_sublabel-title" 558x220 @0,0 AL:VERTICAL gap16 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→content/subtitle-title}
+        TE "assets-content_text" 558x24 @0,0 sz:FILL/HUG fill:#000000@100 «How it works» Onest Regular 16/150% case:UPPER align:LEFT TS:Label Large {fills→copy/subheader,fontSize→font-size/text-main,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+        TE "assets-content_title" 558x180 @0,40 sz:FILL/HUG «Tell us where you need help. We deliver the expert.» Vend Sans Bold 48/125% case:ORIGINAL align:LEFT TS:H2 SEGS:[Tell us where you need help. →#000000][We deliver the expert.→#030b1b] {fills→copy/header,fontSize→font-size/h2,fontStyle→font/secondary-bold,fontFamily→font/secondary-family,textRangeFills→copy/header,textRangeFills→swatch/dark-900-o50}
+      IN "Divider" 1440x1 @0,114 HIDDEN sz:FIXED/FIXED fill:#bdbdbd@100 ⇒Divider [Property 1:Default] {fills→defaults/grays/gray-400}
+      FR "assets-content_paragraph-buttons" 558x186 @0,244 AL:VERTICAL gap48 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG {itemSpacing→content/body-button}
+        TE "assets-content_text" 558x90 @0,0 sz:FILL/HUG fill:#000000@100 «Need a forecast rebuilt, a baseline set up, or reporting that leadership trusts  Point at the artefact — we match you with the specialist who owns that part of project controls.» Onest Regular 20/150% case:ORIGINAL align:LEFT TS:Text Large {fills→copy/body,fontSize→font-size/text-large,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+        IN "Button group" 515x48 @0,138 AL:HORIZONTAL gap16 pad0/0/0/0 align:MIN/CENTER sz:HUG/HUG ⇒Button group [Property 1:Default] props{First button:true; Third button:false; Second button:true} {itemSpacing→4}
+          IN "Button" 278x48 @0,0 AL:HORIZONTAL gap0 pad8/16/8/16 align:CENTER/CENTER sz:HUG/FIXED r9999 fill:#00ffd5@100+#ffffff@20 fx:DROP_SHADOW 8 0,4 #000000@10+DROP_SHADOW 14 0,14 #000000@9+DROP_SHADOW 19 0,32 #000000@5+DROP_SHADOW 23 0,56 #000000@1+DROP_SHADOW 25 0,88 #000000@0 ⇒Button [type:primary, state:rest] props{Icon:2028:1998; Icon right:true; Icon left:false; Label:true; Text:Describe your challenge} {paddingLeft→Padding x,paddingTop→space/2,paddingRight→Padding x,paddingBottom→space/2,height→Height,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round,fills→button-primary/background}
+            IN "chevron_right" 24x24 @16,12 HIDDEN sz:FIXED/FIXED clip fill: ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#ffffff@100 {fills→Defaults/Body light}
+            FR "button_text" 222x27 @16,11 AL:HORIZONTAL gap0 pad0/8/0/8 align:CENTER/CENTER sz:HUG/HUG {paddingLeft→space/2,paddingRight→space/2}
+              TE "button_text" 206x27 @8,0 sz:HUG/HUG fill:#050404@100 «Describe your challenge» Onest Medium 18/150% case:ORIGINAL align:LEFT {fontSize→font-size/text-medium}
+            IN "chevron_right" 24x24 @238,12 sz:FIXED/FIXED clip ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→button-primary/accent}
+          IN "Button" 221x48 @294,0 AL:HORIZONTAL gap0 pad8/16/8/16 align:CENTER/CENTER sz:HUG/FIXED r9999 stroke2:#030b1b@100 ⇒Button [type:secondary, state:rest] props{Icon:2028:1998; Icon right:true; Icon left:false; Label:true; Text:How hiring works} {paddingLeft→Padding x,paddingTop→space/2,paddingRight→Padding x,paddingBottom→space/2,height→Height,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round,strokeTopWeight→border-width/thick,strokeBottomWeight→border-width/thick,strokeLeftWeight→border-width/thick,strokeRightWeight→border-width/thick,strokes→button-secondary/border}
+            IN "chevron_right" 24x24 @16,12 HIDDEN sz:FIXED/FIXED clip fill: ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#1a1a1a@100 {fills→Defaults/Body}
+            FR "button_text" 165x27 @16,11 AL:HORIZONTAL gap0 pad0/8/0/8 align:CENTER/CENTER sz:HUG/HUG {paddingLeft→space/2,paddingRight→space/2}
+              TE "button_text" 149x27 @8,0 sz:HUG/HUG fill:#030b1b@100 «How hiring works» Onest Medium 18/150% case:ORIGINAL align:LEFT {fills→button-secondary/text,fontSize→font-size/text-medium}
+            IN "chevron_right" 24x24 @181,12 sz:FIXED/FIXED clip ⇒chevron_right [Style:Filled]
+              VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#1a1a1a@100 {fills→Defaults/Body}
+          IN "Button" 99x32 @230,0 HIDDEN AL:HORIZONTAL gap8 pad0/0/0/0 align:CENTER/CENTER sz:HUG/FIXED ⇒Button [type:tertiary, state:rest] props{Icon right:true; Icon left:false; Icon:2028:1998; Label:true; Text:Button text} {itemSpacing→space/2,paddingLeft→space/0,paddingTop→radius/none,paddingRight→space/0,paddingBottom→radius/none,height→space/7}
+            FR "button_group" 13x10 @0,11 AL:HORIZONTAL gap10 pad0/0/0/0 align:CENTER/CENTER sz:FIXED/FIXED r9999 {itemSpacing→space/3,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round}
+              IN "east" 16x16 @-1,-3 sz:FIXED/FIXED clip fill: ⇒east [Style:Filled]
+                VE "Vector" 13x9 @1,3 sz:FIXED/FIXED fill:#030b1b@100 {fills→button-tertiary/accent}
+            FR "button_text" 87x24 @21,4 AL:HORIZONTAL gap0 pad0/0/0/0 align:CENTER/CENTER sz:HUG/HUG
+              TE "button_text" 87x24 @0,0 sz:HUG/HUG fill:#030b1b@100 «Button text» Onest Medium 16/150% case:ORIGINAL align:LEFT {fills→button-tertiary/text,fontSize→font-size/text-main}
+              IN "Line" 87x1 @0,23 AL:HORIZONTAL gap10 pad0/0/0/0 align:MIN/MIN sz:FIXED/HUG ABS clip ⇒Line [Property 1:Default]
+                FR "Frame 411" 0x1 @0,0 sz:FIXED/FIXED op0 clip fill:#030b1b@100 {fills→button-tertiary/accent}

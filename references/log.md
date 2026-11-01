@@ -197,3 +197,14 @@
 - Script: panels by order, start on the middle expert.
 - Published to staging 3×. Measured: row and panel in sync (click, arrows, swipe, loop), no sideways scroll, no console errors; Example Components expert cards unchanged. Fresh reviewer ran (audit file).
 - Review fixes, published 2× more: 1/2 experts (no white clones, no loop/arrows with 1, full row with 2), panel list roles removed, hero photo eager, cms.json refreshed. Records corrected (Example Components names were `<h3>`).
+
+## 2026-11-01 — Home «Content block» (Split Content) — Aniek Velthuizen with Claude
+- Figma `Content / Content block` (`2323:33112`, set `2249:8012`) read in Claude in Chrome with the Plugin API (Figma MCP at its call limit); tree, pictures and the two photos in `references/figma/content-block/` (local receiver on 127.0.0.1). 9 instances on 7 pages; Home B has two. Plan `references/plans/2026-11-01-content-block.md`; owner took all four recommended answers.
+- Two photos uploaded (create_asset + S3 POST, 201): `split-content-practitioners.jpg` (`6ae720745b895866b95df6da`), `split-content-candidates.jpg` (`6ae720745667b0fdd31c898d`), 1352 × 902, ~250 KB.
+- New section component **Split Content** (`410b9fa3-…`, group Sections): 16 classes + combos, notch mask, embed, 18 props + slot List, variants Image Right / Image Left. Card Bullet got variant **Large** (base renamed Small; text size moved to the wrapper's Text Style mode).
+- Home: Split Content #1 after Sticky Steps, #2 at the end of `page_main` (Space Top none).
+- Fixes after the first measure: quote texts were still trimmed (`u-text-trim-off` only reaches direct children → also on `_quote`), figcaption centred by Webflow's default (→ left).
+- Published to staging 3×. `references/split-check.mjs` at 1512 / 1280 / 991 / 767 / 402: at 1512 every box equals Figma (sections 938 / 643, photo 772/192 676 × 451); stacked text-first below 992, no sideways scroll, no console errors; patched previews of Image Left and a 6-item Large checklist (18/27, icon 24, rows 16 apart).
+- Open: checklist slot can only be filled in the Designer; Image Left text starts 30 px left of Figma (Project controls only); «Working in project controls?» wraps after «in» (site H2 balanced wrapping).
+- Review fixes (owner: "verwerk ze"): Card Bullet `listitem` + `list` on the card holders; quote-margin rule out of the embed; Space Top case-insensitive; real space between the title parts. Photo `sizes` not possible (reserved attribute; a trial Sizes prop on Visual Image was removed). Published 1×; split-check unchanged (938 / 643 at 1512, no overflow, no errors), Example Components 14 bullets in lists, still 14/21. Fresh re-check reviewer run afterwards.
+- Owner: photo `sizes` stays `100vw`, no script. Re-check reviewer: fixes 1, 2, 4 and case-insensitive Space Top ✅, no new findings (audit file updated).
