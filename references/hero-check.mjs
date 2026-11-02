@@ -6,7 +6,7 @@ import { spawn } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 
-const url = process.argv[2] || 'https://humain-d16f03.webflow.io/';
+const url = process.argv[2] || 'https://humain-dev.webflow.io/';
 const out = process.argv[3] || './hero-out';
 const widths = (process.env.WIDTHS || '1512,1280,991,767,402').split(',').map(Number);
 fs.mkdirSync(out, { recursive: true });
