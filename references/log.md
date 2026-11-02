@@ -229,6 +229,12 @@
 - Plan `references/plans/2026-11-02-home-cta.md`, decisions `decisions/components/cta-split.md`: new section **CTA Split**, Button Main ×2, Visual Image, after Split Content #2.
 - Not built: all three Webflow connectors answer 404 for site `6ae35364a38b2d71cab8c607` (local `webflow`: Core / THDV / Wayfinder; claude.ai: Buitencampus; `webflow-studijob`: Studijob).
 
+## 2026-11-02 — Hero intro, autoplay, calmer switch (Aniek Velthuizen, via Claude)
+- Staging moved to humain-dev.webflow.io (another session); the claude.ai Webflow connector was signed in to Buitencampus for a while and is back on Humain. `hero-check.mjs` now points at humain-dev.
+- New component `Global | Custom Code` (top of `page_wrap` on Home) with the hero intro CSS and the panel gate. Reveal attributes on the hero parts; wrappers for card and logos.
+- Hero embed: autoplay 6 s (stops on touch, pauses on hover / out of view), staggered switch, start at DOMContentLoaded.
+- Tested first on a patched copy of the live page, then published 1×. Measured: no wrong panel and no row jump in any frame (1512, 402, slow); timings as planned; layout unchanged. Records: `decisions/motion.md`, hero-experts.md. Fresh reviewer running.
+
 ## 2026-11-02 — Content / WYSIWYG as Rich Content (Privacy & Cookies) — Aniek Velthuizen with Claude
 - Figma `Content / WYSIWYG` (`2444:35732`, component `2444:35717`) read in Claude in Chrome with the Plugin API (Figma MCP at its View-seat limit); tree and pictures in `references/figma/content-wysiwyg/`. Plan `references/plans/2026-11-02-content-wysiwyg.md`; owner took all three recommendations (H2 in the text at H3 size, legal header later, lorem until copy).
 - Webflow through the claude.ai connector (back after a 404 earlier today; the local `webflow` and studijob connectors still 404).
@@ -237,3 +243,18 @@
 - Fixes after the first measure: Lumos trim made the section 119 px short → `u-text-trim-off`; title → text was 16 (margin collapse) → margin-top 0 after an h2.
 - Published to staging 2× (announced to the Services, CTA and Hero sessions first). `references/rich-content-check.mjs` at 1512 / 1280 / 991 / 767 / 402: 1512 equals Figma (1204 tall, column 300/912, 0/45/55/205/237), no sideways scroll, no console errors. SEO description set.
 - Open: page has no h1 until the legal header is built; Content default for new instances is one plain paragraph (headings in a default are a Designer edit).
+
+## 2026-11-02 — Home «Expertise» built (Spotlight Grid) — Aniek Velthuizen with Claude
+- Owner: "Connector staat, bouw". Webflow through the claude.ai connector (`846065a5-…`); the local `webflow` connector still has no Humain.
+- Photo `spotlight-expertise-lisette` uploaded (create_asset + S3 POST 201, `6ae8d856812d3edb22206286`), compressed to WebP (757 → 84 KB).
+- 21 classes + combos (`spotlight-grid_*`), tree built after `page_main`, transformed into **Spotlight Grid** (`4f869313-…`, group Sections), slots List Start / List End, 9 props bound, moved into `page_main` and Split Content #2 re-appended after it. Six Card Primary Discipline cards inserted through the API (`insert_in_slot` on the page instance works now), props set; titles H3 in the Designer (Claude in Chrome).
+- Coordinated with the parallel sessions Content / CTA and Content / WYSIWYG (Home order, 429s, publishes). Published to staging 2×.
+- `references/spotlight-check.mjs` at 1512 / 1280 / 992 / 991 / 767 / 402: at 1512 section 1190 (= Figma), header, layout, panel and quote boxes equal Figma; cards 198 (Figma 194, known Discipline height); no sideways scroll; no console errors. Fix after the first measure: Webflow's default figcaption margin (5 px).
+
+## 2026-11-02 — Home «CTA» built (CTA Split) — Aniek Velthuizen with Claude
+- Webflow through the claude.ai connector (re-pointed to the Humain workspace by the owner). Photo uploaded (create_asset + S3 POST, 201): `cta-split-colleagues.jpg` (`6ae8d89abe7ead5af35234f6`, 1536 × 1024, 311 KB, alt text on the asset).
+- 9 classes + 6 empty combos; section built in `page_wrap`, closed into **CTA Split** (`0a616993-…`, group Sections), 12 props bound (texts, buttons, image, Space Top attribute), moved to the end of `page_main` after the Services session's "Home vrij". Home overrides: «Request a shortlist» / «Discuss your project».
+- Fix after the first measure: the title's space span is stored as `&nbsp;` → title 3 lines at 1512; a `wbr` after it restores Figma's 2 lines.
+- Published to staging 1× myself (+ two peer publishes carried the changes). `references/cta-check.mjs` at 1512 / 1280 / 1100 / 991 / 767 / 479 / 402: at 1512 every box equals Figma (section 612, card 420, photo 692 × 420), mobile within 1 px, no sideways scroll, no text outside the card, no console errors.
+- Coordinated `page_main` order and publishes with the Content / Services and Rich Content sessions.
+- Review (fresh agent, `references/audit/2026-11-02-spotlight-grid.md`): no defects at 1512. Fixed: quote default with non-breaking hyphens («go‑to», «high‑quality»), photo shifted `translateX(16%)` below 992 so the person sits under the panel centre (measured 201/201 at 402, 495/495 at 991). Published to staging 1× more. Open for the owner: columns out of step 992–1150, sections not on Example Components, quote person/alt text.

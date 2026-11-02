@@ -62,3 +62,5 @@ Props: Content `Eyebrow`, `Title`, `Title Muted` · Panel `Quote`, `Name`, `Role
 1. Mobile order (no design): cards first, then the quote panel? **Recommended: yes**, 2 columns of cards 768–991, 1 column below.
 2. «View» links: all to `/project-delivery-experts` until discipline pages exist? **Recommended: yes.**
 3. Connector: reconnect a Webflow connector to the workspace that holds «Humain» (claude.ai connector settings or `/mcp` in a terminal), then I build.
+
+Owner (Aniek, 2026-11-02): "Connector staat, bouw" — the claude.ai Webflow connector (`846065a5-…`) reaches Humain again; Q1 and Q2 built with the recommended answers.
