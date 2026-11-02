@@ -21,3 +21,12 @@ Page now: `page_wrap` › Global Styles · Global Guides · Nav · `page_main` �
 ## 2026-11-01 — «Content block» twice (Split Content)
 Plan: `references/plans/2026-11-01-content-block.md`. Figma `Content / Content block`, Home B instances 4 («Selected by people who did the job.», after Our method) and 9 («Working in project controls?», before the CTA). Built as **Split Content** (`decisions/components/split-content.md`). Owner (Aniek): place both now; #2 stays at the end of `page_main` until Services, Testimonials, Recruitment process and «3 UBRS» are built above it.
 Page now: `page_main` › Hero Experts · Stagger Cards · Sticky Steps · **Split Content** (#1) · **Split Content** (#2, Space Top none) · then Footer.
+
+## 2026-11-02 — «Expertise» (Six disciplines), no tab variant
+Plan: `references/plans/2026-11-02-home-expertise.md`. Figma `Content / Services` (`2323:32509`): only `type=expertise` is on 1. Home B (`2710:48619`, after Content block #1). The tabbed `type=services` sits only on `[figma-only] 1. Home A`; owner (Aniek, 2026-11-02): "stond op de oude versie van de homepage, dus dat met de tabjes hoef je niet te bouwen". `variant-2` / `variant3` are used nowhere — not built.
+Built as **Spotlight Grid** (`decisions/components/spotlight-grid.md`) between Split Content #1 and #2, with Card Primary Discipline ×6 (the claude.ai Webflow connector reached the site again later that day).
+Page now: `page_main` › Hero Experts · Stagger Cards · Sticky Steps · Split Content #1 · **Spotlight Grid** · Split Content #2 · CTA Split (another session, same day) · then Footer.
+
+## 2026-11-02 — «CTA» at the end of page_main
+Plan: `references/plans/2026-11-02-home-cta.md`. Figma `Content / CTA` (`2710:48623`), last block on 1. Home B before the footer. Built as **CTA Split** (`decisions/components/cta-split.md`), Space Top none.
+Page now (Services session placed Spotlight Grid the same day): `page_main` › Hero Experts · Stagger Cards · Sticky Steps · Split Content #1 · Spotlight Grid · Split Content #2 · **CTA Split** · then Footer. Placed after the Services session released `page_main` ("Home vrij").

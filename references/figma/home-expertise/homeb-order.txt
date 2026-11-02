@@ -1,0 +1,12 @@
+0 2710:48616 Header / Home v01 h1019
+1019 2710:48617 Frame 592 h810
+1829 2710:48618 Content scrolly telling / Glass cards h1394
+3223 2710:56547 Content / Content block h938
+4161 2710:48619 Content / Services desktop h1190
+5351 2710:48620 Content / Testimonials h1560
+6911 2710:57363 Content - Recruitment process h1930
+8841 2710:57450 Content / 3 UBRS - White background h746
+9587 2710:57507 Content / Content block h643
+10230 2710:48623 Content / CTA h612
+10842 2710:48624 Footer h550
+0 2710:48625 Navbar - Light h180

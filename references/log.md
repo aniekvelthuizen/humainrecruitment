@@ -219,9 +219,56 @@
 - Review (fresh agent, `references/audit/2026-11-01-sticky-steps.md`), owner chose the recommended points: hold space after the last card (full stack now held ~350 px), Process + pill + checklist on Example Components (pill 31 → 26), embed trimmed + `u-embed-css`, columns shrink 992–1512, Button Link default as page How It Works and slot tooltip (Designer), icons off on the Home cards. Accepted: inline weight on the eyebrow text, title space in CSS only. Published to staging 2× more; re-measured at 1512 / 1100 / 992 / 991 / 402, no sideways scroll.
 - Sticky Steps, owner feedback (Aniek): stacked cards too white, text hard to read. Cause: three 20 % glass layers adding up (~49 % white). Fix: covered cards fade their tint and text by the overlap (script + CSS in the section embed, `--sticky-steps-cover`). Published 2×; card 3 in the held stack now (56,138,173) vs design (51,150,180), even across the card, 1512 and 402. Figma memory corrected: the MCP account is aniek@cutthecode.com on a View seat (call limit); Chrome uses aniekvelthuizen@gmail.com.
 
+## 2026-11-02 — Home «Expertise», plan only — Aniek Velthuizen with Claude
+- Figma `Content / Services` (`2323:32509`) read: one `get_metadata` through the MCP, then its View-seat limit; the rest in Claude in Chrome with the Plugin API (local receiver on port 8767). Spec, pictures and the cut-out photo in `references/figma/home-expertise/`.
+- Only `type=expertise` is on Home B; the tab variant is Home A only — owner: not built. Plan `references/plans/2026-11-02-home-expertise.md`: new section **Spotlight Grid**, Card Primary Discipline ×6, `gradient/brand-*` panel.
+- Not built: the local `webflow`, the claude.ai Webflow and the Studijob connectors all answer 404 for site `6ae35364a38b2d71cab8c607`. Needs a connector on the Humain workspace.
+
+## 2026-11-02 — Home «CTA» planned, build blocked — Aniek Velthuizen with Claude
+- Figma `Content / CTA` (`2323:32532`, set `2382:37326`) read in Claude in Chrome with the Plugin API (Figma MCP at its View-seat call limit); tree, instance overrides, pictures and the photo in `references/figma/home-cta/` (local receiver on 127.0.0.1:8771). 13 desktop + 2 mobile instances; Home B `2710:48623`.
+- Plan `references/plans/2026-11-02-home-cta.md`, decisions `decisions/components/cta-split.md`: new section **CTA Split**, Button Main ×2, Visual Image, after Split Content #2.
+- Not built: all three Webflow connectors answer 404 for site `6ae35364a38b2d71cab8c607` (local `webflow`: Core / THDV / Wayfinder; claude.ai: Buitencampus; `webflow-studijob`: Studijob).
+
 ## 2026-11-02 — Hero intro, autoplay, calmer switch (Aniek Velthuizen, via Claude)
 - Staging moved to humain-dev.webflow.io (another session); the claude.ai Webflow connector was signed in to Buitencampus for a while and is back on Humain. `hero-check.mjs` now points at humain-dev.
 - New component `Global | Custom Code` (top of `page_wrap` on Home) with the hero intro CSS and the panel gate. Reveal attributes on the hero parts; wrappers for card and logos.
 - Hero embed: autoplay 6 s (stops on touch, pauses on hover / out of view), staggered switch, start at DOMContentLoaded.
 - Tested first on a patched copy of the live page, then published 1×. Measured: no wrong panel and no row jump in any frame (1512, 402, slow); timings as planned; layout unchanged. Records: `decisions/motion.md`, hero-experts.md.
 - Review (fresh agent, published Home): 3 broken on a very slow connection / reduced motion (stacked panels and uncentred row after the 3 s time-out, row blink, row missing with reduced motion + no Swiper), nav fading in dark, Tab/Space stopped autoplay, PageDown moved the slider, autoplay ran with only the logos in view. All fixed: CSS-only middle panel, release on page load, nav waits for `data-nav-theme`, ← → only, `pageUpDown` off, observer on stage + row. Re-measured on a patched copy (normal, Swiper +4 s, very slow, very slow + reduced): clean. Published with the Rich Content session's publish; re-measured on staging (same scenarios, plus Tab, PageDown, ← → and logos-only), and the hero layout again after their rich-text restore: unchanged. Owner: hero Home done (2026-11-02).
+
+## 2026-11-02 — Content / WYSIWYG as Rich Content (Privacy & Cookies) — Aniek Velthuizen with Claude
+- Figma `Content / WYSIWYG` (`2444:35732`, component `2444:35717`) read in Claude in Chrome with the Plugin API (Figma MCP at its View-seat limit); tree and pictures in `references/figma/content-wysiwyg/`. Plan `references/plans/2026-11-02-content-wysiwyg.md`; owner took all three recommendations (H2 in the text at H3 size, legal header later, lorem until copy).
+- Webflow through the claude.ai connector (back after a 404 earlier today; the local `webflow` and studijob connectors still 404).
+- The page **Privacy & Cookies** (`6ae37d71382b5fd60a01d143`, `/privacy-cookies`) already existed with a Lumos placeholder hero; left in place for the legal header block. Footer link already pointed at it.
+- New section component **Rich Content** (`6ca4bdaf-…`, group Sections): 3 classes + combos, prop Content (Rich Text), CSS embed. Placed in `page_main` after the placeholder; 4 × H2 + paragraph (H2s built into the instance's rich text through the API).
+- Fixes after the first measure: Lumos trim made the section 119 px short → `u-text-trim-off`; title → text was 16 (margin collapse) → margin-top 0 after an h2.
+- Published to staging 2× (announced to the Services, CTA and Hero sessions first). `references/rich-content-check.mjs` at 1512 / 1280 / 991 / 767 / 402: 1512 equals Figma (1204 tall, column 300/912, 0/45/55/205/237), no sideways scroll, no console errors. SEO description set.
+- Open: page has no h1 until the legal header is built; Content default for new instances is one plain paragraph (headings in a default are a Designer edit).
+
+## 2026-11-02 — Home «Expertise» built (Spotlight Grid) — Aniek Velthuizen with Claude
+- Owner: "Connector staat, bouw". Webflow through the claude.ai connector (`846065a5-…`); the local `webflow` connector still has no Humain.
+- Photo `spotlight-expertise-lisette` uploaded (create_asset + S3 POST 201, `6ae8d856812d3edb22206286`), compressed to WebP (757 → 84 KB).
+- 21 classes + combos (`spotlight-grid_*`), tree built after `page_main`, transformed into **Spotlight Grid** (`4f869313-…`, group Sections), slots List Start / List End, 9 props bound, moved into `page_main` and Split Content #2 re-appended after it. Six Card Primary Discipline cards inserted through the API (`insert_in_slot` on the page instance works now), props set; titles H3 in the Designer (Claude in Chrome).
+- Coordinated with the parallel sessions Content / CTA and Content / WYSIWYG (Home order, 429s, publishes). Published to staging 2×.
+- `references/spotlight-check.mjs` at 1512 / 1280 / 992 / 991 / 767 / 402: at 1512 section 1190 (= Figma), header, layout, panel and quote boxes equal Figma; cards 198 (Figma 194, known Discipline height); no sideways scroll; no console errors. Fix after the first measure: Webflow's default figcaption margin (5 px).
+
+## 2026-11-02 — Home «CTA» built (CTA Split) — Aniek Velthuizen with Claude
+- Webflow through the claude.ai connector (re-pointed to the Humain workspace by the owner). Photo uploaded (create_asset + S3 POST, 201): `cta-split-colleagues.jpg` (`6ae8d89abe7ead5af35234f6`, 1536 × 1024, 311 KB, alt text on the asset).
+- 9 classes + 6 empty combos; section built in `page_wrap`, closed into **CTA Split** (`0a616993-…`, group Sections), 12 props bound (texts, buttons, image, Space Top attribute), moved to the end of `page_main` after the Services session's "Home vrij". Home overrides: «Request a shortlist» / «Discuss your project».
+- Fix after the first measure: the title's space span is stored as `&nbsp;` → title 3 lines at 1512; a `wbr` after it restores Figma's 2 lines.
+- Published to staging 1× myself (+ two peer publishes carried the changes). `references/cta-check.mjs` at 1512 / 1280 / 1100 / 991 / 767 / 479 / 402: at 1512 every box equals Figma (section 612, card 420, photo 692 × 420), mobile within 1 px, no sideways scroll, no text outside the card, no console errors.
+- Coordinated `page_main` order and publishes with the Content / Services and Rich Content sessions.
+- Review (fresh agent, `references/audit/2026-11-02-spotlight-grid.md`): no defects at 1512. Fixed: quote default with non-breaking hyphens («go‑to», «high‑quality»), photo shifted `translateX(16%)` below 992 so the person sits under the panel centre (measured 201/201 at 402, 495/495 at 991). Published to staging 1× more. Open for the owner: columns out of step 992–1150, sections not on Example Components, quote person/alt text.
+- CTA Split review (fresh reviewer, `references/audit/2026-11-02-cta-split.md`): photo corners were 16 px inside the 8 px card — Visual Image's Corners prop is inverted (off adds `u-radius-main`); set to on, published 1×, re-measured: image radius 0, card 8, boxes at 1512 / 402 unchanged, no console errors. Recorded: embed route and section showcases (site.md), prop folders as Split Content. Waiting for the owner: focus ring on Brand/Dark, tablet line length, hyphen break in the title.
+
+## 2026-11-02 — Rich Content: embed rules to the Designer, global rich-text slip restored — Aniek Velthuizen with Claude
+- Owner: move the embed rules to Designer styles (with the list-under-title fix and H3 at the H4 size).
+- Links became a Designer nested style on the Rich Content class chain (`text-link/*` colours, underline, hover).
+- The H2/H3/p/ul/ol/li edits landed on Lumos' **global** `.u-rich-text <tag>` rules (the Designer reuses the existing nested rule while showing the full chain). Published to staging for ~30 min; the other sessions were warned. Restored in the Designer and diffed against the 19:33 CSS: identical except `.u-rich-text li`, now on live trim variables instead of deleted ones. Webflow dropped 460 dead deleted-variable definitions on that save (only `li` read them).
+- Heading/paragraph/list rules back in the section's `u-embed-css` embed (scoped to `.rich-content_text`); H3 now at the H4 size; paragraphs and lists margin-top 0 so a list under a title sits 10 below it (was 2).
+- Published to staging 3× (announced). Measured with patched test content at 1512 / 1280 / 991 / 767 / 402: Figma pairs unchanged, title → list 10, H3 30 px, link styles as set, no sideways scroll, no console errors. Note in `references/kit-issues.md` (not filed).
+
+## 2026-11-02 — Nav smaller on phones — Aniek Velthuizen with Claude
+- Owner: logo in the mobile nav a bit smaller so the bar gets smaller, hamburger a bit smaller too.
+- Small breakpoint (≤ 767) only: bar 74 → 64, panel top padding with it, logo 209 → 176 wide, hamburger 32 × 16 → 28 × 14 (tap area still 44 × 44). Gap through `--nav--hamburger-gap` in the Nav CSS embed (style API refuses custom properties). Record: `decisions/components/nav.md`.
+- Published to staging 1×. Measured at 402 / 767 / 768 / 991, closed and open: phone sizes as planned, ✕ centred, tablet unchanged, no sideways scroll, no console errors.

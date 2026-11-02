@@ -46,3 +46,13 @@ Plan in the client repo: `references/plans/2026-10-31-card-split.md`.
 - Variant props (unused Icon / Experience Icon on duplicates) **can** be deleted in the Designer: component canvas › left Properties panel › hover the prop row › trash icon. The Property settings popover has no delete.
 - The scripted folder drag in props.md works on the **component canvas** Properties panel (`draggable-content_<Folder>` exists there, not on the instance panel). The dragged folder takes the target's index (up = before, down = after). Folder order = order of each folder's first prop, so a folder drag can reshuffle props inside other folders and a prop drag can move its folder: read the props per folder after each drag and fix the folder order last.
 - `update_prop` batches that land on the wrong prop can rename an **attributes** prop (not listed by `get_component`), which then shows up as a "hidden" name conflict ("Score Label 2").
+
+## Unfiled — 2026-11-02: nested tag styles inside a `u-rich-text` element edit the global Lumos rule
+
+Not filed (owner rule above). For `references/webflow-mcp.md` §11 "Styles panel" (Aniek Velthuizen, via Claude).
+
+- Selecting an `h2`/`h3`/`p`/`ul`/`ol`/`li` inside a Rich Text whose class chain contains `u-rich-text` (here `rich-content_text u-rich-text u-text-style-large u-text-trim-off`) makes the Designer pick the **existing** nested rule `.u-rich-text <tag>`. The panel still shows "When nested inside of" with the element's full chain, so it looks scoped; edits (Text Style variable mode, margins) land on the global rule and change every rich text on the site.
+- Only a tag Lumos does not style there yet (`a`: pick «All Links», then tick "Nest selector inside of") gets a new rule on the full chain.
+- Tell-tale before editing: the count line. "1 on this page" = scoped; "… on other pages" = global.
+- Route that worked: tag rules for that section in a `u-embed-css` embed; links as a Designer nested style. Restoring the global rule: Option+click the Text Style label (mode back to inherited), relink margins to the Text Style `margin-top` / `margin-bottom` variables.
+- Side effect seen on that save: Webflow dropped all `<deleted|…>` variable references from the published CSS (460 on this site); check anything that read them (here only `.u-rich-text li`).

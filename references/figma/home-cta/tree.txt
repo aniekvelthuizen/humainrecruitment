@@ -1,0 +1,66 @@
+INSTANCES
+desktop | 2292:8801 | 6. About Us / About Us | 1512x612
+desktop | 2292:29100 | 8. About Us / How it works | 1512x582
+desktop | 2323:32487 | [figma-only] 1. Home A | 1512x612
+desktop | 2292:8303 | 5. For business / Project-controls | 1512x612
+desktop | 2246:6236 | 12. Opportunities | 1512x612
+desktop | 2283:9617 | 4. For business / Consulting-services | 1512x612
+desktop | 2314:18739 | 10. About Us / Contact | 1512x552
+desktop | 2236:5448 | 2. Hire an expert | 1512x804
+desktop | 2307:43222 | 9. About Us / Rates | 1512x612
+desktop | 2292:28949 | 7. About Us / Clients | 1512x744
+desktop | 2710:48623 | 1. Home B | 1512x612
+desktop | 2277:7211 | 3. For business / Hire Project Delivery Experts from the Top 5% | 1512x804
+desktop | 2318:20970 | 14. Careers | 1512x612
+mobile | 2400:46398 | 12. Opportunities | 402x864
+mobile | 2382:37372 | 1. Home | 402x936
+
+COMPONENT "device=desktop" 20,20 1512x804 AL HORIZONTAL gap48 pad192/64/192/64 MIN/MIN size FIXED/HUG clip fill[solid 255,255,255 a1.00{background-2}] VARS{"itemSpacing":"space/8","paddingTop":"section-space/large","paddingBottom":"section-space/large","fills":["background-2"]}
+  FRAME "content-cta_group_wrap" 64,192 1384x420 AL HORIZONTAL gap0 pad0/0/0/0 MIN/MIN size FILL/HUG r8 clip fill[solid 37,0,89 a1.00{swatch/brand-500}] VARS{"topLeftRadius":"radius/small","topRightRadius":"radius/small","bottomLeftRadius":"radius/small","bottomRightRadius":"radius/small","fills":["swatch/brand-500"]}
+    FRAME "content-cta_group" 0,0 692x420 AL VERTICAL gap10 pad0/0/0/0 MIN/MIN size FIXED/FILL clip VARS{"itemSpacing":"space/3"}
+      RECTANGLE "content-cta_img" 0,0 692x420 size FILL/FILL fill[image FILL 76a4149fd50154ab11ea334dd8669590c6ee529c]
+    FRAME "content-cta_group_wrap" 692,0 692x420 AL VERTICAL gap48 pad64/64/64/64 MIN/MIN size FILL/HUG VARS{"itemSpacing":"space/8"}
+      FRAME "content-cta_content" 64,64 564x196 AL VERTICAL gap16 pad0/0/0/0 CENTER/MIN size FILL/HUG VARS{"itemSpacing":"space/4"}
+        TEXT "content-cta_title" 0,0 564x120 size FILL/HUG TEXT{H2} Vend Sans Bold 48 lh{"unit":"PERCENT","value":125} ls{"unit":"PERCENT","value":0} alignLEFT autoHEIGHT "Looking for a senior project-controls expert?" SEGS[["Looking for a senior ","Bold","255,255,255 a1.00"],["project-controls expert?","Bold","255,255,255 a0.50"]] VARS{"fontSize":["font-size/h2"],"fontStyle":["font/secondary-bold"],"fontFamily":["font/secondary-family"],"textRangeFills":["swatch/light-100-o50"]}
+        TEXT "content-cta_text" 0,136 564x60 size FILL/HUG fill[solid 255,255,255 a1.00{swatch/light-100}] TEXT{Text Large} Onest Regular 20 lh{"unit":"PERCENT","value":150} ls{"unit":"PERCENT","value":0} alignLEFT autoHEIGHT "Tell us about the role — we'll come back with a transparent quote and a shortlist within days." VARS{"fills":["swatch/light-100"],"fontSize":["font-size/text-large"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+      FRAME "content-cta_group_wrap" 64,308 477x48 AL VERTICAL gap32 pad0/0/0/0 MIN/MIN size HUG/HUG VARS{"itemSpacing":"space/7"}
+        FRAME "content-cta_actions" 0,0 477x48 AL HORIZONTAL gap16 pad0/0/0/0 MIN/MIN size HUG/HUG VARS{"itemSpacing":"space/4"}
+          INSTANCE "Button" 0,0 193x48 AL HORIZONTAL gap0 pad8/16/8/16 CENTER/CENTER size HUG/FIXED r9999 FX[["DROP_SHADOW",8,"0,0,0 a0.10",[0,4],0],["DROP_SHADOW",14,"0,0,0 a0.09",[0,14],0],["DROP_SHADOW",19,"0,0,0 a0.05",[0,32],0],["DROP_SHADOW",23,"0,0,0 a0.01",[0,56],0],["DROP_SHADOW",25,"0,0,0 a0.00",[0,88],0]] fill[solid 0,255,213 a1.00{swatch/brand-accent-500}] <Button / type=primary, state=rest> PROPS{"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":true,"Text":"Hire an Expert","type":"primary","state":"rest"} VARS{"paddingLeft":"Padding x","paddingTop":"space/2","paddingRight":"Padding x","paddingBottom":"space/2","height":"Height","topLeftRadius":"radius/round","topRightRadius":"radius/round","bottomLeftRadius":"radius/round","bottomRightRadius":"radius/round","fills":["swatch/brand-accent-500"]}
+            INSTANCE "chevron_right" 16,12 24x24 HIDDEN size FIXED/FIXED clip <chevron_right / Style=Filled> PROPS{"Style":"Filled"}
+              VECTOR "Vector" 8,6 7x12 size FIXED/FIXED fill[solid 255,255,255 a1.00{Defaults/Body light}] VARS{"fills":["Defaults/Body light"]}
+            FRAME "button_text" 16,11 137x27 AL HORIZONTAL gap0 pad0/8/0/8 CENTER/CENTER size HUG/HUG VARS{"paddingLeft":"space/2","paddingRight":"space/2"}
+              TEXT "button_text" 8,0 121x27 size HUG/HUG fill[solid 5,4,4 a1.00] TEXT{} Onest Medium 18 lh{"unit":"PERCENT","value":150} ls{"unit":"PERCENT","value":0} alignLEFT autoWIDTH_AND_HEIGHT "Hire an Expert" VARS{"fontSize":["font-size/text-medium"]}
+            INSTANCE "chevron_right" 153,12 24x24 size FIXED/FIXED clip <chevron_right / Style=Filled> PROPS{"Style":"Filled"}
+              VECTOR "Vector" 8,6 7x12 size FIXED/FIXED fill[solid 3,11,27 a1.00{swatch/dark-900}] VARS{"fills":["swatch/dark-900"]}
+          INSTANCE "Button" 209,0 268x48 AL HORIZONTAL gap0 pad8/16/8/16 CENTER/CENTER size HUG/FIXED r9999 stroke[255,255,255 a1.00 w2 INSIDE] <Button / type=secondary-white, state=rest> PROPS{"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":true,"Text":"Discuss your challenge","type":"secondary-white","state":"rest"} VARS{"paddingLeft":"Padding x","paddingTop":"space/2","paddingRight":"Padding x","paddingBottom":"space/2","height":"Height","topLeftRadius":"radius/round","topRightRadius":"radius/round","bottomLeftRadius":"radius/round","bottomRightRadius":"radius/round","strokeTopWeight":"border-width/thick","strokeBottomWeight":"border-width/thick","strokeLeftWeight":"border-width/thick","strokeRightWeight":"border-width/thick","strokes":["swatch/light-100"]}
+            INSTANCE "chevron_right" 16,12 24x24 HIDDEN size FIXED/FIXED clip <chevron_right / Style=Filled> PROPS{"Style":"Filled"}
+              VECTOR "Vector" 8,6 7x12 size FIXED/FIXED fill[solid 255,255,255 a1.00{swatch/light-100}] VARS{"fills":["swatch/light-100"]}
+            FRAME "button_text" 16,11 212x27 AL HORIZONTAL gap0 pad0/8/0/8 CENTER/CENTER size HUG/HUG VARS{"paddingLeft":"space/2","paddingRight":"space/2"}
+              TEXT "button_text" 8,0 196x27 size HUG/HUG fill[solid 255,255,255 a1.00{button-secondary-white/text}] TEXT{} Onest Medium 18 lh{"unit":"PERCENT","value":150} ls{"unit":"PERCENT","value":0} alignLEFT autoWIDTH_AND_HEIGHT "Discuss your challenge" VARS{"fills":["button-secondary-white/text"],"fontSize":["font-size/text-medium"]}
+            INSTANCE "chevron_right" 228,12 24x24 size FIXED/FIXED clip <chevron_right / Style=Filled> PROPS{"Style":"Filled"}
+              VECTOR "Vector" 8,6 7x12 size FIXED/FIXED fill[solid 255,255,255 a1.00{swatch/light-100}] VARS{"fills":["swatch/light-100"]}
+
+COMPONENT "device=mobile" 1552,20 402x1032 AL HORIZONTAL gap48 pad96/20/96/20 MIN/MIN size FIXED/HUG clip fill[solid 255,255,255 a1.00{background-2}] VARS{"itemSpacing":"space/8","paddingLeft":"space/5","paddingTop":"section-space/main","paddingRight":"space/5","paddingBottom":"section-space/main","fills":["background-2"]}
+  FRAME "content-cta_group_wrap" 20,96 362x840 AL VERTICAL gap0 pad0/0/0/0 MIN/MIN size FILL/HUG r8 clip fill[solid 37,0,89 a1.00{swatch/brand-500}] VARS{"topLeftRadius":"radius/small","topRightRadius":"radius/small","bottomLeftRadius":"radius/small","bottomRightRadius":"radius/small","fills":["swatch/brand-500"]}
+    FRAME "content-cta_group_wrap" 0,0 362x420 AL VERTICAL gap48 pad20/20/20/20 MIN/MIN size FILL/HUG VARS{"itemSpacing":"space/8","paddingLeft":"space/5","paddingTop":"space/5","paddingRight":"space/5","paddingBottom":"space/5"}
+      FRAME "content-cta_content" 20,20 322x220 AL VERTICAL gap16 pad0/0/0/0 CENTER/MIN size FILL/HUG VARS{"itemSpacing":"space/4"}
+        TEXT "content-cta_title" 0,0 322x114 size FILL/HUG TEXT{H4} Vend Sans Bold 30 lh{"unit":"PERCENT","value":125} ls{"unit":"PERCENT","value":0} alignLEFT autoHEIGHT "Looking for a senior project-controls expert?" SEGS[["Looking for a senior ","Bold","255,255,255 a1.00"],["project-controls expert?","Bold","255,255,255 a0.50"]] VARS{"fontSize":["font-size/h4"],"fontStyle":["font/secondary-bold"],"fontFamily":["font/secondary-family"],"textRangeFills":["swatch/light-100-o50"]}
+        TEXT "content-cta_text" 0,130 322x90 size FILL/HUG fill[solid 255,255,255 a1.00{swatch/light-100}] TEXT{Text Large} Onest Regular 20 lh{"unit":"PERCENT","value":150} ls{"unit":"PERCENT","value":0} alignLEFT autoHEIGHT "Tell us about the role — we'll come back with a transparent quote and a shortlist within days." VARS{"fills":["swatch/light-100"],"fontSize":["font-size/text-large"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+      FRAME "content-cta_group_wrap" 20,288 268x112 AL VERTICAL gap32 pad0/0/0/0 MIN/MIN size HUG/HUG VARS{"itemSpacing":"space/7"}
+        FRAME "content-cta_actions" 0,0 268x112 AL VERTICAL gap16 pad0/0/0/0 MIN/MIN size HUG/HUG VARS{"itemSpacing":"space/4"}
+          INSTANCE "Button" 0,0 193x48 AL HORIZONTAL gap0 pad8/16/8/16 CENTER/CENTER size HUG/FIXED r9999 FX[["DROP_SHADOW",8,"0,0,0 a0.10",[0,4],0],["DROP_SHADOW",14,"0,0,0 a0.09",[0,14],0],["DROP_SHADOW",19,"0,0,0 a0.05",[0,32],0],["DROP_SHADOW",23,"0,0,0 a0.01",[0,56],0],["DROP_SHADOW",25,"0,0,0 a0.00",[0,88],0]] fill[solid 0,255,213 a1.00{swatch/brand-accent-500}] <Button / type=primary, state=rest> PROPS{"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":true,"Text":"Hire an Expert","type":"primary","state":"rest"} VARS{"paddingLeft":"Padding x","paddingTop":"space/2","paddingRight":"Padding x","paddingBottom":"space/2","height":"Height","topLeftRadius":"radius/round","topRightRadius":"radius/round","bottomLeftRadius":"radius/round","bottomRightRadius":"radius/round","fills":["swatch/brand-accent-500"]}
+            INSTANCE "chevron_right" 16,12 24x24 HIDDEN size FIXED/FIXED clip <chevron_right / Style=Filled> PROPS{"Style":"Filled"}
+              VECTOR "Vector" 8,6 7x12 size FIXED/FIXED fill[solid 255,255,255 a1.00{Defaults/Body light}] VARS{"fills":["Defaults/Body light"]}
+            FRAME "button_text" 16,11 137x27 AL HORIZONTAL gap0 pad0/8/0/8 CENTER/CENTER size HUG/HUG VARS{"paddingLeft":"space/2","paddingRight":"space/2"}
+              TEXT "button_text" 8,0 121x27 size HUG/HUG fill[solid 5,4,4 a1.00] TEXT{} Onest Medium 18 lh{"unit":"PERCENT","value":150} ls{"unit":"PERCENT","value":0} alignLEFT autoWIDTH_AND_HEIGHT "Hire an Expert" VARS{"fontSize":["font-size/text-medium"]}
+            INSTANCE "chevron_right" 153,12 24x24 size FIXED/FIXED clip <chevron_right / Style=Filled> PROPS{"Style":"Filled"}
+              VECTOR "Vector" 8,6 7x12 size FIXED/FIXED fill[solid 3,11,27 a1.00{swatch/dark-900}] VARS{"fills":["swatch/dark-900"]}
+          INSTANCE "Button" 0,64 268x48 AL HORIZONTAL gap0 pad8/16/8/16 CENTER/CENTER size HUG/FIXED r9999 stroke[255,255,255 a1.00 w2 INSIDE] <Button / type=secondary-white, state=rest> PROPS{"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":true,"Text":"Discuss your challenge","type":"secondary-white","state":"rest"} VARS{"paddingLeft":"Padding x","paddingTop":"space/2","paddingRight":"Padding x","paddingBottom":"space/2","height":"Height","topLeftRadius":"radius/round","topRightRadius":"radius/round","bottomLeftRadius":"radius/round","bottomRightRadius":"radius/round","strokeTopWeight":"border-width/thick","strokeBottomWeight":"border-width/thick","strokeLeftWeight":"border-width/thick","strokeRightWeight":"border-width/thick","strokes":["swatch/light-100"]}
+            INSTANCE "chevron_right" 16,12 24x24 HIDDEN size FIXED/FIXED clip <chevron_right / Style=Filled> PROPS{"Style":"Filled"}
+              VECTOR "Vector" 8,6 7x12 size FIXED/FIXED fill[solid 255,255,255 a1.00{swatch/light-100}] VARS{"fills":["swatch/light-100"]}
+            FRAME "button_text" 16,11 212x27 AL HORIZONTAL gap0 pad0/8/0/8 CENTER/CENTER size HUG/HUG VARS{"paddingLeft":"space/2","paddingRight":"space/2"}
+              TEXT "button_text" 8,0 196x27 size HUG/HUG fill[solid 255,255,255 a1.00{button-secondary-white/text}] TEXT{} Onest Medium 18 lh{"unit":"PERCENT","value":150} ls{"unit":"PERCENT","value":0} alignLEFT autoWIDTH_AND_HEIGHT "Discuss your challenge" VARS{"fills":["button-secondary-white/text"],"fontSize":["font-size/text-medium"]}
+            INSTANCE "chevron_right" 228,12 24x24 size FIXED/FIXED clip <chevron_right / Style=Filled> PROPS{"Style":"Filled"}
+              VECTOR "Vector" 8,6 7x12 size FIXED/FIXED fill[solid 255,255,255 a1.00{swatch/light-100}] VARS{"fills":["swatch/light-100"]}
+    FRAME "content-cta_img" 0,420 362x420 AL VERTICAL gap10 pad0/0/0/0 MIN/MIN size FILL/FIXED clip fill[image FILL 662406c4310a7ff05eed38cea548c63dc3543649] VARS{"itemSpacing":"space/3"}
+      RECTANGLE "content-cta_img" 0,0 362x420 size FILL/FILL fill[image FILL 76a4149fd50154ab11ea334dd8669590c6ee529c]
