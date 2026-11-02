@@ -104,3 +104,8 @@ Also seen (2026-11-02): the claude.ai Webflow connector used for this site now o
 
 ## 2026-11-02 — No Webflow connector reaches the site (CTA session)
 Seen by Aniek's CTA session: the local `webflow` connector lists Core / THDV / Wayfinder, the claude.ai Webflow connector Buitencampus, `webflow-studijob` Studijob; all three answer 404 for `6ae35364a38b2d71cab8c607`. API work on Humain needs one of them re-authorised on the workspace that holds the site.
+
+## 2026-11-02 — Section CSS lives in an embed inside the section component
+Choice (Aniek, via Claude; follows Split Content): a section component's own small CSS (Space Top switches, hiding an empty optional span) sits in an HTML embed with `u-embed-css` inside the component, selected by the section's `data-*` attribute and its own classes. Section components get no showcase on Example Components for now (none of them have one).
+Why: the CSS travels with the component to every page; the API cannot write attribute selectors or `:empty` on classes. Recorded after the CTA Split review asked for it.
+Update (same day): after the owner re-pointed it, the **claude.ai Webflow connector** reaches Humain again (CTA Split was built with it); the local `webflow` connector still does not.
