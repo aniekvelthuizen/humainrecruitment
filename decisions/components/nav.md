@@ -119,7 +119,7 @@ Measured on staging (Home): nav content = hero = footer at 2560 (524–2036), 19
 Conflict: Figma draws the mobile bar at 74 px with a 209 px logo and a 32 × 16 hamburger; the owner finds that too big on a phone.
 Choice: on the **small** breakpoint (≤ 767 px) only — tablet (768–1279) keeps the Figma sizes:
 - `nav_mobile_layout` height 4rem (64, was 74); `nav_mobile_menu_wrap` padding-top 4rem to match, so the panel rows move up with the bar (first row 84, was 94).
-- `nav_mobile_logo` width 11rem (176 × 29, was 209 × 34).
+- `nav_mobile_logo` width 7.9375rem (127 × 21, was 209 × 34). First 11rem (176 × 29); owner round 2: 8 px less tall.
 - Hamburger 28 × 14 (was 32 × 16, lines still 2 px): `nav_button_wrap` padding 0.9375rem / 0.5rem with the same negative margin, so the tap area stays 44 × 44; the gap is `--nav--hamburger-gap: 0.625rem` in a `@media (max-width: 767px)` rule in the Nav state CSS embed, because the style API refuses custom properties and the ✕ transform reads the same variable (lines meet exactly when open).
 Why: owner — logo and burger a little smaller on mobile, and the whole bar with them. Literal rem values: no matching step in the scales.
-Measured on staging (Home): 402 and 767 bar 64, logo 176, burger 28 × 14 in a 44 × 44 button, ✕ centred; 768 and 991 unchanged (74 / 209 / 32 × 16); no sideways scroll, no console errors.
+Measured on staging (Home): 402 and 767 bar 64, logo 127 × 20.7 (round 2), burger 28 × 14 in a 44 × 44 button, ✕ centred; 768 and 991 unchanged (74 / 209 / 32 × 16); no sideways scroll, no console errors.

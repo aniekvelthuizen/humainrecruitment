@@ -272,6 +272,12 @@
 - Owner: logo in the mobile nav a bit smaller so the bar gets smaller, hamburger a bit smaller too.
 - Small breakpoint (≤ 767) only: bar 74 → 64, panel top padding with it, logo 209 → 176 wide, hamburger 32 × 16 → 28 × 14 (tap area still 44 × 44). Gap through `--nav--hamburger-gap` in the Nav CSS embed (style API refuses custom properties). Record: `decisions/components/nav.md`.
 - Published to staging 1×. Measured at 402 / 767 / 768 / 991, closed and open: phone sizes as planned, ✕ centred, tablet unchanged, no sideways scroll, no console errors.
+- Owner round 2: logo 8 px less tall on phones → width 7.9375rem (127 × 20.7, was 176 × 28.7). Published to staging 1×; measured 402 / 767 / 768 / 991: phone logo as planned, tablet unchanged, no sideways scroll, no console errors.
+
+## 2026-11-02 — CTA Split owner round 1 + button focus ring — Aniek Velthuizen with Claude
+- Owner: photo left / text right also on tablet → card two columns down to 768, stacked ≤ 767 (text first). Measured: 991 photo 452 | text 452, 767 stacked, 1512 unchanged (612 / 420), no sideways scroll, no console errors.
+- Owner: light focus ring on purple/dark sections → Clickable variant «Focus Ring Theme» (outline = Theme text) used by Button Main. Measured with Tab: buttons white on Brand, dark on Light, nav follows its bar; cards unchanged. Open: hero Card Expert ring navy on dark (card ring).
+- Published to staging 1× (announced to the Services and Rich Content sessions; Rich Content's rich-text slip was restored before). Fresh re-check reviewer dispatched.
 
 ## 2026-11-02 — Home «Expertise» closed — Aniek Velthuizen with Claude
 - Owner: columns 992–1279 stay as built, "helemaal af zo". Re-measured after the Rich Content rich-text restore (unchanged at 1512 / 991 / 402) and the CTA focus-ring publish (card ring 2 px dark, unchanged). Merged to main.
