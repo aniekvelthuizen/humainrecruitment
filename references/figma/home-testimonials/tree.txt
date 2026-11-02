@@ -1,0 +1,210 @@
+SECTION:Content / Testimonials:2323:32727 < SECTION:Components:2234:4488 < PAGE:Visual design:2027:76 < DOCUMENT:Humain (Lumos):0:0
+
+SECTION "Content / Testimonials" 2323:32727 2174x2299 @14031,141 fill=#444444 r2
+  COMPONENT_SET "content-testimonials" 2378:35367 1974x2099 @100,100 [HORIZONTAL gap20 p20/20/20/20 MIN/MIN] r5
+    COMPONENT "device=desktop" 2236:5349 1512x1560 @20,20 [VERTICAL gap48 p192/64/192/64 MIN/CENTER] fill=#edf1f7
+      FRAME "content-testimonials_content" 2063:4465 1144x149 @184,192 [VERTICAL gap10 p0/0/0/0 CENTER/MIN]
+        TEXT "content-testimonials_text" 2063:4466 1144x24 @0,0 fill=#030b1b font=16/Onest Regular :: Client reviews
+        TEXT "content-testimonials_title" 2063:4467 1144x75 @0,34 font=60/Vend Sans Bold :: Trusted by the people who hire.
+        TEXT "content-testimonials_text" 2063:4468 1144x30 @0,119 fill=#030b1b font=20/Onest Regular :: Honest feedback from employers we've supported on complex international projects.
+      FRAME "content-testimonials_group_wrap" 2063:4469 331x38 @590,389 [HORIZONTAL gap10 p4/4/4/4 MIN/MIN] r9999
+        FRAME "content-testimonials_group_wrap" 2063:4472 323x30 @4,4 [HORIZONTAL gap16 p6/12/6/12 CENTER/CENTER] r999
+          FRAME "content-testimonials_group" 2063:4535 68x13 @12,9 [HORIZONTAL gap0 p0/0/0/0 MIN/CENTER]
+            VECTOR "Vector" 2063:4531 14x13 @0,0 fill=#ffbf66
+            VECTOR "Vector" 2063:4533 14x13 @14,0 fill=#ffbf66
+            VECTOR "Vector" 2063:4534 14x13 @27,0 fill=#ffbf66
+            VECTOR "Vector" 2063:4536 14x13 @41,0 fill=#ffbf66
+            VECTOR "Vector" 2063:4537 14x13 @55,0 fill=#ffbf66
+          TEXT "content-testimonials_text" 2063:4473 215x18 @96,6 fill=#030b1b font=14/Onest Regular :: 4.9 / 5·based on 3 client reviews
+      FRAME "content-testimonials_group_wrap" 2063:4475 1384x797 @64,475 [VERTICAL gap32 p0/0/0/0 CENTER/CENTER]
+        FRAME "content-testimonials_group_wrap" 2063:4476 1384x797 @0,0 [HORIZONTAL gap32 p0/0/0/0 CENTER/CENTER]
+          INSTANCE "Testimonial 2" 2063:4582 440x373 @0,212 [VERTICAL gap24 p32/32/32/32 MIN/MIN] fill=#ffffff r8 <Testimonial 1> props={}
+            FRAME "testimonial-1_group_wrap" I2063:4582;2063:4679 376x43 @32,32 [HORIZONTAL gap24 p0/0/0/0 SPACE_BETWEEN/MAX]
+              VECTOR "“" I2063:4582;2063:4555 55x43 @0,0 fill=#00ffd5
+              FRAME "testimonial-1_group" I2063:4582;2063:4556 68x13 @308,30 [HORIZONTAL gap0 p0/0/0/0 MIN/CENTER]
+                VECTOR "Vector" I2063:4582;2063:4557 14x13 @0,0 fill=#ffbf66
+                VECTOR "Vector" I2063:4582;2063:4558 14x13 @14,0 fill=#ffbf66
+                VECTOR "Vector" I2063:4582;2063:4559 14x13 @27,0 fill=#ffbf66
+                VECTOR "Vector" I2063:4582;2063:4560 14x13 @41,0 fill=#ffbf66
+                VECTOR "Vector" I2063:4582;2063:4561 14x13 @55,0 fill=#ffbf66
+            FRAME "testimonial-1_contain" I2063:4582;2063:4541 376x144 @32,99 [VERTICAL gap0 p0/0/0/0 MIN/MIN]
+              TEXT "testimonial-1_text" I2063:4582;2063:4542 376x144 @0,0 fill=#030b1b font=16/Onest Regular :: I have been working with HumAIn engineers for several years now. They have all been exceptionally talented, very professional, highly productive, great team players, good communicators, and willing to go above and beyond.
+            FRAME "testimonial-1_contain" I2063:4582;2063:4545 376x74 @32,267 [HORIZONTAL gap16 p0/0/0/0 MIN/MIN]
+              ELLIPSE "testimonial-1_img" I2063:4582;2184:4932 48x48 @0,0 fill=IMAGE
+              FRAME "testimonial-1_group_wrap" I2063:4582;2184:5015 312x74 @64,0 [HORIZONTAL gap10 p0/0/0/0 SPACE_BETWEEN/MAX]
+                FRAME "testimonial-1_group_wrap" I2063:4582;2063:4663 264x74 @0,0 [VERTICAL gap8 p0/0/0/0 MIN/MIN]
+                  FRAME "testimonial-1_content" I2063:4582;2063:4653 264x48 @0,0 [VERTICAL gap0 p0/0/0/0 MIN/MIN]
+                    TEXT "testimonial-1_text" I2063:4582;2063:4547 264x30 @0,0 fill=#1a1c1e font=20/Onest Regular :: Chance Lipshutz
+                    TEXT "testimonial-1_text" I2063:4582;2063:4549 264x18 @0,30 fill=#030b1b op0.3400000035762787 font=14/Onest Regular :: Partner
+                  TEXT "testimonial-1_text" I2063:4582;2063:4551 264x18 @0,56 fill=#1a1c1e font=14/Onest Regular :: Covestro
+                INSTANCE "Button" I2063:4582;2184:5052 48x48 @264,26 [HORIZONTAL gap0 p8/16/8/16 CENTER/CENTER] r9999 <Button / type=secondary, state=rest> props={"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":false,"Text":"Button text","type":"secondary","state":"rest"}
+                  INSTANCE "chevron_right" I2063:4582;2184:5052;2028:2134 24x24 @16,12 HIDDEN <chevron_right / Style=Filled> props={"Style":"Filled"}
+                    VECTOR "Vector" I2063:4582;2184:5052;2028:2134;2402:73896 7x12 @8,6 fill=#1a1a1a
+                  FRAME "button_text" I2063:4582;2184:5052;2028:2135 113x27 @16,11 HIDDEN [HORIZONTAL gap0 p0/8/0/8 CENTER/CENTER]
+                    TEXT "button_text" I2063:4582;2184:5052;2028:2136 97x27 @8,0 fill=#030b1b font=18/Onest Medium :: Button text
+                  INSTANCE "chevron_right" I2063:4582;2184:5052;2028:2137 24x24 @12,12 <chevron_right / Style=Filled> props={"Style":"Filled"}
+                    VECTOR "Vector" I2063:4582;2184:5052;2028:2137;2402:73896 7x12 @8,6 fill=#1a1a1a
+          FRAME "content-testimonials_group_wrap" 2063:4621 440x797 @472,0 [VERTICAL gap32 p0/0/0/0 MIN/MIN]
+            INSTANCE "Testimonial 3" 2063:4622 440x325 @0,0 [VERTICAL gap24 p32/32/32/32 MIN/MIN] fill=#ffffff r8 <Testimonial 1> props={}
+              FRAME "testimonial-1_group_wrap" I2063:4622;2063:4679 376x43 @32,32 [HORIZONTAL gap24 p0/0/0/0 SPACE_BETWEEN/MAX]
+                VECTOR "“" I2063:4622;2063:4555 55x43 @0,0 fill=#00ffd5
+                FRAME "testimonial-1_group" I2063:4622;2063:4556 68x13 @308,30 [HORIZONTAL gap0 p0/0/0/0 MIN/CENTER]
+                  VECTOR "Vector" I2063:4622;2063:4557 14x13 @0,0 fill=#ffbf66
+                  VECTOR "Vector" I2063:4622;2063:4558 14x13 @14,0 fill=#ffbf66
+                  VECTOR "Vector" I2063:4622;2063:4559 14x13 @27,0 fill=#ffbf66
+                  VECTOR "Vector" I2063:4622;2063:4560 14x13 @41,0 fill=#ffbf66
+                  VECTOR "Vector" I2063:4622;2063:4561 14x13 @55,0 fill=#ffbf66
+              FRAME "testimonial-1_contain" I2063:4622;2063:4541 376x96 @32,99 [VERTICAL gap0 p0/0/0/0 MIN/MIN]
+                TEXT "testimonial-1_text" I2063:4622;2063:4542 376x96 @0,0 fill=#030b1b font=16/Onest Regular :: HumAIn is my go-to source to find high-quality talent I can't find elsewhere. I've been very impressed with the breadth and depth of talent they have been able to deliver.
+              FRAME "testimonial-1_contain" I2063:4622;2063:4545 376x74 @32,219 [HORIZONTAL gap16 p0/0/0/0 MIN/MIN]
+                ELLIPSE "testimonial-1_img" I2063:4622;2184:4932 48x48 @0,0 fill=IMAGE
+                FRAME "testimonial-1_group_wrap" I2063:4622;2184:5015 312x74 @64,0 [HORIZONTAL gap10 p0/0/0/0 SPACE_BETWEEN/MAX]
+                  FRAME "testimonial-1_group_wrap" I2063:4622;2063:4663 264x74 @0,0 [VERTICAL gap8 p0/0/0/0 MIN/MIN]
+                    FRAME "testimonial-1_content" I2063:4622;2063:4653 264x48 @0,0 [VERTICAL gap0 p0/0/0/0 MIN/MIN]
+                      TEXT "testimonial-1_text" I2063:4622;2063:4547 264x30 @0,0 fill=#1a1c1e font=20/Onest Regular :: Jocelyn Westervelt
+                      TEXT "testimonial-1_text" I2063:4622;2063:4549 264x18 @0,30 fill=#030b1b op0.3400000035762787 font=14/Onest Regular :: Chief Operations Officer
+                    TEXT "testimonial-1_text" I2063:4622;2063:4551 264x18 @0,56 fill=#1a1c1e font=14/Onest Regular :: Covestro
+                  INSTANCE "Button" I2063:4622;2184:5052 48x48 @264,26 [HORIZONTAL gap0 p8/16/8/16 CENTER/CENTER] r9999 <Button / type=secondary, state=rest> props={"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":false,"Text":"Button text","type":"secondary","state":"rest"}
+                    INSTANCE "chevron_right" I2063:4622;2184:5052;2028:2134 24x24 @16,12 HIDDEN <chevron_right / Style=Filled> props={"Style":"Filled"}
+                      VECTOR "Vector" I2063:4622;2184:5052;2028:2134;2402:73896 7x12 @8,6 fill=#1a1a1a
+                    FRAME "button_text" I2063:4622;2184:5052;2028:2135 113x27 @16,11 HIDDEN [HORIZONTAL gap0 p0/8/0/8 CENTER/CENTER]
+                      TEXT "button_text" I2063:4622;2184:5052;2028:2136 97x27 @8,0 fill=#030b1b font=18/Onest Medium :: Button text
+                    INSTANCE "chevron_right" I2063:4622;2184:5052;2028:2137 24x24 @12,12 <chevron_right / Style=Filled> props={"Style":"Filled"}
+                      VECTOR "Vector" I2063:4622;2184:5052;2028:2137;2402:73896 7x12 @8,6 fill=#1a1a1a
+            FRAME "content-testimonials_group" 2063:4481 440x440 @0,357 [VERTICAL gap32 p24/24/0/24 MAX/CENTER] fill=GRADIENT_LINEAR r8
+              RECTANGLE "content-testimonials_img" 2066:4712 277x394 @359,46 fill=IMAGE
+          INSTANCE "Testimonial 3" 2063:4602 440x301 @944,248 [VERTICAL gap24 p32/32/32/32 MIN/MIN] fill=#ffffff r8 <Testimonial 1> props={}
+            FRAME "testimonial-1_group_wrap" I2063:4602;2063:4679 376x43 @32,32 [HORIZONTAL gap24 p0/0/0/0 SPACE_BETWEEN/MAX]
+              VECTOR "“" I2063:4602;2063:4555 55x43 @0,0 fill=#00ffd5
+              FRAME "testimonial-1_group" I2063:4602;2063:4556 68x13 @308,30 [HORIZONTAL gap0 p0/0/0/0 MIN/CENTER]
+                VECTOR "Vector" I2063:4602;2063:4557 14x13 @0,0 fill=#ffbf66
+                VECTOR "Vector" I2063:4602;2063:4558 14x13 @14,0 fill=#ffbf66
+                VECTOR "Vector" I2063:4602;2063:4559 14x13 @27,0 fill=#ffbf66
+                VECTOR "Vector" I2063:4602;2063:4560 14x13 @41,0 fill=#ffbf66
+                VECTOR "Vector" I2063:4602;2063:4561 14x13 @55,0 fill=#ffbf66
+            FRAME "testimonial-1_contain" I2063:4602;2063:4541 376x72 @32,99 [VERTICAL gap0 p0/0/0/0 MIN/MIN]
+              TEXT "testimonial-1_text" I2063:4602;2063:4542 376x72 @0,0 fill=#030b1b font=16/Onest Regular :: With the pressure on and millions watching, HumAIn delivered the talent and expertise needed to launch a brand-new fan engagement platform.
+            FRAME "testimonial-1_contain" I2063:4602;2063:4545 376x74 @32,195 [HORIZONTAL gap16 p0/0/0/0 MIN/MIN]
+              ELLIPSE "testimonial-1_img" I2063:4602;2184:4932 48x48 @0,0 fill=IMAGE
+              FRAME "testimonial-1_group_wrap" I2063:4602;2184:5015 312x74 @64,0 [HORIZONTAL gap10 p0/0/0/0 SPACE_BETWEEN/MAX]
+                FRAME "testimonial-1_group_wrap" I2063:4602;2063:4663 264x74 @0,0 [VERTICAL gap8 p0/0/0/0 MIN/MIN]
+                  FRAME "testimonial-1_content" I2063:4602;2063:4653 264x48 @0,0 [VERTICAL gap0 p0/0/0/0 MIN/MIN]
+                    TEXT "testimonial-1_text" I2063:4602;2063:4547 264x30 @0,0 fill=#1a1c1e font=20/Onest Regular :: Marcus Levin
+                    TEXT "testimonial-1_text" I2063:4602;2063:4549 264x18 @0,30 fill=#030b1b op0.3400000035762787 font=14/Onest Regular :: VP, Product and Technology
+                  TEXT "testimonial-1_text" I2063:4602;2063:4551 264x18 @0,56 fill=#1a1c1e font=14/Onest Regular :: GOOGLE
+                INSTANCE "Button" I2063:4602;2184:5052 48x48 @264,26 [HORIZONTAL gap0 p8/16/8/16 CENTER/CENTER] r9999 <Button / type=secondary, state=rest> props={"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":false,"Text":"Button text","type":"secondary","state":"rest"}
+                  INSTANCE "chevron_right" I2063:4602;2184:5052;2028:2134 24x24 @16,12 HIDDEN <chevron_right / Style=Filled> props={"Style":"Filled"}
+                    VECTOR "Vector" I2063:4602;2184:5052;2028:2134;2402:73896 7x12 @8,6 fill=#1a1a1a
+                  FRAME "button_text" I2063:4602;2184:5052;2028:2135 113x27 @16,11 HIDDEN [HORIZONTAL gap0 p0/8/0/8 CENTER/CENTER]
+                    TEXT "button_text" I2063:4602;2184:5052;2028:2136 97x27 @8,0 fill=#030b1b font=18/Onest Medium :: Button text
+                  INSTANCE "chevron_right" I2063:4602;2184:5052;2028:2137 24x24 @12,12 <chevron_right / Style=Filled> props={"Style":"Filled"}
+                    VECTOR "Vector" I2063:4602;2184:5052;2028:2137;2402:73896 7x12 @8,6 fill=#1a1a1a
+      INSTANCE "Button" 2070:5650 189x48 @662,1320 [HORIZONTAL gap0 p8/16/8/16 CENTER/CENTER] fill=#00ffd5 r9999 <Button / type=primary, state=rest> props={"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":true,"Text":"See all clients","type":"primary","state":"rest"}
+        INSTANCE "chevron_right" I2070:5650;2028:2124 24x24 @16,12 HIDDEN <chevron_right / Style=Filled> props={"Style":"Filled"}
+          VECTOR "Vector" I2070:5650;2028:2124;2402:73896 7x12 @8,6 fill=#ffffff
+        FRAME "button_text" I2070:5650;2028:2125 133x27 @16,11 [HORIZONTAL gap0 p0/8/0/8 CENTER/CENTER]
+          TEXT "button_text" I2070:5650;2028:2126 117x27 @8,0 fill=#050404 font=18/Onest Medium :: See all clients
+        INSTANCE "chevron_right" I2070:5650;2028:2127 24x24 @149,12 <chevron_right / Style=Filled> props={"Style":"Filled"}
+          VECTOR "Vector" I2070:5650;2028:2127;2402:73896 7x12 @8,6 fill=#030b1b
+    COMPONENT "device=mobile" 2378:35368 402x2059 @1552,20 [VERTICAL gap48 p96/20/96/20 MIN/CENTER] fill=#edf1f7
+      FRAME "content-testimonials_content" 2378:35369 362x162 @20,96 [VERTICAL gap10 p0/0/0/0 CENTER/MIN]
+        TEXT "content-testimonials_text" 2378:35370 362x18 @0,0 fill=#030b1b font=12/Onest Regular :: Client reviews
+        TEXT "content-testimonials_title" 2378:35371 362x76 @0,28 font=30/Vend Sans Bold :: Trusted by the people who hire.
+        TEXT "content-testimonials_text" 2378:35372 362x48 @0,114 fill=#030b1b font=16/Onest Regular :: Honest feedback from employers we've supported on complex international projects.
+      FRAME "content-testimonials_group_wrap" 2378:35373 331x38 @35,306 [HORIZONTAL gap10 p4/4/4/4 MIN/MIN] r9999
+        FRAME "content-testimonials_group_wrap" 2378:35374 323x30 @4,4 [HORIZONTAL gap16 p6/12/6/12 CENTER/CENTER] r999
+          FRAME "content-testimonials_group" 2378:35375 68x13 @12,9 [HORIZONTAL gap0 p0/0/0/0 MIN/CENTER]
+            VECTOR "Vector" 2378:35376 14x13 @0,0 fill=#ffbf66
+            VECTOR "Vector" 2378:35377 14x13 @14,0 fill=#ffbf66
+            VECTOR "Vector" 2378:35378 14x13 @27,0 fill=#ffbf66
+            VECTOR "Vector" 2378:35379 14x13 @41,0 fill=#ffbf66
+            VECTOR "Vector" 2378:35380 14x13 @55,0 fill=#ffbf66
+          TEXT "content-testimonials_text" 2378:35381 215x18 @96,6 fill=#030b1b font=14/Onest Regular :: 4.9 / 5·based on 3 client reviews
+      FRAME "content-testimonials_group_wrap" 2378:35382 362x1475 @20,392 [VERTICAL gap20 p0/0/0/0 CENTER/CENTER]
+        INSTANCE "Testimonial 2" 2378:35384 362x349 @0,0 [VERTICAL gap24 p20/20/20/20 MIN/MIN] fill=#ffffff r8 <Testimonial 1> props={}
+          FRAME "testimonial-1_group_wrap" I2378:35384;2063:4679 322x43 @20,20 [HORIZONTAL gap24 p0/0/0/0 SPACE_BETWEEN/MAX]
+            VECTOR "“" I2378:35384;2063:4555 55x43 @0,0 fill=#00ffd5
+            FRAME "testimonial-1_group" I2378:35384;2063:4556 68x13 @254,30 [HORIZONTAL gap0 p0/0/0/0 MIN/CENTER]
+              VECTOR "Vector" I2378:35384;2063:4557 14x13 @0,0 fill=#ffbf66
+              VECTOR "Vector" I2378:35384;2063:4558 14x13 @14,0 fill=#ffbf66
+              VECTOR "Vector" I2378:35384;2063:4559 14x13 @27,0 fill=#ffbf66
+              VECTOR "Vector" I2378:35384;2063:4560 14x13 @41,0 fill=#ffbf66
+              VECTOR "Vector" I2378:35384;2063:4561 14x13 @55,0 fill=#ffbf66
+          FRAME "testimonial-1_contain" I2378:35384;2063:4541 322x144 @20,87 [VERTICAL gap0 p0/0/0/0 MIN/MIN]
+            TEXT "testimonial-1_text" I2378:35384;2063:4542 322x144 @0,0 fill=#030b1b font=16/Onest Regular :: I have been working with HumAIn engineers for several years now. They have all been exceptionally talented, very professional, highly productive, great team players, good communicators, and willing to go above and beyond.
+          FRAME "testimonial-1_contain" I2378:35384;2063:4545 322x74 @20,255 [HORIZONTAL gap16 p0/0/0/0 MIN/MIN]
+            ELLIPSE "testimonial-1_img" I2378:35384;2184:4932 48x48 @0,0 fill=IMAGE
+            FRAME "testimonial-1_group_wrap" I2378:35384;2184:5015 258x74 @64,0 [HORIZONTAL gap10 p0/0/0/0 SPACE_BETWEEN/MAX]
+              FRAME "testimonial-1_group_wrap" I2378:35384;2063:4663 210x74 @0,0 [VERTICAL gap8 p0/0/0/0 MIN/MIN]
+                FRAME "testimonial-1_content" I2378:35384;2063:4653 210x48 @0,0 [VERTICAL gap0 p0/0/0/0 MIN/MIN]
+                  TEXT "testimonial-1_text" I2378:35384;2063:4547 210x30 @0,0 fill=#1a1c1e font=20/Onest Regular :: Chance Lipshutz
+                  TEXT "testimonial-1_text" I2378:35384;2063:4549 210x18 @0,30 fill=#030b1b op0.3400000035762787 font=14/Onest Regular :: Partner
+                TEXT "testimonial-1_text" I2378:35384;2063:4551 210x18 @0,56 fill=#1a1c1e font=14/Onest Regular :: Covestro
+              INSTANCE "Button" I2378:35384;2184:5052 48x48 @210,26 [HORIZONTAL gap0 p8/16/8/16 CENTER/CENTER] r9999 <Button / type=secondary, state=rest> props={"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":false,"Text":"Button text","type":"secondary","state":"rest"}
+                INSTANCE "chevron_right" I2378:35384;2184:5052;2028:2134 24x24 @16,12 HIDDEN <chevron_right / Style=Filled> props={"Style":"Filled"}
+                  VECTOR "Vector" I2378:35384;2184:5052;2028:2134;2402:73896 7x12 @8,6 fill=#1a1a1a
+                FRAME "button_text" I2378:35384;2184:5052;2028:2135 113x27 @16,11 HIDDEN [HORIZONTAL gap0 p0/8/0/8 CENTER/CENTER]
+                  TEXT "button_text" I2378:35384;2184:5052;2028:2136 97x27 @8,0 fill=#030b1b font=18/Onest Medium :: Button text
+                INSTANCE "chevron_right" I2378:35384;2184:5052;2028:2137 24x24 @12,12 <chevron_right / Style=Filled> props={"Style":"Filled"}
+                  VECTOR "Vector" I2378:35384;2184:5052;2028:2137;2402:73896 7x12 @8,6 fill=#1a1a1a
+        INSTANCE "Testimonial 3" 2378:35386 362x325 @0,369 [VERTICAL gap24 p20/20/20/20 MIN/MIN] fill=#ffffff r8 <Testimonial 1> props={}
+          FRAME "testimonial-1_group_wrap" I2378:35386;2063:4679 322x43 @20,20 [HORIZONTAL gap24 p0/0/0/0 SPACE_BETWEEN/MAX]
+            VECTOR "“" I2378:35386;2063:4555 55x43 @0,0 fill=#00ffd5
+            FRAME "testimonial-1_group" I2378:35386;2063:4556 68x13 @254,30 [HORIZONTAL gap0 p0/0/0/0 MIN/CENTER]
+              VECTOR "Vector" I2378:35386;2063:4557 14x13 @0,0 fill=#ffbf66
+              VECTOR "Vector" I2378:35386;2063:4558 14x13 @14,0 fill=#ffbf66
+              VECTOR "Vector" I2378:35386;2063:4559 14x13 @27,0 fill=#ffbf66
+              VECTOR "Vector" I2378:35386;2063:4560 14x13 @41,0 fill=#ffbf66
+              VECTOR "Vector" I2378:35386;2063:4561 14x13 @55,0 fill=#ffbf66
+          FRAME "testimonial-1_contain" I2378:35386;2063:4541 322x120 @20,87 [VERTICAL gap0 p0/0/0/0 MIN/MIN]
+            TEXT "testimonial-1_text" I2378:35386;2063:4542 322x120 @0,0 fill=#030b1b font=16/Onest Regular :: HumAIn is my go-to source to find high-quality talent I can't find elsewhere. I've been very impressed with the breadth and depth of talent they have been able to deliver.
+          FRAME "testimonial-1_contain" I2378:35386;2063:4545 322x74 @20,231 [HORIZONTAL gap16 p0/0/0/0 MIN/MIN]
+            ELLIPSE "testimonial-1_img" I2378:35386;2184:4932 48x48 @0,0 fill=IMAGE
+            FRAME "testimonial-1_group_wrap" I2378:35386;2184:5015 258x74 @64,0 [HORIZONTAL gap10 p0/0/0/0 SPACE_BETWEEN/MAX]
+              FRAME "testimonial-1_group_wrap" I2378:35386;2063:4663 210x74 @0,0 [VERTICAL gap8 p0/0/0/0 MIN/MIN]
+                FRAME "testimonial-1_content" I2378:35386;2063:4653 210x48 @0,0 [VERTICAL gap0 p0/0/0/0 MIN/MIN]
+                  TEXT "testimonial-1_text" I2378:35386;2063:4547 210x30 @0,0 fill=#1a1c1e font=20/Onest Regular :: Jocelyn Westervelt
+                  TEXT "testimonial-1_text" I2378:35386;2063:4549 210x18 @0,30 fill=#030b1b op0.3400000035762787 font=14/Onest Regular :: Chief Operations Officer
+                TEXT "testimonial-1_text" I2378:35386;2063:4551 210x18 @0,56 fill=#1a1c1e font=14/Onest Regular :: Covestro
+              INSTANCE "Button" I2378:35386;2184:5052 48x48 @210,26 [HORIZONTAL gap0 p8/16/8/16 CENTER/CENTER] r9999 <Button / type=secondary, state=rest> props={"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":false,"Text":"Button text","type":"secondary","state":"rest"}
+                INSTANCE "chevron_right" I2378:35386;2184:5052;2028:2134 24x24 @16,12 HIDDEN <chevron_right / Style=Filled> props={"Style":"Filled"}
+                  VECTOR "Vector" I2378:35386;2184:5052;2028:2134;2402:73896 7x12 @8,6 fill=#1a1a1a
+                FRAME "button_text" I2378:35386;2184:5052;2028:2135 113x27 @16,11 HIDDEN [HORIZONTAL gap0 p0/8/0/8 CENTER/CENTER]
+                  TEXT "button_text" I2378:35386;2184:5052;2028:2136 97x27 @8,0 fill=#030b1b font=18/Onest Medium :: Button text
+                INSTANCE "chevron_right" I2378:35386;2184:5052;2028:2137 24x24 @12,12 <chevron_right / Style=Filled> props={"Style":"Filled"}
+                  VECTOR "Vector" I2378:35386;2184:5052;2028:2137;2402:73896 7x12 @8,6 fill=#1a1a1a
+        FRAME "content-testimonials_group" 2378:35387 362x440 @0,714 [VERTICAL gap32 p24/24/0/24 MAX/CENTER] fill=GRADIENT_LINEAR r8
+          RECTANGLE "content-testimonials_img" 2378:35388 277x394 @320,46 fill=IMAGE
+        INSTANCE "Testimonial 3" 2378:35389 362x301 @0,1174 [VERTICAL gap24 p20/20/20/20 MIN/MIN] fill=#ffffff r8 <Testimonial 1> props={}
+          FRAME "testimonial-1_group_wrap" I2378:35389;2063:4679 322x43 @20,20 [HORIZONTAL gap24 p0/0/0/0 SPACE_BETWEEN/MAX]
+            VECTOR "“" I2378:35389;2063:4555 55x43 @0,0 fill=#00ffd5
+            FRAME "testimonial-1_group" I2378:35389;2063:4556 68x13 @254,30 [HORIZONTAL gap0 p0/0/0/0 MIN/CENTER]
+              VECTOR "Vector" I2378:35389;2063:4557 14x13 @0,0 fill=#ffbf66
+              VECTOR "Vector" I2378:35389;2063:4558 14x13 @14,0 fill=#ffbf66
+              VECTOR "Vector" I2378:35389;2063:4559 14x13 @27,0 fill=#ffbf66
+              VECTOR "Vector" I2378:35389;2063:4560 14x13 @41,0 fill=#ffbf66
+              VECTOR "Vector" I2378:35389;2063:4561 14x13 @55,0 fill=#ffbf66
+          FRAME "testimonial-1_contain" I2378:35389;2063:4541 322x96 @20,87 [VERTICAL gap0 p0/0/0/0 MIN/MIN]
+            TEXT "testimonial-1_text" I2378:35389;2063:4542 322x96 @0,0 fill=#030b1b font=16/Onest Regular :: With the pressure on and millions watching, HumAIn delivered the talent and expertise needed to launch a brand-new fan engagement platform.
+          FRAME "testimonial-1_contain" I2378:35389;2063:4545 322x74 @20,207 [HORIZONTAL gap16 p0/0/0/0 MIN/MIN]
+            ELLIPSE "testimonial-1_img" I2378:35389;2184:4932 48x48 @0,0 fill=IMAGE
+            FRAME "testimonial-1_group_wrap" I2378:35389;2184:5015 258x74 @64,0 [HORIZONTAL gap10 p0/0/0/0 SPACE_BETWEEN/MAX]
+              FRAME "testimonial-1_group_wrap" I2378:35389;2063:4663 210x74 @0,0 [VERTICAL gap8 p0/0/0/0 MIN/MIN]
+                FRAME "testimonial-1_content" I2378:35389;2063:4653 210x48 @0,0 [VERTICAL gap0 p0/0/0/0 MIN/MIN]
+                  TEXT "testimonial-1_text" I2378:35389;2063:4547 210x30 @0,0 fill=#1a1c1e font=20/Onest Regular :: Marcus Levin
+                  TEXT "testimonial-1_text" I2378:35389;2063:4549 210x18 @0,30 fill=#030b1b op0.3400000035762787 font=14/Onest Regular :: VP, Product and Technology
+                TEXT "testimonial-1_text" I2378:35389;2063:4551 210x18 @0,56 fill=#1a1c1e font=14/Onest Regular :: GOOGLE
+              INSTANCE "Button" I2378:35389;2184:5052 48x48 @210,26 [HORIZONTAL gap0 p8/16/8/16 CENTER/CENTER] r9999 <Button / type=secondary, state=rest> props={"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":false,"Text":"Button text","type":"secondary","state":"rest"}
+                INSTANCE "chevron_right" I2378:35389;2184:5052;2028:2134 24x24 @16,12 HIDDEN <chevron_right / Style=Filled> props={"Style":"Filled"}
+                  VECTOR "Vector" I2378:35389;2184:5052;2028:2134;2402:73896 7x12 @8,6 fill=#1a1a1a
+                FRAME "button_text" I2378:35389;2184:5052;2028:2135 113x27 @16,11 HIDDEN [HORIZONTAL gap0 p0/8/0/8 CENTER/CENTER]
+                  TEXT "button_text" I2378:35389;2184:5052;2028:2136 97x27 @8,0 fill=#030b1b font=18/Onest Medium :: Button text
+                INSTANCE "chevron_right" I2378:35389;2184:5052;2028:2137 24x24 @12,12 <chevron_right / Style=Filled> props={"Style":"Filled"}
+                  VECTOR "Vector" I2378:35389;2184:5052;2028:2137;2402:73896 7x12 @8,6 fill=#1a1a1a
+      INSTANCE "Button" 2378:35390 189x48 @107,1915 [HORIZONTAL gap0 p8/16/8/16 CENTER/CENTER] fill=#00ffd5 r9999 <Button / type=primary, state=rest> props={"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":true,"Text":"See all clients","type":"primary","state":"rest"}
+        INSTANCE "chevron_right" I2378:35390;2028:2124 24x24 @16,12 HIDDEN <chevron_right / Style=Filled> props={"Style":"Filled"}
+          VECTOR "Vector" I2378:35390;2028:2124;2402:73896 7x12 @8,6 fill=#ffffff
+        FRAME "button_text" I2378:35390;2028:2125 133x27 @16,11 [HORIZONTAL gap0 p0/8/0/8 CENTER/CENTER]
+          TEXT "button_text" I2378:35390;2028:2126 117x27 @8,0 fill=#050404 font=18/Onest Medium :: See all clients
+        INSTANCE "chevron_right" I2378:35390;2028:2127 24x24 @149,12 <chevron_right / Style=Filled> props={"Style":"Filled"}
+          VECTOR "Vector" I2378:35390;2028:2127;2402:73896 7x12 @8,6 fill=#030b1b

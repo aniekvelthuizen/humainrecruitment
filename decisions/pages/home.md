@@ -30,3 +30,7 @@ Page now: `page_main` › Hero Experts · Stagger Cards · Sticky Steps · Split
 ## 2026-11-02 — «CTA» at the end of page_main
 Plan: `references/plans/2026-11-02-home-cta.md`. Figma `Content / CTA` (`2710:48623`), last block on 1. Home B before the footer. Built as **CTA Split** (`decisions/components/cta-split.md`), Space Top none.
 Page now (Services session placed Spotlight Grid the same day): `page_main` › Hero Experts · Stagger Cards · Sticky Steps · Split Content #1 · Spotlight Grid · Split Content #2 · **CTA Split** · then Footer. Placed after the Services session released `page_main` ("Home vrij").
+
+## 2026-11-02 — «Testimonials» after Expertise
+Plan: `references/plans/2026-11-02-home-testimonials.md`. Figma `Content / Testimonials` (`2710:48620`), block 6 on 1. Home B. Built as **Spotlight Grid › Reviews** (`decisions/components/spotlight-grid.md`) with Card Testimonial × 3. Placed by appending to `page_main` and re-appending Split Content #2 and CTA Split; Split Content #2 Space Top none → large (it now follows a grey section).
+Page now: `page_main` › Hero Experts · Stagger Cards · Sticky Steps · Split Content #1 · Spotlight Grid · **Spotlight Grid (Reviews)** · Split Content #2 · CTA Split · then Footer.
