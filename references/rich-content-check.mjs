@@ -42,9 +42,11 @@ await send('Page.enable');
 // Line box = a Range around the text (what Figma draws); el = the element box (Lumos trims it).
 const measure = `(() => {
   const s = document.querySelector('.rich-content_wrap'); if (!s) return null;
-  const sb = s.getBoundingClientRect(); const t = s.querySelector('.rich-content_text'); const tb = t.getBoundingClientRect();
+  // Column = the layout wrapper (fixed H2 title + rich text); blocks = the title, then the rich text's children.
+  const sb = s.getBoundingClientRect(); const t = s.querySelector('.rich-content_layout') || s.querySelector('.rich-content_text'); const tb = t.getBoundingClientRect();
   const cs = getComputedStyle(s);
-  const kids = [...t.children].map((k) => {
+  const blocks = [...s.querySelectorAll('.rich-content_title'), ...s.querySelector('.rich-content_text').children];
+  const kids = blocks.map((k) => {
     const r = document.createRange(); r.selectNodeContents(k); const lb = r.getBoundingClientRect(); const eb = k.getBoundingClientRect(); const c = getComputedStyle(k);
     return { tag: k.tagName.toLowerCase(), line: [Math.round(lb.top - tb.top), Math.round(lb.height)], el: [Math.round(eb.top - tb.top), Math.round(eb.height)],
       font: c.fontFamily.split(',')[0] + ' ' + c.fontSize + '/' + c.lineHeight + ' ' + c.fontWeight, color: c.color, width: Math.round(lb.width) };

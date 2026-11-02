@@ -275,3 +275,7 @@
 
 ## 2026-11-02 — Home «Expertise» closed — Aniek Velthuizen with Claude
 - Owner: columns 992–1279 stay as built, "helemaal af zo". Re-measured after the Rich Content rich-text restore (unchanged at 1512 / 991 / 402) and the CTA focus-ring publish (card ring 2 px dark, unchanged). Merged to main.
+
+## 2026-11-02 — Rich Content: fixed H2 title — Aniek Velthuizen with Claude
+- Owner: the block must always open with an H2 (SEO). New `rich-content_layout` (57rem column) › `h2.rich-content_title.u-text-style-h3.u-text-trim-off` bound to new prop **Title** › rich text. Privacy page: first title moved from Content to Title.
+- Published to staging (announced). `rich-content-check.mjs` (now reads the title too) at 1512 / 1280 / 991 / 767 / 402: identical to before, 4 × h2, no sideways scroll, no console errors.
