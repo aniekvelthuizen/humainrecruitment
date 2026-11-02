@@ -12,12 +12,12 @@ Why: Split Content is a text column on white beside a notched photo with eyebrow
 - H2 at every width (site rule scales 48 → 30); Figma mobile's H4 30 is the same size.
 - Space Top `none` by default (10 of 13 instances follow a section with bottom space), `large` / `main` as on Split Content.
 - Content padding 64 = literal `4rem` (no variable); ≤ 991 `space/7` (no design, between desktop and mobile), ≤ 767 `space/5` (Figma mobile 20).
-- Below 992 one column, text first, photo 26.25rem high; buttons wrap, stacked ≤ 479.
+- ~~Below 992 one column~~ → owner 2026-11-02: two columns down to 768; ≤ 767 one column, text first, photo 26.25rem high; buttons wrap, stacked ≤ 479.
 - Home buttons: «Request a shortlist» → `/hire-an-expert`, «Discuss your project» → `/contact`.
 
 ## 2026-11-02 — Structure
-`section.cta-split_wrap.u-theme-light` (`data-section="light"`, `data-cta-split`, `data-space-top` = prop) › `cta-split_contain.u-container` › `cta-split_card.u-theme-brand` (grid `minmax(0,1fr) minmax(0,1fr)`, gap 0, `radius/small`, `overflow: clip`; one column ≤ 991) ›
-- `cta-split_visual` (relative, stretches to the card's height; ≤ 991 `order: 1`, 26.25rem) › Visual Image, variant **Cover**, Corners **on** (on = no radius class; off adds `u-radius-main`, 16 px — the card's 8 px clip does the rounding)
+`section.cta-split_wrap.u-theme-light` (`data-section="light"`, `data-cta-split`, `data-space-top` = prop) › `cta-split_contain.u-container` › `cta-split_card.u-theme-brand` (grid `minmax(0,1fr) minmax(0,1fr)`, gap 0, `radius/small`, `overflow: clip`; one column ≤ 767) ›
+- `cta-split_visual` (relative, stretches to the card's height; ≤ 767 `order: 1`, 26.25rem) › Visual Image, variant **Cover**, Corners **on** (on = no radius class; off adds `u-radius-main`, 16 px — the card's 8 px clip does the rounding)
 - `cta-split_content.u-text-trim-off` (flex column) › h2 `_title.u-text-style-h2` › span (Title) · span (space) · `wbr` · span `_muted` (Title Muted) · p `_text.u-text-style-large` (margin-top `space/4`) · `_actions` (margin-top `space/8`, gap `space/4`) › Button Main Primary + Secondary
 - HTML embed (`u-embed-css`): Space Top rules (case-insensitive; `large` becomes `main` ≤ 991) and hiding an empty muted span.
 Card colours come from `u-theme-brand` (Theme `background` = brand-500, text white); the Secondary button turns white by the theme (`decisions/site.md`, buttons follow the theme). Texts untrimmed, so Figma's gaps are literal (same as Split Content).
@@ -47,3 +47,8 @@ Other pages' instances (Figma `instances.txt`): Opportunities mobile hides the s
 - Photo corners were 16 px inside the 8 px card: Visual Image's Corners prop is inverted (off = `u-radius-main`). Set to on.
 - Kept like Split Content: prop folder order (Content, Buttons, Image, Layout; Visibility first), Space Top as free text, the CSS embed inside the component.
 - Waiting for the owner: light focus ring on Brand/Dark sections (site-wide), tablet line length (with Split Content), the hyphen break in the title (site-wide balanced wrap).
+
+## 2026-11-02 — Owner feedback round 1 (Aniek)
+- "In Figma is het beeld links en de tekst rechts": desktop already was; owner chose to keep it side by side on tablets too. Card one column only ≤ 767 (`small`), photo `order: 1` + 26.25rem there. At 991 the card is now photo 452 | text 452 (padding `space/7`).
+- Light focus ring on purple and dark sections: solved for all Button Main buttons site-wide (see `decisions/components/button.md`).
+- Rest stays as built ("het blok is goed"): tablet line length and the hyphen break in the title are closed as owner choices.
