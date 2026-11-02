@@ -318,3 +318,4 @@
 - Owner request: reveal + mouse effect on the Score Chart, glow animates on scroll into view. Exception recorded in `decisions/motion.md`.
 - Score Chart: segments grow left to right, rows rise, values count up; hover keeps one row + segment, dims the rest. Split Content: glow rises in (only with Glow on). Script and style in separate embeds per component; sources in `references/embeds/`.
 - First publish: rows faded *out* before the reveal (transition also on the hide step) → transitions only in the `in` state. Published to staging 2×. Headless Chrome 3 runs: hidden before the reveal, bar complete at ~0.9 s, everything final at ~1.4 s with the original texts, glow complete at ~1.6 s, hover 1 / 0.35, reduced motion static, no console errors.
+- Owner: glow animation off («niet te zien met blote oog, niet per se mooi») → Split Content script embed removed, style embed back to the static glow. Published to staging.

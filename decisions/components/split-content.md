@@ -79,3 +79,6 @@ Both sit at the end of `page_main`, after the template's placeholder Section; th
 
 ## 2026-11-02 — Glow motion (owner request)
 With Glow on, the glow rises in once when the block scrolls into view (`decisions/motion.md`, exception entry). The glow moved to a `::before` (`isolation: isolate`, `z-index: -1`) only while the script runs; without the script it stays the static background. Second embed (script) added after the style embed, so the canvas keeps the style rules. Source: `references/embeds/split-content-style.html`, `split-content-script.html`.
+
+## 2026-11-02 — Glow motion removed (owner)
+Owner (Aniek): the rising glow was hardly visible and not an improvement → removed: the script embed is gone and the style embed is back to the static glow rules. Split Content has one embed again (`references/embeds/split-content-style.html`).
