@@ -267,3 +267,8 @@
 - The H2/H3/p/ul/ol/li edits landed on Lumos' **global** `.u-rich-text <tag>` rules (the Designer reuses the existing nested rule while showing the full chain). Published to staging for ~30 min; the other sessions were warned. Restored in the Designer and diffed against the 19:33 CSS: identical except `.u-rich-text li`, now on live trim variables instead of deleted ones. Webflow dropped 460 dead deleted-variable definitions on that save (only `li` read them).
 - Heading/paragraph/list rules back in the section's `u-embed-css` embed (scoped to `.rich-content_text`); H3 now at the H4 size; paragraphs and lists margin-top 0 so a list under a title sits 10 below it (was 2).
 - Published to staging 3× (announced). Measured with patched test content at 1512 / 1280 / 991 / 767 / 402: Figma pairs unchanged, title → list 10, H3 30 px, link styles as set, no sideways scroll, no console errors. Note in `references/kit-issues.md` (not filed).
+
+## 2026-11-02 — Nav smaller on phones — Aniek Velthuizen with Claude
+- Owner: logo in the mobile nav a bit smaller so the bar gets smaller, hamburger a bit smaller too.
+- Small breakpoint (≤ 767) only: bar 74 → 64, panel top padding with it, logo 209 → 176 wide, hamburger 32 × 16 → 28 × 14 (tap area still 44 × 44). Gap through `--nav--hamburger-gap` in the Nav CSS embed (style API refuses custom properties). Record: `decisions/components/nav.md`.
+- Published to staging 1×. Measured at 402 / 767 / 768 / 991, closed and open: phone sizes as planned, ✕ centred, tablet unchanged, no sideways scroll, no console errors.
