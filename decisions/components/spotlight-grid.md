@@ -48,3 +48,6 @@ Webflow's default `figcaption { margin-top: 5px }` pushed the person down 5 px: 
 Review: `references/audit/2026-11-02-spotlight-grid.md` (fresh reviewer, no API access).
 - Quote broke inside «go-/to». Quote default now uses non-breaking hyphens (U+2011) in «go‑to» and «high‑quality», as the hero writes «Pre‑Qualified». Editors typing a quote with a hyphenated word can do the same.
 - Below 992 the person in the photo sat left of the centred quote (she stands at 34 % of the file). `spotlight-grid_visual` at `medium`: `transform: translateX(16%)`; the empty right side of the cut-out is clipped by the panel.
+
+## 2026-11-02 — Columns 992–1279 kept; block done (owner)
+Review finding 3: between 992 and ~1150 px the three columns are narrow (280 px at 992), card texts wrap differently and the two card columns start at different heights. Options were: keep it, or use the two-column layout up to 1279. Owner (Aniek): "ik vind het goed zoals hij nu is — helemaal af zo". Kept as built; block closed. Review finding 4 (sections not on Example Components) and the quote person/alt text were not taken up.
