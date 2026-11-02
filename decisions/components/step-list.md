@@ -10,9 +10,14 @@ Why: kit rule — a variant that would add only dead props is its own component.
 
 ## 2026-11-02 — Structure
 `step-list_wrap` (`role="list"`, `data-step-list`, flex column, gap `space/3` = 10) › slot **Items** + HTML embed (`u-embed-css`).
-Step Item: `step-list_item` (`role="listitem"`, `data-step-item`, flex, centred, gap `space/5`, padding `space/5`, `card/background` = light-200, `radius/small`) › `step-list_number.u-weight-semibold` (`aria-hidden`, 3.125rem round, Theme **`badge/background`** = accent-500 mint, Theme `text`) + `p.step-list_title.u-text-style-h5` (prop **Title**).
+Step Item: `step-list_item` (`role="listitem"`, `data-step-item`, flex, centred, gap `space/5`, padding `space/5`, `card/background` = light-200, `radius/small`) › `step-list_number.u-weight-semibold` (`aria-hidden`, 3.125rem round, Theme **`badge/background`** = accent-500 mint, Theme **`badge/text`** = dark-900 in every mode) + `p.step-list_title.u-text-style-h5` (prop **Title**).
 Row 90 high, 100 apart — Figma 89.6 / 99.6 (its badge is 49.6).
 
 ## 2026-11-02 — Numbers count themselves
 Choice: a CSS counter in the embed (`counter-reset` on the list, `counter-increment` per item, `content: counter()` on the number's `::before`). No number prop, so reordering or adding a row never leaves a wrong number. The number is `aria-hidden`; screen readers get the list position from `role="list"`.
 Why: the style API mangles `content` on `::before`, so it lives in the embed.
+
+## 2026-11-02 — Review fixes (fresh reviewer, `references/audit/2026-11-02-visual-slot.md`)
+- On a Dark or Brand section the number would have turned white on mint (1.29 : 1) → new Theme `badge/text` (dark-900 in every mode). Light: unchanged (15.2 : 1).
+- Badge class: no-op margins and `flex-grow: 0` removed.
+- No showcase on Example Components: same reason as Score Chart (`score-chart.md`).
