@@ -1,0 +1,1875 @@
+{
+ "sib": [
+  [
+   "2710:48616",
+   "INSTANCE",
+   "Header / Home v01",
+   0,
+   1019
+  ],
+  [
+   "2710:48617",
+   "INSTANCE",
+   "Frame 592",
+   1019,
+   810
+  ],
+  [
+   "2710:48618",
+   "INSTANCE",
+   "Content scrolly telling / Glass cards",
+   1829,
+   1394
+  ],
+  [
+   "2710:56547",
+   "INSTANCE",
+   "Content / Content block",
+   3223,
+   938
+  ],
+  [
+   "2710:48619",
+   "INSTANCE",
+   "Content / Services desktop",
+   4161,
+   1190
+  ],
+  [
+   "2710:48620",
+   "INSTANCE",
+   "Content / Testimonials",
+   5351,
+   1560
+  ],
+  [
+   "2710:57363",
+   "FRAME",
+   "Content - Recruitment process",
+   6911,
+   1930
+  ],
+  [
+   "2710:57450",
+   "INSTANCE",
+   "Content / 3 UBRS - White background",
+   8841,
+   746
+  ],
+  [
+   "2710:57507",
+   "INSTANCE",
+   "Content / Content block",
+   9587,
+   643
+  ],
+  [
+   "2710:48623",
+   "INSTANCE",
+   "Content / CTA",
+   10230,
+   612
+  ],
+  [
+   "2710:48624",
+   "INSTANCE",
+   "Footer",
+   10842,
+   550
+  ],
+  [
+   "2710:48625",
+   "INSTANCE",
+   "Navbar - Light",
+   0,
+   180
+  ]
+ ],
+ "variants": [
+  [
+   "2233:4246",
+   "device=desktop",
+   1512,
+   1821
+  ],
+  [
+   "2378:31869",
+   "device=mobile",
+   402,
+   2165
+  ]
+ ],
+ "set": "Content scrolly telling / Glass cards 2378:31868",
+ "tree": {
+  "id": "2710:48618",
+  "t": "INSTANCE",
+  "n": "Content scrolly telling / Glass cards",
+  "x": 0,
+  "y": 1829,
+  "w": 1512,
+  "h": 1394.1,
+  "comp": "Content scrolly telling / Glass cards / device=desktop",
+  "props": {
+   "device": "desktop"
+  },
+  "al": "HORIZONTAL 32 64/64/192/64 CENTER MIN NO_WRAP",
+  "sz": "FIXED/HUG",
+  "fill": "GRADIENT_LINEAR #250059 a1.00@0.00(swatch/brand-500), #0082a6 a1.00@0.80(swatch/brand-secondary-500), #e5b8b4 a1.00@1.00 T[[0,1,0],[-1,0,1]]",
+  "bv": {
+   "itemSpacing": "space/7",
+   "paddingBottom": "Vertical space"
+  },
+  "c": [
+   {
+    "id": "I2710:48618;2051:11487",
+    "t": "FRAME",
+    "n": "content-scrolly-telling-glass-cards_group_wrap",
+    "x": 64,
+    "y": 64,
+    "w": 555,
+    "h": 1138.1,
+    "al": "VERTICAL 48 0/0/0/0 MIN MIN NO_WRAP",
+    "sz": "FIXED/FILL",
+    "bv": {
+     "itemSpacing": "space/8"
+    },
+    "c": [
+     {
+      "id": "I2710:48618;2045:11331",
+      "t": "FRAME",
+      "n": "content-scrolly-telling-glass-cards_group_wrap",
+      "x": 0,
+      "y": 0,
+      "w": 555,
+      "h": 583,
+      "al": "VERTICAL 48 128/0/0/0 MIN MIN NO_WRAP",
+      "sz": "FILL/HUG",
+      "bv": {
+       "itemSpacing": "space/8"
+      },
+      "c": [
+       {
+        "id": "I2710:48618;2055:4200",
+        "t": "FRAME",
+        "n": "content-scrolly-telling-glass-cards_content",
+        "x": 0,
+        "y": 128,
+        "w": 521,
+        "h": 359,
+        "al": "VERTICAL 10 0/0/0/0 MIN MIN NO_WRAP",
+        "sz": "HUG/HUG",
+        "bv": {
+         "itemSpacing": "space/3"
+        },
+        "c": [
+         {
+          "id": "I2710:48618;2070:5812",
+          "t": "TEXT",
+          "n": "content-scrolly-telling-glass-cards_text",
+          "x": 0,
+          "y": 0,
+          "w": 121,
+          "h": 24,
+          "sz": "HUG/HUG",
+          "fill": "SOLID #ffffff o1.00 var:text",
+          "bv": {
+           "fontSize": [
+            "font-size/text-main"
+           ],
+           "fontStyle": [
+            "font/primary-regular"
+           ],
+           "fontFamily": [
+            "font/primary-family"
+           ]
+          },
+          "text": "our method",
+          "font": "Onest Regular",
+          "fs": 16,
+          "lh": "150%",
+          "ls": 10,
+          "style": "Label Large",
+          "align": "LEFT"
+         },
+         {
+          "id": "I2710:48618;2045:11332",
+          "t": "TEXT",
+          "n": "content-scrolly-telling-glass-cards_title",
+          "x": 0,
+          "y": 34,
+          "w": 521,
+          "h": 225,
+          "sz": "FIXED/HUG",
+          "fill": "mixed",
+          "bv": {
+           "fontSize": [
+            "font-size/h1"
+           ],
+           "fontStyle": [
+            "font/secondary-bold"
+           ],
+           "fontFamily": [
+            "font/secondary-family"
+           ],
+           "textRangeFills": [
+            "swatch/light-100",
+            "swatch/brand-accent-500"
+           ]
+          },
+          "text": "The top 5% found before you need them.",
+          "font": "Vend Sans Bold",
+          "fs": 60,
+          "lh": "125%",
+          "ls": 0,
+          "style": "H1",
+          "align": "LEFT",
+          "segs": [
+           [
+            "The top 5% found ",
+            "Bold",
+            60,
+            "#ffffff o1.00"
+           ],
+           [
+            "before",
+            "Bold",
+            60,
+            "#00ffd5 o1.00"
+           ],
+           [
+            " ",
+            "Bold",
+            60,
+            "#ffffff o1.00"
+           ],
+           [
+            "you need them.",
+            "Bold",
+            60,
+            "#00ffd5 o1.00"
+           ]
+          ]
+         },
+         {
+          "id": "I2710:48618;2045:11333",
+          "t": "TEXT",
+          "n": "content-scrolly-telling-glass-cards_text",
+          "x": 0,
+          "y": 269,
+          "w": 521,
+          "h": 90,
+          "sz": "FIXED/HUG",
+          "fill": "SOLID #ffffff o1.00 var:text",
+          "bv": {
+           "fontSize": [
+            "font-size/text-large"
+           ],
+           "fontStyle": [
+            "font/primary-regular"
+           ],
+           "fontFamily": [
+            "font/primary-family"
+           ]
+          },
+          "text": "Most agencies start searching when you call. We map each discipline continuously, so the shortlist already exists on the day you need it.",
+          "font": "Onest Regular",
+          "fs": 20,
+          "lh": "150%",
+          "ls": 0,
+          "style": "Text Large",
+          "align": "LEFT"
+         }
+        ]
+       },
+       {
+        "id": "I2710:48618;2055:4193",
+        "t": "INSTANCE",
+        "n": "Button",
+        "x": 0,
+        "y": 535,
+        "w": 233,
+        "h": 48,
+        "comp": "Button / type=primary, state=rest",
+        "props": {
+         "Icon": "2028:1998",
+         "Icon right": true,
+         "Icon left": false,
+         "Label": true,
+         "Text": "See how we select",
+         "type": "primary",
+         "state": "rest"
+        },
+        "al": "HORIZONTAL 0 8/16/8/16 CENTER CENTER NO_WRAP",
+        "sz": "HUG/FIXED",
+        "r": 9999,
+        "fill": "SOLID #00ffd5 o1.00 var:swatch/brand-accent-500",
+        "fx": [
+         "DROP_SHADOW r8 0,4 a0.10",
+         "DROP_SHADOW r14 0,14 a0.09",
+         "DROP_SHADOW r19 0,32 a0.05",
+         "DROP_SHADOW r23 0,56 a0.01",
+         "DROP_SHADOW r25 0,88 a0.00"
+        ],
+        "bv": {
+         "paddingLeft": "Padding x",
+         "paddingTop": "space/2",
+         "paddingRight": "Padding x",
+         "paddingBottom": "space/2",
+         "height": "Height",
+         "topLeftRadius": "radius/round",
+         "topRightRadius": "radius/round",
+         "bottomLeftRadius": "radius/round",
+         "bottomRightRadius": "radius/round"
+        },
+        "c": [
+         {
+          "id": "I2710:48618;2055:4193;2028:2124",
+          "t": "INSTANCE",
+          "n": "chevron_right",
+          "x": 16,
+          "y": 12,
+          "w": 24,
+          "h": 24,
+          "hidden": true,
+          "comp": "chevron_right / Style=Filled",
+          "props": {
+           "Style": "Filled"
+          },
+          "sz": "FIXED/FIXED",
+          "c": [
+           {
+            "id": "I2710:48618;2055:4193;2028:2124;2402:73896",
+            "t": "VECTOR",
+            "n": "Vector",
+            "x": 8.3,
+            "y": 6,
+            "w": 7.4,
+            "h": 12,
+            "sz": "FIXED/FIXED",
+            "fill": "SOLID #ffffff o1.00 var:Defaults/Body light"
+           }
+          ]
+         },
+         {
+          "id": "I2710:48618;2055:4193;2028:2125",
+          "t": "FRAME",
+          "n": "button_text",
+          "x": 16,
+          "y": 10.5,
+          "w": 177,
+          "h": 27,
+          "al": "HORIZONTAL 0 0/8/0/8 CENTER CENTER NO_WRAP",
+          "sz": "HUG/HUG",
+          "bv": {
+           "paddingLeft": "space/2",
+           "paddingRight": "space/2"
+          },
+          "c": [
+           {
+            "id": "I2710:48618;2055:4193;2028:2126",
+            "t": "TEXT",
+            "n": "button_text",
+            "x": 8,
+            "y": 0,
+            "w": 161,
+            "h": 27,
+            "sz": "HUG/HUG",
+            "fill": "SOLID #050404 o1.00",
+            "bv": {
+             "fontSize": [
+              "font-size/text-medium"
+             ]
+            },
+            "text": "See how we select",
+            "font": "Onest Medium",
+            "fs": 18,
+            "lh": "150%",
+            "ls": 0,
+            "align": "LEFT"
+           }
+          ]
+         },
+         {
+          "id": "I2710:48618;2055:4193;2028:2127",
+          "t": "INSTANCE",
+          "n": "chevron_right",
+          "x": 193,
+          "y": 12,
+          "w": 24,
+          "h": 24,
+          "comp": "chevron_right / Style=Filled",
+          "props": {
+           "Style": "Filled"
+          },
+          "sz": "FIXED/FIXED",
+          "c": [
+           {
+            "id": "I2710:48618;2055:4193;2028:2127;2402:73896",
+            "t": "VECTOR",
+            "n": "Vector",
+            "x": 8.3,
+            "y": 6,
+            "w": 7.4,
+            "h": 12,
+            "sz": "FIXED/FIXED",
+            "fill": "SOLID #030b1b o1.00 var:swatch/dark-900"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "I2710:48618;2047:11420",
+    "t": "FRAME",
+    "n": "content-scrolly-telling-glass-cards_group_wrap",
+    "x": 651,
+    "y": 64,
+    "w": 797,
+    "h": 1138.1,
+    "al": "HORIZONTAL 10 0/0/0/0 MIN MIN NO_WRAP",
+    "sz": "FILL/HUG",
+    "bv": {
+     "itemSpacing": "space/3"
+    },
+    "c": [
+     {
+      "id": "I2710:48618;2047:11401",
+      "t": "FRAME",
+      "n": "content-scrolly-telling-glass-cards_list",
+      "x": 0,
+      "y": 0,
+      "w": 687.2,
+      "h": 1138.1,
+      "al": "VERTICAL 48 0/0/0/0 MIN CENTER NO_WRAP",
+      "sz": "HUG/HUG",
+      "bv": {
+       "itemSpacing": "space/8"
+      },
+      "c": [
+       {
+        "id": "I2710:48618;2045:11379",
+        "t": "INSTANCE",
+        "n": "Step 5",
+        "x": 0,
+        "y": 23.6,
+        "w": 676,
+        "h": 332.7,
+        "comp": "Content / Process step / style=glass",
+        "props": {
+         "Label": false,
+         "style": "glass"
+        },
+        "al": "VERTICAL 16 128/0/0/0 MIN MIN NO_WRAP",
+        "sz": "FIXED/HUG",
+        "r": 8,
+        "bv": {
+         "itemSpacing": "space/4",
+         "topLeftRadius": "radius/small",
+         "topRightRadius": "radius/small",
+         "bottomLeftRadius": "radius/small",
+         "bottomRightRadius": "radius/small"
+        },
+        "c": [
+         {
+          "id": "I2710:48618;2045:11379;2047:11421",
+          "t": "FRAME",
+          "n": "step-4_group_wrap",
+          "x": 0,
+          "y": 128,
+          "w": 676,
+          "h": 204.7,
+          "al": "VERTICAL 16 24/24/24/24 MIN MIN NO_WRAP",
+          "sz": "FILL/HUG",
+          "r": 8,
+          "fill": "SOLID #ffffff o0.20 var:swatch/light-100-o20",
+          "stroke": "GRADIENT_LINEAR #ffffff a1.00@0.00, #ffffff a0.00@0.51, #ffffff a1.00@1.00 T[[0.61,0.23,0.09],[-0.23,0.15,0.54]] w1",
+          "fx": [
+           "BACKGROUND_BLUR r40",
+           "DROP_SHADOW r7 0,3 a0.05",
+           "DROP_SHADOW r12 0,12 a0.04",
+           "DROP_SHADOW r17 0,28 a0.03",
+           "DROP_SHADOW r20 0,49 a0.01",
+           "DROP_SHADOW r21 0,76 a0.00"
+          ],
+          "bv": {
+           "itemSpacing": "space/4",
+           "paddingLeft": "space/6",
+           "paddingTop": "space/6",
+           "paddingRight": "space/6",
+           "paddingBottom": "space/6",
+           "topLeftRadius": "radius/small",
+           "topRightRadius": "radius/small",
+           "bottomLeftRadius": "radius/small",
+           "bottomRightRadius": "radius/small",
+           "strokeTopWeight": "border-width/main",
+           "strokeBottomWeight": "border-width/main",
+           "strokeLeftWeight": "border-width/main",
+           "strokeRightWeight": "border-width/main"
+          },
+          "c": [
+           {
+            "id": "I2710:48618;2045:11379;2045:11364",
+            "t": "FRAME",
+            "n": "step-4_background-border",
+            "x": 24,
+            "y": 24,
+            "w": 48,
+            "h": 48,
+            "al": "HORIZONTAL 0 9.5/0/10.5/0 CENTER CENTER NO_WRAP",
+            "sz": "FIXED/FIXED",
+            "r": 9999,
+            "stroke": "SOLID #00ffd5 o1.00 var:swatch/brand-accent-500 w2",
+            "bv": {
+             "topLeftRadius": "radius/round",
+             "topRightRadius": "radius/round",
+             "bottomLeftRadius": "radius/round",
+             "bottomRightRadius": "radius/round",
+             "strokeTopWeight": "border-width/thick",
+             "strokeBottomWeight": "border-width/thick",
+             "strokeLeftWeight": "border-width/thick",
+             "strokeRightWeight": "border-width/thick"
+            },
+            "c": [
+             {
+              "id": "I2710:48618;2045:11379;2045:11365",
+              "t": "TEXT",
+              "n": "step-4_text",
+              "x": 20.5,
+              "y": 11.5,
+              "w": 7,
+              "h": 24,
+              "sz": "HUG/HUG",
+              "fill": "SOLID #00ffd5 o1.00 var:swatch/brand-accent-500",
+              "text": "1",
+              "font": "Onest SemiBold",
+              "fs": 16,
+              "lh": 24,
+              "ls": 0,
+              "align": "CENTER"
+             }
+            ]
+           },
+           {
+            "id": "I2710:48618;2045:11379;2045:11366",
+            "t": "FRAME",
+            "n": "step-4_list",
+            "x": 24,
+            "y": 88,
+            "w": 628,
+            "h": 92.7,
+            "al": "VERTICAL 16 0.699999988079071/0/0/0 MIN MIN NO_WRAP",
+            "sz": "FILL/HUG",
+            "bv": {
+             "itemSpacing": "space/4"
+            },
+            "c": [
+             {
+              "id": "I2710:48618;2045:11379;2055:4054",
+              "t": "FRAME",
+              "n": "step-4_content",
+              "x": 0,
+              "y": 0.7,
+              "w": 140,
+              "h": 26,
+              "hidden": true,
+              "al": "HORIZONTAL 10 4/12/4/12 CENTER CENTER NO_WRAP",
+              "sz": "HUG/HUG",
+              "r": 999,
+              "stroke": "SOLID #ffeeee o0.20 w1",
+              "bv": {
+               "itemSpacing": "space/3",
+               "paddingTop": "space/1",
+               "paddingBottom": "space/1",
+               "strokeTopWeight": "border-width/main",
+               "strokeBottomWeight": "border-width/main",
+               "strokeLeftWeight": "border-width/main",
+               "strokeRightWeight": "border-width/main"
+              },
+              "c": [
+               {
+                "id": "I2710:48618;2045:11379;2045:11367",
+                "t": "TEXT",
+                "n": "step-4_text",
+                "x": 12,
+                "y": 4,
+                "w": 116,
+                "h": 18,
+                "sz": "HUG/HUG",
+                "fill": "SOLID #ffffff o1.00 var:swatch/light-100",
+                "bv": {
+                 "fontSize": [
+                  "font-size/text-small"
+                 ],
+                 "fontStyle": [
+                  "font/primary-regular"
+                 ],
+                 "fontFamily": [
+                  "font/primary-family"
+                 ]
+                },
+                "text": "Day 1 · 30 min call",
+                "font": "Onest Regular",
+                "fs": 14,
+                "ls": 0,
+                "style": "Text Small",
+                "align": "LEFT"
+               }
+              ]
+             },
+             {
+              "id": "I2710:48618;2045:11379;2055:4175",
+              "t": "FRAME",
+              "n": "step-4_content",
+              "x": 0,
+              "y": 0.7,
+              "w": 628,
+              "h": 92,
+              "al": "VERTICAL 8 0/0/0/0 MIN MIN NO_WRAP",
+              "sz": "FILL/HUG",
+              "bv": {
+               "itemSpacing": "space/2"
+              },
+              "c": [
+               {
+                "id": "I2710:48618;2045:11379;2055:4050",
+                "t": "TEXT",
+                "n": "step-4_title",
+                "x": 0,
+                "y": 0,
+                "w": 212,
+                "h": 30,
+                "sz": "HUG/HUG",
+                "fill": "SOLID #ffffff o1.00 var:swatch/light-100",
+                "bv": {
+                 "fontSize": [
+                  "font-size/h5"
+                 ],
+                 "fontStyle": [
+                  "font/secondary-bold"
+                 ],
+                 "fontFamily": [
+                  "font/secondary-family"
+                 ]
+                },
+                "text": "Continuous search.",
+                "font": "Vend Sans Bold",
+                "fs": 24,
+                "lh": "125%",
+                "ls": 0,
+                "style": "H5",
+                "align": "LEFT"
+               },
+               {
+                "id": "I2710:48618;2045:11379;2045:11369",
+                "t": "TEXT",
+                "n": "step-4_text",
+                "x": 0,
+                "y": 38,
+                "w": 628,
+                "h": 54,
+                "sz": "FILL/HUG",
+                "fill": "SOLID #ffffff o1.00 var:swatch/light-100",
+                "bv": {
+                 "fontSize": [
+                  "font-size/text-medium"
+                 ],
+                 "fontStyle": [
+                  "font/primary-regular"
+                 ],
+                 "fontFamily": [
+                  "font/primary-family"
+                 ]
+                },
+                "text": "We map the market per discipline and keep those specialists warm, instead of starting from zero on each request.",
+                "font": "Onest Regular",
+                "fs": 18,
+                "lh": "150%",
+                "ls": 0,
+                "style": "Text Medium",
+                "align": "LEFT"
+               }
+              ]
+             },
+             {
+              "id": "I2710:48618;2045:11379;2055:4135",
+              "t": "FRAME",
+              "n": "step-4_list",
+              "x": 0,
+              "y": 150.7,
+              "w": 628,
+              "h": 65,
+              "hidden": true,
+              "al": "VERTICAL 4 0/0/0/0 MIN MIN NO_WRAP",
+              "sz": "FIXED/HUG",
+              "bv": {
+               "itemSpacing": "space/1"
+              },
+              "c": [
+               {
+                "id": "I2710:48618;2045:11379;2055:4086",
+                "t": "INSTANCE",
+                "n": "Frame 428",
+                "x": 0,
+                "y": 0,
+                "w": 628,
+                "h": 19,
+                "comp": "bullet / type=14",
+                "props": {
+                 "type": "14"
+                },
+                "al": "HORIZONTAL 4 0/0/0/0 MIN MIN NO_WRAP",
+                "sz": "FILL/HUG",
+                "bv": {
+                 "itemSpacing": "space/1"
+                },
+                "c": [
+                 {
+                  "id": "I2710:48618;2045:11379;2055:4086;2028:2713",
+                  "t": "INSTANCE",
+                  "n": "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2",
+                  "x": 0,
+                  "y": 0,
+                  "w": 19,
+                  "h": 19,
+                  "comp": "Google icons / type=check",
+                  "props": {
+                   "type": "check"
+                  },
+                  "sz": "FIXED/FIXED"
+                 },
+                 {
+                  "id": "I2710:48618;2045:11379;2055:4086;2028:2705",
+                  "t": "TEXT",
+                  "n": "bullet_text",
+                  "x": 23,
+                  "y": 0,
+                  "w": 307,
+                  "h": 18,
+                  "sz": "FIXED/HUG",
+                  "fill": "SOLID #ffffff o1.00 var:swatch/light-100",
+                  "text": "Project, scope & timeline",
+                  "font": "Onest Regular",
+                  "fs": 14,
+                  "lh": "125%",
+                  "ls": 0,
+                  "align": "LEFT"
+                 }
+                ]
+               },
+               {
+                "id": "I2710:48618;2045:11379;2055:4103",
+                "t": "INSTANCE",
+                "n": "Frame 590",
+                "x": 0,
+                "y": 23,
+                "w": 628,
+                "h": 19,
+                "comp": "bullet / type=14",
+                "props": {
+                 "type": "14"
+                },
+                "al": "HORIZONTAL 4 0/0/0/0 MIN MIN NO_WRAP",
+                "sz": "FILL/HUG",
+                "bv": {
+                 "itemSpacing": "space/1"
+                },
+                "c": [
+                 {
+                  "id": "I2710:48618;2045:11379;2055:4103;2028:2713",
+                  "t": "INSTANCE",
+                  "n": "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2",
+                  "x": 0,
+                  "y": 0,
+                  "w": 19,
+                  "h": 19,
+                  "comp": "Google icons / type=check",
+                  "props": {
+                   "type": "check"
+                  },
+                  "sz": "FIXED/FIXED"
+                 },
+                 {
+                  "id": "I2710:48618;2045:11379;2055:4103;2028:2705",
+                  "t": "TEXT",
+                  "n": "bullet_text",
+                  "x": 23,
+                  "y": 0,
+                  "w": 307,
+                  "h": 18,
+                  "sz": "FIXED/HUG",
+                  "fill": "SOLID #ffffff o1.00 var:swatch/light-100",
+                  "text": "Required expertise",
+                  "font": "Onest Regular",
+                  "fs": 14,
+                  "lh": "125%",
+                  "ls": 0,
+                  "align": "LEFT"
+                 }
+                ]
+               },
+               {
+                "id": "I2710:48618;2045:11379;2055:4119",
+                "t": "INSTANCE",
+                "n": "Frame 591",
+                "x": 0,
+                "y": 46,
+                "w": 628,
+                "h": 19,
+                "comp": "bullet / type=14",
+                "props": {
+                 "type": "14"
+                },
+                "al": "HORIZONTAL 4 0/0/0/0 MIN MIN NO_WRAP",
+                "sz": "FILL/HUG",
+                "bv": {
+                 "itemSpacing": "space/1"
+                },
+                "c": [
+                 {
+                  "id": "I2710:48618;2045:11379;2055:4119;2028:2713",
+                  "t": "INSTANCE",
+                  "n": "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2",
+                  "x": 0,
+                  "y": 0,
+                  "w": 19,
+                  "h": 19,
+                  "comp": "Google icons / type=check",
+                  "props": {
+                   "type": "check"
+                  },
+                  "sz": "FIXED/FIXED"
+                 },
+                 {
+                  "id": "I2710:48618;2045:11379;2055:4119;2028:2705",
+                  "t": "TEXT",
+                  "n": "bullet_text",
+                  "x": 23,
+                  "y": 0,
+                  "w": 307,
+                  "h": 18,
+                  "sz": "FIXED/HUG",
+                  "fill": "SOLID #ffffff o1.00 var:swatch/light-100",
+                  "text": "Structured search profile",
+                  "font": "Onest Regular",
+                  "fs": 14,
+                  "lh": "125%",
+                  "ls": 0,
+                  "align": "LEFT"
+                 }
+                ]
+               },
+               {
+                "id": "I2710:48618;2045:11379;2263:10778",
+                "t": "INSTANCE",
+                "n": "Frame 592",
+                "x": 0,
+                "y": 69,
+                "w": 628,
+                "h": 19,
+                "hidden": true,
+                "comp": "bullet / type=14",
+                "props": {
+                 "type": "14"
+                },
+                "al": "HORIZONTAL 4 0/0/0/0 MIN MIN NO_WRAP",
+                "sz": "FIXED/HUG",
+                "bv": {
+                 "itemSpacing": "space/1"
+                },
+                "c": [
+                 {
+                  "id": "I2710:48618;2045:11379;2263:10778;2028:2713",
+                  "t": "INSTANCE",
+                  "n": "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2",
+                  "x": 0,
+                  "y": 0,
+                  "w": 19,
+                  "h": 19,
+                  "comp": "Google icons / type=check",
+                  "props": {
+                   "type": "check"
+                  },
+                  "sz": "FIXED/FIXED"
+                 },
+                 {
+                  "id": "I2710:48618;2045:11379;2263:10778;2028:2705",
+                  "t": "TEXT",
+                  "n": "bullet_text",
+                  "x": 23,
+                  "y": 0,
+                  "w": 307,
+                  "h": 18,
+                  "sz": "FIXED/HUG",
+                  "fill": "SOLID #ffffff o1.00 var:swatch/light-100",
+                  "text": "Structured search profile",
+                  "font": "Onest Regular",
+                  "fs": 14,
+                  "lh": "125%",
+                  "ls": 0,
+                  "align": "LEFT"
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "id": "I2710:48618;2047:11395",
+        "t": "INSTANCE",
+        "n": "Step 6",
+        "x": 6,
+        "y": 404.1,
+        "w": 687.2,
+        "h": 332.7,
+        "comp": "Content / Process step / style=glass",
+        "props": {
+         "Label": false,
+         "style": "glass"
+        },
+        "al": "VERTICAL 16 128/0/0/0 MIN MIN NO_WRAP",
+        "sz": "FILL/HUG",
+        "r": 8,
+        "bv": {
+         "itemSpacing": "space/4",
+         "topLeftRadius": "radius/small",
+         "topRightRadius": "radius/small",
+         "bottomLeftRadius": "radius/small",
+         "bottomRightRadius": "radius/small"
+        },
+        "c": [
+         {
+          "id": "I2710:48618;2047:11395;2047:11421",
+          "t": "FRAME",
+          "n": "step-4_group_wrap",
+          "x": 0,
+          "y": 128,
+          "w": 687.2,
+          "h": 204.7,
+          "al": "VERTICAL 16 24/24/24/24 MIN MIN NO_WRAP",
+          "sz": "FILL/HUG",
+          "r": 8,
+          "fill": "SOLID #ffffff o0.20 var:swatch/light-100-o20",
+          "stroke": "GRADIENT_LINEAR #ffffff a1.00@0.00, #ffffff a0.00@0.51, #ffffff a1.00@1.00 T[[0.61,0.23,0.09],[-0.23,0.15,0.54]] w1",
+          "fx": [
+           "BACKGROUND_BLUR r40",
+           "DROP_SHADOW r7 0,3 a0.05",
+           "DROP_SHADOW r12 0,12 a0.04",
+           "DROP_SHADOW r17 0,28 a0.03",
+           "DROP_SHADOW r20 0,49 a0.01",
+           "DROP_SHADOW r21 0,76 a0.00"
+          ],
+          "bv": {
+           "itemSpacing": "space/4",
+           "paddingLeft": "space/6",
+           "paddingTop": "space/6",
+           "paddingRight": "space/6",
+           "paddingBottom": "space/6",
+           "topLeftRadius": "radius/small",
+           "topRightRadius": "radius/small",
+           "bottomLeftRadius": "radius/small",
+           "bottomRightRadius": "radius/small",
+           "strokeTopWeight": "border-width/main",
+           "strokeBottomWeight": "border-width/main",
+           "strokeLeftWeight": "border-width/main",
+           "strokeRightWeight": "border-width/main"
+          },
+          "c": [
+           {
+            "id": "I2710:48618;2047:11395;2045:11364",
+            "t": "FRAME",
+            "n": "step-4_background-border",
+            "x": 24,
+            "y": 24,
+            "w": 48,
+            "h": 48,
+            "al": "HORIZONTAL 0 9.5/0/10.5/0 CENTER CENTER NO_WRAP",
+            "sz": "FIXED/FIXED",
+            "r": 9999,
+            "stroke": "SOLID #00ffd5 o1.00 var:swatch/brand-accent-500 w2",
+            "bv": {
+             "topLeftRadius": "radius/round",
+             "topRightRadius": "radius/round",
+             "bottomLeftRadius": "radius/round",
+             "bottomRightRadius": "radius/round",
+             "strokeTopWeight": "border-width/thick",
+             "strokeBottomWeight": "border-width/thick",
+             "strokeLeftWeight": "border-width/thick",
+             "strokeRightWeight": "border-width/thick"
+            },
+            "c": [
+             {
+              "id": "I2710:48618;2047:11395;2045:11365",
+              "t": "TEXT",
+              "n": "step-4_text",
+              "x": 19.5,
+              "y": 11.5,
+              "w": 9,
+              "h": 24,
+              "sz": "HUG/HUG",
+              "fill": "SOLID #00ffd5 o1.00 var:swatch/brand-accent-500",
+              "text": "2",
+              "font": "Onest SemiBold",
+              "fs": 16,
+              "lh": 24,
+              "ls": 0,
+              "align": "CENTER"
+             }
+            ]
+           },
+           {
+            "id": "I2710:48618;2047:11395;2045:11366",
+            "t": "FRAME",
+            "n": "step-4_list",
+            "x": 24,
+            "y": 88,
+            "w": 639.2,
+            "h": 92.7,
+            "al": "VERTICAL 16 0.699999988079071/0/0/0 MIN MIN NO_WRAP",
+            "sz": "FILL/HUG",
+            "bv": {
+             "itemSpacing": "space/4"
+            },
+            "c": [
+             {
+              "id": "I2710:48618;2047:11395;2055:4054",
+              "t": "FRAME",
+              "n": "step-4_content",
+              "x": 0,
+              "y": 0.7,
+              "w": 79,
+              "h": 26,
+              "hidden": true,
+              "al": "HORIZONTAL 10 4/12/4/12 CENTER CENTER NO_WRAP",
+              "sz": "HUG/HUG",
+              "r": 999,
+              "stroke": "SOLID #ffeeee o0.20 w1",
+              "bv": {
+               "itemSpacing": "space/3",
+               "paddingTop": "space/1",
+               "paddingBottom": "space/1",
+               "strokeTopWeight": "border-width/main",
+               "strokeBottomWeight": "border-width/main",
+               "strokeLeftWeight": "border-width/main",
+               "strokeRightWeight": "border-width/main"
+              },
+              "c": [
+               {
+                "id": "I2710:48618;2047:11395;2045:11367",
+                "t": "TEXT",
+                "n": "step-4_text",
+                "x": 12,
+                "y": 4,
+                "w": 55,
+                "h": 18,
+                "sz": "HUG/HUG",
+                "fill": "SOLID #ffffff o1.00 var:swatch/light-100",
+                "bv": {
+                 "fontSize": [
+                  "font-size/text-small"
+                 ],
+                 "fontStyle": [
+                  "font/primary-regular"
+                 ],
+                 "fontFamily": [
+                  "font/primary-family"
+                 ]
+                },
+                "text": "Day 2–4",
+                "font": "Onest Regular",
+                "fs": 14,
+                "ls": 0,
+                "style": "Text Small",
+                "align": "LEFT"
+               }
+              ]
+             },
+             {
+              "id": "I2710:48618;2047:11395;2055:4175",
+              "t": "FRAME",
+              "n": "step-4_content",
+              "x": 0,
+              "y": 0.7,
+              "w": 639.2,
+              "h": 92,
+              "al": "VERTICAL 8 0/0/0/0 MIN MIN NO_WRAP",
+              "sz": "FILL/HUG",
+              "bv": {
+               "itemSpacing": "space/2"
+              },
+              "c": [
+               {
+                "id": "I2710:48618;2047:11395;2055:4050",
+                "t": "TEXT",
+                "n": "step-4_title",
+                "x": 0,
+                "y": 0,
+                "w": 314,
+                "h": 30,
+                "sz": "HUG/HUG",
+                "fill": "SOLID #ffffff o1.00 var:swatch/light-100",
+                "bv": {
+                 "fontSize": [
+                  "font-size/h5"
+                 ],
+                 "fontStyle": [
+                  "font/secondary-bold"
+                 ],
+                 "fontFamily": [
+                  "font/secondary-family"
+                 ]
+                },
+                "text": "Benchmarked and validated.",
+                "font": "Vend Sans Bold",
+                "fs": 24,
+                "lh": "125%",
+                "ls": 0,
+                "style": "H5",
+                "align": "LEFT"
+               },
+               {
+                "id": "I2710:48618;2047:11395;2045:11369",
+                "t": "TEXT",
+                "n": "step-4_text",
+                "x": 0,
+                "y": 38,
+                "w": 639.2,
+                "h": 54,
+                "sz": "FILL/HUG",
+                "fill": "SOLID #ffffff o1.00 var:swatch/light-100",
+                "bv": {
+                 "fontSize": [
+                  "font-size/text-medium"
+                 ],
+                 "fontStyle": [
+                  "font/primary-regular"
+                 ],
+                 "fontFamily": [
+                  "font/primary-family"
+                 ]
+                },
+                "text": "Every specialist is assessed against the criteria that decide success on a capital project.",
+                "font": "Onest Regular",
+                "fs": 18,
+                "lh": "150%",
+                "ls": 0,
+                "style": "Text Medium",
+                "align": "LEFT"
+               }
+              ]
+             },
+             {
+              "id": "I2710:48618;2047:11395;2055:4135",
+              "t": "FRAME",
+              "n": "step-4_list",
+              "x": 0,
+              "y": 150.7,
+              "w": 643.5,
+              "h": 65,
+              "hidden": true,
+              "al": "VERTICAL 4 0/0/0/0 MIN MIN NO_WRAP",
+              "sz": "FIXED/HUG",
+              "bv": {
+               "itemSpacing": "space/1"
+              },
+              "c": [
+               {
+                "id": "I2710:48618;2047:11395;2055:4086",
+                "t": "INSTANCE",
+                "n": "Frame 428",
+                "x": 0,
+                "y": 0,
+                "w": 643.5,
+                "h": 19,
+                "comp": "bullet / type=14",
+                "props": {
+                 "type": "14"
+                },
+                "al": "HORIZONTAL 4 0/0/0/0 MIN MIN NO_WRAP",
+                "sz": "FILL/HUG",
+                "bv": {
+                 "itemSpacing": "space/1"
+                },
+                "c": [
+                 {
+                  "id": "I2710:48618;2047:11395;2055:4086;2028:2713",
+                  "t": "INSTANCE",
+                  "n": "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2",
+                  "x": 0,
+                  "y": 0,
+                  "w": 19,
+                  "h": 19,
+                  "comp": "Google icons / type=check",
+                  "props": {
+                   "type": "check"
+                  },
+                  "sz": "FIXED/FIXED"
+                 },
+                 {
+                  "id": "I2710:48618;2047:11395;2055:4086;2028:2705",
+                  "t": "TEXT",
+                  "n": "bullet_text",
+                  "x": 23,
+                  "y": 0,
+                  "w": 307,
+                  "h": 18,
+                  "sz": "FIXED/HUG",
+                  "fill": "SOLID #ffffff o1.00 var:swatch/light-100",
+                  "text": "AI-driven sourcing",
+                  "font": "Onest Regular",
+                  "fs": 14,
+                  "lh": "125%",
+                  "ls": 0,
+                  "align": "LEFT"
+                 }
+                ]
+               },
+               {
+                "id": "I2710:48618;2047:11395;2055:4103",
+                "t": "INSTANCE",
+                "n": "Frame 590",
+                "x": 0,
+                "y": 23,
+                "w": 643.5,
+                "h": 19,
+                "comp": "bullet / type=14",
+                "props": {
+                 "type": "14"
+                },
+                "al": "HORIZONTAL 4 0/0/0/0 MIN MIN NO_WRAP",
+                "sz": "FILL/HUG",
+                "bv": {
+                 "itemSpacing": "space/1"
+                },
+                "c": [
+                 {
+                  "id": "I2710:48618;2047:11395;2055:4103;2028:2713",
+                  "t": "INSTANCE",
+                  "n": "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2",
+                  "x": 0,
+                  "y": 0,
+                  "w": 19,
+                  "h": 19,
+                  "comp": "Google icons / type=check",
+                  "props": {
+                   "type": "check"
+                  },
+                  "sz": "FIXED/FIXED"
+                 },
+                 {
+                  "id": "I2710:48618;2047:11395;2055:4103;2028:2705",
+                  "t": "TEXT",
+                  "n": "bullet_text",
+                  "x": 23,
+                  "y": 0,
+                  "w": 307,
+                  "h": 18,
+                  "sz": "FIXED/HUG",
+                  "fill": "SOLID #ffffff o1.00 var:swatch/light-100",
+                  "text": "Human screening",
+                  "font": "Onest Regular",
+                  "fs": 14,
+                  "lh": "125%",
+                  "ls": 0,
+                  "align": "LEFT"
+                 }
+                ]
+               },
+               {
+                "id": "I2710:48618;2047:11395;2055:4119",
+                "t": "INSTANCE",
+                "n": "Frame 591",
+                "x": 0,
+                "y": 46,
+                "w": 643.5,
+                "h": 19,
+                "comp": "bullet / type=14",
+                "props": {
+                 "type": "14"
+                },
+                "al": "HORIZONTAL 4 0/0/0/0 MIN MIN NO_WRAP",
+                "sz": "FILL/HUG",
+                "bv": {
+                 "itemSpacing": "space/1"
+                },
+                "c": [
+                 {
+                  "id": "I2710:48618;2047:11395;2055:4119;2028:2713",
+                  "t": "INSTANCE",
+                  "n": "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2",
+                  "x": 0,
+                  "y": 0,
+                  "w": 19,
+                  "h": 19,
+                  "comp": "Google icons / type=check",
+                  "props": {
+                   "type": "check"
+                  },
+                  "sz": "FIXED/FIXED"
+                 },
+                 {
+                  "id": "I2710:48618;2047:11395;2055:4119;2028:2705",
+                  "t": "TEXT",
+                  "n": "bullet_text",
+                  "x": 23,
+                  "y": 0,
+                  "w": 307,
+                  "h": 18,
+                  "sz": "FIXED/HUG",
+                  "fill": "SOLID #ffffff o1.00 var:swatch/light-100",
+                  "text": "Highly relevant candidates",
+                  "font": "Onest Regular",
+                  "fs": 14,
+                  "lh": "125%",
+                  "ls": 0,
+                  "align": "LEFT"
+                 }
+                ]
+               },
+               {
+                "id": "I2710:48618;2047:11395;2263:10778",
+                "t": "INSTANCE",
+                "n": "Frame 592",
+                "x": 0,
+                "y": 69,
+                "w": 628,
+                "h": 19,
+                "hidden": true,
+                "comp": "bullet / type=14",
+                "props": {
+                 "type": "14"
+                },
+                "al": "HORIZONTAL 4 0/0/0/0 MIN MIN NO_WRAP",
+                "sz": "FIXED/HUG",
+                "bv": {
+                 "itemSpacing": "space/1"
+                },
+                "c": [
+                 {
+                  "id": "I2710:48618;2047:11395;2263:10778;2028:2713",
+                  "t": "INSTANCE",
+                  "n": "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2",
+                  "x": 0,
+                  "y": 0,
+                  "w": 19,
+                  "h": 19,
+                  "comp": "Google icons / type=check",
+                  "props": {
+                   "type": "check"
+                  },
+                  "sz": "FIXED/FIXED"
+                 },
+                 {
+                  "id": "I2710:48618;2047:11395;2263:10778;2028:2705",
+                  "t": "TEXT",
+                  "n": "bullet_text",
+                  "x": 23,
+                  "y": 0,
+                  "w": 307,
+                  "h": 18,
+                  "sz": "FIXED/HUG",
+                  "fill": "SOLID #ffffff o1.00 var:swatch/light-100",
+                  "text": "Structured search profile",
+                  "font": "Onest Regular",
+                  "fs": 14,
+                  "lh": "125%",
+                  "ls": 0,
+                  "align": "LEFT"
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "id": "I2710:48618;2047:11402",
+        "t": "INSTANCE",
+        "n": "Step 7",
+        "x": -5.1,
+        "y": 832.6,
+        "w": 687.2,
+        "h": 305.7,
+        "comp": "Content / Process step / style=glass",
+        "props": {
+         "Label": false,
+         "style": "glass"
+        },
+        "al": "VERTICAL 16 128/0/0/0 MIN MIN NO_WRAP",
+        "sz": "FILL/HUG",
+        "r": 8,
+        "bv": {
+         "itemSpacing": "space/4",
+         "topLeftRadius": "radius/small",
+         "topRightRadius": "radius/small",
+         "bottomLeftRadius": "radius/small",
+         "bottomRightRadius": "radius/small"
+        },
+        "c": [
+         {
+          "id": "I2710:48618;2047:11402;2047:11421",
+          "t": "FRAME",
+          "n": "step-4_group_wrap",
+          "x": 0,
+          "y": 128,
+          "w": 687.2,
+          "h": 177.7,
+          "al": "VERTICAL 16 24/24/24/24 MIN MIN NO_WRAP",
+          "sz": "FILL/HUG",
+          "r": 8,
+          "fill": "SOLID #ffffff o0.20 var:swatch/light-100-o20",
+          "stroke": "GRADIENT_LINEAR #ffffff a1.00@0.00, #ffffff a0.00@0.51, #ffffff a1.00@1.00 T[[0.61,0.23,0.09],[-0.23,0.15,0.54]] w1",
+          "fx": [
+           "BACKGROUND_BLUR r40",
+           "DROP_SHADOW r7 0,3 a0.05",
+           "DROP_SHADOW r12 0,12 a0.04",
+           "DROP_SHADOW r17 0,28 a0.03",
+           "DROP_SHADOW r20 0,49 a0.01",
+           "DROP_SHADOW r21 0,76 a0.00"
+          ],
+          "bv": {
+           "itemSpacing": "space/4",
+           "paddingLeft": "space/6",
+           "paddingTop": "space/6",
+           "paddingRight": "space/6",
+           "paddingBottom": "space/6",
+           "topLeftRadius": "radius/small",
+           "topRightRadius": "radius/small",
+           "bottomLeftRadius": "radius/small",
+           "bottomRightRadius": "radius/small",
+           "strokeTopWeight": "border-width/main",
+           "strokeBottomWeight": "border-width/main",
+           "strokeLeftWeight": "border-width/main",
+           "strokeRightWeight": "border-width/main"
+          },
+          "c": [
+           {
+            "id": "I2710:48618;2047:11402;2045:11364",
+            "t": "FRAME",
+            "n": "step-4_background-border",
+            "x": 24,
+            "y": 24,
+            "w": 48,
+            "h": 48,
+            "al": "HORIZONTAL 0 9.5/0/10.5/0 CENTER CENTER NO_WRAP",
+            "sz": "FIXED/FIXED",
+            "r": 9999,
+            "stroke": "SOLID #00ffd5 o1.00 var:swatch/brand-accent-500 w2",
+            "bv": {
+             "topLeftRadius": "radius/round",
+             "topRightRadius": "radius/round",
+             "bottomLeftRadius": "radius/round",
+             "bottomRightRadius": "radius/round",
+             "strokeTopWeight": "border-width/thick",
+             "strokeBottomWeight": "border-width/thick",
+             "strokeLeftWeight": "border-width/thick",
+             "strokeRightWeight": "border-width/thick"
+            },
+            "c": [
+             {
+              "id": "I2710:48618;2047:11402;2045:11365",
+              "t": "TEXT",
+              "n": "step-4_text",
+              "x": 19,
+              "y": 11.5,
+              "w": 10,
+              "h": 24,
+              "sz": "HUG/HUG",
+              "fill": "SOLID #00ffd5 o1.00 var:swatch/brand-accent-500",
+              "text": "3",
+              "font": "Onest SemiBold",
+              "fs": 16,
+              "lh": 24,
+              "ls": 0,
+              "align": "CENTER"
+             }
+            ]
+           },
+           {
+            "id": "I2710:48618;2047:11402;2045:11366",
+            "t": "FRAME",
+            "n": "step-4_list",
+            "x": 24,
+            "y": 88,
+            "w": 639.2,
+            "h": 65.7,
+            "al": "VERTICAL 16 0.699999988079071/0/0/0 MIN MIN NO_WRAP",
+            "sz": "FILL/HUG",
+            "bv": {
+             "itemSpacing": "space/4"
+            },
+            "c": [
+             {
+              "id": "I2710:48618;2047:11402;2055:4054",
+              "t": "FRAME",
+              "n": "step-4_content",
+              "x": 0,
+              "y": 0.7,
+              "w": 71,
+              "h": 26,
+              "hidden": true,
+              "al": "HORIZONTAL 10 4/12/4/12 CENTER CENTER NO_WRAP",
+              "sz": "HUG/HUG",
+              "r": 999,
+              "stroke": "SOLID #ffeeee o0.20 w1",
+              "bv": {
+               "itemSpacing": "space/3",
+               "paddingTop": "space/1",
+               "paddingBottom": "space/1",
+               "strokeTopWeight": "border-width/main",
+               "strokeBottomWeight": "border-width/main",
+               "strokeLeftWeight": "border-width/main",
+               "strokeRightWeight": "border-width/main"
+              },
+              "c": [
+               {
+                "id": "I2710:48618;2047:11402;2045:11367",
+                "t": "TEXT",
+                "n": "step-4_text",
+                "x": 12,
+                "y": 4,
+                "w": 47,
+                "h": 18,
+                "sz": "HUG/HUG",
+                "fill": "SOLID #ffffff o1.00 var:swatch/light-100",
+                "bv": {
+                 "fontSize": [
+                  "font-size/text-small"
+                 ],
+                 "fontStyle": [
+                  "font/primary-regular"
+                 ],
+                 "fontFamily": [
+                  "font/primary-family"
+                 ]
+                },
+                "text": "Day 5+",
+                "font": "Onest Regular",
+                "fs": 14,
+                "ls": 0,
+                "style": "Text Small",
+                "align": "LEFT"
+               }
+              ]
+             },
+             {
+              "id": "I2710:48618;2047:11402;2055:4175",
+              "t": "FRAME",
+              "n": "step-4_content",
+              "x": 0,
+              "y": 0.7,
+              "w": 639.2,
+              "h": 65,
+              "al": "VERTICAL 8 0/0/0/0 MIN MIN NO_WRAP",
+              "sz": "FILL/HUG",
+              "bv": {
+               "itemSpacing": "space/2"
+              },
+              "c": [
+               {
+                "id": "I2710:48618;2047:11402;2055:4050",
+                "t": "TEXT",
+                "n": "step-4_title",
+                "x": 0,
+                "y": 0,
+                "w": 284,
+                "h": 30,
+                "sz": "HUG/HUG",
+                "fill": "SOLID #ffffff o1.00 var:swatch/light-100",
+                "bv": {
+                 "fontSize": [
+                  "font-size/h5"
+                 ],
+                 "fontStyle": [
+                  "font/secondary-bold"
+                 ],
+                 "fontFamily": [
+                  "font/secondary-family"
+                 ]
+                },
+                "text": "Selected by practitioners.",
+                "font": "Vend Sans Bold",
+                "fs": 24,
+                "lh": "125%",
+                "ls": 0,
+                "style": "H5",
+                "align": "LEFT"
+               },
+               {
+                "id": "I2710:48618;2047:11402;2045:11369",
+                "t": "TEXT",
+                "n": "step-4_text",
+                "x": 0,
+                "y": 38,
+                "w": 639.2,
+                "h": 27,
+                "sz": "FILL/HUG",
+                "fill": "SOLID #ffffff o1.00 var:swatch/light-100",
+                "bv": {
+                 "fontSize": [
+                  "font-size/text-medium"
+                 ],
+                 "fontStyle": [
+                  "font/primary-regular"
+                 ],
+                 "fontFamily": [
+                  "font/primary-family"
+                 ]
+                },
+                "text": "People who have run these roles themselves decide who makes the list.",
+                "font": "Onest Regular",
+                "fs": 18,
+                "lh": "150%",
+                "ls": 0,
+                "style": "Text Medium",
+                "align": "LEFT"
+               }
+              ]
+             },
+             {
+              "id": "I2710:48618;2047:11402;2055:4135",
+              "t": "FRAME",
+              "n": "step-4_list",
+              "x": 0,
+              "y": 150.7,
+              "w": 643.5,
+              "h": 65,
+              "hidden": true,
+              "al": "VERTICAL 4 0/0/0/0 MIN MIN NO_WRAP",
+              "sz": "FIXED/HUG",
+              "bv": {
+               "itemSpacing": "space/1"
+              },
+              "c": [
+               {
+                "id": "I2710:48618;2047:11402;2055:4086",
+                "t": "INSTANCE",
+                "n": "Frame 428",
+                "x": 0,
+                "y": 0,
+                "w": 643.5,
+                "h": 19,
+                "comp": "bullet / type=14",
+                "props": {
+                 "type": "14"
+                },
+                "al": "HORIZONTAL 4 0/0/0/0 MIN MIN NO_WRAP",
+                "sz": "FILL/HUG",
+                "bv": {
+                 "itemSpacing": "space/1"
+                },
+                "c": [
+                 {
+                  "id": "I2710:48618;2047:11402;2055:4086;2028:2713",
+                  "t": "INSTANCE",
+                  "n": "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2",
+                  "x": 0,
+                  "y": 0,
+                  "w": 19,
+                  "h": 19,
+                  "comp": "Google icons / type=check",
+                  "props": {
+                   "type": "check"
+                  },
+                  "sz": "FIXED/FIXED"
+                 },
+                 {
+                  "id": "I2710:48618;2047:11402;2055:4086;2028:2705",
+                  "t": "TEXT",
+                  "n": "bullet_text",
+                  "x": 23,
+                  "y": 0,
+                  "w": 307,
+                  "h": 18,
+                  "sz": "FIXED/HUG",
+                  "fill": "SOLID #ffffff o1.00 var:swatch/light-100",
+                  "text": "Interview & select with confidence",
+                  "font": "Onest Regular",
+                  "fs": 14,
+                  "lh": "125%",
+                  "ls": 0,
+                  "align": "LEFT"
+                 }
+                ]
+               },
+               {
+                "id": "I2710:48618;2047:11402;2055:4103",
+                "t": "INSTANCE",
+                "n": "Frame 590",
+                "x": 0,
+                "y": 23,
+                "w": 643.5,
+                "h": 19,
+                "comp": "bullet / type=14",
+                "props": {
+                 "type": "14"
+                },
+                "al": "HORIZONTAL 4 0/0/0/0 MIN MIN NO_WRAP",
+                "sz": "FILL/HUG",
+                "bv": {
+                 "itemSpacing": "space/1"
+                },
+                "c": [
+                 {
+                  "id": "I2710:48618;2047:11402;2055:4103;2028:2713",
+                  "t": "INSTANCE",
+                  "n": "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2",
+                  "x": 0,
+                  "y": 0,
+                  "w": 19,
+                  "h": 19,
+                  "comp": "Google icons / type=check",
+                  "props": {
+                   "type": "check"
+                  },
+                  "sz": "FIXED/FIXED"
+                 },
+                 {
+                  "id": "I2710:48618;2047:11402;2055:4103;2028:2705",
+                  "t": "TEXT",
+                  "n": "bullet_text",
+                  "x": 23,
+                  "y": 0,
+                  "w": 307,
+                  "h": 18,
+                  "sz": "FIXED/HUG",
+                  "fill": "SOLID #ffffff o1.00 var:swatch/light-100",
+                  "text": "Onboard with support",
+                  "font": "Onest Regular",
+                  "fs": 14,
+                  "lh": "125%",
+                  "ls": 0,
+                  "align": "LEFT"
+                 }
+                ]
+               },
+               {
+                "id": "I2710:48618;2047:11402;2055:4119",
+                "t": "INSTANCE",
+                "n": "Frame 591",
+                "x": 0,
+                "y": 46,
+                "w": 643.5,
+                "h": 19,
+                "comp": "bullet / type=14",
+                "props": {
+                 "type": "14"
+                },
+                "al": "HORIZONTAL 4 0/0/0/0 MIN MIN NO_WRAP",
+                "sz": "FILL/HUG",
+                "bv": {
+                 "itemSpacing": "space/1"
+                },
+                "c": [
+                 {
+                  "id": "I2710:48618;2047:11402;2055:4119;2028:2713",
+                  "t": "INSTANCE",
+                  "n": "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2",
+                  "x": 0,
+                  "y": 0,
+                  "w": 19,
+                  "h": 19,
+                  "comp": "Google icons / type=check",
+                  "props": {
+                   "type": "check"
+                  },
+                  "sz": "FIXED/FIXED"
+                 },
+                 {
+                  "id": "I2710:48618;2047:11402;2055:4119;2028:2705",
+                  "t": "TEXT",
+                  "n": "bullet_text",
+                  "x": 23,
+                  "y": 0,
+                  "w": 307,
+                  "h": 18,
+                  "sz": "FIXED/HUG",
+                  "fill": "SOLID #ffffff o1.00 var:swatch/light-100",
+                  "text": "Clear communication throughout",
+                  "font": "Onest Regular",
+                  "fs": 14,
+                  "lh": "125%",
+                  "ls": 0,
+                  "align": "LEFT"
+                 }
+                ]
+               },
+               {
+                "id": "I2710:48618;2047:11402;2263:10778",
+                "t": "INSTANCE",
+                "n": "Frame 592",
+                "x": 0,
+                "y": 69,
+                "w": 628,
+                "h": 19,
+                "hidden": true,
+                "comp": "bullet / type=14",
+                "props": {
+                 "type": "14"
+                },
+                "al": "HORIZONTAL 4 0/0/0/0 MIN MIN NO_WRAP",
+                "sz": "FIXED/HUG",
+                "bv": {
+                 "itemSpacing": "space/1"
+                },
+                "c": [
+                 {
+                  "id": "I2710:48618;2047:11402;2263:10778;2028:2713",
+                  "t": "INSTANCE",
+                  "n": "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2",
+                  "x": 0,
+                  "y": 0,
+                  "w": 19,
+                  "h": 19,
+                  "comp": "Google icons / type=check",
+                  "props": {
+                   "type": "check"
+                  },
+                  "sz": "FIXED/FIXED"
+                 },
+                 {
+                  "id": "I2710:48618;2047:11402;2263:10778;2028:2705",
+                  "t": "TEXT",
+                  "n": "bullet_text",
+                  "x": 23,
+                  "y": 0,
+                  "w": 307,
+                  "h": 18,
+                  "sz": "FIXED/HUG",
+                  "fill": "SOLID #ffffff o1.00 var:swatch/light-100",
+                  "text": "Structured search profile",
+                  "font": "Onest Regular",
+                  "fs": 14,
+                  "lh": "125%",
+                  "ls": 0,
+                  "align": "LEFT"
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}
