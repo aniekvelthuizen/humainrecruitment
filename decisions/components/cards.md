@@ -480,3 +480,7 @@ For the checklist in Split Content (Figma `content-spec-list-item`: check 24, ga
 - Base renamed **Small** (unchanged look, measured 14/21 before and after). **Large** (`84a7442c-960a-603c-d501-6352dacde64a`): `card_bullet` gap `space/2`, min-height 1.5rem; `card_bullet_icon` width 1.5rem.
 - The text size moved from the Typography Plain instance (was variant Text Small) to the wrapper: Typography Plain is now **Inherit**, and `card_bullet_text.u-text-trim-off` carries the Text Style mode — Text Small in the base, **Text Medium** in Large (`set_style_variable_mode` with `variant_id`). An instance-level Typography variant cannot change per Card Bullet variant; a mode on the wrapper can.
 - 2026-11-01 (review fix): Card Bullet root `role="listitem"`, its holders `card_primary_items` / `card_expert_items` `role="list"`.
+
+## 2026-11-02 — Card Testimonial: 20 px padding below 768
+Done by Aniek (via Claude), with the Home «Testimonials» build. `card_testimonial_element` at `small`: padding `space/5` (Figma mobile frame of `content-testimonials`: 20; was 32 at every width).
+Seen: the Role (List Item) condition on `card_testimonial_wrap` does not render — no `role="listitem"` in the published HTML, on Home or Example Components, while Card Primary's does. Queued for the Designer (`references/designer-queue.md`).
