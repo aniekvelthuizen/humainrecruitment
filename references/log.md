@@ -228,3 +228,12 @@
 - Figma `Content / CTA` (`2323:32532`, set `2382:37326`) read in Claude in Chrome with the Plugin API (Figma MCP at its View-seat call limit); tree, instance overrides, pictures and the photo in `references/figma/home-cta/` (local receiver on 127.0.0.1:8771). 13 desktop + 2 mobile instances; Home B `2710:48623`.
 - Plan `references/plans/2026-11-02-home-cta.md`, decisions `decisions/components/cta-split.md`: new section **CTA Split**, Button Main ×2, Visual Image, after Split Content #2.
 - Not built: all three Webflow connectors answer 404 for site `6ae35364a38b2d71cab8c607` (local `webflow`: Core / THDV / Wayfinder; claude.ai: Buitencampus; `webflow-studijob`: Studijob).
+
+## 2026-11-02 — Content / WYSIWYG as Rich Content (Privacy & Cookies) — Aniek Velthuizen with Claude
+- Figma `Content / WYSIWYG` (`2444:35732`, component `2444:35717`) read in Claude in Chrome with the Plugin API (Figma MCP at its View-seat limit); tree and pictures in `references/figma/content-wysiwyg/`. Plan `references/plans/2026-11-02-content-wysiwyg.md`; owner took all three recommendations (H2 in the text at H3 size, legal header later, lorem until copy).
+- Webflow through the claude.ai connector (back after a 404 earlier today; the local `webflow` and studijob connectors still 404).
+- The page **Privacy & Cookies** (`6ae37d71382b5fd60a01d143`, `/privacy-cookies`) already existed with a Lumos placeholder hero; left in place for the legal header block. Footer link already pointed at it.
+- New section component **Rich Content** (`6ca4bdaf-…`, group Sections): 3 classes + combos, prop Content (Rich Text), CSS embed. Placed in `page_main` after the placeholder; 4 × H2 + paragraph (H2s built into the instance's rich text through the API).
+- Fixes after the first measure: Lumos trim made the section 119 px short → `u-text-trim-off`; title → text was 16 (margin collapse) → margin-top 0 after an h2.
+- Published to staging 2× (announced to the Services, CTA and Hero sessions first). `references/rich-content-check.mjs` at 1512 / 1280 / 991 / 767 / 402: 1512 equals Figma (1204 tall, column 300/912, 0/45/55/205/237), no sideways scroll, no console errors. SEO description set.
+- Open: page has no h1 until the legal header is built; Content default for new instances is one plain paragraph (headings in a default are a Designer edit).

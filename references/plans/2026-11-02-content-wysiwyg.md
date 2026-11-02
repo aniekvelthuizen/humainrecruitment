@@ -6,6 +6,8 @@ Aniek Velthuizen with Claude.
 
 A plain long-text section: one centred text column of 912 px with headings and paragraphs, for legal pages. It becomes a new section component **Rich Content** with one rich-text prop, so editors paste the whole text in one field. Nothing on the site is changed; it reuses Lumos' `u-rich-text` and the site's text styles. Figma only uses it on the Privacy & Cookies page, which does not exist yet: the plan creates that page (nav, this block, footer). **Blocked:** none of the three Webflow connectors reaches the Humain site today (404), so nothing can be built until the connector is re-pointed to the Humain workspace.
 
+**As built (2026-11-02):** Webflow access came back the same day. The page already existed (`6ae37d71382b5fd60a01d143`, with a Lumos placeholder hero and the footer link), so no page was created. The H2 and link rules went into a `u-embed-css` embed instead of Designer nested selectors, and `u-text-trim-off` makes the gaps literal. Details and measurements: `decisions/components/rich-content.md`.
+
 Source: https://www.figma.com/design/18m34a7vzkzopkwGoojmUx/Humain--Lumos-?node-id=2444-35732 — section `Content / WYSIWYG` (`2444:35732`) holding component `Content / WYSIWYG` (`2444:35717`, 1512 × 1204, no component properties, no variants). Read in Claude in Chrome with the Plugin API (Figma MCP at its View-seat limit); tree and pictures in `references/figma/content-wysiwyg/`.
 Page(s): **Privacy & Cookies** (new) — Figma page frame `15. Privacy & Cookies` (`2323:22238`), the only instance (`2444:35718`). No mobile frame exists for this page.
 Insertion: new page: `page_wrap` › Global Styles · Global Guides · Nav · `page_main` › **Rich Content** · Footer (same order as Home, `decisions/pages/home.md`).
@@ -53,7 +55,7 @@ Footer link "Privacy & Cookies" → the new page (Designer, page link).
 | # | Where | What | Recommended |
 |---|---|---|---|
 | 1 | Title → text | Figma 10, Lumos rich text 20 | design value: nested All H3 margin-bottom `space/3` (Designer) |
-| 2 | Heading level | Figma style H3 straight under the page H1 (skips H2) | question 1 |
+| 2 | Heading level | Figma style H3 straight under the page H1 (skips H2) | owner: H2 in the text, H3 look (nested rule, Designer) |
 | 3 | Column width | 912 = 57rem, no variable | literal `57rem`, noted in `decisions/components/rich-content.md` |
 | 4 | Site | `.u-rich-text li` and every text style still reference **deleted** trim variables (`trim-top<deleted|…>`) next to the live ones | not this block's to fix; noted as debt (lists in rich text get no trim correction) |
 | 5 | Copy | lorem ipsum | Figma lorem as default until the real privacy text arrives (question 3) |
@@ -64,6 +66,8 @@ Footer link "Privacy & Cookies" → the new page (Designer, page link).
 - **Webflow API access** to site `6ae35364a38b2d71cab8c607`: the local `webflow` connector lists only Core / THDV / Wayfinder; the claude.ai connector and the studijob connector answer 404. Same for the two other sessions building today.
 
 ## Questions
+
+Answered by the owner (Aniek, 2026-11-02): all three as recommended. Recorded in `decisions/components/rich-content.md`.
 
 1. **Heading level in the text.** Figma uses the H3 style right under the page's H1. ➡️ Editors use **H2** for section titles; the component styles H2 inside it at the H3 size (one nested rule), so the outline is H1 › H2 and the look matches Figma.
 2. **The legal page header** (`Frame 676`: "LEGAL", "Privacy & Cookies", intro, last updated) is not on the site. ➡️ Build it next as its own block (it is the obvious companion); this plan only places Rich Content.
