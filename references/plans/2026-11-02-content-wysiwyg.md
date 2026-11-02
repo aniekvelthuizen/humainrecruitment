@@ -10,7 +10,7 @@ Source: https://www.figma.com/design/18m34a7vzkzopkwGoojmUx/Humain--Lumos-?node-
 Page(s): **Privacy & Cookies** (new) — Figma page frame `15. Privacy & Cookies` (`2323:22238`), the only instance (`2444:35718`). No mobile frame exists for this page.
 Insertion: new page: `page_wrap` › Global Styles · Global Guides · Nav · `page_main` › **Rich Content** · Footer (same order as Home, `decisions/pages/home.md`).
 Neighbours' system: above it a legal page header (`Frame 676`, 1512 × 520, brand gradient, eyebrow "LEGAL", H1 "Privacy & Cookies", intro + "Last updated") — not on the site and not part of this request; below it the global Footer. Section spacing from the `section-space/*` variables on the wrap, as on Home.
-Responsive: one column at every width. ≥ 1040 px the column is 57rem wide and centred; below that it fills the container (`site/margin` sides). H3 shrinks fluidly 36 → 30 (site rule); paragraphs stay Text Large 20. Nothing else reflows.
+Responsive: one column at every width. From about 1010 px (57rem + two `site/margin`) the column is 57rem wide and centred; below that it fills the container (`site/margin` sides). H3 shrinks fluidly 36 → 30 (site rule); paragraphs stay Text Large 20. Nothing else reflows.
 
 ## Design spec (1512)
 
