@@ -1,0 +1,5 @@
+Visual design | device=desktop | [figma-only] 1. Home A:2041:10595 > Content / Testimonials:2323:32533 | 1512x1560 | idx 4
+Visual design | device=desktop | 1. Home B:2710:48615 > Content / Testimonials:2710:48620 | 1512x1560 | idx 5
+Visual design | device=desktop | 2. Hire an expert:2234:4257 > Frame 594:2236:5350 | 1512x1560 | idx 6
+Visual design | device=desktop | 7. About Us / Clients:2292:8938 > Frame 654:2292:28852 | 1512x1560 | idx 3
+Mobile | device=mobile | 1. Home:2365:38349 > Content / Testimonials:2378:35465 | 402x2059 | idx 4

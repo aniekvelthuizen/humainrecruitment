@@ -290,3 +290,16 @@
 - Owner tested and approved: block done, merged to main (8f06db4). Open for later: legal page header block (next), real privacy copy, Title above Content in the props panel (Designer drag).
 - Re-check reviewer confirmed both owner-round fixes; dead variant CSS from duplicate_variant recorded in site.md.
 - Owner: hero expert card focus ring too → CSS-only embed in Hero Experts (white ring for `.card_expert_wrap` links inside `[data-hero-experts]`). Published 1× (announced to the Services session; Rich Content session had closed). Measured with Tab: stage card ring white on the hero, buttons unchanged.
+
+## 2026-11-02 — Home «Testimonials» (Spotlight Grid › Reviews) — Aniek Velthuizen with Claude
+- Figma `Content / Testimonials` (`2323:32727`) read in Claude in Chrome (Plugin API; Figma MCP View seat at its limit after 1 call). Dump + exports via a local receiver in `references/figma/home-testimonials/`. Plan `references/plans/2026-11-02-home-testimonials.md`.
+- Built as a variant **Reviews** of Spotlight Grid (same header + three columns around the gradient panel) instead of a new section: new center column with slot List Center (panel moved into it, tablet rules moved along), optional Text / Rating / Button (toggles off), title break class; Reviews = grey `swatch/light-200`, top 192/96, no quote, 440 panel with centred cut-out, stacked below 992, 20 gaps below 768. Card Testimonial × 3 (two new avatars, photo uploaded; S3 201), Card Testimonial padding 20 below 768.
+- Placed on Home after Expertise (append + re-append Split Content #2 and CTA Split); Split Content #2 Space Top none → large.
+- Published to staging 3×. `testimonials-check.mjs` (new): 1512 = Figma except the known +6 px card height; 402 order/widths/gaps = mobile frame; no sideways scroll at 1512/1280/992/991/767/402; no console errors. `spotlight-check.mjs`: Expertise identical before/after at all six widths.
+- Open: Card Testimonial `role="listitem"` condition does not render (queued); slot names / Allowed components (queued); photo is a 446 KB PNG (WebP compression replaces the file in place — not done without an OK).
+- Review (fresh agent, published HTML only): 1512 and 402 within 2 px of Figma bar the known card height; Expertise unchanged; no overflow 320–1512. Fixed: tablet column capped at 40rem, hidden quote copy cleared. Published 1×, re-measured 402 / 767 / 900 / 991 / 1512. Owner questions in spotlight-grid.md.
+
+## 2026-11-02 — Testimonials: owner round — Aniek Velthuizen with Claude
+- Owner: block good, only the card hover too minimal. Card Testimonial now hovers like the other cards: mint veil, 0.25rem lift, quote mark turns dark (overlay), arrow nudge as before; also on keyboard focus. Measured with `testimonial-hover-check.mjs` (new) on all three cards.
+- `role="listitem"`: the Home cards were on Role's default (On = None); set to List Item through the API, staging renders it. Queue item closed — no Designer change needed (the Designer was opened, only read).
+- Published to staging 3× (announced to the Split Content / Slots session).

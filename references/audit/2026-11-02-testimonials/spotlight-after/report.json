@@ -1,0 +1,1070 @@
+{
+ "url": "https://humain-dev.webflow.io/",
+ "widths": {
+  "402": {
+   "scrollWidth": 402,
+   "order": [
+    "data-hero-experts",
+    "data-stagger-cards",
+    "data-sticky-steps",
+    "data-glow",
+    "data-spotlight-grid",
+    "data-spotlight-grid",
+    "data-glow",
+    "data-space-top"
+   ],
+   "section": {
+    "height": 2178,
+    "padTop": "0px",
+    "padBottom": "96px",
+    "header": [
+     20,
+     0,
+     362,
+     124
+    ],
+    "eyebrow": [
+     20,
+     0,
+     362,
+     24
+    ],
+    "title": [
+     20,
+     34,
+     362,
+     90
+    ],
+    "layout": [
+     20,
+     172,
+     362,
+     1910
+    ],
+    "lists": [
+     [
+      20,
+      172,
+      362,
+      658
+     ],
+     [
+      20,
+      862,
+      362,
+      658
+     ]
+    ],
+    "panel": [
+     20,
+     1552,
+     362,
+     530
+    ],
+    "quote": [
+     44,
+     1616,
+     314,
+     113
+    ],
+    "name": [
+     169,
+     1761,
+     65,
+     30
+    ],
+    "role": [
+     122,
+     1791,
+     159,
+     21
+    ],
+    "company": [
+     169,
+     1820,
+     65,
+     21
+    ],
+    "visual": [
+     94,
+     1873,
+     314,
+     209
+    ],
+    "cards": [
+     [
+      "Project Director",
+      20,
+      172,
+      362,
+      198
+     ],
+     [
+      "Project Controls Manager",
+      20,
+      402,
+      362,
+      198
+     ],
+     [
+      "Cost Controller",
+      20,
+      632,
+      362,
+      198
+     ],
+     [
+      "Planner / Scheduler",
+      20,
+      862,
+      362,
+      198
+     ],
+     [
+      "Change Manager",
+      20,
+      1092,
+      362,
+      198
+     ],
+     [
+      "Document Control",
+      20,
+      1322,
+      362,
+      198
+     ]
+    ],
+    "cardTitles": [
+     "H3 Project Director",
+     "H3 Project Controls Manager",
+     "H3 Cost Controller",
+     "H3 Planner / Scheduler",
+     "H3 Change Manager",
+     "H3 Document Control"
+    ],
+    "links": [
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | "
+    ],
+    "roles": {
+     "lists": 9,
+     "items": 6
+    },
+    "fonts": {
+     "eyebrow": "Onest 16px/24px 400 rgb(3, 11, 27) op1 uppercase",
+     "title": "\"Vend Sans\" 36px/45px 700 rgb(3, 11, 27) op1 none",
+     "muted": "\"Vend Sans\" 36px/45px 700 rgb(3, 11, 27) op0.5 none",
+     "quote": "\"Vend Sans\" 30px/37.5px 700 rgb(255, 255, 255) op1 none",
+     "name": "Onest 20px/30px 400 rgb(255, 255, 255) op1 none",
+     "role": "Onest 14px/21px 400 rgb(255, 255, 255) op0.5 none",
+     "company": "Onest 14px/21px 400 rgb(255, 255, 255) op1 uppercase"
+    },
+    "panelBg": "linear-gradient(rgb(37, 0, 89) 0%, rgb(0, 130, 166) 70.19%, rgb(229, 187, 183) 100%)",
+    "img": [
+     "6ae8d856812d3edb22206286_spotlight-expertise-lisette.webp",
+     "Smiling businesswoman with curly hair looking up",
+     true,
+     402
+    ],
+    "overflow": []
+   }
+  },
+  "767": {
+   "scrollWidth": 767,
+   "order": [
+    "data-hero-experts",
+    "data-stagger-cards",
+    "data-sticky-steps",
+    "data-glow",
+    "data-spotlight-grid",
+    "data-spotlight-grid",
+    "data-glow",
+    "data-space-top"
+   ],
+   "section": {
+    "height": 2210,
+    "padTop": "0px",
+    "padBottom": "96px",
+    "header": [
+     34,
+     0,
+     698,
+     144
+    ],
+    "eyebrow": [
+     34,
+     0,
+     698,
+     24
+    ],
+    "title": [
+     34,
+     34,
+     698,
+     110
+    ],
+    "layout": [
+     34,
+     192,
+     698,
+     1923
+    ],
+    "lists": [
+     [
+      34,
+      192,
+      698,
+      586
+     ],
+     [
+      34,
+      810,
+      698,
+      586
+     ]
+    ],
+    "panel": [
+     34,
+     1428,
+     698,
+     687
+    ],
+    "quote": [
+     58,
+     1492,
+     650,
+     80
+    ],
+    "name": [
+     351,
+     1604,
+     65,
+     30
+    ],
+    "role": [
+     304,
+     1634,
+     159,
+     21
+    ],
+    "company": [
+     351,
+     1663,
+     65,
+     21
+    ],
+    "visual": [
+     180,
+     1716,
+     598,
+     399
+    ],
+    "cards": [
+     [
+      "Project Director",
+      34,
+      192,
+      698,
+      174
+     ],
+     [
+      "Project Controls Manager",
+      34,
+      398,
+      698,
+      174
+     ],
+     [
+      "Cost Controller",
+      34,
+      604,
+      698,
+      174
+     ],
+     [
+      "Planner / Scheduler",
+      34,
+      810,
+      698,
+      174
+     ],
+     [
+      "Change Manager",
+      34,
+      1016,
+      698,
+      174
+     ],
+     [
+      "Document Control",
+      34,
+      1222,
+      698,
+      174
+     ]
+    ],
+    "cardTitles": [
+     "H3 Project Director",
+     "H3 Project Controls Manager",
+     "H3 Cost Controller",
+     "H3 Planner / Scheduler",
+     "H3 Change Manager",
+     "H3 Document Control"
+    ],
+    "links": [
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | "
+    ],
+    "roles": {
+     "lists": 9,
+     "items": 6
+    },
+    "fonts": {
+     "eyebrow": "Onest 16px/24px 400 rgb(3, 11, 27) op1 uppercase",
+     "title": "\"Vend Sans\" 43.8919px/54.8649px 700 rgb(3, 11, 27) op1 none",
+     "muted": "\"Vend Sans\" 43.8919px/54.8649px 700 rgb(3, 11, 27) op0.5 none",
+     "quote": "\"Vend Sans\" 31.973px/39.9662px 700 rgb(255, 255, 255) op1 none",
+     "name": "Onest 20px/30px 400 rgb(255, 255, 255) op1 none",
+     "role": "Onest 14px/21px 400 rgb(255, 255, 255) op0.5 none",
+     "company": "Onest 14px/21px 400 rgb(255, 255, 255) op1 uppercase"
+    },
+    "panelBg": "linear-gradient(rgb(37, 0, 89) 0%, rgb(0, 130, 166) 70.19%, rgb(229, 187, 183) 100%)",
+    "img": [
+     "6ae8d856812d3edb22206286_spotlight-expertise-lisette.webp",
+     "Smiling businesswoman with curly hair looking up",
+     true,
+     767
+    ],
+    "overflow": []
+   }
+  },
+  "991": {
+   "scrollWidth": 991,
+   "order": [
+    "data-hero-experts",
+    "data-stagger-cards",
+    "data-sticky-steps",
+    "data-glow",
+    "data-spotlight-grid",
+    "data-spotlight-grid",
+    "data-glow",
+    "data-space-top"
+   ],
+   "section": {
+    "height": 1638,
+    "padTop": "0px",
+    "padBottom": "96px",
+    "header": [
+     43,
+     0,
+     904,
+     156
+    ],
+    "eyebrow": [
+     43,
+     0,
+     904,
+     24
+    ],
+    "title": [
+     43,
+     34,
+     904,
+     122
+    ],
+    "layout": [
+     43,
+     204,
+     904,
+     1338
+    ],
+    "lists": [
+     [
+      43,
+      204,
+      436,
+      658
+     ],
+     [
+      511,
+      204,
+      436,
+      658
+     ]
+    ],
+    "panel": [
+     43,
+     894,
+     904,
+     648
+    ],
+    "quote": [
+     93,
+     958,
+     805,
+     41
+    ],
+    "name": [
+     463,
+     1031,
+     65,
+     30
+    ],
+    "role": [
+     416,
+     1061,
+     159,
+     21
+    ],
+    "company": [
+     463,
+     1090,
+     65,
+     21
+    ],
+    "visual": [
+     292,
+     1143,
+     598,
+     399
+    ],
+    "cards": [
+     [
+      "Project Director",
+      43,
+      204,
+      436,
+      198
+     ],
+     [
+      "Project Controls Manager",
+      43,
+      434,
+      436,
+      198
+     ],
+     [
+      "Cost Controller",
+      43,
+      664,
+      436,
+      198
+     ],
+     [
+      "Planner / Scheduler",
+      511,
+      204,
+      436,
+      198
+     ],
+     [
+      "Change Manager",
+      511,
+      434,
+      436,
+      198
+     ],
+     [
+      "Document Control",
+      511,
+      664,
+      436,
+      198
+     ]
+    ],
+    "cardTitles": [
+     "H3 Project Director",
+     "H3 Project Controls Manager",
+     "H3 Cost Controller",
+     "H3 Planner / Scheduler",
+     "H3 Change Manager",
+     "H3 Document Control"
+    ],
+    "links": [
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | "
+    ],
+    "roles": {
+     "lists": 9,
+     "items": 6
+    },
+    "fonts": {
+     "eyebrow": "Onest 16px/24px 400 rgb(3, 11, 27) op1 uppercase",
+     "title": "\"Vend Sans\" 48.7351px/60.9189px 700 rgb(3, 11, 27) op1 none",
+     "muted": "\"Vend Sans\" 48.7351px/60.9189px 700 rgb(3, 11, 27) op0.5 none",
+     "quote": "\"Vend Sans\" 33.1838px/41.4797px 700 rgb(255, 255, 255) op1 none",
+     "name": "Onest 20px/30px 400 rgb(255, 255, 255) op1 none",
+     "role": "Onest 14px/21px 400 rgb(255, 255, 255) op0.5 none",
+     "company": "Onest 14px/21px 400 rgb(255, 255, 255) op1 uppercase"
+    },
+    "panelBg": "linear-gradient(rgb(37, 0, 89) 0%, rgb(0, 130, 166) 70.19%, rgb(229, 187, 183) 100%)",
+    "img": [
+     "6ae8d856812d3edb22206286_spotlight-expertise-lisette.webp",
+     "Smiling businesswoman with curly hair looking up",
+     true,
+     991
+    ],
+    "overflow": []
+   }
+  },
+  "992": {
+   "scrollWidth": 992,
+   "order": [
+    "data-hero-experts",
+    "data-stagger-cards",
+    "data-sticky-steps",
+    "data-glow",
+    "data-spotlight-grid",
+    "data-spotlight-grid",
+    "data-glow",
+    "data-space-top"
+   ],
+   "section": {
+    "height": 1162,
+    "padTop": "0px",
+    "padBottom": "192px",
+    "header": [
+     43,
+     0,
+     905,
+     156
+    ],
+    "eyebrow": [
+     43,
+     0,
+     905,
+     24
+    ],
+    "title": [
+     43,
+     34,
+     905,
+     122
+    ],
+    "layout": [
+     43,
+     204,
+     905,
+     766
+    ],
+    "lists": [
+     [
+      43,
+      219,
+      280,
+      736
+     ],
+     [
+      668,
+      234,
+      280,
+      706
+     ]
+    ],
+    "panel": [
+     356,
+     204,
+     280,
+     766
+    ],
+    "quote": [
+     380,
+     268,
+     232,
+     207
+    ],
+    "name": [
+     464,
+     507,
+     65,
+     30
+    ],
+    "role": [
+     417,
+     537,
+     159,
+     21
+    ],
+    "company": [
+     464,
+     566,
+     65,
+     21
+    ],
+    "visual": [
+     287,
+     571,
+     598,
+     399
+    ],
+    "cards": [
+     [
+      "Project Director",
+      43,
+      219,
+      280,
+      198
+     ],
+     [
+      "Project Controls Manager",
+      43,
+      449,
+      280,
+      252
+     ],
+     [
+      "Cost Controller",
+      43,
+      733,
+      280,
+      222
+     ],
+     [
+      "Planner / Scheduler",
+      668,
+      234,
+      280,
+      222
+     ],
+     [
+      "Change Manager",
+      668,
+      488,
+      280,
+      198
+     ],
+     [
+      "Document Control",
+      668,
+      718,
+      280,
+      222
+     ]
+    ],
+    "cardTitles": [
+     "H3 Project Director",
+     "H3 Project Controls Manager",
+     "H3 Cost Controller",
+     "H3 Planner / Scheduler",
+     "H3 Change Manager",
+     "H3 Document Control"
+    ],
+    "links": [
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | "
+    ],
+    "roles": {
+     "lists": 9,
+     "items": 6
+    },
+    "fonts": {
+     "eyebrow": "Onest 16px/24px 400 rgb(3, 11, 27) op1 uppercase",
+     "title": "\"Vend Sans\" 48.7568px/60.9459px 700 rgb(3, 11, 27) op1 none",
+     "muted": "\"Vend Sans\" 48.7568px/60.9459px 700 rgb(3, 11, 27) op0.5 none",
+     "quote": "\"Vend Sans\" 33.1892px/41.4865px 700 rgb(255, 255, 255) op1 none",
+     "name": "Onest 20px/30px 400 rgb(255, 255, 255) op1 none",
+     "role": "Onest 14px/21px 400 rgb(255, 255, 255) op0.5 none",
+     "company": "Onest 14px/21px 400 rgb(255, 255, 255) op1 uppercase"
+    },
+    "panelBg": "linear-gradient(rgb(37, 0, 89) 0%, rgb(0, 130, 166) 70.19%, rgb(229, 187, 183) 100%)",
+    "img": [
+     "6ae8d856812d3edb22206286_spotlight-expertise-lisette.webp",
+     "Smiling businesswoman with curly hair looking up",
+     true,
+     992
+    ],
+    "overflow": []
+   }
+  },
+  "1280": {
+   "scrollWidth": 1280,
+   "order": [
+    "data-hero-experts",
+    "data-stagger-cards",
+    "data-sticky-steps",
+    "data-glow",
+    "data-spotlight-grid",
+    "data-spotlight-grid",
+    "data-glow",
+    "data-space-top"
+   ],
+   "section": {
+    "height": 1177,
+    "padTop": "0px",
+    "padBottom": "192px",
+    "header": [
+     68,
+     0,
+     1144,
+     171
+    ],
+    "eyebrow": [
+     68,
+     0,
+     1144,
+     24
+    ],
+    "title": [
+     68,
+     34,
+     1144,
+     137
+    ],
+    "layout": [
+     55,
+     219,
+     1170,
+     766
+    ],
+    "lists": [
+     [
+      55,
+      273,
+      369,
+      658
+     ],
+     [
+      856,
+      273,
+      369,
+      658
+     ]
+    ],
+    "panel": [
+     456,
+     219,
+     369,
+     766
+    ],
+    "quote": [
+     480,
+     283,
+     321,
+     130
+    ],
+    "name": [
+     608,
+     446,
+     65,
+     30
+    ],
+    "role": [
+     561,
+     476,
+     159,
+     21
+    ],
+    "company": [
+     608,
+     505,
+     65,
+     21
+    ],
+    "visual": [
+     431,
+     587,
+     598,
+     399
+    ],
+    "cards": [
+     [
+      "Project Director",
+      55,
+      273,
+      369,
+      198
+     ],
+     [
+      "Project Controls Manager",
+      55,
+      503,
+      369,
+      198
+     ],
+     [
+      "Cost Controller",
+      55,
+      733,
+      369,
+      198
+     ],
+     [
+      "Planner / Scheduler",
+      856,
+      273,
+      369,
+      198
+     ],
+     [
+      "Change Manager",
+      856,
+      503,
+      369,
+      198
+     ],
+     [
+      "Document Control",
+      856,
+      733,
+      369,
+      198
+     ]
+    ],
+    "cardTitles": [
+     "H3 Project Director",
+     "H3 Project Controls Manager",
+     "H3 Cost Controller",
+     "H3 Planner / Scheduler",
+     "H3 Change Manager",
+     "H3 Document Control"
+    ],
+    "links": [
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | "
+    ],
+    "roles": {
+     "lists": 9,
+     "items": 6
+    },
+    "fonts": {
+     "eyebrow": "Onest 16px/24px 400 rgb(3, 11, 27) op1 uppercase",
+     "title": "\"Vend Sans\" 54.9838px/68.7297px 700 rgb(3, 11, 27) op1 none",
+     "muted": "\"Vend Sans\" 54.9838px/68.7297px 700 rgb(3, 11, 27) op0.5 none",
+     "quote": "\"Vend Sans\" 34.7459px/43.4324px 700 rgb(255, 255, 255) op1 none",
+     "name": "Onest 20px/30px 400 rgb(255, 255, 255) op1 none",
+     "role": "Onest 14px/21px 400 rgb(255, 255, 255) op0.5 none",
+     "company": "Onest 14px/21px 400 rgb(255, 255, 255) op1 uppercase"
+    },
+    "panelBg": "linear-gradient(rgb(37, 0, 89) 0%, rgb(0, 130, 166) 70.19%, rgb(229, 187, 183) 100%)",
+    "img": [
+     "6ae8d856812d3edb22206286_spotlight-expertise-lisette.webp",
+     "Smiling businesswoman with curly hair looking up",
+     true,
+     1200
+    ],
+    "overflow": []
+   }
+  },
+  "1512": {
+   "scrollWidth": 1512,
+   "order": [
+    "data-hero-experts",
+    "data-stagger-cards",
+    "data-sticky-steps",
+    "data-glow",
+    "data-spotlight-grid",
+    "data-spotlight-grid",
+    "data-glow",
+    "data-space-top"
+   ],
+   "section": {
+    "height": 1190,
+    "padTop": "0px",
+    "padBottom": "192px",
+    "header": [
+     184,
+     0,
+     1144,
+     184
+    ],
+    "eyebrow": [
+     184,
+     0,
+     1144,
+     24
+    ],
+    "title": [
+     184,
+     34,
+     1144,
+     150
+    ],
+    "layout": [
+     64,
+     232,
+     1384,
+     766
+    ],
+    "lists": [
+     [
+      64,
+      286,
+      440,
+      658
+     ],
+     [
+      1008,
+      286,
+      440,
+      658
+     ]
+    ],
+    "panel": [
+     536,
+     232,
+     440,
+     766
+    ],
+    "quote": [
+     560,
+     296,
+     392,
+     135
+    ],
+    "name": [
+     724,
+     463,
+     65,
+     30
+    ],
+    "role": [
+     677,
+     493,
+     159,
+     21
+    ],
+    "company": [
+     724,
+     522,
+     65,
+     21
+    ],
+    "visual": [
+     547,
+     599,
+     598,
+     399
+    ],
+    "cards": [
+     [
+      "Project Director",
+      64,
+      286,
+      440,
+      198
+     ],
+     [
+      "Project Controls Manager",
+      64,
+      516,
+      440,
+      198
+     ],
+     [
+      "Cost Controller",
+      64,
+      746,
+      440,
+      198
+     ],
+     [
+      "Planner / Scheduler",
+      1008,
+      286,
+      440,
+      198
+     ],
+     [
+      "Change Manager",
+      1008,
+      516,
+      440,
+      198
+     ],
+     [
+      "Document Control",
+      1008,
+      746,
+      440,
+      198
+     ]
+    ],
+    "cardTitles": [
+     "H3 Project Director",
+     "H3 Project Controls Manager",
+     "H3 Cost Controller",
+     "H3 Planner / Scheduler",
+     "H3 Change Manager",
+     "H3 Document Control"
+    ],
+    "links": [
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | ",
+     "/project-delivery-experts | "
+    ],
+    "roles": {
+     "lists": 9,
+     "items": 6
+    },
+    "fonts": {
+     "eyebrow": "Onest 16px/24px 400 rgb(3, 11, 27) op1 uppercase",
+     "title": "\"Vend Sans\" 60px/75px 700 rgb(3, 11, 27) op1 none",
+     "muted": "\"Vend Sans\" 60px/75px 700 rgb(3, 11, 27) op0.5 none",
+     "quote": "\"Vend Sans\" 36px/45px 700 rgb(255, 255, 255) op1 none",
+     "name": "Onest 20px/30px 400 rgb(255, 255, 255) op1 none",
+     "role": "Onest 14px/21px 400 rgb(255, 255, 255) op0.5 none",
+     "company": "Onest 14px/21px 400 rgb(255, 255, 255) op1 uppercase"
+    },
+    "panelBg": "linear-gradient(rgb(37, 0, 89) 0%, rgb(0, 130, 166) 70.19%, rgb(229, 187, 183) 100%)",
+    "img": [
+     "6ae8d856812d3edb22206286_spotlight-expertise-lisette.webp",
+     "Smiling businesswoman with curly hair looking up",
+     true,
+     1200
+    ],
+    "overflow": []
+   }
+  }
+ },
+ "headings": [
+  "H1 Pre‑Qualified Project Professionals. The",
+  "H2 One wrong hire costs more than a year of",
+  "H3 A wrong hire surfaces late.",
+  "H3 The process runs through HR.",
+  "H3 A CV says little about behaviour.",
+  "H2 The top 5% foundbefore you need them.",
+  "H3 Continuous search.",
+  "H3 Benchmarked and validated.",
+  "H3 Selected by practitioners.",
+  "H2 Selected by people who did the job.",
+  "H2 Six disciplines. One standard.",
+  "H3 Project Director",
+  "H3 Project Controls Manager",
+  "H3 Cost Controller",
+  "H3 Planner / Scheduler",
+  "H3 Change Manager",
+  "H3 Document Control",
+  "H2 Trusted by the people who hire.",
+  "H2 Working in project controls?",
+  "H2 Looking for a senior project-controls ex",
+  "H2 Footer",
+  "H3 For business",
+  "H3 Company",
+  "H3 For Talent"
+ ],
+ "errors": []
+}

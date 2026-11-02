@@ -1,0 +1,301 @@
+{
+ "url": "https://humain-dev.webflow.io/",
+ "widths": {
+  "1512": {
+   "scrollWidth": 1512,
+   "order": [
+    "data-hero-experts",
+    "data-stagger-cards",
+    "data-sticky-steps",
+    "data-glow",
+    "data-spotlight-grid",
+    "data-spotlight-grid",
+    "data-glow",
+    "data-space-top"
+   ],
+   "section": {
+    "height": 1537,
+    "padTop": "192px",
+    "padBottom": "192px",
+    "bg": "rgb(237, 241, 247)",
+    "header": [
+     184,
+     192,
+     1144,
+     149
+    ],
+    "eyebrow": [
+     184,
+     192,
+     1144,
+     24
+    ],
+    "title": [
+     184,
+     226,
+     1144,
+     75
+    ],
+    "text": [
+     184,
+     311,
+     1144,
+     30
+    ],
+    "rating": [
+     590,
+     389,
+     332,
+     33
+    ],
+    "stars": [
+     606,
+     399,
+     69,
+     13
+    ],
+    "ratingText": [
+     691,
+     401,
+     215,
+     10
+    ],
+    "layout": [
+     64,
+     470,
+     1384,
+     779
+    ],
+    "center": [
+     536,
+     470,
+     440,
+     779
+    ],
+    "panel": [
+     536,
+     809,
+     440,
+     440
+    ],
+    "visual": [
+     618,
+     855,
+     277,
+     394
+    ],
+    "quoteShown": false,
+    "actions": [
+     64,
+     1297,
+     1384,
+     48
+    ],
+    "button": [
+     660,
+     1297,
+     192,
+     48
+    ],
+    "cards": [
+     {
+      "name": "Chance LipshutzPartner",
+      "box": [
+       64,
+       670,
+       440,
+       379
+      ],
+      "quoteMark": [
+       96,
+       702,
+       55,
+       43
+      ],
+      "stars": [
+       403,
+       732,
+       69,
+       13
+      ],
+      "text": [
+       96,
+       769,
+       376,
+       144
+      ],
+      "avatar": [
+       96,
+       937,
+       48,
+       48
+      ],
+      "avatarSrc": "6ae48f512dcb1237cd790645_photo-avatar.png",
+      "nameBox": [
+       160,
+       937,
+       312,
+       51
+      ],
+      "role": [
+       160,
+       967,
+       312,
+       21
+      ],
+      "company": [
+       160,
+       996,
+       312,
+       21
+      ],
+      "arrow": null,
+      "pad": "32px",
+      "bg": "rgb(255, 255, 255)"
+     },
+     {
+      "name": "Marcus LevinVP, Product and Technology",
+      "box": [
+       536,
+       470,
+       440,
+       307
+      ],
+      "quoteMark": [
+       568,
+       502,
+       55,
+       43
+      ],
+      "stars": [
+       875,
+       532,
+       69,
+       13
+      ],
+      "text": [
+       568,
+       569,
+       376,
+       72
+      ],
+      "avatar": [
+       568,
+       665,
+       48,
+       48
+      ],
+      "avatarSrc": "6ae8e7605df7bb55d34a55a3_avatar-marcus-levin.png",
+      "nameBox": [
+       632,
+       665,
+       312,
+       51
+      ],
+      "role": [
+       632,
+       695,
+       312,
+       21
+      ],
+      "company": [
+       632,
+       724,
+       312,
+       21
+      ],
+      "arrow": null,
+      "pad": "32px",
+      "bg": "rgb(255, 255, 255)"
+     },
+     {
+      "name": "Jocelyn WesterveltChief Operations Officer",
+      "box": [
+       1008,
+       694,
+       440,
+       331
+      ],
+      "quoteMark": [
+       1040,
+       726,
+       55,
+       43
+      ],
+      "stars": [
+       1347,
+       756,
+       69,
+       13
+      ],
+      "text": [
+       1040,
+       793,
+       376,
+       96
+      ],
+      "avatar": [
+       1040,
+       913,
+       48,
+       48
+      ],
+      "avatarSrc": "6ae8e7606361b460d85e9dcf_avatar-jocelyn-westervelt.png",
+      "nameBox": [
+       1104,
+       913,
+       312,
+       51
+      ],
+      "role": [
+       1104,
+       943,
+       312,
+       21
+      ],
+      "company": [
+       1104,
+       972,
+       312,
+       21
+      ],
+      "arrow": null,
+      "pad": "32px",
+      "bg": "rgb(255, 255, 255)"
+     }
+    ],
+    "links": [
+     "/clients | "
+    ],
+    "roles": {
+     "lists": 3,
+     "items": 0
+    },
+    "fonts": {
+     "eyebrow": "Onest 16px/24px 400 rgb(3, 11, 27) op1 uppercase",
+     "title": "\"Vend Sans\" 60px/75px 700 rgb(3, 11, 27) op1 none",
+     "muted": "\"Vend Sans\" 60px/75px 700 rgb(3, 11, 27) op0.5 none",
+     "text": "Onest 20px/30px 400 rgb(3, 11, 27) op1 none",
+     "rating": "Onest 14px/18.2px 400 rgb(3, 11, 27) op1 none",
+     "cardText": "Onest 16px/24px 400 rgb(3, 11, 27) op1 none",
+     "cardName": "Onest 20px/30px 400 rgb(3, 11, 27) op1 none"
+    },
+    "titleLines": 1,
+    "img": [
+     "6ae8e75f8896a7d6a926091c_testimonials-reviews-man.png",
+     "Smiling man holding a tablet, looking up",
+     true,
+     554,
+     [
+      618,
+      855,
+      277,
+      394
+     ]
+    ],
+    "overflow": []
+   }
+  }
+ },
+ "errors": []
+}
