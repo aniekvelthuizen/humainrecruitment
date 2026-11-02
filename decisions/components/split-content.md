@@ -59,3 +59,20 @@ The API cannot put Card Bullets into the List slot (not in the definition, not i
 
 ## 2026-11-02 — Done (owner)
 Owner (Aniek) tested on staging (humain-dev.webflow.io): "getest en ziet er goed uit", block closed. Re-measured on the new staging domain: unchanged (938 / 643 at 1512, no sideways scroll, no console errors).
+
+## 2026-11-02 — Visual slot (Aniek, via Claude)
+Conflict: Figma `Content / Final score` and `Content / Trust statement` (Project Delivery Experts) use Split Content's grid with a chart or a numbered list where the photo goes.
+Choice: new slot **Visual** in `split-content_slot` (after `split-content_visual`; Image Left: `order: -1`, back to 0 below 992 — same as the photo). No extra toggle: when the slot holds a component the photo hides itself, an empty slot hides itself (`:has()` rules in the embed). For the slot: **Score Chart** (`decisions/components/score-chart.md`) or **Step List** (`decisions/components/step-list.md`).
+Why: owner chose «a variant of Split Content with the chart / steps in a slot instead of the image». Automatic beats an Image Visibility toggle that editors have to remember (a forgotten toggle would put three items in the two-column grid).
+
+## 2026-11-02 — Glow
+New prop **Glow** (boolean, Layout, default off) → `data-glow` on the wrap. On: the Stagger Cards mint glow (`glow/mint`, same gradient numbers — Figma's Trust statement uses the exact same fill), ≤ 767 the Stagger Cards mobile gradient. Rule in the embed. Home instances unchanged (off).
+
+## 2026-11-02 — Empty button row hidden
+With both buttons off the empty `split-content_actions` still added its 48 px top margin. Embed: `.split-content_actions:empty { display: none; }`. Home (buttons on) unchanged.
+
+## 2026-11-02 — Project Delivery Experts: Final score and Trust statement
+Owner-agreed deviations: Trust statement keeps Split Content's Image Left widths (steps 676 / text 558; Figma 558 / 676), titles stay H2 48 (Figma's Final score uses H1 60), gaps eyebrow → title → text stay 16 / 24 (Final score's ad-hoc frame uses 10 / 10).
+- Final score: Eyebrow «The weighting», Title «How the final score» + Title Break + Muted «is calculated», Figma text, quote and buttons off, Score Chart with 7 Score Items.
+- Trust statement: variant Image Left, Glow on, Eyebrow «Trust Statement», Title «Why This Matters», three paragraphs (blank lines in the multiline Text → `<br><br>`, as Figma), quote and buttons off, Step List with 4 Step Items.
+Both sit at the end of `page_main`, after the template's placeholder Section; the Figma sections above them are not built yet.
