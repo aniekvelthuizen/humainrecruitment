@@ -1,0 +1,79 @@
+{
+ "info": {
+  "rot": -180,
+  "rel": [
+   [
+    -1,
+    0,
+    609
+   ],
+   [
+    0,
+    1,
+    368
+   ]
+  ],
+  "abs": {
+   "x": 5162,
+   "y": 3035.06640625,
+   "width": 598,
+   "height": 398
+  },
+  "itemAbs": {
+   "x": 5151,
+   "y": 2667.06640625,
+   "width": 440,
+   "height": 766
+  },
+  "constraints": {
+   "horizontal": "MIN",
+   "vertical": "MIN"
+  },
+  "fills": [
+   {
+    "t": "IMAGE",
+    "mode": "FILL",
+    "tf": [
+     [
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      0
+     ]
+    ]
+   },
+   {
+    "t": "IMAGE",
+    "mode": "FILL",
+    "tf": [
+     [
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      0
+     ]
+    ]
+   }
+  ]
+ },
+ "sz": {
+  "width": 1536,
+  "height": 1024
+ },
+ "set": "Card / Service 2058:4302",
+ "variants": [
+  "type=default 2041:11259 440x250",
+  "type=services 2058:4303 440x252",
+  "type=services-hover 2184:4813 440x226",
+  "type=discipline 2710:56919 440x194",
+  "type=variant4 2292:33162 440x214"
+ ]
+}
