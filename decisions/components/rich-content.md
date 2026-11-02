@@ -33,6 +33,13 @@ Owner (Aniek) asked to move the embed rules into Designer styles after the revie
 ## 2026-11-02 — Side effect kept: `.u-rich-text li` on live trim variables
 While restoring, `.u-rich-text li` (Lumos, global) got `calc(var(--_text-style---trim-top) * -1)` / `trim-bottom` instead of the **deleted** trim variables it referenced (review debt). About 1 px difference per list item on other rich texts. Webflow also dropped all 460 dead deleted-variable definitions from the CSS on that save; only `li` read them.
 
+## 2026-11-02 — The block always opens with a fixed H2 title (owner)
+Owner (Aniek): "dit blok moet eigenlijk altijd beginnen met een H2" — for SEO the opening title must always be there and always be an H2, not left to the editor's rich text.
+- Structure now: `rich-content_contain.u-container` › `rich-content_layout` (the 57rem column, `margin-inline: auto`; moved off `rich-content_text`) › `h2.rich-content_title.u-text-style-h3.u-text-trim-off` (margin-top 0, margin-bottom `space/3`) bound to prop **Title** (plain text, `1a05a25f-8c84-1d32-3ad6-1dff54c45383`, default = the Figma title, tooltip "always fill it in") › the rich text (**Content**).
+- Level fixed in the component (lumos-rules §3). Further section titles inside **Content** stay H2 (embed rule, H3 look).
+- Privacy page: Title = the first title; that H2 was removed from the Content override. Measured after publish: identical to before (1512: 1204 tall, column 300/912, 0/45/55/237), 4 × h2 in the section, no sideways scroll, no console errors.
+- Prop order in the panel: Content, then Title (creation order). Title-first is a Designer drag; recreating Content through the API would wipe the page's text.
+
 ## 2026-11-02 — Content prop and headings
 - Default of **Content** (new instances): one lorem paragraph. The API writes rich-text prop defaults as plain paragraphs only; a default with headings is a Designer edit (Properties › Content › Edit Rich Text), not done.
 - Privacy page instance: the text was set through the API as paragraphs, then the four title paragraphs were replaced by `Heading` H2 elements built next to them (webflow-mcp §6). Writing **Content** again through the API turns every block back into `<p>` — edit the text in the Designer instead.
