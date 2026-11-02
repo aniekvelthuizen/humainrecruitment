@@ -96,3 +96,8 @@ Approved plan: autoplay, a staggered switch, a calm load-in for hero and nav. Ti
 - **Switch and autoplay:** in the hero embed. Inactive panels only get their 0.2 s fade-out after the first switch (`data-hero-switched`), so nothing shows through on load. After the first switch the intro animation is off inside the panels and the switch keyframes take over.
 - Verified on staging: autoplay changes after 6 s and 12 s; 8 s of hover: no change; 6 s after the mouse leaves: next; after a click on the arrow, 13 s without change; reduced motion: no autoplay and everything visible at once; Swiper blocked: the row still appears once the page has loaded; no console errors from our code.
 - **Owner (2026-11-02): hero Home done.**
+
+## 2026-11-02 — White focus ring around the expert cards (owner: Aniek)
+Conflict: the big Card Expert in the stage is `u-theme-light`, so its outside keyboard ring (`currentColor`, `cards.md`) was navy on the dark hero.
+Choice: a second, CSS-only embed in Hero Experts (after the script embed, so the script is not rewritten): `[data-hero-experts] .card_expert_wrap .clickable_link|clickable_btn:focus-visible { outline-color: swatch light-100 }`. Card Expert itself is unchanged (a change there would reach Match and Match Glass too).
+Measured on staging with Tab: stage card ring white 2 px at 3 px offset on the hero gradient; Home's buttons unchanged. (Below 768 the stage card is not shown.)

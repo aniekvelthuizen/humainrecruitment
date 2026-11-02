@@ -92,3 +92,4 @@ Conflict: the keyboard ring on `.clickable_link:focus-visible` is `currentColor`
 Choice: new Clickable variant **Focus Ring Theme** (`95904e04-d761-f0a9-3656-e461d83acfa8`, a copy of Focus Ring Outside) with `clickable_link` and `clickable_btn` `:focus-visible` outline-color = Theme `text`; Button Main's nested Clickable uses it. Cards keep Focus Ring Outside (`currentColor`), so the Glass card is unchanged.
 Measured on staging (real Tab presses): hero, Sticky Steps and CTA buttons white on purple; Split Content buttons dark on white; nav button white at the top over the hero, dark after scrolling over a light section; card rings unchanged.
 Not covered: the hero's big Card Expert ring is still navy on the dark hero (card ring, `cards.md` route) — open for the owner.
+Update (same day): the hero's Card Expert ring is now white too, through a hero-only rule (`decisions/components/hero-experts.md`).
