@@ -279,3 +279,6 @@
 ## 2026-11-02 — Rich Content: fixed H2 title — Aniek Velthuizen with Claude
 - Owner: the block must always open with an H2 (SEO). New `rich-content_layout` (57rem column) › `h2.rich-content_title.u-text-style-h3.u-text-trim-off` bound to new prop **Title** › rich text. Privacy page: first title moved from Content to Title.
 - Published to staging (announced). `rich-content-check.mjs` (now reads the title too) at 1512 / 1280 / 991 / 767 / 402: identical to before, 4 × h2, no sideways scroll, no console errors.
+
+## 2026-11-02 — Rich Content closed — Aniek Velthuizen with Claude
+- Owner tested and approved: block done, merged to main (8f06db4). Open for later: legal page header block (next), real privacy copy, Title above Content in the props panel (Designer drag).
