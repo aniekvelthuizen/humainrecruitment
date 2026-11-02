@@ -309,3 +309,6 @@
 - Owner: block good, only the card hover too minimal. Card Testimonial now hovers like the other cards: mint veil, 0.25rem lift, quote mark turns dark (overlay), arrow nudge as before; also on keyboard focus. Measured with `testimonial-hover-check.mjs` (new) on all three cards.
 - `role="listitem"`: the Home cards were on Role's default (On = None); set to List Item through the API, staging renders it. Queue item closed — no Designer change needed (the Designer was opened, only read).
 - Published to staging 3× (announced to the Split Content / Slots session).
+
+## 2026-11-02 — Testimonials closed — Aniek Velthuizen with Claude
+- Owner approved; merged to main (d83971e) via `aniek/home-testimonials` (cherry-picks of the three Testimonials commits only — the Split Content / Score Chart commit 97ff294 on aniek/home-hero is not tested yet, per that session).
