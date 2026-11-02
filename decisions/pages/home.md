@@ -13,3 +13,7 @@ Why: Home B is the page frame not marked `[figma-only]`.
 ## 2026-11-01 — «The risk» under the hero
 Plan: `references/plans/2026-11-01-home-risk.md`. Figma `Content / 4 UBRS` (`2710:48617`), directly under the header on 1. Home B. Built as **Stagger Cards** (`decisions/components/stagger-cards.md`), in `page_main` after Hero Experts. Home B copy at every width (the mobile frame draws Home A's «What sets us apart» with 4 cards — not built, as with the hero).
 Page now: `page_wrap` › Global Styles · Global Guides · Nav · `page_main` › Hero Experts · **Stagger Cards** · … · Footer. (Another session was building `sticky-steps_wrap` and a Collection List on Home at the same time, outside `page_main`; not touched here.)
+
+## 2026-11-01 — «Content block» twice (Split Content)
+Plan: `references/plans/2026-11-01-content-block.md`. Figma `Content / Content block`, Home B instances 4 («Selected by people who did the job.», after Our method) and 9 («Working in project controls?», before the CTA). Built as **Split Content** (`decisions/components/split-content.md`). Owner (Aniek): place both now; #2 stays at the end of `page_main` until Services, Testimonials, Recruitment process and «3 UBRS» are built above it.
+Page now: `page_main` › Hero Experts · Stagger Cards · Sticky Steps · **Split Content** (#1) · **Split Content** (#2, Space Top none) · then Footer.

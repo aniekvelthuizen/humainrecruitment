@@ -464,3 +464,9 @@ Owner (Aniek) chose "fix all + recommended" on `references/audit/2026-10-31-card
 
 ## 2026-11-01 — Card Expert Name and Score are plain text (Aniek Velthuizen, via Claude)
 For the Experts CMS (Home hero) the Name and Score of `Card Expert` became Typography Plain in holder divs (`card_expert_title` / `card_expert_number` + `u-text-trim-off` combo); props Name and Score are now plain text with the same names, folders and defaults. Details, the restored Match "85%" override and the "Name is set" condition that had to be reset: `hero-experts.md`. Example Components measured before/after: no change in size, text or text boxes.
+
+## 2026-11-01 — Card Bullet: variants Small (base) and Large
+For the checklist in Split Content (Figma `content-spec-list-item`: check 24, gap 8, Text Medium 18/27). Done by Aniek Velthuizen with Claude.
+- Base renamed **Small** (unchanged look, measured 14/21 before and after). **Large** (`84a7442c-960a-603c-d501-6352dacde64a`): `card_bullet` gap `space/2`, min-height 1.5rem; `card_bullet_icon` width 1.5rem.
+- The text size moved from the Typography Plain instance (was variant Text Small) to the wrapper: Typography Plain is now **Inherit**, and `card_bullet_text.u-text-trim-off` carries the Text Style mode — Text Small in the base, **Text Medium** in Large (`set_style_variable_mode` with `variant_id`). An instance-level Typography variant cannot change per Card Bullet variant; a mode on the wrapper can.
+- 2026-11-01 (review fix): Card Bullet root `role="listitem"`, its holders `card_primary_items` / `card_expert_items` `role="list"`.

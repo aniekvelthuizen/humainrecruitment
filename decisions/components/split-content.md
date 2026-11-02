@@ -1,0 +1,61 @@
+# Split Content (`Split Content`, group Sections)
+
+Plan: `references/plans/2026-11-01-content-block.md`. Figma: `Content / Content block` (set `2249:8012`, section `2323:33112`); Home B instances `2710:56547` («Selected by people…») and `2710:57507` («Working in project controls?»). Tree and pictures in `references/figma/content-block/`. Check: `node references/split-check.mjs [url] [outdir]`. Built by Aniek Velthuizen with Claude.
+Component **`410b9fa3-b44c-ba67-bb25-ddee2f03adec`**.
+
+## 2026-11-01 — Name describes the pattern
+Choice: **Split Content** (`split-content_*`): a text column beside one photo. Figma calls it «Content block»; it is used 9× on 7 pages (Home B 2×, Careers, About Us, Consulting services, Project controls 2×, How it works, Hire project delivery experts).
+
+## 2026-11-01 — Owner answers (Aniek)
+- Both Home instances now; #2 sits at the end of `page_main` until the five sections above it on Home B exist (they go in above it).
+- No mobile design: below 992 px one column, **text first, then the photo** (also for Image Left).
+- Everything built now: Image Left, checklist (Card Bullet **Large**), Space Top large / main / none.
+- Lorem quote («Aliquet vel mauris…», Floyd Latumeten) and the lorem body of #2 stay until copy arrives.
+
+## 2026-11-01 — Structure
+`section.split-content_wrap.u-theme-light` (`data-section="light"`, `data-split-content`, `data-space-top` = prop) › `split-content_contain.u-container` › `split-content_layout` (grid `minmax(0, 34.875rem) minmax(0, 42.25rem)`, space-between, gap `space/7`; one column below 992, row gap `space/8`) ›
+- `split-content_content.u-text-trim-off` (flex column) › p `_eyebrow.u-text-style-label-large` · h2 `_title.u-text-style-h2` › span (Title) + br (Title Break) + span `_muted` (Title Muted) · p `_text.u-text-style-large` · figure `_quote.u-text-trim-off` › blockquote `_quote-text.u-text-style-large` + figcaption `_quote-name.u-text-style-main` · `_list` (`role="list"`, grid 2 columns, 1 below 480) › slot **List** · `_actions` › Button Main Primary + Secondary
+- `split-content_visual` › Visual Image (3 / 2)
+- HTML embed (`u-embed-css`): the Space Top rules (case-insensitive) and hiding an empty muted span.
+Plain section, not the Lumos `Section` wrapper: same route as Hero Experts / Stagger Cards / Sticky Steps.
+
+## 2026-11-01 — Texts untrimmed, so Figma's gaps are literal
+`u-text-trim-off` on `_content` (and again on `_quote`: it only reaches direct children). Text boxes then equal Figma's boxes, and every gap is Figma's number: eyebrow → title `space/4` (16), title → text `space/6` (24), text → quote/list `space/7` (32), → buttons `space/8` (48), quote rule padding `space/7`, quote gap `space/2`. Neighbouring sections trim and add the trims back; here that is not needed.
+
+## 2026-11-01 — Spacing and sizes (measured at 1512 after publish)
+| Where | Figma | Built |
+|---|---|---|
+| Section #1 (Space Top large) | 938 high | 938 |
+| Section #2 (Space Top none) | 643 high | 643 |
+| Eyebrow / title / text / quote / buttons (#1) | y 192 / 232 / 376 / 558 / 698 | same |
+| Photo | 772, 192, 676 × 451 | same |
+| Section top / bottom | 192 / 192 (#2 0 / 192) | `section-space/large`; < 992 `section-space/main` (96) |
+Space Top: prop **Space Top** (text) → `data-space-top`: `large` (default, 192), `main` (96, most other pages), `none` (0, Home #2 after a white section). Below 992 `large` becomes 96 like the bottom.
+
+## 2026-11-01 — Photo notch
+Figma `Subtract` = 676 × 451 minus an 86 × 86 square bottom right, all corners rounded 16 (also the two at the notch and the inner one). Built as a 7-layer CSS `mask` on `split-content_visual` (two bands, each with its own rounded end, plus the inner fillet), outer corners by `border-radius: radius/main` + `overflow: clip`. Notch size fixed at 5.375rem at every width. Same idea as the card notch (`cards.md`), but with rounded convex corners.
+
+## 2026-11-01 — Title in two parts
+Title + optional **Title Muted** (`swatch/dark-900-o50`, as Figma). The space between them is a real text node (a DOM span holding " " between the two spans; prop text loses its trailing space), so copied and crawled text reads "…people who…" also without the break. An empty Title Muted hides its span. **Title Break** (boolean, off by default) shows a `<br>` before the muted part — Figma breaks there on Home #1 and Consulting services, the other titles run on.
+Site H2: 48 → 30 fluid; H2 uses the site's balanced wrapping, so «Working in project controls?» breaks after «in» (Figma after «project»). Left as the site rule.
+
+## 2026-11-01 — Props
+Content: Eyebrow, Title, Title Break, Title Muted, Text · Quote: Quote Visibility (default on), Quote, Quote Name · List: List Visibility (default off), slot **List** (Card Bullet, variant Large) · Buttons: Primary/Secondary Visibility, Text, Link · Image: Image, Image Alt · Layout: Space Top · variant **Image Right** (base) / **Image Left** (`60a878d8-c287-2b13-3899-ef1dca2aeeaf`).
+Home: #1 Title Break on, quote on, buttons More about us → /about, See what experts deliver → /project-delivery-experts (Figma has no targets; recommended answers). #2 Title Muted empty, quote off, Analyse my CV → /submit-resume, View opportunities → /opportunities, Space Top none.
+
+## 2026-11-01 — Image Left differs by 30 px
+Figma's image-left variant uses a 528 text column (text at x 920); the component keeps one text width (558), so the text starts at 890. Only on Project controls («Tell us where you need help.»). Revisit when that page is built.
+
+## 2026-11-01 — Checklist slot needs the Designer
+The API cannot put Card Bullets into the List slot (not in the definition, not in an empty slot on a page). Fill it in the Designer when a page with a checklist is built: select the slot › add Card Bullet › variant **Large**. The checklist order is row by row (Figma draws two columns top to bottom).
+
+## 2026-11-01 — Review fixes (owner: "verwerk ze")
+- Lists: Card Bullet root `role="listitem"`; `card_primary_items` and `card_expert_items` got `role="list"` (Split Content's `_list` already had it). The Hero Experts script still strips every role inside its stage at runtime (existing hero choice).
+- Embed: the quote-margin rule removed (Webflow's base CSS already gives 0); Space Top selectors case-insensitive (`"Main"` works too).
+- Title: real space between the parts (see "Title in two parts").
+- Photo `sizes` stays `100vw` (the desktop loads the 1352 px file for a 676 px slot): Webflow refuses `sizes` as a custom attribute ("reserved attribute name") and Visual Image has no setting for it. A Sizes prop was tried on Visual Image and removed again.
+- Not changed (your-call items, no answer yet): body text full width on tablets (~95 characters per line at 990); Space Top as free text.
+- Owner (Aniek), 2026-11-01: photo `sizes` stays as it is — no script to set it (the reviewer showed one would make desktop load the 800 px file).
+
+## 2026-11-02 — Done (owner)
+Owner (Aniek) tested on staging (humain-dev.webflow.io): "getest en ziet er goed uit", block closed. Re-measured on the new staging domain: unchanged (938 / 643 at 1512, no sideways scroll, no console errors).

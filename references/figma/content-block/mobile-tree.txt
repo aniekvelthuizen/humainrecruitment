@@ -1,0 +1,76 @@
+IN "Content / Mobile" 402x2222 @0,4862 AL:VERTICAL gap32 pad96/20/96/20 align:MIN/MIN sz:FILL/HUG clip fill:#ffffff@100 ⇒Content / Mobile [type:services] {itemSpacing→space/7,paddingLeft→space/5,paddingTop→section-space/main,paddingRight→space/5,paddingBottom→section-space/main,fills→background-2}
+  FR "content-services-mobile_content" 362x186 @20,96 AL:VERTICAL gap10 pad0/0/0/0 align:CENTER/MIN sz:FILL/HUG {itemSpacing→space/3}
+    TE "content-services-mobile_text" 362x18 @0,0 sz:FILL/HUG fill:#030b1b@100 «Services» Onest Regular 12/150% case:UPPER align:CENTER TS:Label {fills→text,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+    TE "content-services-mobile_title" 362x76 @0,28 sz:FILL/HUG fill:#030b1b@100 «Explore our consulting   services» Vend Sans Bold 30/125% case:ORIGINAL align:CENTER TS:H4 {fills→text,fontSize→font-size/h4,fontStyle→font/secondary-bold,fontFamily→font/secondary-family}
+    TE "content-services-mobile_text" 362x72 @0,114 sz:FILL/HUG fill:#030b1b@100 «A specialised portfolio of project controls services designed to optimise delivery, reduce risk, and improve performance.» Onest Regular 16/150% case:ORIGINAL align:CENTER TS:Text Main {fills→text,fontSize→font-size/text-main,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+  FR "content-services-mobile_list" 460x38 @20,314 AL:HORIZONTAL gap10 pad4/4/4/4 align:MIN/MIN sz:HUG/HUG r9999 {itemSpacing→space/3,paddingLeft→space/1,paddingTop→space/1,paddingRight→space/1,paddingBottom→space/1,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round}
+    IN "Tab" 129x30 @4,4 AL:HORIZONTAL gap10 pad6/12/6/12 align:CENTER/CENTER sz:FIXED/HUG r999 fill:#030b1b@100 ⇒Tab [style:filled, state:rest] {itemSpacing→space/3,fills→swatch/dark-900}
+      TE "tab_text" 105x18 @12,6 sz:HUG/HUG fill:#ffffff@100 «Project controls» Onest Regular 14/125% case:ORIGINAL align:LEFT {fills→swatch/light-100}
+    IN "Tab" 183x30 @143,4 AL:HORIZONTAL gap10 pad6/12/6/12 align:CENTER/CENTER sz:FIXED/HUG r999 ⇒Tab [style:plain, state:rest] {itemSpacing→space/3}
+      TE "tab_text" 159x18 @12,6 sz:HUG/HUG fill:#030b1b@100 «Project Delivery Experts» Onest Regular 14/125% case:ORIGINAL align:LEFT {fills→text}
+    IN "Tab" 120x30 @336,4 AL:HORIZONTAL gap10 pad6/12/6/12 align:CENTER/CENTER sz:FIXED/HUG r999 ⇒Tab [style:plain, state:rest] {itemSpacing→space/3}
+      TE "tab_text" 96x18 @12,6 sz:HUG/HUG fill:#030b1b@100 «Talent Insights» Onest Regular 14/125% case:ORIGINAL align:LEFT {fills→text}
+  FR "content-services-mobile_group_wrap" 362x1662 @20,384 AL:VERTICAL gap32 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG {itemSpacing→space/7}
+    FR "content-services-mobile_list" 362x1662 @0,0 AL:VERTICAL gap32 pad0/0/0/0 align:CENTER/CENTER sz:FILL/HUG {itemSpacing→space/7}
+      IN "Prop 2" 362x250 @0,0 AL:VERTICAL gap16 pad32/24/32/24 align:MIN/MIN sz:FILL/HUG r8 clip fill:#edf1f7@100 ⇒Card / Service [type:services] {itemSpacing→space/4,paddingLeft→space/6,paddingTop→space/7,paddingRight→space/6,paddingBottom→space/7,topLeftRadius→radius/small,topRightRadius→radius/small,bottomLeftRadius→radius/small,bottomRightRadius→radius/small,fills→background}
+        IN "Google icons" 48x48 @24,32 sz:FIXED/FIXED clip fill: ⇒Google icons [type:project-controls-strategy]
+          VE "Vector" 31x33 @9,7 sz:FIXED/FIXED fill:#030b1b@100 {fills→swatch/dark-900}
+        FR "Heading 3" 314x34 @24,96 AL:VERTICAL gap0 pad8/0/0/0 align:MIN/MIN sz:FILL/HUG {paddingTop→space/2}
+          TE "Pre-Qualified Specialists" 314x26 @0,8 sz:FILL/HUG fill:#1a1c1e@100 «Project Controls Strategy» Vend Sans Bold 24/110.00000238418579% case:ORIGINAL align:LEFT
+        FR "Container" 314x72 @24,146 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG
+          TE "Ready before you need them. Continuously identified, benchmarked, and assessed." 314x72 @0,0 sz:FILL/HUG fill:#030b1b@50 «Define governance frameworks, reporting structures and delivery standards for complex capital projects.» Onest Regular 16/150% case:ORIGINAL align:LEFT TS:Text Main {fills→swatch/dark-900-o50,fontSize→font-size/text-main,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+        FR "Frame 639" 72x80 @290,0 AL:VERTICAL gap10 pad40/24/0/0 align:MIN/MIN sz:HUG/FIXED ABS {itemSpacing→space/3,paddingRight→space/6}
+          FR "arrow_right_alt_24dp_E3E3E3_FILL0_wght100_GRAD0_opsz24 1" 48x48 @-48,32 sz:FIXED/FIXED ABS op0 clip
+      IN "Prop 3" 362x250 @0,282 AL:VERTICAL gap16 pad32/24/32/24 align:MIN/MIN sz:FILL/HUG r8 clip fill:#edf1f7@100 ⇒Card / Service [type:services] {itemSpacing→space/4,paddingLeft→space/6,paddingTop→space/7,paddingRight→space/6,paddingBottom→space/7,topLeftRadius→radius/small,topRightRadius→radius/small,bottomLeftRadius→radius/small,bottomRightRadius→radius/small,fills→background}
+        IN "Google icons" 48x48 @24,32 sz:FIXED/FIXED clip fill: ⇒Google icons [type:cost-control-forecasting]
+          VE "Vector" 32x31 @8,9 sz:FIXED/FIXED fill:#030b1b@100 {fills→swatch/dark-900}
+        FR "Heading 3" 314x34 @24,96 AL:VERTICAL gap0 pad8/0/0/0 align:MIN/MIN sz:FILL/HUG {paddingTop→space/2}
+          TE "Pre-Qualified Specialists" 314x26 @0,8 sz:FILL/HUG fill:#1a1c1e@100 «Cost Control   Forecasting» Vend Sans Bold 24/110.00000238418579% case:ORIGINAL align:LEFT
+        FR "Container" 314x72 @24,146 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG
+          TE "Ready before you need them. Continuously identified, benchmarked, and assessed." 314x72 @0,0 sz:FILL/HUG fill:#030b1b@50 «Improve financial visibility through accurate forecasting, cost tracking and variance analysis.» Onest Regular 16/150% case:ORIGINAL align:LEFT TS:Text Main {fills→swatch/dark-900-o50,fontSize→font-size/text-main,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+        FR "Frame 639" 72x80 @290,0 AL:VERTICAL gap10 pad40/24/0/0 align:MIN/MIN sz:HUG/FIXED ABS {itemSpacing→space/3,paddingRight→space/6}
+          FR "arrow_right_alt_24dp_E3E3E3_FILL0_wght100_GRAD0_opsz24 1" 48x48 @-48,32 sz:FIXED/FIXED ABS op0 clip
+      IN "Prop 4" 362x250 @0,564 AL:VERTICAL gap16 pad32/24/32/24 align:MIN/MIN sz:FILL/HUG r8 clip fill:#edf1f7@100 ⇒Card / Service [type:services] {itemSpacing→space/4,paddingLeft→space/6,paddingTop→space/7,paddingRight→space/6,paddingBottom→space/7,topLeftRadius→radius/small,topRightRadius→radius/small,bottomLeftRadius→radius/small,bottomRightRadius→radius/small,fills→background}
+        IN "Google icons" 48x48 @24,32 sz:FIXED/FIXED clip fill: ⇒Google icons [type:planning-scheduling]
+          VE "Vector" 31x35 @9,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→swatch/dark-900}
+        FR "Heading 3" 314x34 @24,96 AL:VERTICAL gap0 pad8/0/0/0 align:MIN/MIN sz:FILL/HUG {paddingTop→space/2}
+          TE "Pre-Qualified Specialists" 314x26 @0,8 sz:FILL/HUG fill:#1a1c1e@100 «Planning   Scheduling» Vend Sans Bold 24/110.00000238418579% case:ORIGINAL align:LEFT
+        FR "Container" 314x72 @24,146 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG
+          TE "Ready before you need them. Continuously identified, benchmarked, and assessed." 314x72 @0,0 sz:FILL/HUG fill:#030b1b@50 «Develop and manage integrated project schedules aligned with key milestones and dependencies.» Onest Regular 16/150% case:ORIGINAL align:LEFT TS:Text Main {fills→swatch/dark-900-o50,fontSize→font-size/text-main,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+        FR "Frame 639" 72x80 @290,0 AL:VERTICAL gap10 pad40/24/0/0 align:MIN/MIN sz:HUG/FIXED ABS {itemSpacing→space/3,paddingRight→space/6}
+          FR "arrow_right_alt_24dp_E3E3E3_FILL0_wght100_GRAD0_opsz24 1" 48x48 @-48,32 sz:FIXED/FIXED ABS op0 clip
+      IN "Prop 2" 362x276 @0,846 AL:VERTICAL gap16 pad32/24/32/24 align:MIN/MIN sz:FILL/HUG r8 clip fill:#edf1f7@100 ⇒Card / Service [type:services] {itemSpacing→space/4,paddingLeft→space/6,paddingTop→space/7,paddingRight→space/6,paddingBottom→space/7,topLeftRadius→radius/small,topRightRadius→radius/small,bottomLeftRadius→radius/small,bottomRightRadius→radius/small,fills→background}
+        IN "Google icons" 48x48 @24,32 sz:FIXED/FIXED clip fill: ⇒Google icons [type:shield]
+          VE "Vector" 27x35 @11,7 sz:FIXED/FIXED fill:#030b1b@100 {fills→swatch/dark-900}
+        FR "Heading 3" 314x60 @24,96 AL:VERTICAL gap0 pad8/0/0/0 align:MIN/MIN sz:FILL/HUG {paddingTop→space/2}
+          TE "Pre-Qualified Specialists" 314x52 @0,8 sz:FILL/HUG fill:#1a1c1e@100 «Risk   Performance Management» Vend Sans Bold 24/110.00000238418579% case:ORIGINAL align:LEFT
+        FR "Container" 314x72 @24,172 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG
+          TE "Ready before you need them. Continuously identified, benchmarked, and assessed." 314x72 @0,0 sz:FILL/HUG fill:#030b1b@50 «Identify risks and performance gaps early using structured analysis and project controls insights.» Onest Regular 16/150% case:ORIGINAL align:LEFT TS:Text Main {fills→swatch/dark-900-o50,fontSize→font-size/text-main,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+        FR "Frame 639" 72x80 @290,0 AL:VERTICAL gap10 pad40/24/0/0 align:MIN/MIN sz:HUG/FIXED ABS {itemSpacing→space/3,paddingRight→space/6}
+          FR "arrow_right_alt_24dp_E3E3E3_FILL0_wght100_GRAD0_opsz24 1" 48x48 @-48,32 sz:FIXED/FIXED ABS op0 clip
+      IN "Prop 3" 362x250 @0,1154 AL:VERTICAL gap16 pad32/24/32/24 align:MIN/MIN sz:FILL/HUG r8 clip fill:#edf1f7@100 ⇒Card / Service [type:services] {itemSpacing→space/4,paddingLeft→space/6,paddingTop→space/7,paddingRight→space/6,paddingBottom→space/7,topLeftRadius→radius/small,topRightRadius→radius/small,bottomLeftRadius→radius/small,bottomRightRadius→radius/small,fills→background}
+        IN "Google icons" 48x48 @24,32 sz:FIXED/FIXED clip fill: ⇒Google icons [type:dashboards]
+          VE "Vector" 38x34 @7,9 sz:FIXED/FIXED fill:#030b1b@100 {fills→swatch/dark-900}
+        FR "Heading 3" 314x34 @24,96 AL:VERTICAL gap0 pad8/0/0/0 align:MIN/MIN sz:FILL/HUG {paddingTop→space/2}
+          TE "Pre-Qualified Specialists" 314x26 @0,8 sz:FILL/HUG fill:#1a1c1e@100 «Reporting   Dashboards» Vend Sans Bold 24/110.00000238418579% case:ORIGINAL align:LEFT
+        FR "Container" 314x72 @24,146 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG
+          TE "Ready before you need them. Continuously identified, benchmarked, and assessed." 314x72 @0,0 sz:FILL/HUG fill:#030b1b@50 «AI optimises the parts that don’t need a human, so we pass the efficiency on to you as a lower fee.» Onest Regular 16/150% case:ORIGINAL align:LEFT TS:Text Main {fills→swatch/dark-900-o50,fontSize→font-size/text-main,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+        FR "Frame 639" 72x80 @290,0 AL:VERTICAL gap10 pad40/24/0/0 align:MIN/MIN sz:HUG/FIXED ABS {itemSpacing→space/3,paddingRight→space/6}
+          FR "arrow_right_alt_24dp_E3E3E3_FILL0_wght100_GRAD0_opsz24 1" 48x48 @-48,32 sz:FIXED/FIXED ABS op0 clip
+      IN "Prop 4" 362x226 @0,1436 AL:VERTICAL gap16 pad32/24/32/24 align:MIN/MIN sz:FILL/HUG r8 clip fill:#edf1f7@100 ⇒Card / Service [type:services] {itemSpacing→space/4,paddingLeft→space/6,paddingTop→space/7,paddingRight→space/6,paddingBottom→space/7,topLeftRadius→radius/small,topRightRadius→radius/small,bottomLeftRadius→radius/small,bottomRightRadius→radius/small,fills→background}
+        IN "Google icons" 48x48 @24,32 sz:FIXED/FIXED clip fill: ⇒Google icons [type:person-check]
+          VE "Vector" 40x25 @5,12 sz:FIXED/FIXED fill:#030b1b@100 {fills→swatch/dark-900}
+        FR "Heading 3" 314x34 @24,96 AL:VERTICAL gap0 pad8/0/0/0 align:MIN/MIN sz:FILL/HUG {paddingTop→space/2}
+          TE "Pre-Qualified Specialists" 314x26 @0,8 sz:FILL/HUG fill:#1a1c1e@100 «Project Controls Leadership» Vend Sans Bold 24/110.00000238418579% case:ORIGINAL align:LEFT
+        FR "Container" 314x48 @24,146 AL:VERTICAL gap0 pad0/0/0/0 align:MIN/MIN sz:FILL/HUG
+          TE "Ready before you need them. Continuously identified, benchmarked, and assessed." 314x48 @0,0 sz:FILL/HUG fill:#030b1b@50 «Relevant candidates in front of you fast — sourcing and screening run continuously.» Onest Regular 16/150% case:ORIGINAL align:LEFT TS:Text Main {fills→swatch/dark-900-o50,fontSize→font-size/text-main,fontStyle→font/primary-regular,fontFamily→font/primary-family}
+        FR "Frame 639" 72x80 @290,0 AL:VERTICAL gap10 pad40/24/0/0 align:MIN/MIN sz:HUG/FIXED ABS {itemSpacing→space/3,paddingRight→space/6}
+          FR "arrow_right_alt_24dp_E3E3E3_FILL0_wght100_GRAD0_opsz24 1" 48x48 @-48,32 sz:FIXED/FIXED ABS op0 clip
+  FR "content-services-mobile_actions" 362x48 @20,2078 AL:VERTICAL gap10 pad0/0/0/0 align:MIN/CENTER sz:FILL/HUG {itemSpacing→space/3}
+    IN "Button" 332x48 @15,0 AL:HORIZONTAL gap0 pad8/16/8/16 align:CENTER/CENTER sz:HUG/FIXED r9999 fill:#00ffd5@100+#ffffff@20 fx:DROP_SHADOW 8 0,4 #000000@10+DROP_SHADOW 14 0,14 #000000@9+DROP_SHADOW 19 0,32 #000000@5+DROP_SHADOW 23 0,56 #000000@1+DROP_SHADOW 25 0,88 #000000@0 ⇒Button [type:primary, state:rest] props{Icon:2028:1998; Icon right:true; Icon left:false; Label:true; Text:Let’s discuss the requirements} {paddingLeft→Padding x,paddingTop→space/2,paddingRight→Padding x,paddingBottom→space/2,height→Height,topLeftRadius→radius/round,topRightRadius→radius/round,bottomLeftRadius→radius/round,bottomRightRadius→radius/round,fills→button-primary/background}
+      IN "chevron_right" 24x24 @16,12 HIDDEN sz:FIXED/FIXED clip fill: ⇒chevron_right [Style:Filled]
+        VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#ffffff@100 {fills→Defaults/Body light}
+      FR "button_text" 276x27 @16,11 AL:HORIZONTAL gap0 pad0/8/0/8 align:CENTER/CENTER sz:HUG/HUG {paddingLeft→space/2,paddingRight→space/2}
+        TE "button_text" 260x27 @8,0 sz:HUG/HUG fill:#050404@100 «Let’s discuss the requirements» Onest Medium 18/150% case:ORIGINAL align:LEFT {fontSize→font-size/text-medium}
+      IN "chevron_right" 24x24 @292,12 sz:FIXED/FIXED clip ⇒chevron_right [Style:Filled]
+        VE "Vector" 7x12 @8,6 sz:FIXED/FIXED fill:#030b1b@100 {fills→button-primary/accent}
