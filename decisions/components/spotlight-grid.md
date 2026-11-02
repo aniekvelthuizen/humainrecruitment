@@ -69,3 +69,9 @@ Background: the site has no grey Light theme yet (`site.md` 2026-10-30), so the 
 Split Content #2 (after this section) Space Top none → **large**: it follows the grey section now instead of the white Expertise.
 
 **Measured on staging (1512):** header, text (y 311), rating (590,389 332 × 38), layout (y 475), side cards (y 687 / 723), photo (618, bottom of panel) = Figma. Cards and everything under them +6 px: Card Testimonial is 6 px taller than Figma (known, cards.md Q6). 402: widths 362, padding 20, photo centred, order as the mobile frame, no sideways scroll.
+
+## 2026-11-02 — Reviews review fixes
+Review: `references/audit/2026-11-02-testimonials-review.md` (fresh reviewer, no API access).
+- Tablet (768–991): the stacked cards ran 820+ px wide (lines of ~100 characters). Reviews `_layout` at `medium`: max-width 40rem, centred (cards 640 at 767–991; 402 unchanged).
+- Hidden base quote copy was in the Reviews HTML: Quote, Name, Role, Company emptied on the Home instance; Quote tooltip says it is not shown in Reviews.
+- Left for the owner: narrow columns 992–1279 (names on three lines; Expertise kept the same columns), Text Large 20 on phones (Figma 16, site-wide), card chevron 16 vs 24 and role opacity .5 vs .34 (Card Testimonial), photo to WebP, rating «4.9» next to three 5-star cards (copy).

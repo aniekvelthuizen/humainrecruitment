@@ -297,3 +297,4 @@
 - Placed on Home after Expertise (append + re-append Split Content #2 and CTA Split); Split Content #2 Space Top none → large.
 - Published to staging 3×. `testimonials-check.mjs` (new): 1512 = Figma except the known +6 px card height; 402 order/widths/gaps = mobile frame; no sideways scroll at 1512/1280/992/991/767/402; no console errors. `spotlight-check.mjs`: Expertise identical before/after at all six widths.
 - Open: Card Testimonial `role="listitem"` condition does not render (queued); slot names / Allowed components (queued); photo is a 446 KB PNG (WebP compression replaces the file in place — not done without an OK).
+- Review (fresh agent, published HTML only): 1512 and 402 within 2 px of Figma bar the known card height; Expertise unchanged; no overflow 320–1512. Fixed: tablet column capped at 40rem, hidden quote copy cleared. Published 1×, re-measured 402 / 767 / 900 / 991 / 1512. Owner questions in spotlight-grid.md.
