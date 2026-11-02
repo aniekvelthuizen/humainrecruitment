@@ -1,0 +1,155 @@
+{
+ "cards": [
+  {
+   "rest": {
+    "name": "Chance LipshutzPartn",
+    "veil": "0",
+    "veilBg": "rgb(0, 255, 213)",
+    "lift": "matrix(1, 0, 0, 1, 0, 0)",
+    "arrow": "matrix(1, 0, 0, 1, 0, 0)",
+    "clickable": true,
+    "quoteDark": [
+     "0",
+     "rgb(3, 11, 27)",
+     55,
+     43,
+     "rgb(3, 11, 27)",
+     55
+    ]
+   },
+   "hover": {
+    "name": "Chance LipshutzPartn",
+    "veil": "1",
+    "veilBg": "rgb(0, 255, 213)",
+    "lift": "matrix(1, 0, 0, 1, 0, -4)",
+    "arrow": "matrix(1, 0, 0, 1, 4, 0)",
+    "clickable": true,
+    "quoteDark": [
+     "1",
+     "rgb(3, 11, 27)",
+     55,
+     43,
+     "rgb(3, 11, 27)",
+     55
+    ]
+   },
+   "focus": {
+    "name": "Chance LipshutzPartn",
+    "veil": "1",
+    "veilBg": "rgb(0, 255, 213)",
+    "lift": "matrix(1, 0, 0, 1, 0, -4)",
+    "arrow": "matrix(1, 0, 0, 1, 4, 0)",
+    "clickable": true,
+    "quoteDark": [
+     "1",
+     "rgb(3, 11, 27)",
+     55,
+     43,
+     "rgb(3, 11, 27)",
+     55
+    ]
+   }
+  },
+  {
+   "rest": {
+    "name": "Jocelyn WesterveltCh",
+    "veil": "0",
+    "veilBg": "rgb(0, 255, 213)",
+    "lift": "matrix(1, 0, 0, 1, 0, 0)",
+    "arrow": "matrix(1, 0, 0, 1, 0, 0)",
+    "clickable": true,
+    "quoteDark": [
+     "0",
+     "rgb(3, 11, 27)",
+     55,
+     43,
+     "rgb(3, 11, 27)",
+     55
+    ]
+   },
+   "hover": {
+    "name": "Jocelyn WesterveltCh",
+    "veil": "1",
+    "veilBg": "rgb(0, 255, 213)",
+    "lift": "matrix(1, 0, 0, 1, 0, -4)",
+    "arrow": "matrix(1, 0, 0, 1, 4, 0)",
+    "clickable": true,
+    "quoteDark": [
+     "1",
+     "rgb(3, 11, 27)",
+     55,
+     43,
+     "rgb(3, 11, 27)",
+     55
+    ]
+   },
+   "focus": {
+    "name": "Jocelyn WesterveltCh",
+    "veil": "1",
+    "veilBg": "rgb(0, 255, 213)",
+    "lift": "matrix(1, 0, 0, 1, 0, -4)",
+    "arrow": "matrix(1, 0, 0, 1, 4, 0)",
+    "clickable": true,
+    "quoteDark": [
+     "1",
+     "rgb(3, 11, 27)",
+     55,
+     43,
+     "rgb(3, 11, 27)",
+     55
+    ]
+   }
+  },
+  {
+   "rest": {
+    "name": "Marcus LevinVP, Prod",
+    "veil": "0",
+    "veilBg": "rgb(0, 255, 213)",
+    "lift": "matrix(1, 0, 0, 1, 0, 0)",
+    "arrow": "matrix(1, 0, 0, 1, 0, 0)",
+    "clickable": true,
+    "quoteDark": [
+     "0",
+     "rgb(3, 11, 27)",
+     55,
+     43,
+     "rgb(3, 11, 27)",
+     55
+    ]
+   },
+   "hover": {
+    "name": "Marcus LevinVP, Prod",
+    "veil": "1",
+    "veilBg": "rgb(0, 255, 213)",
+    "lift": "matrix(1, 0, 0, 1, 0, -4)",
+    "arrow": "matrix(1, 0, 0, 1, 4, 0)",
+    "clickable": true,
+    "quoteDark": [
+     "1",
+     "rgb(3, 11, 27)",
+     55,
+     43,
+     "rgb(3, 11, 27)",
+     55
+    ]
+   },
+   "focus": {
+    "name": "Marcus LevinVP, Prod",
+    "veil": "1",
+    "veilBg": "rgb(0, 255, 213)",
+    "lift": "matrix(1, 0, 0, 1, 0, -4)",
+    "arrow": "matrix(1, 0, 0, 1, 4, 0)",
+    "clickable": true,
+    "quoteDark": [
+     "1",
+     "rgb(3, 11, 27)",
+     55,
+     43,
+     "rgb(3, 11, 27)",
+     55
+    ]
+   }
+  }
+ ],
+ "errors": []
+}

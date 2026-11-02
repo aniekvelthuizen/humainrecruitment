@@ -304,3 +304,8 @@
 - New: **Score Chart** + **Score Item** (bar drawn from the weights by a small embed script, colours by position via Theme `chart/color-1…7`, new swatches `chart-purple`, `chart-blue`), **Step List** + **Step Item** (CSS counter numbers, Theme `badge/background`). Nested slots filled through the API (`insert_in_slot` with nested `slots`) — no Designer step needed.
 - Project Delivery Experts: both blocks at the end of `page_main` (after the template placeholder Section). Published to staging 2× (announced to the CTA and Services sessions). `visual-slot-check.mjs` at 1512 / 1280 / 991 / 767 / 479 / 402: bar segments 169/101/68/34/135/101/68 and legend rows = Figma, step rows 90 / 100 apart, no sideways scroll, no console errors. Heights 658 / 808 at 1512 (Figma 668 / 773: agreed H2 48 and narrower text column).
 - Review (fresh agent, published HTML only): 1512 and 402 within 2 px of Figma bar the known card height; Expertise unchanged; no overflow 320–1512. Fixed: tablet column capped at 40rem, hidden quote copy cleared. Published 1×, re-measured 402 / 767 / 900 / 991 / 1512. Owner questions in spotlight-grid.md.
+
+## 2026-11-02 — Testimonials: owner round — Aniek Velthuizen with Claude
+- Owner: block good, only the card hover too minimal. Card Testimonial now hovers like the other cards: mint veil, 0.25rem lift, quote mark turns dark (overlay), arrow nudge as before; also on keyboard focus. Measured with `testimonial-hover-check.mjs` (new) on all three cards.
+- `role="listitem"`: the Home cards were on Role's default (On = None); set to List Item through the API, staging renders it. Queue item closed — no Designer change needed (the Designer was opened, only read).
+- Published to staging 3× (announced to the Split Content / Slots session).
