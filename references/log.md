@@ -288,3 +288,4 @@
 
 ## 2026-11-02 — Rich Content closed — Aniek Velthuizen with Claude
 - Owner tested and approved: block done, merged to main (8f06db4). Open for later: legal page header block (next), real privacy copy, Title above Content in the props panel (Designer drag).
+- Re-check reviewer confirmed both owner-round fixes; dead variant CSS from duplicate_variant recorded in site.md.
