@@ -272,3 +272,6 @@
 - Owner: logo in the mobile nav a bit smaller so the bar gets smaller, hamburger a bit smaller too.
 - Small breakpoint (≤ 767) only: bar 74 → 64, panel top padding with it, logo 209 → 176 wide, hamburger 32 × 16 → 28 × 14 (tap area still 44 × 44). Gap through `--nav--hamburger-gap` in the Nav CSS embed (style API refuses custom properties). Record: `decisions/components/nav.md`.
 - Published to staging 1×. Measured at 402 / 767 / 768 / 991, closed and open: phone sizes as planned, ✕ centred, tablet unchanged, no sideways scroll, no console errors.
+
+## 2026-11-02 — Home «Expertise» closed — Aniek Velthuizen with Claude
+- Owner: columns 992–1279 stay as built, "helemaal af zo". Re-measured after the Rich Content rich-text restore (unchanged at 1512 / 991 / 402) and the CTA focus-ring publish (card ring 2 px dark, unchanged). Merged to main.
