@@ -97,3 +97,7 @@ Why: owner — every session has the kit without uploading the zip, and the repo
 ## 2026-10-31 — One brand gradient for footer and hero
 Choice (Aniek, via Claude): the Theme variables `footer/gradient-start | -middle | -end` are renamed **`gradient/brand-start | brand-middle | brand-end`** (same ids; the footer's CSS follows the rename). Used by `footer_wrap` and `hero-experts_wrap`. Details: `decisions/components/hero-experts.md`.
 Why: Figma's footer and Home header use the same three-stop gradient; one set of variables, named for what it is.
+
+## 2026-11-02 — Staging moved to humain-dev.webflow.io
+Owner (Aniek): the site's Webflow subdomain is now **humain-dev.webflow.io**; humain-d16f03.webflow.io answers 404 on every page. `project.json` and `CLAUDE.md` updated. Older notes, scripts and audits still name the old domain; pass the new URL to the check scripts.
+Also seen (2026-11-02): the claude.ai Webflow connector used for this site now only lists Buitencampus and answers 404 for site `6ae35364a38b2d71cab8c607` — API work needs that connector re-pointed to the Humain workspace.

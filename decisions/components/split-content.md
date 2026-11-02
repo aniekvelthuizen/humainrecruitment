@@ -56,3 +56,6 @@ The API cannot put Card Bullets into the List slot (not in the definition, not i
 - Photo `sizes` stays `100vw` (the desktop loads the 1352 px file for a 676 px slot): Webflow refuses `sizes` as a custom attribute ("reserved attribute name") and Visual Image has no setting for it. A Sizes prop was tried on Visual Image and removed again.
 - Not changed (your-call items, no answer yet): body text full width on tablets (~95 characters per line at 990); Space Top as free text.
 - Owner (Aniek), 2026-11-01: photo `sizes` stays as it is — no script to set it (the reviewer showed one would make desktop load the 800 px file).
+
+## 2026-11-02 — Done (owner)
+Owner (Aniek) tested on staging (humain-dev.webflow.io): "getest en ziet er goed uit", block closed. Re-measured on the new staging domain: unchanged (938 / 643 at 1512, no sideways scroll, no console errors).

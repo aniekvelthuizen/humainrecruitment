@@ -6,7 +6,7 @@
     "id": "6ae35364a38b2d71cab8c607",
     "name": "Humain",
     "domains": [],
-    "stagingDomain": "humain-d16f03.webflow.io"
+    "stagingDomain": "humain-dev.webflow.io"
   },
   "figma": {
     "source": "mcp",
