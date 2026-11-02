@@ -1,0 +1,66 @@
+== 2710:48623 1. Home B 1512x612 pad0/64/192/64
+  T content-cta_title: Looking for a senior project-controls expert?
+  T content-cta_text: Tell us about the role — we'll come back with a transparent quote and a shortlist within days.
+  T button_text: Request a shortlist
+  T button_text: Discuss your project
+  B {"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":true,"Text":"Request a shortlist","type":"primary","state":"rest"}
+  B {"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":true,"Text":"Discuss your project","type":"secondary-white","state":"rest"}
+  IMG content-cta_img 76a4149fd50154ab11ea334dd8669590c6ee529c FILL 692x420
+  OV [["2710:48623",["boundVariables","height","name","width"]],["2070:5827",["componentProperties"]],["2070:5966",["componentProperties"]]]
+== 2382:37372 1. Home 402x936 pad0/20/96/20
+  T content-cta_title: Looking for a senior project-controls expert?
+  T content-cta_text: Tell us about the role — we'll come back with a transparent quote and a shortlist within days.
+  T button_text: Hire an Expert
+  T button_text: Discuss your challenge
+  B {"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":true,"Text":"Hire an Expert","type":"primary","state":"rest"}
+  B {"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":true,"Text":"Discuss your challenge","type":"secondary-white","state":"rest"}
+  IMG content-cta_img 662406c4310a7ff05eed38cea548c63dc3543649 FILL 362x420
+  IMG content-cta_img 76a4149fd50154ab11ea334dd8669590c6ee529c FILL 362x420
+  OV [["2382:37372",["boundVariables","height","name","width"]]]
+== 2236:5448 2. Hire an expert 1512x804 pad192/64/192/64
+  T content-cta_title: Looking for a senior project-controls expert?
+  T content-cta_text: Tell us about the role — we'll come back with a transparent quote and a shortlist within days.
+  T button_text: Hire an Expert
+  T button_text: Discuss your challenge
+  B {"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":true,"Text":"Hire an Expert","type":"primary","state":"rest"}
+  B {"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":true,"Text":"Discuss your challenge","type":"secondary-white","state":"rest"}
+  IMG content-cta_img 76a4149fd50154ab11ea334dd8669590c6ee529c FILL 692x420
+  OV [["2236:5448",["name"]]]
+== 2314:18739 10. About Us / Contact 1512x552 pad0/64/192/64
+  T content-cta_title: Explore what we do.
+  T content-cta_text: Id lacus congue diam dignissim vel turpis eleifend mi cursus. Neque et tincidunt sodales adipiscing.
+  T button_text: Hire an expert
+  T button_text: View oppertunities
+  B {"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":true,"Text":"Hire an expert","type":"primary","state":"rest"}
+  B {"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":true,"Text":"View oppertunities","type":"secondary-white","state":"rest"}
+  IMG content-cta_img 76a4149fd50154ab11ea334dd8669590c6ee529c FILL 692x360
+  OV [["2314:18739",["boundVariables","height","name","width"]],["2070:5817",["characters","styledTextSegments"]],["2070:5827",["componentProperties"]],["2070:5966",["componentProperties"]],["2070:5983",["characters","styledTextSegments"]]]
+== 2292:29100 8. About Us / How it works 1512x582 pad0/64/192/64
+  T content-cta_title: Send us your requirement.
+  T content-cta_text: A 30-minute call is all it takes to get a shortlist moving.
+  T button_text: Start with a brief
+  T button_text: Contact us
+  B {"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":true,"Text":"Start with a brief","type":"primary","state":"rest"}
+  B {"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":true,"Text":"Contact us","type":"secondary-white","state":"rest"}
+  IMG content-cta_img 76a4149fd50154ab11ea334dd8669590c6ee529c FILL 692x390
+  OV [["2292:29100",["boundVariables","height","name","width"]],["2070:5817",["characters","styledTextSegments"]],["2070:5827",["componentProperties"]],["2070:5966",["componentProperties"]],["2070:5983",["characters","styledTextSegments"]]]
+== 2292:28949 7. About Us / Clients 1512x744 pad192/64/192/64
+  T content-cta_title: Let's deliver yours.
+  T content-cta_text: Tell us about the role or the challenge — we'll come back with a plan.
+  T button_text: Hire an expert
+  T button_text: Contact us
+  B {"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":true,"Text":"Hire an expert","type":"primary","state":"rest"}
+  B {"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":true,"Text":"Contact us","type":"secondary-white","state":"rest"}
+  IMG content-cta_img 76a4149fd50154ab11ea334dd8669590c6ee529c FILL 692x360
+  OV [["2292:28949",["boundVariables","height","name","width"]],["2070:5817",["characters","styledTextSegments"]],["2070:5827",["componentProperties"]],["2070:5966",["componentProperties"]],["2070:5983",["characters","styledTextSegments"]]]
+== 2400:46398 12. Opportunities 402x864 pad0/20/96/20
+  T content-cta_title: No perfect match yet? Let us find it for you.
+  T content-cta_text: Submit your resume once. Our AI benchmarks it and our recruiters match you to roles before they're even posted.
+  T button_text: Analyse my resume
+  T button_text: Discuss your challenge
+  B {"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":true,"Text":"Analyse my resume","type":"primary","state":"rest"}
+  B {"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":true,"Text":"Discuss your challenge","type":"secondary-white","state":"rest"}
+  IMG content-cta_img 662406c4310a7ff05eed38cea548c63dc3543649 FILL 362x420
+  IMG content-cta_img 76a4149fd50154ab11ea334dd8669590c6ee529c FILL 362x420
+  OV [["2400:46398",["boundVariables","height","name","width"]],["2382:37333",["characters","styledTextSegments"]],["2382:37334",["characters","styledTextSegments"]],["2382:37337",["componentProperties"]],["2382:37338",["visible"]]]
+photo {"width":1536,"height":1024} 2115735 -> 200

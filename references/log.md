@@ -223,3 +223,8 @@
 - Figma `Content / Services` (`2323:32509`) read: one `get_metadata` through the MCP, then its View-seat limit; the rest in Claude in Chrome with the Plugin API (local receiver on port 8767). Spec, pictures and the cut-out photo in `references/figma/home-expertise/`.
 - Only `type=expertise` is on Home B; the tab variant is Home A only — owner: not built. Plan `references/plans/2026-11-02-home-expertise.md`: new section **Spotlight Grid**, Card Primary Discipline ×6, `gradient/brand-*` panel.
 - Not built: the local `webflow`, the claude.ai Webflow and the Studijob connectors all answer 404 for site `6ae35364a38b2d71cab8c607`. Needs a connector on the Humain workspace.
+
+## 2026-11-02 — Home «CTA» planned, build blocked — Aniek Velthuizen with Claude
+- Figma `Content / CTA` (`2323:32532`, set `2382:37326`) read in Claude in Chrome with the Plugin API (Figma MCP at its View-seat call limit); tree, instance overrides, pictures and the photo in `references/figma/home-cta/` (local receiver on 127.0.0.1:8771). 13 desktop + 2 mobile instances; Home B `2710:48623`.
+- Plan `references/plans/2026-11-02-home-cta.md`, decisions `decisions/components/cta-split.md`: new section **CTA Split**, Button Main ×2, Visual Image, after Split Content #2.
+- Not built: all three Webflow connectors answer 404 for site `6ae35364a38b2d71cab8c607` (local `webflow`: Core / THDV / Wayfinder; claude.ai: Buitencampus; `webflow-studijob`: Studijob).

@@ -101,3 +101,6 @@ Why: Figma's footer and Home header use the same three-stop gradient; one set of
 ## 2026-11-02 — Staging moved to humain-dev.webflow.io
 Owner (Aniek): the site's Webflow subdomain is now **humain-dev.webflow.io**; humain-d16f03.webflow.io answers 404 on every page. `project.json` and `CLAUDE.md` updated. Older notes, scripts and audits still name the old domain; pass the new URL to the check scripts.
 Also seen (2026-11-02): the claude.ai Webflow connector used for this site now only lists Buitencampus and answers 404 for site `6ae35364a38b2d71cab8c607` — API work needs that connector re-pointed to the Humain workspace.
+
+## 2026-11-02 — No Webflow connector reaches the site (CTA session)
+Seen by Aniek's CTA session: the local `webflow` connector lists Core / THDV / Wayfinder, the claude.ai Webflow connector Buitencampus, `webflow-studijob` Studijob; all three answer 404 for `6ae35364a38b2d71cab8c607`. API work on Humain needs one of them re-authorised on the workspace that holds the site.
