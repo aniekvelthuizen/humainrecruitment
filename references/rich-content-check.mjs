@@ -64,7 +64,10 @@ for (const w of widths) {
   await ev('document.fonts.ready.then(() => true)');
   // PATCH_CSS: extra CSS injected before measuring, to check a change before it is published.
   if (process.env.PATCH_CSS) await ev(`(() => { const s = document.createElement('style'); s.textContent = ${JSON.stringify(process.env.PATCH_CSS)}; document.body.append(s); return true; })()`);
+  // PATCH_HTML: extra blocks appended to the text (e.g. a list under a title, an h3, a link), to check their styles.
+  if (process.env.PATCH_HTML) await ev(`(() => { document.querySelector('.rich-content_text').insertAdjacentHTML('beforeend', ${JSON.stringify(process.env.PATCH_HTML)}); return true; })()`);
   report.widths[w] = await ev(measure);
+  report.widths[w].links = await ev(`[...document.querySelectorAll('.rich-content_text a')].map((a) => { const c = getComputedStyle(a); return [c.color, c.textDecorationLine, c.textDecorationColor, c.textUnderlineOffset]; })`);
   await shot(`rich-content-${w}.png`, '.rich-content_wrap');
 }
 report.errors = errors;
