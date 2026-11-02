@@ -313,3 +313,8 @@
 ## 2026-11-02 — Testimonials closed — Aniek Velthuizen with Claude
 - Owner approved; merged to main (d83971e) via `aniek/home-testimonials` (cherry-picks of the three Testimonials commits only — the Split Content / Score Chart commit 97ff294 on aniek/home-hero is not tested yet, per that session).
 - Review (`references/audit/2026-11-02-visual-slot.md`): Split Content no findings; Score Chart legend columns (≥ 15rem each), space under the legend, segment rules into the embed, value parsing; Step List number dark on every theme (`badge/text`), no-op lines removed. Round 2 after the re-check: Safari legend offset (rows 2rem, no margins), «10-15%» parsing. Published to staging 3× more (announced); WebKit + Chrome measured. Not merged: waiting for Aniek's test.
+
+## 2026-11-02 — Score Chart and glow motion — Aniek Velthuizen with Claude
+- Owner request: reveal + mouse effect on the Score Chart, glow animates on scroll into view. Exception recorded in `decisions/motion.md`.
+- Score Chart: segments grow left to right, rows rise, values count up; hover keeps one row + segment, dims the rest. Split Content: glow rises in (only with Glow on). Script and style in separate embeds per component; sources in `references/embeds/`.
+- First publish: rows faded *out* before the reveal (transition also on the hide step) → transitions only in the `in` state. Published to staging 2×. Headless Chrome 3 runs: hidden before the reveal, bar complete at ~0.9 s, everything final at ~1.4 s with the original texts, glow complete at ~1.6 s, hover 1 / 0.35, reduced motion static, no console errors.

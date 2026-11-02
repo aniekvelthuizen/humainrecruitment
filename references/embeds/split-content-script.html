@@ -1,0 +1,20 @@
+<script>
+(function () {
+  if (window.splitGlowReady) return;
+  window.splitGlowReady = true;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+  function run() {
+    document.querySelectorAll('[data-split-content][data-glow="true" i]').forEach(function (section) {
+      section.setAttribute('data-glow-motion', 'ready');
+      var io = new IntersectionObserver(function (entries) {
+        if (!entries[0].isIntersecting) return;
+        io.disconnect();
+        requestAnimationFrame(function () { requestAnimationFrame(function () { section.setAttribute('data-glow-motion', 'in'); }); });
+      }, { threshold: 0.35 });
+      io.observe(section);
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
+  else run();
+})();
+</script>

@@ -39,3 +39,6 @@ Score Chart and Score Item only work inside Split Content's Visual slot, and sec
 - In Safari the right legend column started 12 px lower (WebKit keeps a row's bottom margin at the column break). Rows now have no margins at all: each row is 2rem (32) high with the 20 px text centred, so the pitch stays Figma's 32; the legend's padding-top 1.625rem (32 − 6) and margin-bottom −0.375rem take out the 6 above the first and below the last row. Same in every engine.
 - «10-15%» read as 1015 → the script takes the first number only.
 - Known side effect of round 1: from 992 to ~1225 px the legend is one column (each column would be < 15rem), so the chart ends lower than the text there.
+
+## 2026-11-02 — Motion (owner request)
+Reveal on scroll, count-up and linked hover: `decisions/motion.md` (exception entry). The embed is now two: style-only (`u-embed-css`, colours, segment sizing, motion states — visible on the Designer canvas) and script (bar, count-up, hover, in-view trigger). Source copies: `references/embeds/score-chart-style.html`, `score-chart-script.html`.

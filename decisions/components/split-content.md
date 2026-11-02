@@ -76,3 +76,6 @@ Owner-agreed deviations: Trust statement keeps Split Content's Image Left widths
 - Final score: Eyebrow «The weighting», Title «How the final score» + Title Break + Muted «is calculated», Figma text, quote and buttons off, Score Chart with 7 Score Items.
 - Trust statement: variant Image Left, Glow on, Eyebrow «Trust Statement», Title «Why This Matters», three paragraphs (blank lines in the multiline Text → `<br><br>`, as Figma), quote and buttons off, Step List with 4 Step Items.
 Both sit at the end of `page_main`, after the template's placeholder Section; the Figma sections above them are not built yet.
+
+## 2026-11-02 — Glow motion (owner request)
+With Glow on, the glow rises in once when the block scrolls into view (`decisions/motion.md`, exception entry). The glow moved to a `::before` (`isolation: isolate`, `z-index: -1`) only while the script runs; without the script it stays the static background. Second embed (script) added after the style embed, so the canvas keeps the style rules. Source: `references/embeds/split-content-style.html`, `split-content-script.html`.
