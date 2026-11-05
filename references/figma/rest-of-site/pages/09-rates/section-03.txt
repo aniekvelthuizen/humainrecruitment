@@ -1,0 +1,25 @@
+# Dynamic / Rates (2444:35280) 1512x951
+I "Dynamic / Rates" -> Dynamic / Rates (2444:35276) 1512x951 {}
+   T dynamic-rates_text [16]: "Services"
+   T dynamic-rates_title [60]: "Consulting & services rates"
+   T dynamic-rates_text [20]: "Scoped engagements, priced upfront."
+   I "Content / Fee row compact" -> Content / Fee row compact (2305:43052) 1384x90 {}
+    T Permanent [24]: "Permanent"
+    T Search & selection for a permanent hire, with a replacement guarantee. [16]: "Search & selection for a permanent hire, with a replacement guarantee."
+    T €XX / day [0]: "€XX / day"
+   I "Prop 3" -> Content / Fee row compact (2305:43052) 1384x90 {}
+    T Permanent [24]: "Baseline & schedule setup"
+    T Search & selection for a permanent hire, with a replacement guarantee. [16]: "Integrated baseline, milestones and interface management."
+    T €XX / day [0]: "€XX / day"
+   I "Prop 4" -> Content / Fee row compact (2305:43052) 1384x90 {}
+    T Permanent [24]: "Governance framework"
+    T Search & selection for a permanent hire, with a replacement guarantee. [16]: "Reporting structures and delivery standards, scoped to fit."
+    T €XX / day [24]: "from €XX"
+   I "Prop 5" -> Content / Fee row compact (2305:43052) 1384x90 {}
+    T Permanent [24]: "Risk & performance review"
+    T Search & selection for a permanent hire, with a replacement guarantee. [16]: "Structured assessment of risk and performance gaps."
+    T €XX / day [24]: "from €XX"
+   I "Prop 6" -> Content / Fee row compact (2305:43052) 1384x90 {}
+    T Permanent [24]: "Interim controls leadership"
+    T Search & selection for a permanent hire, with a replacement guarantee. [16]: "Director / Manager embedded for the duration you need."
+    T €XX / day [0]: "€XX / day"

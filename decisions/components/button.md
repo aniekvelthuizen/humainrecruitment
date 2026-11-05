@@ -93,3 +93,6 @@ Choice: new Clickable variant **Focus Ring Theme** (`95904e04-d761-f0a9-3656-e46
 Measured on staging (real Tab presses): hero, Sticky Steps and CTA buttons white on purple; Split Content buttons dark on white; nav button white at the top over the hero, dark after scrolling over a light section; card rings unchanged.
 Not covered: the hero's big Card Expert ring is still navy on the dark hero (card ring, `cards.md` route) — open for the owner.
 Update (same day): the hero's Card Expert ring is now white too, through a hero-only rule (`decisions/components/hero-experts.md`).
+
+## 2026-11-05 — Tertiary has no shadow on hover or focus (Aniek Velthuizen, via Claude)
+Tertiary reset the shadow at rest but not on `:hover` and `:focus-within`, so it inherited Primary's: a white pill on "Show all filters" and the Back link (audit `references/audit/2026-11-05-phase-4.md`). Tertiary now has `box-shadow: none` in both states, read back. Simulated on the Back link and on the toggle: `none` on hover, focus and after a click. Not published yet. Primary and Secondary are unchanged; Secondary still inherits that hover shadow (`.button_main_wrap:hover` has it and Secondary's hover does not reset it).

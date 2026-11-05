@@ -1,0 +1,19 @@
+# Content - Recruitment process (2277:7818) 1512x1420
+    T How it works [16]: "How it works"
+    T Request in,  Expert out [60]: "Request in,  Expert out"
+    T A simple, scoped engagement — facilitated by HumAIn, delivered by a freelance Expert. [20]: "A simple, scoped engagement — facilitated by HumAIn, delivered by a freelance Expert."
+   I "Button" -> Button / type=primary, state=rest (2028:2123) 216x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Start with a brief","type":"primary","state":"rest"}
+     T button_text [18]: "Start with a brief"
+    I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+   I "Step 5" -> Content / Process step / style=glass (2045:11371) 676x333 {"Label":false,"style":"glass"}
+      T step-4_text [16]: "1"
+       T step-4_title [24]: "You scope the request"
+       T step-4_text [18]: "Tell us the challenge and the outcome you need — a forecast rebuild, a governance framework, a review."
+   I "Step 6" -> Content / Process step / style=glass (2045:11371) 687x333 {"Label":false,"style":"glass"}
+      T step-4_text [16]: "2"
+       T step-4_title [24]: "We match a freelance Expert"
+       T step-4_text [18]: "A senior specialist from our pre-qualified network picks it up against a clear scope and price."
+   I "Step 7" -> Content / Process step / style=glass (2045:11371) 687x333 {"Label":false,"style":"glass"}
+      T step-4_text [16]: "3"
+       T step-4_title [24]: "They deliver · we facilitate"
+       T step-4_text [18]: "The Expert delivers; HumAIn handles the engagement and takes a transparent fee."

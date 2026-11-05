@@ -1,0 +1,20 @@
+# Dynamic / Cases  (2444:34827) 1512x947
+I "Dynamic / Cases " -> Dynamic / Cases  (2444:34826) 1512x947 {}
+   T dynamic-cases_text [16]: "Cases"
+   T dynamic-cases_title [60]: "Selected project work"
+   T dynamic-cases_text [20]: "A few engagements that show how we work."
+  I "Frame 693" -> Card / Profile / type=case (2292:28829) 440x459 {"type":"case"}
+   IMG Frame 689 ea930c94a4ef7be3efaf1dbf3564bfbb7d41c72d.jpg 440x459
+     T Energy [12]: "Energy"
+    T £80M EPC forecast rebuilt in 6 weeks [24]: "£80M EPC forecast rebuilt in 6 weeks"
+    T A senior cost manager from our network restored forecast confidence on a stalled programme. [16]: "A senior cost manager from our network restored forecast confidence on a stalled programme."
+  I "Frame 694" -> Card / Profile / type=case (2292:28829) 440x459 {"type":"case"}
+   IMG Frame 689 29174815b2c7dc23c15021ff1c4c26d87353c1de.jpg 440x459
+     T Energy [12]: "Energy"
+    T £80M EPC forecast rebuilt in 6 weeks [24]: "£80M EPC forecast rebuilt in 6 weeks"
+    T A senior cost manager from our network restored forecast confidence on a stalled programme. [16]: "A senior cost manager from our network restored forecast confidence on a stalled programme."
+  I "Frame 695" -> Card / Profile / type=case (2292:28829) 440x459 {"type":"case"}
+   IMG Frame 689 662406c4310a7ff05eed38cea548c63dc3543649.jpg 440x459
+     T Energy [12]: "Energy"
+    T £80M EPC forecast rebuilt in 6 weeks [24]: "£80M EPC forecast rebuilt in 6 weeks"
+    T A senior cost manager from our network restored forecast confidence on a stalled programme. [16]: "A senior cost manager from our network restored forecast confidence on a stalled programme."

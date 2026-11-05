@@ -1,0 +1,8 @@
+# Frame 664 (2246:6236) 1512x612
+I "Frame 664" -> content-cta / device=desktop (2236:5447) 1512x612 {"device":"desktop"}
+   IMG content-cta_img 76a4149fd50154ab11ea334dd8669590c6ee529c.png 692x420
+    T content-cta_title [48]: "No perfect match yet? Let us find it for you."
+    T content-cta_text [20]: "Submit your resume once. Our AI benchmarks it and our recruiters match you to roles before they're even posted."
+     I "Button" -> Button / type=primary, state=rest (2028:2123) 238x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Analyse my resume","type":"primary","state":"rest"}
+       T button_text [18]: "Analyse my resume"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}

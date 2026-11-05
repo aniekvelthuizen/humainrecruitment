@@ -1,0 +1,12 @@
+# Content / CTA (2382:37372) 402x936
+I "Content / CTA" -> content-cta / device=mobile (2382:37327) 402x936 {"device":"mobile"}
+    T content-cta_title [30]: "Looking for a senior project-controls expert?"
+    T content-cta_text [20]: "Tell us about the role — we'll come back with a transparent quote and a shortlist within days."
+     I "Button" -> Button / type=primary, state=rest (2028:2123) 193x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Hire an Expert","type":"primary","state":"rest"}
+       T button_text [18]: "Hire an Expert"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+     I "Button" -> Button / type=secondary-white, state=rest (2028:2143) 268x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Discuss your challenge","type":"secondary-white","state":"rest"}
+       T button_text [18]: "Discuss your challenge"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+  IMG content-cta_img 662406c4310a7ff05eed38cea548c63dc3543649.jpg 362x420
+   IMG content-cta_img 76a4149fd50154ab11ea334dd8669590c6ee529c.png 362x420

@@ -1,0 +1,31 @@
+# Frame 594 (2236:5350) 1512x1560
+I "Frame 594" -> content-testimonials / device=desktop (2236:5349) 1512x1560 {"device":"desktop"}
+  T content-testimonials_text [16]: "Client reviews"
+  T content-testimonials_title [60]: "Trusted by the people who hire."
+  T content-testimonials_text [20]: "Honest feedback from employers we've supported on complex international projects."
+   T content-testimonials_text [14]: "4.9 / 5·based on 3 client reviews"
+   I "Testimonial 2" -> Testimonial 1 (2063:4554) 440x373 {}
+     T testimonial-1_text [16]: "I have been working with HumAIn engineers for several years now. They have all been exceptionally talented, very professional, highly productive, great team players, good communicators, and willing to go above and beyond."
+     IMG testimonial-1_img e32f93bdd5925643a8fa7acc5faf0ac74232f2e9.png 48x48
+        T testimonial-1_text [20]: "Chance Lipshutz"
+        T testimonial-1_text [14]: "Partner"
+       T testimonial-1_text [14]: "Covestro"
+      I "Button" -> Button / type=secondary, state=rest (2028:2133) 48x48 {"Icon right":true,"Icon left":false,"Label":false,"Text":"Button text","type":"secondary","state":"rest"}
+    I "Testimonial 3" -> Testimonial 1 (2063:4554) 440x325 {}
+      T testimonial-1_text [16]: "HumAIn is my go-to source to find high-quality talent I can't find elsewhere. I've been very impressed with the breadth and depth of talent they have been able to deliver."
+      IMG testimonial-1_img 241d91572021888f9386b447a9482990f810a9de.png 48x48
+         T testimonial-1_text [20]: "Jocelyn Westervelt"
+         T testimonial-1_text [14]: "Chief Operations Officer"
+        T testimonial-1_text [14]: "Covestro"
+       I "Button" -> Button / type=secondary, state=rest (2028:2133) 48x48 {"Icon right":true,"Icon left":false,"Label":false,"Text":"Button text","type":"secondary","state":"rest"}
+     IMG content-testimonials_img a333b0f9cc987c09727cf6a1a8997f6b5192a5bf.png 277x394
+   I "Testimonial 3" -> Testimonial 1 (2063:4554) 440x301 {}
+     T testimonial-1_text [16]: "With the pressure on and millions watching, HumAIn delivered the talent and expertise needed to launch a brand-new fan engagement platform."
+     IMG testimonial-1_img 63a78dd67e117f9d2bf6ebaa60f9d994dd21ffa6.png 48x48
+        T testimonial-1_text [20]: "Marcus Levin"
+        T testimonial-1_text [14]: "VP, Product and Technology"
+       T testimonial-1_text [14]: "GOOGLE"
+      I "Button" -> Button / type=secondary, state=rest (2028:2133) 48x48 {"Icon right":true,"Icon left":false,"Label":false,"Text":"Button text","type":"secondary","state":"rest"}
+ I "Button" -> Button / type=primary, state=rest (2028:2123) 189x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"See all clients","type":"primary","state":"rest"}
+   T button_text [18]: "See all clients"
+  I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}

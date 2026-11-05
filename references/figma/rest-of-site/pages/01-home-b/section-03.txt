@@ -1,0 +1,16 @@
+# Frame 592 (2710:48617) 1512x810
+I "Frame 592" -> Content / 4 UBRS / device=desktop (2233:4245) 1512x810 {"device":"desktop"}
+   T content-4-ubrs_text [16]: "The risk"
+   T content-4-ubrs_title [60]: "One wrong hire costs more than a year of fees."
+   I "Prop 2" -> Card / Service / type=default (2041:11259) 440x226 {"type":"default"}
+    I "Google icons" -> Google icons / type=schedule-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2710:56139) 48x48 {"type":"schedule-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T Pre-Qualified Specialists [24]: "A wrong hire surfaces late."
+     T Ready before you need them. Continuously identified, benchmarked, and assessed. [16]: "By the time the schedule slips, you have lost months you cannot recover."
+    I "Prop 3" -> Card / Service / type=default (2041:11259) 440x263 {"type":"default"}
+     I "Google icons" -> Google icons / type=project-controls-strategy (2063:4454) 48x48 {"type":"project-controls-strategy"}
+      T Pre-Qualified Specialists [24]: "The process runs through HR."
+      T Ready before you need them. Continuously identified, benchmarked, and assessed. [16]: "Your project needs someone now, and the intake takes weeks."
+    I "Prop 4" -> Card / Service / type=default (2041:11259) 440x226 {"type":"default"}
+     I "Google icons" -> Google icons / type=person-search-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2045:11310) 48x48 {"type":"person-search-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+      T Pre-Qualified Specialists [24]: "A CV says little about behaviour."
+      T Ready before you need them. Continuously identified, benchmarked, and assessed. [16]: "Real capability shows under pressure, and paper never shows that."

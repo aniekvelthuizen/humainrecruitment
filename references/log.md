@@ -323,3 +323,11 @@
 
 ## 2026-11-05 — Split Content Visual, Score Chart, Step List closed — Aniek Velthuizen with Claude
 - Owner tested on staging (Project Delivery Experts) and approved; merged to main. No change on the site since the 2026-11-03 publish. Still open on that page: the Figma sections above the two blocks are not built.
+
+## 2026-11-05 — Rest of the site built and composed — Aniek Velthuizen with Claude
+- All components from Figma's `Components` section and all 15 pages are on staging (humain-dev.webflow.io), as orchestrated subagents: plan `references/plans/2026-11-05-rest-of-site.md`, rules `references/plans/2026-11-05-agent-brief.md`. Large footer and old-homepage tabs stay out (owner).
+- New: Page Header, Sticky Steps Plain + Process Step, Stage Slider, Card Grid, Facts Row, Values Grid, Pricing Row, Stagger Gradient, Form Section; from the CMS Team Grid, Team Fan, Cases Grid, Fee List, FAQ List, Opportunity List, Opportunity Detail, Opportunity Row, Vacancy List. Collections Opportunities, Cases, Rates, FAQ, Team.
+- Card titles on Card Primary, Profile and Opportunity are plain text with a fixed H3. Form error state moved to `Global | Custom Code`. Webflow publishes variant-scoped `::before`/`::after` as an empty `:where()`: use the embed (`decisions/site.md`).
+- Designer pass done in one step (Claude in Chrome): 8 list components, conditions, file inputs, folders, Allowed components (`references/designer-queue.md`).
+- Reviews: `references/audit/2026-11-05-phase-1.md`, `-phase-2.md`, `-phase-4.md`, `-phase-6.md`; regression scripts clean on Home. Not checked: Safari, real touch devices, a real form submission or upload.
+- Owner list: `references/audit/2026-11-05-owner-list.md`. Not live; staging only.

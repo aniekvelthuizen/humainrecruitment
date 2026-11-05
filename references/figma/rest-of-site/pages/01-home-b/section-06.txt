@@ -1,0 +1,33 @@
+# Content / Services desktop (2710:48619) 1512x1190
+I "Content / Services desktop" -> Content / Services desktop / type=expertise (2710:56984) 1512x1190 {"type":"expertise"}
+  T content-services-desktop_text [16]: "Expertise"
+  T content-services-desktop_title [60]: "Six disciplines. \nOne standard."
+    I "Prop 2" -> Card / Service / type=discipline (2710:56919) 440x194 {"type":"discipline"}
+       T Project Director [24]: "Project Director"
+       T Leads delivery and owns the outcome of the project. [16]: "Leads delivery and owns the outcome of the project."
+     I "Button" -> Button / type=tertiary, state=rest (2028:2153) 59x32 {"Icon right":true,"Icon left":false,"Label":true,"Text":"View","type":"tertiary","state":"rest"}
+    I "Prop 3" -> Card / Service / type=discipline (2710:56919) 440x194 {"type":"discipline"}
+       T Project Director [24]: "Project Controls Manager"
+       T Leads delivery and owns the outcome of the project. [16]: "Builds the control framework and keeps the project predictable."
+     I "Button" -> Button / type=tertiary, state=rest (2028:2153) 59x32 {"Icon right":true,"Icon left":false,"Label":true,"Text":"View","type":"tertiary","state":"rest"}
+    I "Prop 4" -> Card / Service / type=discipline (2710:56919) 440x194 {"type":"discipline"}
+       T Project Director [24]: "Cost Controller"
+       T Leads delivery and owns the outcome of the project. [16]: "Guards the budget through accurate forecasting and variance analysis."
+     I "Button" -> Button / type=tertiary, state=rest (2028:2153) 59x32 {"Icon right":true,"Icon left":false,"Label":true,"Text":"View","type":"tertiary","state":"rest"}
+    T content-services-desktop_title [36]: "HumAIn is my go-to source to find high-quality talent "
+      T content-services-desktop_text [20]: "Lisette"
+      T content-services-desktop_text [14]: "Chief Operations Officer"
+     T content-services-desktop_text [14]: "Ingeniva"
+    IMG content-services-desktop_img c1d475f0217719c2cebc305544201d7ade783a72.png 598x398
+    I "Prop 2" -> Card / Service / type=discipline (2710:56919) 440x194 {"type":"discipline"}
+       T Project Director [24]: "Planner / Scheduler"
+       T Leads delivery and owns the outcome of the project. [16]: "Builds and maintains the integrated schedule and its dependencies."
+     I "Button" -> Button / type=tertiary, state=rest (2028:2153) 59x32 {"Icon right":true,"Icon left":false,"Label":true,"Text":"View","type":"tertiary","state":"rest"}
+    I "Prop 3" -> Card / Service / type=discipline (2710:56919) 440x194 {"type":"discipline"}
+       T Project Director [24]: "Change Manager"
+       T Leads delivery and owns the outcome of the project. [16]: "Manages scope change and keeps risk visible and priced."
+     I "Button" -> Button / type=tertiary, state=rest (2028:2153) 59x32 {"Icon right":true,"Icon left":false,"Label":true,"Text":"View","type":"tertiary","state":"rest"}
+    I "Prop 4" -> Card / Service / type=discipline (2710:56919) 440x194 {"type":"discipline"}
+       T Project Director [24]: "Document Control"
+       T Leads delivery and owns the outcome of the project. [16]: "Keeps project information accurate, traceable and available."
+     I "Button" -> Button / type=tertiary, state=rest (2028:2153) 59x32 {"Icon right":true,"Icon left":false,"Label":true,"Text":"View","type":"tertiary","state":"rest"}

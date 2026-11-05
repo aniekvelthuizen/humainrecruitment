@@ -1,0 +1,11 @@
+# Frame 681 (2292:29100) 1512x582
+I "Frame 681" -> content-cta / device=desktop (2236:5447) 1512x582 {"device":"desktop"}
+   IMG content-cta_img 76a4149fd50154ab11ea334dd8669590c6ee529c.png 692x390
+    T content-cta_title [48]: "Send us your requirement."
+    T content-cta_text [20]: "A 30-minute call is all it takes to get a shortlist moving."
+     I "Button" -> Button / type=primary, state=rest (2028:2123) 216x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Start with a brief","type":"primary","state":"rest"}
+       T button_text [18]: "Start with a brief"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+     I "Button" -> Button / type=secondary-white, state=rest (2028:2143) 166x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Contact us","type":"secondary-white","state":"rest"}
+       T button_text [18]: "Contact us"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}

@@ -1,0 +1,25 @@
+# Frame 682 (2444:34733) 1512x851
+I "Frame 682" -> Content / Team / Property 1=Team (2444:34732) 1512x851 
+   T content-team_text [16]: "Team"
+   T content-team_title [60]: "The people behind HumAIn"
+   T content-team_text [20]: "Recruiters and project-controls specialists, backed by an engineering team."
+  I "Frame 693" -> Card / Profile / type=person (2292:8775) 315x459 {"type":"person"}
+   IMG Frame 689 c5c81e31b0d6758f160186c18b489a58ae50be13.png 315x459
+    T Floyd [24]: "Floyd"
+    T Founder & Managing Director [16]: "Founder & Managing Director"
+    T 20+ years in international project recruitment. [16]: "20+ years in international project recruitment."
+  I "Frame 694" -> Card / Profile / type=person (2292:8775) 315x459 {"type":"person"}
+   IMG Frame 689 799de28be29e6e0b69a5f299b2eb0f3bc771b04b.png 315x459
+    T Floyd [24]: "Name"
+    T Founder & Managing Director [16]: "Head of Delivery"
+    T 20+ years in international project recruitment. [16]: "Leads sourcing and client delivery teams."
+  I "Frame 695" -> Card / Profile / type=person (2292:8775) 315x459 {"type":"person"}
+   IMG Frame 689 7e12097ca01b75674d9595f4bb6530ef0e0bbf5c.png 315x459
+    T Floyd [24]: "Name"
+    T Founder & Managing Director [16]: "Lead Recruiter — Controls"
+    T 20+ years in international project recruitment. [16]: "Specialises in cost, planning and risk roles."
+  I "Frame 696" -> Card / Profile / type=person (2292:8775) 315x459 {"type":"person"}
+   IMG Frame 689 ffcfefd1679148ddd16eb81de266b4ec54218cc1.png 315x459
+    T Floyd [24]: "Name"
+    T Founder & Managing Director [16]: "Head of Platform"
+    T 20+ years in international project recruitment. [16]: "Owns the AI sourcing & benchmarking engine."

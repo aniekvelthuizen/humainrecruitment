@@ -3,63 +3,85 @@
   "id": "824b76d0-0ddb-5ed5-8ae6-09771aaa568a",
   "name": "Button Main",
   "group": "Button",
-  "instanceCount": 117,
+  "instanceCount": 182,
   "props": [
    {
-    "id": "09c7e3c3-ab2b-fd29-e9c5-1cf5593e84b9",
-    "name": "Text",
-    "type": "textContent",
-    "group": "Button"
-   },
-   {
-    "id": "7a270cd6-1eda-e05c-e2c6-afb653d5a2da",
-    "name": "Link",
-    "type": "link",
-    "group": "Button"
-   },
-   {
     "id": "59dad94d-02cf-903d-918f-aeb4aab17371",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "group": "Button",
+    "defaultValue": "base"
    },
    {
-    "id": "66fc8413-5709-4af3-4fa6-3e493d878056",
-    "name": "Visibility",
-    "type": "boolean",
-    "group": "Button"
-   },
-   {
-    "id": "e85fd3cf-b68a-383b-33eb-53fbbed4eba4",
-    "name": "Icon Visibility",
-    "type": "boolean",
-    "group": "Icon"
+    "id": "09c7e3c3-ab2b-fd29-e9c5-1cf5593e84b9",
+    "type": "textContent",
+    "name": "Text",
+    "group": "Button",
+    "defaultValue": "Button Text"
    },
    {
     "id": "b120c579-21b3-f3f5-8c6f-c9c79077c295",
-    "name": "Clickable Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Clickable Visibility",
+    "group": "Settings",
+    "tooltip": "Hide the link when used inside a card to prevent duplicated links",
+    "defaultValue": true
+   },
+   {
+    "id": "7a270cd6-1eda-e05c-e2c6-afb653d5a2da",
+    "type": "link",
+    "name": "Link",
+    "group": "Button",
+    "defaultValue": {
+     "mode": "url",
+     "to": "#"
+    }
+   },
+   {
+    "id": "b39c5421-a5df-f702-6598-aee1e9b283c0",
+    "type": "variant",
+    "name": "Icon",
+    "group": "Icon",
+    "defaultValue": "base"
+   },
+   {
+    "id": "e85fd3cf-b68a-383b-33eb-53fbbed4eba4",
+    "type": "boolean",
+    "name": "Icon Visibility",
+    "group": "Icon",
+    "defaultValue": true
    },
    {
     "id": "ca21525e-e135-452b-f247-ea0390a2a221",
-    "name": "Button Type",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Button Type",
+    "group": "Settings",
+    "tooltip": "Set submit when used inside a form",
+    "defaultValue": true
+   },
+   {
+    "id": "66fc8413-5709-4af3-4fa6-3e493d878056",
+    "type": "boolean",
+    "name": "Visibility",
+    "group": "Button",
+    "defaultValue": true
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Primary"
+    "name": "Primary",
+    "isSelected": true
    },
    {
     "id": "e85564cd-af30-a478-692b-71732aefb3ab",
-    "name": "Secondary"
+    "name": "Secondary",
+    "isSelected": false
    },
    {
     "id": "625d5df4-ad91-f7dc-9e2f-2e69f3fd7400",
-    "name": "Tertiary"
+    "name": "Tertiary",
+    "isSelected": false
    }
   ]
  },
@@ -71,55 +93,68 @@
   "props": [
    {
     "id": "83194c10-6941-a340-0227-973a3bb8ad35",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "defaultValue": "base"
    },
    {
     "id": "74fae974-c32d-5212-8652-f1082eff2330",
+    "type": "textContent",
     "name": "Text",
-    "type": "textContent"
+    "tooltip": "This is the text screen readers will read when focused on the button.",
+    "defaultValue": "Play"
    },
    {
     "id": "7f9b9d9a-f1e9-5c66-9bb2-26df9a33cb17",
+    "type": "link",
     "name": "Link",
-    "type": "link"
+    "defaultValue": {
+     "mode": "url",
+     "to": "#"
+    }
    },
    {
     "id": "6de59664-d8d2-b96c-c871-a9aaf766790b",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "92472fef-fd6c-4630-b999-d97bf281530d",
-    "name": "Classes",
     "type": "string",
-    "group": "Settings"
+    "name": "Classes",
+    "group": "Settings",
+    "defaultValue": " "
    },
    {
     "id": "7f7f5770-a323-9d6c-3fc6-12c5c5278e69",
-    "name": "Pressed",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Pressed",
+    "group": "Settings",
+    "defaultValue": false
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Primary / Medium"
+    "name": "Primary / Medium",
+    "isSelected": true
    },
    {
     "id": "ab355ea0-b722-2f23-3507-f0290f710e57",
-    "name": "Secondary / Medium"
+    "name": "Secondary / Medium",
+    "isSelected": false
    },
    {
     "id": "d47b6b31-1410-4123-4cbe-47472b6d649d",
-    "name": "Primary / Large"
+    "name": "Primary / Large",
+    "isSelected": false
    },
    {
     "id": "3970b3f9-2fa6-52d8-098a-2260caaa12bb",
-    "name": "Secondary / Large"
+    "name": "Secondary / Large",
+    "isSelected": false
    }
   ]
  },
@@ -127,36 +162,41 @@
   "id": "973d4f8d-b9e1-3d51-3d84-7a9efc662c8f",
   "name": "Icon Arrow",
   "group": "SVG",
-  "instanceCount": 41,
+  "instanceCount": 10,
   "props": [
    {
     "id": "4110ac31-e9af-1f67-65b2-82b1b11ed64c",
+    "type": "variant",
     "name": "Direction",
-    "type": "variant"
+    "defaultValue": "base"
    },
    {
     "id": "96878d32-3666-b957-6720-453c31d8d5dd",
+    "type": "variant",
     "name": "Size",
-    "type": "variant"
+    "defaultValue": "base"
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Right"
+    "name": "Right",
+    "isSelected": true
    },
    {
     "id": "dc469724-71a3-14e1-b5d5-1294323411ce",
-    "name": "Left"
+    "name": "Left",
+    "isSelected": false
    },
    {
     "id": "b18a0fcd-abb0-329e-47f4-79155dd8284a",
-    "name": "Top"
+    "name": "Top",
+    "isSelected": false
    },
    {
     "id": "caa8b8e9-e8ec-6eb3-4526-30f19f7326f5",
-    "name": "Bottom"
+    "name": "Bottom",
+    "isSelected": false
    }
   ]
  },
@@ -164,31 +204,35 @@
   "id": "9d2d1e50-103f-d310-b352-08c163e684c9",
   "name": "Icon Arrow Full",
   "group": "SVG",
-  "instanceCount": 18,
+  "instanceCount": 15,
   "props": [
    {
     "id": "8b583aae-a6cd-af1d-7e88-12f339a69761",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "defaultValue": "base"
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Right"
+    "name": "Right",
+    "isSelected": true
    },
    {
     "id": "1c3f028b-116e-d4eb-db7f-8484491bbf2e",
-    "name": "Left"
+    "name": "Left",
+    "isSelected": false
    },
    {
     "id": "a0a4b133-f837-5340-6c98-04b1518f150d",
-    "name": "Top"
+    "name": "Top",
+    "isSelected": false
    },
    {
     "id": "5939aeba-b378-ecdc-f1bc-b6970df2be03",
-    "name": "Bottom"
+    "name": "Bottom",
+    "isSelected": false
    }
   ]
  },
@@ -196,13 +240,14 @@
   "id": "0b86bbf2-83a2-3b1b-20e3-c535c15c9297",
   "name": "Global Guides",
   "group": "Global",
-  "instanceCount": 5,
+  "description": "Gives a visual preview of grid guides. Helpful for checking alignment between sections.",
+  "instanceCount": 8,
   "props": [],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -210,30 +255,36 @@
   "id": "3c7de3d6-58ac-a383-9a7c-2b483f0bf7d0",
   "name": "Typography Eyebrow",
   "group": "Typography",
-  "instanceCount": 14,
+  "instanceCount": 17,
   "props": [
    {
     "id": "d2a49f5c-3268-a975-733f-44e8cda24efd",
+    "type": "richText",
     "name": "Text",
-    "type": "richText"
+    "defaultValue": {
+     "innerText": "Eyebrow Text Here"
+    }
    },
    {
     "id": "9e59a499-6fa0-a087-fd32-b8b3be12bfc9",
+    "type": "number",
     "name": "Margin Bottom",
-    "type": "number"
+    "tooltip": "Use -1 for the default spacing",
+    "defaultValue": -1
    },
    {
     "id": "1a3c854a-26b7-1631-f35e-3366f6bce451",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -241,13 +292,14 @@
   "id": "625bf776-8cb1-fa1f-a6f9-6b7f7ac28358",
   "name": "Starter JS",
   "group": "Utility",
+  "description": "Unlink before use. Include as last child within component. Replace 'yourFunctionName' in the embed with a name that is specific to your component.",
   "instanceCount": 0,
   "props": [],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -255,13 +307,14 @@
   "id": "fc7624c6-48da-610a-1f56-983264845d2d",
   "name": "Starter CSS",
   "group": "Utility",
+  "description": "Unlink before use. Include as first child within component.",
   "instanceCount": 0,
   "props": [],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -269,43 +322,59 @@
   "id": "0254e612-9509-0757-3332-f6be61ca6889",
   "name": "Clickable",
   "group": "Utility",
-  "instanceCount": 172,
+  "description": "This makes its whole parent clickable & can be a link tag or a button tag if the url field is left empty. It has hidden text that is readable by screen readers and has a z-index: 0 only in designer view to keep any relative content clickable.",
+  "instanceCount": 275,
   "props": [
    {
     "id": "d5d5b95f-f511-ea4d-05da-3fb36c2061e0",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "defaultValue": "base"
    },
    {
     "id": "18d8382b-6caa-397d-3f7a-8f1ca802696b",
+    "type": "boolean",
     "name": "Visibility",
-    "type": "boolean"
+    "defaultValue": true
    },
    {
     "id": "15bde6c1-9aad-9550-ed91-b6cb1afa189a",
+    "type": "textContent",
     "name": "Screen Reader Text",
-    "type": "textContent"
+    "tooltip": "What screen readers announce when focused on link or button"
    },
    {
     "id": "b6016031-ccf9-3efa-2abc-f13bad7d1f38",
+    "type": "link",
     "name": "Link",
-    "type": "link"
+    "defaultValue": {
+     "mode": "url",
+     "to": "#"
+    }
    },
    {
     "id": "94a960fe-48a4-6c76-b2ae-2339da2798af",
+    "type": "boolean",
     "name": "Button Type",
-    "type": "boolean"
+    "tooltip": "Set submit when used inside a form",
+    "defaultValue": true
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Focus Ring Outside"
+    "name": "Focus Ring Outside",
+    "isSelected": true
+   },
+   {
+    "id": "95904e04-d761-f0a9-3656-e461d83acfa8",
+    "name": "Focus Ring Theme",
+    "isSelected": false
    },
    {
     "id": "b793638f-e9bb-2cea-c2d9-27bf5a1f754a",
-    "name": "Focus Ring Inside"
+    "name": "Focus Ring Inside",
+    "isSelected": false
    }
   ]
  },
@@ -313,39 +382,45 @@
   "id": "6988c782-9d84-f50b-88aa-e362ff213d22",
   "name": "Space Switcher",
   "group": "Variant Switcher",
-  "instanceCount": 32,
+  "instanceCount": 44,
   "props": [
    {
     "id": "6c14af0c-7d93-c86c-7e8c-95100cb81cf2",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "defaultValue": "60a7ad7d-02b0-6682-95a5-2218e6fd1490"
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "None"
+    "name": "None",
+    "isSelected": true
    },
    {
     "id": "41fc0c0a-cac3-53c9-9802-6a916e3fb342",
-    "name": "Even"
+    "name": "Even",
+    "isSelected": false
    },
    {
     "id": "d422cbd0-f212-c815-68df-63414354c21d",
-    "name": "Small"
+    "name": "Small",
+    "isSelected": false
    },
    {
     "id": "60a7ad7d-02b0-6682-95a5-2218e6fd1490",
-    "name": "Main"
+    "name": "Main",
+    "isSelected": false
    },
    {
     "id": "8cc18b30-4618-8767-0111-f6abfe45aaa3",
-    "name": "Large"
+    "name": "Large",
+    "isSelected": false
    },
    {
     "id": "e359d2da-de19-6775-b122-3e06f925f39e",
-    "name": "Page Top"
+    "name": "Page Top",
+    "isSelected": false
    }
   ]
  },
@@ -353,67 +428,85 @@
   "id": "9cd849af-5c85-da69-3983-2e49dba72900",
   "name": "Section",
   "group": "Wrapper",
-  "instanceCount": 16,
+  "instanceCount": 22,
   "props": [
    {
+    "id": "24982ecd-5d84-7da2-51be-28ae59f56b24",
+    "type": "slot",
+    "name": "Container Slot"
+   },
+   {
+    "id": "de409115-6a00-c117-7f0f-5cd7a6c049bb",
+    "type": "slot",
+    "name": "Slot"
+   },
+   {
     "id": "6166da2b-1990-56f2-4fdf-c8abca528b1a",
+    "type": "variant",
     "name": "Theme",
-    "type": "variant"
+    "defaultValue": "base"
    },
    {
     "id": "47f89cc1-c690-5052-46fc-da934938cc33",
+    "type": "variant",
     "name": "Padding Top",
-    "type": "variant"
+    "defaultValue": "60a7ad7d-02b0-6682-95a5-2218e6fd1490"
    },
    {
     "id": "a89be678-5d7d-c6e9-66ad-7d4b011b0f05",
+    "type": "variant",
     "name": "Padding Bottom",
-    "type": "variant"
+    "defaultValue": "60a7ad7d-02b0-6682-95a5-2218e6fd1490"
    },
    {
     "id": "e11a8e7d-d0b1-7cfa-8be3-f4c0d404190a",
+    "type": "boolean",
     "name": "Height",
-    "type": "boolean"
+    "defaultValue": true
    },
    {
     "id": "9f3da66c-9c7a-c3b7-0696-363a71705ac3",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "e5afb29e-4dce-71a6-b87b-5dd0bbe1f905",
-    "name": "ID",
     "type": "id",
-    "group": "Settings"
+    "name": "ID",
+    "group": "Settings",
+    "tooltip": "ID used for anchor linking to section",
+    "defaultValue": ""
    },
    {
     "id": "9d50b922-a467-b677-e600-e0ddd6cd80aa",
-    "name": "Container Classes",
     "type": "string",
-    "group": "Settings"
+    "name": "Container Classes",
+    "group": "Settings",
+    "defaultValue": " "
    }
-  ],
-  "slots": [
-   "Container Slot",
-   "Slot"
   ],
   "variants": [
    {
     "id": "base",
-    "name": "Inherit"
+    "name": "Inherit",
+    "isSelected": true
    },
    {
     "id": "4b83425a-ad2e-5ba3-86e8-b873d9cdc82a",
-    "name": "Light"
+    "name": "Light",
+    "isSelected": false
    },
    {
     "id": "b9b3ef95-b878-3cc3-ad92-f524d65596b0",
-    "name": "Dark"
+    "name": "Dark",
+    "isSelected": false
    },
    {
     "id": "514db4f8-f551-0224-14f2-f1fdb99b51c9",
-    "name": "Brand"
+    "name": "Brand",
+    "isSelected": false
    }
   ]
  },
@@ -421,38 +514,47 @@
   "id": "ef0597e2-9ec1-c890-ceba-f61926a36e78",
   "name": "Button Wrapper",
   "group": "Wrapper",
-  "instanceCount": 32,
+  "instanceCount": 34,
   "props": [
    {
+    "id": "5503b39a-b07b-297d-1969-a16235fbdfea",
+    "type": "slot",
+    "name": "Slot"
+   },
+   {
     "id": "7df7d82c-6a46-6aec-72ba-6f235900fa32",
+    "type": "number",
     "name": "Margin Top",
-    "type": "number"
+    "tooltip": "Use -1 for the default spacing",
+    "defaultValue": -1
    },
    {
     "id": "d56cf1bf-62db-07e6-3acb-32718b1f5284",
+    "type": "number",
     "name": "Margin Bottom",
-    "type": "number"
+    "tooltip": "Use -1 for the default spacing",
+    "defaultValue": 0
    },
    {
     "id": "bf91e063-a216-37b7-6186-9efb801c30ad",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "cad31ee9-6406-593c-2394-2b5e0909f6f6",
-    "name": "Style",
     "type": "string",
-    "group": "Settings"
+    "name": "Style",
+    "group": "Settings",
+    "defaultValue": ""
    }
-  ],
-  "slots": [
-   "Slot"
   ],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -460,97 +562,121 @@
   "id": "b9130e59-aa4e-07ef-a822-eda529bf75ca",
   "name": "Typography Heading",
   "group": "Typography",
-  "instanceCount": 38,
+  "instanceCount": 100,
   "props": [
    {
     "id": "76273518-63b5-3848-40cd-8ad0c6067d18",
+    "type": "richText",
     "name": "Text",
-    "type": "richText"
+    "defaultValue": {
+     "innerText": "Lorem ipsum dolor sit amet elit"
+    }
    },
    {
     "id": "9b073cb9-c1b8-2c4e-1e1e-fa98533256a4",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "defaultValue": "433d40c6-c261-f13f-c899-61d2cadf150f"
    },
    {
     "id": "6e104e9a-c0db-75d4-b6ed-a8614fa001cf",
+    "type": "number",
     "name": "Max Width",
-    "type": "number"
+    "tooltip": "Set \"-1\" for no max width",
+    "defaultValue": 20
    },
    {
     "id": "1dcaba84-994f-84a1-6ff1-e3c544755081",
+    "type": "number",
     "name": "Margin Bottom",
-    "type": "number"
+    "tooltip": "Use -1 for the default spacing",
+    "defaultValue": -1
    },
    {
     "id": "c650d0a5-0017-e184-2f2e-c71f2375a4f3",
+    "type": "boolean",
     "name": "Tidy Text",
-    "type": "boolean"
+    "tooltip": "Evens out the length of each line so your text looks balanced instead of leaving short, stranded words at the end.",
+    "defaultValue": true
    },
    {
     "id": "9d920bb5-f84e-74c0-c4f0-8d7f56abd9bf",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "b72bea2f-087a-342a-cc7a-67402f0a7a6f",
-    "name": "Classes",
     "type": "string",
-    "group": "Settings"
+    "name": "Classes",
+    "group": "Settings",
+    "defaultValue": ""
    },
    {
     "id": "a18975a8-4357-ae6b-a114-3f7af38b8de1",
-    "name": "ID",
     "type": "id",
-    "group": "Settings"
+    "name": "ID",
+    "group": "Settings",
+    "tooltip": "Use when labeling a section by the heading's content with aria-labelledby=\"heading-id\"",
+    "defaultValue": ""
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Inherit"
+    "name": "Inherit",
+    "isSelected": true
    },
    {
     "id": "3fbd0d32-5675-1947-73b3-abb16c1fb986",
-    "name": "Text Small"
+    "name": "Text Small",
+    "isSelected": false
    },
    {
     "id": "9027c8ae-1ba5-f702-ea6e-4a1c3fca9f64",
-    "name": "Text Main"
+    "name": "Text Main",
+    "isSelected": false
    },
    {
     "id": "74a3180a-e505-b452-032f-599c8e557249",
-    "name": "Text Large"
+    "name": "Text Large",
+    "isSelected": false
    },
    {
     "id": "823daff2-fd84-8da0-4ed1-92a39b869ad0",
-    "name": "H6"
+    "name": "H6",
+    "isSelected": false
    },
    {
     "id": "326a9562-3263-06da-e8ef-16981fd70f1c",
-    "name": "H5"
+    "name": "H5",
+    "isSelected": false
    },
    {
     "id": "7c7eb163-b37d-338d-2369-5eae7e6d458a",
-    "name": "H4"
+    "name": "H4",
+    "isSelected": false
    },
    {
     "id": "701c4b6c-37cf-de59-d80d-80a1822c4994",
-    "name": "H3"
+    "name": "H3",
+    "isSelected": false
    },
    {
     "id": "433d40c6-c261-f13f-c899-61d2cadf150f",
-    "name": "H2"
+    "name": "H2",
+    "isSelected": false
    },
    {
     "id": "792802b6-ccdb-f982-5023-5fa970cf03d0",
-    "name": "H1"
+    "name": "H1",
+    "isSelected": false
    },
    {
     "id": "41c609dc-9c80-9eef-75df-03bf0eea00b4",
-    "name": "Display"
+    "name": "Display",
+    "isSelected": false
    }
   ]
  },
@@ -558,91 +684,113 @@
   "id": "99ca2e6d-2b82-bb82-6df8-bd4932d075bd",
   "name": "Typography Paragraph",
   "group": "Typography",
-  "instanceCount": 37,
+  "instanceCount": 139,
   "props": [
    {
     "id": "1a52e4bc-3278-9643-82b1-cfa819b4570a",
+    "type": "richText",
     "name": "Text",
-    "type": "richText"
+    "defaultValue": {
+     "innerText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    }
    },
    {
     "id": "4e33e904-7e2a-6463-0eef-5719f108b265",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "defaultValue": "base"
    },
    {
     "id": "dc33d40a-caf1-af84-9353-0335b7334cd6",
+    "type": "number",
     "name": "Max Width",
-    "type": "number"
+    "tooltip": "Set \"-1\" for no max width",
+    "defaultValue": 60
    },
    {
     "id": "00256c80-0145-8704-9f72-b40164d463fa",
+    "type": "number",
     "name": "Margin Bottom",
-    "type": "number"
+    "tooltip": "Use -1 for the default spacing",
+    "defaultValue": -1
    },
    {
     "id": "29dd0d7e-be38-1daa-dbea-a4a17f4109da",
+    "type": "boolean",
     "name": "Tidy Text",
-    "type": "boolean"
+    "tooltip": "Evens out the length of each line so your text looks balanced instead of leaving short, stranded words at the end.",
+    "defaultValue": true
    },
    {
     "id": "b0f07643-4c27-1148-6e4e-4bf856ee3ba7",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "5cd4b3be-c550-c496-0668-aee9824c2dd5",
-    "name": "Classes",
     "type": "string",
-    "group": "Settings"
+    "name": "Classes",
+    "group": "Settings",
+    "defaultValue": ""
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Inherit"
+    "name": "Inherit",
+    "isSelected": true
    },
    {
     "id": "4099173f-f581-635c-a5fe-cf4a89c62029",
-    "name": "Text Small"
+    "name": "Text Small",
+    "isSelected": false
    },
    {
     "id": "61d538b2-709c-eb7a-4258-8c0890dc07fc",
-    "name": "Text Main"
+    "name": "Text Main",
+    "isSelected": false
    },
    {
     "id": "fdb8e663-01e0-aae6-13eb-e6dfca16b689",
-    "name": "Text Large"
+    "name": "Text Large",
+    "isSelected": false
    },
    {
     "id": "b8555f10-fa7d-e9ba-e262-f9aa44c27c1c",
-    "name": "H6"
+    "name": "H6",
+    "isSelected": false
    },
    {
     "id": "5c484503-e2a0-ac99-680d-56013d859efa",
-    "name": "H5"
+    "name": "H5",
+    "isSelected": false
    },
    {
     "id": "93e8af18-8413-e3ac-0442-72629401a3db",
-    "name": "H4"
+    "name": "H4",
+    "isSelected": false
    },
    {
     "id": "ad482112-9d0e-852c-0f6e-ba1e5a3aee59",
-    "name": "H3"
+    "name": "H3",
+    "isSelected": false
    },
    {
     "id": "efb733fe-da83-69a3-ea4a-b3f2f89d0389",
-    "name": "H2"
+    "name": "H2",
+    "isSelected": false
    },
    {
     "id": "3ddfa43e-abc1-422e-6e6d-23dfb7da71f3",
-    "name": "H1"
+    "name": "H1",
+    "isSelected": false
    },
    {
     "id": "eee56f15-d7ce-d101-2f8c-83b3bbd55d4a",
-    "name": "Display"
+    "name": "Display",
+    "isSelected": false
    }
   ]
  },
@@ -654,37 +802,44 @@
   "props": [
    {
     "id": "4a40534b-0b41-efea-4a8a-02c6d39a9ae2",
-    "name": "Visibility",
-    "type": "visibility"
+    "type": "visibility",
+    "name": "Visibility"
    },
    {
     "id": "55ce36d0-6387-6d72-c58c-8663f0b9bad0",
+    "type": "string",
     "name": "Classes",
-    "type": "string"
+    "defaultValue": " "
    },
    {
     "id": "79f22146-ea0c-858d-f929-54abc72a2419",
+    "type": "string",
     "name": "Style",
-    "type": "string"
+    "defaultValue": ""
    },
    {
     "id": "2ac1c436-173e-7b5c-9c8c-faff425035d6",
+    "type": "string",
     "name": "Attribute Name",
-    "type": "string"
+    "defaultValue": ""
    },
    {
     "id": "0488e49e-60f2-4ef0-e1ed-cedb36483e1c",
+    "type": "string",
     "name": "Attribute Value",
-    "type": "string"
+    "defaultValue": ""
+   },
+   {
+    "id": "fb202fd6-73cc-6a50-139e-c82bfa9f1e5c",
+    "type": "slot",
+    "name": "Slot content"
    }
-  ],
-  "slots": [
-   "Slot content"
   ],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -692,62 +847,74 @@
   "id": "39a856c3-f857-7c26-307f-b73399139f4a",
   "name": "Check UI",
   "group": "Miscellaneous",
+  "description": "Used inside Form Checkbox and Form Radio Components",
   "instanceCount": 5,
   "props": [
    {
     "id": "eb369db0-57be-e32b-56b0-e0d9a9d9292e",
+    "type": "boolean",
     "name": "Type",
-    "type": "boolean"
+    "defaultValue": true
    },
    {
     "id": "ad5a1c11-5be0-7b8e-c294-b05d018ff3d0",
+    "type": "textContent",
     "name": "Label",
-    "type": "textContent"
+    "tooltip": "Field label shown on page",
+    "defaultValue": "I agree to the terms"
    },
    {
     "id": "74ea5995-c144-55d6-8764-af19c5f8ab6a",
+    "type": "string",
     "name": "Name",
-    "type": "string"
+    "defaultValue": ""
    },
    {
     "id": "ff445480-32d9-18a7-adc8-b6c46609bf85",
+    "type": "string",
     "name": "Value",
-    "type": "string"
+    "defaultValue": "Value"
    },
    {
     "id": "5de02a9e-4c0a-1553-819f-4bd0fb13e279",
+    "type": "boolean",
     "name": "Required",
-    "type": "boolean"
+    "defaultValue": false
    },
    {
     "id": "e36d554e-9517-2ca1-2cc1-9b827f9598bc",
+    "type": "boolean",
     "name": "Checked",
-    "type": "boolean"
+    "defaultValue": false
    },
    {
     "id": "ceea9dae-1800-0050-d339-30851b2ad651",
-    "name": "Variant",
     "type": "variant",
-    "group": "Settings"
+    "name": "Variant",
+    "group": "Settings",
+    "defaultValue": "base"
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Checkbox"
+    "name": "Checkbox",
+    "isSelected": true
    },
    {
     "id": "05ff758a-80c8-4344-649b-149f87b62cc9",
-    "name": "Toggle"
+    "name": "Toggle",
+    "isSelected": false
    },
    {
     "id": "e3978449-fef8-38a6-7f29-4e26ca4f8f53",
-    "name": "Button"
+    "name": "Button",
+    "isSelected": false
    },
    {
     "id": "c18f59b8-0331-9f8c-c106-08818710cc20",
-    "name": "Radio"
+    "name": "Radio",
+    "isSelected": false
    }
   ]
  },
@@ -759,59 +926,71 @@
   "props": [
    {
     "id": "c3778b1c-e9f9-7ed9-b7c9-f987a278ddb0",
+    "type": "textContent",
     "name": "Label",
-    "type": "textContent"
+    "tooltip": "Label text shown on page",
+    "defaultValue": "Label"
    },
    {
     "id": "207e711d-e904-8e4c-bb4c-1b2c0cce9aab",
+    "type": "string",
     "name": "Group Name",
-    "type": "string"
+    "tooltip": "All radios within the same group should use the same group name",
+    "defaultValue": "Group Name"
    },
    {
     "id": "82500bdf-2775-56fa-f63d-4e461782f210",
+    "type": "boolean",
     "name": "Required",
-    "type": "boolean"
+    "defaultValue": false
    },
    {
     "id": "793b639e-b4e5-b1e3-a686-b2f0d43eb299",
+    "type": "boolean",
     "name": "Checked",
-    "type": "boolean"
+    "defaultValue": false
    },
    {
     "id": "51c4c59b-1108-cb29-21c7-430147ed6656",
+    "type": "variant",
     "name": "Style",
-    "type": "variant"
+    "defaultValue": "c18f59b8-0331-9f8c-c106-08818710cc20"
    },
    {
     "id": "60faa401-72b4-1e29-a82a-724be14e77dc",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "d6834db7-1bc2-49fc-602e-afbce8e72fa7",
-    "name": "Role",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Role",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "f40177ce-d565-49b5-cf28-b289c9b9bf6c",
-    "name": "Submission Value",
     "type": "string",
-    "group": "Settings"
+    "name": "Submission Value",
+    "group": "Settings",
+    "tooltip": "Uses label text if this field is not set",
+    "defaultValue": ""
    },
    {
     "id": "731df109-e5e2-67fc-44a6-93053bc16a41",
-    "name": "Classes",
     "type": "string",
-    "group": "Settings"
+    "name": "Classes",
+    "group": "Settings",
+    "defaultValue": ""
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -823,51 +1002,61 @@
   "props": [
    {
     "id": "939b4cec-eeb4-435c-14dd-3d7c4bfab190",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "defaultValue": "e85a4315-14bc-e5ef-0d3e-2c8c9ed7d2f1"
+   },
+   {
+    "id": "866010cb-5349-f64f-0842-0eef196ae8de",
+    "type": "slot",
+    "name": "Slot"
    },
    {
     "id": "94ad3988-544b-a395-b44a-e89b531c663a",
-    "name": "Visibility",
     "type": "visibility",
+    "name": "Visibility",
     "group": "Settings"
    },
    {
     "id": "f42dc87e-16bd-9c7c-dd22-249769aac817",
-    "name": "Classes",
     "type": "string",
-    "group": "Settings"
+    "name": "Classes",
+    "group": "Settings",
+    "defaultValue": " "
    },
    {
     "id": "04e224f1-5f0b-a3a9-8e01-149915ca9ee8",
-    "name": "Style",
     "type": "string",
-    "group": "Settings"
+    "name": "Style",
+    "group": "Settings",
+    "defaultValue": ""
    }
-  ],
-  "slots": [
-   "Slot"
   ],
   "variants": [
    {
     "id": "base",
-    "name": "Inherit"
+    "name": "Inherit",
+    "isSelected": true
    },
    {
     "id": "e85a4315-14bc-e5ef-0d3e-2c8c9ed7d2f1",
-    "name": "Left"
+    "name": "Left",
+    "isSelected": false
    },
    {
     "id": "4f54624e-ceb1-0769-a238-365d5e220b70",
-    "name": "Center"
+    "name": "Center",
+    "isSelected": false
    },
    {
     "id": "405b6754-709a-81de-bf32-f0102c0c7aa2",
-    "name": "Right"
+    "name": "Right",
+    "isSelected": false
    },
    {
     "id": "e98b91c1-a8bf-9b6d-a119-f398c9e3f46b",
-    "name": "Center Mobile"
+    "name": "Center Mobile",
+    "isSelected": false
    }
   ]
  },
@@ -875,82 +1064,104 @@
   "id": "7d7894ee-390d-226d-3dd5-a9571f6c41f5",
   "name": "Grid",
   "group": "Wrapper",
-  "instanceCount": 8,
+  "instanceCount": 7,
   "props": [
    {
+    "id": "c3b7766e-0674-72dd-5622-802f6d269447",
+    "type": "slot",
+    "name": "Slot"
+   },
+   {
     "id": "25c90e4e-020d-1ddc-99a3-9b4abbbc508c",
+    "type": "number",
     "name": "Large Screen",
-    "type": "number"
+    "tooltip": "Column count on large screens and autofit / autofill max column count",
+    "defaultValue": 2
    },
    {
     "id": "3a931472-3bfd-9bb7-aac0-6c944a5b2275",
+    "type": "number",
     "name": "Medium Screen",
-    "type": "number"
+    "tooltip": "0 will inherit from the previous screen size",
+    "defaultValue": 1
    },
    {
     "id": "e3b256f0-ce29-e4ec-b236-4969b12d77d2",
+    "type": "number",
     "name": "Small Screen",
-    "type": "number"
+    "tooltip": "0 will inherit from the previous screen size",
+    "defaultValue": 0
    },
    {
     "id": "6bd48592-c348-efdc-42e9-e51457233889",
+    "type": "number",
     "name": "Smallest Screen",
-    "type": "number"
+    "tooltip": "0 will inherit from the previous screen size",
+    "defaultValue": 0
    },
    {
     "id": "36a4b313-b94e-f017-af51-587183913231",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "defaultValue": "base"
    },
    {
     "id": "9096b999-5678-82ea-54ac-a9a75692666d",
+    "type": "number",
     "name": "Minimum Column Size",
-    "type": "number"
+    "tooltip": "For autofit or autofill grids",
+    "defaultValue": 12
    },
    {
     "id": "3689ffff-f111-058d-a84d-3411da37d359",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "627d0b36-e41d-bf6f-08c8-00ecca7226d1",
-    "name": "Classes",
     "type": "string",
-    "group": "Settings"
+    "name": "Classes",
+    "group": "Settings",
+    "defaultValue": " "
    },
    {
     "id": "f53522d8-67ed-0b1a-c605-0f66c49a1990",
-    "name": "Style",
     "type": "string",
-    "group": "Settings"
+    "name": "Style",
+    "group": "Settings",
+    "defaultValue": ""
    },
    {
     "id": "6e2de88a-9a3d-df15-8e6e-14fc195c0c6f",
-    "name": "Role",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Role",
+    "group": "Settings",
+    "tooltip": "Set to List when containing a list of items",
+    "defaultValue": true
    }
-  ],
-  "slots": [
-   "Slot"
   ],
   "variants": [
    {
     "id": "base",
-    "name": "Default"
+    "name": "Default",
+    "isSelected": true
    },
    {
     "id": "b8204f2e-764d-b421-dc96-2c59d3054271",
-    "name": "Self Contained"
+    "name": "Self Contained",
+    "isSelected": false
    },
    {
     "id": "d58244bf-290f-ebb3-3aa0-352d6fa8e84f",
-    "name": "Autofit"
+    "name": "Autofit",
+    "isSelected": false
    },
    {
     "id": "129319ac-a2cd-9e88-2ebd-a33b4bb85fa5",
-    "name": "Autofill"
+    "name": "Autofill",
+    "isSelected": false
    }
   ]
  },
@@ -958,61 +1169,74 @@
   "id": "40c5c120-b67e-abdf-9581-f3dc48d20a3c",
   "name": "Form Fieldset",
   "group": "Form",
+  "description": "Holds Checkbox or Radio elements",
   "instanceCount": 6,
   "props": [
    {
     "id": "eb5cbdc2-04db-ea24-498f-7ea1421a920b",
+    "type": "textContent",
     "name": "Text",
-    "type": "textContent"
+    "defaultValue": "Legend"
+   },
+   {
+    "id": "2b9f6538-be8d-aa16-06d1-41b46c3c3810",
+    "type": "slot",
+    "name": "Slot"
    },
    {
     "id": "760b4142-154a-2f18-170c-ea9506d7d5ff",
+    "type": "variant",
     "name": "Layout",
-    "type": "variant"
+    "defaultValue": "base"
    },
    {
     "id": "73d54d34-13fb-ff06-c431-075189d94142",
+    "type": "variant",
     "name": "Legend Style",
-    "type": "variant"
+    "defaultValue": "base"
    },
    {
     "id": "bd710964-8a52-ee93-c544-b42c99ea8c12",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "e4e27a05-32e5-10bc-9928-e450660645d3",
-    "name": "Slot Role",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Slot Role",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "20e08b85-1743-b125-6ac4-37715a887598",
-    "name": "Classes",
     "type": "string",
-    "group": "Settings"
+    "name": "Classes",
+    "group": "Settings",
+    "defaultValue": " "
    }
-  ],
-  "slots": [
-   "Slot"
   ],
   "variants": [
    {
     "id": "base",
-    "name": "Flex Vertical"
+    "name": "Flex Vertical",
+    "isSelected": true
    },
    {
     "id": "ccbf2df7-16d0-30d7-0afb-0df098785596",
-    "name": "Flex Horizontal"
+    "name": "Flex Horizontal",
+    "isSelected": false
    },
    {
     "id": "14c165fa-7397-02ef-8dc0-6e307b6c980f",
-    "name": "Grid 2 Column"
+    "name": "Grid 2 Column",
+    "isSelected": false
    },
    {
     "id": "5fdb0361-c340-58a0-00d3-b0e0b17257ad",
-    "name": "Grid 3 Column"
+    "name": "Grid 3 Column",
+    "isSelected": false
    }
   ]
  },
@@ -1024,48 +1248,57 @@
   "props": [
    {
     "id": "29486535-f71e-3cf8-c511-96438f6ff049",
+    "type": "textContent",
     "name": "Label",
-    "type": "textContent"
+    "tooltip": "Field label shown on page",
+    "defaultValue": "Label"
    },
    {
     "id": "1f83b501-41d1-9c43-cb16-19fe40874ef5",
+    "type": "string",
     "name": "Placeholder",
-    "type": "string"
+    "defaultValue": ""
    },
    {
     "id": "9cfc80d8-c99d-34d4-0f41-cac99acd5870",
+    "type": "string",
     "name": "Default Value",
-    "type": "string"
+    "defaultValue": ""
    },
    {
     "id": "a31662ff-2e3b-3cf4-b381-e3f0157e0396",
+    "type": "boolean",
     "name": "Required",
-    "type": "boolean"
+    "defaultValue": false
    },
    {
     "id": "f993a75a-7920-e5b9-af3c-38fc2ad0d702",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "60100283-15ad-1ee4-6d92-9bcc9a78445c",
-    "name": "Submission Name",
     "type": "string",
-    "group": "Settings"
+    "name": "Submission Name",
+    "group": "Settings",
+    "tooltip": "Uses label text if this field is not set",
+    "defaultValue": ""
    },
    {
     "id": "7c930ef1-908c-f43a-1917-9f5f04635940",
-    "name": "Label Variant",
     "type": "variant",
-    "group": "Settings"
+    "name": "Label Variant",
+    "group": "Settings",
+    "defaultValue": "base"
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -1077,46 +1310,57 @@
   "props": [
    {
     "id": "580f89f8-d7d9-297b-76d6-b2f3a9398ec0",
+    "type": "textContent",
     "name": "Label",
-    "type": "textContent"
+    "tooltip": "Field label shown on page",
+    "defaultValue": "Label"
    },
    {
     "id": "19760056-e2b7-e34b-bfc8-aed3d045cf83",
+    "type": "boolean",
     "name": "Required",
-    "type": "boolean"
+    "defaultValue": false
+   },
+   {
+    "id": "2f8c4ce9-a6af-ec59-9729-a73d53ff0a7c",
+    "type": "slot",
+    "name": "Slot"
    },
    {
     "id": "36e008d8-3c7a-a16c-754d-55dbf03ea419",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "b9828001-e520-8b3f-fb69-2b9f347c92aa",
-    "name": "Allow Multi Select",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Allow Multi Select",
+    "group": "Settings",
+    "defaultValue": false
    },
    {
     "id": "814dbc83-9f33-e81c-f818-124e97690661",
-    "name": "Submission Name",
     "type": "string",
-    "group": "Settings"
+    "name": "Submission Name",
+    "group": "Settings",
+    "tooltip": "Uses label text if this field is not set",
+    "defaultValue": ""
    },
    {
     "id": "e2cc703f-e6ac-f763-4dc2-7e49321f0bca",
-    "name": "Label Style",
     "type": "variant",
-    "group": "Settings"
+    "name": "Label Style",
+    "group": "Settings",
+    "defaultValue": "base"
    }
-  ],
-  "slots": [
-   "Slot"
   ],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -1124,41 +1368,48 @@
   "id": "68b8d65e-3c81-d6e1-09cb-3761bfce6da6",
   "name": "Form Select Option",
   "group": "Form",
+  "description": "This goes inside a select element.",
   "instanceCount": 29,
   "props": [
    {
     "id": "2311c220-55b4-a91b-7b32-4dda52b26add",
+    "type": "textContent",
     "name": "Text",
-    "type": "textContent"
+    "tooltip": "What the user sees",
+    "defaultValue": "Option 1"
    },
    {
     "id": "26e443cb-54b4-662a-6d9c-37203b93a1b9",
+    "type": "string",
     "name": "Value",
-    "type": "string"
+    "tooltip": "What shows in form submissions",
+    "defaultValue": "Option 1"
    },
    {
     "id": "5323f3f5-be69-e700-e84d-dbd124b10de9",
+    "type": "boolean",
     "name": "Selected by default",
-    "type": "boolean"
+    "defaultValue": false
    },
    {
     "id": "a2e5dc4e-0677-d11c-829d-b675e3b61013",
-    "name": "Visibility",
     "type": "visibility",
+    "name": "Visibility",
     "group": "Settings"
    },
    {
     "id": "cf0eda83-38ea-d975-4702-53bdd356bbf5",
-    "name": "Hidden",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Hidden",
+    "group": "Settings",
+    "defaultValue": false
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -1166,25 +1417,26 @@
   "id": "24cdd811-e229-c75c-a667-4d66445404ee",
   "name": "Typography Tag",
   "group": "Typography",
-  "instanceCount": 1,
+  "instanceCount": 0,
   "props": [
    {
     "id": "9432753d-2788-e263-1be6-29717324d813",
+    "type": "textContent",
     "name": "Text",
-    "type": "textContent"
+    "defaultValue": "Text Block"
    },
    {
     "id": "0273a003-89b4-fd48-6f81-c3192895243d",
-    "name": "Visibility",
     "type": "visibility",
+    "name": "Visibility",
     "group": "Settings"
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -1192,26 +1444,28 @@
   "id": "15027333-0d6a-85d7-af87-d03add4a968b",
   "name": "Logo",
   "group": "SVG",
-  "instanceCount": 16,
+  "instanceCount": 18,
   "props": [
    {
     "id": "b34a83d0-1f71-1e4d-081a-3c0399ba4617",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "0ff2ad81-5ea1-423a-8e87-ea34bde68c87",
-    "name": "Style",
     "type": "string",
-    "group": "Settings"
+    "name": "Style",
+    "group": "Settings",
+    "defaultValue": ""
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -1223,88 +1477,104 @@
   "props": [
    {
     "id": "c45b9448-2901-afe1-0ec8-a792f6e5246d",
+    "type": "string",
     "name": "Url",
-    "type": "string"
+    "defaultValue": "https://timothyricks.us.getafile.online/background-video"
    },
    {
     "id": "cb04b5a4-b14f-2fbc-8493-1024e8b57998",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "defaultValue": "0b00a75a-35ba-66c2-fce0-21c117d62ce0"
    },
    {
     "id": "45096b64-f59c-f34d-f54f-4c2728379a37",
+    "type": "boolean",
     "name": "Video Fit",
-    "type": "boolean"
+    "defaultValue": true
    },
    {
     "id": "a9ff7800-92ca-b6a1-3e4c-57613bbd81e4",
+    "type": "boolean",
     "name": "Corners",
-    "type": "boolean"
+    "defaultValue": true
    },
    {
     "id": "04d0c530-79ca-fe8a-7ee0-4458c7af3ae2",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "7c1235c2-1310-bd03-2bca-4d41501d3164",
-    "name": "Autoplay",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Autoplay",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "d0206cc9-fc4e-53ac-136d-7da1ad8fdb16",
-    "name": "Loop",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Loop",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "1b1ce351-38a5-0d67-fb11-270eec438e23",
-    "name": "Muted",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Muted",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "56239ef6-ce12-a95e-5abf-3b3e29c25aae",
-    "name": "Style",
     "type": "string",
-    "group": "Settings"
+    "name": "Style",
+    "group": "Settings",
+    "defaultValue": ""
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Wide 2 / 1"
+    "name": "Wide 2 / 1",
+    "isSelected": true
    },
    {
     "id": "0b00a75a-35ba-66c2-fce0-21c117d62ce0",
-    "name": "Wide 16 / 9"
+    "name": "Wide 16 / 9",
+    "isSelected": false
    },
    {
     "id": "a9490bed-5b56-7b46-8413-993d16d77e88",
-    "name": "Wide 3 / 2"
+    "name": "Wide 3 / 2",
+    "isSelected": false
    },
    {
     "id": "8157ca33-45d5-df1a-bd25-894298c8e117",
-    "name": "Wide 5 / 4"
+    "name": "Wide 5 / 4",
+    "isSelected": false
    },
    {
     "id": "ec7f8a9f-99ac-b5a5-140b-730400a62670",
-    "name": "Square 1 / 1"
+    "name": "Square 1 / 1",
+    "isSelected": false
    },
    {
     "id": "f3f45657-6a73-93f9-25db-a80af56ad72a",
-    "name": "Tall 4 / 5"
+    "name": "Tall 4 / 5",
+    "isSelected": false
    },
    {
     "id": "c3ccbb6c-6fa7-1113-0f2e-08b77dffca68",
-    "name": "Tall 2 / 3"
+    "name": "Tall 2 / 3",
+    "isSelected": false
    },
    {
     "id": "db26956a-7929-76af-05b0-02971cbab2f4",
-    "name": "Cover"
+    "name": "Cover",
+    "isSelected": false
    }
   ]
  },
@@ -1312,41 +1582,45 @@
   "id": "219abfbb-a07c-d448-250c-6bdda9f81a14",
   "name": "Media Overlay",
   "group": "Visual",
-  "instanceCount": 3,
+  "instanceCount": 6,
   "props": [
    {
     "id": "f938dc12-5258-40e7-07d5-701551ddbb9e",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "defaultValue": "base"
    },
    {
     "id": "00f06371-55ed-02ff-9922-cc11bdafdaa8",
-    "name": "Visibility",
     "type": "visibility",
+    "name": "Visibility",
     "group": "Settings"
    },
    {
     "id": "93fd6e68-07f9-3f28-8aed-3ed32bd83b95",
-    "name": "Overlay Strength",
     "type": "number",
-    "group": "Settings"
+    "name": "Overlay Strength",
+    "group": "Settings",
+    "defaultValue": 70
    },
    {
     "id": "5e9b4d1c-cbaa-21c4-0722-865e2e4f36d4",
-    "name": "Classes",
     "type": "string",
-    "group": "Settings"
+    "name": "Classes",
+    "group": "Settings",
+    "defaultValue": " "
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    },
    {
     "id": "9653c0cc-21fc-fb82-1373-c98b1644e5a8",
-    "name": "Gradient"
+    "name": "Gradient",
+    "isSelected": false
    }
   ]
  },
@@ -1358,22 +1632,24 @@
   "props": [
    {
     "id": "ccd3f838-07f6-c116-8703-1505980fe7a9",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "ddab0158-e1d2-8fe1-ee3c-0850fd28b732",
-    "name": "Classes",
     "type": "string",
-    "group": "Settings"
+    "name": "Classes",
+    "group": "Settings",
+    "defaultValue": " "
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -1381,103 +1657,126 @@
   "id": "baf5fd6d-12da-786a-f303-1676d3e63f09",
   "name": "Slider",
   "group": "Interactive",
-  "instanceCount": 2,
+  "instanceCount": 3,
   "props": [
    {
     "id": "9af63a7f-5438-6cac-b11b-9a5465fdccfd",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "defaultValue": "base"
    },
    {
     "id": "80445a8d-8311-88ce-48d5-71b012bd1aea",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "f8cc216e-c84b-7fbf-2e30-6b8910de0796",
-    "name": "Classes",
     "type": "string",
-    "group": "Settings"
+    "name": "Classes",
+    "group": "Settings",
+    "defaultValue": " "
    },
    {
     "id": "df9bd427-a960-8c5b-e1ed-335acfba877f",
-    "name": "Scroll in Designer",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Scroll in Designer",
+    "group": "Settings",
+    "tooltip": "Allows for scrolling the slides in designer for easy content editing",
+    "defaultValue": false
    },
    {
     "id": "694ed6ee-39f1-ac84-a6e3-bc19df6c8f26",
-    "name": "Controls",
     "type": "visibility",
+    "name": "Controls",
     "group": "Settings"
    },
    {
     "id": "a064bccc-cfc3-6c68-10ad-8db51a53be7d",
-    "name": "Follow Finger",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Follow Finger",
+    "group": "Settings",
+    "tooltip": "If set to false, slider will be swipeable but not draggable.",
+    "defaultValue": true
    },
    {
     "id": "6fd69ced-9d79-d311-d542-7ec3717f4f7d",
-    "name": "Free Mode",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Free Mode",
+    "group": "Settings",
+    "tooltip": "If set to true, slides will not snap into place on release.",
+    "defaultValue": false
    },
    {
     "id": "d4cb2d0c-bf08-6800-1230-9951c1ada087",
-    "name": "Mousewheel",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Mousewheel",
+    "group": "Settings",
+    "tooltip": "If set to false, the slider can't be controlled by the keyboard arrow keys.",
+    "defaultValue": true
    },
    {
     "id": "4be66041-2bdd-884d-32b9-7ef8db896812",
-    "name": "Slide To Clicked Slide",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Slide To Clicked Slide",
+    "group": "Settings",
+    "tooltip": "If set to true, the slide will move into view when we click on it.",
+    "defaultValue": false
    },
    {
     "id": "20c759b2-8100-71da-0080-060940a04e60",
-    "name": "Speed",
     "type": "number",
-    "group": "Settings"
+    "name": "Speed",
+    "group": "Settings",
+    "defaultValue": 600
+   },
+   {
+    "id": "d2fcf392-f8ff-3b6d-8abf-96d3ae3860ae",
+    "type": "slot",
+    "name": "Slot"
    },
    {
     "id": "f0ec339f-0173-33ce-1c48-e9a2ece49be4",
+    "type": "number",
     "name": "Large Screen",
-    "type": "number"
+    "defaultValue": 4
    },
    {
     "id": "3940bcec-d58b-0707-8e7c-4041456fa8d5",
+    "type": "number",
     "name": "Medium Screen",
-    "type": "number"
+    "defaultValue": 3
    },
    {
     "id": "20bc321d-7115-f3c7-8b1f-7bc075ddff2d",
+    "type": "number",
     "name": "Small Screen",
-    "type": "number"
+    "defaultValue": 2
    },
    {
     "id": "7f583aec-68ef-3b84-dc2b-bf2eaa999809",
+    "type": "number",
     "name": "Extra Small Screen",
-    "type": "number"
+    "defaultValue": 1
    }
-  ],
-  "slots": [
-   "Slot"
   ],
   "variants": [
    {
     "id": "base",
-    "name": "Overflow Visible"
+    "name": "Overflow Visible",
+    "isSelected": true
    },
    {
     "id": "bfb8c45c-dbfa-13cc-2dfc-0c02a34504e4",
-    "name": "Overflow Hidden"
+    "name": "Overflow Hidden",
+    "isSelected": false
    },
    {
     "id": "b8ee48da-439e-7156-5d2e-5b4f080e200e",
-    "name": "Crop Left"
+    "name": "Crop Left",
+    "isSelected": false
    }
   ]
  },
@@ -1485,13 +1784,13 @@
   "id": "a861c456-45ea-fe24-ab52-c63303a056e4",
   "name": "Global Styles",
   "group": "Global",
-  "instanceCount": 7,
+  "instanceCount": 10,
   "props": [],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -1499,87 +1798,210 @@
   "id": "7941d471-12eb-22ce-6420-784e5a3b04f8",
   "name": "Card Primary",
   "group": "Card",
-  "instanceCount": 33,
+  "instanceCount": 30,
   "props": [
    {
-    "id": "b8c139c4-494c-1c28-d827-f525248870f8",
-    "name": "Heading",
-    "type": "textContent"
+    "id": "3268fbae-5eb0-86b0-534a-c61ed07d8106",
+    "type": "variant",
+    "name": "Variant",
+    "defaultValue": "base"
    },
    {
-    "id": "f424ce58-1432-4493-b296-c51cf6c8c7dc",
-    "name": "Paragraph",
-    "type": "richText"
+    "id": "a11a4224-62ed-99b0-41b0-b6202759ecbe",
+    "type": "textContent",
+    "name": "Eyebrow",
+    "group": "Content",
+    "tooltip": "Small label above the title (Stage: the stage label; Process: the step number in the ring)"
+   },
+   {
+    "id": "759193e6-9022-acfc-4264-09d0cd13b9f7",
+    "type": "boolean",
+    "name": "Eyebrow Visibility",
+    "group": "Content",
+    "defaultValue": true
+   },
+   {
+    "id": "34da04d6-8f34-97e5-e0f1-70e3f8c3b10e",
+    "type": "richText",
+    "name": "Title",
+    "group": "Content",
+    "defaultValue": {
+     "innerText": "Pre-Qualified Specialists"
+    }
+   },
+   {
+    "id": "16c8e09b-96e1-3bf7-4b2f-864a306d3993",
+    "type": "richText",
+    "name": "Text",
+    "group": "Content",
+    "defaultValue": {
+     "innerText": "Ready before you need them. Continuously identified, benchmarked, and assessed."
+    }
+   },
+   {
+    "id": "1a7c898f-6a77-7f09-c10c-d0831732500c",
+    "type": "variant",
+    "name": "Icon",
+    "group": "Visual",
+    "defaultValue": "845bdc6b-3e2c-39ca-9c61-748ac5bd1eb3"
+   },
+   {
+    "id": "7444b084-210e-fef6-5664-09fca19423af",
+    "type": "boolean",
+    "name": "Icon Visibility",
+    "group": "Visual",
+    "defaultValue": true
+   },
+   {
+    "id": "40e35670-e770-511b-0f4d-fa2baca90da2",
+    "type": "textContent",
+    "name": "Badge Text",
+    "group": "Badge",
+    "defaultValue": "Day 1"
+   },
+   {
+    "id": "b5762cbc-fbd2-ca8b-6191-f616c67722a1",
+    "type": "textContent",
+    "name": "List Title",
+    "group": "List",
+    "defaultValue": "Assessed"
+   },
+   {
+    "id": "69275fbf-d24b-72ad-690e-78cad47155a4",
+    "type": "slot",
+    "name": "Slot",
+    "group": "List"
+   },
+   {
+    "id": "a6cf33da-d012-0fc5-4cf7-c47ac03a8f11",
+    "type": "boolean",
+    "name": "List Visibility",
+    "group": "List",
+    "defaultValue": true
+   },
+   {
+    "id": "2bb183ec-0f1a-96e1-d1d6-e8db834c646d",
+    "type": "textContent",
+    "name": "Value Label",
+    "group": "Value"
+   },
+   {
+    "id": "b9a525ca-f717-1b25-92a0-5f2089fd0813",
+    "type": "richText",
+    "name": "Value",
+    "group": "Value",
+    "defaultValue": {
+     "innerText": "30 min"
+    }
    },
    {
     "id": "d6ec5f4b-bc21-16ee-a743-2a2cd22a2a03",
+    "type": "textContent",
     "name": "Button Text",
-    "type": "textContent"
-   },
-   {
-    "id": "d28cd67e-0ce6-aed7-1ad3-14a0dba51742",
-    "name": "Screen Reader Text",
-    "type": "textContent"
+    "group": "Button",
+    "tooltip": "Text of the card's button (Tertiary, or the Pricing button); the button only shows when the card has a link",
+    "defaultValue": "View"
    },
    {
     "id": "bb5c3a86-443d-2095-8245-be4cf5e00804",
+    "type": "link",
     "name": "Link",
-    "type": "link"
+    "group": "Link",
+    "defaultValue": {
+     "mode": "url"
+    }
    },
    {
-    "id": "cd6a4e4d-d941-f45c-4c16-55d03bbc56ab",
-    "name": "Image",
-    "type": "image"
-   },
-   {
-    "id": "3268fbae-5eb0-86b0-534a-c61ed07d8106",
-    "name": "Card Type",
-    "type": "variant"
+    "id": "d28cd67e-0ce6-aed7-1ad3-14a0dba51742",
+    "type": "textContent",
+    "name": "Screen Reader Text",
+    "group": "Link",
+    "tooltip": "Fill in (with the link) to make the whole card clickable; empty = not clickable"
    },
    {
     "id": "e7862449-c03e-69d2-af91-c97200e56c38",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "2db94e97-9459-09a8-daf6-426cdd8f40fa",
-    "name": "Role",
     "type": "boolean",
-    "group": "Settings"
-   },
-   {
-    "id": "fa373c18-6bd1-301c-ab09-b6353299d47d",
-    "name": "Heading Tag",
-    "type": "headingTag",
-    "group": "Settings"
+    "name": "Role",
+    "group": "Settings",
+    "tooltip": "Set to List Item when used in a list",
+    "defaultValue": true
    },
    {
     "id": "1b8b3666-cb54-f635-bae3-5985204eeab8",
-    "name": "Wrapper Classes",
     "type": "string",
-    "group": "Settings"
+    "name": "Wrapper Classes",
+    "group": "Settings",
+    "defaultValue": ""
    },
    {
     "id": "7219df95-2957-5773-7b20-71db6256f364",
-    "name": "Wrapper Style",
     "type": "string",
-    "group": "Settings"
+    "name": "Wrapper Style",
+    "group": "Settings",
+    "defaultValue": ""
+   },
+   {
+    "id": "037d9d30-d775-b08c-9b66-32bebc5f384a",
+    "type": "boolean",
+    "name": "Badge Visibility",
+    "group": "Badge",
+    "defaultValue": true
+   },
+   {
+    "id": "c44ca5a0-14bb-192d-454e-0c0486952689",
+    "type": "boolean",
+    "name": "Button Icon Visibility",
+    "group": "Button",
+    "defaultValue": false
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Default"
+    "name": "Service",
+    "isSelected": true
    },
    {
-    "id": "51efa20c-c7be-48fe-973a-11367f19d622",
-    "name": "Cover"
+    "id": "12b6b2e8-8886-3f97-ab63-4701a5d34841",
+    "name": "Discipline",
+    "isSelected": false
    },
    {
-    "id": "da648fa9-bbba-c8cb-e549-1d22cb8af97b",
-    "name": "Stacked"
+    "id": "f468fc62-f377-72da-d066-559d6d1a8ba5",
+    "name": "Glass",
+    "isSelected": false
+   },
+   {
+    "id": "602f31cd-406d-3bd0-672e-76bb8cb85dcf",
+    "name": "Process",
+    "isSelected": false
+   },
+   {
+    "id": "3be1dc22-578f-78f3-1b88-693087bd06ca",
+    "name": "Step",
+    "isSelected": false
+   },
+   {
+    "id": "ac964b19-9c2a-86e8-bae8-4aa1fb724559",
+    "name": "Stage",
+    "isSelected": false
+   },
+   {
+    "id": "1955d209-3754-0beb-0aff-0aa281947bd3",
+    "name": "Stat",
+    "isSelected": false
+   },
+   {
+    "id": "e456e423-cfdc-f648-97ad-b114e2932acd",
+    "name": "Pricing",
+    "isSelected": false
    }
   ]
  },
@@ -1587,58 +2009,71 @@
   "id": "bb0688d1-65b6-14b6-81e5-21e2cd39bbd0",
   "name": "Button Arrow",
   "group": "Button",
-  "instanceCount": 13,
+  "instanceCount": 15,
   "props": [
    {
     "id": "bb0688d1-65b6-14b6-81e5-21e2cd39bbd9",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "defaultValue": "base"
    },
    {
     "id": "6f1d1fca-ea56-0081-e679-5bd3fb54baf2",
+    "type": "variant",
     "name": "Arrow Direction",
-    "type": "variant"
+    "defaultValue": "base"
    },
    {
     "id": "74fae974-c32d-5212-8652-f1082eff2330",
+    "type": "textContent",
     "name": "Text",
-    "type": "textContent"
+    "tooltip": "This is the text screen readers will read when focused on the button.",
+    "defaultValue": "Next"
    },
    {
     "id": "7f9b9d9a-f1e9-5c66-9bb2-26df9a33cb17",
+    "type": "link",
     "name": "Link",
-    "type": "link"
+    "defaultValue": {
+     "mode": "url",
+     "to": "#"
+    }
    },
    {
     "id": "4c3eb646-8455-4cc6-6d88-adeb71f7a1b0",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "ad0ebc7c-5c1f-13b7-ce62-8aea3b64ee0c",
-    "name": "Classes",
     "type": "string",
-    "group": "Settings"
+    "name": "Classes",
+    "group": "Settings",
+    "defaultValue": ""
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Primary / Medium"
+    "name": "Primary / Medium",
+    "isSelected": true
    },
    {
     "id": "bb0688d1-65b6-14b6-81e5-21e2cd39bbda",
-    "name": "Secondary / Medium"
+    "name": "Secondary / Medium",
+    "isSelected": false
    },
    {
     "id": "d7d7e32c-ac47-de0c-eb2d-07f19dfa19d2",
-    "name": "Primary / Large"
+    "name": "Primary / Large",
+    "isSelected": false
    },
    {
     "id": "6c75cae2-0734-1bbf-191f-bfe0f8ed1797",
-    "name": "Secondary / Large"
+    "name": "Secondary / Large",
+    "isSelected": false
    }
   ]
  },
@@ -1649,60 +2084,76 @@
   "instanceCount": 1,
   "props": [
    {
+    "id": "6aafb57b-8892-cc29-bfa2-610faf201329",
+    "type": "slot",
+    "name": "Slot"
+   },
+   {
     "id": "0cada543-340c-4238-5197-d443d1c12060",
+    "type": "boolean",
     "name": "Preview Content",
-    "type": "boolean"
+    "tooltip": "Set to true to preview all accordion content in designer view.",
+    "defaultValue": true
    },
    {
     "id": "179b7836-cd91-d637-6b1e-235c243e3774",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "e79125f9-cd38-453c-38bd-817ca040bd18",
-    "name": "Classes",
     "type": "string",
-    "group": "Settings"
+    "name": "Classes",
+    "group": "Settings",
+    "defaultValue": ""
    },
    {
     "id": "4868b674-2f4a-22c1-d988-43d096b8fe78",
-    "name": "Style",
     "type": "string",
-    "group": "Settings"
+    "name": "Style",
+    "group": "Settings",
+    "defaultValue": ""
    },
    {
     "id": "714120ad-6349-81b4-b28a-866a0e573819",
-    "name": "Close Previous",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Close Previous",
+    "group": "Settings",
+    "tooltip": "If set to true, currently open accordion will close when new one opens.",
+    "defaultValue": true
    },
    {
     "id": "b284cdc4-bc82-c93e-0b0e-6e31305c2a19",
-    "name": "Close On Second Click",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Close On Second Click",
+    "group": "Settings",
+    "tooltip": "If set to true, accordion will close the second time we click on it.",
+    "defaultValue": true
    },
    {
     "id": "778d62c0-181a-c5d7-cf69-556a3ccf8484",
-    "name": "Open On Hover",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Open On Hover",
+    "group": "Settings",
+    "tooltip": "If set to true, accordion will open when we hover over it.",
+    "defaultValue": false
    },
    {
     "id": "b62ea76c-9df4-5724-d8d7-5479b998cba2",
-    "name": "Open By Default: Item #",
     "type": "number",
-    "group": "Settings"
+    "name": "Open By Default: Item #",
+    "group": "Settings",
+    "tooltip": "If set to 1, accordion item 1 will be opened by default.",
+    "defaultValue": 0
    }
-  ],
-  "slots": [
-   "Slot"
   ],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -1714,32 +2165,38 @@
   "props": [
    {
     "id": "c1eb0ac0-16f2-e44d-5ce4-afed40a49aa3",
+    "type": "textContent",
     "name": "Heading",
-    "type": "textContent"
+    "defaultValue": "This is some text inside of a div block."
    },
    {
     "id": "38070ead-f98f-7e58-624f-e8a4d1a76c35",
+    "type": "richText",
     "name": "Paragraph",
-    "type": "richText"
+    "defaultValue": {
+     "innerText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    }
    },
    {
     "id": "8c4b6011-a133-1488-ba57-6896b98e7c48",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "364ccc26-c7f2-88db-34d2-727bb4a02006",
-    "name": "Classes",
     "type": "string",
-    "group": "Settings"
+    "name": "Classes",
+    "group": "Settings",
+    "defaultValue": ""
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -1747,48 +2204,53 @@
   "id": "43ba6c77-0f82-87dd-2627-66c30f96fd0b",
   "name": "Nav",
   "group": "Global",
-  "instanceCount": 5,
+  "instanceCount": 9,
   "props": [
    {
     "id": "4996e232-c6bc-b649-139d-7314c61ae5e7",
+    "type": "boolean",
     "name": "Position",
-    "type": "boolean"
+    "defaultValue": false
    },
    {
     "id": "cbaa0adb-0d21-1ef7-dd07-7920d0a51c23",
+    "type": "number",
     "name": "Breakpoint",
-    "type": "number"
+    "tooltip": "Switch between the desktop and mobile nav at this screen size",
+    "defaultValue": 80
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Default"
+    "name": "Default",
+    "isSelected": true
    }
   ]
  },
  {
   "id": "f898fa14-e9c4-646a-b332-c95900470afa",
   "name": "Menu",
-  "group": "Miscellaneous",
-  "instanceCount": 10,
+  "group": "Global",
+  "instanceCount": 18,
   "props": [
    {
     "id": "ff0600e1-1d70-83b4-c673-07c1a69e7e69",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "defaultValue": "base"
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Mobile"
+    "name": "Mobile",
+    "isSelected": true
    },
    {
     "id": "23049969-09ac-2789-520b-3c6ae895bbc6",
-    "name": "Desktop"
+    "name": "Desktop",
+    "isSelected": false
    }
   ]
  },
@@ -1796,29 +2258,35 @@
   "id": "2f85113a-1fe0-0576-7e21-f2db3933ca88",
   "name": "Nav Banner",
   "group": "Miscellaneous",
-  "instanceCount": 5,
+  "instanceCount": 0,
   "props": [
    {
     "id": "c628c2a5-4df8-fb0c-9731-5ec8311da89e",
+    "type": "boolean",
     "name": "Visibility",
-    "type": "boolean"
+    "defaultValue": true
    },
    {
     "id": "62a6c03b-00f8-441b-d5d5-2f3633852b50",
+    "type": "textContent",
     "name": "Text",
-    "type": "textContent"
+    "defaultValue": "Important Update Banner"
    },
    {
     "id": "3bec8c2a-4578-8fcb-0989-11de1074c2fd",
+    "type": "link",
     "name": "Link",
-    "type": "link"
+    "defaultValue": {
+     "mode": "url",
+     "to": "#"
+    }
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -1830,47 +2298,59 @@
   "props": [
    {
     "id": "4f2f48e2-bd75-4865-bc87-b0442584b287",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "defaultValue": "base"
    },
    {
     "id": "0633dcdf-a592-b415-680f-231ccdb9057f",
+    "type": "boolean",
     "name": "Show In Designer",
-    "type": "boolean"
+    "tooltip": "If set to true, modal will be visible in designer.",
+    "defaultValue": false
    },
    {
     "id": "3d555208-de16-7789-9522-8187c304c6ac",
+    "type": "string",
     "name": "Modal ID",
-    "type": "string"
+    "tooltip": "Each modal must have a unique ID. When using a modal inside a CMS Item, use the CMS Item's slug as the ID.",
+    "defaultValue": "modal-1"
    },
    {
     "id": "1cb17819-f760-cc2a-1a1e-7536b5fe2a26",
-    "name": "Visibility",
     "type": "visibility",
+    "name": "Visibility",
     "group": "Settings"
    },
    {
     "id": "67d179d4-ce97-2b94-b884-220c7f515bbd",
-    "name": "Classes",
     "type": "string",
+    "name": "Classes",
+    "group": "Settings",
+    "defaultValue": ""
+   },
+   {
+    "id": "e14b571f-12cc-b059-83d1-1db2a1d0155c",
+    "type": "slot",
+    "name": "Slot",
     "group": "Settings"
    }
-  ],
-  "slots": [
-   "Slot"
   ],
   "variants": [
    {
     "id": "base",
-    "name": "Small"
+    "name": "Small",
+    "isSelected": true
    },
    {
     "id": "ce8c84b8-072d-28eb-fa41-e255213771e0",
-    "name": "Side Panel"
+    "name": "Side Panel",
+    "isSelected": false
    },
    {
     "id": "abed2e46-044e-db8d-e420-f41a8503c278",
-    "name": "Full Screen"
+    "name": "Full Screen",
+    "isSelected": false
    }
   ]
  },
@@ -1882,49 +2362,61 @@
   "props": [
    {
     "id": "c144d67f-2c62-4dbf-0fd8-0b6056b717eb",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "defaultValue": "base"
    },
    {
     "id": "74fae974-c32d-5212-8652-f1082eff2330",
+    "type": "textContent",
     "name": "Text",
-    "type": "textContent"
+    "tooltip": "This is the text screen readers will read when focused on the button.",
+    "defaultValue": "Close"
    },
    {
     "id": "7f9b9d9a-f1e9-5c66-9bb2-26df9a33cb17",
+    "type": "link",
     "name": "Link",
-    "type": "link"
+    "defaultValue": {
+     "mode": "url",
+     "to": "#"
+    }
    },
    {
     "id": "210b8336-94cf-3d3b-5977-29605343f914",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "ad0ebc7c-5c1f-13b7-ce62-8aea3b64ee0c",
-    "name": "Classes",
     "type": "string",
-    "group": "Settings"
+    "name": "Classes",
+    "group": "Settings",
+    "defaultValue": ""
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Primary / Medium"
+    "name": "Primary / Medium",
+    "isSelected": true
    },
    {
     "id": "c144d67f-2c62-4dbf-0fd8-0b6056b717ec",
-    "name": "Secondary / Medium"
+    "name": "Secondary / Medium",
+    "isSelected": false
    },
    {
     "id": "7198e0ca-f9f4-9662-3fe9-d7114404c9cb",
-    "name": "Primary / Large"
+    "name": "Primary / Large",
+    "isSelected": false
    },
    {
     "id": "c6d40e5e-3298-1af4-067d-37896ebd2a45",
-    "name": "Secondary / Large"
+    "name": "Secondary / Large",
+    "isSelected": false
    }
   ]
  },
@@ -1932,13 +2424,14 @@
   "id": "29394d2f-cd0c-8059-7e15-66f93814999f",
   "name": "Footer",
   "group": "Global",
-  "instanceCount": 5,
+  "description": "Site footer, same on every page (no props): edit inside the component. Links are Footer Link instances (Text + Link props). Below 768 px the columns are accordions. See decisions/components/footer.md.",
+  "instanceCount": 9,
   "props": [],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -1949,77 +2442,104 @@
   "instanceCount": 2,
   "props": [
    {
+    "id": "a116e804-f3a7-0731-dc06-24e8bbef616f",
+    "type": "slot",
+    "name": "Slot"
+   },
+   {
+    "id": "6146fed7-12df-cbd4-69be-2dfb16cff48c",
+    "type": "slot",
+    "name": "Slot"
+   },
+   {
+    "id": "6b64e0f6-25a2-3f5c-b837-287f6e11ddf0",
+    "type": "slot",
+    "name": "Slot"
+   },
+   {
     "id": "11c846b3-38dc-1b67-f86a-ccfb96f84523",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "defaultValue": "base"
    },
    {
     "id": "5de4d96a-4c27-0df6-f8fc-ff744a7a33ac",
+    "type": "boolean",
     "name": "Preview Content",
-    "type": "boolean"
+    "tooltip": "Set to true to preview all tab content in designer view.",
+    "defaultValue": false
    },
    {
     "id": "63d32a32-b1f7-59d4-f367-7802c8d5eda1",
-    "name": "Component ID",
     "type": "string",
-    "group": "Settings"
+    "name": "Component ID",
+    "group": "Settings",
+    "tooltip": "Give the component a unique ID to anchor link to it from a separate page.",
+    "defaultValue": ""
    },
    {
     "id": "01601341-41ec-ac4a-f82c-69f960209b7a",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "5440f110-97f5-4aec-0701-0053fcb1d439",
-    "name": "Controls",
     "type": "visibility",
-    "group": "Settings"
+    "name": "Controls",
+    "group": "Settings",
+    "tooltip": "Show next and previous buttons"
    },
    {
     "id": "41c5a638-6881-4747-121f-2ff99e9b4517",
-    "name": "Transition Type",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Transition Type",
+    "group": "Settings",
+    "tooltip": "If set to true, tab content will slide from side to side instead of fading out.",
+    "defaultValue": false
    },
    {
     "id": "de7733f9-7322-df5e-bf9c-dac2c0e9ba9e",
-    "name": "Autoplay",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Autoplay",
+    "group": "Settings",
+    "defaultValue": false
    },
    {
     "id": "e21a76f5-a8d1-c13c-0afd-c61566e8cb7a",
-    "name": "Loop Controls",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Loop Controls",
+    "group": "Settings",
+    "tooltip": "If true, the next button will loop instead of disabling when reaching end of list.",
+    "defaultValue": false
    },
    {
     "id": "7fd7e213-7726-badd-e26a-44e5b4ed2baf",
-    "name": "Pause On Hover",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Pause On Hover",
+    "group": "Settings",
+    "tooltip": "If set to true, the autoplay will pause whenever we hover over the component.",
+    "defaultValue": false
    },
    {
     "id": "74c75a3e-ad3a-63ec-9c6f-42694fd5016e",
-    "name": "Classes",
     "type": "string",
-    "group": "Settings"
+    "name": "Classes",
+    "group": "Settings",
+    "defaultValue": ""
    }
-  ],
-  "slots": [
-   "Slot",
-   "Slot",
-   "Slot"
   ],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    },
    {
     "id": "490ac534-1fb5-5322-5b2f-0dc20ea2f909",
-    "name": "Horizontal"
+    "name": "Horizontal",
+    "isSelected": false
    }
   ]
  },
@@ -2031,42 +2551,49 @@
   "props": [
    {
     "id": "48481d7a-05ec-85d9-d7de-daa3bc1d9fe0",
+    "type": "textContent",
     "name": "Text",
-    "type": "textContent"
+    "defaultValue": "Tab Link"
    },
    {
     "id": "1493a6b0-7e7d-f362-f1b2-cada071733a3",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "defaultValue": "base"
    },
    {
     "id": "2c7948a2-5787-ee46-58ac-cee170f3a9e8",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "30e91f91-253c-ffd9-9108-98df295aaeff",
-    "name": "Item ID",
     "type": "string",
-    "group": "Settings"
+    "name": "Item ID",
+    "group": "Settings",
+    "tooltip": "To anchor link to this item from another page, give this item a unique ID.",
+    "defaultValue": ""
    },
    {
     "id": "80ca96fd-1788-81a0-6a15-468b1e300e94",
-    "name": "Classes",
     "type": "string",
-    "group": "Settings"
+    "name": "Classes",
+    "group": "Settings",
+    "defaultValue": ""
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Link"
+    "name": "Link",
+    "isSelected": true
    },
    {
     "id": "8ffc88d1-7ba2-15f6-9b67-306f6d86c1bd",
-    "name": "Button"
+    "name": "Button",
+    "isSelected": false
    }
   ]
  },
@@ -2074,86 +2601,104 @@
   "id": "72bf430a-f112-9342-5a92-78c9db50135b",
   "name": "Typography Plain",
   "group": "Typography",
-  "instanceCount": 0,
+  "instanceCount": 289,
   "props": [
    {
     "id": "2099ba42-5340-fb8d-cff9-5e16277f414f",
+    "type": "textContent",
     "name": "Text",
-    "type": "textContent"
+    "defaultValue": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
    },
    {
     "id": "1aba392c-b3a2-33b1-9f70-9ded99367006",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "defaultValue": "base"
    },
    {
     "id": "509927e2-e5dc-dad7-dc13-9390c8f0f11e",
+    "type": "number",
     "name": "Max Width",
-    "type": "number"
+    "tooltip": "Set \"-1\" for no max width",
+    "defaultValue": -1
    },
    {
     "id": "fcaa67be-00da-f168-0d76-e693645d50ff",
+    "type": "number",
     "name": "Margin Bottom",
-    "type": "number"
+    "tooltip": "Use -1 for the default spacing",
+    "defaultValue": -1
    },
    {
     "id": "46c281d2-38fe-2646-9ef8-7cd1c43455dc",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "63f3f53a-d02c-ee59-a71e-bc1da725afd8",
-    "name": "Style",
     "type": "string",
-    "group": "Settings"
+    "name": "Style",
+    "group": "Settings",
+    "defaultValue": ""
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Inherit"
+    "name": "Inherit",
+    "isSelected": true
    },
    {
     "id": "fe6f474d-1651-566b-eeff-3c86e8cbf153",
-    "name": "Text Small"
+    "name": "Text Small",
+    "isSelected": false
    },
    {
     "id": "26cc9f23-e71c-deee-cd61-36dc24f35fae",
-    "name": "Text Main"
+    "name": "Text Main",
+    "isSelected": false
    },
    {
     "id": "c8b8ac88-1ac7-e9f6-41cc-82c548bf142d",
-    "name": "Text Large"
+    "name": "Text Large",
+    "isSelected": false
    },
    {
     "id": "47e40b0d-02af-2673-f429-546cac42dc5a",
-    "name": "H6"
+    "name": "H6",
+    "isSelected": false
    },
    {
     "id": "12e93187-f8ac-b1a1-2e50-59d85a6bf516",
-    "name": "H5"
+    "name": "H5",
+    "isSelected": false
    },
    {
     "id": "f196774e-dbfd-d1b4-1196-b3e824fc5f7d",
-    "name": "H4"
+    "name": "H4",
+    "isSelected": false
    },
    {
     "id": "7bfbf33b-fb56-d8df-e2d2-8fe65a7f2e44",
-    "name": "H3"
+    "name": "H3",
+    "isSelected": false
    },
    {
     "id": "9af60b09-c3a1-8c2a-eb78-8e29460ca7a9",
-    "name": "H2"
+    "name": "H2",
+    "isSelected": false
    },
    {
     "id": "83c598b0-8cc2-f955-1996-fcb8fb10bf70",
-    "name": "H1"
+    "name": "H1",
+    "isSelected": false
    },
    {
     "id": "8ee37a78-065b-6879-973d-319c65e28313",
-    "name": "Display"
+    "name": "Display",
+    "isSelected": false
    }
   ]
  },
@@ -2165,53 +2710,62 @@
   "props": [
    {
     "id": "a21547a3-feb6-5299-c9d2-87040e07acda",
+    "type": "variant",
     "name": "Input Type",
-    "type": "variant"
+    "defaultValue": "base"
    },
    {
     "id": "49de020c-2a2f-cd9e-f9be-ec9481770d82",
-    "name": "Custom Label",
-    "type": "textContent"
+    "type": "textContent",
+    "name": "Custom Label"
    },
    {
     "id": "79284fcc-6fee-0980-a2f7-9515271681c9",
+    "type": "string",
     "name": "Custom Placeholder",
-    "type": "string"
+    "defaultValue": ""
    },
    {
     "id": "f17950b0-437b-0147-5b8e-5bb08470e519",
+    "type": "string",
     "name": "Default Value",
-    "type": "string"
+    "tooltip": "Optionally set a default value",
+    "defaultValue": ""
    },
    {
     "id": "9bcda5d7-9519-8227-4d48-af652a53c0ed",
+    "type": "boolean",
     "name": "Required",
-    "type": "boolean"
+    "defaultValue": false
    },
    {
     "id": "1cdefd31-61e0-38d0-eceb-4c43f8c7e2de",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "b68d9a88-9f69-3464-634d-83eef89bb7aa",
-    "name": "Submission Name",
     "type": "string",
-    "group": "Settings"
+    "name": "Submission Name",
+    "group": "Settings",
+    "tooltip": "Uses label text if this field is not set",
+    "defaultValue": ""
    },
    {
     "id": "2d65d43e-7557-d0d1-cbb6-95a2cc654cb0",
-    "name": "Label Variant",
     "type": "variant",
-    "group": "Settings"
+    "name": "Label Variant",
+    "group": "Settings",
+    "defaultValue": "base"
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -2223,46 +2777,54 @@
   "props": [
    {
     "id": "b4da0210-a11e-8169-6bd3-3724db9bdc28",
+    "type": "textContent",
     "name": "Text",
-    "type": "textContent"
+    "tooltip": "Field label shown on page",
+    "defaultValue": "Label"
    },
    {
     "id": "558e34e3-97f9-fcda-de85-cbb2f3a7ba4a",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "defaultValue": "base"
    },
    {
     "id": "9ff40dcb-36de-5dda-76e0-4d8fdedcd1e0",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "a1c36848-fb8f-62e5-16e5-f6a904103179",
-    "name": "Required",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Required",
+    "group": "Settings",
+    "defaultValue": false
    },
    {
     "id": "dd621481-c0c2-e24c-5286-c10187c8be10",
-    "name": "Classes",
     "type": "string",
-    "group": "Settings"
+    "name": "Classes",
+    "group": "Settings",
+    "defaultValue": ""
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Visible"
+    "name": "Visible",
+    "isSelected": true
    },
    {
     "id": "46933b79-cf19-81b4-bc00-8af5c19b08b3",
-    "name": "Hidden"
+    "name": "Hidden",
+    "isSelected": false
    },
    {
     "id": "e8e97384-daa0-7ce7-bc12-14efcd69bcd4",
-    "name": "Bold"
+    "name": "Bold",
+    "isSelected": false
    }
   ]
  },
@@ -2270,27 +2832,32 @@
   "id": "3763bb36-8635-2157-d0a6-9adad3740030",
   "name": "Footer Group",
   "group": "Miscellaneous",
-  "instanceCount": 20,
+  "description": "Footer column with mobile accordion toggle. Not used in the Footer itself (its columns are plain elements, because slot content in a definition cannot be edited by API); kept for reuse.",
+  "instanceCount": 0,
   "props": [
    {
     "id": "371b40c8-1a98-e4f0-f2f3-7185d7f64931",
+    "type": "textContent",
     "name": "Title",
-    "type": "textContent"
+    "defaultValue": "Heading Text"
+   },
+   {
+    "id": "b6c5aaae-1b70-aef4-0b4d-7562ace7ec88",
+    "type": "slot",
+    "name": "Slot"
    },
    {
     "id": "745290ad-c0fa-9ddb-9e65-81fc6633e28d",
-    "name": "Visibility",
     "type": "visibility",
+    "name": "Visibility",
     "group": "Settings"
    }
-  ],
-  "slots": [
-   "Slot"
   ],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -2298,30 +2865,35 @@
   "id": "f5219fe8-69c7-b978-3e87-e9a133727619",
   "name": "Footer Link",
   "group": "Miscellaneous",
-  "instanceCount": 80,
+  "instanceCount": 135,
   "props": [
    {
     "id": "4b60c499-7b03-f6fe-4a97-098761f9606a",
+    "type": "textContent",
     "name": "Text",
-    "type": "textContent"
+    "defaultValue": "Link Text Here"
    },
    {
     "id": "d95ebae6-70ca-4262-a91c-d7f29abd3e6d",
+    "type": "link",
     "name": "Link",
-    "type": "link"
+    "defaultValue": {
+     "mode": "url",
+     "to": "#"
+    }
    },
    {
     "id": "3adba56e-2c8a-dc07-3e3b-bb19d9cfe7e8",
-    "name": "Visibility",
     "type": "visibility",
+    "name": "Visibility",
     "group": "Settings"
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -2329,84 +2901,100 @@
   "id": "fe24f7c4-38b4-ee27-5ffe-b0e6616f827e",
   "name": "Visual Image",
   "group": "Visual",
-  "instanceCount": 21,
+  "instanceCount": 28,
   "props": [
    {
     "id": "71ba5ca3-44b2-2c6c-e206-c8e78a8633fc",
+    "type": "image",
     "name": "Image",
-    "type": "image"
+    "defaultValue": "6ae35365a38b2d71cab8c692"
    },
    {
     "id": "5607babe-7080-b9e6-7465-5a2ac0285033",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "defaultValue": "27d05669-180c-3169-9b64-0eda31f8d4d3"
    },
    {
     "id": "0d39efb2-db97-12b5-6f7f-e30a894f82c4",
+    "type": "boolean",
     "name": "Image Fit",
-    "type": "boolean"
+    "defaultValue": true
    },
    {
     "id": "bffa1f78-9810-59bd-75f8-e8f7d470407b",
+    "type": "boolean",
     "name": "Corners",
-    "type": "boolean"
+    "defaultValue": true
    },
    {
     "id": "551150df-dc69-e908-948e-a34fd4852518",
+    "type": "boolean",
     "name": "Loading",
-    "type": "boolean"
+    "tooltip": "Switch the value to \"eager\" when image is used at the top of the page.",
+    "defaultValue": true
    },
    {
     "id": "00fdd282-d794-d172-8dd5-a43777c6687f",
+    "type": "boolean",
     "name": "Fetch Priority",
-    "type": "boolean"
+    "defaultValue": true
    },
    {
     "id": "62243a73-c0a2-3c66-4a9b-72350b312783",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "34a719d1-97f2-a2af-5330-7c5d7819f811",
-    "name": "Alt Text",
     "type": "altText",
-    "group": "Settings"
+    "name": "Alt Text",
+    "group": "Settings",
+    "defaultValue": "inherit"
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Wide 2 / 1"
+    "name": "Wide 2 / 1",
+    "isSelected": true
    },
    {
     "id": "27d05669-180c-3169-9b64-0eda31f8d4d3",
-    "name": "Wide 16 / 9"
+    "name": "Wide 16 / 9",
+    "isSelected": false
    },
    {
     "id": "57c7d8f5-d942-5de8-0712-e12fff699502",
-    "name": "Wide 3 / 2"
+    "name": "Wide 3 / 2",
+    "isSelected": false
    },
    {
     "id": "8e41429f-9f9e-7697-357e-815bd3e59383",
-    "name": "Wide 5 / 4"
+    "name": "Wide 5 / 4",
+    "isSelected": false
    },
    {
     "id": "a5f35569-5171-ee3d-f7bb-c5b2372249ac",
-    "name": "Square 1 / 1"
+    "name": "Square 1 / 1",
+    "isSelected": false
    },
    {
     "id": "35ea7d22-774e-1ba9-1dcc-8a392636f83d",
-    "name": "Tall 4 / 5"
+    "name": "Tall 4 / 5",
+    "isSelected": false
    },
    {
     "id": "a93327ec-aace-62d3-860b-21ee12acd25a",
-    "name": "Tall 2 / 3"
+    "name": "Tall 2 / 3",
+    "isSelected": false
    },
    {
     "id": "4972adff-107c-1f37-d19c-526a2bf55c28",
-    "name": "Cover"
+    "name": "Cover",
+    "isSelected": false
    }
   ]
  },
@@ -2418,35 +3006,39 @@
   "props": [
    {
     "id": "e8ac569d-5ae2-8634-5c13-388d4289527f",
-    "name": "Visibility",
-    "type": "visibility"
+    "type": "visibility",
+    "name": "Visibility"
    },
    {
     "id": "527bd78d-3b94-8d7f-3acc-a1cb41422d6a",
+    "type": "string",
     "name": "Classes",
-    "type": "string"
+    "defaultValue": ""
    },
    {
     "id": "b8bfc377-c668-18d8-4bc0-ec385b8228bf",
+    "type": "string",
     "name": "Style",
-    "type": "string"
+    "defaultValue": ""
    },
    {
     "id": "3a70ca77-ee71-c110-960d-e5a332f23876",
+    "type": "string",
     "name": "URL",
-    "type": "string"
+    "defaultValue": "https://www.youtube.com/embed/GPRcAZLuT3U"
    },
    {
     "id": "5a3086d7-06f9-7f5f-6fbd-2dc1890c9e25",
+    "type": "string",
     "name": "Title",
-    "type": "string"
+    "defaultValue": "YouTube video player"
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -2458,68 +3050,80 @@
   "props": [
    {
     "id": "49de020c-2a2f-cd9e-f9be-ec9481770d82",
+    "type": "textContent",
     "name": "Label",
-    "type": "textContent"
+    "defaultValue": "Label"
    },
    {
     "id": "31f98933-c2ac-09be-5abc-f1edd73ceb83",
+    "type": "string",
     "name": "ID",
-    "type": "string"
+    "defaultValue": "field-id"
    },
    {
     "id": "9c285639-5ce3-b938-29c0-ea6d1d12ed9d",
+    "type": "number",
     "name": "Value",
-    "type": "number"
+    "defaultValue": 50
    },
    {
     "id": "2c43952d-1b69-568d-110d-db579f2f0914",
+    "type": "number",
     "name": "Min",
-    "type": "number"
+    "defaultValue": 0
    },
    {
     "id": "d0c901ad-79b1-c414-7212-f05600959650",
+    "type": "number",
     "name": "Max",
-    "type": "number"
+    "defaultValue": 100
    },
    {
     "id": "1082c6ef-691c-40c1-7004-1267fdf67be7",
+    "type": "number",
     "name": "Step",
-    "type": "number"
+    "tooltip": "Decimals: 0.01",
+    "defaultValue": 1
    },
    {
     "id": "ea263261-8190-cbdf-bbf3-141e21298cf4",
+    "type": "textContent",
     "name": "Output Unit",
-    "type": "textContent"
+    "defaultValue": "%"
    },
    {
     "id": "9a314cf7-2999-22b3-2dd9-8f6a40d43e69",
+    "type": "boolean",
     "name": "Required",
-    "type": "boolean"
+    "defaultValue": false
    },
    {
     "id": "2c5967f3-ffc5-9cd2-50f6-06ed9982c2a2",
-    "name": "Visibility",
     "type": "visibility",
+    "name": "Visibility",
     "group": "Settings"
    },
    {
     "id": "b68d9a88-9f69-3464-634d-83eef89bb7aa",
-    "name": "Submission Name",
     "type": "string",
-    "group": "Settings"
+    "name": "Submission Name",
+    "group": "Settings",
+    "tooltip": "Uses label text if this field is not set",
+    "defaultValue": ""
    },
    {
     "id": "2d65d43e-7557-d0d1-cbb6-95a2cc654cb0",
-    "name": "Label Variant",
     "type": "variant",
-    "group": "Settings"
+    "name": "Label Variant",
+    "group": "Settings",
+    "defaultValue": "base"
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -2531,48 +3135,57 @@
   "props": [
    {
     "id": "c3778b1c-e9f9-7ed9-b7c9-f987a278ddb0",
+    "type": "textContent",
     "name": "Label",
-    "type": "textContent"
+    "tooltip": "Label text shown on page",
+    "defaultValue": "Field Label"
    },
    {
     "id": "68bcf611-509b-69ec-8827-cfff1760d7dd",
+    "type": "boolean",
     "name": "Required",
-    "type": "boolean"
+    "defaultValue": false
    },
    {
     "id": "3373a407-62dc-9117-dfea-865ef039955e",
+    "type": "boolean",
     "name": "Checked",
-    "type": "boolean"
+    "defaultValue": false
    },
    {
     "id": "51c4c59b-1108-cb29-21c7-430147ed6656",
+    "type": "variant",
     "name": "Style",
-    "type": "variant"
+    "defaultValue": "base"
    },
    {
     "id": "6e8e98e7-4fd0-b438-3df7-a5b91cd0f3ae",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "6a12eb62-378e-8eef-8289-b753ad910573",
-    "name": "Role",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Role",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "207e711d-e904-8e4c-bb4c-1b2c0cce9aab",
-    "name": "Submission Name",
     "type": "string",
-    "group": "Settings"
+    "name": "Submission Name",
+    "group": "Settings",
+    "tooltip": "Uses label text if this field is not set",
+    "defaultValue": ""
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -2580,94 +3193,120 @@
   "id": "7079fed5-17cb-c5c6-24bf-0555d09731f4",
   "name": "Layout",
   "group": "Wrapper",
-  "instanceCount": 30,
+  "instanceCount": 33,
   "props": [
    {
     "id": "d79d1d2a-f1f8-6796-b262-f9bcbc51e82b",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "defaultValue": "base"
+   },
+   {
+    "id": "6afb5ad3-22e3-d4b2-696c-41177a1b92f2",
+    "type": "slot",
+    "name": "Slot",
+    "tooltip": "Can contain headings, paragraphs, buttons, and other primary content"
+   },
+   {
+    "id": "77e7bf5e-52be-12b2-b69e-a690c0105cdd",
+    "type": "slot",
+    "name": "Slot 2",
+    "tooltip": "Can contain images, videos, forms, sliders, and other secondary content. For breakout, full, contain, and card variants, this slot needs to contain a visual."
    },
    {
     "id": "c25026d3-11d0-8d63-bb66-eeb99741a5f2",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "44a2215d-9eaf-991c-3c4a-96b94a669ff0",
-    "name": "Classes",
     "type": "string",
-    "group": "Settings"
+    "name": "Classes",
+    "group": "Settings",
+    "defaultValue": ""
    },
    {
     "id": "987708fe-21e0-32a0-d1c7-da81cb6b4d3c",
-    "name": "Column 1 Classes",
     "type": "string",
-    "group": "Settings"
+    "name": "Column 1 Classes",
+    "group": "Settings",
+    "defaultValue": " "
    },
    {
     "id": "ffd04fd9-98dd-0162-8f2b-0aa5e248a149",
-    "name": "Column 2 Classes",
     "type": "string",
-    "group": "Settings"
+    "name": "Column 2 Classes",
+    "group": "Settings",
+    "defaultValue": " "
    }
-  ],
-  "slots": [
-   "Slot",
-   "Slot 2"
   ],
   "variants": [
    {
     "id": "base",
-    "name": "Stack"
+    "name": "Stack",
+    "isSelected": true
    },
    {
     "id": "d69d5003-e9bc-b347-4e02-eb46976beb1c",
-    "name": "Stack Centered"
+    "name": "Stack Centered",
+    "isSelected": false
    },
    {
     "id": "1b1d171f-31c6-739b-bff9-2d7efa9674c4",
-    "name": "Auto Width"
+    "name": "Auto Width",
+    "isSelected": false
    },
    {
     "id": "558793eb-2b07-490b-9842-2d7e6f6bf325",
-    "name": "Columns"
+    "name": "Columns",
+    "isSelected": false
    },
    {
     "id": "1261a7e4-2c05-3b0b-2126-d399890906b8",
-    "name": "Columns Reversed"
+    "name": "Columns Reversed",
+    "isSelected": false
    },
    {
     "id": "81232c92-6578-ef9a-1e3e-35e3204ae0fd",
-    "name": "Sticky Left"
+    "name": "Sticky Left",
+    "isSelected": false
    },
    {
     "id": "4fee4cc0-701f-2817-944f-2c0261b9c2f3",
-    "name": "Breakout"
+    "name": "Breakout",
+    "isSelected": false
    },
    {
     "id": "6bb5e515-55a9-1fc8-d29b-ff898d8b40f7",
-    "name": "Breakout Reversed"
+    "name": "Breakout Reversed",
+    "isSelected": false
    },
    {
     "id": "58b19052-6f23-ab5e-5e89-54288af57e85",
-    "name": "Full"
+    "name": "Full",
+    "isSelected": false
    },
    {
     "id": "560ed4d9-9e8c-5c39-4619-fc154cdf9f19",
-    "name": "Full Reversed"
+    "name": "Full Reversed",
+    "isSelected": false
    },
    {
     "id": "31f8ed75-2c88-945a-a737-1b9b50b4494b",
-    "name": "Contain"
+    "name": "Contain",
+    "isSelected": false
    },
    {
     "id": "329f6899-ba0f-e4db-0449-3c5b8ba4f388",
-    "name": "Contain Reversed"
+    "name": "Contain Reversed",
+    "isSelected": false
    },
    {
     "id": "ebfcdcb1-ac53-1b15-fcb9-eaeda25808f5",
-    "name": "Card"
+    "name": "Card",
+    "isSelected": false
    }
   ]
  },
@@ -2679,40 +3318,49 @@
   "props": [
    {
     "id": "f0427a72-8901-aaee-d140-de88a433a734",
+    "type": "textContent",
     "name": "Text",
-    "type": "textContent"
+    "defaultValue": "Dropdown Text"
    },
    {
     "id": "d13f01de-2d1f-b338-8391-0dc9fd5c22a4",
+    "type": "boolean",
     "name": "Preview Content",
-    "type": "boolean"
+    "tooltip": "If set to true, dropdown will be previewed as open in designer view.",
+    "defaultValue": false
+   },
+   {
+    "id": "50bb742d-6185-b381-09b9-df743b46c271",
+    "type": "slot",
+    "name": "Slot"
    },
    {
     "id": "2a74e500-9c46-1d35-4e75-3b7e05d28152",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "6eaaabdb-6916-4189-916c-5008680bc997",
-    "name": "Open On Hover In",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Open On Hover In",
+    "group": "Settings",
+    "defaultValue": false
    },
    {
     "id": "c8deb444-ea4d-dad6-8f14-8d79311a7236",
-    "name": "Close On Hover Out",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Close On Hover Out",
+    "group": "Settings",
+    "defaultValue": false
    }
-  ],
-  "slots": [
-   "Slot"
   ],
   "variants": [
    {
     "id": "base",
-    "name": "Base"
+    "name": "Base",
+    "isSelected": true
    }
   ]
  },
@@ -2720,43 +3368,50 @@
   "id": "072fc246-ed4e-d5ba-7897-928ffb0b0425",
   "name": "Icon",
   "group": "SVG",
-  "instanceCount": 98,
+  "instanceCount": 29,
   "props": [
    {
     "id": "e11efadc-04d9-4d20-6ee4-ff7a0ea13b51",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "defaultValue": "base"
    },
    {
     "id": "c7234fb9-4eaf-5be1-8da4-4e1686094ad2",
-    "name": "Visibility",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
    },
    {
     "id": "c0195af9-e27a-bccb-4239-d737dcc53651",
-    "name": "Aria Hidden",
     "type": "boolean",
-    "group": "Settings"
+    "name": "Aria Hidden",
+    "group": "Settings",
+    "tooltip": "Hide icon from screen readers if decorative",
+    "defaultValue": true
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Full"
+    "name": "Full",
+    "isSelected": true
    },
    {
     "id": "8f27d1c8-d95a-e3b2-66d1-3a165d05aede",
-    "name": "Small"
+    "name": "Small",
+    "isSelected": false
    },
    {
     "id": "6c22932d-bc07-1741-25e0-ad3c03857826",
-    "name": "Medium"
+    "name": "Medium",
+    "isSelected": false
    },
    {
     "id": "004e1ee3-faf9-8df4-6b9d-7a8d0aa017b1",
-    "name": "Large"
+    "name": "Large",
+    "isSelected": false
    }
   ]
  },
@@ -2768,55 +3423,66 @@
   "props": [
    {
     "id": "90a045e8-8746-caea-d646-c3e017558360",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "defaultValue": "base"
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Text"
+    "name": "Text",
+    "isSelected": true
    },
    {
     "id": "7c461d67-dbf8-c963-3c7e-d2db06efff2f",
-    "name": "First Name"
+    "name": "First Name",
+    "isSelected": false
    },
    {
     "id": "6d5d8bd7-586a-6eda-36ee-9d52b9db04fe",
-    "name": "Last Name"
+    "name": "Last Name",
+    "isSelected": false
    },
    {
     "id": "9134e49e-b0e8-0e15-1ba4-46fb620b197f",
-    "name": "Email"
+    "name": "Email",
+    "isSelected": false
    },
    {
     "id": "bde4c4a1-7391-1c5f-9617-e18d455b3f8d",
-    "name": "Phone"
+    "name": "Phone",
+    "isSelected": false
    },
    {
     "id": "ae431964-f408-c707-73d0-bc6dee9bdb97",
-    "name": "Date"
+    "name": "Date",
+    "isSelected": false
    },
    {
     "id": "d18cbeac-da6f-52dd-7078-3e0786467d06",
-    "name": "Zip Code"
+    "name": "Zip Code",
+    "isSelected": false
    },
    {
     "id": "f54cfbe6-450b-27cc-d9ec-7d0be064813a",
-    "name": "Number"
+    "name": "Number",
+    "isSelected": false
    },
    {
     "id": "36615535-ca2e-c18a-02dd-114d20f1d2d2",
-    "name": "Search"
+    "name": "Search",
+    "isSelected": false
    },
    {
     "id": "1cacaa8c-b0b3-e130-5130-14b303bc207b",
-    "name": "Password"
+    "name": "Password",
+    "isSelected": false
    },
    {
     "id": "a5b3e188-6ef1-4ba5-621f-ca2971c71171",
-    "name": "URL"
+    "name": "URL",
+    "isSelected": false
    }
   ]
  },
@@ -2824,27 +3490,1718 @@
   "id": "34be3826-fcbd-cc8d-b23a-ab6d5d256de6",
   "name": "Icon Set",
   "group": "SVG",
-  "instanceCount": 117,
+  "description": "Masked icon, colour follows the text colour. One variant per Figma icon.",
+  "instanceCount": 552,
   "props": [
    {
     "id": "10f8120e-0a05-bf45-5a92-f6f27c50d665",
+    "type": "variant",
     "name": "Variant",
-    "type": "variant"
+    "defaultValue": "base"
    }
   ],
-  "slots": [],
   "variants": [
    {
     "id": "base",
-    "name": "Chevron Right"
+    "name": "Chevron Right",
+    "isSelected": true
    },
    {
     "id": "b13d6db9-99f2-6671-c653-1c0e482b4d80",
-    "name": "Arrow Right"
+    "name": "Arrow Right",
+    "isSelected": false
    },
    {
     "id": "93088b2e-b082-2d76-f2cc-e59be1d5f06c",
-    "name": "Arrow Left"
+    "name": "Arrow Left",
+    "isSelected": false
+   },
+   {
+    "id": "48d08dfa-0f7a-2bb7-646e-cd8c2b4f17c1",
+    "name": "Location",
+    "isSelected": false
+   },
+   {
+    "id": "7e532af9-1c42-5d69-db64-fbe6b0fc5224",
+    "name": "Schedule",
+    "isSelected": false
+   },
+   {
+    "id": "2e7d1218-0af6-90ef-df1c-e4425228e27b",
+    "name": "Euro",
+    "isSelected": false
+   },
+   {
+    "id": "f7ff4d84-c9c7-68b2-e5e7-8b181bd1f52d",
+    "name": "School",
+    "isSelected": false
+   },
+   {
+    "id": "a3cac204-c6f6-8dca-2493-52662757e6ae",
+    "name": "Arrow Thin",
+    "isSelected": false
+   },
+   {
+    "id": "845bdc6b-3e2c-39ca-9c61-748ac5bd1eb3",
+    "name": "Timer",
+    "isSelected": false
+   },
+   {
+    "id": "617c4729-3dad-90d1-3ddd-b1da77f73bc9",
+    "name": "Schedule Outline",
+    "isSelected": false
+   },
+   {
+    "id": "c1ebe063-5bdb-5c9c-76e2-5f5bb99105ea",
+    "name": "Project Controls",
+    "isSelected": false
+   },
+   {
+    "id": "9454cfd3-2996-eadd-7125-e7a007c57d86",
+    "name": "Person Search",
+    "isSelected": false
+   },
+   {
+    "id": "a7cc4fcd-9915-73fa-2304-c8e73037e398",
+    "name": "Person Shield",
+    "isSelected": false
+   },
+   {
+    "id": "7ae9dd7a-36c6-f6c7-1838-00f738fda3f3",
+    "name": "Person Check",
+    "isSelected": false
+   },
+   {
+    "id": "a94e5078-a1e6-deb7-fe22-0b467f820a11",
+    "name": "Assignment",
+    "isSelected": false
+   },
+   {
+    "id": "088f6a31-1655-ca0a-24d3-c97493db8494",
+    "name": "List Check",
+    "isSelected": false
+   },
+   {
+    "id": "e1df746a-9fd3-e026-f3c7-38353e82d183",
+    "name": "Handshake",
+    "isSelected": false
+   },
+   {
+    "id": "92e61da6-7aae-7d23-e5f6-2fbbcfebbeb9",
+    "name": "Check Circle",
+    "isSelected": false
+   },
+   {
+    "id": "14304292-9851-5c57-bb80-fe5f3bcf4340",
+    "name": "Outbound",
+    "isSelected": false
+   },
+   {
+    "id": "56dbf3ed-ca56-7ea6-9487-d52580e5468c",
+    "name": "Check",
+    "isSelected": false
+   },
+   {
+    "id": "73e4a5ab-e0b3-74e2-7c39-e696924c7a24",
+    "name": "Quote",
+    "isSelected": false
+   },
+   {
+    "id": "a272a43c-73ee-a18b-61ec-a627df1801e1",
+    "name": "Star",
+    "isSelected": false
+   },
+   {
+    "id": "cb979357-6cc2-4787-3ad8-17bf28e09d70",
+    "name": "CV Submission",
+    "isSelected": false
+   },
+   {
+    "id": "cd0e8853-3f95-2575-c389-741dfa3109ef",
+    "name": "Chevron Down",
+    "isSelected": false
+   },
+   {
+    "id": "28017da2-bb27-16b8-26c2-45d3d112ca97",
+    "name": "LinkedIn",
+    "isSelected": false
+   }
+  ]
+ },
+ {
+  "id": "6f32a464-0520-ccef-d4b6-648b896c8d8f",
+  "name": "Card Opportunity Tags",
+  "group": "Card",
+  "description": "Part of Card Opportunity: the employment-type/discipline tag pills above the title.",
+  "instanceCount": 20,
+  "props": [
+   {
+    "id": "5c5ba256-c99d-404a-6714-bf43f26830c8",
+    "type": "textContent",
+    "name": "Tag 1 Text",
+    "group": "Tags",
+    "defaultValue": "Permanent"
+   },
+   {
+    "id": "eee1bf01-d02b-6b82-cc9b-26bb0037246a",
+    "type": "textContent",
+    "name": "Tag 2 Text",
+    "group": "Tags",
+    "defaultValue": "Energy"
+   },
+   {
+    "id": "a9f9641f-9cbd-cb8c-d207-a4fbbd59d22c",
+    "type": "boolean",
+    "name": "Visibility",
+    "group": "Tags",
+    "defaultValue": true
+   }
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base",
+    "isSelected": true
+   }
+  ]
+ },
+ {
+  "id": "da3275c9-ad7d-fa60-485b-9d097b3dca32",
+  "name": "Card Opportunity Meta",
+  "group": "Card",
+  "description": "Part of Card Opportunity: the location/experience/salary icon rows.",
+  "instanceCount": 20,
+  "props": [
+   {
+    "id": "885fc0bc-1414-534d-c392-4014fbe1a594",
+    "type": "textContent",
+    "name": "Location Text",
+    "group": "Meta",
+    "defaultValue": "Rotterdam, NL (hybrid)"
+   },
+   {
+    "id": "b13eade0-4d1f-3626-4081-3da4365384d8",
+    "type": "variant",
+    "name": "Experience Icon",
+    "group": "Meta",
+    "defaultValue": "f7ff4d84-c9c7-68b2-e5e7-8b181bd1f52d"
+   },
+   {
+    "id": "b003cd17-e21a-2ce3-0340-ccf8d3ef412f",
+    "type": "textContent",
+    "name": "Experience Text",
+    "group": "Meta",
+    "defaultValue": "12+ years experience"
+   },
+   {
+    "id": "176376a6-ef98-4e94-bd2f-5f9555c30205",
+    "type": "textContent",
+    "name": "Salary Text",
+    "group": "Meta",
+    "defaultValue": "90k – 110k"
+   },
+   {
+    "id": "fe0a36db-38d3-b990-7ea1-e12493d8e23c",
+    "type": "boolean",
+    "name": "Salary Visibility",
+    "group": "Meta",
+    "defaultValue": true
+   }
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base",
+    "isSelected": true
+   }
+  ]
+ },
+ {
+  "id": "8eeda93a-039f-d99f-fe9d-75974e30d529",
+  "name": "Card Arrow",
+  "group": "Card",
+  "description": "Thin arrow that slides through on card hover (Lumos trigger). Shared by Card Primary (Service), Card Opportunity and Card Expert.",
+  "instanceCount": 55,
+  "props": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base",
+    "isSelected": true
+   }
+  ]
+ },
+ {
+  "id": "c362b655-eec3-8fb0-cab5-12d5426df53e",
+  "name": "Card Bullet",
+  "group": "Card",
+  "description": "Slot item for Card Primary's list (Expert, Stage, Pricing): check icon + short text.",
+  "instanceCount": 17,
+  "props": [
+   {
+    "id": "11775a38-5531-fedd-f1d2-63fa8b0e32a5",
+    "type": "variant",
+    "name": "Variant",
+    "defaultValue": "base"
+   },
+   {
+    "id": "2a8e6f64-144f-db1c-4537-cc5cf439b5b6",
+    "type": "textContent",
+    "name": "Text",
+    "group": "Content",
+    "defaultValue": "Commercial ownership"
+   }
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Small",
+    "isSelected": true
+   },
+   {
+    "id": "84a7442c-960a-603c-d501-6352dacde64a",
+    "name": "Large",
+    "isSelected": false
+   }
+  ]
+ },
+ {
+  "id": "19e313dd-1063-d30b-cbb7-8f61fb4704e1",
+  "name": "Card Testimonial",
+  "group": "Card",
+  "description": "Testimonial card (Home, About/Clients 'Trusted by the people who hire'): quote mark, star rating, quote, person with avatar, role and company, arrow. Own component: own data (rating, person, company).",
+  "instanceCount": 4,
+  "props": [
+   {
+    "id": "6e488c4e-98fa-85c6-7bef-752ef705e63f",
+    "type": "richText",
+    "name": "Quote",
+    "group": "Content",
+    "defaultValue": {
+     "innerText": "I have been working with HumAIn engineers for several years now. They have all been exceptionally talented, very professional, highly productive, great team players, good communicators, and willing to go above and beyond."
+    }
+   },
+   {
+    "id": "66467d62-53a6-8ca1-f5f6-90c880e2be72",
+    "type": "boolean",
+    "name": "Rating Visibility",
+    "group": "Visual",
+    "defaultValue": true
+   },
+   {
+    "id": "aa97949e-93e5-0e61-11ec-7ee4b5eb2592",
+    "type": "image",
+    "name": "Avatar",
+    "group": "Person"
+   },
+   {
+    "id": "43148b6a-abfe-b88e-9bb3-15d670b5afe5",
+    "type": "altText",
+    "name": "Avatar Alt",
+    "group": "Person",
+    "tooltip": "Leave empty: the name is already next to the photo",
+    "defaultValue": ""
+   },
+   {
+    "id": "06bb1279-a950-21aa-0445-513464acdb47",
+    "type": "textContent",
+    "name": "Name",
+    "group": "Person",
+    "defaultValue": "Chance Lipshutz"
+   },
+   {
+    "id": "0db1aa2c-737b-1813-1c69-d20919ac808d",
+    "type": "textContent",
+    "name": "Role",
+    "group": "Person",
+    "defaultValue": "Partner"
+   },
+   {
+    "id": "713ac95d-8953-d840-72ca-9f541788abe3",
+    "type": "textContent",
+    "name": "Company",
+    "group": "Person",
+    "defaultValue": "Covestro"
+   },
+   {
+    "id": "2af1c178-262d-19b7-209d-000a316ddb1b",
+    "type": "link",
+    "name": "Link",
+    "group": "Link",
+    "defaultValue": {
+     "mode": "url"
+    }
+   },
+   {
+    "id": "416760e6-a62f-7bd6-9075-c2f172bafc6e",
+    "type": "textContent",
+    "name": "Screen Reader Text",
+    "group": "Link",
+    "tooltip": "Fill in (with the link) to make the whole card clickable; empty = not clickable"
+   },
+   {
+    "id": "2e973d18-9ca3-67a9-6f10-5a55f048e753",
+    "type": "boolean",
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
+   },
+   {
+    "id": "512f5de0-df56-7d24-6fa9-5076dcf80317",
+    "type": "boolean",
+    "name": "Role",
+    "group": "Settings",
+    "tooltip": "Set to List Item when used in a list",
+    "defaultValue": true
+   }
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base",
+    "isSelected": true
+   }
+  ]
+ },
+ {
+  "id": "9e022a92-8dba-f049-6681-751c71576c94",
+  "name": "Card Opportunity",
+  "group": "Card",
+  "description": "Job card (Opportunities, Careers, Similar opportunities): tags, title, location/experience/salary rows, View & apply, notch arrow, mint hover. Split off Card Primary on 2026-10-31.",
+  "instanceCount": 20,
+  "props": [
+   {
+    "id": "5d8d09ee-c33f-4278-df66-10cc3eff9b36",
+    "type": "variant",
+    "name": "Variant",
+    "defaultValue": "base"
+   },
+   {
+    "id": "34da04d6-8f34-97e5-e0f1-70e3f8c3b10e",
+    "type": "richText",
+    "name": "Title",
+    "group": "Content",
+    "defaultValue": {
+     "innerText": "Project Controls Manager"
+    }
+   },
+   {
+    "id": "16c8e09b-96e1-3bf7-4b2f-864a306d3993",
+    "type": "richText",
+    "name": "Text",
+    "group": "Content",
+    "tooltip": "Only shown in the With Text variant; leave empty otherwise",
+    "defaultValue": {
+     "innerText": "\n\n"
+    }
+   },
+   {
+    "id": "16d9d63c-a150-dff9-e416-b85895846e7d",
+    "type": "textContent",
+    "name": "Tag 1 Text",
+    "group": "Tags",
+    "defaultValue": "Permanent"
+   },
+   {
+    "id": "89d6f2a0-ef4d-99d2-5b8a-8ee8f5a745cf",
+    "type": "textContent",
+    "name": "Location Text",
+    "group": "Meta",
+    "defaultValue": "Rotterdam, NL (hybrid)"
+   },
+   {
+    "id": "35e5ba67-1293-328d-b14e-6f1763cc8098",
+    "type": "textContent",
+    "name": "Tag 2 Text",
+    "group": "Tags",
+    "defaultValue": "Energy"
+   },
+   {
+    "id": "878db75f-f6ed-407c-a76b-7be85db0ef27",
+    "type": "boolean",
+    "name": "Tags Visibility",
+    "group": "Tags",
+    "defaultValue": true
+   },
+   {
+    "id": "de8b16e6-d1a2-dcf0-1d12-c90099a55035",
+    "type": "variant",
+    "name": "Experience Icon",
+    "group": "Meta",
+    "defaultValue": "f7ff4d84-c9c7-68b2-e5e7-8b181bd1f52d"
+   },
+   {
+    "id": "e18de860-3e63-2f03-687e-a9de1fe0f58e",
+    "type": "textContent",
+    "name": "Experience Text",
+    "group": "Meta",
+    "defaultValue": "12+ years experience"
+   },
+   {
+    "id": "35251a06-3afc-fd4b-1855-27fb26743d23",
+    "type": "textContent",
+    "name": "Salary Text",
+    "group": "Meta",
+    "defaultValue": "90k – 110k"
+   },
+   {
+    "id": "5bc8f589-1a5b-8deb-0ad7-94dcbc0c5583",
+    "type": "boolean",
+    "name": "Salary Visibility",
+    "group": "Meta",
+    "defaultValue": true
+   },
+   {
+    "id": "d6ec5f4b-bc21-16ee-a743-2a2cd22a2a03",
+    "type": "textContent",
+    "name": "Button Text",
+    "group": "Button",
+    "defaultValue": "View & apply"
+   },
+   {
+    "id": "bb5c3a86-443d-2095-8245-be4cf5e00804",
+    "type": "link",
+    "name": "Link",
+    "group": "Link",
+    "defaultValue": {
+     "mode": "url"
+    }
+   },
+   {
+    "id": "d28cd67e-0ce6-aed7-1ad3-14a0dba51742",
+    "type": "textContent",
+    "name": "Screen Reader Text",
+    "group": "Link",
+    "tooltip": "Fill in (with the link) to make the whole card clickable; empty = not clickable"
+   },
+   {
+    "id": "e7862449-c03e-69d2-af91-c97200e56c38",
+    "type": "boolean",
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
+   },
+   {
+    "id": "2db94e97-9459-09a8-daf6-426cdd8f40fa",
+    "type": "boolean",
+    "name": "Role",
+    "group": "Settings",
+    "tooltip": "Set to List Item when used in a list",
+    "defaultValue": true
+   },
+   {
+    "id": "1b8b3666-cb54-f635-bae3-5985204eeab8",
+    "type": "string",
+    "name": "Wrapper Classes",
+    "group": "Settings",
+    "defaultValue": ""
+   },
+   {
+    "id": "7219df95-2957-5773-7b20-71db6256f364",
+    "type": "string",
+    "name": "Wrapper Style",
+    "group": "Settings",
+    "defaultValue": ""
+   }
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Default",
+    "isSelected": true
+   },
+   {
+    "id": "5d8d09ee-c33f-4278-df66-10cc3eff9b38",
+    "name": "With Text",
+    "isSelected": false
+   }
+  ]
+ },
+ {
+  "id": "556be8db-5b29-ab90-a7ce-f47005d8a955",
+  "name": "Card Expert",
+  "group": "Card",
+  "description": "Expert card (Home B header, Hire an expert): name, 'previously worked at' + logo, match score, optional list; Match = horizontal photo card, Match Glass = glass photo card. Split off Card Primary on 2026-10-31.",
+  "instanceCount": 5,
+  "props": [
+   {
+    "id": "2233ab62-aeec-e972-9021-96a1058c50e1",
+    "type": "variant",
+    "name": "Variant",
+    "defaultValue": "base"
+   },
+   {
+    "id": "a11a4224-62ed-99b0-41b0-b6202759ecbe",
+    "type": "textContent",
+    "name": "Subtitle",
+    "group": "Content",
+    "tooltip": "Line above the logo, e.g. Previously worked at",
+    "defaultValue": "Previously worked at"
+   },
+   {
+    "id": "759193e6-9022-acfc-4264-09d0cd13b9f7",
+    "type": "boolean",
+    "name": "Subtitle Visibility",
+    "group": "Content",
+    "defaultValue": true
+   },
+   {
+    "id": "5db3b35c-65d8-7862-c12e-bceeff159d86",
+    "type": "textContent",
+    "name": "Name",
+    "group": "Content",
+    "defaultValue": "Willem Jan Velthuizen"
+   },
+   {
+    "id": "cd6a4e4d-d941-f45c-4c16-55d03bbc56ab",
+    "type": "image",
+    "name": "Photo",
+    "group": "Visual",
+    "tooltip": "Match and Match Glass only",
+    "defaultValue": "6ae4bc6b1f1aec66ee2fc7a0"
+   },
+   {
+    "id": "8ed93209-a4ca-cc04-9c4f-ab01090a4ca0",
+    "type": "altText",
+    "name": "Photo Alt",
+    "group": "Visual",
+    "tooltip": "Describe the photo, or leave empty when the name says enough",
+    "defaultValue": ""
+   },
+   {
+    "id": "9cf38010-ecbf-f535-0d8e-ee240973b8be",
+    "type": "boolean",
+    "name": "Photo Visibility",
+    "group": "Visual",
+    "tooltip": "Match and Match Glass only (Expert has no photo)",
+    "defaultValue": true
+   },
+   {
+    "id": "5b73fd2d-611b-9ad5-d2f7-9a09b7bc81cc",
+    "type": "image",
+    "name": "Logo",
+    "group": "Visual",
+    "defaultValue": "6ae4bc6bd93dc05bdfe57242"
+   },
+   {
+    "id": "bdf78e24-39c1-5f44-74d3-cefff2d2a4ed",
+    "type": "altText",
+    "name": "Logo Alt",
+    "group": "Visual",
+    "tooltip": "The company name, e.g. Google",
+    "defaultValue": ""
+   },
+   {
+    "id": "3ce92a00-9d76-8581-9940-1fceb999faf8",
+    "type": "boolean",
+    "name": "Logo Visibility",
+    "group": "Visual",
+    "tooltip": "Turn on and pick a Logo",
+    "defaultValue": false
+   },
+   {
+    "id": "69275fbf-d24b-72ad-690e-78cad47155a4",
+    "type": "slot",
+    "name": "Slot",
+    "group": "List"
+   },
+   {
+    "id": "a6cf33da-d012-0fc5-4cf7-c47ac03a8f11",
+    "type": "boolean",
+    "name": "List Visibility",
+    "group": "List",
+    "tooltip": "Expert only: the bullet list in Slot",
+    "defaultValue": true
+   },
+   {
+    "id": "2bb183ec-0f1a-96e1-d1d6-e8db834c646d",
+    "type": "textContent",
+    "name": "Label",
+    "group": "Score",
+    "tooltip": "Expert and Match (Match Glass shows no score)",
+    "defaultValue": "Match score"
+   },
+   {
+    "id": "6fde4c5b-ee15-a65b-b245-a65b9a4ec95c",
+    "type": "richText",
+    "name": "Unit",
+    "group": "Score",
+    "tooltip": "Small unit after the score (Expert only)",
+    "defaultValue": {
+     "innerText": "%"
+    }
+   },
+   {
+    "id": "1bdbf7d0-b6ab-04d6-7133-e01e7473ca5c",
+    "type": "textContent",
+    "name": "Score",
+    "group": "Score",
+    "tooltip": "Expert and Match (Match Glass shows no score)",
+    "defaultValue": "85"
+   },
+   {
+    "id": "bb5c3a86-443d-2095-8245-be4cf5e00804",
+    "type": "link",
+    "name": "Link",
+    "group": "Link",
+    "defaultValue": {
+     "mode": "url"
+    }
+   },
+   {
+    "id": "d28cd67e-0ce6-aed7-1ad3-14a0dba51742",
+    "type": "textContent",
+    "name": "Screen Reader Text",
+    "group": "Link",
+    "tooltip": "Fill in (with the link) to make the whole card clickable; empty = not clickable"
+   },
+   {
+    "id": "e7862449-c03e-69d2-af91-c97200e56c38",
+    "type": "boolean",
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
+   },
+   {
+    "id": "2db94e97-9459-09a8-daf6-426cdd8f40fa",
+    "type": "boolean",
+    "name": "Role",
+    "group": "Settings",
+    "tooltip": "Set to List Item when used in a list",
+    "defaultValue": true
+   },
+   {
+    "id": "1b8b3666-cb54-f635-bae3-5985204eeab8",
+    "type": "string",
+    "name": "Wrapper Classes",
+    "group": "Settings",
+    "defaultValue": ""
+   },
+   {
+    "id": "7219df95-2957-5773-7b20-71db6256f364",
+    "type": "string",
+    "name": "Wrapper Style",
+    "group": "Settings",
+    "defaultValue": ""
+   }
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Expert",
+    "isSelected": true
+   },
+   {
+    "id": "2233ab62-aeec-e972-9021-96a1058c50e8",
+    "name": "Match",
+    "isSelected": false
+   },
+   {
+    "id": "2233ab62-aeec-e972-9021-96a1058c50eb",
+    "name": "Match Glass",
+    "isSelected": false
+   }
+  ]
+ },
+ {
+  "id": "0eb4cd7e-80c2-6878-378e-46b45377d95c",
+  "name": "Card Profile",
+  "group": "Card",
+  "description": "Full-bleed photo card: Role (Project-controls roles), Person (About Us team), Case (Clients selected project work, with a pill). Split off Card Primary on 2026-10-31; Role and Person were Lumos Cover and Stacked.",
+  "instanceCount": 10,
+  "props": [
+   {
+    "id": "4be18b62-0688-b93d-ef69-1e3a6cf3926f",
+    "type": "variant",
+    "name": "Variant",
+    "defaultValue": "base"
+   },
+   {
+    "id": "34da04d6-8f34-97e5-e0f1-70e3f8c3b10e",
+    "type": "richText",
+    "name": "Title",
+    "group": "Content",
+    "defaultValue": {
+     "innerText": "Project Controls Manager"
+    }
+   },
+   {
+    "id": "a11a4224-62ed-99b0-41b0-b6202759ecbe",
+    "type": "textContent",
+    "name": "Subtitle",
+    "group": "Content",
+    "tooltip": "Person only: the job title"
+   },
+   {
+    "id": "759193e6-9022-acfc-4264-09d0cd13b9f7",
+    "type": "boolean",
+    "name": "Subtitle Visibility",
+    "group": "Content",
+    "defaultValue": true
+   },
+   {
+    "id": "16c8e09b-96e1-3bf7-4b2f-864a306d3993",
+    "type": "richText",
+    "name": "Text",
+    "group": "Content",
+    "defaultValue": {
+     "innerText": "Owns the whole controls function across the programme."
+    }
+   },
+   {
+    "id": "cd6a4e4d-d941-f45c-4c16-55d03bbc56ab",
+    "type": "image",
+    "name": "Image",
+    "group": "Visual",
+    "defaultValue": "6ae4bc6b1f1aec66ee2fc7a0"
+   },
+   {
+    "id": "db740c12-1dee-b0ac-f967-c97f1155da06",
+    "type": "altText",
+    "name": "Image Alt",
+    "group": "Visual",
+    "tooltip": "Describe the photo, or leave empty when the title says enough",
+    "defaultValue": ""
+   },
+   {
+    "id": "9cf38010-ecbf-f535-0d8e-ee240973b8be",
+    "type": "boolean",
+    "name": "Image Visibility",
+    "group": "Visual",
+    "tooltip": "Pick the photo with Image",
+    "defaultValue": true
+   },
+   {
+    "id": "40e35670-e770-511b-0f4d-fa2baca90da2",
+    "type": "textContent",
+    "name": "Badge Text",
+    "group": "Badge",
+    "tooltip": "Case only: the sector pill, e.g. Energy"
+   },
+   {
+    "id": "bb5c3a86-443d-2095-8245-be4cf5e00804",
+    "type": "link",
+    "name": "Link",
+    "group": "Link",
+    "defaultValue": {
+     "mode": "url"
+    }
+   },
+   {
+    "id": "d28cd67e-0ce6-aed7-1ad3-14a0dba51742",
+    "type": "textContent",
+    "name": "Screen Reader Text",
+    "group": "Link",
+    "tooltip": "Fill in (with the link) to make the whole card clickable; empty = not clickable"
+   },
+   {
+    "id": "e7862449-c03e-69d2-af91-c97200e56c38",
+    "type": "boolean",
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
+   },
+   {
+    "id": "2db94e97-9459-09a8-daf6-426cdd8f40fa",
+    "type": "boolean",
+    "name": "Role",
+    "group": "Settings",
+    "tooltip": "Set to List Item when used in a list",
+    "defaultValue": true
+   },
+   {
+    "id": "1b8b3666-cb54-f635-bae3-5985204eeab8",
+    "type": "string",
+    "name": "Wrapper Classes",
+    "group": "Settings",
+    "defaultValue": ""
+   },
+   {
+    "id": "7219df95-2957-5773-7b20-71db6256f364",
+    "type": "string",
+    "name": "Wrapper Style",
+    "group": "Settings",
+    "defaultValue": ""
+   },
+   {
+    "id": "037d9d30-d775-b08c-9b66-32bebc5f384a",
+    "type": "boolean",
+    "name": "Badge Visibility",
+    "group": "Badge",
+    "tooltip": "Case only: the sector pill",
+    "defaultValue": true
+   }
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Role",
+    "isSelected": true
+   },
+   {
+    "id": "4be18b62-0688-b93d-ef69-1e3a6cf39273",
+    "name": "Person",
+    "isSelected": false
+   },
+   {
+    "id": "4be18b62-0688-b93d-ef69-1e3a6cf39274",
+    "name": "Case",
+    "isSelected": false
+   }
+  ]
+ },
+ {
+  "id": "02beedee-77ce-5dbb-e35a-b44e97950375",
+  "name": "Logo Tile",
+  "group": "Visual",
+  "description": "One client logo in a 100 px tile, for the logo marquee (Home B, Clients, How it works). Not a card; split off Card Primary's Logo variant on 2026-10-31.",
+  "instanceCount": 9,
+  "props": [
+   {
+    "id": "1525851b-b1ee-a460-3805-16d7348bf8bf",
+    "type": "image",
+    "name": "Logo",
+    "group": "Visual",
+    "tooltip": "The client logo, any colour: it is shown in the section's text colour",
+    "defaultValue": "6ae4bc6bd93dc05bdfe57242"
+   },
+   {
+    "id": "569227b1-60be-0785-4724-70042877c3ad",
+    "type": "altText",
+    "name": "Logo Alt",
+    "group": "Visual",
+    "tooltip": "The company name",
+    "defaultValue": ""
+   },
+   {
+    "id": "68adfcc2-6408-5ea3-556c-3a40a3f221dd",
+    "type": "boolean",
+    "name": "Visibility",
+    "group": "Settings",
+    "defaultValue": true
+   },
+   {
+    "id": "41e214a5-c286-341e-23e2-f643edf1ea05",
+    "type": "boolean",
+    "name": "Role",
+    "group": "Settings",
+    "tooltip": "Set to List Item when used in a list",
+    "defaultValue": true
+   }
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base",
+    "isSelected": true
+   }
+  ]
+ },
+ {
+  "id": "5f31b436-355c-d85d-b464-988f9288176f",
+  "name": "Logo Marquee",
+  "group": "Visual",
+  "description": "Scrolling row of client logos (Logo Tile) under a centred title; loops with CSS, stops for reduced motion. Home B header, later Clients and How it works.",
+  "instanceCount": 1,
+  "props": [
+   {
+    "id": "5b7a08b9-a90e-637b-72d7-b253c36ff354",
+    "type": "textContent",
+    "name": "Title",
+    "group": "Content",
+    "defaultValue": "TRUSTED BY GLOBAL LEADERS IN ENERGY, INDUSTRY & TECHNOLOGY"
+   }
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base",
+    "isSelected": true
+   }
+  ]
+ },
+ {
+  "id": "270bcc7c-6cbe-58e6-f99b-56e9dccd110a",
+  "name": "Hero Experts",
+  "group": "Sections",
+  "description": "Home B header (Figma Header / Home v01, type=variant3): title, text, buttons, stat line; a stage with one panel per expert (photo, Card Expert, quote) switched by the glass expert slider below (selected card centred); Logo Marquee. Brand gradient, data-section=dark for the nav.",
+  "instanceCount": 1,
+  "props": [
+   {
+    "id": "22cc32f0-daf7-9f96-dc28-9b66a5b47cdf",
+    "type": "textContent",
+    "name": "Text",
+    "group": "Content",
+    "defaultValue": "Validated against the criteria that decide success on a capital project, by people who have run these teams themselves."
+   }
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base",
+    "isSelected": true
+   }
+  ]
+ },
+ {
+  "id": "d411ac47-9ded-6b19-b16a-c98a3c6fa631",
+  "name": "Stagger Cards",
+  "group": "Sections",
+  "description": "Centred eyebrow + two-tone title (+ optional text) over a row of cards that step down on desktop. Cards go in the Cards slot (Card Primary). Built from Figma Content / 4 UBRS (Home B, \"The risk\").",
+  "instanceCount": 1,
+  "props": [
+   {
+    "id": "a779ed6f-18a1-87cb-21d3-594c2f511a62",
+    "type": "slot",
+    "name": "Slot"
+   },
+   {
+    "id": "b1a8663d-35d3-3e72-2f64-627e85c39fb4",
+    "type": "textContent",
+    "name": "Text",
+    "group": "Eyebrow",
+    "defaultValue": "The risk"
+   },
+   {
+    "id": "f4ac8e25-f839-589f-c7c6-feb91fe64444",
+    "type": "boolean",
+    "name": "Visibility",
+    "group": "Eyebrow",
+    "defaultValue": true
+   },
+   {
+    "id": "03bc534f-9dc2-a5fe-8b04-fe349bb0d950",
+    "type": "textContent",
+    "name": "Text",
+    "group": "Title",
+    "tooltip": "First part of the title, full colour",
+    "defaultValue": "One wrong hire costs "
+   },
+   {
+    "id": "71947449-6ce3-dbe8-aee3-c47ec6b65f9a",
+    "type": "textContent",
+    "name": "Muted Text",
+    "group": "Title",
+    "tooltip": "Second part of the title, at 50 % (leave empty for a one-colour title)",
+    "defaultValue": "more than a year of fees."
+   },
+   {
+    "id": "eefebe9d-d9da-84ee-7c34-b44f784ef13e",
+    "type": "textContent",
+    "name": "Text",
+    "group": "Text",
+    "tooltip": "Optional line under the title",
+    "defaultValue": "A short line that supports the title."
+   },
+   {
+    "id": "0025e267-dd55-4f91-92fe-a4e8361d2d30",
+    "type": "boolean",
+    "name": "Visibility",
+    "group": "Text",
+    "defaultValue": false
+   }
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base",
+    "isSelected": true
+   }
+  ]
+ },
+ {
+  "id": "73b7ce70-2af0-9890-7627-b980501bb35f",
+  "name": "Sticky Steps",
+  "group": "Sections",
+  "description": "Home B 'Our method' (Figma Content scrolly telling / Glass cards): intro left (eyebrow, two-tone title, text, button) stays in view while the step cards on the right stack over each other, tilted; stacks below 992 px. Cards = Card Primary Process in the Steps slot. Brand gradient, data-section=dark for the nav.",
+  "instanceCount": 1,
+  "props": [
+   {
+    "id": "c3c931cd-f808-7dc8-cd2b-404562a8471a",
+    "type": "slot",
+    "name": "Slot",
+    "tooltip": "Card Primary, variant Process, Role off. The cards stack while scrolling."
+   },
+   {
+    "id": "ee09e7ce-07ef-a8ab-9391-c4e687218085",
+    "type": "textContent",
+    "name": "Eyebrow",
+    "group": "Content",
+    "defaultValue": "our method"
+   },
+   {
+    "id": "2dd166a9-e8c0-f907-79d8-8783d3d71d9d",
+    "type": "textContent",
+    "name": "Title",
+    "group": "Content",
+    "tooltip": "White part of the title; the mint part follows after a space",
+    "defaultValue": "The top 5% found"
+   },
+   {
+    "id": "5df9aefe-cba3-7f81-69ca-73ced704e6e2",
+    "type": "textContent",
+    "name": "Title Accent",
+    "group": "Content",
+    "tooltip": "Mint part of the title, follows the white part",
+    "defaultValue": "before you need them."
+   },
+   {
+    "id": "9c58ed0f-b8e7-32f5-3037-ab4ffcf07a4c",
+    "type": "textContent",
+    "name": "Text",
+    "group": "Content",
+    "defaultValue": "Most agencies start searching when you call. We map each discipline continuously, so the shortlist already exists on the day you need it."
+   },
+   {
+    "id": "f9aa6424-18e2-09a4-a558-0c855f2c8041",
+    "type": "textContent",
+    "name": "Button Text",
+    "group": "Button",
+    "defaultValue": "See how we select"
+   },
+   {
+    "id": "668e31a3-ef67-ecd9-c13e-a72523a3376e",
+    "type": "link",
+    "name": "Button Link",
+    "group": "Button",
+    "defaultValue": {
+     "mode": "page",
+     "to": {
+      "pageId": "6ae37d68d29f562403e8e340"
+     }
+    }
+   }
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base",
+    "isSelected": true
+   }
+  ]
+ },
+ {
+  "id": "b32fc929-59bc-2285-6a38-23f5036e4faf",
+  "name": "Expert Row List",
+  "group": "Sections",
+  "description": "Hero Experts row: Experts CMS (Show in Hero on, by Order) as Card Expert Match Glass. Same list as Expert Panel List; edit experts in the CMS.",
+  "instanceCount": 1,
+  "props": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base",
+    "isSelected": true
+   }
+  ]
+ },
+ {
+  "id": "1f5eb399-05d7-b7d9-1238-4a51d4a9afe1",
+  "name": "Expert Panel List",
+  "group": "Sections",
+  "description": "Hero Experts stage: one panel per Experts CMS item (Hero Photo, Card Expert with bullets and score, Quote). Same filter and order as Expert Row List.",
+  "instanceCount": 1,
+  "props": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base",
+    "isSelected": true
+   }
+  ]
+ },
+ {
+  "id": "410b9fa3-b44c-ba67-bb25-ddee2f03adec",
+  "name": "Split Content",
+  "group": "Sections",
+  "description": "Text column (eyebrow, H2 title with optional muted part, text, optional quote or checklist, up to two buttons) beside a 3:2 photo with a notched corner. Variants: Image Right / Image Left. Space Top: large (192), main (96) or none. Stacks below 992 px, text first. Figma Content / Content block (Home B, Careers, About Us, For business pages, How it works).",
+  "instanceCount": 4,
+  "props": [
+   {
+    "id": "cf2822d4-955c-d628-bb1a-5b74310e4966",
+    "type": "variant",
+    "name": "Variant",
+    "defaultValue": "base"
+   },
+   {
+    "id": "40513391-eaa7-c476-91db-eb068c962c95",
+    "type": "textContent",
+    "name": "Eyebrow",
+    "group": "Content",
+    "defaultValue": "Practitioner credibility"
+   },
+   {
+    "id": "81a90585-28db-d054-c254-2caa0e92199b",
+    "type": "textContent",
+    "name": "Title",
+    "group": "Content",
+    "tooltip": "Dark part of the title",
+    "defaultValue": "Selected by people"
+   },
+   {
+    "id": "51b6a9bc-b1cd-d8cb-3e24-d1b1cd4bfbfe",
+    "type": "boolean",
+    "name": "Title Break",
+    "group": "Content",
+    "tooltip": "Start the muted part on a new line",
+    "defaultValue": false
+   },
+   {
+    "id": "54728833-4f3e-1e96-2689-c6033cca5357",
+    "type": "textContent",
+    "name": "Title Muted",
+    "group": "Content",
+    "tooltip": "Grey part after the title; leave empty for a one-colour title",
+    "defaultValue": "who did the job."
+   },
+   {
+    "id": "5d1d0fa0-b71a-a3f7-ba82-69cb9e5a5ffd",
+    "type": "textContent",
+    "name": "Text",
+    "group": "Content",
+    "defaultValue": "Floyd has spent twenty years in project controls on capital projects across energy, industry and infrastructure. He has run these teams himself, from planning through cost control. That experience sets the criteria, and the platform makes them scalable."
+   },
+   {
+    "id": "0b6cee7f-5391-3706-593c-f64e68ccc157",
+    "type": "boolean",
+    "name": "Quote Visibility",
+    "group": "Quote",
+    "defaultValue": true
+   },
+   {
+    "id": "bd42f77c-4e99-cebc-8d90-df2eba5e93d7",
+    "type": "textContent",
+    "name": "Quote",
+    "group": "Quote",
+    "defaultValue": "Aliquet vel mauris pellentesque sagittis suscipit. Ornare molestie tristique bibendum faucibus et mi egestas."
+   },
+   {
+    "id": "aee369d8-a866-c3a6-5881-a1bb2d254dcb",
+    "type": "textContent",
+    "name": "Quote Name",
+    "group": "Quote",
+    "defaultValue": "Floyd Latumeten"
+   },
+   {
+    "id": "7e280878-cd8e-0a31-6555-ac5f6888e567",
+    "type": "boolean",
+    "name": "List Visibility",
+    "group": "List",
+    "tooltip": "Checklist: put Card Bullet (Large) items in the List slot",
+    "defaultValue": false
+   },
+   {
+    "id": "aadbc6f0-ca41-6952-3a8e-399cbf357303",
+    "type": "boolean",
+    "name": "Primary Visibility",
+    "group": "Buttons",
+    "defaultValue": true
+   },
+   {
+    "id": "11e2fbea-4ddc-d128-ba4f-750ea4148fe8",
+    "type": "textContent",
+    "name": "Primary Text",
+    "group": "Buttons",
+    "defaultValue": "More about us"
+   },
+   {
+    "id": "c384b690-0143-d878-5147-881f3d0e10c2",
+    "type": "link",
+    "name": "Primary Link",
+    "group": "Buttons",
+    "defaultValue": {
+     "mode": "url",
+     "to": "/about"
+    }
+   },
+   {
+    "id": "b0821b52-8c7d-8962-4f99-ea280a8362cd",
+    "type": "boolean",
+    "name": "Secondary Visibility",
+    "group": "Buttons",
+    "defaultValue": true
+   },
+   {
+    "id": "3a9e7fd4-b2f8-a837-086a-da511c7698c5",
+    "type": "textContent",
+    "name": "Secondary Text",
+    "group": "Buttons",
+    "defaultValue": "See what experts deliver"
+   },
+   {
+    "id": "9c187683-8936-d0dc-f5fe-3ae858be69bc",
+    "type": "link",
+    "name": "Secondary Link",
+    "group": "Buttons",
+    "defaultValue": {
+     "mode": "url",
+     "to": "/project-delivery-experts"
+    }
+   },
+   {
+    "id": "4409fe23-c381-ccb3-ec04-628ba02267f3",
+    "type": "image",
+    "name": "Image",
+    "group": "Image"
+   },
+   {
+    "id": "cbe0e7c7-42d9-5315-d390-349bb2d67d76",
+    "type": "altText",
+    "name": "Image Alt",
+    "group": "Image",
+    "defaultValue": "inherit"
+   },
+   {
+    "id": "96ca4281-1e3e-014e-ae81-0121f596e0b8",
+    "type": "string",
+    "name": "Space Top",
+    "group": "Layout",
+    "tooltip": "Space above the block: large (192 px), main (96 px) or none",
+    "defaultValue": "large"
+   },
+   {
+    "id": "c41c22a3-9ad0-a584-9be2-f84cbb4d7487",
+    "type": "boolean",
+    "name": "Glow",
+    "group": "Layout",
+    "tooltip": "Mint glow along the bottom of the block",
+    "defaultValue": false
+   },
+   {
+    "id": "51e36dc6-fc5b-c01d-f897-d83568c9f2d4",
+    "type": "slot",
+    "name": "Slot"
+   },
+   {
+    "id": "a2988c87-b305-28ea-9530-43fabc58deb0",
+    "type": "slot",
+    "name": "Slot"
+   }
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Image Right",
+    "isSelected": true
+   },
+   {
+    "id": "60a878d8-c287-2b13-3899-ef1dca2aeeaf",
+    "name": "Image Left",
+    "isSelected": false
+   }
+  ]
+ },
+ {
+  "id": "4fa331b7-bbf3-e025-cd96-3a3fd7c45564",
+  "name": "Global | Custom Code",
+  "group": "Global",
+  "description": "Site-wide CSS/JS that must load before the sections: the hero intro (data-hero-reveal) and the Hero Experts panel gate. One per page, at the top of page_wrap. See decisions/motion.md.",
+  "instanceCount": 1,
+  "props": [],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base",
+    "isSelected": true
+   }
+  ]
+ },
+ {
+  "id": "4f869313-df74-a104-5f38-525a63bf2e32",
+  "name": "Spotlight Grid",
+  "group": "Sections",
+  "description": "Centred eyebrow and two-tone title over three columns: a list of cards, a brand-gradient quote panel with a cut-out photo, a second list of cards. Home «Expertise».",
+  "instanceCount": 2,
+  "props": [
+   {
+    "id": "faba4de9-01a4-c177-bf27-ef6646fe33f6",
+    "type": "variant",
+    "name": "Variant",
+    "defaultValue": "base"
+   },
+   {
+    "id": "6d8eceba-5fae-2dca-997a-f16cc338d888",
+    "type": "slot",
+    "name": "Slot"
+   },
+   {
+    "id": "ccf4d70e-e16c-ea3a-f0ce-80307e845199",
+    "type": "slot",
+    "name": "Slot"
+   },
+   {
+    "id": "1db47eae-3ed0-89aa-58f5-08af54a81360",
+    "type": "string",
+    "name": "Eyebrow",
+    "group": "Content",
+    "defaultValue": "Expertise"
+   },
+   {
+    "id": "8bf04532-7914-931f-80ba-19b35352c1e2",
+    "type": "string",
+    "name": "Title",
+    "group": "Content",
+    "defaultValue": "Six disciplines."
+   },
+   {
+    "id": "1a35c214-54e9-1053-544d-fcb528a09058",
+    "type": "string",
+    "name": "Title Muted",
+    "group": "Content",
+    "tooltip": "Second line of the title, at 50 %.",
+    "defaultValue": "One standard."
+   },
+   {
+    "id": "aee1ca8c-bd38-1ff4-7dc2-522634891908",
+    "type": "boolean",
+    "name": "Text Visibility",
+    "group": "Content",
+    "defaultValue": false
+   },
+   {
+    "id": "1bd5eea4-8dfa-23f8-8981-88cbf27f63b8",
+    "type": "string",
+    "name": "Text",
+    "group": "Content",
+    "tooltip": "Line under the title (Text Visibility on).",
+    "defaultValue": "Honest feedback from employers we've supported on complex international projects."
+   },
+   {
+    "id": "892a2d8d-2e54-bd51-15fe-8df1ce036b5d",
+    "type": "string",
+    "name": "Quote",
+    "group": "Quote",
+    "tooltip": "Panel quote. Not shown in the Reviews variant.",
+    "defaultValue": "HumAIn is my go‑to source to find high‑quality talent"
+   },
+   {
+    "id": "00947a1d-2590-a3a8-fc0c-e2dbb8595ec3",
+    "type": "string",
+    "name": "Name",
+    "group": "Quote",
+    "defaultValue": "Lisette"
+   },
+   {
+    "id": "2205128f-925e-1d14-6b44-f7d88a4d5eb2",
+    "type": "string",
+    "name": "Role",
+    "group": "Quote",
+    "defaultValue": "Chief Operations Officer"
+   },
+   {
+    "id": "7b2dc3c0-c0f5-5f82-666a-b4d4f00e0371",
+    "type": "string",
+    "name": "Company",
+    "group": "Quote",
+    "defaultValue": "Ingeniva"
+   },
+   {
+    "id": "11e1ce29-ec27-83c8-e507-d9e89b3ec347",
+    "type": "image",
+    "name": "Image",
+    "group": "Quote",
+    "tooltip": "Cut-out photo (transparent background), about 3 : 2.",
+    "defaultValue": "6ae8d856812d3edb22206286"
+   },
+   {
+    "id": "13c3ab63-8941-b178-d5c5-997a35a4b21c",
+    "type": "altText",
+    "name": "Image Alt",
+    "group": "Quote",
+    "defaultValue": "Smiling businesswoman with curly hair looking up"
+   },
+   {
+    "id": "55844cd3-75bf-57df-4d33-5d8c0b309e0d",
+    "type": "boolean",
+    "name": "Rating Visibility",
+    "group": "Rating",
+    "defaultValue": false
+   },
+   {
+    "id": "5f613406-676c-e7d2-d8b0-8a84a6a68d52",
+    "type": "string",
+    "name": "Rating Text",
+    "group": "Rating",
+    "tooltip": "Next to the five stars.",
+    "defaultValue": "4.9 / 5·based on 3 client reviews"
+   },
+   {
+    "id": "25ad6ee9-9398-0da3-efb2-709c598a3ea1",
+    "type": "boolean",
+    "name": "Button Visibility",
+    "group": "Button",
+    "defaultValue": false
+   },
+   {
+    "id": "23cc0f93-344d-28ff-48ec-8fcebafc5496",
+    "type": "string",
+    "name": "Button Text",
+    "group": "Button",
+    "defaultValue": "See all clients"
+   },
+   {
+    "id": "617660ee-c4a4-4cbb-5b0c-6f10b0e3d075",
+    "type": "link",
+    "name": "Button Link",
+    "group": "Button",
+    "defaultValue": {
+     "mode": "url",
+     "to": "/clients"
+    }
+   },
+   {
+    "id": "2fd3e945-f09b-4246-29cb-0fb060a59eef",
+    "type": "slot",
+    "name": "Slot"
+   }
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base",
+    "isSelected": true
+   },
+   {
+    "id": "b3033716-7cb7-aab2-2d79-4ee7fc33ac44",
+    "name": "Reviews",
+    "isSelected": false
+   }
+  ]
+ },
+ {
+  "id": "6ca4bdaf-7a88-b652-31e1-a72a62721497",
+  "name": "Rich Content",
+  "group": "Sections",
+  "description": "Long free-form text in one centred column (privacy, cookies, terms). Paste the whole text into Content; use H2 for section titles (shown at the H3 size).",
+  "instanceCount": 1,
+  "props": [
+   {
+    "id": "1a05a25f-8c84-1d32-3ad6-1dff54c45383",
+    "type": "textContent",
+    "name": "Title",
+    "tooltip": "Opening title of this block, always an H2. Always fill it in.",
+    "defaultValue": "Egestas nisl quisque diam felis ac."
+   },
+   {
+    "id": "411b0f7d-7adf-2a36-637f-9ed1c6eb684c",
+    "type": "richText",
+    "name": "Content",
+    "tooltip": "The whole text. Use Heading 2 for section titles; paragraphs, lists and links are styled for you.",
+    "defaultValue": {
+     "innerText": "Sit nibh odio adipiscing dui tristique elit facilisis bibendum pretium. Sit nam amet ac bibendum integer pellentesque ut dignissim. Mi nibh nulla facilisis imperdiet. Ornare placerat rhoncus in ut lorem velit."
+    }
+   }
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base",
+    "isSelected": true
+   }
+  ]
+ },
+ {
+  "id": "0a616993-6c18-5a74-963e-a5595d56d317",
+  "name": "CTA Split",
+  "group": "Sections",
+  "description": "Call-to-action card: photo beside title, text and two buttons on the Brand colour. Below 992 text first, then the photo. Space Top: none (default) / main / large.",
+  "instanceCount": 1,
+  "props": [
+   {
+    "id": "64bf6614-0880-f43d-146f-30c18e4c0d2e",
+    "type": "textContent",
+    "name": "Title",
+    "group": "Content",
+    "tooltip": "White part of the title",
+    "defaultValue": "Looking for a senior"
+   },
+   {
+    "id": "770b7d3c-b947-8968-9721-569e06d71b88",
+    "type": "textContent",
+    "name": "Title Muted",
+    "group": "Content",
+    "tooltip": "Faded part after the title; leave empty for a one-colour title",
+    "defaultValue": "project-controls expert?"
+   },
+   {
+    "id": "41b64a80-8015-3465-0463-f098867bf506",
+    "type": "textContent",
+    "name": "Text",
+    "group": "Content",
+    "defaultValue": "Tell us about the role — we'll come back with a transparent quote and a shortlist within days."
+   },
+   {
+    "id": "b357dd35-687f-1a19-a0f4-c124fa526525",
+    "type": "boolean",
+    "name": "Primary Visibility",
+    "group": "Buttons",
+    "defaultValue": true
+   },
+   {
+    "id": "f208bd26-77cd-273e-f617-affbc14460fd",
+    "type": "textContent",
+    "name": "Primary Text",
+    "group": "Buttons",
+    "defaultValue": "Hire an expert"
+   },
+   {
+    "id": "bf9b0da0-2222-142c-842a-3a6f0ce1c97e",
+    "type": "link",
+    "name": "Primary Link",
+    "group": "Buttons",
+    "defaultValue": {
+     "mode": "url",
+     "to": "/hire-an-expert"
+    }
+   },
+   {
+    "id": "a0a09671-4d99-6034-5e7d-8c50e53074c0",
+    "type": "boolean",
+    "name": "Secondary Visibility",
+    "group": "Buttons",
+    "defaultValue": true
+   },
+   {
+    "id": "120e94b4-f1c9-44a5-7459-bf514155d3df",
+    "type": "textContent",
+    "name": "Secondary Text",
+    "group": "Buttons",
+    "defaultValue": "Discuss your challenge"
+   },
+   {
+    "id": "122427e0-7468-5221-d936-937efc9dfbe5",
+    "type": "link",
+    "name": "Secondary Link",
+    "group": "Buttons",
+    "defaultValue": {
+     "mode": "url",
+     "to": "/contact"
+    }
+   },
+   {
+    "id": "67581a6d-128a-796f-3ff2-84aa20d1e3e7",
+    "type": "image",
+    "name": "Image",
+    "group": "Image",
+    "defaultValue": "6ae8d89abe7ead5af35234f6"
+   },
+   {
+    "id": "c37bae87-6daa-6add-abfc-3310f603bc2c",
+    "type": "altText",
+    "name": "Image Alt",
+    "group": "Image",
+    "defaultValue": "inherit"
+   },
+   {
+    "id": "c09f6dc3-679a-1d88-ac48-b6c7cf36c46b",
+    "type": "string",
+    "name": "Space Top",
+    "group": "Layout",
+    "tooltip": "Space above the block: none (default), main (96 px) or large (192 px)",
+    "defaultValue": "none"
+   }
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base",
+    "isSelected": true
+   }
+  ]
+ },
+ {
+  "id": "d65316c1-37ec-3a06-8681-64025ba070cf",
+  "name": "Score Item",
+  "group": "Visuals",
+  "description": "One row of Score Chart: colour dot, label and weight (e.g. 25%). The weight also sets this item's share of the bar. Colour follows the position in the list.",
+  "instanceCount": 7,
+  "props": [
+   {
+    "id": "4f2c0444-ba8a-94cb-ec79-6538748104da",
+    "type": "textContent",
+    "name": "Label",
+    "group": "Content",
+    "defaultValue": "Delivery Evidence"
+   },
+   {
+    "id": "9f35f467-31c2-98cb-6bc9-7ed004a0b432",
+    "type": "textContent",
+    "name": "Value",
+    "group": "Content",
+    "tooltip": "Weight with %, e.g. 25%. Sets this item's share of the bar.",
+    "defaultValue": "25%"
+   }
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base",
+    "isSelected": true
+   }
+  ]
+ },
+ {
+  "id": "148e47b1-ffa4-76c1-626a-4172a66101b7",
+  "name": "Step Item",
+  "group": "Visuals",
+  "description": "One numbered row of Step List: grey row, mint number (counted automatically) and a title.",
+  "instanceCount": 4,
+  "props": [
+   {
+    "id": "7d6d0099-f814-88c1-ff43-0a3b64047383",
+    "type": "textContent",
+    "name": "Title",
+    "group": "Content",
+    "defaultValue": "How we qualify the top 5%"
+   }
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base",
+    "isSelected": true
+   }
+  ]
+ },
+ {
+  "id": "9be009c9-e783-0d7a-e310-693e40e07686",
+  "name": "Score Chart",
+  "group": "Visuals",
+  "description": "Weighted bar with a two-column legend. Put Score Item rows in the Items slot; the bar is drawn from their weights. For the Visual slot of Split Content. Figma Content / Final score.",
+  "instanceCount": 1,
+  "props": [
+   {
+    "id": "a2b412ad-a576-4dfd-a9a9-bc3f8c6d3079",
+    "type": "slot",
+    "name": "Slot"
+   }
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base",
+    "isSelected": true
+   }
+  ]
+ },
+ {
+  "id": "f8233319-9b9f-4a6d-cba0-1aeaecc2d9fa",
+  "name": "Step List",
+  "group": "Visuals",
+  "description": "Numbered list of grey rows. Put Step Item rows in the Items slot; numbers count themselves. For the Visual slot of Split Content. Figma Content / Trust statement.",
+  "instanceCount": 1,
+  "props": [
+   {
+    "id": "fcd64876-84cb-e8ac-0695-3ea8e9516ca5",
+    "type": "slot",
+    "name": "Slot"
+   }
+  ],
+  "variants": [
+   {
+    "id": "base",
+    "name": "Base",
+    "isSelected": true
    }
   ]
  }

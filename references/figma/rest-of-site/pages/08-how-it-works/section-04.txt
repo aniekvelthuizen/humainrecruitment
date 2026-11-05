@@ -1,0 +1,29 @@
+# Frame 576 (2292:33020) 1512x765
+  T Client journey [16]: "Client journey"
+  T What happens after you contact us? [60]: "What happens after you contact us?"
+  T Four things that set us apart from day one. [20]: "Four things that set us apart from day one."
+   I "Prop 2" -> Card / Service / type=variant4 (2292:33162) 251x200 {"type":"variant4"}
+     I "Google icons" -> Google icons / type=assignment-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1-1 (2292:33276) 48x48 {"type":"assignment-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1-1"}
+      T Day 1 [14]: "Day 1"
+     T Requirement [24]: "Requirement"
+     T 30 min [36]: "Day 1"
+   I "Prop 3" -> Card / Service / type=variant4 (2292:33162) 251x200 {"type":"variant4"}
+     I "Google icons" -> Google icons / type=list-alt-check-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2292:33275) 48x48 {"type":"list-alt-check-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+      T Day 1 [14]: "Day 2–4"
+     T Requirement [24]: "Shortlist"
+     T 30 min [36]: "72 hrs"
+   I "Prop 4" -> Card / Service / type=variant4 (2292:33162) 251x200 {"type":"variant4"}
+     I "Google icons" -> Google icons / type=handshake-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2283:9214) 48x48 {"type":"handshake-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+      T Day 1 [14]: "Day 5+"
+     T Requirement [24]: "Interview"
+     T 30 min [36]: "Top 5%"
+   I "Prop 5" -> Card / Service / type=variant4 (2292:33162) 251x200 {"type":"variant4"}
+     I "Google icons" -> Google icons / type=check-circle-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2263:7147) 48x48 {"type":"check-circle-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+      T Day 1 [14]: "Start"
+     T Requirement [24]: "Onboard"
+     T 30 min [36]: "100%"
+   I "Prop 6" -> Card / Service / type=variant4 (2292:33162) 251x200 {"type":"variant4"}
+     I "Google icons" -> Google icons / type=outbound-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2292:33273) 48x48 {"type":"outbound-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+      T Day 1 [14]: "Ongoing"
+     T Requirement [24]: "Deliver"
+     T 30 min [36]: "Support"

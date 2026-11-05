@@ -1,0 +1,46 @@
+# Dynamic / Internal vacancies (2444:35615) 1512x734
+I "Dynamic / Internal vacancies" -> Dynamic / Internal vacancies (2444:35614) 1512x734 {}
+   T dynamic-internal-vacancies_text [16]: "Open positions"
+   T dynamic-internal-vacancies_title [60]: "Join the team"
+   I "Frame 610" -> Card / Opportunity / type=variant4 (2318:20357) 440x385 {"type":"variant4"}
+      I "Frame 615" -> Tag / Contract type (2070:5448) 81x26 {}
+       T Permanent [14]: "Full-time"
+      I "Frame 616" -> Tag / Contract type (2070:5448) 104x26 {}
+       T Permanent [14]: "Recruitment"
+     T Recruitment Consultant — Project Controls [30]: "Recruitment Consultant — Project Controls"
+      I "Tag / Location" -> Tag / Location (2070:5310) 392x32 {}
+       I "Google icons" -> Google icons / type=location (2069:5308) 32x32 {"type":"location"}
+       T Rotterdam, NL (hybrid) [16]: "Rotterdam, NL (hybrid)"
+      I "Frame 610" -> Tag / Location (2070:5310) 392x32 {}
+       I "Google icons" -> Google icons / type=cv-submission (2263:6755) 32x32 {"type":"cv-submission"}
+       T Rotterdam, NL (hybrid) [16]: "Recruitment"
+     T Own a desk end-to-end: source, validate and place specialists on international projects. [16]: "Own a desk end-to-end: source, validate and place specialists on international projects."
+       T View & apply [16]: "View & apply"
+   I "Frame 611" -> Card / Opportunity / type=variant4 (2318:20357) 440x385 {"type":"variant4"}
+      I "Frame 615" -> Tag / Contract type (2070:5448) 81x26 {}
+       T Permanent [14]: "Full-time"
+      I "Frame 616" -> Tag / Contract type (2070:5448) 78x26 {}
+       T Permanent [14]: "Delivery"
+     T Recruitment Consultant — Project Controls [30]: "Account & Delivery Manager"
+      I "Tag / Location" -> Tag / Location (2070:5310) 392x32 {}
+       I "Google icons" -> Google icons / type=location (2069:5308) 32x32 {"type":"location"}
+       T Rotterdam, NL (hybrid) [16]: "Rotterdam, NL"
+      I "Frame 610" -> Tag / Location (2070:5310) 392x32 {}
+       I "Google icons" -> Google icons / type=cv-submission (2263:6755) 32x32 {"type":"cv-submission"}
+       T Rotterdam, NL (hybrid) [16]: "Client delivery"
+     T Own a desk end-to-end: source, validate and place specialists on international projects. [16]: "Keep clients and placed specialists happy from kick-off to delivery."
+       T View & apply [16]: "View & apply"
+   I "Frame 612" -> Card / Opportunity / type=variant4 (2318:20357) 440x385 {"type":"variant4"}
+      I "Frame 615" -> Tag / Contract type (2070:5448) 81x26 {}
+       T Permanent [14]: "Full-time"
+      I "Frame 616" -> Tag / Contract type (2070:5448) 80x26 {}
+       T Permanent [14]: "Platform"
+     T Recruitment Consultant — Project Controls [30]: "Data / AI Engineer — Talent Platform"
+      I "Tag / Location" -> Tag / Location (2070:5310) 392x32 {}
+       I "Google icons" -> Google icons / type=location (2069:5308) 32x32 {"type":"location"}
+       T Rotterdam, NL (hybrid) [16]: "Remote-friendly (EU)"
+      I "Frame 610" -> Tag / Location (2070:5310) 392x32 {}
+       I "Google icons" -> Google icons / type=cv-submission (2263:6755) 32x32 {"type":"cv-submission"}
+       T Rotterdam, NL (hybrid) [16]: "Engineering"
+     T Own a desk end-to-end: source, validate and place specialists on international projects. [16]: "Build the sourcing & benchmarking engine behind every match."
+       T View & apply [16]: "View & apply"

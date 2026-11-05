@@ -1,0 +1,37 @@
+# Content / Content block (2710:56547) 1512x938
+I "Content / Content block" -> Content / Content block / content-location=true, small=false, list=true (2249:8033) 1512x938 {"content-location":"true","small":"false","list":"true"}
+  I "Assets / Content" -> Assets / Content / dark-mode=false, list=true (2251:6954) 558x554 {"Show Paragraph":true,"Show Sublabel":true,"Title":"Selected by people\nwho did the job.","Show Title":true,"Show Buttons":true,"Show Divider":false,"Paragraph":"Floyd has spent twenty years in project controls on capital projects across energy, industry and infrastructure. He has run these teams himself, from planning through cost control. That experience sets the criteria, and the platform makes them scalable.","Sublabel":"Practitioner credibility","dark-mode":"false","list":"true"}
+    T assets-content_text [16]: "Practitioner credibility"
+    T assets-content_title [48]: "Selected by people\nwho did the job."
+     T assets-content_text [20]: "Floyd has spent twenty years in project controls on capital projects across energy, industry and infrastructure. He has run these teams himself, from planning through cost control. That experience sets the criteria, and the platform makes them scalable."
+       I "quote" -> quote / dark-mode=false (2710:56906) 558x92 {"label text":"Dolor nisi turpis aliquet pellentesque diam elementum viverra. Eros dui vel pellentesque gravida aenean porttitor dictum laoreet.","dark-mode":"false"}
+        T quote_text [20]: "Aliquet vel mauris pellentesque sagittis suscipit. Ornare molestie tristique bibendum faucibus et mi egestas."
+        T quote_text [16]: "Floyd Latumeten"
+    I "Button group" -> Button group / Property 1=Default (2249:6952) 495x48 {"First button":true,"Third button":false,"Second button":true,"Property 1":"Default"}
+     I "Button" -> Button / type=primary, state=rest (2028:2123) 195x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"More about us","type":"primary","state":"rest"}
+       T button_text [18]: "More about us"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+     I "Button" -> Button / type=secondary, state=rest (2028:2133) 284x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"See what experts deliver","type":"secondary","state":"rest"}
+       T button_text [18]: "See what experts deliver"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+   IMG Image 49fece8257c12073ba95db4e1d5821e4c0524585.png 676x451
+   I "Image" -> Image (2249:8010) 676x451 {}
+    I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=3:2 | 2:3, Orientation=Landscape (2249:7100) 676x451 {"Aspect Ratio":"3:2 | 2:3","Orientation":"Landscape"}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}

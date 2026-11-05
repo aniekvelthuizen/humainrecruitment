@@ -1,0 +1,7 @@
+01 | Frame 676 | 2292:8441 | 1512x536 | main: Header default / type=default
+02 | Navbar - Light | 2292:8462 | 1512x180 | main: Navbar - Light / type=default
+03 | Content / Content block | 2292:8553 | 1512x739 | main: Content / Content block / content-location=true, small=false, list=true
+04 | Frame 682 | 2444:34733 | 1512x851 | main: Content / Team / Property 1=Team
+05 | Frame 654 | 2292:8715 | 1512x360 | main: Content / Facts & Figures
+06 | Frame 681 | 2292:8801 | 1512x612 | main: content-cta / device=desktop
+07 | Frame 655 | 2292:8802 | 1512x550 | main: Footer / device=desktop-compact

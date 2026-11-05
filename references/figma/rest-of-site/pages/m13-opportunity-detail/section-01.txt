@@ -1,0 +1,26 @@
+# Frame 676 (2406:51635) 402x644
+I "Frame 676" -> Header default / type=opportunity-mobile (2406:33349) 402x644 {"type":"opportunity-mobile"}
+  I "Button" -> Button / type=back-button, state=rest (2339:28183) 184x32 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Back to oppertunities","type":"back-button","state":"rest"}
+    I "east" -> east / Style=Filled (2028:2097) 16x16 {"Style":"Filled"}
+    T button_text [16]: "Back to oppertunities"
+    I "Line" -> Line / Property 1=Default (2028:2108) 163x1 {"Property 1":"Default"}
+   T header-default_title [36]: "Project Controls Manager"
+    I "Frame 615" -> Tag / Contract type (2070:5448) 95x26 {}
+     T Permanent [14]: "Permanent"
+    I "Frame 616" -> Tag / Contract type (2070:5448) 107x26 {}
+     T Permanent [14]: "Cost Control"
+    I "Frame 617" -> Tag / Contract type (2070:5448) 71x26 {}
+     T Permanent [14]: "Energy"
+   T header-default_text [16]: "Key role in driving cost, planning and reporting performance across a complex capital programme. You'll own the project-controls function and report directly to the programme director."
+    I "Tag / Location" -> Tag / Location (2070:5310) 160x32 {}
+     I "Google icons" -> Google icons / type=location (2069:5308) 32x32 {"type":"location"}
+     T Rotterdam, NL (hybrid) [16]: "The Netherlands"
+    I "Frame 610" -> Tag / Location (2070:5310) 158x32 {}
+     I "Google icons" -> Google icons / type=school (2069:5307) 32x32 {"type":"school"}
+     T Rotterdam, NL (hybrid) [16]: "Oil & Gas Sector"
+    I "Frame 611" -> Tag / Location (2070:5310) 114x32 {}
+     I "Google icons" -> Google icons / type=cost-control-forecasting (2063:4453) 32x32 {"type":"cost-control-forecasting"}
+     T Rotterdam, NL (hybrid) [16]: "90k – 110k"
+    I "Frame 612" -> Tag / Location (2070:5310) 165x32 {}
+     I "Google icons" -> Google icons / type=language-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2318:21493) 32x32 {"type":"language-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T Rotterdam, NL (hybrid) [16]: "NL & EN required"

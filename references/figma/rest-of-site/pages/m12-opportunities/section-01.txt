@@ -1,0 +1,15 @@
+# Header / Opportunities (2398:44859) 402x624
+I "Header / Opportunities" -> Header / Opportunities / device=mobile (2398:32675) 402x624 {"device":"mobile"}
+   T header-opportunities_text [12]: "Opportunities · For Talent"
+    T header-opportunities_title [36]: "Project delivery \nroles, ready for you."
+    T header-opportunities_text [16]: "Browse open project-controls roles across energy, infrastructure and renewables. Not seeing the right fit? Submit your resume and we'll match you proactively."
+  I "Search mobile" -> Search mobile / state=closed (2398:32799) 362x167 {"state":"closed"}
+    I "input-simple" -> input-simple / type=select (2246:5797) 254x63 {"type":"select"}
+     I "input" -> input / small=false, state=rest (2242:5830) 254x63 {"Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Show helper":false,"Helper text":"Alert / Error message","Show icon right":true,"Text":"Role, keyword...","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+       T input_text [12]: "search"
+         T input_text [20]: "Role, keyword..."
+       I "Icon right" -> keyboard_arrow_down / Style=Outlined (2242:5801) 24x24 {"Style":"Outlined"}
+    I "Button" -> Button / type=primary, state=rest (2028:2123) 48x48 {"Icon right":true,"Icon left":false,"Label":false,"Text":"Search","type":"primary","state":"rest"}
+   I "Button" -> Button / type=tertiary, state=rest (2028:2153) 112x32 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Show all filters","type":"tertiary","state":"rest"}
+     T button_text [16]: "Show all filters"
+     I "Line" -> Line / Property 1=Default (2028:2108) 112x1 {"Property 1":"Default"}

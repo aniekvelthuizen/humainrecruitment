@@ -1,0 +1,14 @@
+# Frame 654 (2292:8715) 1512x360
+I "Frame 654" -> Content / Facts & Figures (2292:8714) 1512x360 {}
+ I "Frame 655" -> Card / Stat (2236:4871) 298x168 {}
+  T -25 - 30% [48]: "-25 / 30%"
+  T Lower fees than the market [20]: "Lower fees than the market"
+ I "Frame 656" -> Card / Stat (2236:4871) 298x168 {}
+  T -25 - 30% [48]: "2–4 days"
+  T Lower fees than the market [20]: "To a pre-qualified shortlist"
+ I "Frame 657" -> Card / Stat (2236:4871) 298x168 {}
+  T -25 - 30% [48]: "Top 5%"
+  T Lower fees than the market [20]: "Of validated specialists"
+ I "Frame 658" -> Card / Stat (2236:4871) 298x168 {}
+  T -25 - 30% [48]: "100%"
+  T Lower fees than the market [20]: "Transparent, upfront pricing"

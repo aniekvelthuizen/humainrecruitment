@@ -1,0 +1,11 @@
+# Frame 676 (2283:9755) 1512x586
+I "Frame 676" -> Header default / type=default (2277:7347) 1512x586 {"type":"default"}
+   T header-default_text [16]: "Services · For Business"
+   T header-default_title [72]: "Project controls, made tangible."
+   T header-default_text [20]: "Dashboards, templates, cost models, schedules, see what great project controls actually looks like, and the value the right expert brings. Tell us where you need help; we deliver the person who builds it."
+    I "Button" -> Button / type=primary, state=rest (2028:2123) 247x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Find the right expert","type":"primary","state":"rest"}
+      T button_text [18]: "Find the right expert"
+     I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+    I "Button" -> Button / type=secondary-white, state=rest (2028:2143) 227x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"I need help with ...","type":"secondary-white","state":"rest"}
+      T button_text [18]: "I need help with ..."
+     I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}

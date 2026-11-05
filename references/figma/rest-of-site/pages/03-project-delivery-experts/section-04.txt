@@ -1,0 +1,181 @@
+# Content / Assessment process (2323:33115) 1512x1177
+I "Content / Assessment process" -> Content / Assessment process (2323:33114) 1512x1177 {}
+   T content-assessment-process_text [16]: "Our assessment process"
+   T content-assessment-process_title [60]: "Nine stages,  every expert"
+   T content-assessment-process_text [20]: "What happens on our side before a name reaches your shortlist — the HumAIn Expert Qualification Framework."
+   I "Button" -> Button / type=secondary-white, state=rest (2028:2143) 48x48 {"Icon right":true,"Icon left":false,"Label":false,"Text":"See all clients","type":"secondary-white","state":"rest"}
+   I "Button" -> Button / type=secondary-white, state=rest (2028:2143) 48x48 {"Icon right":true,"Icon left":false,"Label":false,"Text":"See all clients","type":"secondary-white","state":"rest"}
+  IMG content-assessment-process_img 698af3eb4fa34ba68594f85aec7e3c3eb3a03f8b.png 322x488
+   I "Prop 13" -> Card / Process stage (2256:11517) 322x488 {"Label":true,"Sub label":false,"Details":false}
+   IMG content-assessment-process_img 698af3eb4fa34ba68594f85aec7e3c3eb3a03f8b.png 322x488
+  I "Prop 12" -> Card / Process stage (2256:11517) 322x488 {"Label":true,"Sub label":true,"Details":true}
+     I "Google icons" -> Google icons / type=cv-submission (2263:6755) 48x48 {"type":"cv-submission"}
+     T accept / reject [12]: "accept / reject"
+    T stage 1 [12]: "stage 1"
+    T Application & CV Submission [24]: "Application & CV Submission"
+    T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type."
+     T assessed [12]: "assessed"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Project delivery background"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Relevant discipline"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Career consistency"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Language requirements"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Industry relevance"
+  I "Prop 4" -> Card / Process stage (2256:11517) 322x488 {"Label":true,"Sub label":true,"Details":true}
+     I "Google icons" -> Google icons / type=person-search-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2045:11310) 48x48 {"type":"person-search-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T accept / reject [12]: "top 30%"
+    T stage 1 [12]: "stage 2"
+    T Application & CV Submission [24]: "Profile Screening"
+    T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Validate career quality and relevance. A recruiter and AI assessment system review career progression, project size, leadership exposure, industry expertise and longevity in roles."
+     T assessed [12]: "Example checks"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Worked on €100M+ projects?"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Responsible for budgets?"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Managed teams?"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Relevant sectors?"
+  I "Prop 5" -> Card / Process stage (2256:11517) 322x488 {"Label":true,"Sub label":true,"Details":true}
+     I "Google icons" -> Google icons / type=fact-check-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2263:7129) 48x48 {"type":"fact-check-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T accept / reject [12]: "top 20%"
+    T stage 1 [12]: "stage 3"
+    T Application & CV Submission [24]: "Experience Validation"
+    T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Verify claimed achievements. Instead of accepting CV statements, HumAIn investigates actual responsibilities, reporting lines, project value, team size and stakeholder complexity."
+     T assessed [12]: "We investigate"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Was candidate lead planner?"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Team size & duration"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Reporting lines"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Outcome achieved"
+  I "Prop 6" -> Card / Process stage (2256:11517) 322x488 {"Label":true,"Sub label":true,"Details":true}
+     I "Google icons" -> Google icons / type=computer-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2263:7132) 48x48 {"type":"computer-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T accept / reject [12]: "scored"
+    T stage 1 [12]: "stage 4"
+    T Application & CV Submission [24]: "Technical Assessment"
+    T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Assess professional competence with discipline-specific testing — Project Controls, Planning & Scheduling, Cost Control and Project Management."
+     T assessed [12]: "Examples by discipline"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x36 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Earned Value Management & forecasting"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Primavera P6 & critical path analysis"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Cost engineering & variance analysis"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Governance, risk & stakeholder mgmt"
+  I "Prop 7" -> Card / Process stage (2256:11517) 322x488 {"Label":true,"Sub label":true,"Details":true}
+     I "Google icons" -> Google icons / type=avg-time-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2263:7135) 48x48 {"type":"avg-time-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T accept / reject [12]: "scored"
+    T stage 1 [12]: "stage 5"
+    T Application & CV Submission [24]: "Behaviour & Performance Assessment"
+    T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Predict real-world delivery success. Candidates describe a project recovery, a major conflict resolution and a significant project risk."
+     T assessed [12]: "assessed"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Communication & leadership"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Decision making & ownership"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Resilience"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Stakeholder management"
+  I "Prop 9" -> Card / Process stage (2256:11517) 322x488 {"Label":true,"Sub label":true,"Details":true}
+     I "Google icons" -> Google icons / type=call-log-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2263:7138) 48x48 {"type":"call-log-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T accept / reject [12]: "scored"
+    T stage 1 [12]: "stage 6"
+    T Application & CV Submission [24]: "Reference Validation"
+    T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Independent verification via references from project directors, functional managers, clients and programme leaders."
+     T assessed [12]: "Questions asked"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Would you hire them again?"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Biggest strengths?"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Improvement areas?"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Level compared to peers?"
+  I "Prop 10" -> Card / Process stage (2256:11517) 322x488 {"Label":true,"Sub label":true,"Details":true}
+     I "Google icons" -> Google icons / type=action-key-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2263:7144) 48x48 {"type":"action-key-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T accept / reject [12]: "approved"
+    T stage 1 [12]: "stage 7"
+    T Application & CV Submission [24]: "Expert Review Panel"
+    T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Human validation. Senior specialists review the CV, assessment results, references and market positioning."
+     T assessed [12]: "They determine"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Seniority level"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Sector fit"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Deployment readiness"
+  I "Prop 11" -> Card / Process stage (2256:11517) 322x488 {"Label":true,"Sub label":true,"Details":true}
+     I "Google icons" -> Google icons / type=insert-chart-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2263:10558) 48x48 {"type":"insert-chart-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T accept / reject [12]: "ranked"
+    T stage 1 [12]: "stage 8"
+    T Application & CV Submission [24]: "Benchmarking & Ranking"
+    T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Compare professionals against peers across 200+ industry skills — technical capability, leadership, delivery experience and reference strength."
+     T assessed [12]: "Example score"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Technical — 92"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Leadership — 87"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "Delivery — 95"
+     I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+      T bullet_text [14]: "References — 90"
+   I "Prop 12" -> Card / Process stage (2256:11517) 322x488 {"Label":true,"Sub label":true,"Details":true}
+      I "Google icons" -> Google icons / type=check-circle-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2263:7147) 48x48 {"type":"check-circle-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+      T accept / reject [12]: "certified"
+     T stage 1 [12]: "stage 9"
+     T Application & CV Submission [24]: "Accepted into HumAIn Network"
+     T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Only candidates that surpass the benchmark enter the pool, with status: Certified HumAIn Expert."
+      T assessed [12]: "Profile includes"
+      I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+       I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+       T bullet_text [14]: "Qualification score"
+      I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+       I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+       T bullet_text [14]: "Sector & role specialization"
+      I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+       I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+       T bullet_text [14]: "Availability & mobility"
+      I "bullet" -> bullet / type=14 (2028:2716) 282x19 {"type":"14"}
+       I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+       T bullet_text [14]: "Language capability"

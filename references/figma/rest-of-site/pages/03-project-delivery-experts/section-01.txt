@@ -1,0 +1,8 @@
+# Frame 676 (2277:7690) 1512x586
+I "Frame 676" -> Header default / type=default (2277:7347) 1512x586 {"type":"default"}
+   T header-default_text [16]: "Hiring · For Business"
+   T header-default_title [72]: "How we qualify the Top 5%"
+   T header-default_text [20]: "Before any expert reaches you, they pass through our assessment process. This is how we separate proven performers from polished CVs — so \"pre-qualified\" actually means something."
+    I "Button" -> Button / type=primary, state=rest (2028:2123) 259x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Hire a qualified expert","type":"primary","state":"rest"}
+      T button_text [18]: "Hire a qualified expert"
+     I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}

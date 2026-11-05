@@ -1,0 +1,5 @@
+# Frame 676 (2314:18516) 1512x464
+I "Frame 676" -> Header default / type=default (2277:7347) 1512x464 {"type":"default"}
+   T header-default_text [16]: "Contact"
+   T header-default_title [72]: "Let's talk."
+   T header-default_text [20]: "Hiring, scoping a project, or exploring a role — tell us what you need and we'll come back within one working day."

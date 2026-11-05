@@ -1,0 +1,53 @@
+# Frame 710 (2444:35462) 1512x1144
+I "Frame 710" -> Static / Contact form / type=resume (2444:35461) 1512x1144 {"type":"resume"}
+  T static-contact-form_title [48]: "Resume"
+   I "Google icons" -> Google icons / type=cv-submission (2263:6755) 48x48 {"type":"cv-submission"}
+   T static-contact-form_text [20]: "Drop your CV here or browse"
+   T static-contact-form_text [16]: "PDF or Word · max 10MB"
+   I "input-simple" -> input-simple / type=text (2314:18530) 322x67 {"type":"text"}
+    I "input" -> input / small=false, state=rest (2242:5830) 322x67 {"Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Show helper":false,"Helper text":"Alert / Error message","Show icon right":false,"Text":"","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+      T input_text [12]: "First name"
+        T input_text [20]: ""
+   I "input-simple" -> input-simple / type=text (2314:18530) 322x67 {"type":"text"}
+    I "input" -> input / small=false, state=rest (2242:5830) 322x67 {"Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Show helper":false,"Helper text":"Alert / Error message","Show icon right":false,"Text":"","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+      T input_text [12]: "last name"
+        T input_text [20]: ""
+   I "input-simple" -> input-simple / type=text (2314:18530) 322x67 {"type":"text"}
+    I "input" -> input / small=false, state=rest (2242:5830) 322x67 {"Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Show helper":false,"Helper text":"Alert / Error message","Show icon right":false,"Text":"you@company.com","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+      T input_text [12]: "Email"
+        T input_text [20]: "you@company.com"
+   I "input-simple" -> input-simple / type=text (2314:18530) 322x67 {"type":"text"}
+    I "input" -> input / small=false, state=rest (2242:5830) 322x67 {"Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Show helper":false,"Helper text":"Alert / Error message","Show icon right":false,"Text":"+31","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+      T input_text [12]: "Phone"
+        T input_text [20]: "+31"
+   I "input-simple" -> input-simple / type=text (2314:18530) 322x67 {"type":"text"}
+    I "input" -> input / small=false, state=rest (2242:5830) 322x67 {"Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Show helper":false,"Helper text":"Alert / Error message","Show icon right":true,"Text":"A company looking to hire","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+      T input_text [12]: "Discipline"
+        T input_text [20]: "A company looking to hire"
+      I "Icon right" -> keyboard_arrow_down / Style=Outlined (2242:5801) 24x24 {"Style":"Outlined"}
+   I "input-simple" -> input-simple / type=text (2314:18530) 322x67 {"type":"text"}
+    I "input" -> input / small=false, state=rest (2242:5830) 322x67 {"Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Show helper":false,"Helper text":"Alert / Error message","Show icon right":true,"Text":"Immediately","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+      T input_text [12]: "Availability"
+        T input_text [20]: "Immediately"
+      I "Icon right" -> keyboard_arrow_down / Style=Outlined (2242:5801) 24x24 {"Style":"Outlined"}
+   I "input-simple" -> input-simple / type=text (2314:18530) 676x201 {"type":"text"}
+    I "input" -> input / small=false, state=rest (2242:5830) 676x201 {"Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Show helper":false,"Helper text":"Alert / Error message","Show icon right":false,"Text":"Preferred sectors, locations, day rate...","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+      T input_text [12]: "Anything we should know? (optional)"
+        T input_text [20]: "Preferred sectors, locations, day rate..."
+   T static-contact-form_text [16]: "We reply within one working day."
+   I "Button" -> Button / type=primary, state=rest (2028:2123) 238x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Analyse my resume","type":"primary","state":"rest"}
+     T button_text [18]: "Analyse my resume"
+    I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+    T static-contact-form_title [30]: "Why join the pool?"
+     I "bullet" -> bullet / type=18 (2318:18988) 644x27 {"type":"18"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 26x26 {"type":"check"}
+      T bullet_text [18]: "Matched proactively to relevant roles"
+     I "Frame 718" -> bullet / type=18 (2318:18988) 644x27 {"type":"18"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 26x26 {"type":"check"}
+      T bullet_text [18]: "Benchmarked on proof, not CV wording"
+     I "Frame 719" -> bullet / type=18 (2318:18988) 644x27 {"type":"18"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 26x26 {"type":"check"}
+      T bullet_text [18]: "One submission, ongoing opportunities"
+     I "Frame 720" -> bullet / type=18 (2318:18988) 644x27 {"type":"18"}
+      I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 26x26 {"type":"check"}
+      T bullet_text [18]: "No spam, only relevant introductions"

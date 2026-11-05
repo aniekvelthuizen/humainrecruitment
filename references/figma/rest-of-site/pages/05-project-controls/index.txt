@@ -1,0 +1,8 @@
+01 | Frame 676 | 2283:9755 | 1512x586 | main: Header default / type=default
+02 | Navbar - Light | 2283:9771 | 1512x180 | main: Navbar - Light / type=default
+03 | Content / Content block | 2283:9947 | 1512x797 | main: Content / Content block / content-location=true, small=false, list=true
+04 | Frame 680 | 2444:34381 | 1512x1242 | main: Content / Grid of cards / type=dark-small
+05 | Content / Content block | 2287:10206 | 1512x835 | main: Content / Content block / content-location=false, small=false, list=false
+06 | Frame 681 | 2444:34699 | 1510x1018 | main: Content / Team / Property 1=Experts, Property 2=Team
+07 | Frame 654 | 2292:8303 | 1512x612 | main: content-cta / device=desktop
+08 | Frame 655 | 2292:8304 | 1512x550 | main: Footer / device=desktop-compact

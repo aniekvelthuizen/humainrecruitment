@@ -1,0 +1,41 @@
+# Frame 680 (2444:34381) 1512x1242
+I "Frame 680" -> Content / Grid of cards / type=dark-small (2444:34380) 1512x1242 {"type":"dark-small"}
+   T content-grid-of-cards_text [16]: "What it looks like"
+   T content-grid-of-cards_title [60]: "Project-controls deliverables"
+   T content-grid-of-cards_text [20]: "A sample of dashboards, templates and models our experts produce."
+   I "Prop 3" -> Card / Process stage (2256:11517) 440x198 {"Label":false,"Sub label":false,"Details":false}
+      I "Google icons" -> Google icons / type=dashboard-2-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2283:9217) 48x48 {"type":"dashboard-2-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T Application & CV Submission [24]: "Cost & budget dashboard"
+     T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Live view of committed, actual and forecast cost against budget."
+   I "Prop 4" -> Card / Process stage (2256:11517) 440x198 {"Label":false,"Sub label":false,"Details":false}
+      I "Google icons" -> Google icons / type=cost-control-forecasting (2063:4453) 48x48 {"type":"cost-control-forecasting"}
+     T Application & CV Submission [24]: "Earned value (EVM)"
+     T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "CPI / SPI tracking to show whether delivery is on plan."
+   I "Prop 5" -> Card / Process stage (2256:11517) 440x198 {"Label":false,"Sub label":false,"Details":false}
+      I "Google icons" -> Google icons / type=monitoring-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2283:9220) 48x48 {"type":"monitoring-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T Application & CV Submission [24]: "Integrated schedule (P6)"
+     T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Baseline, critical path and milestone tracking."
+   I "Prop 6" -> Card / Process stage (2256:11517) 440x198 {"Label":false,"Sub label":false,"Details":false}
+      I "Google icons" -> Google icons / type=gpp-maybe-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1-1 (2283:9218) 48x48 {"type":"gpp-maybe-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1-1"}
+     T Application & CV Submission [24]: "Risk register"
+     T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Quantified risk, mitigation and exposure over time."
+   I "Prop 7" -> Card / Process stage (2256:11517) 440x198 {"Label":false,"Sub label":false,"Details":false}
+      I "Google icons" -> Google icons / type=table-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2287:10200) 48x48 {"type":"table-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T Application & CV Submission [24]: "Cost forecasting model"
+     T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Excel-based forecasting with scenarios and cashflow."
+   I "Prop 9" -> Card / Process stage (2256:11517) 440x198 {"Label":false,"Sub label":false,"Details":false}
+      I "Google icons" -> Google icons / type=analytics-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2283:9216) 48x48 {"type":"analytics-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T Application & CV Submission [24]: "Executive reporting pack"
+     T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "One-page status for leadership, generated each period."
+   I "Prop 10" -> Card / Process stage (2256:11517) 440x198 {"Label":false,"Sub label":false,"Details":false}
+      I "Google icons" -> Google icons / type=published-with-changes-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2283:9215) 48x48 {"type":"published-with-changes-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T Application & CV Submission [24]: "Change & baseline control"
+     T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Disciplined change management with a defensible baseline."
+   I "Prop 11" -> Card / Process stage (2256:11517) 440x198 {"Label":false,"Sub label":false,"Details":false}
+      I "Google icons" -> Google icons / type=playlist-add-check-circle-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2263:7141) 48x48 {"type":"playlist-add-check-circle-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T Application & CV Submission [24]: "Document control register"
+     T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Controlled, traceable, audit-ready documentation."
+   I "Prop 12" -> Card / Process stage (2256:11517) 440x198 {"Label":false,"Sub label":false,"Details":false}
+      I "Google icons" -> Google icons / type=computer-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2263:7132) 48x48 {"type":"computer-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T Application & CV Submission [24]: "Interface & dependency matrix"
+     T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Manage hand-offs across multi-party programmes."

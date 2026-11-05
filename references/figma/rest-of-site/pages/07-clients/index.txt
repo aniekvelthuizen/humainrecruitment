@@ -1,0 +1,6 @@
+01 | Frame 676 | 2292:8939 | 1512x877 | main: Header default / type=vertical
+02 | Navbar - Light | 2292:8940 | 1512x180 | main: Navbar - Light / type=default
+03 | Dynamic / Cases  | 2444:34827 | 1512x947 | main: Dynamic / Cases 
+04 | Frame 654 | 2292:28852 | 1512x1560 | main: content-testimonials / device=desktop
+05 | Frame 681 | 2292:28949 | 1512x744 | main: content-cta / device=desktop
+06 | Frame 655 | 2292:28950 | 1512x550 | main: Footer / device=desktop-compact

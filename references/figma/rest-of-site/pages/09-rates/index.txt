@@ -1,0 +1,6 @@
+01 | Frame 676 | 2304:33648 | 1512x1061 | main: Header default / type=vertical-pricing
+02 | Navbar - Light | 2304:33649 | 1512x180 | main: Navbar - Light / type=default
+03 | Dynamic / Rates | 2444:35280 | 1512x951 | main: Dynamic / Rates
+04 | Dynamic / FAQ | 2444:35310 | 1512x987 | main: Dynamic / FAQ
+05 | Frame 681 | 2307:43222 | 1512x612 | main: content-cta / device=desktop
+06 | Frame 655 | 2307:43223 | 1512x550 | main: Footer / device=desktop-compact

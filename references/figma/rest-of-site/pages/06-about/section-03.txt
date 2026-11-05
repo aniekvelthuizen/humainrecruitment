@@ -1,0 +1,33 @@
+# Content / Content block (2292:8553) 1512x739
+I "Content / Content block" -> Content / Content block / content-location=true, small=false, list=true (2249:8033) 1512x739 {"content-location":"true","small":"false","list":"true"}
+  I "Assets / Content" -> Assets / Content / dark-mode=false, list=true (2251:6954) 528x419 {"Show Paragraph":true,"Show Sublabel":true,"Title":"Recruitment that proves, not promises.","Show Title":true,"Show Buttons":false,"Show Divider":false,"Paragraph":"Our mission is to connect complex international projects with the specialists who can actually deliver them — judged on evidence, placed transparently, at a fairer fee.","Sublabel":"Vision & Mission","dark-mode":"false","list":"true"}
+    T assets-content_text [16]: "Vision & Mission"
+    T assets-content_title [48]: "Recruitment that proves, not promises."
+     T assets-content_text [20]: "Our mission is to connect complex international projects with the specialists who can actually deliver them — judged on evidence, placed transparently, at a fairer fee."
+       I "content-spec-list-item" -> content-spec-list-item / dark-mode=false (2251:6991) 528x27 {"label text":"Validate proven performers over polished CVs","dark-mode":"false"}
+        T content-spec-list-item_text [18]: "Validate proven performers over polished CVs"
+       I "content-spec-list-item" -> content-spec-list-item / dark-mode=false (2251:6991) 528x27 {"label text":"Pass AI efficiency on as lower fees","dark-mode":"false"}
+        T content-spec-list-item_text [18]: "Pass AI efficiency on as lower fees"
+       I "content-spec-list-item" -> content-spec-list-item / dark-mode=false (2251:6991) 528x27 {"label text":"Be transparent about price and process","dark-mode":"false"}
+        T content-spec-list-item_text [18]: "Be transparent about price and process"
+   IMG Image c232318f4f7513795691f27e8e7bd87657cfa3fc.png 676x451
+   I "Image" -> Image (2249:8010) 676x451 {}
+    I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=3:2 | 2:3, Orientation=Landscape (2249:7100) 676x451 {"Aspect Ratio":"3:2 | 2:3","Orientation":"Landscape"}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}

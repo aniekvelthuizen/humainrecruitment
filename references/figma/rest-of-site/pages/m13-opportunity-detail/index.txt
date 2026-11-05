@@ -1,0 +1,5 @@
+01 | Frame 676 | 2406:51635 | 402x644 | main: Header default / type=opportunity-mobile
+02 | Nav / Mobile | 2406:51741 | 402x74 | main: Nav / Mobile / state=closed
+03 | Frame 729 | 2406:52780 | 402x1930 | main: Page content / device=mobile
+04 | Frame 730 | 2406:52781 | 402x1034 | main: dynamic-opportunities-2 / device=mobile
+05 | Frame 728 | 2406:52782 | 402x766 | main: Footer / device=mobile

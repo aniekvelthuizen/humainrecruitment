@@ -1,0 +1,12 @@
+01 | Header / Home v01 | 2710:48616 | 1512x1019 | main: Header / Home v01 / type=variant3
+02 | Navbar - Light | 2710:48625 | 1512x180 | main: Navbar - Light / type=default
+03 | Frame 592 | 2710:48617 | 1512x810 | main: Content / 4 UBRS / device=desktop
+04 | Content scrolly telling / Glass cards | 2710:48618 | 1512x1394 | main: Content scrolly telling / Glass cards / device=desktop
+05 | Content / Content block | 2710:56547 | 1512x938 | main: Content / Content block / content-location=true, small=false, list=true
+06 | Content / Services desktop | 2710:48619 | 1512x1190 | main: Content / Services desktop / type=expertise
+07 | Content / Testimonials | 2710:48620 | 1512x1560 | main: content-testimonials / device=desktop
+08 | Content - Recruitment process | 2710:57363 | 1512x1930 | main: 
+09 | Content / 3 UBRS - White background | 2710:57450 | 1512x746 | main: Content / 3 UBRS - White background
+10 | Content / Content block | 2710:57507 | 1512x643 | main: Content / Content block / content-location=true, small=false, list=true
+11 | Content / CTA | 2710:48623 | 1512x612 | main: content-cta / device=desktop
+12 | Footer | 2710:48624 | 1512x550 | main: Footer / device=desktop-compact

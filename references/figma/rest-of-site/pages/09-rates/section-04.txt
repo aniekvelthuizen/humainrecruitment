@@ -1,0 +1,16 @@
+# Dynamic / FAQ (2444:35310) 1512x987
+I "Dynamic / FAQ" -> Dynamic / FAQ (2444:35309) 1512x987 {}
+  T dynamic-faq_text [16]: "FAQ"
+  T dynamic-faq_title [60]: "Pricing questions, answered"
+  T dynamic-faq_text [20]: "Scoped engagements, priced upfront."
+  I "Prop 3" -> Content / Fee row / style=expanded (2305:43112) 912x174 {"style":"expanded"}
+    T How can your fees be 25–30% lower? [24]: "How can your fees be 25–30% lower?"
+   T AI handles the repetitive sourcing and benchmarking, so we spend less time per placement and pass that efficiency on to you. [20]: "AI handles the repetitive sourcing and benchmarking, so we spend less time per placement and pass that efficiency on to you."
+  I "Prop 4" -> Content / Fee row / style=compact (2305:43103) 912x98 {"style":"compact"}
+    T How can your fees be 25–30% lower? [24]: "Is there a replacement guarantee?"
+  I "Prop 5" -> Content / Fee row / style=compact (2305:43103) 912x98 {"style":"compact"}
+    T How can your fees be 25–30% lower? [24]: "Do you charge upfront?"
+  I "Prop 6" -> Content / Fee row / style=compact (2305:43103) 912x98 {"style":"compact"}
+    T How can your fees be 25–30% lower? [24]: "How is secondment pricing structured?"
+  I "Prop 7" -> Content / Fee row / style=compact (2305:43103) 912x98 {"style":"compact"}
+    T How can your fees be 25–30% lower? [24]: "Can you work to a fixed project price?"

@@ -1,0 +1,35 @@
+# Content / Content block (2318:19663) 1512x780
+I "Content / Content block" -> Content / Content block / content-location=true, small=false, list=true (2249:8033) 1512x780 {"content-location":"true","small":"false","list":"true"}
+  I "Assets / Content" -> Assets / Content / dark-mode=false, list=true (2251:6954) 528x492 {"Show Paragraph":true,"Show Sublabel":true,"Title":"Human core, AI engine — for our team too.","Show Title":true,"Show Buttons":false,"Show Divider":false,"Paragraph":"We give you the tools to do your best work and the autonomy to use them. No busywork that a machine should do — just meaningful problems and real ownership.","Sublabel":"Why work here","dark-mode":"false","list":"true"}
+    T assets-content_text [16]: "Why work here"
+    T assets-content_title [48]: "Human core, AI engine — for our team too."
+     T assets-content_text [20]: "We give you the tools to do your best work and the autonomy to use them. No busywork that a machine should do — just meaningful problems and real ownership."
+       I "content-spec-list-item" -> content-spec-list-item / dark-mode=false (2251:6991) 528x27 {"label text":"Modern tooling — AI does the repetitive parts","dark-mode":"false"}
+        T content-spec-list-item_text [18]: "Modern tooling — AI does the repetitive parts"
+       I "content-spec-list-item" -> content-spec-list-item / dark-mode=false (2251:6991) 528x27 {"label text":"Transparent culture, transparent pricing","dark-mode":"false"}
+        T content-spec-list-item_text [18]: "Transparent culture, transparent pricing"
+       I "content-spec-list-item" -> content-spec-list-item / dark-mode=false (2251:6991) 528x27 {"label text":"Room to grow across recruitment, delivery and platform","dark-mode":"false"}
+        T content-spec-list-item_text [18]: "Room to grow across recruitment, delivery and platform"
+       I "content-spec-list-item" -> content-spec-list-item / dark-mode=false (2251:6991) 528x27 {"label text":"International projects and ambitious clients","dark-mode":"false"}
+        T content-spec-list-item_text [18]: "International projects and ambitious clients"
+   IMG Image 7a32ae2be17db8868cad7a08d7abf669c513b42d.png 676x451
+   I "Image" -> Image (2249:8010) 676x451 {}
+    I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=3:2 | 2:3, Orientation=Landscape (2249:7100) 676x451 {"Aspect Ratio":"3:2 | 2:3","Orientation":"Landscape"}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}

@@ -1,0 +1,28 @@
+# Header / Opportunities (2339:28429) 1512x720
+I "Header / Opportunities" -> Header / Opportunities / device=desktop (2339:28428) 1512x720 {"device":"desktop"}
+   T header-opportunities_text [16]: "Opportunities · For Talent"
+    T header-opportunities_title [72]: "Project delivery roles, ready for you."
+    T header-opportunities_text [20]: "Browse open project-controls roles across energy, infrastructure and renewables. Not seeing the right fit? Submit your resume and we'll match you proactively."
+   I "input-simple" -> input-simple / type=select (2246:5797) 259x63 {"type":"select"}
+    I "input" -> input / small=false, state=rest (2242:5830) 259x63 {"Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Show helper":false,"Helper text":"Alert / Error message","Show icon right":true,"Text":"Role, keyword...","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+      T input_text [12]: "search"
+        T input_text [20]: "Role, keyword..."
+      I "Icon right" -> keyboard_arrow_down / Style=Outlined (2242:5801) 24x24 {"Style":"Outlined"}
+   I "input-simple" -> input-simple / type=select (2246:5797) 259x62 {"type":"select"}
+    I "input" -> input / small=false, state=rest (2242:5830) 259x63 {"Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Show helper":false,"Helper text":"Alert / Error message","Show icon right":true,"Text":"All locations","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+      T input_text [12]: "location"
+        T input_text [20]: "All locations"
+      I "Icon right" -> keyboard_arrow_down / Style=Outlined (2242:5801) 24x24 {"Style":"Outlined"}
+   I "input-simple" -> input-simple / type=select (2246:5797) 259x63 {"type":"select"}
+    I "input" -> input / small=false, state=rest (2242:5830) 259x63 {"Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Show helper":false,"Helper text":"Alert / Error message","Show icon right":true,"Text":"All disciplines","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+      T input_text [12]: "discipline"
+        T input_text [20]: "All disciplines"
+      I "Icon right" -> keyboard_arrow_down / Style=Outlined (2242:5801) 24x24 {"Style":"Outlined"}
+   I "input-simple" -> input-simple / type=select (2246:5797) 259x63 {"type":"select"}
+    I "input" -> input / small=false, state=rest (2242:5830) 259x63 {"Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Show helper":false,"Helper text":"Alert / Error message","Show icon right":true,"Text":"All types","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+      T input_text [12]: "job type"
+        T input_text [20]: "All types"
+      I "Icon right" -> keyboard_arrow_down / Style=Outlined (2242:5801) 24x24 {"Style":"Outlined"}
+   I "Button" -> Button / type=primary, state=rest (2028:2123) 132x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Search","type":"primary","state":"rest"}
+     T button_text [18]: "Search"
+    I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}

@@ -1,0 +1,4 @@
+device=desktop | 2400:45118 | 12. Opportunities | 1512x1624
+device=mobile | 2400:46397 | 12. Opportunities | 402x2748
+state=closed | I2398:44859;2398:32947 | 12. Opportunities | 362x167
+state=closed | 2398:32947 | Components | 362x167

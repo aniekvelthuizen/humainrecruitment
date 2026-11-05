@@ -19,7 +19,7 @@
     "prefix": "",
     "notes": "Lumos starter confirmed by the 2026-10-29 dump (u- utilities, Lumos collections). New classes use no prefix."
   },
-  "dumpedAt": "2026-10-29T15:00:00Z",
+  "dumpedAt": "2026-11-05T14:00:00Z",
   "references": {
     "pages": "references/pages.json",
     "classes": "references/classes.txt",

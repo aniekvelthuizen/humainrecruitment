@@ -1,0 +1,11 @@
+# Frame 594 (2236:5448) 1512x804
+I "Frame 594" -> content-cta / device=desktop (2236:5447) 1512x804 {"device":"desktop"}
+   IMG content-cta_img 76a4149fd50154ab11ea334dd8669590c6ee529c.png 692x420
+    T content-cta_title [48]: "Looking for a senior project-controls expert?"
+    T content-cta_text [20]: "Tell us about the role — we'll come back with a transparent quote and a shortlist within days."
+     I "Button" -> Button / type=primary, state=rest (2028:2123) 193x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Hire an Expert","type":"primary","state":"rest"}
+       T button_text [18]: "Hire an Expert"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+     I "Button" -> Button / type=secondary-white, state=rest (2028:2143) 268x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Discuss your challenge","type":"secondary-white","state":"rest"}
+       T button_text [18]: "Discuss your challenge"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}

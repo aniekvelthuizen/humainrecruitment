@@ -1,0 +1,40 @@
+# Content / Content block (2292:33509) 1512x863
+I "Content / Content block" -> Content / Content block / content-location=true, small=false, list=true (2249:8033) 1512x863 {"content-location":"true","small":"false","list":"true"}
+  I "Assets / Content" -> Assets / Content / dark-mode=false, list=true (2251:6954) 528x575 {"Show Paragraph":true,"Show Sublabel":true,"Title":"Speed from AI. Confidence from people.","Show Title":true,"Show Buttons":true,"Show Divider":false,"Paragraph":"AI handles the repetitive sourcing and benchmarking so a shortlist is ready in days. Our recruiters then validate every profile and guide you through selection.","Sublabel":"AI + human","dark-mode":"false","list":"true"}
+    T assets-content_text [16]: "AI + human"
+    T assets-content_title [48]: "Speed from AI. Confidence from people."
+     T assets-content_text [20]: "AI handles the repetitive sourcing and benchmarking so a shortlist is ready in days. Our recruiters then validate every profile and guide you through selection."
+       I "content-spec-list-item" -> content-spec-list-item / dark-mode=false (2251:6991) 528x27 {"label text":"AI: continuous sourcing & benchmarking","dark-mode":"false"}
+        T content-spec-list-item_text [18]: "AI: continuous sourcing & benchmarking"
+       I "content-spec-list-item" -> content-spec-list-item / dark-mode=false (2251:6991) 528x27 {"label text":"Human: validation, judgement, guidance","dark-mode":"false"}
+        T content-spec-list-item_text [18]: "Human: validation, judgement, guidance"
+       I "content-spec-list-item" -> content-spec-list-item / dark-mode=false (2251:6991) 528x27 {"label text":"Result: faster hires, lower risk, lower fees","dark-mode":"false"}
+        T content-spec-list-item_text [18]: "Result: faster hires, lower risk, lower fees"
+    I "Button group" -> Button group / Property 1=Default (2249:6952) 469x48 {"First button":true,"Third button":false,"Second button":true,"Property 1":"Default"}
+     I "Button" -> Button / type=primary, state=rest (2028:2123) 285x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"How our matching works","type":"primary","state":"rest"}
+       T button_text [18]: "How our matching works"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+     I "Button" -> Button / type=secondary, state=rest (2028:2133) 168x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"See pricing","type":"secondary","state":"rest"}
+       T button_text [18]: "See pricing"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+   IMG Image efcd183ad252be73b380b7bb4a3cd462185b897b.png 676x451
+   I "Image" -> Image (2249:8010) 676x451 {}
+    I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=3:2 | 2:3, Orientation=Landscape (2249:7100) 676x451 {"Aspect Ratio":"3:2 | 2:3","Orientation":"Landscape"}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}

@@ -1,0 +1,5 @@
+device=desktop | 2710:48618 | 1. Home B | 1512x1394
+device=desktop | 2234:4489 | 2. Hire an expert | 1512x1821
+device=desktop | 2234:4404 | [figma-only] 1. Home A | 1512x1821
+device=mobile | 2378:34842 | 1. Home | 402x2165
+Content scrolly telling / Plain | 2444:34855 | 8. About Us / How it works | 1512x4400

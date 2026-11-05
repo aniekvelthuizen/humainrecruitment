@@ -1,5 +1,5 @@
 {
-  "dumpedAt": "2026-11-01",
+  "dumpedAt": "2026-11-05",
   "collections": [
     {
       "id": "6ae719db261aa6a726507c82",
@@ -88,6 +88,317 @@
           "displayName": "Show in Hero",
           "type": "Switch",
           "required": false
+        }
+      ]
+    },
+    {
+      "id": "6aec7e040edff92198cfc32a",
+      "displayName": "Opportunities",
+      "singularName": "Opportunity",
+      "slug": "opportunities",
+      "usedBy": [
+        "Opportunity List (planned, unit 13)",
+        "Opportunity Detail template (planned, unit 14)",
+        "Opportunity Row, Similar and Open Roles (planned, unit 14)",
+        "Vacancy List, Careers (planned, unit 14)"
+      ],
+      "fields": [
+        {
+          "slug": "name",
+          "displayName": "Name",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "slug",
+          "displayName": "Slug",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "job-type",
+          "displayName": "Job Type",
+          "type": "Option",
+          "required": true
+        },
+        {
+          "slug": "discipline",
+          "displayName": "Discipline",
+          "type": "Option",
+          "required": false
+        },
+        {
+          "slug": "sector",
+          "displayName": "Sector",
+          "type": "Option",
+          "required": false
+        },
+        {
+          "slug": "location",
+          "displayName": "Location",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "location-filter",
+          "displayName": "Location Filter",
+          "type": "Option",
+          "required": false
+        },
+        {
+          "slug": "experience",
+          "displayName": "Experience",
+          "type": "PlainText",
+          "required": false
+        },
+        {
+          "slug": "salary",
+          "displayName": "Salary",
+          "type": "PlainText",
+          "required": false
+        },
+        {
+          "slug": "intro",
+          "displayName": "Intro",
+          "type": "PlainText",
+          "required": false
+        },
+        {
+          "slug": "about",
+          "displayName": "About",
+          "type": "RichText",
+          "required": false
+        },
+        {
+          "slug": "responsibilities",
+          "displayName": "Responsibilities",
+          "type": "RichText",
+          "required": false
+        },
+        {
+          "slug": "requirements",
+          "displayName": "Requirements",
+          "type": "RichText",
+          "required": false
+        },
+        {
+          "slug": "offer",
+          "displayName": "Offer",
+          "type": "RichText",
+          "required": false
+        },
+        {
+          "slug": "internal",
+          "displayName": "Internal",
+          "type": "Switch",
+          "required": false
+        },
+        {
+          "slug": "summary",
+          "displayName": "Summary",
+          "type": "PlainText",
+          "required": false
+        },
+        {
+          "slug": "featured",
+          "displayName": "Featured",
+          "type": "Switch",
+          "required": false
+        },
+        {
+          "slug": "bullhorn-id",
+          "displayName": "Bullhorn ID",
+          "type": "PlainText",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "6aec7e05025946a8d8301af4",
+      "displayName": "Cases",
+      "singularName": "Case",
+      "slug": "cases",
+      "usedBy": [
+        "Cases Grid, Clients (planned, unit 11)"
+      ],
+      "fields": [
+        {
+          "slug": "name",
+          "displayName": "Name",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "slug",
+          "displayName": "Slug",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "sector",
+          "displayName": "Sector",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "text",
+          "displayName": "Text",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "image",
+          "displayName": "Image",
+          "type": "Image",
+          "required": true
+        },
+        {
+          "slug": "image-alt",
+          "displayName": "Image Alt",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "order",
+          "displayName": "Order",
+          "type": "Number",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "6aec7e0776c2f357ba063c82",
+      "displayName": "Rates",
+      "singularName": "Rate",
+      "slug": "rates",
+      "usedBy": [
+        "Fee List, Rates (planned, unit 12)"
+      ],
+      "fields": [
+        {
+          "slug": "name",
+          "displayName": "Name",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "slug",
+          "displayName": "Slug",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "description",
+          "displayName": "Description",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "price",
+          "displayName": "Price",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "order",
+          "displayName": "Order",
+          "type": "Number",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "6aec7e08d367294edf22387c",
+      "displayName": "FAQ",
+      "singularName": "FAQ",
+      "slug": "faq",
+      "usedBy": [
+        "FAQ List, Rates (planned, unit 12)"
+      ],
+      "fields": [
+        {
+          "slug": "name",
+          "displayName": "Question",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "slug",
+          "displayName": "Slug",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "answer",
+          "displayName": "Answer",
+          "type": "RichText",
+          "required": false
+        },
+        {
+          "slug": "order",
+          "displayName": "Order",
+          "type": "Number",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "6aec7e093f98170046290894",
+      "displayName": "Team",
+      "singularName": "Team Member",
+      "slug": "team",
+      "usedBy": [
+        "Team Grid, About Us (planned, unit 11)",
+        "Team Fan, Project Controls (planned, unit 11)"
+      ],
+      "fields": [
+        {
+          "slug": "name",
+          "displayName": "Name",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "slug",
+          "displayName": "Slug",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "role",
+          "displayName": "Role",
+          "type": "PlainText",
+          "required": false
+        },
+        {
+          "slug": "bio",
+          "displayName": "Bio",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "photo",
+          "displayName": "Photo",
+          "type": "Image",
+          "required": true
+        },
+        {
+          "slug": "photo-alt",
+          "displayName": "Photo Alt",
+          "type": "PlainText",
+          "required": true
+        },
+        {
+          "slug": "group",
+          "displayName": "Group",
+          "type": "Option",
+          "required": true
+        },
+        {
+          "slug": "order",
+          "displayName": "Order",
+          "type": "Number",
+          "required": true
         }
       ]
     }

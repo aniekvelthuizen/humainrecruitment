@@ -1,0 +1,1283 @@
+# Header / Home v01 (2710:48616) 1512x1019
+I "Header / Home v01" -> Header / Home v01 / type=variant3 (2710:45629) 1512x1019 {"type":"variant3"}
+    T header-home-v01_title [56]: "Pre‑Qualified Project Professionals. The top 5% of the field."
+       T header-home-v01_text [16]: "Validated against the criteria that decide success on a capital project, by people who have run these teams themselves."
+       I "Button" -> Button / type=primary, state=rest (2028:2123) 231x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Request a shortlist","type":"primary","state":"rest"}
+         T button_text [18]: "Request a shortlist"
+        I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+       I "Button" -> Button / type=secondary-white, state=rest (2028:2143) 233x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"See how we select","type":"secondary-white","state":"rest"}
+         T button_text [18]: "See how we select"
+        I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+      T header-home-v01_text [16]: "250+ pre-qualified specialists across 6 disciplines."
+   IMG header-home-v01_img 32cb813a5652f5d9c368ab585c9b7dc8c7d8a792.png 323x403
+   I "Frame 639" -> Card / Expert / type=default (2188:5794) 440x250 {"type":"default"}
+      T Willem Jan Velthuizen [20]: "Willem Jan Velthuizen"
+      T Previously worked at [10]: "Previously worked at"
+      I "bullet" -> bullet / type=14 (2028:2716) 392x19 {"type":"14"}
+       I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+       T bullet_text [14]: "Commercial ownership"
+      I "Frame 426" -> bullet / type=14 (2028:2716) 392x19 {"type":"14"}
+       I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+       T bullet_text [14]: "Executive stakeholder exposure"
+      I "Frame 427" -> bullet / type=14 (2028:2716) 392x19 {"type":"14"}
+       I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+       T bullet_text [14]: "Programme delivery"
+      T Match score [10]: "Match \nscore"
+      T 85% [0]: "85%"
+    T header-home-v01_text [20]: "Neque bibendum nibh duis sit non rhoncus volutpat vel. Tempor ipsum odio turpis suspendisse diam."
+    I "Frame 430" -> Card / Expert match / type=variant5 (2737:42112) 322x128 {"type":"variant5"}
+       IMG Majoor_Image_Wonen-1-1536x1024 1 82727969427f6f953aa00f12cee85c78814b3714.jpg 77x96
+        T Willem Jan Velthuizen [16]: "Willem Jan Velthuizen"
+        T Previously worked at [8]: "Previously worked at"
+    I "Frame 431" -> Card / Expert match / type=variant5 (2737:42112) 322x128 {"type":"variant5"}
+       IMG Majoor_Image_Wonen-1-1536x1024 1 696528718ee3764954bacb9ca28159324af0e671.png 77x96
+        T Willem Jan Velthuizen [16]: "Emery Dokidis"
+        T Previously worked at [8]: "Previously worked at"
+    I "Frame 432" -> Card / Expert match / type=variant5 (2737:42112) 322x128 {"type":"variant5"}
+       IMG Majoor_Image_Wonen-1-1536x1024 1 82727969427f6f953aa00f12cee85c78814b3714.jpg 77x96
+        T Willem Jan Velthuizen [16]: "Willem Jan Velthuizen"
+        T Previously worked at [8]: "Previously worked at"
+    I "Frame 433" -> Card / Expert match / type=variant5 (2737:42112) 322x128 {"type":"variant5"}
+       IMG Majoor_Image_Wonen-1-1536x1024 1 95d37eb078cedb118fa33f51b10d93aa20b3d16c.png 77x96
+        T Willem Jan Velthuizen [16]: "Chance Dorwart"
+        T Previously worked at [8]: "Previously worked at"
+    I "Frame 433" -> Card / Expert match / type=variant5 (2737:42112) 322x128 {"type":"variant5"}
+       IMG Majoor_Image_Wonen-1-1536x1024 1 82727969427f6f953aa00f12cee85c78814b3714.jpg 77x96
+        T Willem Jan Velthuizen [16]: "Willem Jan Velthuizen"
+        T Previously worked at [8]: "Previously worked at"
+   I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+   I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+ I "Content / Logo marquee" -> Content / Logo marquee / device=desktop (2292:9061) 2846x169 {"device":"desktop"}
+  T TRUSTED BY GLOBAL LEADERS IN ENERGY, INDUSTRY & TECHNOLOGY [16]: "TRUSTED BY GLOBAL LEADERS IN ENERGY, INDUSTRY & TECHNOLOGY"
+    I "Card - Logo" -> Card - Logo / type=default (2041:5694) 178x100 {"type":"default"}
+     I "Image" -> Image (2041:2453) 178x100 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=16:9 | 9:16, Orientation=Landscape (2041:1597) 178x100 {"Aspect Ratio":"16:9 | 9:16","Orientation":"Landscape"}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+     I "Logooos" -> Logooos / Property 1=agristo (2041:2456) 175x100 {"Property 1":"agristo"}
+     I "Arrow icon" -> Arrow icon / Property 1=Default (2041:2613) 40x40 {"Property 1":"Default"}
+    I "Card - Logo" -> Card - Logo / type=default (2041:5694) 178x100 {"type":"default"}
+     I "Image" -> Image (2041:2453) 178x100 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=16:9 | 9:16, Orientation=Landscape (2041:1597) 178x100 {"Aspect Ratio":"16:9 | 9:16","Orientation":"Landscape"}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+     I "Logooos" -> Logooos / Property 1=amsterdamumc (2041:2467) 175x100 {"Property 1":"amsterdamumc"}
+     I "Arrow icon" -> Arrow icon / Property 1=Default (2041:2613) 40x40 {"Property 1":"Default"}
+    I "Card - Logo" -> Card - Logo / type=default (2041:5694) 178x100 {"type":"default"}
+     I "Image" -> Image (2041:2453) 178x100 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=16:9 | 9:16, Orientation=Landscape (2041:1597) 178x100 {"Aspect Ratio":"16:9 | 9:16","Orientation":"Landscape"}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+     I "Logooos" -> Logooos / Property 1=basf (2041:2488) 175x100 {"Property 1":"basf"}
+     I "Arrow icon" -> Arrow icon / Property 1=Default (2041:2613) 40x40 {"Property 1":"Default"}
+    I "Card - Logo" -> Card - Logo / type=default (2041:5694) 178x100 {"type":"default"}
+     I "Image" -> Image (2041:2453) 178x100 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=16:9 | 9:16, Orientation=Landscape (2041:1597) 178x100 {"Aspect Ratio":"16:9 | 9:16","Orientation":"Landscape"}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+     I "Logooos" -> Logooos / Property 1=dr_oetker (2041:2499) 175x100 {"Property 1":"dr_oetker"}
+     I "Arrow icon" -> Arrow icon / Property 1=Default (2041:2613) 40x40 {"Property 1":"Default"}
+    I "Card - Logo" -> Card - Logo / type=default (2041:5694) 178x100 {"type":"default"}
+     I "Image" -> Image (2041:2453) 178x100 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=16:9 | 9:16, Orientation=Landscape (2041:1597) 178x100 {"Aspect Ratio":"16:9 | 9:16","Orientation":"Landscape"}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+     I "Logooos" -> Logooos / Property 1=ect_rotterdam (2041:2514) 175x100 {"Property 1":"ect_rotterdam"}
+     I "Arrow icon" -> Arrow icon / Property 1=Default (2041:2613) 40x40 {"Property 1":"Default"}
+    I "Card - Logo" -> Card - Logo / type=default (2041:5694) 178x100 {"type":"default"}
+     I "Image" -> Image (2041:2453) 178x100 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=16:9 | 9:16, Orientation=Landscape (2041:1597) 178x100 {"Aspect Ratio":"16:9 | 9:16","Orientation":"Landscape"}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+     I "Logooos" -> Logooos / Property 1=gkn (2041:2524) 175x100 {"Property 1":"gkn"}
+     I "Arrow icon" -> Arrow icon / Property 1=Default (2041:2613) 40x40 {"Property 1":"Default"}
+    I "Card - Logo" -> Card - Logo / type=default (2041:5694) 178x100 {"type":"default"}
+     I "Image" -> Image (2041:2453) 178x100 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=16:9 | 9:16, Orientation=Landscape (2041:1597) 178x100 {"Aspect Ratio":"16:9 | 9:16","Orientation":"Landscape"}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+     I "Logooos" -> Logooos / Property 1=rijkswaterstaat (2041:2541) 175x100 {"Property 1":"rijkswaterstaat"}
+     I "Arrow icon" -> Arrow icon / Property 1=Default (2041:2613) 40x40 {"Property 1":"Default"}
+    I "Card - Logo" -> Card - Logo / type=default (2041:5694) 178x100 {"type":"default"}
+     I "Image" -> Image (2041:2453) 178x100 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=16:9 | 9:16, Orientation=Landscape (2041:1597) 178x100 {"Aspect Ratio":"16:9 | 9:16","Orientation":"Landscape"}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+     I "Logooos" -> Logooos / Property 1=total (2041:2557) 175x100 {"Property 1":"total"}
+     I "Arrow icon" -> Arrow icon / Property 1=Default (2041:2613) 40x40 {"Property 1":"Default"}
+    I "Card - Logo" -> Card - Logo / type=default (2041:5694) 178x100 {"type":"default"}
+     I "Image" -> Image (2041:2453) 178x100 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=16:9 | 9:16, Orientation=Landscape (2041:1597) 178x100 {"Aspect Ratio":"16:9 | 9:16","Orientation":"Landscape"}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+     I "Logooos" -> Logooos / Property 1=agristo (2041:2456) 175x100 {"Property 1":"agristo"}
+     I "Arrow icon" -> Arrow icon / Property 1=Default (2041:2613) 40x40 {"Property 1":"Default"}
+    I "Card - Logo" -> Card - Logo / type=default (2041:5694) 178x100 {"type":"default"}
+     I "Image" -> Image (2041:2453) 178x100 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=16:9 | 9:16, Orientation=Landscape (2041:1597) 178x100 {"Aspect Ratio":"16:9 | 9:16","Orientation":"Landscape"}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+     I "Logooos" -> Logooos / Property 1=amsterdamumc (2041:2467) 175x100 {"Property 1":"amsterdamumc"}
+     I "Arrow icon" -> Arrow icon / Property 1=Default (2041:2613) 40x40 {"Property 1":"Default"}
+    I "Card - Logo" -> Card - Logo / type=default (2041:5694) 178x100 {"type":"default"}
+     I "Image" -> Image (2041:2453) 178x100 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=16:9 | 9:16, Orientation=Landscape (2041:1597) 178x100 {"Aspect Ratio":"16:9 | 9:16","Orientation":"Landscape"}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+     I "Logooos" -> Logooos / Property 1=basf (2041:2488) 175x100 {"Property 1":"basf"}
+     I "Arrow icon" -> Arrow icon / Property 1=Default (2041:2613) 40x40 {"Property 1":"Default"}
+    I "Card - Logo" -> Card - Logo / type=default (2041:5694) 178x100 {"type":"default"}
+     I "Image" -> Image (2041:2453) 178x100 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=16:9 | 9:16, Orientation=Landscape (2041:1597) 178x100 {"Aspect Ratio":"16:9 | 9:16","Orientation":"Landscape"}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+     I "Logooos" -> Logooos / Property 1=dr_oetker (2041:2499) 175x100 {"Property 1":"dr_oetker"}
+     I "Arrow icon" -> Arrow icon / Property 1=Default (2041:2613) 40x40 {"Property 1":"Default"}
+    I "Card - Logo" -> Card - Logo / type=default (2041:5694) 178x100 {"type":"default"}
+     I "Image" -> Image (2041:2453) 178x100 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=16:9 | 9:16, Orientation=Landscape (2041:1597) 178x100 {"Aspect Ratio":"16:9 | 9:16","Orientation":"Landscape"}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+     I "Logooos" -> Logooos / Property 1=ect_rotterdam (2041:2514) 175x100 {"Property 1":"ect_rotterdam"}
+     I "Arrow icon" -> Arrow icon / Property 1=Default (2041:2613) 40x40 {"Property 1":"Default"}
+    I "Card - Logo" -> Card - Logo / type=default (2041:5694) 178x100 {"type":"default"}
+     I "Image" -> Image (2041:2453) 178x100 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=16:9 | 9:16, Orientation=Landscape (2041:1597) 178x100 {"Aspect Ratio":"16:9 | 9:16","Orientation":"Landscape"}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+     I "Logooos" -> Logooos / Property 1=gkn (2041:2524) 175x100 {"Property 1":"gkn"}
+     I "Arrow icon" -> Arrow icon / Property 1=Default (2041:2613) 40x40 {"Property 1":"Default"}
+    I "Card - Logo" -> Card - Logo / type=default (2041:5694) 178x100 {"type":"default"}
+     I "Image" -> Image (2041:2453) 178x100 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=16:9 | 9:16, Orientation=Landscape (2041:1597) 178x100 {"Aspect Ratio":"16:9 | 9:16","Orientation":"Landscape"}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+     I "Logooos" -> Logooos / Property 1=rijkswaterstaat (2041:2541) 175x100 {"Property 1":"rijkswaterstaat"}
+     I "Arrow icon" -> Arrow icon / Property 1=Default (2041:2613) 40x40 {"Property 1":"Default"}
+    I "Card - Logo" -> Card - Logo / type=default (2041:5694) 178x100 {"type":"default"}
+     I "Image" -> Image (2041:2453) 178x100 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=16:9 | 9:16, Orientation=Landscape (2041:1597) 178x100 {"Aspect Ratio":"16:9 | 9:16","Orientation":"Landscape"}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+        I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 22x4 {}
+     I "Logooos" -> Logooos / Property 1=total (2041:2557) 175x100 {"Property 1":"total"}
+     I "Arrow icon" -> Arrow icon / Property 1=Default (2041:2613) 40x40 {"Property 1":"Default"}

@@ -8,7 +8,7 @@ Choice: new section component **CTA Split** (`cta-split_*`): one Brand-coloured 
 Why: Split Content is a text column on white beside a notched photo with eyebrow, quote and checklist; the CTA shares only the two-part title. A variant would hide most of Split Content's props and add a card, a theme switch and a second image shape. The name describes the pattern, not the copy («Looking for a senior…» changes per page; the block is on 13 desktop page designs).
 
 ## 2026-11-02 — Recommended answers taken (no open questions)
-- Title in two parts (Title + Title Muted, `swatch/light-100-o50`), no Title Break: on Home B the break is a natural wrap.
+- Title in two parts (Title + Title Muted, `swatch/light-100-o50`), no Title Break at first: on Home B the break is a natural wrap (prop added 2026-11-05, below).
 - H2 at every width (site rule scales 48 → 30); Figma mobile's H4 30 is the same size.
 - Space Top `none` by default (10 of 13 instances follow a section with bottom space), `large` / `main` as on Split Content.
 - Content padding 64 = literal `4rem` (no variable); ≤ 991 `space/7` (no design, between desktop and mobile), ≤ 767 `space/5` (Figma mobile 20).
@@ -52,3 +52,7 @@ Other pages' instances (Figma `instances.txt`): Opportunities mobile hides the s
 - "In Figma is het beeld links en de tekst rechts": desktop already was; owner chose to keep it side by side on tablets too. Card one column only ≤ 767 (`small`), photo `order: 1` + 26.25rem there. At 991 the card is now photo 452 | text 452 (padding `space/7`).
 - Light focus ring on purple and dark sections: solved for all Button Main buttons site-wide (see `decisions/components/button.md`).
 - Rest stays as built ("het blok is goed"): tablet line length and the hyphen break in the title are closed as owner choices.
+
+## 2026-11-05 — Title Break (Aniek Velthuizen, via Claude; not published, local simulation at 1512, 1280, 992, 768, 402, 320)
+Prop **Title Break** (boolean, Content, default off) binds the visibility of a `br` after the `wbr`, the same way as Split Content. On for About, Consulting Services, Project Controls, Rates, Careers: each frame breaks where its colour changes, and those titles were already split there, so no boundary moved. Off pages keep the default: Home, Hire, PDE, Clients, How It Works, Contact, Opportunities.
+Block at 1512 is 612 on all five, as the frames. Careers at 402: «Send an open / application.». Narrower than the frame a forced title can take three lines: Rates at 1280, 992, 768, 320 and Controls at 992, 768, 320.

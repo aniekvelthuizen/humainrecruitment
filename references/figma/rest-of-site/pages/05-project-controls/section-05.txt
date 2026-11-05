@@ -1,0 +1,34 @@
+# Content / Content block (2287:10206) 1512x835
+I "Content / Content block" -> Content / Content block / content-location=false, small=false, list=false (2249:8023) 1512x835 {"content-location":"false","small":"false","list":"false"}
+   I "Image" -> Image (2249:8010) 677x451 {}
+    IMG fixed_aspect_ratio ab9dd13ebd73dce2361b77a5c3d4a9704e2c24e0.png 677x451
+    I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=3:2 | 2:3, Orientation=Landscape (2249:7100) 677x451 {"Aspect Ratio":"3:2 | 2:3","Orientation":"Landscape"}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 226x226 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 226x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 226x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 226x226 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 226x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 226x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 226x226 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 226x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 226x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 226x226 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 226x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 226x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 226x226 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 226x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 226x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 226x226 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 226x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 226x113 {}
+  I "Assets / Content" -> Assets / Content / dark-mode=false, list=false (2251:6938) 558x430 {"Show Paragraph":true,"Show Sublabel":true,"Title":"Tell us where you need help. We deliver the expert.","Show Title":true,"Show Buttons":true,"Show Divider":false,"Paragraph":"Need a forecast rebuilt, a baseline set up, or reporting that leadership trusts? Point at the artefact — we match you with the specialist who owns that part of project controls.","Sublabel":"How it works","dark-mode":"false","list":"false"}
+    T assets-content_text [16]: "How it works"
+    T assets-content_title [48]: "Tell us where you need help. We deliver the expert."
+    T assets-content_text [20]: "Need a forecast rebuilt, a baseline set up, or reporting that leadership trusts? Point at the artefact — we match you with the specialist who owns that part of project controls."
+    I "Button group" -> Button group / Property 1=Default (2249:6952) 515x48 {"First button":true,"Third button":false,"Second button":true,"Property 1":"Default"}
+     I "Button" -> Button / type=primary, state=rest (2028:2123) 278x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Describe your challenge","type":"primary","state":"rest"}
+       T button_text [18]: "Describe your challenge"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+     I "Button" -> Button / type=secondary, state=rest (2028:2133) 221x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"How hiring works","type":"secondary","state":"rest"}
+       T button_text [18]: "How hiring works"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}

@@ -1,0 +1,6 @@
+01 | Frame 676 | 2318:19563 | 1512x586 | main: Header default / type=default
+02 | Navbar - Light | 2318:19564 | 1512x180 | main: Navbar - Light / type=default
+03 | Content / Content block | 2318:19663 | 1512x780 | main: Content / Content block / content-location=true, small=false, list=true
+04 | Dynamic / Internal vacancies | 2444:35615 | 1512x734 | main: Dynamic / Internal vacancies
+05 | Frame 664 | 2318:20970 | 1512x612 | main: content-cta / device=desktop
+06 | Frame 677 | 2318:20971 | 1512x550 | main: Footer / device=desktop-compact

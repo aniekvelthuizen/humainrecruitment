@@ -1,0 +1,63 @@
+# Frame 729 (2406:51755) 1512x1190
+I "Frame 729" -> Page content / device=desktop (2406:51754) 1512x1190 {"device":"desktop"}
+   T page-content-opportunity-detail_title [36]: "About the role"
+   T page-content-opportunity-detail_text [20]: "As Project Controls Manager you set up and run the controls framework — cost, planning, risk and reporting — on a multi-year capital project in the energy sector."
+    T page-content-opportunity-detail_title [36]: "Responsibilities"
+    T page-content-opportunity-detail_text [20]: "Nisl a nibh nunc ridiculus in. At fames aliquam posuere amet feugiat. Et rhoncus ornare egestas laoreet vestibulum."
+    I "bullet" -> bullet / type=20 (2318:21681) 794x30 {"type":"20"}
+     I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 30x30 {"type":"check"}
+     T bullet_text [20]: "Own cost control, forecasting and variance analysis"
+    I "bullet" -> bullet / type=20 (2318:21681) 794x30 {"type":"20"}
+     I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 30x30 {"type":"check"}
+     T bullet_text [20]: "Maintain the integrated schedule and critical-path analysis"
+    I "bullet" -> bullet / type=20 (2318:21681) 794x30 {"type":"20"}
+     I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 30x30 {"type":"check"}
+     T bullet_text [20]: "Run risk and performance reviews with the leadership team"
+    I "bullet" -> bullet / type=20 (2318:21681) 794x30 {"type":"20"}
+     I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 30x30 {"type":"check"}
+     T bullet_text [20]: "Deliver clear, executive-level reporting and dashboards"
+   T page-content-opportunity-detail_title [36]: "Requirements"
+   T page-content-opportunity-detail_text [20]: "Nisl a nibh nunc ridiculus in. At fames aliquam posuere amet feugiat. Et rhoncus ornare egestas laoreet vestibulum."
+    I "bullet" -> bullet / type=20 (2318:21681) 794x30 {"type":"20"}
+     I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 30x30 {"type":"check"}
+     T bullet_text [20]: "12+ years in project controls on capital projects"
+    I "bullet" -> bullet / type=20 (2318:21681) 794x30 {"type":"20"}
+     I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 30x30 {"type":"check"}
+     T bullet_text [20]: "Strong cost & planning background (P6 / EVM)"
+    I "bullet" -> bullet / type=20 (2318:21681) 794x30 {"type":"20"}
+     I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 30x30 {"type":"check"}
+     T bullet_text [20]: "Oil & gas or energy sector experience"
+    I "bullet" -> bullet / type=20 (2318:21681) 794x30 {"type":"20"}
+     I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 30x30 {"type":"check"}
+     T bullet_text [20]: "Fluent Dutch and English"
+   T page-content-opportunity-detail_title [36]: "What we offer"
+   T page-content-opportunity-detail_text [20]: "Nisl a nibh nunc ridiculus in. At fames aliquam posuere amet feugiat. Et rhoncus ornare egestas laoreet vestibulum."
+    I "bullet" -> bullet / type=20 (2318:21681) 794x30 {"type":"20"}
+     I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 30x30 {"type":"check"}
+     T bullet_text [20]: "A senior role on a high-value international programme"
+    I "bullet" -> bullet / type=20 (2318:21681) 794x30 {"type":"20"}
+     I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 30x30 {"type":"check"}
+     T bullet_text [20]: "Transparent terms and ongoing account support"
+    I "bullet" -> bullet / type=20 (2318:21681) 794x30 {"type":"20"}
+     I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 30x30 {"type":"check"}
+     T bullet_text [20]: "Long-term delivery with a strong client"
+     T page-content-opportunity-detail_title [30]: "Apply for this role"
+     T page-content-opportunity-detail_text [16]: "Project Controls Manager · The Netherlands"
+     I "input-simple" -> input-simple / type=text (2314:18530) 376x67 {"type":"text"}
+      I "input" -> input / small=false, state=rest (2242:5830) 376x67 {"Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Show helper":false,"Helper text":"Alert / Error message","Show icon right":false,"Text":"","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+        T input_text [12]: "full name"
+          T input_text [20]: ""
+    I "input-simple" -> input-simple / type=text (2314:18530) 376x67 {"type":"text"}
+     I "input" -> input / small=false, state=rest (2242:5830) 376x67 {"Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Show helper":false,"Helper text":"Alert / Error message","Show icon right":false,"Text":"you@company.com","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+       T input_text [12]: "Email"
+         T input_text [20]: "you@company.com"
+    I "input-simple" -> input-simple / type=text (2314:18530) 376x67 {"type":"text"}
+     I "input" -> input / small=false, state=rest (2242:5830) 376x67 {"Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Show helper":false,"Helper text":"Alert / Error message","Show icon right":false,"Text":"+31","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+       T input_text [12]: "Phone"
+         T input_text [20]: "+31"
+     I "Google icons" -> Google icons / type=cv-submission (2263:6755) 48x48 {"type":"cv-submission"}
+     T page-content-opportunity-detail_text [20]: "Drop your CV here or browse"
+     T page-content-opportunity-detail_text [16]: "PDF or Word · max 10MB"
+     I "Button" -> Button / type=primary, state=rest (2028:2123) 230x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Submit application","type":"primary","state":"rest"}
+       T button_text [18]: "Submit application"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}

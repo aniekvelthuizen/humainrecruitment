@@ -1,0 +1,50 @@
+# Frame 594 (2236:5471) 1512x550
+I "Frame 594" -> Footer / device=desktop-compact (2737:48338) 1512x550 {"device":"desktop-compact"}
+     I "Footer / Assets / Column title" -> Footer / Assets / Column title (2078:7066) 191x30 {}
+      T footer-assets-column-title_title [20]: "HumAIn Recruitment"
+      T footer_text [20]: "Your extended network in international project recruitment. Human core, AI engine."
+     I "Footer / Assets / Column title" -> Footer / Assets / Column title (2078:7066) 115x30 {}
+      T footer-assets-column-title_title [20]: "For business"
+      I "Footer / Assets / Item" -> Footer / Assets / Item / state=rest (2078:7060) 107x28 {"state":"rest"}
+       T footer-assets-item_text [16]: "Hire an Expert"
+       I "Line" -> Line / Property 1=Default (2078:6487) 107x1 {"Property 1":"Default"}
+      I "Footer / Assets / Item" -> Footer / Assets / Item / state=rest (2078:7060) 181x28 {"state":"rest"}
+       T footer-assets-item_text [16]: "Project Delivery Experts"
+       I "Line" -> Line / Property 1=Default (2078:6487) 181x1 {"Property 1":"Default"}
+      I "Footer / Assets / Item" -> Footer / Assets / Item / state=rest (2078:7060) 163x28 {"state":"rest"}
+       T footer-assets-item_text [16]: "Consulting & Services"
+       I "Line" -> Line / Property 1=Default (2078:6487) 163x1 {"Property 1":"Default"}
+      I "Footer / Assets / Item" -> Footer / Assets / Item / state=rest (2078:7060) 122x28 {"state":"rest"}
+       T footer-assets-item_text [16]: "Project Controls"
+       I "Line" -> Line / Property 1=Default (2078:6487) 122x1 {"Property 1":"Default"}
+     I "Footer / Assets / Column title" -> Footer / Assets / Column title (2078:7066) 88x30 {}
+      T footer-assets-column-title_title [20]: "Company"
+      I "Footer / Assets / Item" -> Footer / Assets / Item / state=rest (2078:7060) 46x28 {"state":"rest"}
+      I "Footer / Assets / Item" -> Footer / Assets / Item / state=rest (2078:7060) 52x28 {"state":"rest"}
+      I "Footer / Assets / Item" -> Footer / Assets / Item / state=rest (2078:7060) 99x28 {"state":"rest"}
+       T footer-assets-item_text [16]: "How it works"
+       I "Line" -> Line / Property 1=Default (2078:6487) 99x1 {"Property 1":"Default"}
+      I "Footer / Assets / Item" -> Footer / Assets / Item / state=rest (2078:7060) 51x28 {"state":"rest"}
+      I "Footer / Assets / Item" -> Footer / Assets / Item / state=rest (2078:7060) 61x28 {"state":"rest"}
+     I "Footer / Assets / Column title" -> Footer / Assets / Column title (2078:7066) 91x30 {}
+      T footer-assets-column-title_title [20]: "For Talent"
+      I "Footer / Assets / Item" -> Footer / Assets / Item / state=rest (2078:7060) 102x28 {"state":"rest"}
+       T footer-assets-item_text [16]: "Oppertunities"
+       I "Line" -> Line / Property 1=Default (2078:6487) 102x1 {"Property 1":"Default"}
+      I "Footer / Assets / Item" -> Footer / Assets / Item / state=rest (2078:7060) 150x28 {"state":"rest"}
+       T footer-assets-item_text [16]: "Analyse my Resume"
+       I "Line" -> Line / Property 1=Default (2078:6487) 150x1 {"Property 1":"Default"}
+      I "Footer / Assets / Item" -> Footer / Assets / Item / state=rest (2078:7060) 59x28 {"state":"rest"}
+     I "Footer / Assets / Item" -> Footer / Assets / Item / state=rest (2078:7060) 216x28 {"state":"rest"}
+      T footer-assets-item_text [16]: "© 2026 HumAIn Recruitment"
+      I "Line" -> Line / Property 1=Default (2078:6487) 216x1 {"Property 1":"Default"}
+     I "Footer / Assets / Item" -> Footer / Assets / Item / state=rest (2078:7060) 135x28 {"state":"rest"}
+      T footer-assets-item_text [16]: "Privacy & Cookies"
+      I "Line" -> Line / Property 1=Default (2078:6487) 135x1 {"Property 1":"Default"}
+     I "Footer / Assets / Item" -> Footer / Assets / Item / state=rest (2078:7060) 121x28 {"state":"rest"}
+      T footer-assets-item_text [16]: "Privacy settings"
+      I "Line" -> Line / Property 1=Default (2078:6487) 121x1 {"Property 1":"Default"}
+     I "Footer / Assets / Item" -> Footer / Assets / Item / state=rest (2078:7060) 77x28 {"state":"rest"}
+      T footer-assets-item_text [16]: "Disclaimer"
+      I "Line" -> Line / Property 1=Default (2078:6487) 77x1 {"Property 1":"Default"}
+     I "Icon / LinkedIn" -> Icon / LinkedIn (2081:4514) 24x24 {}

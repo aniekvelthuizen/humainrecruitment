@@ -1,0 +1,7 @@
+device=desktop | 2406:51755 | 13. Opportunities / Detail | 1512x1190
+device=mobile | 2406:52780 | 13. Opportunities / Detail | 402x1930
+device=desktop | 2406:52236 | 13. Opportunities / Detail | 1512x926
+device=mobile | 2406:52781 | 13. Opportunities / Detail | 402x1034
+device=desktop | 2323:32729 | [figma-only] 1. Home A | 1512x1001
+device=mobile | 2382:37078 | 1. Home | 402x1241
+Dynamic / Internal vacancies | 2444:35615 | 14. Careers | 1512x734

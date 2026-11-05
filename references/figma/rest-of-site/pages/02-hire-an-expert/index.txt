@@ -1,0 +1,9 @@
+01 | Frame 654 | 2323:32964 | 1512x982 | main: Header / Hire an expert
+02 | Navbar - Light | 2234:4258 | 1512x180 | main: Navbar - Light / type=default
+03 | Content scrolly telling / Glass cards | 2234:4489 | 1512x1821 | main: Content scrolly telling / Glass cards / device=desktop
+04 | Content / 3 UBRS - White background | 2323:33048 | 1512x775 | main: Content / 3 UBRS - White background
+05 | Frame 655 | 2323:33078 | 1512x360 | main: Content / Facts & Figures
+06 | Frame 594 | 2236:4780 | 1512x894 | main: content-pricing / device=desktop
+07 | Frame 594 | 2236:5350 | 1512x1560 | main: content-testimonials / device=desktop
+08 | Frame 594 | 2236:5448 | 1512x804 | main: content-cta / device=desktop
+09 | Frame 594 | 2236:5471 | 1512x550 | main: Footer / device=desktop-compact

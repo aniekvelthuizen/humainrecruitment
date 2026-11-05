@@ -1,0 +1,4 @@
+01 | Frame 676 | 2323:22239 | 1512x520 | main: Header default / type=default
+02 | Navbar - Light | 2323:22240 | 1512x180 | main: Navbar - Light / type=default
+03 | Content / WYSIWYG | 2444:35718 | 1512x1204 | main: Content / WYSIWYG
+04 | Frame 677 | 2323:22403 | 1512x550 | main: Footer / device=desktop-compact

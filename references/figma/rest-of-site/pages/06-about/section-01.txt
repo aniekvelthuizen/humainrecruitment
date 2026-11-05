@@ -1,0 +1,5 @@
+# Frame 676 (2292:8441) 1512x536
+I "Frame 676" -> Header default / type=default (2277:7347) 1512x536 {"type":"default"}
+   T header-default_text [16]: "About Us"
+   T header-default_title [72]: "Human core. \nAI engine."
+   T header-default_text [20]: "We're a project-recruitment company built around a simple belief: technology should do the searching so people can do the judging."
