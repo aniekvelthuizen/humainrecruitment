@@ -16,3 +16,6 @@ Deviates or open:
 - Team Fan says «seven disciplines», Figma draws five roles. Text kept; the list comes from the CMS.
 - Team Fan photos carry the Getty watermark (plan, conflict 4): replace before go-live.
 - Image Left text starts 30 px left of Figma (`split-content.md`, known).
+
+## 2026-11-05 — CTA Title Break on (Aniek Velthuizen, via Claude)
+«Need help with one» / «of these?», as the frame.

@@ -29,7 +29,8 @@
     var cards = [].map.call(document.querySelectorAll('[data-opportunity-list-item]'), function (el) {
       return {
         el: el,
-        text: norm([].map.call(el.querySelectorAll(SEARCHED), function (part) { return part.textContent; }).join(' '))
+        text: norm([].map.call(el.querySelectorAll(SEARCHED), function (part) { return part.textContent; })
+          .concat(el.getAttribute('data-location'), el.getAttribute('data-discipline')).join(' '))
       };
     });
     var matches = [];

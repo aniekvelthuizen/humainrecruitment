@@ -44,3 +44,6 @@ Page now: `page_main` › Hero Experts · Stagger Cards · Sticky Steps · Split
 - **Placeholders kept as Figma:** the lorem text in Sticky Steps Plain, Split Content #2 and the two quotes (hero, Split Content #1).
 - **Open, not changed (the approved props stay as they are):** Split Content #2 is still Space Top `large`, set when it followed the grey Reviews. It now follows white 3 UBRS, which has 192 at its bottom, so the gap is 384 and the block 835 high. Figma has 192 and 643, which is Space Top `none`.
 - **Open, not changed:** «Request a shortlist» in the hero and in CTA Split goes to `/hire-an-expert` (`decisions/components/cta-split.md`); the link list of this run says `/contact`.
+
+## 2026-11-05 — Split Content #2 Space Top none (Aniek Velthuizen, via Claude)
+Back to `none`: its neighbour is now the white 3 UBRS, and the frame has 192. Block 643 at 1512, as the frame (simulated, not published).

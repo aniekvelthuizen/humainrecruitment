@@ -17,3 +17,6 @@ Figma frame 6 `2292:8440`, export `references/figma/rest-of-site/pages/06-about/
 
 ## Placeholders kept
 Team names «Name» ×3 and the portraits (CMS, `decisions/cms.md`).
+
+## 2026-11-05 — CTA Title Break on (Aniek Velthuizen, via Claude)
+«Let's build» / «your team.», as the frame.

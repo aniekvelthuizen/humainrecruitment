@@ -13,3 +13,6 @@ Chosen:
 Deviates or open:
 - The ring image is 600 × 400 in Figma's export, shown 676 wide, so slightly upscaled. No larger original in the export.
 - Card Grid text equals Consulting's in Figma (see `consulting-services.md`).
+
+## 2026-11-05 — The bar and the Sticky Steps title (Aniek Velthuizen, via Claude)
+The bar: Image Transparent on, no grey panel behind the ring, as the frame. Sticky Steps Title with non-breaking spaces, «The criteria behind / the score», as the frame (simulated at 1512, 1280, 992, 768, 402).

@@ -14,7 +14,7 @@ Choice: **Split Content** (`split-content_*`): a text column beside one photo. F
 
 ## 2026-11-01 — Structure
 `section.split-content_wrap.u-theme-light` (`data-section="light"`, `data-split-content`, `data-space-top` = prop) › `split-content_contain.u-container` › `split-content_layout` (grid `minmax(0, 34.875rem) minmax(0, 42.25rem)`, space-between, gap `space/7`; one column below 992, row gap `space/8`) ›
-- `split-content_content.u-text-trim-off` (flex column) › p `_eyebrow.u-text-style-label-large` · h2 `_title.u-text-style-h2` › span (Title) + br (Title Break) + span `_muted` (Title Muted) · p `_text.u-text-style-large` · figure `_quote.u-text-trim-off` › blockquote `_quote-text.u-text-style-large` + figcaption `_quote-name.u-text-style-main` · `_list` (`role="list"`, grid 2 columns, 1 below 480) › slot **List** · `_actions` › Button Main Primary + Secondary
+- `split-content_content.u-text-trim-off` (flex column) › p `_eyebrow.u-text-style-label-large` · h2 `_title.u-text-style-h2` › span (Title) + br (Title Break) + span `_muted` (Title Muted) · p `_text.u-text-style-large` · figure `_quote.u-text-trim-off` › blockquote `_quote-text.u-text-style-large` + figcaption `_quote-name.u-text-style-main` · `_list` (`role="list"`, grid one column, corrected 2026-11-05) › slot **List** · `_actions` › Button Main Primary + Secondary
 - `split-content_visual` › Visual Image (3 / 2)
 - HTML embed (`u-embed-css`): the Space Top rules (case-insensitive) and hiding an empty muted span.
 Plain section, not the Lumos `Section` wrapper: same route as Hero Experts / Stagger Cards / Sticky Steps.
@@ -47,7 +47,7 @@ Home: #1 Title Break on, quote on, buttons More about us → /about, See what ex
 Figma's image-left variant uses a 528 text column (text at x 920); the component keeps one text width (558), so the text starts at 890. Only on Project controls («Tell us where you need help.»). Revisit when that page is built.
 
 ## 2026-11-01 — Checklist slot needs the Designer
-The API cannot put Card Bullets into the List slot (not in the definition, not in an empty slot on a page). Fill it in the Designer when a page with a checklist is built: select the slot › add Card Bullet › variant **Large**. The checklist order is row by row (Figma draws two columns top to bottom).
+The API cannot put Card Bullets into the List slot (not in the definition, not in an empty slot on a page). Fill it in the Designer when a page with a checklist is built: select the slot › add Card Bullet › variant **Large**. The list is one column, as every frame draws it.
 
 ## 2026-11-01 — Review fixes (owner: "verwerk ze")
 - Lists: Card Bullet root `role="listitem"`; `card_primary_items` and `card_expert_items` got `role="list"` (Split Content's `_list` already had it). The Hero Experts script still strips every role inside its stage at runtime (existing hero choice).
@@ -82,3 +82,8 @@ With Glow on, the glow rises in once when the block scrolls into view (`decision
 
 ## 2026-11-02 — Glow motion removed (owner)
 Owner (Aniek): the rising glow was hardly visible and not an improvement → removed: the script embed is gone and the style embed is back to the static glow rules. Split Content has one embed again (`references/embeds/split-content-style.html`).
+
+## 2026-11-05 — Last fix round (Aniek Velthuizen, via Claude; not published, local simulation at 1512, 1280, 992, 402)
+- **Checklist one column in the base**, as every frame; the old "2 columns" line above was wrong. Block at 1512 against frame: PDE 780/780, Consulting 942/942, Controls 797/797, About 739/739, How It Works 803/863 (title 2 lines against 3, known), Careers 750/780 (text 3 lines against 4 in the 528 column, known). Home has no checklist on either instance.
+- **`_actions` keeps wrapping: no-wrap not applied**, the condition failed. At 992 the column is 437 and the rows need 456–575, so labels break in two inside the 48 px button on all five instances with buttons (Home ×2, Consulting, Controls, How It Works). Consulting needs 575 against 558, so its labels break at 1512 too.
+- **Image Transparent** (boolean, Image, default off) → `data-image-transparent` on the wrap, rule in the embed, as Glow: Visual Image's grey panel off for a transparent PNG. On for PDE The bar only.

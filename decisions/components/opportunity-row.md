@@ -29,3 +29,6 @@ At 1512 Similar: section 926, cards x 64 / 536 / 1008, y 349, 440 × 385, title 
 The plan's **Opportunity Similar Items** cannot exist with the filter it asks for: the Designer greys out Create component while a list has "Opportunity is not Current Opportunity" (tested: enabled once the filter is gone). The filter is what stops a role being listed as similar to itself, so it stays and the list sits in the slot as it is, list `7c31f665-c96f-9c7b-fb35-6c1864533ed4`. To make it a component later: remove the filter first.
 Same discipline is not filtered: on the option field Discipline the Value only offers fixed options, no "current". So Similar shows the 3 newest other public roles. The API does not list a current-item filter; the Designer shows it.
 Card link is bound to the item's URL Path on all three lists (the Collection page type offers only fixed items).
+
+## 2026-11-05 — Similar on phones (Aniek Velthuizen, via Claude; not published, local simulation)
+Top padding 0 at 767 and below on the base, so the gap to the apply card is 96, as m13. Open Roles keeps `section-space/main` there through a variant style; to check on the first publish, the local run tested only Similar.

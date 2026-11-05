@@ -12,6 +12,6 @@ Chosen:
 - CTA title uses a non-breaking hyphen in «project‑controls» so it cannot split there. The header title keeps its split inside «project-controls», as Figma.
 
 Deviates or open:
-- CTA button «Hire an Expert» → `/hire-an-expert` links to this same page (link rule). Figma has no target.
+- CTA button «Hire an Expert» → `/contact` (2026-11-05, Aniek Velthuizen, via Claude: it linked to this same page). Figma has no target.
 - Placeholders kept as Figma: «From €XX», «€XX» on the pricing cards.
 - Company «Google» as Home; Figma writes «GOOGLE» on this page.

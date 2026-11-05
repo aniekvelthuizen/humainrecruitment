@@ -22,3 +22,8 @@ At 1512: cards x 64 / 536 / 1008, y 349, 440 × 388 (Figma 385, known from `card
 ## 2026-11-05 — Open
 - **Title and Text are bound** since 2026-11-05: Card titles are plain text, see `cards.md`. Final list component: **Vacancy List Items**.
 - **Card link and sort:** done in the Designer (`references/designer-queue.md`); the API refuses both.
+
+## 2026-11-05 — Anchor and Space Top (Aniek Velthuizen, via Claude; not published, local simulation)
+- DOM id `open-positions` on `vacancy-list_wrap`, the target of Careers' «See open positions».
+- **Space Top** (string, Layout, default empty: keeps the section's own top), attribute `data-space-top`, embed rules as Fee List. Careers: `none`, so the gap above is 192 at 1512 and 96 at 991 and 402; section 737 (frame 734, card 388 known).
+- `scroll-margin-top: 7.5rem` in the embed, not in the brief: a direct link to `/careers#open-positions` then lands 120 from the top. A click does not use it: Webflow's own smooth scroll brings the section to 0 under the nav (76 high at 1512, 64 at 402). Open, on the owner's list.

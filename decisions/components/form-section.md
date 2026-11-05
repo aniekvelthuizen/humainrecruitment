@@ -66,3 +66,6 @@ Name retyped in the Designer, allowed types Custom `.pdf, .doc, .docx`, on this 
 ## 2026-11-05 — Upload input id is `CV-2` (Aniek Velthuizen, via Claude)
 Correction: `label for` did not resolve. Published: `label for="CV-2"`, `name="CV-2"`, `data-name="CV"`, with input `id="file"` here and `id="cv"` on Opportunity Detail, so `label.control` was null (audit `references/audit/2026-11-05-phase-4.md`). Visitors did not notice: mouse, Enter and Space go through `webflow.js`, which clicks the input itself, not by id.
 Now `domId` = `CV-2` on both inputs, set by API, case kept, read back. Nothing depends on the old ids: no `#file` or `#cv` in this embed, Opportunity Detail's or any published page; the upload rules select by class. `data-name` CV is the submission key, the published `name` differs. To check after publishing: `for` and `id` still match in the HTML of /contact, /submit-resume and a detail page, because the Designer can rewrite the id when the Name is retyped. The owner's one real test submission should show CV in the Forms tab.
+
+## 2026-11-05 — Top on phones (Aniek Velthuizen, via Claude; not published, local simulation)
+Form title 48 from the header at 767 and below (`space/8`), was 20. No phone frame for these pages: follows m13. Contact and Resume at 402: 48; at 1512: 64, unchanged.

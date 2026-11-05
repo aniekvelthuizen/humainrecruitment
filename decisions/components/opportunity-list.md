@@ -24,7 +24,7 @@ Lumos Form Input and Form Select need a form. Field names are the query keys: `s
 
 ## 2026-11-05 — Filtering
 Data on `_item`, bound to the CMS: `data-opportunity-list-item`, `data-name` (Name), `data-location` (Location Filter), `data-discipline`, `data-type` (Job Type). Option fields bind as text (`get_bindable_sources`: option → string), and select values are the option **names**, not the ids in `decisions/cms.md`; check on the published page that the attributes hold names.
-Search: every word must occur in the card's title, tags or meta rows, ignoring case and accents (see "Fixes after the phase 4 audit"). Selects: exact match. Selecting "All …" (the first option) matches everything. An item with an empty field drops out as soon as that select is set. Applies on select change, Enter, a click on Search, and 200 ms after typing.
+Search: every word must occur in the card's title, tags, meta rows, `data-location` or `data-discipline`, ignoring case and accents (2026-11-05, below). The button text stays out. Selects: exact match. Selecting "All …" (the first option) matches everything. An item with an empty field drops out as soon as that select is set. Applies on select change, Enter, a click on Search, and 200 ms after typing.
 URL: `history.replaceState`, so a link can be shared and Back leaves the page. Other parameters and the hash stay. Values in the URL match case-insensitively; an unknown value counts as "All".
 
 ## 2026-11-05 — Load more, count, empty state
@@ -67,3 +67,6 @@ Not published; checked by API read-back and a local simulation (published page +
 - **Empty state:** `.opportunity-list_results:has([data-opportunity-list-empty][data-active]) .opportunity-list_cms { display: none }`, so count to empty box is 32, equal to count to cards.
 - **Chevron:** the 3.5 px offset exists only here: this bar gives its select `padding-top: .5rem`, so the text sits 4 lower. So the rule is here too, `.opportunity-list_form .form_select_icon { transform: translateY(.25rem) }`, and `form_select_icon` is untouched: on Contact and Resume the icon is already on the text (box centre equals text centre, at 1512 and 402). Now 0.5 from the text centre, the same as there; the rest is the icon's own drawing.
 - **Show all filters, phone:** tap area 111 × 44 with the same look, ≤ 991: `min-height: 2.75rem`, `padding-block` and `margin-block` ∓ .375rem on the wrap. Label, element (32), holder (32), underline and bar height (168) did not move. Figma draws 32. Both tap edges hit the button.
+
+## 2026-11-05 — Search also reads location and discipline (Aniek Velthuizen, via Claude; not published, local simulation at 1512 and 402)
+Replaces the choice in "Fixes after the phase 4 audit" that these values are not searched. The card shows the exact location, a visitor types the region. "netherlands" 6, "international" 3, "rotterdam" 3, "view" and "apply" 0. Source: `references/embeds/opportunity-list-script.html`.

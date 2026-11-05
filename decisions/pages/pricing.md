@@ -17,3 +17,6 @@ Figma frame 9 `2304:33647`, export `references/figma/rest-of-site/pages/09-rates
 
 ## Placeholders and copy kept
 «From €XX», «€XX» and the Fee List's «€XX / day», «from €XX». FAQ text repeats the Fee List's «Scoped engagements, priced upfront.», as Figma.
+
+## 2026-11-05 — CTA Title Break on (Aniek Velthuizen, via Claude)
+«Request a transparent» / «quote.», as the frame.

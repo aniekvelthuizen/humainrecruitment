@@ -9,7 +9,7 @@ import { spawn } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 
-const url = process.argv[2] || 'https://humain-d16f03.webflow.io/';
+const url = process.argv[2] || 'https://humain-dev.webflow.io/';
 const out = process.argv[3] || './split-out';
 const widths = (process.env.WIDTHS || '1512,1280,991,767,402').split(',').map(Number);
 const IMAGE_LEFT = 'w-variant-60a878d8-c287-2b13-3899-ef1dca2aeeaf';

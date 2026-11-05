@@ -58,3 +58,8 @@ Not published; checked by API read-back and a local simulation (published page +
 - **Role without text, below 992:** `.opportunity-detail_content:empty { display: none }` in the embed, ≤ 991 only: on desktop the form would jump to the left column. Simulated on Senior Cost Engineer at 991, 768, 402, 320: form at 96 from the section top (was 128); at 1512 still at x 1008. The owner still has the 794 px blank column on desktop.
 - **Upload label:** input id `CV-2`, as the published `for="CV-2"`; see `form-section.md`. Simulated: `label.control` is the input.
 - **Full Name autocomplete:** not done, Designer step. `autocomplete` on Form Input is a conditional attribute driven by Input Type, which has First Name and Last Name but no full name, and the API can neither read nor write that condition. A script would be a custom-code workaround.
+
+## 2026-11-05 — Last fix round (Aniek Velthuizen, via Claude; not published, local simulation)
+- **Role without text:** from 992 the layout is one column of 27.5rem, centred, `_content` hidden. Replaces the 794 px blank column noted above. Senior Cost Engineer at 1512, 1200, 992: card 440 wide, centre on the page centre. Project Controls Manager at 1512: unchanged, 1190, card at x 1008.
+- **Turnstile:** its unclassed div is `position: absolute`, as Form Section's embed. Card 725, no 32 px gap under Submit. This closes the open line under "Measured".
+- **Phone top:** 48 at 767 and below (`space/8`), as m13. Section 1981 at 402 (m13 1978 with Figma's own upload height).

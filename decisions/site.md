@@ -132,3 +132,6 @@ Why: the client fills the fields without formatting steps, CMS binding works, an
 
 ## 2026-11-05 — Form error state is global (Aniek Velthuizen, via Claude)
 `:user-invalid` is not a class state in Webflow, so the three rules live in `Global | Custom Code`, where every form gets them. Text «Please check this field» and `#b91c1c` are still placeholders.
+
+## 2026-11-05 — Embeds may hold JS (Aniek Velthuizen, via Claude)
+Section embeds hold CSS, and a small script when the block needs one to work (Stage Slider, Opportunity List). Variant-scoped `::before`/`::after` publish on this site as `.x:after:where()`, which matches nothing: use the section's embed for those.

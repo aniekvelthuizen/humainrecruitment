@@ -13,3 +13,6 @@ Chosen:
 Deviates or open:
 - Card Grid eyebrow and cards are Consulting's, but its title and text in Figma equal Project Delivery Experts' («The HumAIn Expert Qualification Framework», «Every professional follows…»). Kept as Figma; looks like a design leftover, for the owner.
 - CTA title: Figma breaks «Bring us the / challenge.»; CTA Split has no Title Break, and the title probably fits on one line at 1512. To check once published.
+
+## 2026-11-05 — CTA Title Break on (Aniek Velthuizen, via Claude)
+«Bring us the» / «challenge.», as the frame.
