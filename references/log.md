@@ -320,3 +320,6 @@
 - First publish: rows faded *out* before the reveal (transition also on the hide step) → transitions only in the `in` state. Published to staging 2×. Headless Chrome 3 runs: hidden before the reveal, bar complete at ~0.9 s, everything final at ~1.4 s with the original texts, glow complete at ~1.6 s, hover 1 / 0.35, reduced motion static, no console errors.
 - Owner: glow animation off («niet te zien met blote oog, niet per se mooi») → Split Content script embed removed, style embed back to the static glow. Published to staging.
 - 2026-11-03: fresh motion reviewer stopped on a server error, but its lead held: in WebKit at 402 the first block was 833 high until the reveal and 825 after (the rows' 8 px rise grew the one-column legend). Rows now only fade. WebKit 402 / 767 / 1512: height constant before, during and after; Chrome reveal, hover and reduced motion unchanged; published to staging.
+
+## 2026-11-05 — Split Content Visual, Score Chart, Step List closed — Aniek Velthuizen with Claude
+- Owner tested on staging (Project Delivery Experts) and approved; merged to main. No change on the site since the 2026-11-03 publish. Still open on that page: the Figma sections above the two blocks are not built.
