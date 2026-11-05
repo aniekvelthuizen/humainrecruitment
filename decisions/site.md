@@ -124,3 +124,11 @@ Choice: agents build and check; only the main session publishes, opens the Desig
 - CMS: Opportunities, Cases, Rates, FAQ, Team, so the client can fill them; fields may change when Bullhorn comes.
 - Motion stays a separate pass over finished pages.
 
+
+## 2026-11-05 — Card titles are plain text with a fixed H3 (Aniek Velthuizen, via Claude)
+Seen: Card Profile, Card Opportunity and Card Primary titles were rich text. A CMS plain-text field cannot bind to rich text, so every CMS card showed the default title; and static titles set through the API render `<p>`, which needed 64 per-instance H3 clicks in the Designer.
+Choice: Title is a plain-text prop on a native H3 on all three, as Card Expert already has plain text. Text is plain too on Card Profile and Card Opportunity; Card Primary's Text stays rich text.
+Why: the client fills the fields without formatting steps, CMS binding works, and every new card is an H3 without a Designer step. A title cannot carry a break or a span any more.
+
+## 2026-11-05 — Form error state is global (Aniek Velthuizen, via Claude)
+`:user-invalid` is not a class state in Webflow, so the three rules live in `Global | Custom Code`, where every form gets them. Text «Please check this field» and `#b91c1c` are still placeholders.

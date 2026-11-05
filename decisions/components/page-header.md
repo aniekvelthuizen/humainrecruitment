@@ -40,6 +40,9 @@ No tablet design; phone only for Search and Opportunity. One column below 992, t
 ## 2026-11-05 — Embed
 Only what the style API has no route for: hiding empty parts (`:empty`, `:has`), slot children in Visual, and Logo Marquee at 2rem top and bottom in Row (Figma 32; the marquee's own class is 48 on top and stays for Home).
 
+## 2026-11-05 — Empty text takes no space (unit 4a-3; Aniek Velthuizen, via Claude)
+`.page-header_text:empty` joins the hide rule: 9 of 12 Opportunities have no Intro, and the empty `p` left an extra 24 px gap. Matches empty text only: every other header has text, so nothing else moves (13 pages, same height with and without the rule).
+
 ## 2026-11-05 — Motion
 `data-hero-reveal`: back and content `title`; tags, text, meta `text`; actions `actions`; visual `card`; row `row`. A page with a Page Header needs `Global | Custom Code` at the top of `page_wrap`.
 

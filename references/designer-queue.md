@@ -1,5 +1,39 @@
 # Designer queue
 
+## Open — pass 2026-11-05 (rest of site, Aniek Velthuizen, via Claude)
+Order matters inside A. Never publish during the pass. Read back through the API after each block.
+
+**A. CMS lists.** For each: open the page, sort, card link, filters, right-click the `_cms` list › Create component (group Sections), then into its section.
+- [ ] About Us: `team-grid_cms` (`1f8d6dec-3e0d-572a-c871-04c50ee1d1fa`) › component **Team Grid Items** › slot List of Team Grid `dfc8e559-c7da-28e5-e18d-31222382aaa1`. Nothing left in `page_wrap`.
+- [ ] Project Controls: `team-fan_cms` (`1dd4ecd2-f204-edd1-ff87-e4068685852d`) › **Team Fan Items** › slot List of Team Fan `37162dbc-a561-0ad7-dc42-1324c6441b2f`.
+- [ ] Clients: `cases-grid_cms` (`062cdea9-e356-d59d-5f3f-c9c50e63a208`) › **Cases Grid Items** › slot List of Cases Grid `82c44de5-d326-a5fa-e006-d39db10d85f9`.
+- [ ] Rates: Fee list `5591db66-39ec-2ae6-5a56-c50ef0d64046` › **Fee List Items**; FAQ list `9c745783-2be6-2ab2-b2e4-8d1ba8ed90cf` › **FAQ List Items**. Then by API: `insert_component_instance` Fee List Items into parent `{50049e22-3b9e-36cf-7d0b-10eabb4e9df5, 50049e22-3b9e-36cf-7d0b-10eabb4e9dfe}` scope Fee List, append; `data_component_builder insert_in_slot` FAQ List Items into parent `{a3077e3f-11d6-4c60-f99b-2f0ccd862b5f, a3077e3f-11d6-4c60-f99b-2f0ccd862b69}` scope FAQ List (slot shows as `Accordion Item`, try `Slot` if refused). Remove both lists left in `page_wrap`.
+- [ ] Opportunities: `opportunity-list_cms` `fccb3edd-7eb8-20f0-ebe6-f408397620af`: Sort Order › Created On, Newest first; card `80cb60d6-8d24-5c24-b09d-7a7e82ea583b` › Properties › Link › Collection page › current Opportunity; › **Opportunity List Items** › slot List of Opportunity List `4971cfab-a5d6-d355-b7af-225e97cfc532`.
+- [ ] Opportunities template `6aec7e040edff92198cfc345`: list `f86efa59-5fd9-169e-0b0d-c24162668b42`: sort as above; card `4b802f02-db26-d551-8c36-536c3262a246` link as above; Filters: Discipline › Equals › Current Opportunity's Discipline, and Opportunity › Is Not › Current Opportunity (if "current" is not offered on an option field: skip this filter, report); › **Opportunity Similar Items** › slot List of Opportunity Row `30c2437b-83f2-95ff-8f2e-652d7ef51868`.
+- [ ] Example Components: list `ccac76fb-1355-55c7-01bd-082773dbbb87`: sort; card `7d453ede-8124-0406-9ae5-2753c989e4fe` link; › **Opportunity Open Roles Items** › slot List of Opportunity Row `a395eac7-5511-44e1-ce90-6e2b1e31dbe1`.
+- [ ] Careers: list `a448def3-80f3-27f5-0640-559d9040635b`: sort; card `416ffc47-85f3-d482-929e-bc93a4c80138` link; › **Vacancy List Items** › slot List of Vacancy List `2d8c3791-bfa7-1a49-eeaa-b2170d878b5c`.
+
+**B. Conditions (component canvas, Settings › Visibility › Conditional).**
+- [ ] Card Primary: `card_primary_header` = `Title is set`; `card_primary_action_outline` = `Screen Reader Text is set AND Link is set`; props: Title above Text.
+- [ ] Card Profile: `card_profile_header` = `Title is set`; props: Title above Subtitle.
+- [ ] Card Opportunity: `card_opportunity_header` = `Title is set`; `card_opportunity_text` = `Text is set`.
+- [ ] Opportunity Detail: `opportunity-detail_section` `d93a49d2-c282-7055-9cba-4f71faabe62d` = About Text is set; `…e633` = Responsibilities Text; `…e639` = Requirements Text; `…e63f` = Offer Text.
+
+**C. File inputs.**
+- [ ] Form Section, Resume form, file input: Settings › Name retype `CV`, click out; allowed types PDF, DOC, DOCX.
+- [ ] Opportunity Detail, input `#cv`: same.
+
+**D. Tidy (props panel).**
+- [ ] Page Header: Variant into its folder; slots Row and Visual into folders; Settings folder last.
+- [ ] Sticky Steps folder order: Section, Variant, Content, Button, Layout.
+- [ ] Process Step: prop order per `decisions/components/sticky-steps.md`.
+
+**E. Slot Allowed components (if the first one takes a few steps; otherwise leave open and say so).**
+- [ ] Page Header Row: Logo Marquee, Pricing Row, Opportunity List; Visual: Card Expert. Facts Row List, Values Grid (3), Card Grid Cards, Stage Slider Slider, Pricing Row List, Process Step Items: Card Primary or the part they hold. Sticky Steps Steps: Card Primary, Process Step.
+
+**F. Check only.**
+- [ ] Template pages of Cases, Rates, FAQ, Team (and Experts): is there a draft or disable option in the Designer? Report; change nothing.
+
 ## Open
 - [ ] Measure on staging (published 2026-10-29; humain-d16f03.webflow.io and cdn.prod.website-files.com are blocked by this environment's network policy) — then: `hover-check.mjs` + `hover-matrix.mjs` on Styleguide › Buttons at 1512 and 402 px, CDN CORS check on the icon masks — 2026-10-29
 - [ ] Global Styles component › embed — check whether the trim CSS reads `--_text-style---trim-top|bottom`; if it has its own values, point it at those variables — API: embed content not returned by `get_all_elements` — recipe: by hand — then: measure a `u-text-style-h2` box against the glyphs — 2026-10-29

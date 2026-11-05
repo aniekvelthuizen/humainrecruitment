@@ -23,7 +23,7 @@ Field text is 20 as Figma; ≤ 1199 it is 16, so `you@company.com` fits a half-w
 
 ## 2026-11-05 — Unit 10b: field look moved to the shared classes (Aniek Velthuizen, via Claude)
 Replaces the entry above. Rest, hover, focus, placeholder, label, no star, select and textarea sizes now sit on `form_field`, `form_field.is-textarea`, new `form_field.is-select`, `form_label_text`, new `form_label_required` (on the star span in Form Label Text), so every Lumos Form field gets them: units 13 and 14, Example Components, Password. Fixed dark text on `form_field` and `form_select_wrap`: the field is always white, and on a dark section inherited text would be white on white.
-Kept in the embed: 16 px at 992–1199 (no Webflow breakpoint there; ≤ 991 is on the class), and the error state: `:user-invalid` is no class state in the API or the Designer. Literal: `outline-width` .125rem (= `focus/width`; the API refuses the variable).
+Kept in the embed: 16 px at 992–1199 (no Webflow breakpoint there; ≤ 991 is on the class). The error state was here too, and moved to `Global | Custom Code` in unit 4a-3: `:user-invalid` is no class state in the API or the Designer. Literal: `outline-width` .125rem (= `focus/width`; the API refuses the variable).
 Compared with the published /contact and /submit-resume in a local simulation at 1512, 1100, 800, 402: no differences.
 
 ## 2026-11-05 — Error state
@@ -33,8 +33,15 @@ The colour is the literal `#b91c1c`: the site has no variable for it. The line's
 ## 2026-11-05 — CV upload is native
 The API accepts `FormFileUploadWrapper` and sets the input's name (`CV`), id and required. Restyled with own classes, so the drop area follows the design: dashed border, Icon Set **CV Submission**, «Drop your CV here or **browse**», «PDF or Word · max 10MB».
 Native upload has no drag area, so `_upload-input` covers the whole box: the browser accepts a dropped file on a file input, and a click opens the picker. No script.
-Own classes never set `display` on the upload's state wrappers: Webflow toggles them with `w-hidden`.
+Own classes never set `display` on the upload's state wrappers: webflow.js toggles them with inline `display` (`w-hidden` stays on them, corrected 2026-11-05).
 Allowed file types have no API setting: Designer step in the report. Box 188 high (Figma 186): Figma's stroke is inside.
+**Correction:** the published field name is not CV. It publishes `name="file" data-name="File"` until the Name is retyped in the Designer; only the API and the Forms list say CV. Map the Bullhorn hook to what a test submission shows.
+
+## 2026-11-05 — Unit 4a-3: review fixes (Aniek Velthuizen, via Claude; not published, measured as a local simulation on the published pages)
+Error state: the three `:user-invalid` field rules moved to `Global | Custom Code` (`decisions/site.md`), so this embed no longer holds them; the upload's own red border stays here.
+Upload, in the embed: webflow.js forces the input to 1 px wide, so `width/height: 100% !important`; it now covers 674 × 186, so a drop lands in the field and every edge opens the picker. `margin-bottom` 0 (Webflow's `.w-file-upload` adds 10): upload to first label 42 → 32. Keyboard focus: 2 px inner outline, `focus/width` and `focus/offset-inner`, as the fields. ✕ is 44 × 44 with negative margins, so the file row keeps its height. Box stays 188 once a file is chosen, content centred. The selector is `_upload-default[style*="none"]`, because webflow.js sets inline `display` and leaves `w-hidden` on: no class changes to key on. Upload input id back to `file`, so `label for` resolves.
+Under submit: Webflow appends an unclassed Turnstile div that took the form's 32 gap; `[data-form-section] form > div:not([class])` is `position: absolute`. Contact at 1512 is 926, as Figma.
+Placeholders on First and Last name: Figma's text is empty, so they are blank. Custom Placeholder holds one space: with no override, Form Input publishes its own «First Name». To check in the published HTML.
 
 ## 2026-11-05 — Submit buttons
 Button Main with Button Type off and Link set to an empty URL: Clickable renders `<button type="submit">` only when the URL is empty. `type: null` only reset it to the default `#`, which would render a link that does not submit. Check the published HTML.

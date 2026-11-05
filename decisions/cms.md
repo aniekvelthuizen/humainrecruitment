@@ -98,6 +98,10 @@ Created in reverse order, so "Created On, newest first" gives the Figma order: M
 
 The other collections hold Figma copy too: Cases (3), Rates (5), FAQ (5), Team (9). They get final content from the client.
 
+## 2026-11-05 — FAQ answers from hidden Figma layers (Aniek Velthuizen, via Claude)
+Four answers came from hidden layers in Figma, so nobody has seen them on the design: replacement guarantee, upfront charge, secondment pricing, fixed project price. They commit the client to terms, so **they need the client's confirmation before go-live**.
+Written and published as CMS items only, 2026-11-05. The FAQ list keeps its "answer is set" filter, so a later item without an answer stays off the page.
+
 ## 2026-11-05 — Getty-watermarked placeholder photos
 Must be replaced before go-live (plan, conflict 4).
 

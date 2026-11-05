@@ -33,7 +33,7 @@ Per Figma mobile (`type=variant-2`): group margin 0, padding `space/5`, content 
 Pricing: content becomes a grid `minmax(0,1fr) auto`, title in column 1 and label in column 2 of row 1, so a long title wraps instead of running under the label (absolute positioning would collide at 320). Desktop unchanged. Example Components' two test cards follow.
 Price and unit may wrap: `flex-wrap: wrap` on `card_primary_value` below 768 in the variants, and at all widths inside this block through the embed, because `card_primary_number` does not shrink and three columns get narrow at 992–1279.
 
-## 2026-11-05 — Measured (local simulation: published CSS + these rules; nothing published yet)
+## 2026-11-05 — Measured (local simulation at build: published CSS + these rules; staging values below)
 | Where | Figma | Built |
 |---|---|---|
 | Eyebrow / title / text at 1512 | 128 h24 / 184 h117 / 197 h104 | same |
@@ -44,6 +44,16 @@ Price and unit may wrap: `flex-wrap: wrap` on `card_primary_value` below 768 in 
 | 402: title row, label | label x 229, 113 × 32 | same |
 | 402: card | 362 × 248 / 250 | 362 × 265 / 267 |
 No sideways scroll at 1512, 1100, 800, 402, 320. At 320 «/ hour margin» drops under «From €XX». The 17 px on phones: price box 36 against 25 (11), Card Bullet 21 against 19 per row (6).
+Staging, published 2026-11-05 before the link fix (audit): phone cards 265 / 203, because the middle card had no button. With the button in a local simulation: 265 / 267 / 265. Not yet seen published.
 
 ## 2026-11-05 — Placed
-Hire an Expert: instance `667ca13b-cf34-960f-be86-3d238e6c5e21`, end of `page_main`. Rates: instance `96599d9d-42d0-53ad-8e48-9c08df05304e`, variant In Header, in the Row slot of Page Header `ea8cc4bb-3014-4799-e0a2-4fb512fb757a`, Row Visibility on. Copy as Figma, «€XX» kept as placeholder. All six buttons link to `#` for now; Screen Reader Text «See details: <title>» (the button only renders with both).
+Hire an Expert: instance `667ca13b-cf34-960f-be86-3d238e6c5e21`, end of `page_main`. Rates: instance `96599d9d-42d0-53ad-8e48-9c08df05304e`, variant In Header, in the Row slot of Page Header `ea8cc4bb-3014-4799-e0a2-4fb512fb757a`, Row Visibility on. Copy as Figma, «€XX» kept as placeholder. All six buttons link to `/contact` (see below); Screen Reader Text «See details: <title>» (the button only renders with both).
+
+## 2026-11-05 — Review fixes, phase 2 audit (Aniek Velthuizen, via Claude)
+- **Links:** `#` does not count as set, so the middle card rendered no button. All six cards link to `/contact` (URL prop; a link prop refuses page mode). Button text stays «See details», Figma's.
+- **Price 992–1199:** unit on its own line in all three cards, so lists and buttons line up. Fit on one line was not possible: «From €XX / hour margin» wraps up to 1181 here (the audit's 1135 was an estimate); 1199 leaves room for a 15 px scrollbar.
+- **Button pinned to the card bottom** from 768 up (`margin-top: auto`, embed). Longer real prices cannot push one button out of line.
+- **≤ 349:** «Most chosen» on its own row under the title, one column, embed. No Webflow breakpoint at this width.
+- **Muted title:** `swatch/light-100-o50`, as Stage Slider and Figma; opacity removed.
+- **Hidden default text:** nothing to do on these cards. Text and List Title are already empty in Card Primary, Badge is off on the Outline cards.
+Simulated locally, both pages, 320–1512, with the middle button added by hand: lists and buttons level per row, button 24 from the bottom (20 on phones), nothing out of the card, no sideways scroll, label clear of the title. 1512 unchanged (card 389). Not yet seen published; hover and focus to test on staging.

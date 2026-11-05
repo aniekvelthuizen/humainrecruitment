@@ -41,4 +41,11 @@ Content: Eyebrow, Title, Title Muted, Text · Closing: Statement, Statement Mute
 Card Primary **Stage**, stage 9 of Dark Large **Stage Certified**. Role off (= `listitem`), List Visibility off. Dark Large keeps Eyebrow and Badge; Dark Small and Light Small turn both off. Icons per `icon-set.md`. The titles are `<p>` until the heading level is set: 27 titles (9 on each page).
 
 ## 2026-11-05 — Checked before publish
-Local simulation with the published CSS and these rules, Dark Large at 1512: header 300, 123, 912 × 284; list 64, 458, 1384 wide; cards 440; closing 1292 high; statement 182, 1148 × 384; visual 536, 440 × 440; paragraph 184, 1144 × 432; «reach clients» 757 wide (Figma about 755). All as Figma. No sideways scroll at 1512, 1100, 800, 402, 320. To measure on staging after publish.
+Local simulation with the published CSS and these rules, Dark Large at 1512: header 300, 123, 912 × 284; list 64, 458, 1384 wide; cards 440; closing 1292 high; statement 182, 1148 × 384; visual 536, 440 × 440; paragraph 184, 1144 × 432; «reach clients» 757 wide (Figma about 755). All as Figma. No sideways scroll at 1512, 1100, 800, 402, 320.
+Staging, published 2026-11-05, at 1512: Project Controls 1242, Consulting Services 1239, Project Delivery Experts 2642 high, equal to Figma.
+
+## 2026-11-05 — Ninth card, 768–991 (Aniek Velthuizen, via Claude)
+The ninth card sat alone beside an empty cell. It now spans both columns (embed, `:last-child:nth-child(odd)`, so an even count stays as it is). Simulated locally on all three pages at 768, 900, 991: 699, 821, 904 wide, no sideways scroll; 992 and 767 unchanged. Not yet seen published.
+
+## 2026-11-05 — Stage text as built, not Figma (Aniek Velthuizen, via Claude)
+Stage titles and labels follow Theme text (`#030b1b`), darker than Figma's loose `#1a1c1e`. `text-wrap: balance` on titles stays, so some titles break at other words than Figma («Behaviour & / Performance Assessment»); no one-word last lines.
