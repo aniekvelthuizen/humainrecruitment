@@ -1,0 +1,12 @@
+<style>
+[data-split-content][data-space-top="main" i] { padding-top: var(--_spacing---section-space--main); }
+[data-split-content][data-space-top="none" i] { padding-top: 0; }
+.split-content_muted:empty { display: none; }
+.split-content_actions:empty { display: none; }
+.split-content_slot:not(:has(> * > *)) { display: none; }
+[data-split-content]:has(.split-content_slot > * > *) .split-content_visual { display: none; }
+[data-split-content][data-glow="true" i] { background-image: radial-gradient(58.28% 52.94% at 50% 105.94%, var(--_theme---glow--mint) 49.5%, transparent 100%); }
+@media screen and (max-width: 767px) {
+  [data-split-content][data-glow="true" i] { background-image: radial-gradient(162.5% 44.8% at 50% 87.3%, var(--_theme---glow--mint) 10%, transparent 100%); }
+}
+</style>

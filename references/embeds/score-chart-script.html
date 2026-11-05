@@ -1,0 +1,68 @@
+<script>
+(function () {
+  if (window.scoreChartReady) return;
+  window.scoreChartReady = true;
+  var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var ease = function (t) { return 1 - Math.pow(1 - t, 3); };
+  function numberIn(el) { return ((el && el.textContent) || '').match(/\d+(?:[.,]\d+)?/); }
+  function countUp(el, delay) {
+    var match = numberIn(el);
+    if (!match) return;
+    var text = el.textContent, found = match[0], comma = found.indexOf(',') > -1;
+    var target = parseFloat(found.replace(',', '.')), decimals = (found.split(/[.,]/)[1] || '').length;
+    var show = function (n) { var s = n.toFixed(decimals); el.textContent = text.replace(found, comma ? s.replace('.', ',') : s); };
+    var start = null;
+    show(0);
+    requestAnimationFrame(function frame(now) {
+      if (start === null) start = now + delay;
+      var t = Math.min(Math.max((now - start) / 800, 0), 1);
+      if (t < 1) { show(target * ease(t)); requestAnimationFrame(frame); } else el.textContent = text;
+    });
+  }
+  function setup(chart) {
+    var bar = chart.querySelector('[data-score-bar]');
+    if (!bar || bar.childElementCount) return;
+    var items = [].slice.call(chart.querySelectorAll('[data-score-item]'));
+    var segments = items.map(function (item, i) {
+      var match = numberIn(item.querySelector('[data-score-value]'));
+      var weight = match ? parseFloat(match[0].replace(',', '.')) : 0;
+      var segment = document.createElement('div');
+      segment.style.flexGrow = weight > 0 ? weight : 0;
+      segment.style.setProperty('--i', i);
+      item.style.setProperty('--i', i);
+      bar.appendChild(segment);
+      return segment;
+    });
+    var all = items.concat(segments);
+    function clear() { chart.removeAttribute('data-score-active'); all.forEach(function (el) { el.removeAttribute('data-active'); }); }
+    function point(i) {
+      var motion = chart.getAttribute('data-score-motion');
+      if (motion === 'ready' || motion === 'in') return;
+      clear();
+      chart.setAttribute('data-score-active', '');
+      items[i].setAttribute('data-active', '');
+      segments[i].setAttribute('data-active', '');
+    }
+    if (window.matchMedia('(hover: hover)').matches) {
+      items.forEach(function (el, i) { el.addEventListener('pointerenter', function () { point(i); }); });
+      segments.forEach(function (el, i) { el.addEventListener('pointerenter', function () { point(i); }); });
+      chart.addEventListener('pointerleave', clear);
+    }
+    if (calm || !('IntersectionObserver' in window)) return;
+    chart.setAttribute('data-score-motion', 'ready');
+    var io = new IntersectionObserver(function (entries) {
+      if (!entries[0].isIntersecting) return;
+      io.disconnect();
+      requestAnimationFrame(function () { requestAnimationFrame(function () {
+        chart.setAttribute('data-score-motion', 'in');
+        items.forEach(function (item, i) { countUp(item.querySelector('[data-score-value]'), 150 + i * 60); });
+        setTimeout(function () { chart.setAttribute('data-score-motion', 'done'); }, 1000 + items.length * 80);
+      }); });
+    }, { threshold: 0.35 });
+    io.observe(chart);
+  }
+  function run() { document.querySelectorAll('[data-score-chart]').forEach(setup); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
+  else run();
+})();
+</script>

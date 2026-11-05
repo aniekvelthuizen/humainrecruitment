@@ -297,9 +297,29 @@
 - Placed on Home after Expertise (append + re-append Split Content #2 and CTA Split); Split Content #2 Space Top none → large.
 - Published to staging 3×. `testimonials-check.mjs` (new): 1512 = Figma except the known +6 px card height; 402 order/widths/gaps = mobile frame; no sideways scroll at 1512/1280/992/991/767/402; no console errors. `spotlight-check.mjs`: Expertise identical before/after at all six widths.
 - Open: Card Testimonial `role="listitem"` condition does not render (queued); slot names / Allowed components (queued); photo is a 446 KB PNG (WebP compression replaces the file in place — not done without an OK).
+
+## 2026-11-02 — Split Content Visual slot, Score Chart, Step List — Aniek Velthuizen with Claude
+- Owner: build Figma «Content / Final score» and «Content / Trust statement» (Project Delivery Experts) as a variant of Split Content with the chart / steps in a slot instead of the photo. Plan: `references/plans/2026-11-02-split-visual-slot.md`.
+- Split Content: slot **Visual** (filled slot hides the photo, empty slot hides itself), prop **Glow** (Stagger Cards mint glow), empty button row hidden. Home's two instances re-measured against a baseline taken before the change: identical at 1512 / 991 / 402.
+- New: **Score Chart** + **Score Item** (bar drawn from the weights by a small embed script, colours by position via Theme `chart/color-1…7`, new swatches `chart-purple`, `chart-blue`), **Step List** + **Step Item** (CSS counter numbers, Theme `badge/background`). Nested slots filled through the API (`insert_in_slot` with nested `slots`) — no Designer step needed.
+- Project Delivery Experts: both blocks at the end of `page_main` (after the template placeholder Section). Published to staging 2× (announced to the CTA and Services sessions). `visual-slot-check.mjs` at 1512 / 1280 / 991 / 767 / 479 / 402: bar segments 169/101/68/34/135/101/68 and legend rows = Figma, step rows 90 / 100 apart, no sideways scroll, no console errors. Heights 658 / 808 at 1512 (Figma 668 / 773: agreed H2 48 and narrower text column).
 - Review (fresh agent, published HTML only): 1512 and 402 within 2 px of Figma bar the known card height; Expertise unchanged; no overflow 320–1512. Fixed: tablet column capped at 40rem, hidden quote copy cleared. Published 1×, re-measured 402 / 767 / 900 / 991 / 1512. Owner questions in spotlight-grid.md.
 
 ## 2026-11-02 — Testimonials: owner round — Aniek Velthuizen with Claude
 - Owner: block good, only the card hover too minimal. Card Testimonial now hovers like the other cards: mint veil, 0.25rem lift, quote mark turns dark (overlay), arrow nudge as before; also on keyboard focus. Measured with `testimonial-hover-check.mjs` (new) on all three cards.
 - `role="listitem"`: the Home cards were on Role's default (On = None); set to List Item through the API, staging renders it. Queue item closed — no Designer change needed (the Designer was opened, only read).
 - Published to staging 3× (announced to the Split Content / Slots session).
+
+## 2026-11-02 — Testimonials closed — Aniek Velthuizen with Claude
+- Owner approved; merged to main (d83971e) via `aniek/home-testimonials` (cherry-picks of the three Testimonials commits only — the Split Content / Score Chart commit 97ff294 on aniek/home-hero is not tested yet, per that session).
+- Review (`references/audit/2026-11-02-visual-slot.md`): Split Content no findings; Score Chart legend columns (≥ 15rem each), space under the legend, segment rules into the embed, value parsing; Step List number dark on every theme (`badge/text`), no-op lines removed. Round 2 after the re-check: Safari legend offset (rows 2rem, no margins), «10-15%» parsing. Published to staging 3× more (announced); WebKit + Chrome measured. Not merged: waiting for Aniek's test.
+
+## 2026-11-02 — Score Chart and glow motion — Aniek Velthuizen with Claude
+- Owner request: reveal + mouse effect on the Score Chart, glow animates on scroll into view. Exception recorded in `decisions/motion.md`.
+- Score Chart: segments grow left to right, rows rise, values count up; hover keeps one row + segment, dims the rest. Split Content: glow rises in (only with Glow on). Script and style in separate embeds per component; sources in `references/embeds/`.
+- First publish: rows faded *out* before the reveal (transition also on the hide step) → transitions only in the `in` state. Published to staging 2×. Headless Chrome 3 runs: hidden before the reveal, bar complete at ~0.9 s, everything final at ~1.4 s with the original texts, glow complete at ~1.6 s, hover 1 / 0.35, reduced motion static, no console errors.
+- Owner: glow animation off («niet te zien met blote oog, niet per se mooi») → Split Content script embed removed, style embed back to the static glow. Published to staging.
+- 2026-11-03: fresh motion reviewer stopped on a server error, but its lead held: in WebKit at 402 the first block was 833 high until the reveal and 825 after (the rows' 8 px rise grew the one-column legend). Rows now only fade. WebKit 402 / 767 / 1512: height constant before, during and after; Chrome reveal, hover and reduced motion unchanged; published to staging.
+
+## 2026-11-05 — Split Content Visual, Score Chart, Step List closed — Aniek Velthuizen with Claude
+- Owner tested on staging (Project Delivery Experts) and approved; merged to main. No change on the site since the 2026-11-03 publish. Still open on that page: the Figma sections above the two blocks are not built.
