@@ -7,3 +7,7 @@ memory/
 
 # Screenshots from card-check.mjs runs (the JSON measurements are kept)
 references/audit/**/*.png
+
+# Figma exports for the rest-of-site build: pictures and originals stay local, the text specs are committed
+references/figma/rest-of-site/**/*.png
+references/figma/rest-of-site/assets/

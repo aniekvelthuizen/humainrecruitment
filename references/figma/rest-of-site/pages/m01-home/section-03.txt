@@ -1,0 +1,21 @@
+# Frame 592 (2365:38370) 402x1502
+I "Frame 592" -> Content / 4 UBRS / device=mobile (2365:38274) 402x1502 {"device":"mobile"}
+   T content-4-ubrs_text [12]: "What sets us apart"
+   T content-4-ubrs_title [30]: "Built differently. Designed for delivery. Powered by experience."
+   T content-4-ubrs_text [16]: "Four things that set us apart from day one."
+   I "Prop 2" -> Card / Service / type=default (2041:11259) 362x250 {"type":"default"}
+    I "Google icons" -> Google icons / type=person-search-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2045:11310) 48x48 {"type":"person-search-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T Pre-Qualified Specialists [24]: "Pre-Qualified Specialists"
+     T Ready before you need them. Continuously identified, benchmarked, and assessed. [16]: "Ready before you need them.\nContinuously identified,\nbenchmarked, and assessed."
+   I "Prop 3" -> Card / Service / type=default (2041:11259) 362x263 {"type":"default"}
+    I "Google icons" -> Google icons / type=percent-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2045:11309) 48x48 {"type":"percent-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T Pre-Qualified Specialists [24]: "25–30% lower fees"
+     T Ready before you need them. Continuously identified, benchmarked, and assessed. [16]: "AI optimises the parts that don’t\nneed a human, so we pass the\nefficiency on to you as a lower fee."
+   I "Prop 4" -> Card / Service / type=default (2041:11259) 362x250 {"type":"default"}
+    I "Google icons" -> Google icons / type=timer-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2045:11308) 48x48 {"type":"timer-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T Pre-Qualified Specialists [24]: "Speed in shortlists"
+     T Ready before you need them. Continuously identified, benchmarked, and assessed. [16]: "Relevant candidates in front of you\nfast — sourcing and screening run\ncontinuously."
+   I "Prop 5" -> Card / Service / type=default (2041:11259) 362x263 {"type":"default"}
+    I "Google icons" -> Google icons / type=timer-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2045:11308) 48x48 {"type":"timer-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T Pre-Qualified Specialists [24]: "Pre-Qualified Specialists"
+     T Ready before you need them. Continuously identified, benchmarked, and assessed. [16]: "Ready before you need them.\nContinuously identified,\nbenchmarked, and assessed."

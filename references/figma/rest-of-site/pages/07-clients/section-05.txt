@@ -1,0 +1,11 @@
+# Frame 681 (2292:28949) 1512x744
+I "Frame 681" -> content-cta / device=desktop (2236:5447) 1512x744 {"device":"desktop"}
+   IMG content-cta_img 76a4149fd50154ab11ea334dd8669590c6ee529c.png 692x360
+    T content-cta_title [48]: "Let's deliver yours."
+    T content-cta_text [20]: "Tell us about the role or the challenge — we'll come back with a plan."
+     I "Button" -> Button / type=primary, state=rest (2028:2123) 193x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Hire an expert","type":"primary","state":"rest"}
+       T button_text [18]: "Hire an expert"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+     I "Button" -> Button / type=secondary-white, state=rest (2028:2143) 166x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Contact us","type":"secondary-white","state":"rest"}
+       T button_text [18]: "Contact us"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}

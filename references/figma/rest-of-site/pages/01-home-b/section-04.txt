@@ -1,0 +1,20 @@
+# Content scrolly telling / Glass cards (2710:48618) 1512x1394
+I "Content scrolly telling / Glass cards" -> Content scrolly telling / Glass cards / device=desktop (2233:4246) 1512x1394 {"device":"desktop"}
+    T content-scrolly-telling-glass-cards_text [16]: "our method"
+    T content-scrolly-telling-glass-cards_title [60]: "The top 5% found before you need them."
+    T content-scrolly-telling-glass-cards_text [20]: "Most agencies start searching when you call. We map each discipline continuously, so the shortlist already exists on the day you need it."
+   I "Button" -> Button / type=primary, state=rest (2028:2123) 233x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"See how we select","type":"primary","state":"rest"}
+     T button_text [18]: "See how we select"
+    I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+   I "Step 5" -> Content / Process step / style=glass (2045:11371) 676x333 {"Label":false,"style":"glass"}
+      T step-4_text [16]: "1"
+       T step-4_title [24]: "Continuous search."
+       T step-4_text [18]: "We map the market per discipline and keep those specialists warm, instead of starting from zero on each request."
+   I "Step 6" -> Content / Process step / style=glass (2045:11371) 687x333 {"Label":false,"style":"glass"}
+      T step-4_text [16]: "2"
+       T step-4_title [24]: "Benchmarked and validated."
+       T step-4_text [18]: "Every specialist is assessed against the criteria that decide success on a capital project."
+   I "Step 7" -> Content / Process step / style=glass (2045:11371) 687x306 {"Label":false,"style":"glass"}
+      T step-4_text [16]: "3"
+       T step-4_title [24]: "Selected by practitioners."
+       T step-4_text [18]: "People who have run these roles themselves decide who makes the list."

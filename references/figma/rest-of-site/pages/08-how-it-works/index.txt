@@ -1,0 +1,7 @@
+01 | Frame 676 | 2292:29087 | 1512x943 | main: Header default / type=vertical
+02 | Navbar - Light | 2292:29088 | 1512x180 | main: Navbar - Light / type=default
+03 | Content scrolly telling / Plain | 2444:34855 | 1512x4400 | main: Content scrolly telling / Plain
+04 | Frame 576 | 2292:33020 | 1512x765 | main: 
+05 | Content / Content block | 2292:33509 | 1512x863 | main: Content / Content block / content-location=true, small=false, list=true
+06 | Frame 681 | 2292:29100 | 1512x582 | main: content-cta / device=desktop
+07 | Frame 655 | 2292:29101 | 1512x550 | main: Footer / device=desktop-compact

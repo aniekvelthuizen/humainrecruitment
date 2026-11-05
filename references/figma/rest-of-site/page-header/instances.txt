@@ -1,0 +1,16 @@
+type=default | 2323:22239 | 15. Privacy & Cookies | 1512x520
+type=default | 2292:8441 | 6. About Us / About Us | 1512x536
+type=default | 2318:19563 | 14. Careers | 1512x586
+type=default | 2283:9755 | 5. For business / Project-controls | 1512x586
+type=default | 2314:18516 | 10. About Us / Contact | 1512x464
+type=default | 2318:18687 | 11. Analyse my resume | 1512x464
+type=default | 2277:7690 | 3. For business / Hire Project Delivery Experts from the Top 5% | 1512x586
+type=opportunity | 2318:21341 | 13. Opportunities / Detail | 1512x628
+type=opportunity-mobile | 2406:51635 | 13. Opportunities / Detail | 402x644
+type=light | 2277:7349 | 4. For business / Consulting-services | 1512x586
+type=vertical | 2292:29087 | 8. About Us / How it works | 1512x943
+type=vertical | 2292:8939 | 7. About Us / Clients | 1512x877
+type=vertical-pricing | 2304:33648 | 9. About Us / Rates | 1512x1061
+Header / Hire an expert | 2323:32964 | 2. Hire an expert | 1512x982
+device=desktop | 2339:28429 | 12. Opportunities | 1512x720
+device=mobile | 2398:44859 | 12. Opportunities | 402x624

@@ -1,0 +1,62 @@
+type=contact | 2444:35362 | 10. About Us / Contact | 1512x926
+type=resume | 2444:35462 | 11. Analyse my resume | 1512x1144
+small=false, state=rest | 2246:5765 | Design components | 259x63
+small=false, state=rest | 2314:18531 | Design components | 259x67
+type=select | I2339:28429;2246:5837 | 12. Opportunities | 259x63
+type=select | I2339:28429;2246:5825 | 12. Opportunities | 259x63
+type=select | 2398:32802 | Design components | 427x63
+type=select | I2339:28429;2246:5809 | 12. Opportunities | 259x62
+type=select | I2339:28429;2246:5798 | 12. Opportunities | 259x63
+type=select | 2398:32804 | Design components | 427x62
+type=select | 2398:32808 | Design components | 427x63
+type=select | 2246:5798 | Components | 259x63
+type=select | 2246:5837 | Components | 259x63
+type=select | 2246:5809 | Components | 259x62
+type=select | 2246:5825 | Components | 259x63
+type=select | I2398:44859;2398:32947;2398:32742 | 12. Opportunities | 254x63
+type=select | I2398:32947;2398:32742 | Components | 254x63
+type=select | 2398:32742 | Design components | 359x63
+type=select | 2398:32806 | Design components | 427x63
+type=text | I2444:35462;2318:18793 | 11. Analyse my resume | 676x201
+type=text | I2444:35462;2318:18788 | 11. Analyse my resume | 322x67
+type=text | I2444:35462;2318:18786 | 11. Analyse my resume | 322x67
+type=text | I2444:35462;2318:18961 | 11. Analyse my resume | 322x67
+type=text | I2444:35462;2318:18785 | 11. Analyse my resume | 322x67
+type=text | 2318:18789 | Components | 322x67
+type=text | 2318:18788 | Components | 322x67
+type=text | 2318:18793 | Components | 676x201
+type=text | 2318:18785 | Components | 322x67
+type=text | 2406:51908 | Components | 322x67
+type=text | I2444:35362;2314:18592 | 10. About Us / Contact | 322x67
+type=text | 2314:18592 | Components | 322x67
+type=text | I2406:51755;2318:21574 | 13. Opportunities / Detail | 376x67
+type=text | I2444:35362;2314:18542 | 10. About Us / Contact | 322x67
+type=text | I2444:35362;2314:18614 | 10. About Us / Contact | 322x67
+type=text | I2406:51755;2318:21571 | 13. Opportunities / Detail | 376x67
+type=text | I2444:35462;2318:18791 | 11. Analyse my resume | 322x67
+type=text | I2444:35362;2314:18658 | 10. About Us / Contact | 676x67
+type=text | 2318:21571 | Components | 376x67
+type=text | I2444:35362;2314:18682 | 10. About Us / Contact | 676x201
+type=text | 2314:18682 | Components | 676x201
+type=text | 2318:18961 | Components | 322x67
+type=text | 2406:51909 | Components | 322x67
+type=text | 2314:18615 | Components | 322x67
+type=text | I2406:51755;2318:21575 | 13. Opportunities / Detail | 376x67
+type=text | 2314:18614 | Components | 322x67
+type=text | 2318:21575 | Components | 376x67
+type=text | 2318:18786 | Components | 322x67
+type=text | I2444:35362;2314:18615 | 10. About Us / Contact | 322x67
+type=text | 2314:18542 | Components | 322x67
+type=text | 2318:18791 | Components | 322x67
+type=text | 2314:18658 | Components | 676x67
+type=text | I2444:35462;2318:18789 | 11. Analyse my resume | 322x67
+type=text | 2318:21574 | Components | 376x67
+type=text | 2406:51910 | Components | 322x67
+Contact / Detail item | I2444:35362;2314:18722 | 10. About Us / Contact | 290x58
+Contact / Detail item | I2444:35362;2314:18719 | 10. About Us / Contact | 290x58
+Contact / Detail item | I2444:35362;2314:18716 | 10. About Us / Contact | 290x58
+Contact / Detail item | 2444:35358 | Components | 290x58
+Contact / Detail item | I2444:35362;2444:35358 | 10. About Us / Contact | 290x58
+Contact / Detail item | 2314:18719 | Components | 290x58
+Contact / Detail item | 2314:18722 | Components | 290x58
+Contact / Detail item | 2314:18716 | Components | 290x58

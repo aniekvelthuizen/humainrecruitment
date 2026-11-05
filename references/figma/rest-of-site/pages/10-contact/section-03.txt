@@ -1,0 +1,44 @@
+# Frame 710 (2444:35362) 1512x926
+I "Frame 710" -> Static / Contact form / type=contact (2444:35359) 1512x926 {"type":"contact"}
+  T static-contact-form_title [48]: "Contact form"
+   I "input-simple" -> input-simple / type=text (2314:18530) 322x67 {"type":"text"}
+    I "input" -> input / small=false, state=rest (2242:5830) 322x67 {"Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Show helper":false,"Helper text":"Alert / Error message","Show icon right":false,"Text":"","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+      T input_text [12]: "First name"
+        T input_text [20]: ""
+   I "input-simple" -> input-simple / type=text (2314:18530) 322x67 {"type":"text"}
+    I "input" -> input / small=false, state=rest (2242:5830) 322x67 {"Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Show helper":false,"Helper text":"Alert / Error message","Show icon right":false,"Text":"","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+      T input_text [12]: "last name"
+        T input_text [20]: ""
+   I "input-simple" -> input-simple / type=text (2314:18530) 322x67 {"type":"text"}
+    I "input" -> input / small=false, state=rest (2242:5830) 322x67 {"Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Show helper":false,"Helper text":"Alert / Error message","Show icon right":false,"Text":"you@company.com","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+      T input_text [12]: "Email"
+        T input_text [20]: "you@company.com"
+   I "input-simple" -> input-simple / type=text (2314:18530) 322x67 {"type":"text"}
+    I "input" -> input / small=false, state=rest (2242:5830) 322x67 {"Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Show helper":false,"Helper text":"Alert / Error message","Show icon right":false,"Text":"+31","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+      T input_text [12]: "Phone"
+        T input_text [20]: "+31"
+   I "input-simple" -> input-simple / type=text (2314:18530) 676x67 {"type":"text"}
+    I "input" -> input / small=false, state=rest (2242:5830) 676x67 {"Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Show helper":false,"Helper text":"Alert / Error message","Show icon right":true,"Text":"A company looking to hire","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+      T input_text [12]: "I'm contacting you as"
+        T input_text [20]: "A company looking to hire"
+      I "Icon right" -> keyboard_arrow_down / Style=Outlined (2242:5801) 24x24 {"Style":"Outlined"}
+   I "input-simple" -> input-simple / type=text (2314:18530) 676x201 {"type":"text"}
+    I "input" -> input / small=false, state=rest (2242:5830) 676x201 {"Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Show helper":false,"Helper text":"Alert / Error message","Show icon right":false,"Text":"A company looking to hire","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+      T input_text [12]: "Message"
+   T static-contact-form_text [16]: "We reply within one working day."
+   I "Button" -> Button / type=primary, state=rest (2028:2123) 196x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Send message","type":"primary","state":"rest"}
+     T button_text [18]: "Send message"
+    I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+    I "Contact / Detail item" -> Contact / Detail item (2314:18715) 290x58 {}
+     T Email [12]: "Email"
+     T hello@humain-recruitment.com [20]: "info@humainrecruitment.com"
+    I "Frame 718" -> Contact / Detail item (2314:18715) 290x58 {}
+     T Email [12]: "Phone"
+     T hello@humain-recruitment.com [20]: "+31 (0)XX XXX XX XX"
+    I "Frame 719" -> Contact / Detail item (2314:18715) 290x58 {}
+     T Email [12]: "office"
+     T hello@humain-recruitment.com [20]: "Rotterdam, The Netherlands"
+    I "Frame 720" -> Contact / Detail item (2314:18715) 290x58 {}
+     T Email [12]: "Hours"
+     T hello@humain-recruitment.com [20]: "Mon–Fri · 09:00–17:30 CET"
+  IMG static-contact-form_img 05ef2a41bbb5c4d379e9063a4eab32c41c79781c.png 676x346

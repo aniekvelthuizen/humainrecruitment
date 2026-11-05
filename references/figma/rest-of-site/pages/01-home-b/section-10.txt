@@ -1,0 +1,34 @@
+# Content / Content block (2710:57507) 1512x643
+I "Content / Content block" -> Content / Content block / content-location=true, small=false, list=true (2249:8033) 1512x643 {"content-location":"true","small":"false","list":"true"}
+  I "Assets / Content" -> Assets / Content / dark-mode=false, list=true (2251:6954) 558x430 {"Show Paragraph":true,"Show Sublabel":true,"Title":"Working in project controls?","Show Title":true,"Show Buttons":true,"Show Divider":false,"Paragraph":"Cursus eu et vestibulum donec aliquam mattis ornare nec sollicitudin. Accumsan diam maecenas eget rhoncus urna eget. Pellentesque malesuada nullam lectus ultrices at nullam. Justo in sed amet non morbi. Aliquam vitae ligula in arcu risus fermentum quis pulvinar.","Sublabel":"for candidates","dark-mode":"false","list":"true"}
+    T assets-content_text [16]: "for candidates"
+    T assets-content_title [48]: "Working in project controls?"
+     T assets-content_text [20]: "Cursus eu et vestibulum donec aliquam mattis ornare nec sollicitudin. Accumsan diam maecenas eget rhoncus urna eget. Pellentesque malesuada nullam lectus ultrices at nullam. Justo in sed amet non morbi. Aliquam vitae ligula in arcu risus fermentum quis pulvinar."
+    I "Button group" -> Button group / Property 1=Default (2249:6952) 450x48 {"First button":true,"Third button":false,"Second button":true,"Property 1":"Default"}
+     I "Button" -> Button / type=primary, state=rest (2028:2123) 201x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Analyse my CV","type":"primary","state":"rest"}
+       T button_text [18]: "Analyse my CV"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+     I "Button" -> Button / type=secondary, state=rest (2028:2133) 233x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"View opportunities","type":"secondary","state":"rest"}
+       T button_text [18]: "View opportunities"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+   I "Image" -> Image (2249:8010) 676x451 {}
+    IMG fixed_aspect_ratio ab9dd13ebd73dce2361b77a5c3d4a9704e2c24e0.png 676x451
+    I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=3:2 | 2:3, Orientation=Landscape (2249:7100) 676x451 {"Aspect Ratio":"3:2 | 2:3","Orientation":"Landscape"}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}

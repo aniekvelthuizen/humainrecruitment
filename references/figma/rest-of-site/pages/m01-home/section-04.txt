@@ -1,0 +1,50 @@
+# Content scrolly telling / Glass cards (2378:34842) 402x2165
+I "Content scrolly telling / Glass cards" -> Content scrolly telling / Glass cards / device=mobile (2378:31869) 402x2165 {"device":"mobile"}
+    T content-scrolly-telling-glass-cards_text [16]: "How it works"
+    T content-scrolly-telling-glass-cards_title [30]: "Hiring Project Talent. Simplified."
+    T content-scrolly-telling-glass-cards_text [20]: "From requirement to placement in a matter of days — powered by AI, guided by experience."
+   I "Button" -> Button / type=primary, state=rest (2028:2123) 216x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Start with a brief","type":"primary","state":"rest"}
+     T button_text [18]: "Start with a brief"
+    I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+   I "Step 5" -> Content / Process step / style=glass (2045:11371) 362x510 {"Label":true,"style":"glass"}
+      T step-4_text [16]: "1"
+       T step-4_text [14]: "Day 1 · 30 min call"
+       T step-4_title [24]: "Define your requirement"
+       T step-4_text [18]: "Tell us about your project, scope, timeline and required expertise. We translate this into a structured search profile."
+       I "Frame 428" -> bullet / type=14 (2028:2716) 314x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Project, scope & timeline"
+       I "Frame 590" -> bullet / type=14 (2028:2716) 314x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Required expertise"
+       I "Frame 591" -> bullet / type=14 (2028:2716) 314x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Structured search profile"
+   I "Step 6" -> Content / Process step / style=glass (2045:11371) 362x483 {"Label":true,"style":"glass"}
+      T step-4_text [16]: "2"
+       T step-4_text [14]: "Day 2–4"
+       T step-4_title [24]: "Receive pre-qualified profiles"
+       T step-4_text [18]: "Our AI sourcing combined with human screening delivers highly relevant candidates within days."
+       I "Frame 428" -> bullet / type=14 (2028:2716) 314x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "AI-driven sourcing"
+       I "Frame 590" -> bullet / type=14 (2028:2716) 314x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Human screening"
+       I "Frame 591" -> bullet / type=14 (2028:2716) 314x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Highly relevant candidates"
+   I "Step 7" -> Content / Process step / style=glass (2045:11371) 362x510 {"Label":true,"style":"glass"}
+      T step-4_text [16]: "3"
+       T step-4_text [14]: "Day 5+"
+       T step-4_title [24]: "Select and onboard"
+       T step-4_text [18]: "Interview, select, and onboard with confidence. We support you through the process with clear communication."
+       I "Frame 428" -> bullet / type=14 (2028:2716) 314x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Interview & select with confidence"
+       I "Frame 590" -> bullet / type=14 (2028:2716) 314x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Onboard with support"
+       I "Frame 591" -> bullet / type=14 (2028:2716) 314x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Clear communication throughout"

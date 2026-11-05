@@ -1,0 +1,11 @@
+# Frame 654 (2277:7211) 1512x804
+I "Frame 654" -> content-cta / device=desktop (2236:5447) 1512x804 {"device":"desktop"}
+   IMG content-cta_img 76a4149fd50154ab11ea334dd8669590c6ee529c.png 692x420
+    T content-cta_title [48]: "Hire from a pool  you can trust."
+    T content-cta_text [20]: "Every expert assessed, benchmarked and scored before they reach you."
+     I "Button" -> Button / type=primary, state=rest (2028:2123) 193x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Hire an Expert","type":"primary","state":"rest"}
+       T button_text [18]: "Hire an Expert"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+     I "Button" -> Button / type=secondary-white, state=rest (2028:2143) 223x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"How the AI works","type":"secondary-white","state":"rest"}
+       T button_text [18]: "How the AI works"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}

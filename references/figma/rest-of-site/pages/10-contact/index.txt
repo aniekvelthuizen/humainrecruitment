@@ -1,0 +1,5 @@
+01 | Frame 676 | 2314:18516 | 1512x464 | main: Header default / type=default
+02 | Navbar - Light | 2314:18400 | 1512x180 | main: Navbar - Light / type=default
+03 | Frame 710 | 2444:35362 | 1512x926 | main: Static / Contact form / type=contact
+04 | Frame 681 | 2314:18739 | 1512x552 | main: content-cta / device=desktop
+05 | Frame 655 | 2314:18740 | 1512x550 | main: Footer / device=desktop-compact

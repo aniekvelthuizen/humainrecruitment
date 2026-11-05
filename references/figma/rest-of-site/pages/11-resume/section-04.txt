@@ -1,0 +1,19 @@
+# Content - Recruitment process (2318:19165) 1512x1855
+     T What happens next [16]: "What happens next"
+     T From submission to introduction [60]: "From submission to introduction"
+     T In viverra lorem amet vitae sed. Vulputate mauris quis urna arcu ultrices. Consequat arcu feugiat! [20]: "In viverra lorem amet vitae sed. Vulputate mauris quis urna arcu ultrices. Consequat arcu feugiat!"
+    I "Button" -> Button / type=secondary, state=rest (2028:2133) 230x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Browse open roles","type":"secondary","state":"rest"}
+      T button_text [18]: "Browse open roles"
+     I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+  I "Step 5" -> Content / Process step / style=plain (2292:32748) 676x276 {"Label":false,"style":"plain"}
+      T step-4_text [16]: "1"
+     T step-4_title [24]: "We analyse"
+      T step-4_text [18]: "Your CV is parsed and benchmarked against the live market on real signals."
+  I "Step 6" -> Content / Process step / style=plain (2292:32748) 676x368 {"Label":false,"style":"plain"}
+      T step-4_text [16]: "2"
+     T step-4_title [24]: "We validate"
+      T step-4_text [18]: "A recruiter reviews the match and adds you to the pre-qualified pool."
+  I "Step 7" -> Content / Process step / style=plain (2292:32748) 676x460 {"Label":false,"style":"plain"}
+      T step-4_text [16]: "3"
+     T step-4_title [24]: "We match"
+      T step-4_text [18]: "When a relevant role appears, we introduce you — often before it's posted."

@@ -1,0 +1,51 @@
+# Frame 730 (2406:52236) 1512x926
+I "Frame 730" -> dynamic-opportunities-2 / device=desktop (2406:52235) 1512x926 {"device":"desktop"}
+  T dynamic-opportunities_text [16]: "Related roles"
+  T dynamic-opportunities_title [60]: "Similar opportunities"
+  I "Frame 610" -> Card / Opportunity / type=default (2070:5337) 440x385 {"type":"default"}
+     I "Frame 615" -> Tag / Contract type (2070:5448) 95x26 {}
+      T Permanent [14]: "Permanent"
+     I "Frame 616" -> Tag / Contract type (2070:5448) 71x26 {}
+      T Permanent [14]: "Energy"
+    T Project Controls Manager [30]: "Project Controls Manager"
+     I "Tag / Location" -> Tag / Location (2070:5310) 392x32 {}
+      I "Google icons" -> Google icons / type=location (2069:5308) 32x32 {"type":"location"}
+      T Rotterdam, NL (hybrid) [16]: "Rotterdam, NL (hybrid)"
+     I "Frame 610" -> Tag / Location (2070:5310) 392x32 {}
+      I "Google icons" -> Google icons / type=school (2069:5307) 32x32 {"type":"school"}
+      T Rotterdam, NL (hybrid) [16]: "12+ years experience"
+     I "Frame 611" -> Tag / Location (2070:5310) 392x32 {}
+      I "Google icons" -> Google icons / type=cost-control-forecasting (2063:4453) 32x32 {"type":"cost-control-forecasting"}
+      T Rotterdam, NL (hybrid) [16]: "90k – 110k"
+      T View & apply [16]: "View & apply"
+  I "Frame 611" -> Card / Opportunity / type=default (2070:5337) 440x385 {"type":"default"}
+     I "Frame 615" -> Tag / Contract type (2070:5448) 108x26 {}
+      T Permanent [14]: "Secondment"
+     I "Frame 616" -> Tag / Contract type (2070:5448) 83x26 {}
+      T Permanent [14]: "Oil & Gas"
+    T Project Controls Manager [30]: "Senior Cost Engineer"
+     I "Tag / Location" -> Tag / Location (2070:5310) 392x32 {}
+      I "Google icons" -> Google icons / type=location (2069:5308) 32x32 {"type":"location"}
+      T Rotterdam, NL (hybrid) [16]: "International / remote-friendly"
+     I "Frame 610" -> Tag / Location (2070:5310) 392x32 {}
+      I "Google icons" -> Google icons / type=school (2069:5307) 32x32 {"type":"school"}
+      T Rotterdam, NL (hybrid) [16]: "8–12 years experience"
+     I "Frame 611" -> Tag / Location (2070:5310) 392x32 {}
+      I "Google icons" -> Google icons / type=cost-control-forecasting (2063:4453) 32x32 {"type":"cost-control-forecasting"}
+      T Rotterdam, NL (hybrid) [16]: "Day rate — on request"
+      T View & apply [16]: "View & apply"
+  I "Frame 612" -> Card / Opportunity / type=default (2070:5337) 440x385 {"type":"default"}
+     I "Frame 615" -> Tag / Contract type (2070:5448) 109x26 {}
+      T Permanent [14]: "Project basis"
+     I "Frame 616" -> Tag / Contract type (2070:5448) 55x26 {}
+    T Project Controls Manager [30]: "Planning / Scheduling Engineer"
+     I "Tag / Location" -> Tag / Location (2070:5310) 392x32 {}
+      I "Google icons" -> Google icons / type=location (2069:5308) 32x32 {"type":"location"}
+      T Rotterdam, NL (hybrid) [16]: "Amsterdam, NL"
+     I "Frame 610" -> Tag / Location (2070:5310) 392x32 {}
+      I "Google icons" -> Google icons / type=school (2069:5307) 32x32 {"type":"school"}
+      T Rotterdam, NL (hybrid) [16]: "5–7 years experience"
+     I "Frame 611" -> Tag / Location (2070:5310) 392x32 {}
+      I "Google icons" -> Google icons / type=cost-control-forecasting (2063:4453) 32x32 {"type":"cost-control-forecasting"}
+      T Rotterdam, NL (hybrid) [16]: "70k – 85k"
+      T View & apply [16]: "View & apply"

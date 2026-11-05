@@ -1,0 +1,38 @@
+# Content / Mobile (2378:35195) 402x2222
+I "Content / Mobile" -> Content / Mobile / type=services (2378:35038) 402x2222 {"type":"services"}
+  T content-services-mobile_text [12]: "Services"
+  T content-services-mobile_title [30]: "Explore our consulting & services"
+  T content-services-mobile_text [16]: "A specialised portfolio of project controls services designed to optimise delivery, reduce risk, and improve performance."
+  I "Tab" -> Tab / style=filled, state=rest (2323:32402) 129x30 {"style":"filled","state":"rest"}
+   T tab_text [14]: "Project controls"
+  I "Tab" -> Tab / style=plain, state=rest (2323:32400) 183x30 {"style":"plain","state":"rest"}
+   T tab_text [14]: "Project Delivery Experts"
+  I "Tab" -> Tab / style=plain, state=rest (2323:32400) 120x30 {"style":"plain","state":"rest"}
+   T tab_text [14]: "Talent Insights"
+   I "Prop 2" -> Card / Service / type=services (2058:4303) 362x250 {"type":"services"}
+    I "Google icons" -> Google icons / type=project-controls-strategy (2063:4454) 48x48 {"type":"project-controls-strategy"}
+     T Pre-Qualified Specialists [24]: "Project Controls Strategy"
+     T Ready before you need them. Continuously identified, benchmarked, and assessed. [16]: "Define governance frameworks, reporting structures and delivery standards for complex capital projects."
+   I "Prop 3" -> Card / Service / type=services (2058:4303) 362x250 {"type":"services"}
+    I "Google icons" -> Google icons / type=cost-control-forecasting (2063:4453) 48x48 {"type":"cost-control-forecasting"}
+     T Pre-Qualified Specialists [24]: "Cost Control & Forecasting"
+     T Ready before you need them. Continuously identified, benchmarked, and assessed. [16]: "Improve financial visibility through accurate forecasting, cost tracking and variance analysis."
+   I "Prop 4" -> Card / Service / type=services (2058:4303) 362x250 {"type":"services"}
+    I "Google icons" -> Google icons / type=planning-scheduling (2063:4452) 48x48 {"type":"planning-scheduling"}
+     T Pre-Qualified Specialists [24]: "Planning & Scheduling"
+     T Ready before you need them. Continuously identified, benchmarked, and assessed. [16]: "Develop and manage integrated project schedules aligned with key milestones and dependencies."
+   I "Prop 2" -> Card / Service / type=services (2058:4303) 362x276 {"type":"services"}
+    I "Google icons" -> Google icons / type=shield (2063:4451) 48x48 {"type":"shield"}
+     T Pre-Qualified Specialists [24]: "Risk & Performance Management"
+     T Ready before you need them. Continuously identified, benchmarked, and assessed. [16]: "Identify risks and performance gaps early using structured analysis and project controls insights."
+   I "Prop 3" -> Card / Service / type=services (2058:4303) 362x250 {"type":"services"}
+    I "Google icons" -> Google icons / type=dashboards (2063:4450) 48x48 {"type":"dashboards"}
+     T Pre-Qualified Specialists [24]: "Reporting & Dashboards"
+     T Ready before you need them. Continuously identified, benchmarked, and assessed. [16]: "AI optimises the parts that don’t need a human, so we pass the efficiency on to you as a lower fee."
+   I "Prop 4" -> Card / Service / type=services (2058:4303) 362x226 {"type":"services"}
+    I "Google icons" -> Google icons / type=person-check (2063:4449) 48x48 {"type":"person-check"}
+     T Pre-Qualified Specialists [24]: "Project Controls Leadership"
+     T Ready before you need them. Continuously identified, benchmarked, and assessed. [16]: "Relevant candidates in front of you fast — sourcing and screening run continuously."
+  I "Button" -> Button / type=primary, state=rest (2028:2123) 332x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Let’s discuss the requirements","type":"primary","state":"rest"}
+    T button_text [18]: "Let’s discuss the requirements"
+   I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}

@@ -1,0 +1,90 @@
+# Content scrolly telling / Plain (2444:34855) 1512x4400
+I "Content scrolly telling / Plain" -> Content scrolly telling / Plain (2444:34854) 1512x4400 {}
+    T content-scrolly-telling-plain_text [16]: "The process"
+    T content-scrolly-telling-plain_title [60]: "Five steps, \nfully guided."
+    T content-scrolly-telling-plain_text [20]: "Scroll through the full journey — from first call to ongoing delivery support."
+   I "Step 5" -> Content / Process step / style=plain (2292:32748) 676x449 {"Label":true,"style":"plain"}
+       T step-4_text [16]: "1"
+      T step-4_title [24]: "Requirement Intake"
+       T step-4_text [14]: "Day 1"
+       T step-4_text [18]: "A discovery call helps us understand the project, team structure, timeline and required expertise."
+       I "Frame 428" -> bullet / type=14 (2028:2716) 676x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Project brief"
+       I "Frame 590" -> bullet / type=14 (2028:2716) 676x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Role profile"
+       I "Frame 591" -> bullet / type=14 (2028:2716) 676x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Success criteria"
+       I "Frame 592" -> bullet / type=14 (2028:2716) 676x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Delivery requirements"
+   I "Step 6" -> Content / Process step / style=plain (2292:32748) 676x541 {"Label":true,"style":"plain"}
+       T step-4_text [16]: "2"
+      T step-4_title [24]: "Qualified Shortlist"
+       T step-4_text [14]: "Day 2–4"
+       T step-4_text [18]: "We search our network of pre-qualified professionals and benchmark candidates against your requirements."
+       I "Frame 428" -> bullet / type=14 (2028:2716) 676x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Matched experts"
+       I "Frame 590" -> bullet / type=14 (2028:2716) 676x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Qualification scores"
+       I "Frame 591" -> bullet / type=14 (2028:2716) 676x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Sector validation"
+       I "Frame 592" -> bullet / type=14 (2028:2716) 676x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Availability check"
+   I "Step 7" -> Content / Process step / style=plain (2292:32748) 676x633 {"Label":true,"style":"plain"}
+       T step-4_text [16]: "3"
+      T step-4_title [24]: "Interview & Selection"
+       T step-4_text [14]: "Day 5+"
+       T step-4_text [18]: "Only the most relevant professionals are presented for interview. Each profile includes context and assessment insights."
+       I "Frame 428" -> bullet / type=14 (2028:2716) 676x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Interview-ready shortlist"
+       I "Frame 590" -> bullet / type=14 (2028:2716) 676x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Assessment summary"
+       I "Frame 591" -> bullet / type=14 (2028:2716) 676x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Match rationale"
+       I "Frame 592" -> bullet / type=14 (2028:2716) 676x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "References available"
+   I "Step 8" -> Content / Process step / style=plain (2292:32748) 676x698 {"Label":true,"style":"plain"}
+       T step-4_text [16]: "4"
+      T step-4_title [24]: "Placement & Onboarding"
+       T step-4_text [14]: "Offer accepted"
+       T step-4_text [18]: "We coordinate contracts, introductions and onboarding."
+       I "Frame 428" -> bullet / type=14 (2028:2716) 676x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Contract setup"
+       I "Frame 590" -> bullet / type=14 (2028:2716) 676x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Start-date planning"
+       I "Frame 591" -> bullet / type=14 (2028:2716) 676x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Candidate preparation"
+       I "Frame 592" -> bullet / type=14 (2028:2716) 676x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Stakeholder alignment"
+   I "Step 9" -> Content / Process step / style=plain (2292:32748) 676x790 {"Label":true,"style":"plain"}
+       T step-4_text [16]: "5"
+      T step-4_title [24]: "Delivery Support"
+       T step-4_text [14]: "Ongoing"
+       T step-4_text [18]: "Support continues after placement to ensure successful project integration."
+       I "Frame 428" -> bullet / type=14 (2028:2716) 676x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Performance follow-up"
+       I "Frame 590" -> bullet / type=14 (2028:2716) 676x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Account management"
+       I "Frame 591" -> bullet / type=14 (2028:2716) 676x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Communication support"
+       I "Frame 592" -> bullet / type=14 (2028:2716) 676x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Future resource planning"

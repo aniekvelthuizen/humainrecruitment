@@ -1,0 +1,10 @@
+01 | Frame 676 | 2277:7690 | 1512x586 | main: Header default / type=default
+02 | Navbar - Light | 2248:6374 | 1512x180 | main: Navbar - Light / type=default
+03 | Content / Content block | 2249:8979 | 1512x780 | main: Content / Content block / content-location=true, small=false, list=true
+04 | Content / Assessment process | 2323:33115 | 1512x1177 | main: Content / Assessment process
+05 | Content - Recruitment process | 2263:10690 | 1512x4780 | main: 
+06 | Content / Final score | 2444:33767 | 1512x668 | main: Content / Final score
+07 | Content / Trust statement | 2444:33834 | 1512x581 | main: Content / Trust statement
+08 | Content / Grid of cards | 2444:33918 | 1512x2642 | main: Content / Grid of cards / type=dark-large
+09 | Frame 654 | 2277:7211 | 1512x804 | main: content-cta / device=desktop
+10 | Frame 655 | 2277:7212 | 1512x550 | main: Footer / device=desktop-compact

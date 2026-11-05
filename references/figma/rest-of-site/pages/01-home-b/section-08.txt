@@ -1,0 +1,22 @@
+# Content - Recruitment process (2710:57363) 1512x1930
+     T How it works [16]: "How it works"
+     T From requirement to shortlist in days. [60]: "From requirement to shortlist in days."
+     T In viverra lorem amet vitae sed. Vulputate mauris quis urna arcu ultrices. Consequat arcu feugiat! [20]: "In viverra lorem amet vitae sed. Vulputate mauris quis urna arcu ultrices. Consequat arcu feugiat!"
+    I "Button" -> Button / type=secondary, state=rest (2028:2133) 169x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Learn more","type":"secondary","state":"rest"}
+      T button_text [18]: "Learn more"
+     I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+  I "Step 5" -> Content / Process step / style=plain (2292:32748) 676x318 {"Label":true,"style":"plain"}
+      T step-4_text [16]: "1"
+     T step-4_title [24]: "Define the requirement."
+      T step-4_text [14]: "Day 1"
+      T step-4_text [18]: "A thirty minute call covering project, scope, timeline and the expertise you need."
+  I "Step 6" -> Content / Process step / style=plain (2292:32748) 676x437 {"Label":true,"style":"plain"}
+      T step-4_text [16]: "2"
+     T step-4_title [24]: "Receive a shortlist."
+      T step-4_text [14]: "Day 2–4"
+      T step-4_text [18]: "Three to five pre-qualified profiles, each with an argument for why this person fits this project."
+  I "Step 7" -> Content / Process step / style=plain (2292:32748) 676x502 {"Label":true,"style":"plain"}
+      T step-4_text [16]: "3"
+     T step-4_title [24]: "Select and onboard."
+      T step-4_text [14]: "Day 5+"
+      T step-4_text [18]: "You interview and decide, and we support the onboarding."

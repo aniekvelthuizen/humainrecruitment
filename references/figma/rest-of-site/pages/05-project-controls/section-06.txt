@@ -1,0 +1,25 @@
+# Frame 681 (2444:34699) 1510x1018
+I "Frame 681" -> Content / Team / Property 1=Experts, Property 2=Team (2444:34698) 1510x1018 
+   T content-team_text [16]: "The experts behind it"
+   T content-team_title [60]: "Your complete project  controls team"
+   T content-team_text [20]: "One team, seven disciplines. Here's what each of them owns."
+    I "Frame 691" -> Card / Profile / type=role (2292:8277) 315x459 {"type":"role"}
+     IMG Frame 689 f5930f488a552676448c3278f754b02a3c226bf8.jpg 315x459
+      T Project Controls Manager [24]: "Project Controls Manager"
+      T Owns the whole controls function across the programme. [20]: "Owns the whole controls function across the programme."
+   I "Frame 695" -> Card / Profile / type=role (2292:8277) 315x459 {"type":"role"}
+    IMG Frame 689 a00dad51c929e975c745f6d9feb1296dcdc2c182.jpg 315x459
+     T Project Controls Manager [24]: "Cost Engineer / Controller"
+     T Owns the whole controls function across the programme. [20]: "Cost control, forecasting and variance analysis."
+  I "Frame 693" -> Card / Profile / type=role (2292:8277) 315x459 {"type":"role"}
+   IMG Frame 689 9edd358fcc4abc865139946e8067951c9ba18625.jpg 315x459
+    T Project Controls Manager [24]: "Planning / Scheduling Engineer"
+    T Owns the whole controls function across the programme. [20]: "Integrated schedules, baselines and critical path."
+   I "Frame 692" -> Card / Profile / type=role (2292:8277) 315x459 {"type":"role"}
+    IMG Frame 689 b0936346df74065edc4debf37afd97e116d4d09c.jpg 315x459
+     T Project Controls Manager [24]: "Risk & Performance Manager"
+     T Owns the whole controls function across the programme. [20]: "Risk quantification and performance management."
+    I "Frame 694" -> Card / Profile / type=role (2292:8277) 315x459 {"type":"role"}
+     IMG Frame 689 f5d8477504965c364b49392e358f00516fc98c41.jpg 315x459
+      T Project Controls Manager [24]: "Reporting / Dashboard Specialist"
+      T Owns the whole controls function across the programme. [20]: "Controlled, traceable, audit-ready documentation."

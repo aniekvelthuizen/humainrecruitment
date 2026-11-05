@@ -1,0 +1,35 @@
+# Content / Content block (2249:8979) 1512x780
+I "Content / Content block" -> Content / Content block / content-location=true, small=false, list=true (2249:8033) 1512x780 {"content-location":"true","small":"false","list":"true"}
+  I "Assets / Content" -> Assets / Content / dark-mode=false, list=true (2251:6954) 558x492 {"Show Paragraph":true,"Show Sublabel":true,"Title":"What HumAIn-qualified  means here.","Show Title":true,"Show Buttons":false,"Show Divider":false,"Paragraph":"A pre-qualified expert isn't just available, they're evidenced. We assess delivery track record, technical depth and fit before they enter the pool, and we keep that assessment current.","Sublabel":"The bar","dark-mode":"false","list":"true"}
+    T assets-content_text [16]: "The bar"
+    T assets-content_title [48]: "What HumAIn-qualified  means here."
+     T assets-content_text [20]: "A pre-qualified expert isn't just available, they're evidenced. We assess delivery track record, technical depth and fit before they enter the pool, and we keep that assessment current."
+       I "content-spec-list-item" -> content-spec-list-item / dark-mode=false (2251:6991) 558x27 {"label text":"Evidenced delivery, not self-reported claims","dark-mode":"false"}
+        T content-spec-list-item_text [18]: "Evidenced delivery, not self-reported claims"
+       I "content-spec-list-item" -> content-spec-list-item / dark-mode=false (2251:6991) 558x27 {"label text":"Validated technical depth in their discipline","dark-mode":"false"}
+        T content-spec-list-item_text [18]: "Validated technical depth in their discipline"
+       I "content-spec-list-item" -> content-spec-list-item / dark-mode=false (2251:6991) 558x27 {"label text":"Benchmarked against the live market","dark-mode":"false"}
+        T content-spec-list-item_text [18]: "Benchmarked against the live market"
+       I "content-spec-list-item" -> content-spec-list-item / dark-mode=false (2251:6991) 558x27 {"label text":"Continuously re-assessed, not a one-off check","dark-mode":"false"}
+        T content-spec-list-item_text [18]: "Continuously re-assessed, not a one-off check"
+ IMG content-content-block_control-image-size-with-padding 5142cbf92694a80b0789e6c9ef96bd31741398f3.png 676x451
+   I "Image" -> Image (2249:8010) 676x451 {}
+    I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=3:2 | 2:3, Orientation=Landscape (2249:7100) 676x451 {"Aspect Ratio":"3:2 | 2:3","Orientation":"Landscape"}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}

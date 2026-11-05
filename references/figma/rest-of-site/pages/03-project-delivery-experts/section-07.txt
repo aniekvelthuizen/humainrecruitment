@@ -1,0 +1,14 @@
+# Content / Trust statement (2444:33834) 1512x581
+I "Content / Trust statement" -> Content / Trust statement (2444:33766) 1512x581 {}
+      T 1 [16]: "1"
+     T How we qualify the top 5% [24]: "How we qualify the top 5%"
+      T 2 [16]: "2"
+     T The criteria behind the score [24]: "The criteria behind the score"
+      T 3 [16]: "3"
+     T Accepted into the HumAIn network [24]: "Accepted into the HumAIn network"
+      T 4 [16]: "4"
+     T Available for client deployment [24]: "Available for client deployment"
+   I "Assets / Content" -> Assets / Content / dark-mode=false, list=true (2251:6954) 676x364 {"Show Paragraph":true,"Show Sublabel":true,"Title":"Why This Matters","Show Title":true,"Show Buttons":false,"Show Divider":false,"Paragraph":"Traditional recruitment focuses on finding available professionals. We focus on identifying proven performers.\n\nEvery expert in the HumAIn network is benchmarked against the same framework, creating a consistent qualification score that helps clients make hiring decisions with greater confidence.\n\nResult: fewer interviews, faster hiring, and better project outcomes.","Sublabel":"Trust Statement","dark-mode":"false","list":"true"}
+     T assets-content_text [16]: "Trust Statement"
+     T assets-content_title [48]: "Why This Matters"
+      T assets-content_text [20]: "Traditional recruitment focuses on finding available professionals. We focus on identifying proven performers.\n\nEvery expert in the HumAIn network is benchmarked against the same framework, creating a consistent qualification score that helps clients make hiring decisions with greater confidence.\n\nResult: fewer interviews, faster hiring, and better project outcomes."

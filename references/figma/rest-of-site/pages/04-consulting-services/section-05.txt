@@ -1,0 +1,42 @@
+# Content / Content block (2283:9535) 1512x942
+I "Content / Content block" -> Content / Content block / content-location=true, small=false, list=true (2249:8033) 1512x942 {"content-location":"true","small":"false","list":"true"}
+  I "Assets / Content" -> Assets / Content / dark-mode=false, list=true (2251:6954) 568x558 {"Show Paragraph":true,"Show Sublabel":true,"Title":"Freelance expertise, \nwithout the overhead.","Show Title":true,"Show Buttons":true,"Show Divider":false,"Paragraph":"You don't take on a retainer or a permanent hire. You get a senior freelance Expert for exactly the scope you need — and HumAIn makes it work end to end.","Sublabel":"The model","dark-mode":"false","list":"true"}
+    T assets-content_text [16]: "The model"
+    T assets-content_title [48]: "Freelance expertise, \nwithout the overhead."
+     T assets-content_text [20]: "You don't take on a retainer or a permanent hire. You get a senior freelance Expert for exactly the scope you need — and HumAIn makes it work end to end."
+       I "content-spec-list-item" -> content-spec-list-item / dark-mode=false (2251:6991) 568x27 {"label text":"Freelance Experts from a pre-qualified network","dark-mode":"false"}
+        T content-spec-list-item_text [18]: "Freelance Experts from a pre-qualified network"
+       I "content-spec-list-item" -> content-spec-list-item / dark-mode=false (2251:6991) 568x27 {"label text":"Scoped deliverables, not open-ended engagements","dark-mode":"false"}
+        T content-spec-list-item_text [18]: "Scoped deliverables, not open-ended engagements"
+       I "content-spec-list-item" -> content-spec-list-item / dark-mode=false (2251:6991) 568x27 {"label text":"Transparent fee to HumAIn — you always know the cost","dark-mode":"false"}
+        T content-spec-list-item_text [18]: "Transparent fee to HumAIn — you always know the cost"
+       I "content-spec-list-item" -> content-spec-list-item / dark-mode=false (2251:6991) 568x27 {"label text":"One point of contact, from match to delivery","dark-mode":"false"}
+        T content-spec-list-item_text [18]: "One point of contact, from match to delivery"
+    I "Button group" -> Button group / Property 1=Default (2249:6952) 568x48 {"First button":true,"Third button":false,"Second button":true,"Property 1":"Default"}
+     I "Button" -> Button / type=primary, state=rest (2028:2123) 268x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Discuss your challenge","type":"primary","state":"rest"}
+       T button_text [18]: "Discuss your challenge"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+     I "Button" -> Button / type=secondary, state=rest (2028:2133) 284x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"See what experts deliver","type":"secondary","state":"rest"}
+       T button_text [18]: "See what experts deliver"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+   IMG Image 49fece8257c12073ba95db4e1d5821e4c0524585.png 676x451
+   I "Image" -> Image (2249:8010) 676x451 {}
+    I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=3:2 | 2:3, Orientation=Landscape (2249:7100) 676x451 {"Aspect Ratio":"3:2 | 2:3","Orientation":"Landscape"}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}

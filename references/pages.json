@@ -1,51 +1,107 @@
 [
-  {
-    "id": "6ae35365a38b2d71cab8c699",
-    "name": "Home",
-    "slug": "",
-    "parentFolder": null,
-    "isDraft": false
-  },
-  {
-    "id": "6ae35365a38b2d71cab8c69a",
-    "name": "Styleguide",
-    "slug": "styleguide",
-    "parentFolder": null,
-    "isDraft": true
-  },
-  {
-    "id": "6ae35365a38b2d71cab8c69b",
-    "name": "Password",
-    "slug": "401",
-    "parentFolder": null,
-    "isDraft": false
-  },
-  {
-    "id": "6ae35365a38b2d71cab8c69c",
-    "name": "404",
-    "slug": "404",
-    "parentFolder": null,
-    "isDraft": false
-  },
-  {
-    "id": "6ae35365a38b2d71cab8c69d",
-    "name": "Example Components",
-    "slug": "example-components",
-    "parentFolder": null,
-    "isDraft": true
-  },
-  {
-    "id": "6ae35365a38b2d71cab8c69e",
-    "name": "Standard Page",
-    "slug": "static-template-slug-1755266313647",
-    "parentFolder": null,
-    "isDraft": true
-  },
-  {
-    "id": "6ae35365a38b2d71cab8c69f",
-    "name": "Search Results",
-    "slug": "search",
-    "parentFolder": null,
-    "isDraft": false
-  }
+ {
+  "id": "6ae35365a38b2d71cab8c699",
+  "title": "Home",
+  "slug": ""
+ },
+ {
+  "id": "6ae37d544f5dbf7c8e0e9495",
+  "title": "Hire an Expert",
+  "slug": "hire-an-expert"
+ },
+ {
+  "id": "6ae37d5d3396bdf506e3fbf3",
+  "title": "Project Delivery Experts",
+  "slug": "project-delivery-experts"
+ },
+ {
+  "id": "6ae37d5f0e3ebd4e1ff84b58",
+  "title": "Consulting Services",
+  "slug": "consulting-services"
+ },
+ {
+  "id": "6ae37d600e3ebd4e1ff84b86",
+  "title": "Project Controls",
+  "slug": "project-controls"
+ },
+ {
+  "id": "6ae37d600e3ebd4e1ff84bb4",
+  "title": "About Us",
+  "slug": "about"
+ },
+ {
+  "id": "6ae37d544f5dbf7c8e0e9467",
+  "title": "Clients",
+  "slug": "clients"
+ },
+ {
+  "id": "6ae37d68d29f562403e8e340",
+  "title": "How It Works",
+  "slug": "how-it-works"
+ },
+ {
+  "id": "6ae37d68d29f562403e8e308",
+  "title": "Rates",
+  "slug": "pricing"
+ },
+ {
+  "id": "6ae37d52ab01dce00ac7921c",
+  "title": "Contact",
+  "slug": "contact"
+ },
+ {
+  "id": "6ae37d6ac9be2a32b7893343",
+  "title": "Analyse My Resume",
+  "slug": "submit-resume"
+ },
+ {
+  "id": "6ae37d6afa001e13dcd5f214",
+  "title": "Opportunities",
+  "slug": "opportunities"
+ },
+ {
+  "id": "6ae37d53458c9339dcb6b5da",
+  "title": "Careers",
+  "slug": "careers"
+ },
+ {
+  "id": "6ae37d71382b5fd60a01d143",
+  "title": "Privacy & Cookies",
+  "slug": "privacy-cookies"
+ },
+ {
+  "id": "6ae719db261aa6a726507c88",
+  "title": "Experts Template",
+  "slug": "detail_experts"
+ },
+ {
+  "id": "6ae35365a38b2d71cab8c69d",
+  "title": "Example Components",
+  "slug": "example-components"
+ },
+ {
+  "id": "6ae35365a38b2d71cab8c69a",
+  "title": "Styleguide",
+  "slug": "styleguide"
+ },
+ {
+  "id": "6ae35365a38b2d71cab8c69f",
+  "title": "Search Results",
+  "slug": "search"
+ },
+ {
+  "id": "6ae35365a38b2d71cab8c69c",
+  "title": "404",
+  "slug": "404"
+ },
+ {
+  "id": "6ae35365a38b2d71cab8c69b",
+  "title": "Password",
+  "slug": "401"
+ },
+ {
+  "id": "6ae35365a38b2d71cab8c69e",
+  "title": "Standard Page",
+  "slug": "static-template-slug-1755266313647"
+ }
 ]

@@ -1,0 +1,5 @@
+# Frame 676 (2323:22239) 1512x520
+I "Frame 676" -> Header default / type=default (2277:7347) 1512x520 {"type":"default"}
+   T header-default_text [16]: "legal"
+   T header-default_title [72]: "Privacy & Cookies"
+   T header-default_text [20]: "How HumAIn Recruitment handles your personal data and uses cookies. We keep it plain English — no legal maze.\n\nLast updated: [date] · Applies to: humainrecruitment.com"

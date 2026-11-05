@@ -1,0 +1,10 @@
+01 | Frame 751 | 2382:40984 | 402x1195 | main: [figma-only] Frame 750 / Property 1=Default
+02 | Nav / Mobile | 2365:38351 | 402x74 | main: Nav / Mobile / state=closed
+03 | Frame 592 | 2365:38370 | 402x1502 | main: Content / 4 UBRS / device=mobile
+04 | Content scrolly telling / Glass cards | 2378:34842 | 402x2165 | main: Content scrolly telling / Glass cards / device=mobile
+05 | Content / Mobile | 2378:35195 | 402x2222 | main: Content / Mobile / type=services
+06 | Content / Testimonials | 2378:35465 | 402x2059 | main: content-testimonials / device=mobile
+07 | Content / Pricing | 2382:36301 | 402x1302 | main: content-pricing / device=mobile
+08 | Dynamic / Open roles | 2382:37078 | 402x1241 | main: dynamic-open-roles / device=mobile
+09 | Content / CTA | 2382:37372 | 402x936 | main: content-cta / device=mobile
+10 | Footer | 2382:37792 | 402x766 | main: Footer / device=mobile

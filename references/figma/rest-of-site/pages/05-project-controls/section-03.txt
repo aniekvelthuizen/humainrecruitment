@@ -1,0 +1,33 @@
+# Content / Content block (2283:9947) 1512x797
+I "Content / Content block" -> Content / Content block / content-location=true, small=false, list=true (2249:8033) 1512x797 {"content-location":"true","small":"false","list":"true"}
+  I "Assets / Content" -> Assets / Content / dark-mode=false, list=true (2251:6954) 528x509 {"Show Paragraph":true,"Show Sublabel":true,"Title":"Good controls are the difference between on-track and over-budget.","Show Title":true,"Show Buttons":false,"Show Divider":false,"Paragraph":"A pre-qualified expert isn't just available — they're evidenced. We assess delivery track record, technical depth and fit before they enter the pool, and we keep that assessment current.","Sublabel":"Why it matters","dark-mode":"false","list":"true"}
+    T assets-content_text [16]: "Why it matters"
+    T assets-content_title [48]: "Good controls are the difference between on-track and over-budget."
+     T assets-content_text [20]: "A pre-qualified expert isn't just available — they're evidenced. We assess delivery track record, technical depth and fit before they enter the pool, and we keep that assessment current."
+       I "content-spec-list-item" -> content-spec-list-item / dark-mode=false (2251:6991) 528x27 {"label text":"Real visibility on cost and schedule","dark-mode":"false"}
+        T content-spec-list-item_text [18]: "Real visibility on cost and schedule"
+       I "content-spec-list-item" -> content-spec-list-item / dark-mode=false (2251:6991) 528x27 {"label text":"Early warning on risk and performance","dark-mode":"false"}
+        T content-spec-list-item_text [18]: "Early warning on risk and performance"
+       I "content-spec-list-item" -> content-spec-list-item / dark-mode=false (2251:6991) 528x27 {"label text":"Executive reporting leadership can act on","dark-mode":"false"}
+        T content-spec-list-item_text [18]: "Executive reporting leadership can act on"
+   IMG Image c253bb4ee22c7b7040466abb943e5cf75ca0372b.png 676x451
+   I "Image" -> Image (2249:8010) 676x451 {}
+    I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=3:2 | 2:3, Orientation=Landscape (2249:7100) 676x451 {"Aspect Ratio":"3:2 | 2:3","Orientation":"Landscape"}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+      I "fixed_aspect_ratio" -> fixed_aspect_ratio / Aspect Ratio=1:1, Orientation=Portrait (2041:474) 225x225 {"Aspect Ratio":"1:1","Orientation":"Portrait"}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}
+       I "2:1 Fixed Aspect Ratio Spacer" -> 2:1 Fixed Aspect Ratio Spacer (2041:471) 225x113 {}

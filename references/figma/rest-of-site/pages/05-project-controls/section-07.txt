@@ -1,0 +1,11 @@
+# Frame 654 (2292:8303) 1512x612
+I "Frame 654" -> content-cta / device=desktop (2236:5447) 1512x612 {"device":"desktop"}
+   IMG content-cta_img 76a4149fd50154ab11ea334dd8669590c6ee529c.png 692x420
+    T content-cta_title [48]: "Need help with one \nof these?"
+    T content-cta_text [20]: "Tell us the artefact or the gap — we'll deliver the specialist who owns it."
+     I "Button" -> Button / type=primary, state=rest (2028:2123) 227x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"I need help with ...","type":"primary","state":"rest"}
+       T button_text [18]: "I need help with ..."
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+     I "Button" -> Button / type=secondary-white, state=rest (2028:2143) 193x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Hire an expert","type":"secondary-white","state":"rest"}
+       T button_text [18]: "Hire an expert"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}

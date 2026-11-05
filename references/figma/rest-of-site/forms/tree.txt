@@ -1,0 +1,445 @@
+SET "Static / Contact form" 2444:35582 variants: type=contact (2444:35359), type=resume (2444:35461)
+
+### type=contact (2444:35359)
+COMPONENT "type=contact" 21,21 1512x926 AL HORIZONTAL gap32 pad64/64/192/64 MIN/MIN size FILL/HUG clip fill[solid 255,255,255 a1.00{background-2}] VARS{"itemSpacing":"space/7","paddingLeft":"site/margin","paddingTop":"site/margin","paddingRight":"site/margin","paddingBottom":"section-space/large","fills":["background-2"]}
+  FRAME "static-contact-form_group_wrap" 64,64 676x670 AL VERTICAL gap32 pad0/0/0/0 MIN/MIN size FIXED/HUG r8 fill[solid 255,255,255 a1.00{background-2}] VARS{"itemSpacing":"space/7","topLeftRadius":"radius/small","topRightRadius":"radius/small","bottomLeftRadius":"radius/small","bottomRightRadius":"radius/small","strokeTopWeight":"border-width/main","strokeBottomWeight":"border-width/main","strokeLeftWeight":"border-width/main","strokeRightWeight":"border-width/main","fills":["background-2"],"strokes":["swatch/dark-900-o25"]}
+    TEXT "static-contact-form_title" 0,0 676x60 size FILL/HUG TEXT{H2} Vend Sans Bold 48 lh{"unit":"PERCENT","value":125} alignLEFT fill[solid 3,11,27 a1.00{text}] "Contact form" VARS{"fills":["text"],"fontSize":["font-size/h2"],"fontStyle":["font/secondary-bold"],"fontFamily":["font/secondary-family"]}
+    FRAME "static-contact-form_group" 0,92 676x67 AL HORIZONTAL gap32 pad0/0/0/0 MIN/MIN size FILL/HUG VARS{"itemSpacing":"space/7"}
+      INSTANCE "input-simple" 0,0 322x67 AL VERTICAL gap8 pad0/0/0/0 MIN/MIN size FILL/HUG -> "input-simple / type=text" (2314:18530) PROPS{"type":"text"} VARS{"itemSpacing":"space/2"}
+        INSTANCE "input" 0,0 322x67 AL VERTICAL gap4 pad0/0/0/0 MIN/MIN size FILL/HUG -> "input / small=false, state=rest" (2242:5830) PROPS{"Icon left":"2242:5807","Icon right":"2242:5801","Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Helper icon":"2242:5804","Show helper":false,"Helper text":"Alert / Error message","Show icon right":false,"Text":"","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+          FRAME "input_text" 0,0 322x15 AL HORIZONTAL gap10 pad0/0/0/0 CENTER/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+            TEXT "input_text" 0,0 322x15 size FILL/HUG TEXT{} Onest SemiBold 12 lh{"unit":"AUTO"} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "First name" VARS{"fills":["copy/body"]}
+          FRAME "input_input" 0,19 322x48 AL HORIZONTAL gap10 pad8/8/8/12 SPACE_BETWEEN/CENTER size FILL/FIXED r8 fill[solid 255,255,255 a1.00{defaults/surface}] stroke[solid 3,11,27 a0.25{swatch/dark-900-o25} w1 INSIDE] VARS{"paddingTop":"space/2","paddingRight":"space/2","height":"space/8","strokeTopWeight":"border-width/main","strokeBottomWeight":"border-width/main","strokeLeftWeight":"border-width/main","strokeRightWeight":"border-width/main","fills":["defaults/surface"],"strokes":["swatch/dark-900-o25"]}
+            FRAME "input_icon-text" 12,9 302x30 AL HORIZONTAL gap0 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/0"}
+              FRAME "input_icon" 0,3 24x24 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size HUG/HUG VARS{"itemSpacing":"space/3"}
+                INSTANCE "lock" 0,0 24x24 size FIXED/FIXED clip -> "lock / Style=Outlined" (2242:5807) PROPS{"Style":"Outlined"}
+              FRAME "input_content" 0,0 302x30 AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+                TEXT "input_text" 0,0 302x30 size FILL/HUG op0.50 TEXT{Text Large} Onest Regular 20 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "" VARS{"fills":["copy/body"],"fontSize":["font-size/text-main","font-size/text-large"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+            INSTANCE "Icon right" 319,12 24x24 HIDDEN size FIXED/FIXED clip -> "keyboard_arrow_down / Style=Outlined" (2242:5801) PROPS{"Style":"Outlined"}
+          FRAME "input_helpers" 0,73 351x21 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 SPACE_BETWEEN/MIN size FIXED/HUG
+            FRAME "input_helper-left" 0,0 351x21 HIDDEN AL HORIZONTAL gap4 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"space/1"}
+              INSTANCE "error_outline" 0,0 20x20 size FIXED/FIXED clip -> "error_outline / Style=Outlined" (2242:5804) PROPS{"Style":"Outlined"}
+              TEXT "input_text" 24,0 327x21 size FILL/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignLEFT fill[solid 185,28,28 a1.00{Colors/Semantic/Error dark}] "Alert / Error message" VARS{"fills":["Colors/Semantic/Error dark"]}
+            FRAME "input_helper-right" 305,0 46x21 HIDDEN AL HORIZONTAL gap0 pad0/0/0/0 MAX/MIN size HUG/HUG
+              TEXT "input_text" -2,0 48x21 size HUG/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignRIGHT fill[solid 0,0,0 a1.00{Copy/body}] "0 / 100" VARS{"fills":["Copy/body"]}
+      INSTANCE "input-simple" 354,0 322x67 AL VERTICAL gap8 pad0/0/0/0 MIN/MIN size FILL/HUG -> "input-simple / type=text" (2314:18530) PROPS{"type":"text"} VARS{"itemSpacing":"space/2"}
+        INSTANCE "input" 0,0 322x67 AL VERTICAL gap4 pad0/0/0/0 MIN/MIN size FILL/HUG -> "input / small=false, state=rest" (2242:5830) PROPS{"Icon left":"2242:5807","Icon right":"2242:5801","Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Helper icon":"2242:5804","Show helper":false,"Helper text":"Alert / Error message","Show icon right":false,"Text":"","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+          FRAME "input_text" 0,0 322x15 AL HORIZONTAL gap10 pad0/0/0/0 CENTER/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+            TEXT "input_text" 0,0 322x15 size FILL/HUG TEXT{} Onest SemiBold 12 lh{"unit":"AUTO"} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "last name" VARS{"fills":["copy/body"]}
+          FRAME "input_input" 0,19 322x48 AL HORIZONTAL gap10 pad8/8/8/12 SPACE_BETWEEN/CENTER size FILL/FIXED r8 fill[solid 255,255,255 a1.00{defaults/surface}] stroke[solid 3,11,27 a0.25{swatch/dark-900-o25} w1 INSIDE] VARS{"paddingTop":"space/2","paddingRight":"space/2","height":"space/8","strokeTopWeight":"border-width/main","strokeBottomWeight":"border-width/main","strokeLeftWeight":"border-width/main","strokeRightWeight":"border-width/main","fills":["defaults/surface"],"strokes":["swatch/dark-900-o25"]}
+            FRAME "input_icon-text" 12,9 302x30 AL HORIZONTAL gap0 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/0"}
+              FRAME "input_icon" 0,3 24x24 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size HUG/HUG VARS{"itemSpacing":"space/3"}
+                INSTANCE "lock" 0,0 24x24 size FIXED/FIXED clip -> "lock / Style=Outlined" (2242:5807) PROPS{"Style":"Outlined"}
+              FRAME "input_content" 0,0 302x30 AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+                TEXT "input_text" 0,0 302x30 size FILL/HUG op0.50 TEXT{Text Large} Onest Regular 20 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "" VARS{"fills":["copy/body"],"fontSize":["font-size/text-main","font-size/text-large"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+            INSTANCE "Icon right" 319,12 24x24 HIDDEN size FIXED/FIXED clip -> "keyboard_arrow_down / Style=Outlined" (2242:5801) PROPS{"Style":"Outlined"}
+          FRAME "input_helpers" 0,73 351x21 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 SPACE_BETWEEN/MIN size FIXED/HUG
+            FRAME "input_helper-left" 0,0 351x21 HIDDEN AL HORIZONTAL gap4 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"space/1"}
+              INSTANCE "error_outline" 0,0 20x20 size FIXED/FIXED clip -> "error_outline / Style=Outlined" (2242:5804) PROPS{"Style":"Outlined"}
+              TEXT "input_text" 24,0 327x21 size FILL/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignLEFT fill[solid 185,28,28 a1.00{Colors/Semantic/Error dark}] "Alert / Error message" VARS{"fills":["Colors/Semantic/Error dark"]}
+            FRAME "input_helper-right" 305,0 46x21 HIDDEN AL HORIZONTAL gap0 pad0/0/0/0 MAX/MIN size HUG/HUG
+              TEXT "input_text" -2,0 48x21 size HUG/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignRIGHT fill[solid 0,0,0 a1.00{Copy/body}] "0 / 100" VARS{"fills":["Copy/body"]}
+    FRAME "static-contact-form_group" 0,191 676x67 AL HORIZONTAL gap32 pad0/0/0/0 MIN/MIN size FILL/HUG VARS{"itemSpacing":"space/7"}
+      INSTANCE "input-simple" 0,0 322x67 AL VERTICAL gap8 pad0/0/0/0 MIN/MIN size FILL/HUG -> "input-simple / type=text" (2314:18530) PROPS{"type":"text"} VARS{"itemSpacing":"space/2"}
+        INSTANCE "input" 0,0 322x67 AL VERTICAL gap4 pad0/0/0/0 MIN/MIN size FILL/HUG -> "input / small=false, state=rest" (2242:5830) PROPS{"Icon left":"2242:5807","Icon right":"2242:5801","Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Helper icon":"2242:5804","Show helper":false,"Helper text":"Alert / Error message","Show icon right":false,"Text":"you@company.com","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+          FRAME "input_text" 0,0 322x15 AL HORIZONTAL gap10 pad0/0/0/0 CENTER/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+            TEXT "input_text" 0,0 322x15 size FILL/HUG TEXT{} Onest SemiBold 12 lh{"unit":"AUTO"} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "Email" VARS{"fills":["copy/body"]}
+          FRAME "input_input" 0,19 322x48 AL HORIZONTAL gap10 pad8/8/8/12 SPACE_BETWEEN/CENTER size FILL/FIXED r8 fill[solid 255,255,255 a1.00{defaults/surface}] stroke[solid 3,11,27 a0.25{swatch/dark-900-o25} w1 INSIDE] VARS{"paddingTop":"space/2","paddingRight":"space/2","height":"space/8","strokeTopWeight":"border-width/main","strokeBottomWeight":"border-width/main","strokeLeftWeight":"border-width/main","strokeRightWeight":"border-width/main","fills":["defaults/surface"],"strokes":["swatch/dark-900-o25"]}
+            FRAME "input_icon-text" 12,9 302x30 AL HORIZONTAL gap0 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/0"}
+              FRAME "input_icon" 0,3 24x24 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size HUG/HUG VARS{"itemSpacing":"space/3"}
+                INSTANCE "lock" 0,0 24x24 size FIXED/FIXED clip -> "lock / Style=Outlined" (2242:5807) PROPS{"Style":"Outlined"}
+              FRAME "input_content" 0,0 302x30 AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+                TEXT "input_text" 0,0 302x30 size FILL/HUG op0.50 TEXT{Text Large} Onest Regular 20 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "you@company.com" VARS{"fills":["copy/body"],"fontSize":["font-size/text-main","font-size/text-large"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+            INSTANCE "Icon right" 319,12 24x24 HIDDEN size FIXED/FIXED clip -> "keyboard_arrow_down / Style=Outlined" (2242:5801) PROPS{"Style":"Outlined"}
+          FRAME "input_helpers" 0,73 351x21 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 SPACE_BETWEEN/MIN size FIXED/HUG
+            FRAME "input_helper-left" 0,0 351x21 HIDDEN AL HORIZONTAL gap4 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"space/1"}
+              INSTANCE "error_outline" 0,0 20x20 size FIXED/FIXED clip -> "error_outline / Style=Outlined" (2242:5804) PROPS{"Style":"Outlined"}
+              TEXT "input_text" 24,0 327x21 size FILL/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignLEFT fill[solid 185,28,28 a1.00{Colors/Semantic/Error dark}] "Alert / Error message" VARS{"fills":["Colors/Semantic/Error dark"]}
+            FRAME "input_helper-right" 305,0 46x21 HIDDEN AL HORIZONTAL gap0 pad0/0/0/0 MAX/MIN size HUG/HUG
+              TEXT "input_text" -2,0 48x21 size HUG/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignRIGHT fill[solid 0,0,0 a1.00{Copy/body}] "0 / 100" VARS{"fills":["Copy/body"]}
+      INSTANCE "input-simple" 354,0 322x67 AL VERTICAL gap8 pad0/0/0/0 MIN/MIN size FILL/HUG -> "input-simple / type=text" (2314:18530) PROPS{"type":"text"} VARS{"itemSpacing":"space/2"}
+        INSTANCE "input" 0,0 322x67 AL VERTICAL gap4 pad0/0/0/0 MIN/MIN size FILL/HUG -> "input / small=false, state=rest" (2242:5830) PROPS{"Icon left":"2242:5807","Icon right":"2242:5801","Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Helper icon":"2242:5804","Show helper":false,"Helper text":"Alert / Error message","Show icon right":false,"Text":"+31","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+          FRAME "input_text" 0,0 322x15 AL HORIZONTAL gap10 pad0/0/0/0 CENTER/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+            TEXT "input_text" 0,0 322x15 size FILL/HUG TEXT{} Onest SemiBold 12 lh{"unit":"AUTO"} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "Phone" VARS{"fills":["copy/body"]}
+          FRAME "input_input" 0,19 322x48 AL HORIZONTAL gap10 pad8/8/8/12 SPACE_BETWEEN/CENTER size FILL/FIXED r8 fill[solid 255,255,255 a1.00{defaults/surface}] stroke[solid 3,11,27 a0.25{swatch/dark-900-o25} w1 INSIDE] VARS{"paddingTop":"space/2","paddingRight":"space/2","height":"space/8","strokeTopWeight":"border-width/main","strokeBottomWeight":"border-width/main","strokeLeftWeight":"border-width/main","strokeRightWeight":"border-width/main","fills":["defaults/surface"],"strokes":["swatch/dark-900-o25"]}
+            FRAME "input_icon-text" 12,9 302x30 AL HORIZONTAL gap0 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/0"}
+              FRAME "input_icon" 0,3 24x24 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size HUG/HUG VARS{"itemSpacing":"space/3"}
+                INSTANCE "lock" 0,0 24x24 size FIXED/FIXED clip -> "lock / Style=Outlined" (2242:5807) PROPS{"Style":"Outlined"}
+              FRAME "input_content" 0,0 302x30 AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+                TEXT "input_text" 0,0 302x30 size FILL/HUG op0.50 TEXT{Text Large} Onest Regular 20 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "+31" VARS{"fills":["copy/body"],"fontSize":["font-size/text-main","font-size/text-large"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+            INSTANCE "Icon right" 319,12 24x24 HIDDEN size FIXED/FIXED clip -> "keyboard_arrow_down / Style=Outlined" (2242:5801) PROPS{"Style":"Outlined"}
+          FRAME "input_helpers" 0,73 351x21 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 SPACE_BETWEEN/MIN size FIXED/HUG
+            FRAME "input_helper-left" 0,0 351x21 HIDDEN AL HORIZONTAL gap4 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"space/1"}
+              INSTANCE "error_outline" 0,0 20x20 size FIXED/FIXED clip -> "error_outline / Style=Outlined" (2242:5804) PROPS{"Style":"Outlined"}
+              TEXT "input_text" 24,0 327x21 size FILL/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignLEFT fill[solid 185,28,28 a1.00{Colors/Semantic/Error dark}] "Alert / Error message" VARS{"fills":["Colors/Semantic/Error dark"]}
+            FRAME "input_helper-right" 305,0 46x21 HIDDEN AL HORIZONTAL gap0 pad0/0/0/0 MAX/MIN size HUG/HUG
+              TEXT "input_text" -2,0 48x21 size HUG/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignRIGHT fill[solid 0,0,0 a1.00{Copy/body}] "0 / 100" VARS{"fills":["Copy/body"]}
+    FRAME "static-contact-form_group" 0,290 676x67 AL HORIZONTAL gap32 pad0/0/0/0 MIN/MIN size FILL/HUG VARS{"itemSpacing":"space/7"}
+      INSTANCE "input-simple" 0,0 676x67 AL VERTICAL gap8 pad0/0/0/0 MIN/MIN size FILL/HUG -> "input-simple / type=text" (2314:18530) PROPS{"type":"text"} VARS{"itemSpacing":"space/2"}
+        INSTANCE "input" 0,0 676x67 AL VERTICAL gap4 pad0/0/0/0 MIN/MIN size FILL/HUG -> "input / small=false, state=rest" (2242:5830) PROPS{"Icon left":"2242:5807","Icon right":"2242:5801","Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Helper icon":"2242:5804","Show helper":false,"Helper text":"Alert / Error message","Show icon right":true,"Text":"A company looking to hire","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+          FRAME "input_text" 0,0 676x15 AL HORIZONTAL gap10 pad0/0/0/0 CENTER/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+            TEXT "input_text" 0,0 676x15 size FILL/HUG TEXT{} Onest SemiBold 12 lh{"unit":"AUTO"} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "I'm contacting you as" VARS{"fills":["copy/body"]}
+          FRAME "input_input" 0,19 676x48 AL HORIZONTAL gap10 pad8/8/8/12 SPACE_BETWEEN/CENTER size FILL/FIXED r8 fill[solid 255,255,255 a1.00{defaults/surface}] stroke[solid 3,11,27 a0.25{swatch/dark-900-o25} w1 INSIDE] VARS{"paddingTop":"space/2","paddingRight":"space/2","height":"space/8","strokeTopWeight":"border-width/main","strokeBottomWeight":"border-width/main","strokeLeftWeight":"border-width/main","strokeRightWeight":"border-width/main","fills":["defaults/surface"],"strokes":["swatch/dark-900-o25"]}
+            FRAME "input_icon-text" 12,9 632x30 AL HORIZONTAL gap0 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/0"}
+              FRAME "input_icon" 0,3 24x24 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size HUG/HUG VARS{"itemSpacing":"space/3"}
+                INSTANCE "lock" 0,0 24x24 size FIXED/FIXED clip -> "lock / Style=Outlined" (2242:5807) PROPS{"Style":"Outlined"}
+              FRAME "input_content" 0,0 632x30 AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+                TEXT "input_text" 0,0 632x30 size FILL/HUG TEXT{Text Large} Onest Regular 20 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "A company looking to hire" VARS{"fills":["copy/body"],"fontSize":["font-size/text-main","font-size/text-large"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+            INSTANCE "Icon right" 644,12 24x24 size FIXED/FIXED clip -> "keyboard_arrow_down / Style=Outlined" (2242:5801) PROPS{"Style":"Outlined"}
+          FRAME "input_helpers" 0,73 351x21 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 SPACE_BETWEEN/MIN size FIXED/HUG
+            FRAME "input_helper-left" 0,0 351x21 HIDDEN AL HORIZONTAL gap4 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"space/1"}
+              INSTANCE "error_outline" 0,0 20x20 size FIXED/FIXED clip -> "error_outline / Style=Outlined" (2242:5804) PROPS{"Style":"Outlined"}
+              TEXT "input_text" 24,0 327x21 size FILL/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignLEFT fill[solid 185,28,28 a1.00{Colors/Semantic/Error dark}] "Alert / Error message" VARS{"fills":["Colors/Semantic/Error dark"]}
+            FRAME "input_helper-right" 305,0 46x21 HIDDEN AL HORIZONTAL gap0 pad0/0/0/0 MAX/MIN size HUG/HUG
+              TEXT "input_text" -2,0 48x21 size HUG/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignRIGHT fill[solid 0,0,0 a1.00{Copy/body}] "0 / 100" VARS{"fills":["Copy/body"]}
+    FRAME "static-contact-form_group" 0,389 676x201 AL HORIZONTAL gap32 pad0/0/0/0 MIN/MIN size FILL/HUG VARS{"itemSpacing":"space/7"}
+      INSTANCE "input-simple" 0,0 676x201 AL VERTICAL gap8 pad0/0/0/0 MIN/MIN size FILL/FIXED -> "input-simple / type=text" (2314:18530) PROPS{"type":"text"} VARS{"itemSpacing":"space/2"}
+        INSTANCE "input" 0,0 676x201 AL VERTICAL gap4 pad0/0/0/0 MIN/MIN size FILL/FILL -> "input / small=false, state=rest" (2242:5830) PROPS{"Icon left":"2242:5807","Icon right":"2242:5801","Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Helper icon":"2242:5804","Show helper":false,"Helper text":"Alert / Error message","Show icon right":false,"Text":"A company looking to hire","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+          FRAME "input_text" 0,0 676x15 AL HORIZONTAL gap10 pad0/0/0/0 CENTER/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+            TEXT "input_text" 0,0 676x15 size FILL/HUG TEXT{} Onest SemiBold 12 lh{"unit":"AUTO"} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "Message" VARS{"fills":["copy/body"]}
+          FRAME "input_input" 0,19 676x182 AL HORIZONTAL gap10 pad8/8/8/12 SPACE_BETWEEN/CENTER size FILL/FILL r8 fill[solid 255,255,255 a1.00{defaults/surface}] stroke[solid 3,11,27 a0.25{swatch/dark-900-o25} w1 INSIDE] VARS{"paddingTop":"space/2","paddingRight":"space/2","height":"space/8","strokeTopWeight":"border-width/main","strokeBottomWeight":"border-width/main","strokeLeftWeight":"border-width/main","strokeRightWeight":"border-width/main","fills":["defaults/surface"],"strokes":["swatch/dark-900-o25"]}
+            FRAME "input_icon-text" 12,76 656x30 AL HORIZONTAL gap0 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/0"}
+              FRAME "input_icon" 0,3 24x24 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size HUG/HUG VARS{"itemSpacing":"space/3"}
+                INSTANCE "lock" 0,0 24x24 size FIXED/FIXED clip -> "lock / Style=Outlined" (2242:5807) PROPS{"Style":"Outlined"}
+              FRAME "input_content" 0,0 656x30 AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+                TEXT "input_text" 0,0 239x60 HIDDEN size FIXED/FIXED TEXT{Text Large} Onest Regular 20 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "A company looking to hire" VARS{"fills":["copy/body"],"fontSize":["font-size/text-main","font-size/text-large"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+            INSTANCE "Icon right" 319,12 24x24 HIDDEN size FIXED/FIXED clip -> "keyboard_arrow_down / Style=Outlined" (2242:5801) PROPS{"Style":"Outlined"}
+          FRAME "input_helpers" 0,73 351x21 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 SPACE_BETWEEN/MIN size FIXED/HUG
+            FRAME "input_helper-left" 0,0 351x21 HIDDEN AL HORIZONTAL gap4 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"space/1"}
+              INSTANCE "error_outline" 0,0 20x20 size FIXED/FIXED clip -> "error_outline / Style=Outlined" (2242:5804) PROPS{"Style":"Outlined"}
+              TEXT "input_text" 24,0 327x21 size FILL/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignLEFT fill[solid 185,28,28 a1.00{Colors/Semantic/Error dark}] "Alert / Error message" VARS{"fills":["Colors/Semantic/Error dark"]}
+            FRAME "input_helper-right" 305,0 46x21 HIDDEN AL HORIZONTAL gap0 pad0/0/0/0 MAX/MIN size HUG/HUG
+              TEXT "input_text" -2,0 48x21 size HUG/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignRIGHT fill[solid 0,0,0 a1.00{Copy/body}] "0 / 100" VARS{"fills":["Copy/body"]}
+    FRAME "static-contact-form_group" 0,622 676x48 AL HORIZONTAL gap62 pad0/0/0/0 SPACE_BETWEEN/CENTER size FILL/HUG
+      TEXT "static-contact-form_text" 0,12 250x24 size HUG/HUG TEXT{Text Main} Onest Regular 16 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 3,11,27 a1.00{text}] "We reply within one working day." VARS{"fills":["text"],"fontSize":["font-size/text-main"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+      INSTANCE "Button" 480,0 196x48 AL HORIZONTAL gap0 pad8/16/8/16 CENTER/CENTER size HUG/FIXED r9999 fill[solid 0,255,213 a1.00{button-primary/background} ; solid 255,255,255 a0.20] fx[{"t":"DROP_SHADOW","r":8,"c":"0,0,0 a0.10","o":{"x":0,"y":4},"s":0},{"t":"DROP_SHADOW","r":14,"c":"0,0,0 a0.09","o":{"x":0,"y":14},"s":0},{"t":"DROP_SHADOW","r":19,"c":"0,0,0 a0.05","o":{"x":0,"y":32},"s":0},{"t":"DROP_SHADOW","r":23,"c":"0,0,0 a0.01","o":{"x":0,"y":56},"s":0},{"t":"DROP_SHADOW","r":25,"c":"0,0,0 a0.00","o":{"x":0,"y":88},"s":0}] -> "Button / type=primary, state=rest" (2028:2123) PROPS{"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":true,"Text":"Send message","type":"primary","state":"rest"} VARS{"paddingLeft":"Padding x","paddingTop":"space/2","paddingRight":"Padding x","paddingBottom":"space/2","height":"Height","topLeftRadius":"radius/round","topRightRadius":"radius/round","bottomLeftRadius":"radius/round","bottomRightRadius":"radius/round","fills":["button-primary/background"]}
+        INSTANCE "chevron_right" 16,12 24x24 HIDDEN size FIXED/FIXED clip -> "chevron_right / Style=Filled" (2028:1998) PROPS{"Style":"Filled"}
+        FRAME "button_text" 16,10.5 140x27 AL HORIZONTAL gap0 pad0/8/0/8 CENTER/CENTER size HUG/HUG VARS{"paddingLeft":"space/2","paddingRight":"space/2"}
+          TEXT "button_text" 8,0 124x27 size HUG/HUG TEXT{} Onest Medium 18 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 5,4,4 a1.00] "Send message" VARS{"fontSize":["font-size/text-medium"]}
+        INSTANCE "chevron_right" 156,12 24x24 size FIXED/FIXED clip -> "chevron_right / Style=Filled" (2028:1998) PROPS{"Style":"Filled"}
+  FRAME "static-contact-form_group_wrap" 772,64 676x591 AL VERTICAL gap32 pad0/0/0/0 MIN/MIN size FILL/FIXED VARS{"itemSpacing":"space/7"}
+    FRAME "static-contact-form_group_wrap" 0,0 676x212 AL VERTICAL gap32 pad32/32/32/32 MIN/MIN size FILL/HUG r8 clip fill[solid 237,241,247 a1.00{background}] VARS{"itemSpacing":"space/7","paddingLeft":"space/7","paddingTop":"space/7","paddingRight":"space/7","paddingBottom":"space/7","topLeftRadius":"radius/small","topRightRadius":"radius/small","bottomLeftRadius":"radius/small","bottomRightRadius":"radius/small","fills":["background"]}
+      FRAME "static-contact-form_group" 32,32 612x58 AL HORIZONTAL gap32 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/7"}
+        INSTANCE "Contact / Detail item" 0,0 290x58 AL VERTICAL gap10 pad0/0/0/0 CENTER/MIN size FILL/HUG -> "Contact / Detail item" (2314:18715) VARS{"itemSpacing":"space/3"}
+          TEXT "Email" 0,0 41x18 size HUG/HUG TEXT{Label} Onest Regular 12 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 3,11,27 a1.00{text}] "Email" VARS{"fills":["text"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+          TEXT "hello@humain-recruitment.com" 0,28 275x30 size HUG/HUG TEXT{Text Large} Onest Regular 20 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 3,11,27 a1.00{text}] "info@humainrecruitment.com" VARS{"fills":["text"],"fontSize":["font-size/text-large"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+        INSTANCE "Frame 718" 322,0 290x58 AL VERTICAL gap10 pad0/0/0/0 CENTER/MIN size FILL/HUG -> "Contact / Detail item" (2314:18715) VARS{"itemSpacing":"space/3"}
+          TEXT "Email" 0,0 47x18 size HUG/HUG TEXT{Label} Onest Regular 12 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 3,11,27 a1.00{text}] "Phone" VARS{"fills":["text"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+          TEXT "hello@humain-recruitment.com" 0,28 185x30 size HUG/HUG TEXT{Text Large} Onest Regular 20 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 3,11,27 a1.00{text}] "+31 (0)XX XXX XX XX" VARS{"fills":["text"],"fontSize":["font-size/text-large"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+      FRAME "static-contact-form_group" 32,122 612x58 AL HORIZONTAL gap32 pad0/0/0/0 MIN/MIN size FILL/HUG VARS{"itemSpacing":"space/7"}
+        INSTANCE "Frame 719" 0,0 290x58 AL VERTICAL gap10 pad0/0/0/0 CENTER/MIN size FILL/HUG -> "Contact / Detail item" (2314:18715) VARS{"itemSpacing":"space/3"}
+          TEXT "Email" 0,0 49x18 size HUG/HUG TEXT{Label} Onest Regular 12 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 3,11,27 a1.00{text}] "office" VARS{"fills":["text"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+          TEXT "hello@humain-recruitment.com" 0,28 264x30 size HUG/HUG TEXT{Text Large} Onest Regular 20 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 3,11,27 a1.00{text}] "Rotterdam, The Netherlands" VARS{"fills":["text"],"fontSize":["font-size/text-large"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+        INSTANCE "Frame 720" 322,0 290x58 AL VERTICAL gap10 pad0/0/0/0 CENTER/MIN size FILL/HUG -> "Contact / Detail item" (2314:18715) VARS{"itemSpacing":"space/3"}
+          TEXT "Email" 0,0 48x18 size HUG/HUG TEXT{Label} Onest Regular 12 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 3,11,27 a1.00{text}] "Hours" VARS{"fills":["text"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+          TEXT "hello@humain-recruitment.com" 0,28 252x30 size HUG/HUG TEXT{Text Large} Onest Regular 20 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 3,11,27 a1.00{text}] "Mon–Fri · 09:00–17:30 CET" VARS{"fills":["text"],"fontSize":["font-size/text-large"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+    FRAME "static-contact-form_img" 0,244 676x346 AL VERTICAL gap32 pad48/48/48/48 MIN/MIN size FILL/FIXED r8 clip fill[image CROP 05ef2a41bbb5c4d379e9063a4eab32c41c79781c.png] stroke[solid 3,11,27 a0.25{swatch/dark-900-o25} w1 INSIDE] VARS{"itemSpacing":"space/7","paddingLeft":"space/8","paddingTop":"space/8","paddingRight":"space/8","paddingBottom":"space/8","topLeftRadius":"radius/small","topRightRadius":"radius/small","bottomLeftRadius":"radius/small","bottomRightRadius":"radius/small","strokeTopWeight":"border-width/main","strokeBottomWeight":"border-width/main","strokeLeftWeight":"border-width/main","strokeRightWeight":"border-width/main","strokes":["swatch/dark-900-o25"]}
+
+### type=resume (2444:35461)
+COMPONENT "type=resume" 21,967 1512x1144 AL HORIZONTAL gap32 pad64/64/192/64 MIN/MIN size FILL/HUG clip fill[solid 255,255,255 a1.00{background-2}] VARS{"itemSpacing":"space/7","paddingLeft":"site/margin","paddingTop":"site/margin","paddingRight":"site/margin","paddingBottom":"section-space/large","fills":["background-2"]}
+  FRAME "static-contact-form_group_wrap" 64,64 676x888 AL VERTICAL gap32 pad0/0/0/0 MIN/MIN size FIXED/HUG r8 fill[solid 255,255,255 a1.00{background-2}] VARS{"itemSpacing":"space/7","topLeftRadius":"radius/small","topRightRadius":"radius/small","bottomLeftRadius":"radius/small","bottomRightRadius":"radius/small","fills":["background-2"]}
+    TEXT "static-contact-form_title" 0,0 676x60 size FILL/HUG TEXT{H2} Vend Sans Bold 48 lh{"unit":"PERCENT","value":125} alignLEFT fill[solid 3,11,27 a1.00{text}] "Resume" VARS{"fills":["text"],"fontSize":["font-size/h2"],"fontStyle":["font/secondary-bold"],"fontFamily":["font/secondary-family"]}
+    FRAME "static-contact-form_group" 0,92 676x186 AL VERTICAL gap10 pad32/32/32/32 CENTER/CENTER size FILL/HUG r8 clip fill[solid 255,255,255 a1.00{background-2}] stroke[solid 3,11,27 a0.25{swatch/dark-900-o25} w1 INSIDE] VARS{"itemSpacing":"space/3","paddingLeft":"space/7","paddingTop":"space/7","paddingRight":"space/7","paddingBottom":"space/7","topLeftRadius":"radius/small","topRightRadius":"radius/small","bottomLeftRadius":"radius/small","bottomRightRadius":"radius/small","strokeTopWeight":"border-width/main","strokeBottomWeight":"border-width/main","strokeLeftWeight":"border-width/main","strokeRightWeight":"border-width/main","fills":["background-2"],"strokes":["swatch/dark-900-o25"]}
+      INSTANCE "Google icons" 314,32 48x48 size FIXED/FIXED clip -> "Google icons / type=cv-submission" (2263:6755) PROPS{"type":"cv-submission"}
+      TEXT "static-contact-form_text" 201,90 274x30 size HUG/HUG TEXT{Text Large} mixed 20 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 3,11,27 a1.00{text}] "Drop your CV here or browse" SEGS[["Drop your CV here or ","Regular","solid 3,11,27 a1.00{text}"],["browse","Bold","solid 3,11,27 a1.00{text}"]] VARS{"fills":["text"],"fontSize":["font-size/text-large"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"],"textRangeFills":["text"]}
+      TEXT "static-contact-form_text" 246.5,130 183x24 size HUG/HUG TEXT{Text Main} Onest Regular 16 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 3,11,27 a0.50{swatch/dark-900-o50}] "PDF or Word · max 10MB" VARS{"fills":["swatch/dark-900-o50"],"fontSize":["font-size/text-main"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+    FRAME "static-contact-form_group" 0,310 676x67 AL HORIZONTAL gap32 pad0/0/0/0 MIN/MIN size FILL/HUG VARS{"itemSpacing":"space/7"}
+      INSTANCE "input-simple" 0,0 322x67 AL VERTICAL gap8 pad0/0/0/0 MIN/MIN size FILL/HUG -> "input-simple / type=text" (2314:18530) PROPS{"type":"text"} VARS{"itemSpacing":"space/2"}
+        INSTANCE "input" 0,0 322x67 AL VERTICAL gap4 pad0/0/0/0 MIN/MIN size FILL/HUG -> "input / small=false, state=rest" (2242:5830) PROPS{"Icon left":"2242:5807","Icon right":"2242:5801","Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Helper icon":"2242:5804","Show helper":false,"Helper text":"Alert / Error message","Show icon right":false,"Text":"","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+          FRAME "input_text" 0,0 322x15 AL HORIZONTAL gap10 pad0/0/0/0 CENTER/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+            TEXT "input_text" 0,0 322x15 size FILL/HUG TEXT{} Onest SemiBold 12 lh{"unit":"AUTO"} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "First name" VARS{"fills":["copy/body"]}
+          FRAME "input_input" 0,19 322x48 AL HORIZONTAL gap10 pad8/8/8/12 SPACE_BETWEEN/CENTER size FILL/FIXED r8 fill[solid 255,255,255 a1.00{defaults/surface}] stroke[solid 3,11,27 a0.25{swatch/dark-900-o25} w1 INSIDE] VARS{"paddingTop":"space/2","paddingRight":"space/2","height":"space/8","strokeTopWeight":"border-width/main","strokeBottomWeight":"border-width/main","strokeLeftWeight":"border-width/main","strokeRightWeight":"border-width/main","fills":["defaults/surface"],"strokes":["swatch/dark-900-o25"]}
+            FRAME "input_icon-text" 12,9 302x30 AL HORIZONTAL gap0 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/0"}
+              FRAME "input_icon" 0,3 24x24 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size HUG/HUG VARS{"itemSpacing":"space/3"}
+                INSTANCE "lock" 0,0 24x24 size FIXED/FIXED clip -> "lock / Style=Outlined" (2242:5807) PROPS{"Style":"Outlined"}
+              FRAME "input_content" 0,0 302x30 AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+                TEXT "input_text" 0,0 302x30 size FILL/HUG op0.50 TEXT{Text Large} Onest Regular 20 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "" VARS{"fills":["copy/body"],"fontSize":["font-size/text-main","font-size/text-large"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+            INSTANCE "Icon right" 319,12 24x24 HIDDEN size FIXED/FIXED clip -> "keyboard_arrow_down / Style=Outlined" (2242:5801) PROPS{"Style":"Outlined"}
+          FRAME "input_helpers" 0,73 351x21 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 SPACE_BETWEEN/MIN size FIXED/HUG
+            FRAME "input_helper-left" 0,0 351x21 HIDDEN AL HORIZONTAL gap4 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"space/1"}
+              INSTANCE "error_outline" 0,0 20x20 size FIXED/FIXED clip -> "error_outline / Style=Outlined" (2242:5804) PROPS{"Style":"Outlined"}
+              TEXT "input_text" 24,0 327x21 size FILL/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignLEFT fill[solid 185,28,28 a1.00{Colors/Semantic/Error dark}] "Alert / Error message" VARS{"fills":["Colors/Semantic/Error dark"]}
+            FRAME "input_helper-right" 305,0 46x21 HIDDEN AL HORIZONTAL gap0 pad0/0/0/0 MAX/MIN size HUG/HUG
+              TEXT "input_text" -2,0 48x21 size HUG/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignRIGHT fill[solid 0,0,0 a1.00{Copy/body}] "0 / 100" VARS{"fills":["Copy/body"]}
+      INSTANCE "input-simple" 354,0 322x67 AL VERTICAL gap8 pad0/0/0/0 MIN/MIN size FILL/HUG -> "input-simple / type=text" (2314:18530) PROPS{"type":"text"} VARS{"itemSpacing":"space/2"}
+        INSTANCE "input" 0,0 322x67 AL VERTICAL gap4 pad0/0/0/0 MIN/MIN size FILL/HUG -> "input / small=false, state=rest" (2242:5830) PROPS{"Icon left":"2242:5807","Icon right":"2242:5801","Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Helper icon":"2242:5804","Show helper":false,"Helper text":"Alert / Error message","Show icon right":false,"Text":"","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+          FRAME "input_text" 0,0 322x15 AL HORIZONTAL gap10 pad0/0/0/0 CENTER/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+            TEXT "input_text" 0,0 322x15 size FILL/HUG TEXT{} Onest SemiBold 12 lh{"unit":"AUTO"} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "last name" VARS{"fills":["copy/body"]}
+          FRAME "input_input" 0,19 322x48 AL HORIZONTAL gap10 pad8/8/8/12 SPACE_BETWEEN/CENTER size FILL/FIXED r8 fill[solid 255,255,255 a1.00{defaults/surface}] stroke[solid 3,11,27 a0.25{swatch/dark-900-o25} w1 INSIDE] VARS{"paddingTop":"space/2","paddingRight":"space/2","height":"space/8","strokeTopWeight":"border-width/main","strokeBottomWeight":"border-width/main","strokeLeftWeight":"border-width/main","strokeRightWeight":"border-width/main","fills":["defaults/surface"],"strokes":["swatch/dark-900-o25"]}
+            FRAME "input_icon-text" 12,9 302x30 AL HORIZONTAL gap0 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/0"}
+              FRAME "input_icon" 0,3 24x24 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size HUG/HUG VARS{"itemSpacing":"space/3"}
+                INSTANCE "lock" 0,0 24x24 size FIXED/FIXED clip -> "lock / Style=Outlined" (2242:5807) PROPS{"Style":"Outlined"}
+              FRAME "input_content" 0,0 302x30 AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+                TEXT "input_text" 0,0 302x30 size FILL/HUG op0.50 TEXT{Text Large} Onest Regular 20 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "" VARS{"fills":["copy/body"],"fontSize":["font-size/text-main","font-size/text-large"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+            INSTANCE "Icon right" 319,12 24x24 HIDDEN size FIXED/FIXED clip -> "keyboard_arrow_down / Style=Outlined" (2242:5801) PROPS{"Style":"Outlined"}
+          FRAME "input_helpers" 0,73 351x21 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 SPACE_BETWEEN/MIN size FIXED/HUG
+            FRAME "input_helper-left" 0,0 351x21 HIDDEN AL HORIZONTAL gap4 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"space/1"}
+              INSTANCE "error_outline" 0,0 20x20 size FIXED/FIXED clip -> "error_outline / Style=Outlined" (2242:5804) PROPS{"Style":"Outlined"}
+              TEXT "input_text" 24,0 327x21 size FILL/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignLEFT fill[solid 185,28,28 a1.00{Colors/Semantic/Error dark}] "Alert / Error message" VARS{"fills":["Colors/Semantic/Error dark"]}
+            FRAME "input_helper-right" 305,0 46x21 HIDDEN AL HORIZONTAL gap0 pad0/0/0/0 MAX/MIN size HUG/HUG
+              TEXT "input_text" -2,0 48x21 size HUG/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignRIGHT fill[solid 0,0,0 a1.00{Copy/body}] "0 / 100" VARS{"fills":["Copy/body"]}
+    FRAME "static-contact-form_group" 0,409 676x67 AL HORIZONTAL gap32 pad0/0/0/0 MIN/MIN size FILL/HUG VARS{"itemSpacing":"space/7"}
+      INSTANCE "input-simple" 0,0 322x67 AL VERTICAL gap8 pad0/0/0/0 MIN/MIN size FILL/HUG -> "input-simple / type=text" (2314:18530) PROPS{"type":"text"} VARS{"itemSpacing":"space/2"}
+        INSTANCE "input" 0,0 322x67 AL VERTICAL gap4 pad0/0/0/0 MIN/MIN size FILL/HUG -> "input / small=false, state=rest" (2242:5830) PROPS{"Icon left":"2242:5807","Icon right":"2242:5801","Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Helper icon":"2242:5804","Show helper":false,"Helper text":"Alert / Error message","Show icon right":false,"Text":"you@company.com","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+          FRAME "input_text" 0,0 322x15 AL HORIZONTAL gap10 pad0/0/0/0 CENTER/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+            TEXT "input_text" 0,0 322x15 size FILL/HUG TEXT{} Onest SemiBold 12 lh{"unit":"AUTO"} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "Email" VARS{"fills":["copy/body"]}
+          FRAME "input_input" 0,19 322x48 AL HORIZONTAL gap10 pad8/8/8/12 SPACE_BETWEEN/CENTER size FILL/FIXED r8 fill[solid 255,255,255 a1.00{defaults/surface}] stroke[solid 3,11,27 a0.25{swatch/dark-900-o25} w1 INSIDE] VARS{"paddingTop":"space/2","paddingRight":"space/2","height":"space/8","strokeTopWeight":"border-width/main","strokeBottomWeight":"border-width/main","strokeLeftWeight":"border-width/main","strokeRightWeight":"border-width/main","fills":["defaults/surface"],"strokes":["swatch/dark-900-o25"]}
+            FRAME "input_icon-text" 12,9 302x30 AL HORIZONTAL gap0 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/0"}
+              FRAME "input_icon" 0,3 24x24 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size HUG/HUG VARS{"itemSpacing":"space/3"}
+                INSTANCE "lock" 0,0 24x24 size FIXED/FIXED clip -> "lock / Style=Outlined" (2242:5807) PROPS{"Style":"Outlined"}
+              FRAME "input_content" 0,0 302x30 AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+                TEXT "input_text" 0,0 302x30 size FILL/HUG op0.50 TEXT{Text Large} Onest Regular 20 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "you@company.com" VARS{"fills":["copy/body"],"fontSize":["font-size/text-main","font-size/text-large"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+            INSTANCE "Icon right" 319,12 24x24 HIDDEN size FIXED/FIXED clip -> "keyboard_arrow_down / Style=Outlined" (2242:5801) PROPS{"Style":"Outlined"}
+          FRAME "input_helpers" 0,73 351x21 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 SPACE_BETWEEN/MIN size FIXED/HUG
+            FRAME "input_helper-left" 0,0 351x21 HIDDEN AL HORIZONTAL gap4 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"space/1"}
+              INSTANCE "error_outline" 0,0 20x20 size FIXED/FIXED clip -> "error_outline / Style=Outlined" (2242:5804) PROPS{"Style":"Outlined"}
+              TEXT "input_text" 24,0 327x21 size FILL/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignLEFT fill[solid 185,28,28 a1.00{Colors/Semantic/Error dark}] "Alert / Error message" VARS{"fills":["Colors/Semantic/Error dark"]}
+            FRAME "input_helper-right" 305,0 46x21 HIDDEN AL HORIZONTAL gap0 pad0/0/0/0 MAX/MIN size HUG/HUG
+              TEXT "input_text" -2,0 48x21 size HUG/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignRIGHT fill[solid 0,0,0 a1.00{Copy/body}] "0 / 100" VARS{"fills":["Copy/body"]}
+      INSTANCE "input-simple" 354,0 322x67 AL VERTICAL gap8 pad0/0/0/0 MIN/MIN size FILL/HUG -> "input-simple / type=text" (2314:18530) PROPS{"type":"text"} VARS{"itemSpacing":"space/2"}
+        INSTANCE "input" 0,0 322x67 AL VERTICAL gap4 pad0/0/0/0 MIN/MIN size FILL/HUG -> "input / small=false, state=rest" (2242:5830) PROPS{"Icon left":"2242:5807","Icon right":"2242:5801","Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Helper icon":"2242:5804","Show helper":false,"Helper text":"Alert / Error message","Show icon right":false,"Text":"+31","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+          FRAME "input_text" 0,0 322x15 AL HORIZONTAL gap10 pad0/0/0/0 CENTER/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+            TEXT "input_text" 0,0 322x15 size FILL/HUG TEXT{} Onest SemiBold 12 lh{"unit":"AUTO"} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "Phone" VARS{"fills":["copy/body"]}
+          FRAME "input_input" 0,19 322x48 AL HORIZONTAL gap10 pad8/8/8/12 SPACE_BETWEEN/CENTER size FILL/FIXED r8 fill[solid 255,255,255 a1.00{defaults/surface}] stroke[solid 3,11,27 a0.25{swatch/dark-900-o25} w1 INSIDE] VARS{"paddingTop":"space/2","paddingRight":"space/2","height":"space/8","strokeTopWeight":"border-width/main","strokeBottomWeight":"border-width/main","strokeLeftWeight":"border-width/main","strokeRightWeight":"border-width/main","fills":["defaults/surface"],"strokes":["swatch/dark-900-o25"]}
+            FRAME "input_icon-text" 12,9 302x30 AL HORIZONTAL gap0 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/0"}
+              FRAME "input_icon" 0,3 24x24 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size HUG/HUG VARS{"itemSpacing":"space/3"}
+                INSTANCE "lock" 0,0 24x24 size FIXED/FIXED clip -> "lock / Style=Outlined" (2242:5807) PROPS{"Style":"Outlined"}
+              FRAME "input_content" 0,0 302x30 AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+                TEXT "input_text" 0,0 302x30 size FILL/HUG op0.50 TEXT{Text Large} Onest Regular 20 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "+31" VARS{"fills":["copy/body"],"fontSize":["font-size/text-main","font-size/text-large"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+            INSTANCE "Icon right" 319,12 24x24 HIDDEN size FIXED/FIXED clip -> "keyboard_arrow_down / Style=Outlined" (2242:5801) PROPS{"Style":"Outlined"}
+          FRAME "input_helpers" 0,73 351x21 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 SPACE_BETWEEN/MIN size FIXED/HUG
+            FRAME "input_helper-left" 0,0 351x21 HIDDEN AL HORIZONTAL gap4 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"space/1"}
+              INSTANCE "error_outline" 0,0 20x20 size FIXED/FIXED clip -> "error_outline / Style=Outlined" (2242:5804) PROPS{"Style":"Outlined"}
+              TEXT "input_text" 24,0 327x21 size FILL/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignLEFT fill[solid 185,28,28 a1.00{Colors/Semantic/Error dark}] "Alert / Error message" VARS{"fills":["Colors/Semantic/Error dark"]}
+            FRAME "input_helper-right" 305,0 46x21 HIDDEN AL HORIZONTAL gap0 pad0/0/0/0 MAX/MIN size HUG/HUG
+              TEXT "input_text" -2,0 48x21 size HUG/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignRIGHT fill[solid 0,0,0 a1.00{Copy/body}] "0 / 100" VARS{"fills":["Copy/body"]}
+    FRAME "static-contact-form_group" 0,508 676x67 AL HORIZONTAL gap32 pad0/0/0/0 MIN/MIN size FILL/HUG VARS{"itemSpacing":"space/7"}
+      INSTANCE "input-simple" 0,0 322x67 AL VERTICAL gap8 pad0/0/0/0 MIN/MIN size FILL/HUG -> "input-simple / type=text" (2314:18530) PROPS{"type":"text"} VARS{"itemSpacing":"space/2"}
+        INSTANCE "input" 0,0 322x67 AL VERTICAL gap4 pad0/0/0/0 MIN/MIN size FILL/HUG -> "input / small=false, state=rest" (2242:5830) PROPS{"Icon left":"2242:5807","Icon right":"2242:5801","Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Helper icon":"2242:5804","Show helper":false,"Helper text":"Alert / Error message","Show icon right":true,"Text":"A company looking to hire","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+          FRAME "input_text" 0,0 322x15 AL HORIZONTAL gap10 pad0/0/0/0 CENTER/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+            TEXT "input_text" 0,0 322x15 size FILL/HUG TEXT{} Onest SemiBold 12 lh{"unit":"AUTO"} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "Discipline" VARS{"fills":["copy/body"]}
+          FRAME "input_input" 0,19 322x48 AL HORIZONTAL gap10 pad8/8/8/12 SPACE_BETWEEN/CENTER size FILL/FIXED r8 fill[solid 255,255,255 a1.00{defaults/surface}] stroke[solid 3,11,27 a0.25{swatch/dark-900-o25} w1 INSIDE] VARS{"paddingTop":"space/2","paddingRight":"space/2","height":"space/8","strokeTopWeight":"border-width/main","strokeBottomWeight":"border-width/main","strokeLeftWeight":"border-width/main","strokeRightWeight":"border-width/main","fills":["defaults/surface"],"strokes":["swatch/dark-900-o25"]}
+            FRAME "input_icon-text" 12,9 278x30 AL HORIZONTAL gap0 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/0"}
+              FRAME "input_icon" 0,3 24x24 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size HUG/HUG VARS{"itemSpacing":"space/3"}
+                INSTANCE "lock" 0,0 24x24 size FIXED/FIXED clip -> "lock / Style=Outlined" (2242:5807) PROPS{"Style":"Outlined"}
+              FRAME "input_content" 0,0 278x30 AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+                TEXT "input_text" 0,0 278x30 size FILL/HUG TEXT{Text Large} Onest Regular 20 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "A company looking to hire" VARS{"fills":["copy/body"],"fontSize":["font-size/text-main","font-size/text-large"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+            INSTANCE "Icon right" 290,12 24x24 size FIXED/FIXED clip -> "keyboard_arrow_down / Style=Outlined" (2242:5801) PROPS{"Style":"Outlined"}
+          FRAME "input_helpers" 0,73 351x21 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 SPACE_BETWEEN/MIN size FIXED/HUG
+            FRAME "input_helper-left" 0,0 351x21 HIDDEN AL HORIZONTAL gap4 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"space/1"}
+              INSTANCE "error_outline" 0,0 20x20 size FIXED/FIXED clip -> "error_outline / Style=Outlined" (2242:5804) PROPS{"Style":"Outlined"}
+              TEXT "input_text" 24,0 327x21 size FILL/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignLEFT fill[solid 185,28,28 a1.00{Colors/Semantic/Error dark}] "Alert / Error message" VARS{"fills":["Colors/Semantic/Error dark"]}
+            FRAME "input_helper-right" 305,0 46x21 HIDDEN AL HORIZONTAL gap0 pad0/0/0/0 MAX/MIN size HUG/HUG
+              TEXT "input_text" -2,0 48x21 size HUG/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignRIGHT fill[solid 0,0,0 a1.00{Copy/body}] "0 / 100" VARS{"fills":["Copy/body"]}
+      INSTANCE "input-simple" 354,0 322x67 AL VERTICAL gap8 pad0/0/0/0 MIN/MIN size FILL/HUG -> "input-simple / type=text" (2314:18530) PROPS{"type":"text"} VARS{"itemSpacing":"space/2"}
+        INSTANCE "input" 0,0 322x67 AL VERTICAL gap4 pad0/0/0/0 MIN/MIN size FILL/HUG -> "input / small=false, state=rest" (2242:5830) PROPS{"Icon left":"2242:5807","Icon right":"2242:5801","Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Helper icon":"2242:5804","Show helper":false,"Helper text":"Alert / Error message","Show icon right":true,"Text":"Immediately","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+          FRAME "input_text" 0,0 322x15 AL HORIZONTAL gap10 pad0/0/0/0 CENTER/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+            TEXT "input_text" 0,0 322x15 size FILL/HUG TEXT{} Onest SemiBold 12 lh{"unit":"AUTO"} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "Availability" VARS{"fills":["copy/body"]}
+          FRAME "input_input" 0,19 322x48 AL HORIZONTAL gap10 pad8/8/8/12 SPACE_BETWEEN/CENTER size FILL/FIXED r8 fill[solid 255,255,255 a1.00{defaults/surface}] stroke[solid 3,11,27 a0.25{swatch/dark-900-o25} w1 INSIDE] VARS{"paddingTop":"space/2","paddingRight":"space/2","height":"space/8","strokeTopWeight":"border-width/main","strokeBottomWeight":"border-width/main","strokeLeftWeight":"border-width/main","strokeRightWeight":"border-width/main","fills":["defaults/surface"],"strokes":["swatch/dark-900-o25"]}
+            FRAME "input_icon-text" 12,9 278x30 AL HORIZONTAL gap0 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/0"}
+              FRAME "input_icon" 0,3 24x24 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size HUG/HUG VARS{"itemSpacing":"space/3"}
+                INSTANCE "lock" 0,0 24x24 size FIXED/FIXED clip -> "lock / Style=Outlined" (2242:5807) PROPS{"Style":"Outlined"}
+              FRAME "input_content" 0,0 278x30 AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+                TEXT "input_text" 0,0 278x30 size FILL/HUG TEXT{Text Large} Onest Regular 20 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "Immediately" VARS{"fills":["copy/body"],"fontSize":["font-size/text-main","font-size/text-large"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+            INSTANCE "Icon right" 290,12 24x24 size FIXED/FIXED clip -> "keyboard_arrow_down / Style=Outlined" (2242:5801) PROPS{"Style":"Outlined"}
+          FRAME "input_helpers" 0,73 351x21 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 SPACE_BETWEEN/MIN size FIXED/HUG
+            FRAME "input_helper-left" 0,0 351x21 HIDDEN AL HORIZONTAL gap4 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"space/1"}
+              INSTANCE "error_outline" 0,0 20x20 size FIXED/FIXED clip -> "error_outline / Style=Outlined" (2242:5804) PROPS{"Style":"Outlined"}
+              TEXT "input_text" 24,0 327x21 size FILL/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignLEFT fill[solid 185,28,28 a1.00{Colors/Semantic/Error dark}] "Alert / Error message" VARS{"fills":["Colors/Semantic/Error dark"]}
+            FRAME "input_helper-right" 305,0 46x21 HIDDEN AL HORIZONTAL gap0 pad0/0/0/0 MAX/MIN size HUG/HUG
+              TEXT "input_text" -2,0 48x21 size HUG/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignRIGHT fill[solid 0,0,0 a1.00{Copy/body}] "0 / 100" VARS{"fills":["Copy/body"]}
+    FRAME "static-contact-form_group" 0,607 676x201 AL HORIZONTAL gap32 pad0/0/0/0 MIN/MIN size FILL/HUG VARS{"itemSpacing":"space/7"}
+      INSTANCE "input-simple" 0,0 676x201 AL VERTICAL gap8 pad0/0/0/0 MIN/MIN size FILL/FIXED -> "input-simple / type=text" (2314:18530) PROPS{"type":"text"} VARS{"itemSpacing":"space/2"}
+        INSTANCE "input" 0,0 676x201 AL VERTICAL gap4 pad0/0/0/0 MIN/MIN size FILL/FILL -> "input / small=false, state=rest" (2242:5830) PROPS{"Icon left":"2242:5807","Icon right":"2242:5801","Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Helper icon":"2242:5804","Show helper":false,"Helper text":"Alert / Error message","Show icon right":false,"Text":"Preferred sectors, locations, day rate...","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+          FRAME "input_text" 0,0 676x15 AL HORIZONTAL gap10 pad0/0/0/0 CENTER/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+            TEXT "input_text" 0,0 676x15 size FILL/HUG TEXT{} Onest SemiBold 12 lh{"unit":"AUTO"} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "Anything we should know? (optional)" VARS{"fills":["copy/body"]}
+          FRAME "input_input" 0,19 676x182 AL HORIZONTAL gap10 pad8/8/8/12 SPACE_BETWEEN/MIN size FILL/FILL r8 fill[solid 255,255,255 a1.00{defaults/surface}] stroke[solid 3,11,27 a0.25{swatch/dark-900-o25} w1 INSIDE] VARS{"paddingTop":"space/2","paddingRight":"space/2","height":"space/8","strokeTopWeight":"border-width/main","strokeBottomWeight":"border-width/main","strokeLeftWeight":"border-width/main","strokeRightWeight":"border-width/main","fills":["defaults/surface"],"strokes":["swatch/dark-900-o25"]}
+            FRAME "input_icon-text" 12,8 656x30 AL HORIZONTAL gap0 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/0"}
+              FRAME "input_icon" 0,3 24x24 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size HUG/HUG VARS{"itemSpacing":"space/3"}
+                INSTANCE "lock" 0,0 24x24 size FIXED/FIXED clip -> "lock / Style=Outlined" (2242:5807) PROPS{"Style":"Outlined"}
+              FRAME "input_content" 0,0 656x30 AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+                TEXT "input_text" 0,0 656x30 size FILL/HUG TEXT{Text Large} Onest Regular 20 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 3,11,27 a0.50{swatch/dark-900-o50}] "Preferred sectors, locations, day rate..." VARS{"fills":["swatch/dark-900-o50"],"fontSize":["font-size/text-main","font-size/text-large"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+            INSTANCE "Icon right" 319,12 24x24 HIDDEN size FIXED/FIXED clip -> "keyboard_arrow_down / Style=Outlined" (2242:5801) PROPS{"Style":"Outlined"}
+          FRAME "input_helpers" 0,73 351x21 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 SPACE_BETWEEN/MIN size FIXED/HUG
+            FRAME "input_helper-left" 0,0 351x21 HIDDEN AL HORIZONTAL gap4 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"space/1"}
+              INSTANCE "error_outline" 0,0 20x20 size FIXED/FIXED clip -> "error_outline / Style=Outlined" (2242:5804) PROPS{"Style":"Outlined"}
+              TEXT "input_text" 24,0 327x21 size FILL/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignLEFT fill[solid 185,28,28 a1.00{Colors/Semantic/Error dark}] "Alert / Error message" VARS{"fills":["Colors/Semantic/Error dark"]}
+            FRAME "input_helper-right" 305,0 46x21 HIDDEN AL HORIZONTAL gap0 pad0/0/0/0 MAX/MIN size HUG/HUG
+              TEXT "input_text" -2,0 48x21 size HUG/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignRIGHT fill[solid 0,0,0 a1.00{Copy/body}] "0 / 100" VARS{"fills":["Copy/body"]}
+    FRAME "static-contact-form_group" 0,840 676x48 AL HORIZONTAL gap62 pad0/0/0/0 SPACE_BETWEEN/CENTER size FILL/HUG
+      TEXT "static-contact-form_text" 0,12 250x24 size HUG/HUG TEXT{Text Main} Onest Regular 16 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 3,11,27 a1.00{text}] "We reply within one working day." VARS{"fills":["text"],"fontSize":["font-size/text-main"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+      INSTANCE "Button" 438,0 238x48 AL HORIZONTAL gap0 pad8/16/8/16 CENTER/CENTER size HUG/FIXED r9999 fill[solid 0,255,213 a1.00{button-primary/background} ; solid 255,255,255 a0.20] fx[{"t":"DROP_SHADOW","r":8,"c":"0,0,0 a0.10","o":{"x":0,"y":4},"s":0},{"t":"DROP_SHADOW","r":14,"c":"0,0,0 a0.09","o":{"x":0,"y":14},"s":0},{"t":"DROP_SHADOW","r":19,"c":"0,0,0 a0.05","o":{"x":0,"y":32},"s":0},{"t":"DROP_SHADOW","r":23,"c":"0,0,0 a0.01","o":{"x":0,"y":56},"s":0},{"t":"DROP_SHADOW","r":25,"c":"0,0,0 a0.00","o":{"x":0,"y":88},"s":0}] -> "Button / type=primary, state=rest" (2028:2123) PROPS{"Icon":"2028:1998","Icon right":true,"Icon left":false,"Label":true,"Text":"Analyse my resume","type":"primary","state":"rest"} VARS{"paddingLeft":"Padding x","paddingTop":"space/2","paddingRight":"Padding x","paddingBottom":"space/2","height":"Height","topLeftRadius":"radius/round","topRightRadius":"radius/round","bottomLeftRadius":"radius/round","bottomRightRadius":"radius/round","fills":["button-primary/background"]}
+        INSTANCE "chevron_right" 16,12 24x24 HIDDEN size FIXED/FIXED clip -> "chevron_right / Style=Filled" (2028:1998) PROPS{"Style":"Filled"}
+        FRAME "button_text" 16,10.5 182x27 AL HORIZONTAL gap0 pad0/8/0/8 CENTER/CENTER size HUG/HUG VARS{"paddingLeft":"space/2","paddingRight":"space/2"}
+          TEXT "button_text" 8,0 166x27 size HUG/HUG TEXT{} Onest Medium 18 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 5,4,4 a1.00] "Analyse my resume" VARS{"fontSize":["font-size/text-medium"]}
+        INSTANCE "chevron_right" 198,12 24x24 size FIXED/FIXED clip -> "chevron_right / Style=Filled" (2028:1998) PROPS{"Style":"Filled"}
+  FRAME "static-contact-form_group_wrap" 772,64 676x888 AL VERTICAL gap10 pad0/0/0/0 MIN/MIN size FILL/FIXED VARS{"itemSpacing":"space/3"}
+    FRAME "static-contact-form_group_wrap" 0,-64 708x354 AL VERTICAL gap10 pad64/0/0/0 MIN/MIN size FIXED/HUG ABS VARS{"itemSpacing":"space/3"}
+      FRAME "static-contact-form_group_wrap" 0,64 708x290 AL VERTICAL gap32 pad32/32/32/32 MIN/MIN size FILL/HUG r8 clip fill[solid 237,241,247 a1.00{background}] VARS{"itemSpacing":"space/7","paddingLeft":"space/7","paddingTop":"space/7","paddingRight":"space/7","paddingBottom":"space/7","topLeftRadius":"radius/small","topRightRadius":"radius/small","bottomLeftRadius":"radius/small","bottomRightRadius":"radius/small","fills":["background"]}
+        TEXT "static-contact-form_title" 32,32 644x38 size FILL/HUG TEXT{H4} Vend Sans Bold 30 lh{"unit":"PERCENT","value":125} alignLEFT fill[solid 3,11,27 a1.00{text}] "Why join the pool?" VARS{"fills":["text"],"fontSize":["font-size/h4"],"fontStyle":["font/secondary-bold"],"fontFamily":["font/secondary-family"]}
+        FRAME "static-contact-form_list" 32,102 644x156 AL VERTICAL gap16 pad0/0/0/0 MIN/MIN size FILL/HUG VARS{"itemSpacing":"space/4"}
+          INSTANCE "bullet" 0,0 644x27 AL HORIZONTAL gap4 pad0/0/0/0 MIN/MIN size FILL/HUG -> "bullet / type=18" (2318:18988) PROPS{"type":"18"} VARS{"itemSpacing":"space/1"}
+            INSTANCE "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" 0,0 26x26 size FIXED/FIXED clip -> "Google icons / type=check" (2028:2712) PROPS{"type":"check"}
+            TEXT "bullet_text" 30,0 614x27 size FILL/HUG TEXT{Text Medium} Onest Regular 18 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 3,11,27 a1.00{text}] "Matched proactively to relevant roles" VARS{"fills":["text"],"fontSize":["font-size/text-medium"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+          INSTANCE "Frame 718" 0,43 644x27 AL HORIZONTAL gap4 pad0/0/0/0 MIN/MIN size FILL/HUG -> "bullet / type=18" (2318:18988) PROPS{"type":"18"} VARS{"itemSpacing":"space/1"}
+            INSTANCE "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" 0,0 26x26 size FIXED/FIXED clip -> "Google icons / type=check" (2028:2712) PROPS{"type":"check"}
+            TEXT "bullet_text" 30,0 614x27 size FILL/HUG TEXT{Text Medium} Onest Regular 18 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 3,11,27 a1.00{text}] "Benchmarked on proof, not CV wording" VARS{"fills":["text"],"fontSize":["font-size/text-medium"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+          INSTANCE "Frame 719" 0,86 644x27 AL HORIZONTAL gap4 pad0/0/0/0 MIN/MIN size FILL/HUG -> "bullet / type=18" (2318:18988) PROPS{"type":"18"} VARS{"itemSpacing":"space/1"}
+            INSTANCE "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" 0,0 26x26 size FIXED/FIXED clip -> "Google icons / type=check" (2028:2712) PROPS{"type":"check"}
+            TEXT "bullet_text" 30,0 614x27 size FILL/HUG TEXT{Text Medium} Onest Regular 18 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 3,11,27 a1.00{text}] "One submission, ongoing opportunities" VARS{"fills":["text"],"fontSize":["font-size/text-medium"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+          INSTANCE "Frame 720" 0,129 644x27 AL HORIZONTAL gap4 pad0/0/0/0 MIN/MIN size FILL/HUG -> "bullet / type=18" (2318:18988) PROPS{"type":"18"} VARS{"itemSpacing":"space/1"}
+            INSTANCE "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" 0,0 26x26 size FIXED/FIXED clip -> "Google icons / type=check" (2028:2712) PROPS{"type":"check"}
+            TEXT "bullet_text" 30,0 614x27 size FILL/HUG TEXT{Text Medium} Onest Regular 18 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 3,11,27 a1.00{text}] "No spam, only relevant introductions" VARS{"fills":["text"],"fontSize":["font-size/text-medium"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+SET "input" 2242:5829 variants: small=false, state=rest (2242:5830), small=false, state=hover (6267:47995), small=false, state=focus (6267:48011), small=true, state=rest (2242:5846), small=true, state=hover (6267:48027), small=true, state=focus (6267:48043)
+
+### small=false, state=rest (2242:5830)
+COMPONENT "small=false, state=rest" 20,20 351x73 AL VERTICAL gap4 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"1"}
+  FRAME "input_text" 0,0 351x21 AL HORIZONTAL gap10 pad0/0/0/0 CENTER/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+    TEXT "input_text" 0,0 351x21 size FILL/HUG TEXT{} Onest Bold 14 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "Label" VARS{"fills":["copy/body"],"fontSize":["text-sm"]}
+  FRAME "input_input" 0,25 351x48 AL HORIZONTAL gap10 pad8/8/8/8 SPACE_BETWEEN/CENTER size FILL/FIXED fill[solid 255,255,255 a1.00{background-2}] stroke[solid 0,0,0 a1.00{defaults/default} w1 INSIDE] VARS{"paddingLeft":"space/2","paddingTop":"space/2","paddingRight":"space/2","paddingBottom":"space/2","height":"space/8","strokeTopWeight":"border-width/main","strokeBottomWeight":"border-width/main","strokeLeftWeight":"border-width/main","strokeRightWeight":"border-width/main","fills":["background-2"],"strokes":["defaults/default"]}
+    FRAME "input_icon-text" 8,12 335x24 AL HORIZONTAL gap0 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/0"}
+      FRAME "input_icon" 0,3 24x24 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size HUG/HUG VARS{"itemSpacing":"space/3"}
+        INSTANCE "lock" 0,0 24x24 size FIXED/FIXED clip -> "lock / Style=Outlined" (2242:5807) PROPS{"Style":"Outlined"}
+      FRAME "input_content" 0,0 335x24 AL HORIZONTAL gap10 pad0/8/0/8 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/3","paddingLeft":"space/2","paddingRight":"space/2"}
+        TEXT "input_text" 8,0 319x24 size FILL/HUG op0.50 TEXT{} Onest Regular 16 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "Input" VARS{"fills":["copy/body"],"fontSize":["font-size/text-main"]}
+    INSTANCE "Icon right" 319,12 24x24 HIDDEN size FIXED/FIXED clip -> "keyboard_arrow_down / Style=Outlined" (2242:5801) PROPS{"Style":"Outlined"}
+  FRAME "input_helpers" 0,73 351x21 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 SPACE_BETWEEN/MIN size FIXED/HUG
+    FRAME "input_helper-left" 0,0 351x21 HIDDEN AL HORIZONTAL gap4 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"space/1"}
+      INSTANCE "error_outline" 0,0 20x20 size FIXED/FIXED clip -> "error_outline / Style=Outlined" (2242:5804) PROPS{"Style":"Outlined"}
+      TEXT "input_text" 24,0 327x21 size FILL/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignLEFT fill[solid 185,28,28 a1.00{Colors/Semantic/Error dark}] "Alert / Error message" VARS{"fills":["Colors/Semantic/Error dark"]}
+    FRAME "input_helper-right" 305,0 46x21 HIDDEN AL HORIZONTAL gap0 pad0/0/0/0 MAX/MIN size HUG/HUG
+      TEXT "input_text" -2,0 48x21 size HUG/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignRIGHT fill[solid 0,0,0 a1.00{Copy/body}] "0 / 100" VARS{"fills":["Copy/body"]}
+
+### small=false, state=hover (6267:47995)
+COMPONENT "small=false, state=hover" 20,113 351x73 AL VERTICAL gap4 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"1"}
+  FRAME "input_text" 0,0 351x21 AL HORIZONTAL gap10 pad0/0/0/0 CENTER/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+    TEXT "input_text" 0,0 351x21 size FILL/HUG TEXT{} Onest Bold 14 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "Label" VARS{"fills":["copy/body"],"fontSize":["text-sm"]}
+  FRAME "input_input" 0,25 351x48 AL HORIZONTAL gap10 pad8/8/8/8 SPACE_BETWEEN/CENTER size FILL/FIXED fill[solid 255,255,255 a1.00{background-2}] stroke[solid 37,0,89 a1.00{swatch/brand-500} w1 INSIDE] VARS{"paddingLeft":"space/2","paddingTop":"space/2","paddingRight":"space/2","paddingBottom":"space/2","height":"space/8","strokeTopWeight":"border-width/main","strokeBottomWeight":"border-width/main","strokeLeftWeight":"border-width/main","strokeRightWeight":"border-width/main","fills":["background-2"],"strokes":["swatch/brand-500"]}
+    FRAME "input_icon-text" 8,12 335x24 AL HORIZONTAL gap0 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/0"}
+      FRAME "input_icon" 0,3 24x24 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size HUG/HUG VARS{"itemSpacing":"space/3"}
+        INSTANCE "lock" 0,0 24x24 size FIXED/FIXED clip -> "lock / Style=Outlined" (2242:5807) PROPS{"Style":"Outlined"}
+      FRAME "input_content" 0,0 335x24 AL HORIZONTAL gap10 pad0/8/0/8 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/3","paddingLeft":"space/2","paddingRight":"space/2"}
+        TEXT "input_text" 8,0 319x24 size FILL/HUG op0.50 TEXT{} Onest Regular 16 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "Input" VARS{"fills":["copy/body"],"fontSize":["font-size/text-main"]}
+    INSTANCE "Icon right" 319,12 24x24 HIDDEN size FIXED/FIXED clip -> "keyboard_arrow_down / Style=Outlined" (2242:5801) PROPS{"Style":"Outlined"}
+  FRAME "input_helpers" 0,73 351x21 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 SPACE_BETWEEN/MIN size FIXED/HUG
+    FRAME "input_helper-left" 0,0 351x21 HIDDEN AL HORIZONTAL gap4 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"space/1"}
+      INSTANCE "error_outline" 0,0 20x20 size FIXED/FIXED clip -> "error_outline / Style=Outlined" (2242:5804) PROPS{"Style":"Outlined"}
+      TEXT "input_text" 24,0 327x21 size FILL/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignLEFT fill[solid 185,28,28 a1.00{Colors/Semantic/Error dark}] "Alert / Error message" VARS{"fills":["Colors/Semantic/Error dark"]}
+    FRAME "input_helper-right" 305,0 46x21 HIDDEN AL HORIZONTAL gap0 pad0/0/0/0 MAX/MIN size HUG/HUG
+      TEXT "input_text" -2,0 48x21 size HUG/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignRIGHT fill[solid 0,0,0 a1.00{Copy/body}] "0 / 100" VARS{"fills":["Copy/body"]}
+
+### small=false, state=focus (6267:48011)
+COMPONENT "small=false, state=focus" 20,206 351x73 AL VERTICAL gap4 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"1"}
+  FRAME "input_text" 0,0 351x21 AL HORIZONTAL gap10 pad0/0/0/0 CENTER/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+    TEXT "input_text" 0,0 351x21 size FILL/HUG TEXT{} Onest Bold 14 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "Label" VARS{"fills":["copy/body"],"fontSize":["text-sm"]}
+  FRAME "input_input" 0,25 351x48 AL HORIZONTAL gap10 pad8/8/8/8 SPACE_BETWEEN/CENTER size FILL/FIXED fill[solid 255,255,255 a1.00{background-2}] stroke[solid 37,0,89 a1.00{swatch/brand-500} w2 INSIDE] VARS{"paddingLeft":"space/2","paddingTop":"space/2","paddingRight":"space/2","paddingBottom":"space/2","height":"space/8","fills":["background-2"],"strokes":["swatch/brand-500"]}
+    FRAME "input_icon-text" 8,12 335x24 AL HORIZONTAL gap0 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/0"}
+      FRAME "input_icon" 0,3 24x24 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size HUG/HUG VARS{"itemSpacing":"space/3"}
+        INSTANCE "lock" 0,0 24x24 size FIXED/FIXED clip -> "lock / Style=Outlined" (2242:5807) PROPS{"Style":"Outlined"}
+      FRAME "input_content" 0,0 335x24 AL HORIZONTAL gap10 pad0/8/0/8 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/3","paddingLeft":"space/2","paddingRight":"space/2"}
+        TEXT "input_text" 8,0 319x24 size FILL/HUG op0.50 TEXT{} Onest Regular 16 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "Input" VARS{"fills":["copy/body"],"fontSize":["font-size/text-main"]}
+    INSTANCE "Icon right" 319,12 24x24 HIDDEN size FIXED/FIXED clip -> "keyboard_arrow_down / Style=Outlined" (2242:5801) PROPS{"Style":"Outlined"}
+  FRAME "input_helpers" 0,73 351x21 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 SPACE_BETWEEN/MIN size FIXED/HUG
+    FRAME "input_helper-left" 0,0 351x21 HIDDEN AL HORIZONTAL gap4 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"space/1"}
+      INSTANCE "error_outline" 0,0 20x20 size FIXED/FIXED clip -> "error_outline / Style=Outlined" (2242:5804) PROPS{"Style":"Outlined"}
+      TEXT "input_text" 24,0 327x21 size FILL/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignLEFT fill[solid 185,28,28 a1.00{Colors/Semantic/Error dark}] "Alert / Error message" VARS{"fills":["Colors/Semantic/Error dark"]}
+    FRAME "input_helper-right" 305,0 46x21 HIDDEN AL HORIZONTAL gap0 pad0/0/0/0 MAX/MIN size HUG/HUG
+      TEXT "input_text" -2,0 48x21 size HUG/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignRIGHT fill[solid 0,0,0 a1.00{Copy/body}] "0 / 100" VARS{"fills":["Copy/body"]}
+
+### small=true, state=rest (2242:5846)
+COMPONENT "small=true, state=rest" 20,299 351x57 AL VERTICAL gap4 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"1"}
+  FRAME "input_text" 0,0 351x21 AL HORIZONTAL gap10 pad0/0/0/0 CENTER/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+    TEXT "input_text" 0,0 351x21 size FILL/HUG TEXT{} Onest Bold 14 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "Label" VARS{"fills":["copy/body"],"fontSize":["text-sm"]}
+  FRAME "input_input" 0,25 351x32 AL HORIZONTAL gap10 pad8/2/8/2 SPACE_BETWEEN/CENTER size FILL/FIXED fill[solid 255,255,255 a1.00{background-2}] stroke[solid 0,0,0 a1.00{defaults/default} w1 INSIDE] VARS{"paddingLeft":"0-5","paddingTop":"space/2","paddingRight":"0-5","paddingBottom":"space/2","strokeTopWeight":"border-width/main","strokeBottomWeight":"border-width/main","strokeLeftWeight":"border-width/main","strokeRightWeight":"border-width/main","fills":["background-2"],"strokes":["defaults/default"]}
+    FRAME "input_icon-text" 2,4 347x24 AL HORIZONTAL gap0 pad0/2/0/2 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/0","paddingLeft":"0-5","paddingRight":"0-5"}
+      FRAME "input_icon-left" 2,4 16x16 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size HUG/HUG VARS{"itemSpacing":"space/3"}
+        INSTANCE "lock" 0,0 16x16 size FIXED/FIXED clip -> "lock / Style=Outlined" (2242:5807) PROPS{"Style":"Outlined"}
+      FRAME "input_content" 2,0 343x24 AL HORIZONTAL gap10 pad0/4/0/4 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/3","paddingLeft":"1","paddingRight":"1"}
+        TEXT "input_text" 4,0 335x24 size FILL/HUG op0.50 TEXT{} Onest Regular 16 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "Input" VARS{"fills":["copy/body"],"fontSize":["font-size/text-main"]}
+    INSTANCE "keyboard_arrow_down" 325,4 24x24 HIDDEN size FIXED/FIXED clip -> "keyboard_arrow_down / Style=Outlined" (2242:5801) PROPS{"Style":"Outlined"}
+  FRAME "input_helpers" 0,57 351x21 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 SPACE_BETWEEN/MIN size FIXED/HUG
+    FRAME "input_helper-left" 0,0 351x21 HIDDEN AL HORIZONTAL gap4 pad0/0/0/0 MIN/CENTER size FIXED/HUG VARS{"itemSpacing":"space/1"}
+      INSTANCE "error_outline" 0,0.5 20x20 size FIXED/FIXED clip -> "error_outline / Style=Outlined" (2242:5804) PROPS{"Style":"Outlined"}
+      TEXT "input_text" 24,0 327x21 size FILL/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignLEFT fill[solid 185,28,28 a1.00{Colors/Semantic/Error dark}] "Alert / Error message" VARS{"fills":["Colors/Semantic/Error dark"]}
+    FRAME "input_helper-right" 305,0 46x21 HIDDEN AL HORIZONTAL gap0 pad0/0/0/0 MAX/MIN size HUG/HUG
+      TEXT "input_text" -2,0 48x21 size HUG/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignRIGHT fill[solid 0,0,0 a1.00{Copy/body}] "0 / 100" VARS{"fills":["Copy/body"]}
+
+### small=true, state=hover (6267:48027)
+COMPONENT "small=true, state=hover" 20,376 351x57 AL VERTICAL gap4 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"1"}
+  FRAME "input_text" 0,0 351x21 AL HORIZONTAL gap10 pad0/0/0/0 CENTER/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+    TEXT "input_text" 0,0 351x21 size FILL/HUG TEXT{} Onest Bold 14 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "Label" VARS{"fills":["copy/body"],"fontSize":["text-sm"]}
+  FRAME "input_input" 0,25 351x32 AL HORIZONTAL gap10 pad8/2/8/2 SPACE_BETWEEN/CENTER size FILL/FIXED fill[solid 255,255,255 a1.00{background-2}] stroke[solid 37,0,89 a1.00{swatch/brand-500} w1 INSIDE] VARS{"paddingLeft":"0-5","paddingTop":"space/2","paddingRight":"0-5","paddingBottom":"space/2","strokeTopWeight":"border-width/main","strokeBottomWeight":"border-width/main","strokeLeftWeight":"border-width/main","strokeRightWeight":"border-width/main","fills":["background-2"],"strokes":["swatch/brand-500"]}
+    FRAME "input_icon-text" 2,4 347x24 AL HORIZONTAL gap0 pad0/2/0/2 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/0","paddingLeft":"0-5","paddingRight":"0-5"}
+      FRAME "input_icon-left" 2,4 16x16 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size HUG/HUG VARS{"itemSpacing":"space/3"}
+        INSTANCE "lock" 0,0 16x16 size FIXED/FIXED clip -> "lock / Style=Outlined" (2242:5807) PROPS{"Style":"Outlined"}
+      FRAME "input_content" 2,0 343x24 AL HORIZONTAL gap10 pad0/4/0/4 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/3","paddingLeft":"1","paddingRight":"1"}
+        TEXT "input_text" 4,0 335x24 size FILL/HUG op0.50 TEXT{} Onest Regular 16 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "Input" VARS{"fills":["copy/body"],"fontSize":["font-size/text-main"]}
+    INSTANCE "keyboard_arrow_down" 325,4 24x24 HIDDEN size FIXED/FIXED clip -> "keyboard_arrow_down / Style=Outlined" (2242:5801) PROPS{"Style":"Outlined"}
+  FRAME "input_helpers" 0,57 351x21 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 SPACE_BETWEEN/MIN size FIXED/HUG
+    FRAME "input_helper-left" 0,0 351x21 HIDDEN AL HORIZONTAL gap4 pad0/0/0/0 MIN/CENTER size FIXED/HUG VARS{"itemSpacing":"space/1"}
+      INSTANCE "error_outline" 0,0.5 20x20 size FIXED/FIXED clip -> "error_outline / Style=Outlined" (2242:5804) PROPS{"Style":"Outlined"}
+      TEXT "input_text" 24,0 327x21 size FILL/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignLEFT fill[solid 185,28,28 a1.00{Colors/Semantic/Error dark}] "Alert / Error message" VARS{"fills":["Colors/Semantic/Error dark"]}
+    FRAME "input_helper-right" 305,0 46x21 HIDDEN AL HORIZONTAL gap0 pad0/0/0/0 MAX/MIN size HUG/HUG
+      TEXT "input_text" -2,0 48x21 size HUG/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignRIGHT fill[solid 0,0,0 a1.00{Copy/body}] "0 / 100" VARS{"fills":["Copy/body"]}
+
+### small=true, state=focus (6267:48043)
+COMPONENT "small=true, state=focus" 20,453 351x57 AL VERTICAL gap4 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"1"}
+  FRAME "input_text" 0,0 351x21 AL HORIZONTAL gap10 pad0/0/0/0 CENTER/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+    TEXT "input_text" 0,0 351x21 size FILL/HUG TEXT{} Onest Bold 14 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "Label" VARS{"fills":["copy/body"],"fontSize":["text-sm"]}
+  FRAME "input_input" 0,25 351x32 AL HORIZONTAL gap10 pad8/2/8/2 SPACE_BETWEEN/CENTER size FILL/FIXED fill[solid 255,255,255 a1.00{background-2}] stroke[solid 37,0,89 a1.00{swatch/brand-500} w2 INSIDE] VARS{"paddingLeft":"0-5","paddingTop":"space/2","paddingRight":"0-5","paddingBottom":"space/2","fills":["background-2"],"strokes":["swatch/brand-500"]}
+    FRAME "input_icon-text" 2,4 347x24 AL HORIZONTAL gap0 pad0/2/0/2 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/0","paddingLeft":"0-5","paddingRight":"0-5"}
+      FRAME "input_icon-left" 2,4 16x16 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size HUG/HUG VARS{"itemSpacing":"space/3"}
+        INSTANCE "lock" 0,0 16x16 size FIXED/FIXED clip -> "lock / Style=Outlined" (2242:5807) PROPS{"Style":"Outlined"}
+      FRAME "input_content" 2,0 343x24 AL HORIZONTAL gap10 pad0/4/0/4 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/3","paddingLeft":"1","paddingRight":"1"}
+        TEXT "input_text" 4,0 335x24 size FILL/HUG op0.50 TEXT{} Onest Regular 16 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "Input" VARS{"fills":["copy/body"],"fontSize":["font-size/text-main"]}
+    INSTANCE "keyboard_arrow_down" 325,4 24x24 HIDDEN size FIXED/FIXED clip -> "keyboard_arrow_down / Style=Outlined" (2242:5801) PROPS{"Style":"Outlined"}
+  FRAME "input_helpers" 0,57 351x21 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 SPACE_BETWEEN/MIN size FIXED/HUG
+    FRAME "input_helper-left" 0,0 351x21 HIDDEN AL HORIZONTAL gap4 pad0/0/0/0 MIN/CENTER size FIXED/HUG VARS{"itemSpacing":"space/1"}
+      INSTANCE "error_outline" 0,0.5 20x20 size FIXED/FIXED clip -> "error_outline / Style=Outlined" (2242:5804) PROPS{"Style":"Outlined"}
+      TEXT "input_text" 24,0 327x21 size FILL/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignLEFT fill[solid 185,28,28 a1.00{Colors/Semantic/Error dark}] "Alert / Error message" VARS{"fills":["Colors/Semantic/Error dark"]}
+    FRAME "input_helper-right" 305,0 46x21 HIDDEN AL HORIZONTAL gap0 pad0/0/0/0 MAX/MIN size HUG/HUG
+      TEXT "input_text" -2,0 48x21 size HUG/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignRIGHT fill[solid 0,0,0 a1.00{Copy/body}] "0 / 100" VARS{"fills":["Copy/body"]}
+SET "input-simple" 2314:18529 variants: type=select (2246:5797), type=text (2314:18530)
+
+### type=select (2246:5797)
+COMPONENT "type=select" 20,20 259x63 AL VERTICAL gap0 pad0/0/0/0 MIN/MIN size FIXED/HUG
+  INSTANCE "input" 0,0 259x63 AL VERTICAL gap0 pad0/0/0/0 MIN/MIN size FILL/HUG -> "input / small=false, state=rest" (2242:5830) PROPS{"Icon left":"2242:5807","Icon right":"2242:5801","Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Helper icon":"2242:5804","Show helper":false,"Helper text":"Alert / Error message","Show icon right":true,"Text":"All locations","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+    FRAME "input_text" 0,0 259x15 AL HORIZONTAL gap10 pad0/0/0/0 CENTER/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+      TEXT "input_text" 0,0 259x15 size FILL/HUG TEXT{} Onest SemiBold 12 lh{"unit":"AUTO"} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "location" VARS{"fills":["copy/body"]}
+    FRAME "input_input" 0,15 259x48 AL HORIZONTAL gap10 pad8/8/0/0 SPACE_BETWEEN/CENTER size FILL/FIXED fill[solid 255,255,255 a1.00{background-2}] VARS{"paddingTop":"space/2","paddingRight":"space/2","height":"space/8","strokeTopWeight":"border-width/main","strokeBottomWeight":"border-width/main","strokeLeftWeight":"border-width/main","strokeRightWeight":"border-width/main","fills":["background-2"]}
+      FRAME "input_icon-text" 0,13 227x30 AL HORIZONTAL gap0 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/0"}
+        FRAME "input_icon" 0,3 24x24 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size HUG/HUG VARS{"itemSpacing":"space/3"}
+          INSTANCE "lock" 0,0 24x24 size FIXED/FIXED clip -> "lock / Style=Outlined" (2242:5807) PROPS{"Style":"Outlined"}
+        FRAME "input_content" 0,0 227x30 AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+          TEXT "input_text" 0,0 227x30 size FILL/HUG op0.50 TEXT{Text Large} Onest Regular 20 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "All locations" VARS{"fills":["copy/body"],"fontSize":["font-size/text-main","font-size/text-large"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+      INSTANCE "Icon right" 227,16 24x24 size FIXED/FIXED clip -> "keyboard_arrow_down / Style=Outlined" (2242:5801) PROPS{"Style":"Outlined"}
+    FRAME "input_helpers" 0,73 351x21 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 SPACE_BETWEEN/MIN size FIXED/HUG
+      FRAME "input_helper-left" 0,0 351x21 HIDDEN AL HORIZONTAL gap4 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"space/1"}
+        INSTANCE "error_outline" 0,0 20x20 size FIXED/FIXED clip -> "error_outline / Style=Outlined" (2242:5804) PROPS{"Style":"Outlined"}
+        TEXT "input_text" 24,0 327x21 size FILL/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignLEFT fill[solid 185,28,28 a1.00{Colors/Semantic/Error dark}] "Alert / Error message" VARS{"fills":["Colors/Semantic/Error dark"]}
+      FRAME "input_helper-right" 305,0 46x21 HIDDEN AL HORIZONTAL gap0 pad0/0/0/0 MAX/MIN size HUG/HUG
+        TEXT "input_text" -2,0 48x21 size HUG/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignRIGHT fill[solid 0,0,0 a1.00{Copy/body}] "0 / 100" VARS{"fills":["Copy/body"]}
+
+### type=text (2314:18530)
+COMPONENT "type=text" 20,103 259x67 AL VERTICAL gap8 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"space/2"}
+  INSTANCE "input" 0,0 259x67 AL VERTICAL gap4 pad0/0/0/0 MIN/MIN size FILL/HUG -> "input / small=false, state=rest" (2242:5830) PROPS{"Icon left":"2242:5807","Icon right":"2242:5801","Show counter":false,"Counter":"0 / 100","Show helper icon":true,"Helper icon":"2242:5804","Show helper":false,"Helper text":"Alert / Error message","Show icon right":false,"Text":"","Show icon left":false,"Show Label":true,"small":"false","state":"rest"}
+    FRAME "input_text" 0,0 259x15 AL HORIZONTAL gap10 pad0/0/0/0 CENTER/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+      TEXT "input_text" 0,0 259x15 size FILL/HUG TEXT{} Onest SemiBold 12 lh{"unit":"AUTO"} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "First name" VARS{"fills":["copy/body"]}
+    FRAME "input_input" 0,19 259x48 AL HORIZONTAL gap10 pad8/8/8/12 SPACE_BETWEEN/CENTER size FILL/FIXED r8 fill[solid 255,255,255 a1.00{defaults/surface}] stroke[solid 3,11,27 a0.25{swatch/dark-900-o25} w1 INSIDE] VARS{"paddingTop":"space/2","paddingRight":"space/2","height":"space/8","strokeTopWeight":"border-width/main","strokeBottomWeight":"border-width/main","strokeLeftWeight":"border-width/main","strokeRightWeight":"border-width/main","fills":["defaults/surface"],"strokes":["swatch/dark-900-o25"]}
+      FRAME "input_icon-text" 12,9 239x30 AL HORIZONTAL gap0 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/0"}
+        FRAME "input_icon" 0,3 24x24 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size HUG/HUG VARS{"itemSpacing":"space/3"}
+          INSTANCE "lock" 0,0 24x24 size FIXED/FIXED clip -> "lock / Style=Outlined" (2242:5807) PROPS{"Style":"Outlined"}
+        FRAME "input_content" 0,0 239x30 AL HORIZONTAL gap10 pad0/0/0/0 MIN/CENTER size FILL/HUG VARS{"itemSpacing":"space/3"}
+          TEXT "input_text" 0,0 239x30 size FILL/HUG op0.50 TEXT{Text Large} Onest Regular 20 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 0,0,0 a1.00{copy/body}] "" VARS{"fills":["copy/body"],"fontSize":["font-size/text-main","font-size/text-large"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+      INSTANCE "Icon right" 319,12 24x24 HIDDEN size FIXED/FIXED clip -> "keyboard_arrow_down / Style=Outlined" (2242:5801) PROPS{"Style":"Outlined"}
+    FRAME "input_helpers" 0,73 351x21 HIDDEN AL HORIZONTAL gap10 pad0/0/0/0 SPACE_BETWEEN/MIN size FIXED/HUG
+      FRAME "input_helper-left" 0,0 351x21 HIDDEN AL HORIZONTAL gap4 pad0/0/0/0 MIN/MIN size FIXED/HUG VARS{"itemSpacing":"space/1"}
+        INSTANCE "error_outline" 0,0 20x20 size FIXED/FIXED clip -> "error_outline / Style=Outlined" (2242:5804) PROPS{"Style":"Outlined"}
+        TEXT "input_text" 24,0 327x21 size FILL/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignLEFT fill[solid 185,28,28 a1.00{Colors/Semantic/Error dark}] "Alert / Error message" VARS{"fills":["Colors/Semantic/Error dark"]}
+      FRAME "input_helper-right" 305,0 46x21 HIDDEN AL HORIZONTAL gap0 pad0/0/0/0 MAX/MIN size HUG/HUG
+        TEXT "input_text" -2,0 48x21 size HUG/HUG TEXT{} Onest Regular 14 lh{"unit":"PIXELS","value":21} alignRIGHT fill[solid 0,0,0 a1.00{Copy/body}] "0 / 100" VARS{"fills":["Copy/body"]}
+
+### Contact / Detail item (2314:18715)
+COMPONENT "Contact / Detail item" 18519,7993 292x58 AL VERTICAL gap10 pad0/0/0/0 CENTER/MIN size HUG/HUG VARS{"itemSpacing":"space/3"}
+  TEXT "Email" 0,0 41x18 size HUG/HUG TEXT{Label} Onest Regular 12 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 3,11,27 a1.00{text}] "Email" VARS{"fills":["text"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}
+  TEXT "hello@humain-recruitment.com" 0,28 292x30 size HUG/HUG TEXT{Text Large} Onest Regular 20 lh{"unit":"PERCENT","value":150} alignLEFT fill[solid 3,11,27 a1.00{text}] "hello@humain-recruitment.com" VARS{"fills":["text"],"fontSize":["font-size/text-large"],"fontStyle":["font/primary-regular"],"fontFamily":["font/primary-family"]}

@@ -1,0 +1,32 @@
+# Navbar - Light (2318:19564) 1512x180
+I "Navbar - Light" -> Navbar - Light / type=default (2028:2394) 1512x180 {"type":"default"}
+ I "Sub nav" -> Sub nav (2028:2234) 1384x36 {}
+  I "Sub menu / Assets / Item" -> Sub menu / Assets / Item / state=rest (2028:1939) 48x28 {"state":"rest"}
+   I "Sub menu / Assets / Item" -> Sub menu / Assets / Item / state=rest (2028:1939) 61x28 {"state":"rest"}
+   I "Sub menu / Assets / Item" -> Sub menu / Assets / Item / state=rest (2028:1939) 59x28 {"state":"rest"}
+ I "Nav" -> Nav (2028:2199) 1384x80 {}
+   I "Navbar / Assets / Item" -> Navbar / Assets / Item / active=false, state=rest (2028:2020) 103x32 {"active":"false","state":"rest"}
+    I "Button/Link/Default" -> Button/Link/Default (2028:2014) 103x32 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Expertise"}
+      T Button text [18]: "Expertise"
+     I "expand_more" -> expand_more / Style=Filled (2028:1978) 24x24 {"Style":"Filled"}
+    I "Line" -> Line / type=default (2028:1946) 103x1 {"type":"default"}
+   I "Navbar / Assets / Item" -> Navbar / Assets / Item / active=false, state=rest (2028:2020) 131x32 {"active":"false","state":"rest"}
+    I "Button/Link/Default" -> Button/Link/Default (2028:2014) 131x32 {"Icon right":true,"Icon left":false,"Label":true,"Text":"For business"}
+      T Button text [18]: "For business"
+     I "expand_more" -> expand_more / Style=Filled (2028:1978) 24x24 {"Style":"Filled"}
+    I "Line" -> Line / type=default (2028:1946) 131x1 {"type":"default"}
+   I "Navbar / Assets / Item" -> Navbar / Assets / Item / active=false, state=rest (2028:2020) 58x32 {"active":"false","state":"rest"}
+   I "Navbar / Assets / Item" -> Navbar / Assets / Item / active=false, state=rest (2028:2020) 100x32 {"active":"false","state":"rest"}
+    I "Button/Link/Default" -> Button/Link/Default (2028:2014) 100x32 {"Icon right":true,"Icon left":false,"Label":true,"Text":"About us"}
+      T Button text [18]: "About us"
+     I "expand_more" -> expand_more / Style=Filled (2028:1978) 24x24 {"Style":"Filled"}
+    I "Line" -> Line / type=default (2028:1946) 100x1 {"type":"default"}
+   I "Navbar / Assets / Item" -> Navbar / Assets / Item / active=false, state=rest (2028:2020) 150x32 {"active":"false","state":"rest"}
+    I "Button/Link/Default" -> Button/Link/Default (2028:2014) 150x32 {"Icon right":true,"Icon left":false,"Label":true,"Text":"For candidates"}
+      T Button text [18]: "For candidates"
+     I "expand_more" -> expand_more / Style=Filled (2028:1978) 24x24 {"Style":"Filled"}
+    I "Line" -> Line / type=default (2028:1946) 150x1 {"type":"default"}
+   I "Button" -> Button / type=secondary-white, state=rest (2028:2143) 231x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Request a shortlist","type":"secondary-white","state":"rest"}
+     T button_text [18]: "Request a shortlist"
+    I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+  I "logo" -> logo (2156:4556) 180x29 {}

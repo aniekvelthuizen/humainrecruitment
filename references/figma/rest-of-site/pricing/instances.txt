@@ -1,0 +1,15 @@
+device=desktop | 2236:4780 | 2. Hire an expert | 1512x894
+device=desktop | 2234:4772 | [figma-only] 1. Home A | 1512x894
+device=mobile | 2382:36301 | 1. Home | 402x1302
+state=closed | 2305:39709 | Components | 1384x369
+state=closed | 2305:42794 | Components | 1384x369
+state=open | 2378:35769 | Components | 362x786
+type=default | 2066:5124 | Design components | 440x369
+type=default | 2165:5351 | [figma-only] Frame 575 | 440x369
+type=default | 2165:5350 | [figma-only] Frame 575 | 440x369
+type=default | 2066:5096 | Design components | 440x369
+type=default | 2066:5151 | Design components | 440x369
+type=default | 2165:5352 | [figma-only] Frame 575 | 440x369
+type=variant-2 | 2378:35853 | Design components | 1384x248
+type=variant-2 | 2378:35851 | Design components | 1384x248
+type=variant-2 | 2378:35852 | Design components | 1384x250

@@ -1,0 +1,8 @@
+# Frame 676 (2318:19563) 1512x586
+I "Frame 676" -> Header default / type=default (2277:7347) 1512x586 {"type":"default"}
+   T header-default_text [16]: "Careers · Working at HumAIn"
+   T header-default_title [72]: "Build the future of project recruitment."
+   T header-default_text [20]: "We pair experienced recruiters with a serious engineering team. If you like solving real hiring problems with smart tools and good people, you'll fit right in."
+    I "Button" -> Button / type=primary, state=rest (2028:2123) 234x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"See open positions","type":"primary","state":"rest"}
+      T button_text [18]: "See open positions"
+     I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}

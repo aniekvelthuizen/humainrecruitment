@@ -1,0 +1,140 @@
+# Content - Recruitment process (2263:10690) 1512x4780
+    T What we assess [16]: "What we assess"
+    T The criteria behind the score [60]: "The criteria behind the score"
+    T Every professional in the HumAIn network is assessed against a consistent framework that combines experience, capability, commercial impact and verified performance. [20]: "Every professional in the HumAIn network is assessed against a consistent framework that combines experience, capability, commercial impact and verified performance."
+   I "Step 5" -> Content / Process step / style=glass (2045:11371) 676x533 {"Label":true,"style":"glass"}
+      T step-4_text [16]: "1"
+       T step-4_text [14]: "Criteria 1"
+       T step-4_title [24]: "Delivery Evidence"
+       T step-4_text [18]: "Proof of outcomes on real projects. We look beyond responsibilities and focus on measurable contribution — candidates must demonstrate successful delivery on complex projects, programmes or portfolios with clear evidence of impact."
+       I "Frame 428" -> bullet / type=14 (2028:2716) 628x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Project value and complexity"
+       I "Frame 590" -> bullet / type=14 (2028:2716) 628x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Delivery milestones achieved"
+       I "Frame 591" -> bullet / type=14 (2028:2716) 628x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Programme outcomes"
+       I "Frame 592" -> bullet / type=14 (2028:2716) 628x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Track record of execution"
+   I "Step 6" -> Content / Process step / style=glass (2045:11371) 694x506 {"Label":true,"style":"glass"}
+      T step-4_text [16]: "2"
+       T step-4_text [14]: "Criteria 2"
+       T step-4_title [24]: "Technical Depth"
+       T step-4_text [18]: "Demonstrated expertise within the discipline. Technical knowledge is validated against real-world application, not simply certifications or years of experience."
+       I "Frame 428" -> bullet / type=14 (2028:2716) 646x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Cost Management"
+       I "Frame 590" -> bullet / type=14 (2028:2716) 646x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Planning & Scheduling"
+       I "Frame 591" -> bullet / type=14 (2028:2716) 646x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Project Controls"
+       I "Frame 592" -> bullet / type=14 (2028:2716) 646x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Risk & Performance Management"
+   I "Step 7" -> Content / Process step / style=glass (2045:11371) 694x506 {"Label":true,"style":"glass"}
+      T step-4_text [16]: "3"
+       T step-4_text [14]: "Criteria 3"
+       T step-4_title [24]: "Sector Experience"
+       T step-4_text [18]: "Relevant industry exposure. Specialist industries require specialist knowledge — we assess whether experience aligns with the sectors our clients operate in."
+       I "Frame 428" -> bullet / type=14 (2028:2716) 646x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Oil & Gas"
+       I "Frame 590" -> bullet / type=14 (2028:2716) 646x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Energy & Renewables"
+       I "Frame 591" -> bullet / type=14 (2028:2716) 646x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Infrastructure"
+       I "Frame 592" -> bullet / type=14 (2028:2716) 646x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Industrial & Manufacturing"
+   I "Step 8" -> Content / Process step / style=glass (2045:11371) 694x506 {"Label":true,"style":"glass"}
+      T step-4_text [16]: "4"
+       T step-4_text [14]: "Criteria 4"
+       T step-4_title [24]: "Commercial Exposure"
+       T step-4_text [18]: "Understanding business impact. Professionals are evaluated on their ability to balance delivery performance with commercial objectives and stakeholder expectations."
+       I "Frame 428" -> bullet / type=14 (2028:2716) 646x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Budget ownership"
+       I "Frame 590" -> bullet / type=14 (2028:2716) 646x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Contract management"
+       I "Frame 591" -> bullet / type=14 (2028:2716) 646x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Commercial decision-making"
+       I "Frame 592" -> bullet / type=14 (2028:2716) 646x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Executive stakeholder exposure"
+   I "Step 9" -> Content / Process step / style=glass (2045:11371) 676x506 {"Label":true,"style":"glass"}
+      T step-4_text [16]: "5"
+       T step-4_text [14]: "Criteria 5"
+       T step-4_title [24]: "Leadership & Soft Skills"
+       T step-4_text [18]: "The ability to influence and deliver through people. Technical expertise alone is not enough — we assess communication, leadership, collaboration and decision-making capability."
+       I "Frame 428" -> bullet / type=14 (2028:2716) 628x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Stakeholder management"
+       I "Frame 590" -> bullet / type=14 (2028:2716) 628x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Communication effectiveness"
+       I "Frame 591" -> bullet / type=14 (2028:2716) 628x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Leadership capability"
+       I "Frame 592" -> bullet / type=14 (2028:2716) 628x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Problem solving"
+   I "Step 10" -> Content / Process step / style=glass (2045:11371) 694x479 {"Label":true,"style":"glass"}
+      T step-4_text [16]: "6"
+       T step-4_text [14]: "Criteria 6"
+       T step-4_title [24]: "Availability & Mobility"
+       T step-4_text [18]: "Deployment readiness. The best professional is only valuable if they can realistically support a programme when needed."
+       I "Frame 428" -> bullet / type=14 (2028:2716) 646x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Availability date"
+       I "Frame 590" -> bullet / type=14 (2028:2716) 646x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Contract preference"
+       I "Frame 591" -> bullet / type=14 (2028:2716) 646x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Travel flexibility"
+       I "Frame 592" -> bullet / type=14 (2028:2716) 646x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Geographic mobility"
+   I "Step 11" -> Content / Process step / style=glass (2045:11371) 694x479 {"Label":true,"style":"glass"}
+      T step-4_text [16]: "7"
+       T step-4_text [14]: "Criteria 7"
+       T step-4_title [24]: "Language Capability"
+       T step-4_text [18]: "Effective communication in project environments. We verify working proficiency rather than assumed fluency."
+       I "Frame 428" -> bullet / type=14 (2028:2716) 646x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "English proficiency"
+       I "Frame 590" -> bullet / type=14 (2028:2716) 646x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Local language requirements"
+       I "Frame 591" -> bullet / type=14 (2028:2716) 646x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Client-facing communication"
+       I "Frame 592" -> bullet / type=14 (2028:2716) 646x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "International project readiness"
+   I "Step 12" -> Content / Process step / style=glass (2045:11371) 694x479 {"Label":true,"style":"glass"}
+      T step-4_text [16]: "8"
+       T step-4_text [14]: "Criteria 8"
+       T step-4_title [24]: "References & Validation"
+       T step-4_text [18]: "Independent verification of performance. Every professional is benchmarked against feedback from previous managers, clients and project stakeholders."
+       I "Frame 428" -> bullet / type=14 (2028:2716) 646x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Reference quality"
+       I "Frame 590" -> bullet / type=14 (2028:2716) 646x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Rehire likelihood"
+       I "Frame 591" -> bullet / type=14 (2028:2716) 646x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Peer comparison"
+       I "Frame 592" -> bullet / type=14 (2028:2716) 646x19 {"type":"14"}
+        I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+        T bullet_text [14]: "Consistency of feedback"

@@ -1,0 +1,55 @@
+# Content / Pricing (2382:36301) 402x1302
+I "Content / Pricing" -> content-pricing / device=mobile (2378:35763) 402x1302 {"device":"mobile"}
+  T content-pricing_text [12]: "pricing"
+   T content-pricing_title [30]: "Transparent pricing.  Pick the model that fits."
+   T content-pricing_text [20]: "Most agencies hide their numbers. We don't. Here's what each service costs — and why our AI-driven process makes it 25–30% lower than the market."
+ I "Frame 691" -> Content / Pricing row / state=open (2378:35850) 362x786 {"state":"open"}
+  I "Testimonial 4" -> Content / Pricing card / type=variant-2 (2378:35931) 362x248 {"Show label":false,"type":"variant-2"}
+    T testimonial-3_title [24]: "Permanent"
+    T testimonial-3_title [36]: "From €XX"
+    T testimonial-3_text [14]: " / hour margin"
+    I "bullet" -> bullet / type=14 (2028:2716) 331x19 {"type":"14"}
+     I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+     T bullet_text [14]: "Full search & shortlist"
+    I "Frame 426" -> bullet / type=14 (2028:2716) 331x19 {"type":"14"}
+     I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+     T bullet_text [14]: "AI-sourced + human-vetted"
+    I "Frame 427" -> bullet / type=14 (2028:2716) 331x19 {"type":"14"}
+     I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+     T bullet_text [14]: "Replacement guarantee"
+   I "Button" -> Button / type=secondary-white, state=rest (2028:2143) 166x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"See details","type":"secondary-white","state":"rest"}
+     T button_text [18]: "See details"
+    I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+  I "Testimonial 5" -> Content / Pricing card / type=variant-2 (2378:35931) 362x250 {"Show label":true,"type":"variant-2"}
+    T testimonial-3_title [24]: "Secondment"
+     T testimonial-3_text [16]: "Most chosen"
+    T testimonial-3_title [36]: "€XX"
+    T testimonial-3_text [14]: " / hour margin"
+    I "bullet" -> bullet / type=14 (2028:2716) 331x19 {"type":"14"}
+     I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+     T bullet_text [14]: "Transparent hourly margin"
+    I "Frame 426" -> bullet / type=14 (2028:2716) 331x19 {"type":"14"}
+     I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+     T bullet_text [14]: "Fast deployment"
+    I "Frame 427" -> bullet / type=14 (2028:2716) 331x19 {"type":"14"}
+     I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+     T bullet_text [14]: "Ongoing account contact"
+   I "Button" -> Button / type=primary, state=rest (2028:2123) 166x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"See details","type":"primary","state":"rest"}
+     T button_text [18]: "See details"
+    I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+  I "Testimonial 6" -> Content / Pricing card / type=variant-2 (2378:35931) 362x248 {"Show label":false,"type":"variant-2"}
+    T testimonial-3_title [24]: "Project basis"
+    T testimonial-3_title [36]: "Custom"
+    T testimonial-3_text [14]: " / scope"
+    I "bullet" -> bullet / type=14 (2028:2716) 331x19 {"type":"14"}
+     I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+     T bullet_text [14]: "Scoped delivery team"
+    I "Frame 426" -> bullet / type=14 (2028:2716) 331x19 {"type":"14"}
+     I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+     T bullet_text [14]: "Defined milestones"
+    I "Frame 427" -> bullet / type=14 (2028:2716) 331x19 {"type":"14"}
+     I "check_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24 2" -> Google icons / type=check (2028:2712) 19x19 {"type":"check"}
+     T bullet_text [14]: "Fixed, agreed pricing"
+   I "Button" -> Button / type=secondary-white, state=rest (2028:2143) 166x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"See details","type":"secondary-white","state":"rest"}
+     T button_text [18]: "See details"
+    I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}

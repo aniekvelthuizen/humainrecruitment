@@ -1,0 +1,5 @@
+01 | Header / Opportunities | 2339:28429 | 1512x720 | main: Header / Opportunities / device=desktop
+02 | Navbar - Light | 2239:5611 | 1512x180 | main: Navbar - Light / type=default
+03 | Frame 665 | 2400:45118 | 1512x1624 | main: dynamic-opportunities / device=desktop
+04 | Frame 664 | 2246:6236 | 1512x612 | main: content-cta / device=desktop
+05 | Frame 594 | 2246:6237 | 1512x550 | main: Footer / device=desktop-compact

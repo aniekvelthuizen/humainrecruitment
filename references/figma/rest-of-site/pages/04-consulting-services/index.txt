@@ -1,0 +1,7 @@
+01 | Frame 676 | 2277:7349 | 1512x586 | main: Header default / type=light
+02 | Navbar - Light | 2277:7364 | 1512x180 | main: Navbar - Light / type=default
+03 | Content - Recruitment process | 2277:7818 | 1512x1420 | main: 
+04 | Frame 678 | 2444:34062 | 1512x1239 | main: Content / Grid of cards / type=light-small
+05 | Content / Content block | 2283:9535 | 1512x942 | main: Content / Content block / content-location=true, small=false, list=true
+06 | Frame 654 | 2283:9617 | 1512x612 | main: content-cta / device=desktop
+07 | Frame 655 | 2283:9618 | 1512x550 | main: Footer / device=desktop-compact

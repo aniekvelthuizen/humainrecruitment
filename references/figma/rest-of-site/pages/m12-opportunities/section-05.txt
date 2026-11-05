@@ -1,0 +1,37 @@
+# Frame 594 (2400:46399) 402x766
+I "Frame 594" -> Footer / device=mobile (2382:37421) 402x766 {"device":"mobile"}
+     I "Footer / Assets / Column title" -> Footer / Assets / Column title (2078:7066) 191x30 {}
+      T footer-assets-column-title_title [20]: "HumAIn Recruitment"
+      T footer_text [20]: "Your extended network in international project recruitment. Human core, AI engine."
+     I "Footer item mobile / For business" -> Footer item mobile / For business / type=closed (2382:37525) 362x64 {"type":"closed"}
+      I "Navbar mobile / Assets / Item" -> Navbar mobile / Assets / Item / active=false (2353:29037) 362x64 {"active":"false"}
+       I "Button/Link/Default" -> Button/Link/Default (2028:2014) 362x32 {"Icon right":true,"Icon left":false,"Label":true,"Text":"For business"}
+         T Button text [20]: "For business"
+        I "expand_more" -> expand_more / Style=Filled (2028:1978) 24x24 {"Style":"Filled"}
+       I "Line" -> Line / type=default (2028:1946) 362x1 {"type":"default"}
+     I "Footer item mobile / Company" -> Footer item mobile / Company / type=closed (2382:37613) 362x64 {"type":"closed"}
+      I "Navbar mobile / Assets / Item" -> Navbar mobile / Assets / Item / active=false (2353:29037) 362x64 {"active":"false"}
+       I "Button/Link/Default" -> Button/Link/Default (2028:2014) 362x32 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Company"}
+         T Button text [20]: "Company"
+        I "expand_more" -> expand_more / Style=Filled (2028:1978) 24x24 {"Style":"Filled"}
+       I "Line" -> Line / type=default (2028:1946) 362x1 {"type":"default"}
+     I "Footer item mobile / For talent" -> Footer item mobile / For talent / type=closed (2382:37698) 362x64 {"type":"closed"}
+      I "Navbar mobile / Assets / Item" -> Navbar mobile / Assets / Item / active=false (2353:29037) 362x64 {"active":"false"}
+       I "Button/Link/Default" -> Button/Link/Default (2028:2014) 362x32 {"Icon right":true,"Icon left":false,"Label":true,"Text":"For Talent"}
+         T Button text [20]: "For Talent"
+        I "expand_more" -> expand_more / Style=Filled (2028:1978) 24x24 {"Style":"Filled"}
+       I "Line" -> Line / type=default (2028:1946) 362x1 {"type":"default"}
+  I "logo" -> logo (2156:4556) 362x58 {}
+     I "Footer / Assets / Item" -> Footer / Assets / Item / state=rest (2078:7060) 216x28 {"state":"rest"}
+      T footer-assets-item_text [16]: "© 2026 HumAIn Recruitment"
+      I "Line" -> Line / Property 1=Default (2078:6487) 216x1 {"Property 1":"Default"}
+      I "Footer / Assets / Item" -> Footer / Assets / Item / state=rest (2078:7060) 135x28 {"state":"rest"}
+       T footer-assets-item_text [16]: "Privacy & Cookies"
+       I "Line" -> Line / Property 1=Default (2078:6487) 135x1 {"Property 1":"Default"}
+      I "Footer / Assets / Item" -> Footer / Assets / Item / state=rest (2078:7060) 121x28 {"state":"rest"}
+       T footer-assets-item_text [16]: "Privacy settings"
+       I "Line" -> Line / Property 1=Default (2078:6487) 121x1 {"Property 1":"Default"}
+      I "Footer / Assets / Item" -> Footer / Assets / Item / state=rest (2078:7060) 77x28 {"state":"rest"}
+       T footer-assets-item_text [16]: "Disclaimer"
+       I "Line" -> Line / Property 1=Default (2078:6487) 77x1 {"Property 1":"Default"}
+     I "Icon / LinkedIn" -> Icon / LinkedIn (2081:4514) 24x24 {}

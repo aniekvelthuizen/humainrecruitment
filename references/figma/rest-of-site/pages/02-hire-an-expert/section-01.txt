@@ -1,0 +1,29 @@
+# Frame 654 (2323:32964) 1512x982
+I "Frame 654" -> Header / Hire an expert (2248:6459) 1512x982 {}
+  T header-hire-an-expert_text [16]: "Hiring · For Business"
+  T header-hire-an-expert_title [72]: "Hire a project-controls expert."
+  T header-hire-an-expert_text [20]: "We go beyond polished resumes to understand how people truly perform in real-world situations. By focusing on demonstrated behavior and early validation by experienced professionals, we uncover genuine capability and not just stated experience. "
+   I "Button" -> Button / type=primary, state=rest (2028:2123) 168x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Start hiring","type":"primary","state":"rest"}
+     T button_text [18]: "Start hiring"
+    I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+   I "Button" -> Button / type=secondary-white, state=rest (2028:2143) 268x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"How we quilify experts","type":"secondary-white","state":"rest"}
+     T button_text [18]: "How we quilify experts"
+    I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+  I "Frame 431" -> Card / Expert match / type=default (2032:406) 440x114 {"type":"default"}
+     IMG Majoor_Image_Wonen-1-1536x1024 1 696528718ee3764954bacb9ca28159324af0e671.png 78x98
+      T Willem Jan Velthuizen [16]: "Emery Dokidis"
+      T Previously worked at [8]: "Previously worked at"
+      T Match score [10]: "Match \nscore"
+      T 85% [24]: "85%"
+   I "Frame 432" -> Card / Expert match / type=default (2032:406) 440x114 {"type":"default"}
+      IMG Majoor_Image_Wonen-1-1536x1024 1 82727969427f6f953aa00f12cee85c78814b3714.jpg 78x98
+       T Willem Jan Velthuizen [16]: "Willem Jan Velthuizen"
+       T Previously worked at [8]: "Previously worked at"
+       T Match score [10]: "Match \nscore"
+       T 85% [24]: "85%"
+  I "Frame 433" -> Card / Expert match / type=default (2032:406) 440x114 {"type":"default"}
+     IMG Majoor_Image_Wonen-1-1536x1024 1 95d37eb078cedb118fa33f51b10d93aa20b3d16c.png 78x98
+      T Willem Jan Velthuizen [16]: "Chance Dorwart"
+      T Previously worked at [8]: "Previously worked at"
+      T Match score [10]: "Match \nscore"
+      T 85% [24]: "85%"

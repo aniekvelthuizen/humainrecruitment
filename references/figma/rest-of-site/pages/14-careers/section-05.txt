@@ -1,0 +1,11 @@
+# Frame 664 (2318:20970) 1512x612
+I "Frame 664" -> content-cta / device=desktop (2236:5447) 1512x612 {"device":"desktop"}
+   IMG content-cta_img 76a4149fd50154ab11ea334dd8669590c6ee529c.png 692x420
+    T content-cta_title [48]: "Send an open application."
+    T content-cta_text [20]: "Tell us what you'd want to do here — we're always glad to meet good people."
+     I "Button" -> Button / type=primary, state=rest (2028:2123) 216x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Open application","type":"primary","state":"rest"}
+       T button_text [18]: "Open application"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}
+     I "Button" -> Button / type=secondary-white, state=rest (2028:2143) 177x48 {"Icon right":true,"Icon left":false,"Label":true,"Text":"Get in touch","type":"secondary-white","state":"rest"}
+       T button_text [18]: "Get in touch"
+      I "chevron_right" -> chevron_right / Style=Filled (2028:1998) 24x24 {"Style":"Filled"}

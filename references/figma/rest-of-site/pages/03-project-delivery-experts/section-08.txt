@@ -1,0 +1,62 @@
+# Content / Grid of cards (2444:33918) 1512x2642
+I "Content / Grid of cards" -> Content / Grid of cards / type=dark-large (2444:33917) 1512x2642 {"type":"dark-large"}
+   T content-grid-of-cards_text [16]: "How We Build The Top 5%"
+   T content-grid-of-cards_title [60]: "The HumAIn Expert  Qualification Framework"
+   T content-grid-of-cards_text [20]: "Every professional follows the same evidence-based assessment process. At each stage, candidates are validated, benchmarked, and challenged against increasingly demanding criteria before entering the HumAIn Expert Network."
+  I "Prop 3" -> Card / Process stage (2256:11517) 440x208 {"Label":true,"Sub label":true,"Details":false}
+     I "Google icons" -> Google icons / type=cv-submission (2263:6755) 48x48 {"type":"cv-submission"}
+     T accept / reject [12]: "accept / reject"
+    T stage 1 [12]: "stage 1"
+    T Application & CV Submission [24]: "Application & CV Submission"
+    T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Initial Eligibility Check"
+  I "Prop 4" -> Card / Process stage (2256:11517) 440x208 {"Label":true,"Sub label":true,"Details":false}
+     I "Google icons" -> Google icons / type=person-search-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2045:11310) 48x48 {"type":"person-search-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T accept / reject [12]: "top 30%"
+    T stage 1 [12]: "stage 2"
+    T Application & CV Submission [24]: "Profile Screening"
+    T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Career Quality & Relevance"
+  I "Prop 5" -> Card / Process stage (2256:11517) 440x208 {"Label":true,"Sub label":true,"Details":false}
+     I "Google icons" -> Google icons / type=fact-check-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2263:7129) 48x48 {"type":"fact-check-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T accept / reject [12]: "top 20%"
+    T stage 1 [12]: "stage 3"
+    T Application & CV Submission [24]: "Experience Validation"
+    T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Verify Project Claims"
+   I "Prop 6" -> Card / Process stage (2256:11517) 440x238 {"Label":true,"Sub label":true,"Details":false}
+      I "Google icons" -> Google icons / type=computer-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2263:7132) 48x48 {"type":"computer-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+      T accept / reject [12]: "scored"
+     T stage 1 [12]: "stage 4"
+     T Application & CV Submission [24]: "Technical Assessment"
+     T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Professional Competence"
+   I "Prop 7" -> Card / Process stage (2256:11517) 440x238 {"Label":true,"Sub label":true,"Details":false}
+      I "Google icons" -> Google icons / type=avg-time-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2263:7135) 48x48 {"type":"avg-time-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+      T accept / reject [12]: "scored"
+     T stage 1 [12]: "stage 5"
+     T Application & CV Submission [24]: "Behaviour & Performance Assessment"
+     T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Delivery Mindset"
+   I "Prop 9" -> Card / Process stage (2256:11517) 440x238 {"Label":true,"Sub label":true,"Details":false}
+      I "Google icons" -> Google icons / type=call-log-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2263:7138) 48x48 {"type":"call-log-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+      T accept / reject [12]: "scored"
+     T stage 1 [12]: "stage 6"
+     T Application & CV Submission [24]: "Reference Validation"
+     T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Independent Verification"
+  I "Prop 10" -> Card / Process stage (2256:11517) 440x208 {"Label":true,"Sub label":true,"Details":false}
+     I "Google icons" -> Google icons / type=action-key-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2263:7144) 48x48 {"type":"action-key-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T accept / reject [12]: "approved"
+    T stage 1 [12]: "stage 7"
+    T Application & CV Submission [24]: "Expert Review Panel"
+    T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Human Specialist Approval"
+  I "Prop 11" -> Card / Process stage (2256:11517) 440x208 {"Label":true,"Sub label":true,"Details":false}
+     I "Google icons" -> Google icons / type=insert-chart-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2263:10558) 48x48 {"type":"insert-chart-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T accept / reject [12]: "ranked"
+    T stage 1 [12]: "stage 8"
+    T Application & CV Submission [24]: "Benchmarking & Ranking"
+    T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Peer Comparison"
+  I "Prop 12" -> Card / Process stage (2256:11517) 440x208 {"Label":true,"Sub label":true,"Details":false}
+     I "Google icons" -> Google icons / type=check-circle-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2263:7147) 48x48 {"type":"check-circle-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T accept / reject [12]: "certified"
+    T stage 1 [12]: "stage 9"
+    T Application & CV Submission [24]: "Accepted into HumAIn Network"
+    T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Certified HumAIn Expert"
+   T content-grid-of-cards_text [128]: "Only proven performers  reach clients"
+     IMG content-grid-of-cards_img 7b6008ae919f48dbd48980b8e872ffcf39912bc8.png 440x440
+  T content-grid-of-cards_text [48]: "Our process is designed to identify professionals with demonstrated delivery capability, not simply impressive CVs. Every HumAIn Expert has been evaluated, validated, benchmarked, and approved through a consistent qualification framework before joining the network."

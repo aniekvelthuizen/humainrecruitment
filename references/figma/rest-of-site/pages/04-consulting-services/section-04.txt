@@ -1,0 +1,41 @@
+# Frame 678 (2444:34062) 1512x1239
+I "Frame 678" -> Content / Grid of cards / type=light-small (2444:34061) 1512x1239 {"type":"light-small"}
+   T content-grid-of-cards_text [16]: "Where an Expert can support"
+   T content-grid-of-cards_title [60]: "The HumAIn Expert  Qualification Framework"
+   T content-grid-of-cards_text [20]: "Every professional follows the same evidence-based assessment process. At each stage, candidates are validated, benchmarked, and challenged against increasingly demanding criteria before entering the HumAIn Expert Network."
+   I "Prop 3" -> Card / Process stage (2256:11517) 440x198 {"Label":false,"Sub label":false,"Details":false}
+      I "Google icons" -> Google icons / type=monitoring-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2283:9220) 48x48 {"type":"monitoring-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T Application & CV Submission [24]: "Cost Control & Forecasting"
+     T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Rebuild forecasts, restore cost visibility and run variance analysis."
+   I "Prop 4" -> Card / Process stage (2256:11517) 440x198 {"Label":false,"Sub label":false,"Details":false}
+      I "Google icons" -> Google icons / type=planning-scheduling (2063:4452) 48x48 {"type":"planning-scheduling"}
+     T Application & CV Submission [24]: "Planning & Scheduling"
+     T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Set up or recover integrated schedules, baselines and critical path."
+   I "Prop 5" -> Card / Process stage (2256:11517) 440x198 {"Label":false,"Sub label":false,"Details":false}
+      I "Google icons" -> Google icons / type=schema-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2283:9219) 48x48 {"type":"schema-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T Application & CV Submission [24]: "Project Controls Strategy"
+     T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Governance frameworks, reporting structures and delivery standards."
+   I "Prop 6" -> Card / Process stage (2256:11517) 440x198 {"Label":false,"Sub label":false,"Details":false}
+      I "Google icons" -> Google icons / type=gpp-maybe-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1-1 (2283:9218) 48x48 {"type":"gpp-maybe-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1-1"}
+     T Application & CV Submission [24]: "Risk & Performance"
+     T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Structured assessment of risk and performance gaps."
+   I "Prop 7" -> Card / Process stage (2256:11517) 440x198 {"Label":false,"Sub label":false,"Details":false}
+      I "Google icons" -> Google icons / type=dashboard-2-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2283:9217) 48x48 {"type":"dashboard-2-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T Application & CV Submission [24]: "Reporting & Dashboards"
+     T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Executive-level reporting and real-time dashboards."
+   I "Prop 9" -> Card / Process stage (2256:11517) 440x198 {"Label":false,"Sub label":false,"Details":false}
+      I "Google icons" -> Google icons / type=analytics-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2283:9216) 48x48 {"type":"analytics-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T Application & CV Submission [24]: "Earned Value Management"
+     T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "EVM setup and assurance to keep delivery measurable."
+   I "Prop 10" -> Card / Process stage (2256:11517) 440x198 {"Label":false,"Sub label":false,"Details":false}
+      I "Google icons" -> Google icons / type=published-with-changes-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2283:9215) 48x48 {"type":"published-with-changes-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T Application & CV Submission [24]: "Baseline & Change Control"
+     T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Establish defensible baselines and disciplined change management."
+   I "Prop 11" -> Card / Process stage (2256:11517) 440x198 {"Label":false,"Sub label":false,"Details":false}
+      I "Google icons" -> Google icons / type=handshake-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2283:9214) 48x48 {"type":"handshake-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T Application & CV Submission [24]: "Interface & Contract Support"
+     T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "Manage interfaces and contractual reporting across parties."
+   I "Prop 12" -> Card / Process stage (2256:11517) 440x198 {"Label":false,"Sub label":false,"Details":false}
+      I "Google icons" -> Google icons / type=manage-accounts-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1 (2283:9213) 48x48 {"type":"manage-accounts-24dp-e3-e3-e3-fill0-wght100-grad0-opsz24-1"}
+     T Application & CV Submission [24]: "Interim Controls Leadership"
+     T Basic eligibility check. Candidate submits CV, LinkedIn profile, contact details, location & availability and desired contract type. [16]: "A senior lead embedded for the duration you need."
