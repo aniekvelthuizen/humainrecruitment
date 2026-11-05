@@ -42,3 +42,7 @@ Only what the style API has no route for: hiding empty parts (`:empty`, `:has`),
 
 ## 2026-11-05 — Motion
 `data-hero-reveal`: back and content `title`; tags, text, meta `text`; actions `actions`; visual `card`; row `row`. A page with a Page Header needs `Global | Custom Code` at the top of `page_wrap`.
+
+## 2026-11-05 — Placed on every page (unit 1b; Aniek Velthuizen, via Claude)
+Page Header is first in `page_main` on all 13 pages, `Global | Custom Code` on top of `page_wrap`; starter Section `d7c64e88-…` removed, also on Privacy. Title / Title Muted split where Figma's colour changes. Title Break on only for Hire, Project Delivery Experts, About and Rates: the rest wrap at the split by themselves (to check once published). Hire's split falls inside «project-controls», so the DOM text reads «project- controls».
+Opportunities template was empty: built the same shell. Its `page_main` is a plain `main` block, not the page slot: a slot refuses a tag change and renders as `div`. Unit 14 can build straight into it.

@@ -78,3 +78,36 @@ Done by Aniek (via Claude). Variant **Chevron Down** (`cd0e8853-3f95-2575-c389-7
 | Variant | Figma source | Asset |
 |---|---|---|
 | Chevron Down | `chevron_right / Style=Filled` (`2028:1998`), rotated 90° | `6ae4cb40b5e689b963686b7f_icon-chevron-down.svg` |
+
+## 2026-11-05 — Icons for the rest of the site (unit 3b)
+Done by Aniek Velthuizen, via Claude. 17 new variants, each made with `create_variant` and overriding only `mask-image`. Source: `references/figma/rest-of-site/assets/icons/`, uploaded unchanged (`create_asset` + S3 201). Every SVG is one path in a 24 × 24 viewBox with no background or wrapper rectangle, so none needed cleaning. Their fill stays `#E3E3E3`, which does not matter for a mask.
+Names say what the icon is. Where the Figma name did not, the name differs: `planning-scheduling` is Calendar, `gpp-maybe` is Shield Alert, `published-with-changes` is Sync Check, `insert-chart` is Chart.
+
+| Variant | Figma source | Asset |
+|---|---|---|
+| Action Key (`84e598c7-6832-850b-1028-0cd6415c869c`) | `type=action-key…` (`2263:7144`) | `6aec833a025946a8d8311203_icon-action-key.svg` |
+| Analytics (`6a70c918-73b3-0c83-425d-6f1ddae80864`) | `type=analytics…` (`2283:9216`) | `6aec833a025946a8d8311214_icon-analytics.svg` |
+| Average Time (`370ccc48-2c6e-2eb1-cccd-8273c0738c0a`) | `type=avg-time…` (`2263:7135`) | `6aec833a82030326fd50ebf9_icon-average-time.svg` |
+| Calendar (`f19952dd-3787-f72f-5dfe-3fcc61829f74`) | `type=planning-scheduling` (`2063:4452`) | `6aec833cf283763e628ba43a_icon-calendar.svg` |
+| Call Log (`1b18e523-fa4d-603f-e391-0f37aa24a11f`) | `type=call-log…` (`2263:7138`) | `6aec833a82030326fd50ec14_icon-call-log.svg` |
+| Chart (`dde5db74-3e48-edba-9bf0-65bb4999a25e`) | `type=insert-chart…` (`2263:10558`) | `6aec833c419f3c72bf391c97_icon-chart.svg` |
+| Computer (`1fb940e7-29c9-d74a-0abb-072b369343ec`) | `type=computer…` (`2263:7132`) | `6aec833b16bd480e2ba323c8_icon-computer.svg` |
+| Dashboard (`a9b99cbf-28a9-d487-6469-3c796e3a338a`) | `type=dashboard-2…` (`2283:9217`) | `6aec833b79d214bd23777e2c_icon-dashboard.svg` |
+| Fact Check (`e3e38c1c-7672-e52a-11d0-30127e7eb6d1`) | `type=fact-check…` (`2263:7129`) | `6aec833b46d2708b3c1edd8a_icon-fact-check.svg` |
+| Language (`77a6450e-45a3-b0dc-a439-a688500fe469`) | `type=language…` (`2318:21493`) | `6aec7fb079409e9312b27e0e_icon-language.svg` (existing asset, reused) |
+| Manage Accounts (`eb99c531-2985-d34b-503c-9b41b2284c0a`) | `type=manage-accounts…` (`2283:9213`) | `6aec833c025946a8d83112a5_icon-manage-accounts.svg` |
+| Monitoring (`2d5f6dac-a35b-780e-c94d-794b3c41d7cb`) | `type=monitoring…` (`2283:9220`) | `6aec833cbf839a4c28262e79_icon-monitoring.svg` |
+| Playlist Check (`5558f7e3-a62d-16c0-5c31-c47c49e282cb`) | `type=playlist-add-check-circle…` (`2263:7141`) | `6aec833c16bd480e2ba32450_icon-playlist-check.svg` |
+| Schema (`6bea5e8b-8bf5-01ff-3e77-184338d16893`) | `type=schema…` (`2283:9219`) | `6aec833c79db353c43ce301f_icon-schema.svg` |
+| Shield Alert (`876cde28-ce09-e3b8-4ab2-87478d92c211`) | `type=gpp-maybe…` (`2283:9218`) and `type=shield` (`2063:4451`) | `6aec833b419f3c72bf391c7b_icon-shield-alert.svg` |
+| Sync Check (`b9b3fc80-783e-7e8e-3aed-65d4543500ca`) | `type=published-with-changes…` (`2283:9215`) | `6aec833c79db353c43ce300e_icon-sync-check.svg` |
+| Table (`ccd741fb-8624-79c2-af98-e0ac4317af05`) | `type=table…` (`2287:10200`) | `6aec833c025946a8d83112c1_icon-table.svg` |
+
+Skipped because the same glyph is already in the set:
+- `cost-control-forecasting` (`2063:4453`) is the existing **Euro**: same path, exported at 32 instead of 24 (coordinates × 0.75).
+- `shield` and `gpp-maybe` export to byte-identical SVGs, so both use **Shield Alert** and there is no separate Shield variant.
+- `list-alt-check` is **List Check**, `schedule…` is **Schedule Outline**, `project-controls-strategy` is **Project Controls**. `check`, `location`, `school`, `cv-submission`, `person-search`, `person-check`, `person-shield`, `check-circle`, `handshake`, `outbound`, `assignment` and `timer` use the variant of that name.
+
+Not added:
+- `percent` (`2045:11309`): no SVG in the export. Only use: Home mobile frame, `Content / 4 UBRS` ("25–30% lower fees").
+- `dashboards` (`2063:4450`): no SVG in the export. Only use: Home mobile `Content / Mobile` type=services, which the plan does not build.
