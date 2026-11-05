@@ -9,7 +9,7 @@ Props: Content Eyebrow, Title, Text · Layout Space Top.
 
 ## 2026-11-05 — The list
 Cases Grid List (to be made in the Designer): `cases-grid_cms` › `cases-grid_list` › `cases-grid_item` › Card Profile **Case**. Source Cases, sort Order ascending, no filter.
-Bound: Badge Text = `sector`, Image = `image`, Image Alt = `image-alt`. **Open: Title and Text are not bound** (rich-text props, plain-text fields; see `team-grid.md`). List instance before the Designer pass: `062cdea9-e356-d59d-5f3f-c9c50e63a208`, on Clients in `page_wrap`, right after `page_main`.
+Bound: Badge Text = `sector`, Image = `image`, Image Alt = `image-alt`. Title and Text are bound since 2026-11-05: Card titles are plain text, see `cards.md`. Final list component: **Cases Grid Items**. List instance before the Designer pass: `062cdea9-e356-d59d-5f3f-c9c50e63a208`, on Clients in `page_wrap`, right after `page_main`.
 
 ## 2026-11-05 — Card Profile, Case only
 As the unit brief allows, set on variant Case: `card_profile_header` and `card_profile_text` `max-width: 15.6875rem` (Figma 251 in a 440 card), `card_profile_badge` border `swatch/light-100-o50` (Figma 50 %, was 20 %). Role and Person are unchanged. The Case card on Example Components follows.

@@ -59,3 +59,6 @@ Variant · Content: Title, Note, Button Text · Contact Details: Email, Phone, O
 
 ## 2026-11-05 — Copy not in Figma
 Select options come from `wireframes/contact.html` and `wireframes/submit-resume.html`; Discipline uses the list in `decisions/cms.md` so form and filters agree. Figma shows «A company looking to hire» under Discipline: a copy slip, not used. Success and error messages are Webflow's defaults. Required: everything except Contact's Phone and Resume's «(optional)» field; selects always have a value.
+
+## 2026-11-05 — CV name and allowed types set (Aniek Velthuizen, via Claude)
+Name retyped in the Designer, allowed types Custom `.pdf, .doc, .docx`, on this form and on Opportunity Detail's. Retyping rewrites the input's ID, so it was set back (`file` here, `cv` there), so `label for` still resolves. Not published yet: `name` and `accept` to check in the published HTML.

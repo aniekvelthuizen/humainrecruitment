@@ -55,6 +55,6 @@ Opportunities: filter instance `722aba49-7aad-037d-32ba-0fd594ae5b98` in Row of 
 ## 2026-11-05 — Open
 - **Sort:** the API refuses Created On (`created-on`, `createdOn`, `Created On`, `created_on`: "Unknown field"). Designer step.
 - **Card link:** the API refuses a Collection page on a link prop. Designer step.
-- **Card title is not bound:** Card Opportunity's Title is a rich-text prop and Name is plain text, as in `team-grid.md`. Until the card changes every card reads "Project Controls Manager". Search still finds the real name through `data-name`.
+- **Card title is bound** since 2026-11-05: Card titles are plain text, see `cards.md`. Final list component: **Opportunity List Items**.
 - **Copy not in Figma, for the owner:** "No roles match your search", "Try another keyword or clear the filters to see all open roles.", "Clear filters", "No open roles right now."
 - **Search field without chevron:** Figma draws a select chevron on it, but it is a text field with no list. On the owner's list.

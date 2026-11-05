@@ -48,3 +48,6 @@ The card's extra height is mostly the labels: 76 here against 67. The published 
 Sticky: the card stops at 80 from the top and ends 96 above the section bottom. No sideways scroll at 1512, 1100, 992, 800, 402, 320. With all four sections removed the section is 944 and the form stays on the right, with an empty left column.
 At 402 the section is 2056 (Figma 1978), with labels and the upload text as the difference: "Drop your CV here or browse" takes two lines because the shared class keeps 32 padding (box 218, Figma 186).
 A card taller than the window minus 80 shows its bottom only when the section ends.
+
+## 2026-11-05 — Upload as Form Section; error rules global (Aniek Velthuizen, via Claude)
+The three field `:user-invalid` rules left this embed: `Global | Custom Code` holds them. Added under `[data-opportunity-detail]`, the same as Form Section's embed: input fills the box (`width/height: 100%` `!important`), 2 px focus outline on the upload's `:has(label:focus-visible)`, ✕ 44 × 44, `min-height` 11.75rem stays once a file is chosen. The upload's own red border stays here. Not published yet.

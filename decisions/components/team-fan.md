@@ -10,7 +10,7 @@ Props: Content Eyebrow, Title, Title Muted, Text · Layout Space Top (default `n
 
 ## 2026-11-05 — The list
 Team Fan List (to be made in the Designer): `team-fan_cms` › `team-fan_list` › `team-fan_item` › Card Profile **Role** (base). Source Team, filter `group` equals Discipline (`db1632ef…`), sort Order ascending, **limit 9**, the most the embed positions.
-Bound: Image = `photo`, Image Alt = `photo-alt`. **Open: Title and Text are not bound** (rich-text props, plain-text fields; see `team-grid.md`). List instance before the Designer pass: `1dd4ecd2-f204-edd1-ff87-e4068685852d`, on Project Controls in `page_wrap`, right after `page_main`.
+Bound: Image = `photo`, Image Alt = `photo-alt`. Title and Text are bound since 2026-11-05: Card titles are plain text, see `cards.md`. Final list component: **Team Fan Items**. List instance before the Designer pass: `1dd4ecd2-f204-edd1-ff87-e4068685852d`, on Project Controls in `page_wrap`, right after `page_main`.
 
 ## 2026-11-05 — The fan is CSS, from the card's place in the list
 Measured from the tree and the PNG, per step out from the centre: rotate 5°, then 10°; centre moves 366.4 then 738 sideways; 17.85 then 68.8 down. Written as one curve with `t` = steps from the centre: `translate(t × 23.0625rem, t² × 1.075rem) rotate(t × 5deg)`. Left of centre leans left (Figma's positive rotation is counter-clockwise).

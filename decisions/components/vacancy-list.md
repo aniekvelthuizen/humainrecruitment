@@ -20,6 +20,6 @@ No phone frame for Careers. One column ≤ 991 as Opportunity Row, `section-spac
 At 1512: cards x 64 / 536 / 1008, y 349, 440 × 388 (Figma 385, known from `cards.md`), section 929 (Figma 926). No sideways scroll at 1512, 1100, 992, 800, 402, 320.
 
 ## 2026-11-05 — Open
-- **Title and Text are not bound.** Card Opportunity's Title and Text are rich-text props, and `name` and `summary` are plain text; `get_bindable_sources` offers only the rich-text fields. Until the card changes, every card reads "Project Controls Manager" with no summary. The same recommendation as Unit 13: plain-text props on the card, as Card Expert on 2026-11-01. The card is not this unit's.
+- **Title and Text are bound** since 2026-11-05: Card titles are plain text, see `cards.md`. Final list component: **Vacancy List Items**.
 - **Card link:** Designer step, as `opportunity-list.md`.
 - **Sort:** Created On is refused by the API; the Designer step gives Figma's order.
