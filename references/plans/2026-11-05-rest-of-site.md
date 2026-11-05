@@ -1,6 +1,6 @@
 # Plan — Rest of the site (all remaining sections and pages) — 2026-11-05
 
-Aniek Velthuizen with Claude. **Status: phase 0 done 2026-11-05; waiting for the owner's go for phase 1. Nothing built on the site yet.**
+Aniek Velthuizen with Claude. **Status: owner's go 2026-11-05; phase 1 running.**
 
 ## In short
 
@@ -147,7 +147,7 @@ About 35–40 agents: 14 builders, 4 page composers, about 18 reviewers, fixers 
 | 2 | Pages without mobile frame | No mobile design | Mobile headings per site rule, reflow per build skill; list what was decided |
 | 3 | Photos | Originals up to 3 MB; `sips` here cannot write WebP | JPEG quality 80 at 2× display width, PNG only for transparency; existing assets untouched |
 | 4 | Team Fan, others | Figma photos carry a Getty watermark | Used on staging as placeholders; **must be replaced before go-live**. Goes on the owner's final list |
-| 5 | Footer | `device=desktop` (852 high) is on no page; all use the compact one, which is built | Not built unless the owner asks; reported at the go |
+| 5 | Footer | `device=desktop` (852 high) is on no page; all use the compact one, which is built | Not built: owner, 2026-11-05, the client did not want it |
 | 6 | Copy | Typos («oppertunities», «quilify»), lorem, «€XX», «Name» | Typos fixed and listed; placeholders kept as in Figma and listed |
 | 7 | CMS templates | Webflow makes a template page per collection; only Opportunities has a design | Set the others to draft if the API allows, otherwise queue |
 

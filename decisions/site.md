@@ -112,3 +112,15 @@ Update (same day): after the owner re-pointed it, the **claude.ai Webflow connec
 
 ## 2026-11-02 — Duplicating a variant copies unrelated variant-scoped CSS
 Seen (CTA session, re-check reviewer): `duplicate_variant` on Clickable (Focus Ring Outside → Focus Ring Theme `95904e04-…`) published ~80 `:where(.w-variant-95904e04…)` rules on 59 classes of other components (cta-split, footer, hero-experts, sticky-steps, split-content …), some already stale. Only `clickable_link` / `clickable_btn` carry that class, so nothing renders differently. Left in place; clear them in the Designer if the stylesheet size ever matters. Next time create the variant with `create_variant` and set only its own styles.
+
+## 2026-11-05 — Rest of the site as orchestrated subagents
+Owner (Aniek), via Claude: build all remaining components and pages in one run. Plan: `references/plans/2026-11-05-rest-of-site.md`; agent rules: `references/plans/2026-11-05-agent-brief.md`.
+Seen: `webflow-devkit:builder` only gets the local `webflow` connector, which answers 404 here, and has no ToolSearch. `general-purpose` agents do reach the site through the claude.ai connector and can load the write tools. So every agent is general-purpose and reads `agents/builder.md` or `agents/reviewer.md` itself.
+Choice: agents build and check; only the main session publishes, opens the Designer and edits `log.md` and this file.
+
+## 2026-11-05 — Scope calls (owner)
+- All components in Figma's `Components` section and all pages get built, also `Dynamic / Open roles` and `Content / Values`, which no page uses (they wait on Example Components).
+- The tabbed parts of the old homepage stay out (owner, 2026-11-02). The large footer (`device=desktop`) stays out: the client did not want it.
+- CMS: Opportunities, Cases, Rates, FAQ, Team, so the client can fill them; fields may change when Bullhorn comes.
+- Motion stays a separate pass over finished pages.
+
