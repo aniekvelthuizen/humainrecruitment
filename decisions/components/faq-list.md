@@ -21,16 +21,16 @@ Figma: closed 98, open 174, 16 from question row to answer. The button's lower 3
 ## 2026-11-05 — A question without an answer is not listed
 Collection List on FAQ (`6aec7e08d367294edf22387c`), sort `order` ascending, filter `answer` is set, all in one write. Item: Accordion Item Outline, Heading = `name`, Paragraph = `answer`. List `faq-list_items`, empty state `faq-list_empty` (`display: none`).
 Why the filter: a row that opens on nothing looks broken, and the kit warns that an empty bound source can show a nested default. Accordion Item's default is Lorem ipsum; changing that default touches its instances on Example Components. The filter needs no code and no Designer step, and a question appears the moment it gets an answer.
-Consequence: only one question shows until the other answers are in the CMS (see the unit report).
+Consequence: a question shows once it has an answer. All five show on staging (audit `references/audit/2026-11-05-phase-4.md`).
 
-## 2026-11-05 — Measured (local simulation: published CSS, published accordion script, these rules; five answers from Figma)
+## 2026-11-05 — Measured (staging, audit `references/audit/2026-11-05-phase-4.md`; the List and Icon rows only in the local simulation)
 | Where | Figma | Built |
 |---|---|---|
 | List | 300, 197, 912 wide | same |
 | Rows | 174, 98 × 4, gap 8 | same |
 | Section | 987 | 987 |
 | Icon | 1155, 32 × 32 | same |
-Read in the simulation: first open at load; click opens and closes the previous; second click closes; Enter and Space on a focused question toggle it; Tab reaches the next with a 2 px focus outline; arrow hidden; lines plus and minus; with one answer it still opens and closes. No script errors. No sideways scroll at 1512, 1100, 800, 402, 320.
+On staging: all five questions with answers, only the first open at load; click opens one and closes the previous; second click closes; Enter and Space toggle; Tab shows a 2 px outline, no ring after a mouse click; plus and minus work, arrow hidden. No sideways scroll at 1512, 1280, 992, 768, 402, 320.
 
 ## 2026-11-05 — Known
 - Lumos' first-paint rule `.accordion_item:nth-child(1)` matches every item while they still sit in their own `w-dyn-item`, so all answers can be open until `DOMContentLoaded`. Only in the first moments, and the block is far below the fold on Rates. Not changed: it is Lumos' own embed.

@@ -17,10 +17,10 @@ Not changed: the pill is 36 high, Figma 34 (Figma's padding plus an inside strok
 
 ## 2026-11-05 — Grid and spacing
 Three columns `minmax(0, 1fr)`, gap `space/7`. 768–991 two columns, and a lone last card takes the whole row (embed, the style API has no `:last-child:nth-child(odd)`; same as Pricing Row). ≤ 767 one column, gap `space/5` (no design).
-Header to cards in Figma is 51: `u-container` gap 48 + `cases-grid_cms` margin-top 0.1875rem. Top `section-space/main`, bottom `section-space/large`, `main` ≤ 991, as Figma. **Space Top** default `main`, also `large`, `none`.
+Header to cards in Figma is 51: `u-container` gap 48 + `cases-grid_cms` **padding-top** 0.1875rem. Not margin: Lumos' trim rule sets it to 0 since the Designer pass, as in `team-grid.md`. Top `section-space/main`, bottom `section-space/large`, `main` ≤ 991, as Figma. **Space Top** default `main`, also `large`, `none`.
 
-## 2026-11-05 — Measured (local simulation: published CSS + these rules; nothing published yet)
-1512: section 947 (Figma 947), cards x 64 / 536 / 1008, y 296, 440 × 459; in a card pill y 215 (Figma 217), title y 261, text y 331, both 251 wide (= Figma); pill border `rgba(255,255,255,.5)`. No sideways scroll at 2560, 1512, 1100, 992, 800, 402, 320. The simulation filled in the card's Title and Text by hand.
+## 2026-11-05 — Measured (local simulation: published page + padding-top; not published yet)
+1512: section 947 (Figma 947), first card y 296, 440 wide (staging before this fix, audit `references/audit/2026-11-05-phase-4.md`: section 944, y 293). Columns on staging: three at 992 and up, 2 + 1 at 991, one at 767; no sideways scroll at 1512, 1280, 992, 991, 768, 767, 402, 320. In a card, from the first simulation: pill y 215 (Figma 217), title y 261, text y 331, both 251 wide (= Figma).
 
 ## 2026-11-05 — Getty watermark
 All three photos carry it (plan, conflict 4; `decisions/cms.md`). Replace before go-live.

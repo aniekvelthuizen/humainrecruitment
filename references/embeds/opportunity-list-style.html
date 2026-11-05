@@ -6,6 +6,7 @@ html:not(.w-mod-js) .opportunity-list_filters { display: none; }
 .opportunity-list_form select.form_field { padding-right: 2rem; }
 .opportunity-list_form .form_field:not(:hover, :focus) { border-color: transparent; }
 .opportunity-list_form select.form_field:has(option:first-child:checked) { color: var(--swatch--dark-900-o50); }
+.opportunity-list_form .form_select_icon { transform: translateY(.25rem); }
 @media screen and (min-width: 992px) {
   .opportunity-list_form > .opportunity-list_line:nth-last-child(2) { display: none; }
 }
@@ -14,6 +15,7 @@ html:not(.w-mod-js) .opportunity-list_filters { display: none; }
   .opportunity-list_form .form_field { font-size: var(--_typography---font-size--text-main); }
 }
 @media screen and (max-width: 991px) {
+  .opportunity-list_toggle .button_main_wrap { min-height: 2.75rem; margin-block: -.375rem; padding-block: .375rem; }
   .opportunity-list_field { margin-bottom: .5rem; }
   .opportunity-list_line { margin-bottom: 1.25rem; }
   .opportunity-list_filters:not([data-open]) .opportunity-list_field:first-child { grid-column: 1; margin-bottom: 1rem; }
@@ -37,4 +39,5 @@ html:not(.w-mod-js) .opportunity-list_filters { display: none; }
 html.w-mod-js:not([data-opportunity-list-ready]) .opportunity-list_list > :nth-child(n+10) { display: none; }
 .opportunity-list_item[hidden] { display: none; }
 .opportunity-list_empty[data-active], .opportunity-list_more[data-active] { display: flex; }
+.opportunity-list_results:has([data-opportunity-list-empty][data-active]) .opportunity-list_cms { display: none; }
 </style>

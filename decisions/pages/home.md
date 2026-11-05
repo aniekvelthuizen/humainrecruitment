@@ -34,3 +34,13 @@ Page now (Services session placed Spotlight Grid the same day): `page_main` › 
 ## 2026-11-02 — «Testimonials» after Expertise
 Plan: `references/plans/2026-11-02-home-testimonials.md`. Figma `Content / Testimonials` (`2710:48620`), block 6 on 1. Home B. Built as **Spotlight Grid › Reviews** (`decisions/components/spotlight-grid.md`) with Card Testimonial × 3. Placed by appending to `page_main` and re-appending Split Content #2 and CTA Split; Split Content #2 Space Top none → large (it now follows a grey section).
 Page now: `page_main` › Hero Experts · Stagger Cards · Sticky Steps · Split Content #1 · Spotlight Grid · **Spotlight Grid (Reviews)** · Split Content #2 · CTA Split · then Footer.
+
+## 2026-11-05 — Last two blocks, page complete (Aniek Velthuizen, via Claude)
+Plan: `references/plans/2026-11-05-rest-of-site.md`. Figma `2710:57363` and `2710:57450`. Not published yet.
+Page now: `page_main` › Hero Experts · Stagger Cards · Sticky Steps · Split Content #1 · Spotlight Grid · Spotlight Grid (Reviews) · **Sticky Steps Plain** · **Stagger Cards Plain (3 UBRS)** · Split Content #2 · CTA Split · then Footer.
+- **Sticky Steps Plain** (`6c7402b5-5a44-8854-9d15-ef3ed9a21649`): Nav Colour light, Space Top medium, List Align end, three Process Steps with list off. «Learn more» → `/how-it-works`. Title split where Figma's colour changes: «From requirement» / «to shortlist in days.».
+- **Order:** the API refuses an instance as anchor, so 3 UBRS, Split Content #2 and CTA Split were re-appended to `page_main` in that order. Their ids and props are unchanged.
+- **Button Text:** emptied on the nine Card Primary instances with no button in Figma (Glass ×3, Process ×3, Engagement ×3). Their published HTML had an empty `card_primary_button`. The six Discipline cards keep «View», as Figma draws it.
+- **Placeholders kept as Figma:** the lorem text in Sticky Steps Plain, Split Content #2 and the two quotes (hero, Split Content #1).
+- **Open, not changed (the approved props stay as they are):** Split Content #2 is still Space Top `large`, set when it followed the grey Reviews. It now follows white 3 UBRS, which has 192 at its bottom, so the gap is 384 and the block 835 high. Figma has 192 and 643, which is Space Top `none`.
+- **Open, not changed:** «Request a shortlist» in the hero and in CTA Split goes to `/hire-an-expert` (`decisions/components/cta-split.md`); the link list of this run says `/contact`.

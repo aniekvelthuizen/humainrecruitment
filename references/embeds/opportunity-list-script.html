@@ -4,6 +4,7 @@
 (function () {
   var PAGE_SIZE = 9;
   var SELECTS = ['location', 'discipline', 'type'];
+  var SEARCHED = '.card_opportunity_tag, .card_opportunity_title, .card_opportunity_meta_item';
 
   function norm(value) {
     return (value || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
@@ -28,9 +29,7 @@
     var cards = [].map.call(document.querySelectorAll('[data-opportunity-list-item]'), function (el) {
       return {
         el: el,
-        text: norm([el.textContent, el.getAttribute('data-name')].concat(SELECTS.map(function (name) {
-          return el.getAttribute('data-' + name);
-        })).join(' '))
+        text: norm([].map.call(el.querySelectorAll(SEARCHED), function (part) { return part.textContent; }).join(' '))
       };
     });
     var matches = [];
@@ -111,6 +110,8 @@
       if (search) search.focus();
     });
 
+    clickable(bar && bar.querySelector('.opportunity-list_submit'), apply);
+
     clickable(more, function () {
       var first = matches[shown];
       shown = Math.min(shown + PAGE_SIZE, matches.length);
@@ -120,6 +121,7 @@
     });
 
     if (form) {
+      /* Guard: the form has no submit button, but a lone text field can still submit it. */
       form.addEventListener('submit', function (event) {
         event.preventDefault();
         event.stopPropagation();
@@ -130,6 +132,11 @@
         search.addEventListener('input', function () {
           clearTimeout(timer);
           timer = setTimeout(apply, 200);
+        });
+        search.addEventListener('keydown', function (event) {
+          if (event.key !== 'Enter' || event.isComposing) return;
+          event.preventDefault();
+          apply();
         });
       }
     }

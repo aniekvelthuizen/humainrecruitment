@@ -57,3 +57,9 @@ Hire an Expert: instance `667ca13b-cf34-960f-be86-3d238e6c5e21`, end of `page_ma
 - **Muted title:** `swatch/light-100-o50`, as Stage Slider and Figma; opacity removed.
 - **Hidden default text:** nothing to do on these cards. Text and List Title are already empty in Card Primary, Badge is off on the Outline cards.
 Simulated locally, both pages, 320–1512, with the middle button added by hand: lists and buttons level per row, button 24 from the bottom (20 on phones), nothing out of the card, no sideways scroll, label clear of the title. 1512 unchanged (card 389). Not yet seen published; hover and focus to test on staging.
+
+## 2026-11-05 — Secondary fills white, in this embed (Aniek Velthuizen, via Claude)
+Pricing Outline's Secondary gets a white background and a dark label and chevron when the card is hovered or has focus within. In this embed, on `.card_primary_group:hover` and `:focus-within`, with the Theme's `button-secondary-white` hover colours. No blend mode, no pseudo-elements, no `!important`. The button's own `transition: all .2s` carries it, and the label and chevron follow through `currentColor`.
+Why here: the route in `cards.md` (unit 3c) never published. A variant-scoped `::before` or `::after` publishes on this site as `.x:after:where()`, which matches nothing, so the fill never showed. **Do not use variant pseudo-elements on this site.**
+Label is now `#030b1b`, as a normal Secondary's hover (the old route's deviation `#000` is gone). The computed colours of the button do change, so a check can read them.
+Simulated on /pricing and /hire-an-expert at 1512, /pricing at 402, published page + this rule: rest transparent and white; hover and keyboard focus `#fff` and `rgb(3,11,27)` on label and chevron; halfway at 80 ms. Not published yet. Only inside Pricing Row: the two standalone test cards on Example Components keep the lift only.

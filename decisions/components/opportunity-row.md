@@ -1,6 +1,6 @@
 # Opportunity Row (`Opportunity Row`, group Sections)
 
-Plan: `references/plans/2026-11-05-rest-of-site.md`, unit 14. Figma export: `references/figma/rest-of-site/opportunity-more/` (`dynamic-opportunities-2`, `dynamic-open-roles`). Built by Aniek Velthuizen, via Claude. Not yet seen on staging: checked by API read-back and a local simulation.
+Plan: `references/plans/2026-11-05-rest-of-site.md`, unit 14. Figma export: `references/figma/rest-of-site/opportunity-more/` (`dynamic-opportunities-2`, `dynamic-open-roles`). Built by Aniek Velthuizen, via Claude. Seen on staging: audit `references/audit/2026-11-05-phase-4.md`.
 Component **`aa587329-ad45-62fd-3f18-bae5c3fe5a28`**.
 
 ## 2026-11-05 — One component, two variants
@@ -18,11 +18,11 @@ Both built on their page, because a list cannot be set up inside a definition: `
 Spacing per the mobile frames: section `section-space/main`, one column of cards ≤ 991 as the brief asks, so at 768–991 a card is wide (728 at 800). ≤ 767: Similar header to cards `space/6`, gap between cards `space/7`; Open Roles `space/8` and `space/5` (combo `opportunity-row_list.is-open-roles`, because a variant does not reach a list in a slot). Eyebrow Label on phones.
 Title stays at the site's H1 size (36 at 402); Figma's Open Roles phone frame draws 30. Site rule "one mobile heading system" wins.
 
-## 2026-11-05 — Measured (local simulation: published CSS + these rules, cards from Example Components; nothing published yet)
-At 1512 Similar: section 926, cards x 64 / 536 / 1008, y 349, 440 × 385, title 75, eyebrow 24, all equal to Figma. No sideways scroll at 1512, 1100, 992, 800, 402, 320. The simulated cards had no link, so they render without button and corner; card height on phones is not measured here (unit 13: 261 with a link). The Open Roles button was not rendered in the simulation.
+## 2026-11-05 — Measured (local simulation before publishing, then staging, audit `references/audit/2026-11-05-phase-4.md`)
+At 1512 Similar: section 926, cards x 64 / 536 / 1008, y 349, 440 × 385, title 75, eyebrow 24, all equal to Figma. No sideways scroll at 1512, 1100, 992, 800, 402, 320. Simulation only: those numbers, with cards that had no link. Staging: Similar shows 3 cards, without the current role or internal roles, on two roles; Open Roles 3 featured public roles, button to `/opportunities`, stacked at 402 and right-aligned from 768. No sideways scroll at 1512, 1280, 992, 768, 402, 320. Card height on phones not remeasured (unit 13: 261 with a link).
 
 ## 2026-11-05 — Open
-- **Card link:** as `opportunity-list.md`. Card title and text are bound since 2026-11-05 (Card titles are plain text, see `cards.md`).
+- **Card link:** done in the Designer, see below; links real on staging. Card title and text are bound since 2026-11-05 (Card titles are plain text, see `cards.md`).
 - **No match:** when no other item shares the discipline, the list is empty and hidden, but the header stays above nothing. A list's count cannot drive a condition.
 
 ## 2026-11-05 — Similar stays a plain list in the slot (Aniek Velthuizen, via Claude; on the owner's list)
