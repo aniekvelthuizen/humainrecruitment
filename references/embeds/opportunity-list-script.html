@@ -1,0 +1,145 @@
+<script>
+/* Opportunity List: filters the CMS cards in the browser. No library.
+   Contract: decisions/components/opportunity-list.md. Without JavaScript no card is ever hidden. */
+(function () {
+  var PAGE_SIZE = 9;
+  var SELECTS = ['location', 'discipline', 'type'];
+
+  function norm(value) {
+    return (value || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
+  }
+
+  function clickable(holder, handler) {
+    var el = holder && holder.querySelector('button, a');
+    if (el) el.addEventListener('click', function (event) { event.preventDefault(); handler(el); });
+    return el;
+  }
+
+  function init() {
+    document.documentElement.setAttribute('data-opportunity-list-ready', '');
+
+    var bar = document.querySelector('[data-opportunity-list-filters]');
+    var form = bar && bar.querySelector('form');
+    var search = form && form.elements.search;
+    var selects = SELECTS.map(function (name) { return form && form.elements[name]; }).filter(Boolean);
+    var count = document.querySelector('[data-opportunity-list-count]');
+    var empty = document.querySelector('[data-opportunity-list-empty]');
+    var more = document.querySelector('[data-opportunity-list-more]');
+    var cards = [].map.call(document.querySelectorAll('[data-opportunity-list-item]'), function (el) {
+      return {
+        el: el,
+        text: norm([el.textContent, el.getAttribute('data-name')].concat(SELECTS.map(function (name) {
+          return el.getAttribute('data-' + name);
+        })).join(' '))
+      };
+    });
+    var matches = [];
+    var shown = 0;
+    var timer;
+
+    function matchesFilters(card) {
+      var terms = norm(search && search.value).split(/\s+/);
+      return terms.every(function (term) { return card.text.indexOf(term) !== -1; }) &&
+        selects.every(function (select) {
+          return select.selectedIndex < 1 || norm(card.el.getAttribute('data-' + select.name)) === norm(select.value);
+        });
+    }
+
+    function render() {
+      cards.forEach(function (card) { card.el.hidden = true; });
+      matches.slice(0, shown).forEach(function (card) { card.el.hidden = false; });
+      if (count) {
+        count.textContent = matches.length + ' open ' + (matches.length === 1 ? 'role' : 'roles') + ' · sorted by newest';
+      }
+      if (empty) empty.toggleAttribute('data-active', cards.length > 0 && matches.length === 0);
+      if (more) more.toggleAttribute('data-active', shown < matches.length);
+    }
+
+    function filter() {
+      matches = cards.filter(matchesFilters);
+      shown = Math.min(PAGE_SIZE, matches.length);
+      render();
+    }
+
+    function syncUrl() {
+      var url = new URL(window.location.href);
+      if (search && search.value.trim()) url.searchParams.set(search.name, search.value.trim());
+      else if (search) url.searchParams.delete(search.name);
+      selects.forEach(function (select) {
+        if (select.selectedIndex > 0) url.searchParams.set(select.name, select.value);
+        else url.searchParams.delete(select.name);
+      });
+      window.history.replaceState(window.history.state, '', url);
+    }
+
+    function apply() {
+      clearTimeout(timer);
+      filter();
+      syncUrl();
+    }
+
+    function readUrl() {
+      var params = new URLSearchParams(window.location.search);
+      if (search) search.value = params.get(search.name) || '';
+      selects.forEach(function (select) {
+        var wanted = norm(params.get(select.name));
+        select.selectedIndex = Math.max(0, [].findIndex.call(select.options, function (option, index) {
+          return index > 0 && wanted && norm(option.value) === wanted;
+        }));
+      });
+    }
+
+    function setOpen(open) {
+      if (!bar) return;
+      bar.toggleAttribute('data-open', open);
+      if (!toggleButton) return;
+      var text = open ? 'Hide filters' : 'Show all filters';
+      var label = toggleButton.parentNode.parentNode.querySelector('[data-button] > :first-child');
+      toggleButton.setAttribute('aria-expanded', String(open));
+      toggleButton.setAttribute('aria-label', text);
+      if (label) label.textContent = text;
+    }
+
+    var toggleButton = clickable(bar && bar.querySelector('[data-opportunity-list-toggle]'), function () {
+      setOpen(!bar.hasAttribute('data-open'));
+    });
+
+    clickable(empty && empty.querySelector('[data-opportunity-list-clear]'), function () {
+      if (search) search.value = '';
+      selects.forEach(function (select) { select.selectedIndex = 0; });
+      apply();
+      if (search) search.focus();
+    });
+
+    clickable(more, function () {
+      var first = matches[shown];
+      shown = Math.min(shown + PAGE_SIZE, matches.length);
+      render();
+      var link = first && first.el.querySelector('a, button');
+      if (link) link.focus({ preventScroll: true });
+    });
+
+    if (form) {
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        apply();
+      });
+      form.addEventListener('change', apply);
+      if (search) {
+        search.addEventListener('input', function () {
+          clearTimeout(timer);
+          timer = setTimeout(apply, 200);
+        });
+      }
+    }
+
+    readUrl();
+    setOpen(selects.some(function (select) { return select.selectedIndex > 0; }));
+    filter();
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+</script>

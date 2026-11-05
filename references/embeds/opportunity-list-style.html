@@ -1,0 +1,40 @@
+<!-- Embed 1: inside opportunity-list_filters -->
+<style>
+html:not(.w-mod-js) .opportunity-list_filters { display: none; }
+.opportunity-list_form .form_label_text { margin-bottom: 0; }
+.opportunity-list_form .form_field { flex: none; width: calc(100% + .75rem); margin-left: -.75rem; padding-top: .5rem; padding-right: .5rem; text-overflow: ellipsis; }
+.opportunity-list_form select.form_field { padding-right: 2rem; }
+.opportunity-list_form .form_field:not(:hover, :focus) { border-color: transparent; }
+.opportunity-list_form select.form_field:has(option:first-child:checked) { color: var(--swatch--dark-900-o50); }
+@media screen and (min-width: 992px) {
+  .opportunity-list_form > .opportunity-list_line:nth-last-child(2) { display: none; }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .opportunity-list_form { column-gap: 1rem; }
+  .opportunity-list_form .form_field { font-size: var(--_typography---font-size--text-main); }
+}
+@media screen and (max-width: 991px) {
+  .opportunity-list_field { margin-bottom: .5rem; }
+  .opportunity-list_line { margin-bottom: 1.25rem; }
+  .opportunity-list_filters:not([data-open]) .opportunity-list_field:first-child { grid-column: 1; margin-bottom: 1rem; }
+  .opportunity-list_filters:not([data-open]) .opportunity-list_line:nth-child(2) { margin-bottom: 1rem; }
+  .opportunity-list_filters:not([data-open]) .opportunity-list_field:not(:first-child),
+  .opportunity-list_filters:not([data-open]) .opportunity-list_line:not(:nth-child(2)) { display: none; }
+  .opportunity-list_filters:not([data-open]) .opportunity-list_submit { grid-column: 2; grid-row: 1; margin-bottom: 1rem; }
+  .opportunity-list_filters:not([data-open]) .opportunity-list_toggle { grid-column: 1 / -1; }
+  .opportunity-list_filters:not([data-open]) .opportunity-list_submit .button_main_wrap { width: 3rem; height: 3rem; min-height: 3rem; }
+  .opportunity-list_filters:not([data-open]) .opportunity-list_submit .button_main_element { padding: 0; }
+  .opportunity-list_filters:not([data-open]) .opportunity-list_submit .button_main_text { display: none; }
+  .opportunity-list_filters:not([data-open]) .opportunity-list_submit .icon_set_wrap {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath d='M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath d='M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z'/%3E%3C/svg%3E");
+  }
+}
+</style>
+
+<!-- Embed 2: inside opportunity-list_results -->
+<style>
+html.w-mod-js:not([data-opportunity-list-ready]) .opportunity-list_list > :nth-child(n+10) { display: none; }
+.opportunity-list_item[hidden] { display: none; }
+.opportunity-list_empty[data-active], .opportunity-list_more[data-active] { display: flex; }
+</style>

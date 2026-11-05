@@ -21,6 +21,11 @@ Rest: border `swatch/dark-900-o25`, white, placeholder `dark-900-o50`, radius an
 Written in the embed under `[data-form-section]`, because `form_field` is shared and not this unit's. **Other forms on the site do not get this look**; see the report.
 Field text is 20 as Figma; ≤ 1199 it is 16, so `you@company.com` fits a half-width field.
 
+## 2026-11-05 — Unit 10b: field look moved to the shared classes (Aniek Velthuizen, via Claude)
+Replaces the entry above. Rest, hover, focus, placeholder, label, no star, select and textarea sizes now sit on `form_field`, `form_field.is-textarea`, new `form_field.is-select`, `form_label_text`, new `form_label_required` (on the star span in Form Label Text), so every Lumos Form field gets them: units 13 and 14, Example Components, Password. Fixed dark text on `form_field` and `form_select_wrap`: the field is always white, and on a dark section inherited text would be white on white.
+Kept in the embed: 16 px at 992–1199 (no Webflow breakpoint there; ≤ 991 is on the class), and the error state: `:user-invalid` is no class state in the API or the Designer. Literal: `outline-width` .125rem (= `focus/width`; the API refuses the variable).
+Compared with the published /contact and /submit-resume in a local simulation at 1512, 1100, 800, 402: no differences.
+
 ## 2026-11-05 — Error state
 Figma has no error state on `input`, only a hidden helper line (`Colors/Semantic/Error dark`, 14/21, icon, «Alert / Error message»). Built with `:user-invalid`, so nothing turns red before the visitor has touched the field: border and label in that colour, plus a line under the field. The browser's own validation bubble still explains on submit.
 The colour is the literal `#b91c1c`: the site has no variable for it. The line's text «Please check this field» is a placeholder for the owner; no icon.
