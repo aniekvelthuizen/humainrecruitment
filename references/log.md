@@ -340,3 +340,8 @@
 ## 2026-11-12 — SEO titles and descriptions, static pages — Aniek Velthuizen with Claude
 - Owner request after spotting «Website Name» in the tab. 14 public static pages: title + description from the page's own copy, Open Graph "Same as SEO" (`bulk_update_pages`). Record: `decisions/site.md` › SEO.
 - Published to staging 1×. `seo-check.mjs`: all 14 titles ≤ 60 and descriptions 120–160, no placeholders, no duplicates; remaining errors are only «no og:image» (not done) and the Opportunities items (no description, no suffix, duplicate titles — CMS SEO fields needed).
+
+## 2026-11-12 — Home «The risk»: card reveal and moving icons — Aniek Velthuizen with Claude
+- Owner feedback: cards rise subtly one by one; clock keeps turning, route arrow and crosses animate, loupe sways. Record: `decisions/motion.md` › 2026-11-12.
+- Stagger Cards: + style embed `396ecf23-…`, + script embed `2f7ccac8-…` (sources `references/embeds/stagger-cards-motion-*.html`). Runtime attributes only (`data-stagger-motion`, `data-stagger-in`, `data-stagger-paused`, `data-icon-motion`, `data-icon-part`); no Designer attributes added. Revert: remove both embeds.
+- Tested locally (patched staging HTML), then published to staging 2× (second: dash gap fix for two specks before the route draws in). `stagger-motion-check.mjs` at 1440 and 402: cards 0 → 1 in ~0.8 s each, 0.15 s apart; list height unchanged; route drawn by ~1.3 s; loops pause out of view; reduced motion = static and visible; console clean.
