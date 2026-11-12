@@ -2,7 +2,7 @@
 /* Glass 3D — the glass ring and bar pictures become real 3D (Three.js), decisions/motion.md › Glass 3D.
    Built by Aniek Velthuizen with Claude, 2026-11-12. Source: references/embeds/glass-3d-script.html.
    Which pictures: an <img> whose file is in MODELS, or any <img data-glass-3d="donut|bars">.
-   The picture stays as poster until the first 3D frame, then cross-fades; it also stays when
+   The picture is hidden while the 3D loads and the 3D fades in; the picture stays (or comes back) when
    WebGL or the CDN fails, with reduced motion, in the Designer and without IntersectionObserver. */
 (() => {
   const MODELS = { '6aecbf15e512f468a8790720': 'donut', '6aec8809a21c0ac23d61166d': 'bars' };
@@ -10,6 +10,16 @@
   const de = document.documentElement;
   if (de.classList.contains('wf-design-mode') || !('IntersectionObserver' in window) ||
       matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  // No poster flash (owner): from first paint the pictures are hidden while the 3D loads. This embed sits
+  // at the top of page_wrap, so the gate is set before the pictures are parsed. A picture comes back
+  // (data-glass-poster) when its 3D fails, or when it is still not drawn 6 s after it came near the view.
+  const PICS = Object.keys(MODELS).map(k => `img[src*="${k}"]`).concat('img[data-glass-3d]').join(',');
+  const gate = document.createElement('style');
+  gate.textContent = `html[data-glass-gate] :is(${PICS}):not([data-glass-poster]) { opacity: 0 !important; }`;
+  document.head.appendChild(gate);
+  de.setAttribute('data-glass-gate', '');
+  const showPoster = (img) => { img.dataset.glassPoster = ''; };
 
   let lib;
   const load = () => lib || (lib = Promise.all([
@@ -28,7 +38,9 @@
     const io = new IntersectionObserver(([e]) => {
       if (!e.isIntersecting) return;
       io.disconnect();
-      load().then(m => mount(img, kind, m)).catch(err => console.warn('Glass 3D: poster kept', err));
+      const guard = setTimeout(() => showPoster(img), 6000);
+      load().then(m => mount(img, kind, m, () => clearTimeout(guard)))
+        .catch(err => { showPoster(img); console.warn('Glass 3D: poster kept', err); });
     }, { rootMargin: '600px 0px' });
     io.observe(img);
   });
@@ -38,7 +50,7 @@
   const easeOutBack = (x) => { const c1 = 1.9, c3 = c1 + 1; return 1 + c3 * (x - 1) ** 3 + c1 * (x - 1) ** 2; };
   const easeInCubic = (x) => x * x * x;
 
-  function mount(img, kind, [THREE, { RoomEnvironment }, { RoundedBoxGeometry }]) {
+  function mount(img, kind, [THREE, { RoomEnvironment }, { RoundedBoxGeometry }], drawn) {
     const C = { pink: '#f2a9b6', white: '#e6e9f4', sky: '#a9d3ef', mint: '#3fe0cf', blue: '#2c86c2', lavender: '#a57fdb', purple: '#4b1ba8' };
     const BLEED = 0.25, GROW = 1 + 2 * BLEED;
 
@@ -68,7 +80,7 @@
 
     let renderer;
     try { renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true }); }
-    catch (e) { stage.remove(); return; }
+    catch (e) { stage.remove(); showPoster(img); return; }
     const dark = kind === 'bars';
     if (dark) {
       // Glass refracts what is behind it; on a transparent canvas Three fills that with half-white,
@@ -131,8 +143,8 @@
       const scrollSpeed = dt ? (scrollY - lastY) / dt : 0; lastY = scrollY;   // px per second, + down / - up
       if (placeStage()) resize();
       S.tick(t, dt, scrollSpeed); renderer.render(scene, camera);
-      if (!shown) {   // cross-fade from the poster after the first real frame
-        shown = true;
+      if (!shown) {   // fade the 3D in after the first real frame (a poster shown by the guard fades out)
+        shown = true; drawn();
         img.style.transition = 'opacity .6s cubic-bezier(.22,1,.36,1)';
         img.style.opacity = '0'; cv.style.opacity = '1';
       }
@@ -209,16 +221,32 @@
         return bar;
       });
       const UP_GAP = 0.16, UP = 0.75, HOLD = 4.6, DOWN_GAP = 0.08, DOWN = 0.45, LOOP = 6;
-      // Sticky (owner): the bars start over the title as designed; once their box is centred in the view
-      // they stay there while the page scrolls, until the box top sits OVERLAP of its height above the
-      // title's bottom: they end between the title and the text below, just over the title.
-      const OVERLAP = 0.3;
+      // Sticky (owner, round 8): the visible bars start with their top at START of the title's height
+      // (over «reach clients»), stay centred in the view while the page scrolls, and end exactly in the
+      // middle between the title and the text below: as much space above the bars as under them.
+      // Where the bars sit inside their box comes from the 3D itself: the corners of the fully grown
+      // bars, projected through the camera.
+      const START = 0.55;
+      const extent = () => {
+        camera.updateMatrixWorld();   // before the first render the camera matrices are not set yet
+        let lo = 1, hi = 0; const v = new THREE.Vector3();
+        list.forEach((bar, i) => {
+          for (const x of [-W / 2, W / 2]) for (const y of [0, heights[i]]) for (const z of [-W / 2, W / 2]) {
+            v.set(bar.position.x + x, y, z).project(camera);
+            const f = ((1 - v.y) / 2) * GROW - BLEED;   // canvas fraction -> picture-box fraction
+            lo = Math.min(lo, f); hi = Math.max(hi, f);
+          }
+        });
+        return [lo, hi];
+      };
       return {
         offsetY(r) {
+          const [a, b] = extent(), barsH = (b - a) * r.height;
           const title = img.parentElement.getBoundingClientRect(), next = img.parentElement.nextElementSibling;
-          let end = title.bottom - r.height * OVERLAP - r.top;
-          if (next) end = Math.min(end, next.getBoundingClientRect().top - r.height * 0.95 - r.top);   // never onto the text below
-          return Math.max(0, Math.min(end, (innerHeight - r.height) / 2 - r.top));
+          const start = title.top + START * title.height;
+          const end = next ? Math.max(start, (title.bottom + next.getBoundingClientRect().top) / 2 - barsH / 2) : start;
+          const top = Math.min(end, Math.max(start, (innerHeight - barsH) / 2));   // bars top in the view
+          return top - (r.top + a * r.height);
         },
         fov: 30, cam: new THREE.Vector3(-5.5, 6, 16), target: new THREE.Vector3(-0.3, 2.2, 0),
         tick(t) {
