@@ -1,3 +1,7 @@
+<style>
+/* Language card (desktop): 0.5rem under "EN" in every bar state. The Nav state CSS pushes every card 1.875rem down in the compact scrolled bar (they hang under the bar edge); the language switch sits in the top row, so its card stays close to it. */
+.nav_component[data-nav-scrolled] .nav_desktop_wrap .nav_dropdown_main_scroll.is-locale-card { margin-top: 0.5rem; }
+</style>
 <script>
 /* HumAIn nav, mobile panel: when a dropdown row opens (EN, Expertise, For business ...), scroll the panel so the opened list is fully in view, 16 px from the bottom. Without it a row near the bottom (the language switch) opens below the fold and nothing seems to happen. Waits for the 300 ms open animation; no requestAnimationFrame. Built by Aniek Velthuizen with Claude, 2026-11-12. */
 (() => {
