@@ -8,16 +8,17 @@
 /* Logo Marquee in the Row slot: Figma 2rem above and below, label untrimmed at 130 % with no gap under it */
 .page-header_row .logo-marquee_wrap{padding-top:var(--_spacing---space--7);padding-bottom:var(--_spacing---space--7)}
 .page-header_row .logo-marquee_title{text-box:normal;line-height:var(--_typography---line-height--large);margin-bottom:var(--_spacing---space--0)}
-/* Cards 3D (Split, data-cards-3d): cards come in one by one, then the whole stack turns slowly in 3D as one rigid plane. decisions/motion.md › «Cards 3D» */
+/* Cards 3D (Split, data-cards-3d): cards come in one by one, then the stack turns slowly like an object on a turntable. decisions/motion.md › «Cards 3D»
+   The pose is a real 3D rotation of the straight cards (not the Webflow skew); seen head-on it draws exactly the Webflow tilt. */
 @property --cards-3d-turn{syntax:"<angle>";inherits:true;initial-value:0deg}
 @keyframes cards-3d-in{from{opacity:0;translate:0 2.5rem;scale:.94}}
-@keyframes cards-3d-sway{from{--cards-3d-turn:-14deg}to{--cards-3d-turn:14deg}}
+@keyframes cards-3d-sway{from{--cards-3d-turn:-10deg}to{--cards-3d-turn:10deg}}
 @media (prefers-reduced-motion:no-preference){
-html.w-mod-js:not(.wf-design-mode) body [data-cards-3d][data-hero-reveal]{--cards-3d-tilt:matrix(.9962,-.0872,-.1736,.9848,0,0);transform:perspective(90rem) rotate3d(.12,1,0,var(--cards-3d-turn)) var(--cards-3d-tilt);animation:cards-3d-sway 9s ease-in-out -4.5s infinite alternate;will-change:transform}
+html.w-mod-js:not(.wf-design-mode) body [data-cards-3d][data-hero-reveal]{--cards-3d-pose:matrix3d(.9962,-.0872,.5087,0,-.1736,.9848,.5087,0,-.4861,-.5304,.8609,0,0,0,0,1);transform:perspective(120rem) rotateY(var(--cards-3d-turn)) var(--cards-3d-pose);animation:cards-3d-sway 9s ease-in-out -4.5s infinite alternate;will-change:transform}
 html.w-mod-js:not(.wf-design-mode) [data-cards-3d]>.u-display-contents>*{animation:cards-3d-in .9s cubic-bezier(.22,1,.36,1) var(--cards-3d-delay,.3s) backwards}
 html.w-mod-js:not(.wf-design-mode) [data-cards-3d]>.u-display-contents>:nth-child(2){--cards-3d-delay:.45s}
 html.w-mod-js:not(.wf-design-mode) [data-cards-3d]>.u-display-contents>:nth-child(3){--cards-3d-delay:.6s}
 }
-/* Same tilt as the Webflow style per breakpoint (≤ 767 half the lean); change both together */
-@media (max-width:767px) and (prefers-reduced-motion:no-preference){html.w-mod-js:not(.wf-design-mode) body [data-cards-3d][data-hero-reveal]{--cards-3d-tilt:matrix(.9962,-.0872,-.0868,.9848,0,0)}}
+/* ≤ 767 the Webflow tilt leans half as much: its own pose. A new tilt in Webflow needs a new pose here */
+@media (max-width:767px) and (prefers-reduced-motion:no-preference){html.w-mod-js:not(.wf-design-mode) body [data-cards-3d][data-hero-reveal]{--cards-3d-pose:matrix3d(.9962,-.0872,.4017,0,-.0868,.9848,.429,0,-.4018,-.4289,.9033,0,0,0,0,1)}}
 </style>

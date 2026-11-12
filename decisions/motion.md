@@ -199,3 +199,10 @@ Owner (Aniek): a round outline button with only an icon (no label) fills complet
 
 ## 2026-11-12 — Exception: Team Fan turns with the scroll (owner)
 Owner (Aniek): the Project Controls fan «een heel klein beetje draaien tijdens het scrollen», down = right, up = left. Half a fan step over the whole pass, scroll-linked, desktop with a mouse only, off for reduced motion. Done by Aniek Velthuizen with Claude. Details: `decisions/components/team-fan.md`.
+
+### 2026-11-12 — Cards 3D round 3: a real 3D pose instead of the skew (owner)
+Owner (Aniek), screenshot of round 2 next to the design: one side of the cards was higher than the other, which looked unnatural when turned, and the space around the photo was no longer even. Cause: the Webflow tilt is a **skew** (a 2D shear), not a 3D rotation, so turning a sheared plane in perspective cannot look real.
+- **Pose:** while the motion runs, the stack uses a real 3D rotation of the straight cards that, seen head-on, draws exactly the Webflow tilt (`--cards-3d-pose`, computed from the Webflow matrix: same x and y axes, both tilted 0.51 out of the screen). Desktop `matrix3d(.9962,-.0872,.5087,0,-.1736,.9848,.5087,0,-.4861,-.5304,.8609,0,0,0,0,1)`, ≤ 767 `matrix3d(.9962,-.0872,.4017,0,-.0868,.9848,.429,0,-.4018,-.4289,.9033,0,0,0,0,1)`.
+- **Turn:** like an object on a turntable (vertical screen axis, applied after the pose), **±10°** (was 14), 9 s each way, perspective 120rem. A turn around the cards' own axis was tried and tipped them too far back at −10…−14°.
+- **Changing the tilt in Webflow** now needs a new pose in the embed (same calculation). Reduced motion and the Designer still show the Webflow skew; head-on the two are identical.
+- Checked on staging at 1024: pose + turn applied, no sideways scroll. Not checked: Safari, phones after this round.
