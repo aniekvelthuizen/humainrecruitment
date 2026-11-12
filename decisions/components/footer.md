@@ -34,7 +34,7 @@ _2026-10-31: these three variables are now `gradient/brand-start | brand-middle 
 ## 2026-10-31 — Spacing (Figma → trimmed text)
 | Where | Value |
 |---|---|
-| Footer top → brand title cap / mobile | 5.5rem / 1.75rem (`footer_contain` padding-top) |
+| Footer top → brand title cap / mobile | 5.5rem / 4.25rem (`footer_contain` padding-top; mobile was 1.75rem, see 2026-11-12) |
 | Title → text / title → first link | 1.9375rem / 1.875rem |
 | Link → link (columns and bottom row wrap) | 2.043rem (pitch 44 as Figma) |
 | Last link → divider / mobile last row → divider | 5.6875rem / 5rem (`footer_contain` padding-bottom) |
@@ -70,3 +70,9 @@ From `references/audit/2026-10-31-footer.md`.
 Conflict: Webflow put `w--current` on the Footer Link of the current page, but nothing styled it, so the footer showed no active page.
 Choice: as in the nav (`decisions/components/nav.md` › Active page: semibold), the current page's footer link text is semibold (`--_typography---font--primary-semibold`), no line. One rule in the Footer CSS embed (`d8c37aa8-…da63`, source `references/embeds/footer-style.html`): `.footer_link_wrap.w--current .footer_link_text`. On the text element because `u-text-style-main` sets its own weight. Webflow marks the link although the Link prop is a URL (`/about`), because the path matches the page.
 _Same day, owner:_ the current footer link also gets the Arrow Right icon before the text, same rule as the nav (`decisions/components/nav.md` › Active page): `::before` on `.footer_link_text`, 0.875em, 0.375em gap, text colour, `nowrap`. Checked on staging at 1440 (/about, /clients).
+
+## 2026-11-12 — More room above the brand title on phones (owner; Aniek Velthuizen, via Claude)
+Choice: below 768 px `footer_contain` padding-top 1.75rem → 4.25rem (+40 px above "HumAIn Recruitment"), on the owner's request; deviates from Figma mobile (28). Desktop and tablet unchanged (5.5rem).
+
+## 2026-11-12 — No divider above the copyright on phones (owner; Aniek Velthuizen, via Claude)
+Choice: below 768 px `footer_bottom_layout` has `border-top-style: none` (small breakpoint), so the line above "© 2026 HumAIn Recruitment" is gone; the last accordion row keeps its own line. Spacing unchanged (5rem + 2.375rem padding). Desktop and tablet keep the divider. Deviates from Figma mobile.

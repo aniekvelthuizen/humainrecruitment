@@ -105,9 +105,22 @@
     });
 
     var clearButton;
+    var resetHolder = bar && bar.querySelector('.opportunity-list_submit');
+    var resetButton = resetHolder && resetHolder.querySelector('button, a');
 
+    function isFiltered() {
+      return Boolean(search && search.value.trim()) ||
+        selects.some(function (select) { return select.selectedIndex > 0; });
+    }
+
+    /* The cross shows while the field has text; Reset is dimmed and inert until a filter is set.
+       aria-disabled, not disabled: Reset keeps focus after it is used. */
     function syncClear() {
       if (clearButton) clearButton.hidden = !search.value;
+      if (!resetButton) return;
+      var off = !isFiltered();
+      resetHolder.toggleAttribute('data-inactive', off);
+      resetButton.setAttribute('aria-disabled', String(off));
     }
 
     function resetAll(focusSearch) {
@@ -147,7 +160,9 @@
 
     /* Reset in the bar: filters apply by themselves, so the bar needs no Search button.
        Focus stays on Reset, so a phone keyboard does not pop up. */
-    clickable(bar && bar.querySelector('.opportunity-list_submit'), function () { resetAll(false); });
+    clickable(resetHolder, function () {
+      if (isFiltered()) resetAll(false);
+    });
 
     clickable(more, function () {
       var first = matches[shown];
@@ -164,7 +179,10 @@
         event.stopPropagation();
         apply();
       });
-      form.addEventListener('change', apply);
+      form.addEventListener('change', function () {
+        syncClear();
+        apply();
+      });
       if (search) {
         search.addEventListener('input', function () {
           syncClear();

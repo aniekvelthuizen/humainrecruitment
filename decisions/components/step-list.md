@@ -21,3 +21,7 @@ Why: the style API mangles `content` on `::before`, so it lives in the embed.
 - On a Dark or Brand section the number would have turned white on mint (1.29 : 1) → new Theme `badge/text` (dark-900 in every mode). Light: unchanged (15.2 : 1).
 - Badge class: no-op margins and `flex-grow: 0` removed.
 - No showcase on Example Components: same reason as Score Chart (`score-chart.md`).
+
+## 2026-11-12 — White rows on phones (owner, Aniek Velthuizen, via Claude)
+Owner (Aniek), with a phone screenshot of Project Delivery Experts «Why This Matters»: below the text the grey rows (`card/background` = light-200) sit on the light mint glow and the two colours clash.
+Choice: `step-list_item` gets `swatch/light-100` (white) as background on the **small** breakpoint (≤ 767, so also ≤ 478). Tablet and desktop keep `card/background`, as Figma. A swatch, not the Theme: the Theme `card/background` is shared by every card and must not change; this is one component on one breakpoint.

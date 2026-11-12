@@ -60,3 +60,9 @@ Opportunities template was empty: built the same shell. Its `page_main` is a pla
 
 ## 2026-11-12 — Glow rises in on load (Aniek Velthuizen, via Claude)
 The pink end of the gradient rises in on page load (base, Vertical, Opportunity, Search). Record and the variant list to keep up to date: `decisions/motion.md` › «Header glow».
+
+## 2026-11-12 — Opportunity: apply button on phones only (Aniek Velthuizen, via Claude)
+Owner: on a phone the form is far below the hero, so the hero gets a jump button. Uses the existing Buttons row, no new element: on the Opportunities template **Buttons Visibility** on, **Primary Text** "Apply for this role", **Primary Link** `#apply` (anchor in Opportunity Detail, see `opportunity-detail.md`). In the Opportunity variant `page-header_actions` is `display: none`, and `flex` at `small` (≤ 767): from 768 the form sits next to or right under the text, and the button would be noise. Other variants untouched. Copy is English like the rest of the template; the Dutch locale needs its own text once it goes live.
+
+## 2026-11-12 — Phones: text 16 px closer to the title (Aniek Velthuizen, via Claude)
+Owner: on phones the text under the title in every hero moves up 16 px. `page-header_layout` row gap at `small` (≤ 767): `space/6` (24) → **`space/2` (8)**, so whatever comes first under the H1 (text, or the tags on Opportunity) sits 8 below it. Only Split has a visible visual; `page-header_visual` gets `margin-top: space/4` at `small`, so its cards keep their 24 px from the text. Measured on staging: 402 and 764 wide 8, 987 wide 24, 1276 wide 48 (the last two unchanged). No overflow at 402 and 767.
