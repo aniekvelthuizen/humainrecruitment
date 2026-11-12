@@ -1,6 +1,6 @@
 <style>
-/* Quote reveal (decisions/motion.md): the words of a [data-quote-reveal] quote fly in one by one when it scrolls into view. Runtime only: the Designer shows the whole quote. */
-html[data-quote-gate] [data-quote-reveal]:not([data-quote-state]){visibility:hidden}
+/* Quote reveal (decisions/motion.md): the words of a [data-quote-reveal] quote (and of each Facts Row figure) fly in one by one when it scrolls into view. Runtime only: the Designer shows the whole quote. */
+html[data-quote-gate] [data-quote-reveal]:not([data-quote-state]),html[data-quote-gate] [data-facts-row] .card_primary_title:not([data-quote-state]){visibility:hidden}
 [data-quote-word]{display:inline-block}
 /* Card reveal (testimonial cards): quote mark pops in, stars light up one by one, text fades in as one block. */
 html[data-quote-gate] [data-card-reveal]:not([data-card-state]) [data-card-reveal-part]{visibility:hidden}
@@ -28,7 +28,7 @@ function split(el){
 }
 function init(){
   clearTimeout(guard);
-  var g=window.gsap,els=d.querySelectorAll('[data-quote-reveal]'),cards=d.querySelectorAll('[data-card-reveal]');
+  var g=window.gsap,els=d.querySelectorAll('[data-quote-reveal],[data-facts-row] .card_primary_title'),cards=d.querySelectorAll('[data-card-reveal]');
   if(!g||!(els.length||cards.length)){release();return}
   /* Order for things entering the view together: left to right, then top to bottom */
   var byPlace=function(a,b){var r=a.boundingClientRect,s=b.boundingClientRect;return Math.abs(r.left-s.left)>8?r.left-s.left:r.top-s.top};

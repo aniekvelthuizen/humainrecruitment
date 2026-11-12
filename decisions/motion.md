@@ -82,6 +82,12 @@ Owner (Aniek): first asked for the word reveal on the cards too, faster (stagger
 - **Attributes** (Card Testimonial `19e313dd-…`): `data-card-reveal` on `card_testimonial_element`; `data-card-reveal-part="icon"` on `card_testimonial_quote`, `"stars"` on `card_testimonial_stars`, `"text"` on `card_testimonial_text`. Off: remove `data-card-reveal`. Same embed, gate and fallbacks as the quote reveal.
 - The quote reveal also learned `data-quote-reveal-next` (default 0.3 s): quotes entering the view together start one after another, left to right.
 
+## 2026-11-12 — Facts Row figures fly in like the quotes (owner)
+Owner (Aniek), on the Facts Row («-25 / 30%», «2–4 days», «Top 5%», «100%»): «mooi als die facts op dezelfde manier inanimeren als de quote titels». Same word reveal as the quotes, another explicit exception to «no scroll reveals». Done by Aniek Velthuizen with Claude.
+- **What:** the figure (`card_primary_title`) of every card in a Facts Row: words rise 24 px and fade in, 0.6 s, `power3.out`, 0.08 s apart; figures entering the view together start 0.3 s apart, left to right (stacked on mobile: top to bottom). The caption below stays still.
+- **Mechanism:** the quote-reveal embed (`61fdba5b-…`) selects `[data-facts-row] .card_primary_title` next to `[data-quote-reveal]` (script and gate CSS). Selected through Facts Row rather than an attribute on Card Primary, so Stat cards elsewhere keep still. Same gate, 4 s guard and fallbacks.
+- **Off:** remove that selector from both places in `references/embeds/quote-reveal-script.html` and the embed. Check: `node references/quote-reveal-check.mjs <url>` (now includes the figures).
+
 ## 2026-11-12 — Stagger Cards motion on every stair section (owner)
 Owner (Aniek): «alle blokken die in een trappetje staan en dit soort icons hebben, mogen dezelfde animatie hebben» — looping icons, cards in one by one like a stair. Done by Aniek Velthuizen with Claude. This widens the exception above from the base variant to **every Stagger Cards section** (base, plain, gradient): Home «The risk» and «Engagement models», Hire an Expert, How It Works.
 - **Cards:** unchanged (24 px rise + fade, 0.8 s, 0.15 s apart).

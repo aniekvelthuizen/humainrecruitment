@@ -401,3 +401,8 @@
 - Owner: prototype on a local copy of Contact («erg tof»), then «integreer op alle pagina's». Record: `decisions/motion.md` › Header glow.
 - New (eighth) embed in `Global | Custom Code` (`24fbbfa8-a829-ddf7-dd9c-f6a6c5629743`), source `references/embeds/header-glow-style.html`. Tested on patched copies of 16 pages first, then published to staging 1×.
 - `glow-check.mjs` on staging at 1512, at 402 and with reduced motion: 13 headers pass (glow 0 → 1, header heights unchanged); Hire an Expert (Split) and Consulting (Light) untouched. Not checked: Safari, real devices.
+
+## 2026-11-12 — Facts Row figures fly in like the quotes — Aniek Velthuizen with Claude
+- Owner asked for the quote word reveal on the Facts Row figures. Record: `decisions/motion.md` › Facts Row figures.
+- Quote-reveal embed (`61fdba5b-…` in `Global | Custom Code`) read first (matched the source), then extended with `[data-facts-row] .card_primary_title`; source `references/embeds/quote-reveal-script.html`. `quote-reveal-check.mjs` now includes the figures. Published to staging 1×.
+- Check on Hire an Expert at 1512 and 402: figures hidden before view, words in within ~0.75 s, heights unchanged (60 / 38), no leftover inline styles, reduced motion static, console clean. About Us uses the same component, not separately checked; Safari and real devices not checked.
