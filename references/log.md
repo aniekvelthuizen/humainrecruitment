@@ -436,3 +436,4 @@
 - 2026-11-12 (Aniek, via Claude): /submit-resume «Why join the pool?» panel sticky — `form-section_aside` sticky ≥ 992 (also Contact's aside). Record: `decisions/components/form-section.md`.
 
 - 2026-11-12 (Aniek): Card Bullet tick aligned to the first line (Text Style mode on the root, icon 1lh high, align top). Published to staging. See decisions/components/cards.md.
+- 2026-11-12 (Aniek, via Claude): Spotlight Grid slots: Allowed components (Card Primary, Card Testimonial, Reviews · picked) + tooltips, description; marketer test passed.

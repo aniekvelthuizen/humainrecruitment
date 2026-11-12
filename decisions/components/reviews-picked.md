@@ -34,4 +34,6 @@ Review: `references/audit/2026-11-12-reviews-cms.md` (fresh reviewer; looks and 
 
 ## Open
 - The collection's template page: `/reviews/chance-lipshutz` answers 404 on staging, so no empty page is out; check again when the SEO pass runs (`cms.md` 2026-11-05).
-- Spotlight Grid slot tooltips and Allowed components are not yet updated for this list (Designer).
+
+## 2026-11-12 — Slots ready for editors
+Spotlight Grid's three slots (List Start, List Center, List End): **Allowed components** = Card Primary, Card Testimonial, Reviews · picked (was: all components). **Tooltips** name what goes where and how to pick a review (List Center: Reviews only, hidden in Expertise). Component description updated. Tested with `&simulateRole=marketer` on Clients: with List Center selected the Components panel shows only those three, under Card and CMS lists. Aniek Velthuizen, via Claude (Designer, Claude in Chrome).
