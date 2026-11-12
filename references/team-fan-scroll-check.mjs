@@ -56,5 +56,19 @@ for (const c of cases) {
   }
   results[c.key] = r;
 }
+// Run-out: jump 300 px at 1512 and sample the shift while it eases to its goal.
+await send('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: 'no-preference' }] });
+await send('Emulation.setDeviceMetricsOverride', { width: 1512, height: 900, deviceScaleFactor: 1, mobile: false });
+await send('Page.navigate', { url: url + (url.includes('?') ? '&' : '?') + 'nc=' + Date.now() });
+await sleep(4000);
+results.runout = await ev(`(async () => {
+  const sec = document.querySelector('[data-team-fan]'), list = sec.querySelector('.team-fan_list');
+  const top = sec.getBoundingClientRect().top + scrollY;
+  scrollTo(0, top - (innerHeight - sec.offsetHeight) / 2 - 300); await new Promise((r) => setTimeout(r, 2500));
+  const t0 = performance.now(); scrollTo(0, top - (innerHeight - sec.offsetHeight) / 2);
+  const s = [];
+  for (const t of [0, 100, 250, 500, 750, 1000, 1500, 2000, 2500]) { await new Promise((r) => setTimeout(r, Math.max(0, t - (performance.now() - t0)))); s.push([t, list.style.getPropertyValue('--fan-shift')]); }
+  return s;
+})()`);
 console.log(JSON.stringify({ results, errors }, null, 1));
 ws.close(); chrome.kill();
