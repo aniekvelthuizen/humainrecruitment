@@ -438,3 +438,4 @@
 - 2026-11-12 (Aniek): Card Bullet tick aligned to the first line (Text Style mode on the root, icon 1lh high, align top). Published to staging. See decisions/components/cards.md.
 - 2026-11-12 (Aniek, via Claude): Spotlight Grid slots: Allowed components (Card Primary, Card Testimonial, Reviews · picked) + tooltips, description; marketer test passed.
 - 2026-11-12 — Aniek (via Claude): owner: arrow before the active link. Arrow Right mask as `::before` (0.875em, text colour) on the current nav bar, dropdown and footer links; same two embeds rewritten from the sources, read back, published to staging 1×; checked at 1440 (bar, About us card, footer) and the mobile panel at 402.
+- 2026-11-12 (Aniek, via Claude): Form Section column gap +40 px (32 → 72 at 1512), also on Contact. Staging published 1×, checked. Record: `decisions/components/form-section.md`.
