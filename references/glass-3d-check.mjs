@@ -55,12 +55,24 @@ for (const w of widths) {
         const st = [...document.querySelectorAll('[data-glass-3d-stage]')].find(s => { const b = s.getBoundingClientRect(); return Math.abs(b.top - ir.top) < 2 && Math.abs(b.left - ir.left) < 2; });
         const sr = st?.getBoundingClientRect(); const cv = st?.querySelector('canvas');
         return { kind: st?.getAttribute('data-glass-3d-stage') || null, img: [ir.left, ir.top, ir.width, ir.height].map(Math.round), stage: sr ? [sr.left, sr.top, sr.width, sr.height].map(Math.round) : null,
-          canvasOpacity: cv ? getComputedStyle(cv).opacity : null, posterOpacity: getComputedStyle(img).opacity, sy: scrollY, scrollX: document.documentElement.scrollWidth - innerWidth }; })()`);
+          text: (() => { const c = img.closest('section')?.querySelector('[class$="_content"], [class*="_content "]'); const b = c?.getBoundingClientRect(); return b ? [b.left, b.top, b.width, b.height].map(Math.round) : null; })(), canvasOpacity: cv ? getComputedStyle(cv).opacity : null, posterOpacity: getComputedStyle(img).opacity, sy: scrollY, scrollX: document.documentElement.scrollWidth - innerWidth }; })()`);
       console.log(`  pic ${k} @${t}ms`, JSON.stringify(r));
       const ir = r.img; const pad = Math.round(Math.max(ir[2], ir[3]) * 0.3);
       const x = Math.max(0, ir[0] - pad), y = Math.max(0, ir[1] - pad);
       await shot(`w${w}-pic${k}-${t}.png`, { x, y: y + r.sy, width: Math.min(w - x, ir[2] + 2 * pad), height: Math.min(900 - y, ir[3] + 2 * pad) });
     }
+    // Scroll sweep: the stage must stay on the picture while the page scrolls.
+    const drift = [];
+    for (const dy of [-500, -250, 250, 500]) {
+      await ev(`${PICS}[${k}].scrollIntoView({ block: 'center' }), scrollBy(0, ${dy}), 1`); await sleep(400);
+      drift.push(await ev(`(() => { const img = ${PICS}[${k}], ir = img.getBoundingClientRect(); const st = document.querySelector('[data-glass-3d-stage="' + (/6aecbf15e512f468a8790720/.test(${PICS}[${k}].getAttribute('src')) ? 'donut' : 'bars') + '"]'); const sr = st?.getBoundingClientRect(); return sr ? Math.round(sr.top - ir.top) + '/' + Math.round(sr.left - ir.left) : 'no stage'; })()`));
+    }
+    console.log(`  pic ${k} stage-minus-picture (top/left) while scrolling -500,-250,+250,+500:`, drift.join('  '));
+    // Shift without a resize (a transform on the picture's parent): the stage must follow within a frame or two.
+    await ev(`${PICS}[${k}].scrollIntoView({ block: 'center' }), ${PICS}[${k}].parentElement.style.transform = 'translateY(120px)', 1`); await sleep(1000);
+    const shift = await ev(`(() => { const ir = ${PICS}[${k}].getBoundingClientRect(), sr = document.querySelector('[data-glass-3d-stage="' + (/6aecbf15e512f468a8790720/.test(${PICS}[${k}].getAttribute('src')) ? 'donut' : 'bars') + '"]')?.getBoundingClientRect(); return sr ? Math.round(sr.top - ir.top) + '/' + Math.round(sr.left - ir.left) : 'no stage'; })()`);
+    await ev(`${PICS}[${k}].parentElement.style.transform = '', 1`);
+    console.log(`  pic ${k} after a 120 px transform shift (top/left):`, shift);
   }
   console.log('  errors:', errors.length ? errors : 'none');
 }

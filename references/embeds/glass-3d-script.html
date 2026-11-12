@@ -51,12 +51,18 @@
     stage.setAttribute('aria-hidden', 'true');
     stage.style.cssText = 'position:absolute;pointer-events:none;z-index:1;';
     host.appendChild(stage);
+    // Follow the picture: re-measured every frame (not only on resize), so the stage stays on it
+    // whatever moves the picture inside the section. Returns true when the size changed.
+    let box = '';
     const placeStage = () => {
       const r = img.getBoundingClientRect(), h = host.getBoundingClientRect();
-      stage.style.left = (r.left - h.left - host.clientLeft) + 'px';
-      stage.style.top = (r.top - h.top - host.clientTop) + 'px';
-      stage.style.width = r.width + 'px';
-      stage.style.height = r.height + 'px';
+      const l = Math.round(r.left - h.left - host.clientLeft), tp = Math.round(r.top - h.top - host.clientTop);
+      const w = Math.round(r.width), ht = Math.round(r.height), next = `${l},${tp},${w},${ht}`;
+      if (next === box) return false;
+      const sized = !box.endsWith(`,${w},${ht}`);
+      box = next;
+      Object.assign(stage.style, { left: l + 'px', top: tp + 'px', width: w + 'px', height: ht + 'px' });
+      return sized;
     };
 
     let renderer;
@@ -121,6 +127,7 @@
     let visible = false, raf = 0, last = 0, t = 0, shown = false;
     const frame = (now) => {
       t += Math.min((now - last) / 1000, 0.05); last = now;
+      if (placeStage()) resize();
       S.tick(t); renderer.render(scene, camera);
       if (!shown) {   // cross-fade from the poster after the first real frame
         shown = true;
@@ -133,7 +140,7 @@
       cancelAnimationFrame(raf);
       if (visible && !document.hidden) { last = performance.now(); raf = requestAnimationFrame(frame); }
     };
-    new IntersectionObserver(([e]) => { visible = e.isIntersecting; update(); }).observe(stage);
+    new IntersectionObserver(([e]) => { visible = e.isIntersecting; update(); }, { rootMargin: '200px 0px' }).observe(img);   // the picture, not the stage: the stage follows it
     document.addEventListener('visibilitychange', update);
 
     /* Donut: 7 segments, pieces float together on first view, one turn per 40 s. */
@@ -162,7 +169,7 @@
         a = a0;
       }
       return {
-        fov: 30, cam: new THREE.Vector3(0, 0, 13.5), target: new THREE.Vector3(0, 0, 0),
+        fov: 30, cam: new THREE.Vector3(0, 0, 11)   /* owner: a little smaller than the text column */, target: new THREE.Vector3(0, 0, 0),
         tick(t) {
           for (const p of pieces) {
             const off = 1 - easeOutQuint(clamp01((t - I.delay - p.i * I.gap) / I.dur));

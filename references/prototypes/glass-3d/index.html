@@ -166,7 +166,7 @@ function sector(r0, r1, a0, a1, d) {
 const easeOutQuint = (x) => 1 - (1 - x) ** 5;
 
 function mountDonut(el) {
-  const ctx = makeScene(el, { fov: 30, camPos: new THREE.Vector3(0, 0, 13.5), target: new THREE.Vector3(0, 0, 0), bleed: 0.25 });
+  const ctx = makeScene(el, { fov: 30, camPos: new THREE.Vector3(0, 0, 11), target: new THREE.Vector3(0, 0, 0), bleed: 0.25 });
   // Clockwise from 12 o'clock, sizes in degrees (as the render).
   const parts = [
     ['purple', 92], ['lavender', 62], ['blue', 66], ['mint', 52], ['sky', 36], ['white', 38], ['pink', 14]
