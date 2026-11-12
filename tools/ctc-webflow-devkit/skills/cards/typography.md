@@ -1,6 +1,6 @@
 # Card texts → Lumos Typography components
 
-Every text in a card is a Lumos Typography instance; card classes only do layout. Same for any component's texts.
+Every text in a card is a Lumos Typography instance; card classes only do layout. The same goes for `Button Main`. Sections are different: their texts are plain `Heading` / `Paragraph` with the Lumos text classes ([componentize](../componentize/SKILL.md) §1).
 
 | Text | Component | Instance settings | Card prop |
 |---|---|---|---|
@@ -15,11 +15,11 @@ Images stay plain Image elements (Lumos does the same).
 
 ## Typography Heading (Plain Text)
 
-Lumos ships `Typography Heading` with rich text only: the level lives in the content, an editor can change it, and a CMS plain-text title cannot bind to it. Add a second heading once per site (PMS, Oct 2026):
+Lumos ships `Typography Heading` with rich text only: the level lives in the content, an editor can change it, and a CMS plain-text title cannot bind to it. Add a second heading once per site (Oct 2026):
 
 - Rename `Typography Heading` → **Typography Heading (Rich Text)** (only the `data-wf--…--variant` attribute name changes; grep custom code for it first).
 - Duplicate Lumos `Typography Plain` → **Typography Heading (Plain Text)** (same `u-text` styling, same size variants). Props: Text (plain), Variant, Max Width, Margin Bottom, Visibility, **Tag** (h1–h6, p, div; default **h2**), Style, Classes, ID.
-- Classes and Margin Bottom are both a conditional `class` attribute on the root, and only the last one counts on this element: make the margin one apply only when Classes is empty, and put a margin utility in Classes otherwise. Conditional attributes and the per-instance Tag are Designer steps ([webflow-mcp.md](../../references/webflow-mcp.md) §9, §11).
+- Classes and Margin Bottom are both a conditional `class` attribute on the root, and only the last one counts on this element: make the margin one apply only when Classes is empty, and put a margin utility in Classes otherwise. Conditional attributes and the per-instance Tag are Designer steps ([webflow-mcp.md](../../references/webflow-mcp.md) §4 "Attributes"; [designer/README.md](../../references/designer/README.md)).
 - This duplicate is the allowed kind: a different content type, not a second look of the same component.
 
 ## Recipe per text element
@@ -33,12 +33,12 @@ Lumos ships `Typography Heading` with rich text only: the level lives in the con
 7. Page instances lose overrides of replaced (rich text) props: re-set them. Plain-bound props keep their ids and overrides.
 8. Read back tree, bindings and props; measure again and report any px difference.
 
-## Designer steps it leaves (queue them for the Designer pass, webflow-mcp.md §11)
+## Designer steps it leaves (queue them: [designer/README.md](../../references/designer/README.md) "Queue, then one pass")
 
 - **Heading level.** The API writes rich text as `<p>`, also every instance value set with `rich_text_inner_text` (and the API cannot reach inside an instance's rich-text prop to change it). Properties › the Title prop › Default Rich Text › Edit Rich Text › select the text with a **real** mouse drag (scripted selection shows the toolbar but the buttons ignore it) › H3 (`[data-automation-id="rte-h3-bar-button"]`, real click) › Close. Then on every page instance with its own title: select it › instance props › Title › Edit Rich Text › same steps. Read back on staging that the tag is `h3`.
 - Native "is set" conditions on the wrappers.
 - Prop order in the folder (a fresh rich-text prop lands last).
-- The Lumos Heading Tag prop drives nothing any more (the level lives in the rich text); remove it (PMS owner: yes).
+- The Lumos Heading Tag prop drives nothing any more (the level lives in the rich text); remove it (owner-approved, Oct 2026).
 
 ## Watch
 

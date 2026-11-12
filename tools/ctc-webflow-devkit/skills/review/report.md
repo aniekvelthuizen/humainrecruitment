@@ -9,11 +9,12 @@ What each reviewer agent hands back. Nothing else around it.
 ```
 ## <Component> — <page> (<url>)
 Checked: API <time> · published <date> (<before|after> the build) · widths <list> · design <png files>
-| Works | Responsive | Spacing | Lumos | Code | Props | Design |
-| ✅ | ⚠️ | ✅ | ⚠️ | ✅ | 🧹 | ⚠️ |
+| Works | A11y | SEO | Responsive | Spacing | Lumos | Code | Props | Design |
+| ✅ | ❌ | ✅ | ⚠️ | ✅ | ⚠️ | ✅ | 🧹 | ⚠️ |
 
 ### Findings
 - ❌ Works · <what is wrong, in words the owner uses, ≤ 20 words> · Seen: <the number, value or screenshot that proves it> · Fix: <the change> · By: API | Designer | owner
+- ❌ A11y · <e.g. the menu does not close with Escape> · Seen: <a11y-check line or focus crop> · Fix: <the change> · By: API | Designer | owner
 - ⚠️ Spacing · ...
 
 ### Already decided (not findings)
@@ -35,9 +36,9 @@ Short, plain, scannable in under a minute. Follow [asking.md](${CLAUDE_PLUGIN_RO
 ```
 **Review — <scope>, <date>.** <N> components: <a> fine, <b> need fixes, <c> broken.
 
-| Component | Works | Responsive | Spacing | Lumos | Code | Props | Design |
-|---|---|---|---|---|---|---|---|
-| Stat Grid | ✅ | ✅ | ⚠️ | ✅ | ✅ | 🧹 | ⚠️ |
+| Component | Works | A11y | SEO | Responsive | Spacing | Lumos | Code | Props | Design |
+|---|---|---|---|---|---|---|---|---|---|
+| Stat Grid | ✅ | ✅ | ✅ | ✅ | ⚠️ | ✅ | ✅ | 🧹 | ⚠️ |
 
 **Broken**
 1. **Chart Rows** — shows every trial's results, not only this trial's. *Fix: add the "this trial" filter (Designer, I can do it).*
@@ -51,13 +52,13 @@ Short, plain, scannable in under a minute. Follow [asking.md](${CLAUDE_PLUGIN_RO
 **Your call**
 ❓ **Q1** - **Testimonial title on phone**: 24 px in the build, 40 px in the design; 40 wraps to 4 lines. ➡️ Keep 24, note it as a deviation.
 
-Reply **fix all**, or the numbers (**fix 1, 3**). Full report: `references/audit/<file>.md`.
+Fixing 1–3 and Q1 (with the recommended answer) now; none of them is risky. Reply with a number to undo it or answer Q1 differently. Full report: `references/audit/<file>.md`.
 ```
 
-- Numbers run on across groups, so "fix 2, 5" is unambiguous.
+- Numbers run on across groups, so "undo 2, 5" is unambiguous.
 - One line per item; the fix in italics on the same line. Group the same fault on several components into one item ("Stat Grid, Tile Mosaic, Chart Rows — slot is called 'Slot'").
 - Fine components appear only in the matrix.
-- "Your call" items use the asking.md question shape and are never fixed before the answer.
+- "Your call" items use the asking.md question shape and are fixed with the recommended answer right away, unless risky (then the report says they wait, and why).
 
 ## Saved report
 

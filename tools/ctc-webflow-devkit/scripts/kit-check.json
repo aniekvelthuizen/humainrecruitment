@@ -1,0 +1,7 @@
+{
+  "clientNames": ["PMS", "Plomp", "Forest3", "THDV", "Tot Heil", "Chromite", "GOP", "Clay", "Waypoint", "Sofi", "StudiJob", "HumAIn", "UTS"],
+  "clientNamesAllowedIn": ["CONTRIBUTING.md", "scripts/"],
+  "ignore": ["node_modules/", "references/fixture/node_modules/"],
+  "duplicateMinWords": 12,
+  "maxGrowthPercent": 2
+}

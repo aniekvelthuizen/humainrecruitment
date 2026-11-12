@@ -4,7 +4,7 @@ Colour is a theme, not a value. A section, card or page carries a theme; every e
 
 ## Layers
 
-1. **Swatches** (Default collection): the raw colours, `--swatch--brand-500`, `--swatch--dark-800`. The brand swatch has a `-text` partner (`--swatch--brand-text`): wherever `--swatch--brand-500` is a background, `--swatch--brand-text` is the text colour, so a future darker brand changes its text colour from one place. Add `brand-secondary-text` and the like when needed. `color-mix()` derives shades and opacities from a base swatch.
+1. **Swatches** (Default collection): the raw colours, `--swatch--brand-500`, `--swatch--dark-800`. The brand swatch has a `-text` partner (`--swatch--brand-text`): wherever `--swatch--brand-500` is a background, `--swatch--brand-text` is the text colour, so a future darker brand changes its text colour from one place. Add `brand-secondary-text` and the like when needed. `color-mix()` derives shades and opacities from a base swatch in Lumos; through the API it is refused, so opacity swatches are 8-digit hex (`#ffffff1a`) ([webflow-mcp.md](../webflow-mcp.md) §3).
 2. **Theme** collection, one mode per theme: the section's background, text and border colours, and the primary (solid) and secondary (outlined) button styles. Extend with folders such as `card/background`, `input/border-hover`, `input/border-focus` when the design needs them. *(house)* Webflow exposes them as `--_theme---…`; the exact names for this site are in `references/variables.json`.
 3. **`u-theme-*` classes** apply a theme to a wrapper; `u-brand-*` classes do the same for a brand. Everything inside inherits.
 

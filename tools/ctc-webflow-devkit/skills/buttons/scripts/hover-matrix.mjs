@@ -3,11 +3,13 @@
 // No dependencies (Node 22+ for the global WebSocket). Uses the Google Chrome on the machine.
 //
 //   node hover-matrix.mjs <url> [--scope "#buttons"] [--button ".button_main_wrap"]
-//        [--moving ".button_main_text,.button_main_square,.button_main_line"] [--in 700] [--out-ms 600]
-//        [--width 1440] [--trace <index>]
+//        [--moving ".button_main_text,.button_main_icon,.button_main_line"] [--in 700] [--out-ms 600]
+//        [--cut 175] [--width 1440] [--trace <index>]
 //
 // Per button (in page order): rest state, hover state, state after leaving; then 3 hovers in a row,
-// one hover cut off after 150 ms, and a move straight onto the next button. A state is the wrap's
+// one hover cut off halfway (--cut ms, default 175 = half the kit `hover` in-time of 350 ms; set it to half
+// the project's in-time), and a move straight onto the next button. --in / --out-ms are the waits for a
+// hover or leave to finish (longer than the transitions). A state is the wrap's
 // background and text colour plus the transform of every --moving element inside it.
 // A button is OK when every hover reaches the same hover state, the colour changes on hover,
 // and every leave returns to the rest state. --trace samples one button every 50 ms (in and out).
@@ -22,8 +24,8 @@ const url = args.find((a) => !a.startsWith('--') && !/^\d+$/.test(a));
 if (!url) { console.error('usage: node hover-matrix.mjs <url> [--scope sel] [--button sel] [--trace i]'); process.exit(2); }
 const opt = (n, d) => { const i = args.indexOf('--' + n); return i >= 0 ? args[i + 1] : d; };
 const scope = opt('scope', 'body'), btnSel = opt('button', '.button_main_wrap');
-const moving = opt('moving', '.button_main_text,.button_main_square,.button_main_line');
-const inMs = +opt('in', 700), outMs = +opt('out-ms', 600), width = +opt('width', 1440);
+const moving = opt('moving', '.button_main_text,.button_main_icon,.button_main_line');
+const inMs = +opt('in', 700), outMs = +opt('out-ms', 600), cutMs = +opt('cut', 175), width = +opt('width', 1440);
 const trace = opt('trace', null);
 
 const chromePath = process.env.CHROME || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
@@ -90,9 +92,9 @@ if (trace !== null) {
     }
     if (same(hover, rest)) issues.push('hover changes nothing');
     else if (hover.bg === rest.bg && hover.color === rest.color) issues.push('colour does not change on hover');
-    await mouse(cx, cy); await sleep(150); await mouse(1, 1); await sleep(outMs);
+    await mouse(cx, cy); await sleep(cutMs); await mouse(1, 1); await sleep(outMs);
     if (!same(await ev(stateExpr(k)), rest)) issues.push('cut-off hover does not return to rest');
-    await mouse(cx, cy); await sleep(150); await mouse(cx, cy); await sleep(inMs);
+    await mouse(cx, cy); await sleep(cutMs); await mouse(cx, cy); await sleep(inMs);
     if (!same(await ev(stateExpr(k)), hover)) issues.push('hover after a cut-off hover does not reach the hover state');
     if (k + 1 < count) {
       const b2 = await ev(boxExpr(k)); const nb = await ev(rectExpr(k + 1));

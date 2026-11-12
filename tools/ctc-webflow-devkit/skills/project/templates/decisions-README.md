@@ -4,6 +4,7 @@ Lasting choices for this site. Read the file for the thing you are about to touc
 
 ```
 site.md               site-wide: naming, structure, where new sections go, how the site deviates from Lumos
+motion.md             timings and easings that differ from the kit's references/motion.md (empty = kit defaults)
 components/<name>.md  one per component
 pages/<slug>.md       one per page
 ```

@@ -2,7 +2,7 @@
 
 ## 1. The tree (Lumos `Nav` rebuilt in place)
 
-The Lumos starter ships `Nav` (group Global) with a desktop header (`nav_desktop_wrap`, shown above the `Breakpoint` prop) and a Webflow Navbar for mobile (`nav_mobile_wrap`, collapse "all"), plus `Menu` (two variants) and `Logo`. When the design opens the same menu at every width, keep the Navbar as the **only** bar and remove `nav_desktop_wrap` and `nav_dropdown_backdrop` (move the `Menu` instance out first). Keep the Lumos class names: the starter's CSS embed inside the Nav references them, and it keeps working (the Breakpoint prop then has nothing to switch).
+The Lumos starter ships `Nav` (group Global) with a desktop header (`nav_desktop_wrap`, shown above the `Breakpoint` prop) and a Webflow Navbar for mobile (`nav_mobile_wrap`, collapse "all"), plus `Menu` (two variants) and `Logo`. Pattern A (dropdowns on desktop, panel on mobile) keeps this split as it ships; the tree below is pattern B. When the design opens the same menu at every width, keep the Navbar as the **only** bar and remove `nav_desktop_wrap` and `nav_dropdown_backdrop` (move the `Menu` instance out first). Keep the Lumos class names: the starter's CSS embed inside the Nav references them, and it keeps working (the Breakpoint prop then has nothing to switch).
 
 ```
 nav_component                 data-nav="component"   sticky, z 1000; Variant: Page Top (base) | Minimised
@@ -17,7 +17,7 @@ nav_component                 data-nav="component"   sticky, z 1000; Variant: Pa
 │        │  └─ Menu (Variant Bar)
 │        ├─ nav_mobile_menu_wrap  Navbar menu, data-nav="panel"  (full-screen panel, §7)
 │        │  └─ nav_mobile_menu_scroll › nav_menu_layout › [nav_menu_intro, nav_menu_main › [nav_menu_list › Menu (Panel), nav_contact_wrap › buttons]]
-│        └─ nav_button_wrap   Navbar button, data-nav="menu-button", data-state="open", data-trigger="hover focus"
+│        └─ nav_button_wrap   Navbar button, data-nav="menu-button", data-state="open", data-trigger="hover"
 │           └─ nav_button_layout › nav_button_roll › nav_button_track (data-nav="menu-roll") › 2 × nav_button_row [text + icon]
 │                              + nav_button_line (hover line)
 └─ nav_menu_backdrop / u-embed-js (Lumos)
@@ -30,7 +30,7 @@ Build order inside a component definition: element builder with `scope_component
 | Variable | Value | Note |
 |---|---|---|
 | `nav/height` | desktop bar height (e.g. 4.5 rem) | fluid min = mobile bar height, `clamp()` in the variable |
-| `nav/spacing-outer-horizontal` | desktop side padding (e.g. 1.5 rem) | fluid min = mobile padding; Lumos aliases it to `site/margin` — usually too wide for a nav. **Check first which classes read it**: in some Lumos versions it is the *width* of `nav_mobile_contain` / `nav_mobile_menu_wrap` and the side padding is `nav/spacing-inner-horizontal` (PMS: setting "outer" as padding gave a 28 px wide container) |
+| `nav/spacing-outer-horizontal` | desktop side padding (e.g. 1.5 rem) | fluid min = mobile padding; Lumos aliases it to `site/margin` — usually too wide for a nav. **Check first which classes read it**: in some Lumos versions it is the *width* of `nav_mobile_contain` / `nav_mobile_menu_wrap` and the side padding is `nav/spacing-inner-horizontal` (seen: setting "outer" as padding gave a 28 px wide container) |
 | `nav/spacing-outer-vertical` | 0 when the design's bar is flush with the top | Lumos floats the nav by default |
 | `nav/scrolled` (new, Number, 0) | 0 → 1 when scrolled | only when something must change only above a breakpoint IX3 cannot target (motion.md §2); for a fold that reverses mid-way, registered properties (motion.md §2b) |
 | `nav/hover` (new, Number, 0) | 0 → 1 while the bar is hovered | "links come back on hover" (motion.md §2b) |
@@ -66,7 +66,7 @@ Link props: `set_component_instance_prop_values` accepts `link_mode` url / email
 
 - **Links slide, never shrink.** The link row (`nav_bar_wrap`) is absolutely positioned at the right of the bar and keeps its full width; on scroll its content slides out and fades (motion.md). Folding a row's width (grid `1fr → 0fr`, width → 0) makes labels wrap mid-animation — the "jumpy" bar.
 - **Above the Menu button**: `nav_bar_wrap` z-index above `nav_button_wrap`, so a hidden button never catches clicks meant for the links.
-- **Menu button**: Webflow's navbar CSS `.w-nav[data-collapse="all"] .w-nav-button { display: block }` beats the class; to keep a grid, `[data-nav="component"] .w-nav [data-nav="menu-button"].w-nav-button { display: grid; }` in `Global | Custom Code`. Side padding on an inner element (`nav_button_roll`), not on the button, so a hidden button has no width.
+- **Menu button**: Webflow's navbar CSS `.w-nav[data-collapse="all"] .w-nav-button { display: block }` beats the class; the `display: grid` fix is in the custom-code block ([motion.md](motion.md) §4). Side padding on an inner element (`nav_button_roll`), not on the button, so a hidden button has no width.
 - **Menu / Close**: one roll — two rows in `nav_button_track`, `transform: translateY(calc(-50% * @var_<--_state---false id>))`; Lumos sets the state when the Navbar button is open (`data-state="open"`). Icons from the Icon Set (hamburger, close), hidden at `small` if the mobile design shows text only.
 - **Link-row breakpoint**: `nav_bar_wrap` `display: none` base, `grid` from the breakpoint where the links fit (often `large`, ≥ 1280). Below it the Menu button is always visible.
 - **Minimised variant**: `nav_bar_wrap` `display: none` at the breakpoint; Menu button fully visible.
@@ -85,7 +85,7 @@ nav_links_component (nav, aria-label Main)   flex column; Bar: row, height 100%,
       └─ Button (Text, icon hidden)
 ```
 
-Remove the starter's demo dropdowns, mega menu, search, locale dropdown and buttons first (check no other page uses `Menu`).
+Pattern B: remove the starter's demo dropdowns, mega menu, search, locale dropdown and buttons first (check no other page uses `Menu`). Pattern A keeps the dropdown structure and its CSS; remove only the demo content the design does not draw.
 
 Rules that came from owner review:
 - **One line between rows, all the same width.** A row that draws top and bottom lines doubles where two rows meet; a sub-row with its own thinner line makes three different weights.

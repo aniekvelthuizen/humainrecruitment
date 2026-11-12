@@ -3,7 +3,7 @@
 // No dependencies (Node 22+ for the global WebSocket). Uses the Google Chrome on the machine.
 //
 //   node hover-check.mjs <url> [--scope "#buttons"] [--button ".button_main_wrap"]
-//        [--line ".button_main_line"] [--char ".roll_char_inner|.my_char"] [--widths 1440,390] [--out ./hover-out]
+//        [--line ".button_main_line"] [--char ".roll_char_inner"  (several selectors with |, e.g. older builds: ".button_main_char_inner|.button_main_char")] [--widths 1440,375] [--out ./hover-out]
 //
 // Per width and per button: rect, height, text line-height, rest colour vs hover colour (text and icon),
 // line transform at rest / 0.3 s / end / after leave, first and last letter offset at 0.3 s and end,
@@ -16,11 +16,11 @@ import path from 'node:path';
 
 const args = process.argv.slice(2);
 const url = args.find((a) => !a.startsWith('--'));
-if (!url) { console.error('usage: node hover-check.mjs <url> [--scope sel] [--widths 1440,390]'); process.exit(2); }
+if (!url) { console.error('usage: node hover-check.mjs <url> [--scope sel] [--widths 1440,375]'); process.exit(2); }
 const opt = (n, d) => { const i = args.indexOf('--' + n); return i >= 0 ? args[i + 1] : d; };
 const scope = opt('scope', 'body'), btnSel = opt('button', '.button_main_wrap'), lineSel = opt('line', '.button_main_line');
-const charSels = opt('char', '.roll_char_inner|.button_main_char_inner|.button_main_char').split('|');
-const widths = opt('widths', '1440,390').split(',').map(Number), out = opt('out', './hover-out');
+const charSels = opt('char', '.roll_char_inner').split('|');
+const widths = opt('widths', '1440,375').split(',').map(Number), out = opt('out', './hover-out');
 fs.mkdirSync(out, { recursive: true });
 
 const chromePath = process.env.CHROME || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';

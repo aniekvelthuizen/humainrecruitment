@@ -112,3 +112,14 @@ Owner: on phones the text under the title in every hero moves up 16 px. `hero-ex
 
 ## 2026-11-12 — Spacing as the site rhythm (Aniek Velthuizen, via Claude)
 Text margin-top now 2.0625rem / phones 1.625rem (replaces 48 / 32), see `decisions/site.md` › «One rhythm for eyebrow → title → text».
+
+## 2026-11-12 — Logos come from the CMS (owner)
+Owner (Aniek): «Graag hier een cms collection van maken.» Until now the 8 logos were `Logo Tile` instances inside the Logo Marquee definition, so a logo change needed the Designer. Built by Aniek Velthuizen, via Claude. Plan: `references/plans/2026-11-12-client-logos-cms.md`.
+- **Collection Client Logos** (`6af611306da4efb79ce4a646`, slug `client-logos`): Name (company, also the alt text), Logo (image), Order (number). All required, help texts on each. 8 items, today's logos in today's order (Agristo 1 … TotalEnergies 8).
+- **Component `Client Logos · all`** (`2c102730-1d81-8823-0d89-bc8a26122484`, group CMS lists): Collection List, all items, sort Order ascending. Wrapper `u-display-contents` + `data-display="contents"`; the list (`w-dyn-items`) carries `logo-marquee_list` + `data-logo-marquee-list`, so it **is** the marquee's moving list; item › `Logo Tile` (Logo → Logo, Logo Alt → Name, Role on = no role, the CMS item is the list item). Empty state `u-display-none`.
+- **Logo Marquee**: the old `logo-marquee_list` div with 8 tiles is removed; `Client Logos · all` sits in the track. Embed unchanged: the script moves the list into the belt and clones it as before.
+- Route: list built and bound on Clients by API, **Create component** in the Designer (Claude in Chrome; the API refuses a bound Collection List), inserted into Logo Marquee, page copy removed.
+- No pick per page and no «show» switch: the three pages draw the same row; Draft/Archive hides a logo.
+- Checked on staging: Home, Clients, How it works render 8 logos in Order with the company names as alt, tiles without a role; `marquee-check.mjs` maxGap 0 at 1512 and 402, normal and slow network.
+- **Editing:** CMS › Client Logos: new item (Name, Logo, Order), publish. Nothing in the Designer.
+- Template page `/client-logos/<slug>` answered 404 on staging (2026-11-12), as Reviews.

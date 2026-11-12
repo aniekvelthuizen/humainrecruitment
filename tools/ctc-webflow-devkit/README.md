@@ -3,19 +3,28 @@
 A Claude Code plugin for building and changing Webflow sites from Figma designs, screenshots, copy documents or a brief with no design. The plugin carries the process; each client gets its own small repo that carries the site-specific context.
 
 ```
-plugin (this repo)                      client repo (one per client)
-├── skills/project      set up/refresh   ├── CLAUDE.md          10 lines: which site, what to read
-├── skills/build        the work loop    ├── project.json       the index: ids, flags, where things are
-├── skills/componentize per finished section├── references/     dumps of pages, classes, variables, components
+plugin (this repo)
+├── skills/project      set up/refresh
+├── skills/build        the work loop
+├── skills/componentize per finished section
 ├── skills/interactions behaviour + motion
 ├── skills/buttons      button + icons + hover
 ├── skills/navigation   nav + menu panel + scroll
 ├── skills/cards        cards on the Lumos card
 ├── skills/review       fresh agents check the work
 ├── skills/feedback     ClickUp tickets until "new" is empty
-├── references/         Lumos, Webflow + Figma MCP, verify│                      + figma/ plans/ log.md
-│   └── fixture/        measure a pending change in Chrome│
-└── hooks/              guard + staleness└── decisions/         what was decided, per site/component/page
+├── skills/seo          titles, descriptions, share images, noindex, SEO audit
+├── skills/accessibility WCAG 2.2 AA: build rules + axe/keyboard check
+├── references/         Lumos, Webflow + Figma MCP, verify
+│   └── fixture/        measure a pending change in Chrome
+└── hooks/              guard, staleness, library-site reminder
+
+client repo (one per client)
+├── CLAUDE.md           10 lines: which site, what to read
+├── project.json        the index: ids, flags, where things are
+├── references/         dumps of pages, classes, variables, components
+│                       + figma/ plans/ log.md
+└── decisions/          what was decided, per site/component/page
 ```
 
 ## Requirements
@@ -43,7 +52,7 @@ claude
 > /webflow-devkit:project
 ```
 
-Answers five questions (site, Figma source, class prefix, production, branching), dumps the site, writes the client repo. Commit it and push it to the org so colleagues clone it instead of re-creating it.
+Answers six questions (site, Figma source, class prefix, production, branching, shared library), dumps the site, writes the client repo. Commit it and push it to the org so colleagues clone it instead of re-creating it.
 
 **Existing client**
 
@@ -62,43 +71,40 @@ The session-start hook tells you how old the dumps are. Run `/webflow-devkit:pro
 - "Put the final copy from this PDF on the page"
 - "Add a FAQ under the pricing table, in the style of the site" (no design: the closest existing section is the reference)
 
-Build always shows a plan first (units of work, class names, existing classes it will touch) and waits for your OK. Then it builds, checks its own work against the design via Designer snapshots, and hands you the result for a screenshot-and-one-sentence polish loop.
+Build shows a plan first, waits for your OK only when something in it is risky, builds, checks its own work against the design, and hands you the result for a screenshot-and-one-sentence polish loop. Per section: build to the design's spacing → responsive → interactive parts working → component. When the page is done, one motion pass.
 
-The order per section is: build it to the design's spacing → make it responsive → make its interactive parts work → turn it into a component. Then the next section. When the whole page is done, one motion pass over it.
+## The other skills
 
-**Buttons**: "make the buttons like Figma", "add an icon switch to the button", "a nice hover on the buttons". The `buttons` skill inventories the looks the pages actually use (not every option in the style-guide set), reuses the site's button component with one Variant per look, builds an `Icon Set` component (every Figma icon as a variant, coloured by the text), and offers hover animations as a live demo to pick from.
-
-**Navigation**: "build the nav from Figma", "the menu overlay", "hide the links on scroll", "the nav should change colour over dark sections". The `navigation` skill reads the nav's states and the Figma prototype (what changes when), rebuilds the Lumos `Nav` in place with one link source (`Menu`) and the site's button for every link, and moves it with Webflow Interactions (scroll fold, colour per `data-section`) — links slide away instead of shrinking, and hover never moves a neighbour.
-
-**Cards**: "build the cards", "this card needs an image", "a Cards overview page". The `cards` skill first reuses the existing card that looks closest (plus a visibility toggle for what is missing); a genuinely new card starts as a duplicate of the Lumos `Card Primary`, every text is a Lumos Typography component, and props sit in folders (Variant → Content → Visual → parts → Link → Settings) with toggles, slots for repeated items and "show when filled" conditions.
-
-**Behaviour and motion**: the `interactions` skill covers both. Tabs, sliders and accordions are built working as part of their section — a tab row that does not switch is an unfinished section. Scroll reveals and small accents come once the page is complete, matching the system the site already uses. Brisk defaults, first state visible in the Designer, timing verified in a browser, one value tuned at a time.
-
-**Review**: "check what the agent built", "review the Program page", "is this done right?". The `review` skill sends a fresh `reviewer` agent per component — one that did not build it. It checks in a real browser and through the API whether the component works, is responsive, has logical spacing that matches the design, is Lumos-proof, carries no unneeded code and has tidy props. You get one short list in plain words (Broken → Off → Tidy → Your call); reply "fix all" or the numbers, and only those get fixed and re-checked.
-
-**Feedback**: "work on the feedback", "do the ClickUp tickets", "there are new tickets". The `feedback` skill checks that ClickUp is logged in as you, finds the project's Feedback list (saved in `project.json`), reads every ticket in *new* with its screenshot, fixes them with parallel fixer agents grouped by component, publishes once, and has fresh reviewers check each fix live. A ticket that passes goes to *in review* with a comment; one that waits on files or someone else goes to *forwarded* with what it needs. It re-checks *new* after every round and stops only when it is empty.
-
-**Components**: `componentize` runs as each section is finished, not at the end. It reuses what the site already has (a near-match becomes a variant, never a twin), breaks a section into its repeating parts, holds them in slots, and gives every component properties grouped into folders — except blocks meant to be edited centrally, like the nav, the footer and the home hero.
+| Skill | Say | What it does |
+|---|---|---|
+| `componentize` | runs per finished section | Reuses what exists, breaks a section into parts held in slots, props in folders. Rules: [componentize](skills/componentize/SKILL.md) |
+| `cards` | "build the cards", "this card needs an image" | Cards in the Lumos `Card Primary`, reuse by look, Typography texts |
+| `buttons` | "make the buttons like Figma", "a nice hover" | One button component with a Variant per look the pages use, an `Icon Set`, hover offered as a live demo |
+| `navigation` | "build the nav", "the menu overlay", "hide links on scroll" | Rebuilds the Lumos `Nav` in place, moves it with Webflow Interactions |
+| `interactions` | "make it move", "reveal on scroll" | Working tabs/sliders/accordions with their section; reveals once the page is complete. Motion tokens and order of mechanisms: [motion.md](references/motion.md) |
+| `review` | "check what the agent built", "is this done right?" | A fresh `reviewer` agent per component; one plain list (Broken → Off → Tidy → Your call), fixed and re-checked |
+| `feedback` | "work on the feedback", "do the ClickUp tickets" | Every ticket in *new* fixed, published, re-checked live, moved to *in review* or *forwarded* |
+| `seo` | new page or CMS template, "SEO check" | Title, description, share image, noindex; final SEO audit of the published site (structure, robots, headings, meta, media, links, performance, structured data) |
+| `accessibility` | "is this accessible", "WCAG", "check the focus states" | WCAG 2.2 AA rules for Webflow and Lumos; axe-core plus a keyboard walk on published pages, then the hand checks a tool cannot do |
 
 ## Guardrails (hooks)
 
 | Hook | What it does |
 |---|---|
 | SessionStart | Reports the age of the site dump (`dumpedAt` in `project.json`); nudges a refresh after 7 days |
-| PreToolUse | On a production site (`"production": true`, also the fallback when `project.json` cannot be read), anything that changes something **existing** prompts you with the change: editing, renaming or removing a class; updating, renaming or deleting a variable; removing a prop or variant; replacing site custom code or scripts; removing elements, unregistering components, changing prop defaults and replacing page custom code. A site that is not live yet never prompts. Creating new things never prompts. |
+| PreToolUse | On a live site (`"production": true`, also the fallback when `project.json` cannot be read), anything that changes something **existing** prompts you, in plain Dutch: what changes, where you see it, that visitors see it only after Publish, how to undo it. That covers editing, renaming or removing a class; updating, renaming or deleting a variable; removing a prop or variant; replacing site custom code or scripts; removing elements, unregistering components, changing prop defaults and replacing page custom code. Claude asks **Zeker weten?** in the chat first, with what it reaches ([guard.md](references/guard.md)). A site that is still being built never prompts. Creating new things never prompts. |
+| PostToolUse | On a site that installs a Shared Library (`"library"` in `project.json`), after setting classes or creating a CMS list, slot or page slot: reminds Claude that every library Accept strips library classes from the site's own elements, so hide/`contents` needs a `data-display` attribute and real styling belongs in a library component ([library-sites.md](references/library-sites.md)). Never blocks. |
 
-The guard is off while a client's `project.json` says `"production": false`; set it to `true` at launch and the guard is back on. Branching is off by default (`"branching": false`) because of a known Webflow bug; flip it when that is fixed.
+A new client repo starts at `"production": false`: no prompts while the site is being built. Set it to `true` at launch and the guard is on. Branching is off by default (`"branching": false`) because of a Webflow bug (reported Sept 2026; re-test before relying on branches).
 
-## Conventions the skills enforce
+## Where the rules live
 
-- **Follow what the site has.** Greenfield builds use [Lumos](references/lumos-rules.md). Existing sites keep their own system; the prefix and system are recorded in `project.json` by `/project`.
-- **Lumos first, custom code last.** Custom CSS/JS only when Lumos and Webflow cannot do the job; never for layout or sizing, and never because the API refused a value. See [lumos-rules.md](references/lumos-rules.md) §0.
-- **Sections are Lumos.** Every section is the Lumos Section build-up (wrapper › Lumos Section › Layout + Typography), closed into its own component. See [lumos/components.md](references/lumos/components.md).
-- **Two calls per block.** All classes of a block in one `data_style_tool` call, the whole element tree in one `data_element_builder` call. See [webflow-mcp-bulk.md](references/webflow-mcp.md).
-- **Plan, confirm, build, verify.** No mutation before the plan is confirmed. Every built unit is compared to its design before moving on.
-- **Decisions are written down.** A conflict between Figma and the site, a naming choice, a place where the design was impossible: it goes in `decisions/`, in the file for the page or component it concerns.
-- **Questions come in rounds**, numbered, each with a recommended answer. See [asking.md](references/asking.md).
-- **Friction goes back to the kit.** At hand-over the build skill files GitHub issues on this repo for anything the references got wrong or missed. What qualifies is in [kit-issues.md](references/kit-issues.md). Read the `from-build` issues weekly; each one is a one-file fix.
+- Follow what the site has; greenfield is [Lumos](references/lumos-rules.md), custom code last (§0). Sections are flat Lumos: [lumos/components.md](references/lumos/components.md).
+- Webflow API shapes and traps (two calls per block): [webflow-mcp.md](references/webflow-mcp.md). The Designer (own Chrome, queue, recipes): [designer/README.md](references/designer/README.md).
+- Plan, build, verify: [build](skills/build/SKILL.md), [verify.md](references/verify.md). Questions in numbered rounds with a recommended answer: [asking.md](references/asking.md).
+- Reuse, props, slots, CMS lists: [componentize](skills/componentize/SKILL.md).
+- Decisions go in the client's `decisions/`, per page or component.
+- **Friction goes back to the kit**: at hand-over the build skill files GitHub issues on this repo ([kit-issues.md](references/kit-issues.md)). Read the `from-build` issues weekly; each one is a one-file fix.
 
 ## Developing the plugin
 
@@ -108,7 +114,7 @@ claude --plugin-dir /path/to/webflow-devkit     # loads this checkout instead of
 
 Bump `version` in `.claude-plugin/plugin.json`, push to `main`. That is a release.
 
-Keep it lean: a skill is steps and completion criteria; everything a skill only sometimes needs lives in `references/` behind a link. Anything that mentions a specific client does not belong here.
+Keep it lean: a skill is steps and completion criteria; everything a skill only sometimes needs lives in `references/` behind a link. One rule, one home: elsewhere one sentence and a link. Anything that mentions a specific client does not belong here.
 
 ## Codex
 

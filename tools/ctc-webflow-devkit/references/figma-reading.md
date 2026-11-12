@@ -9,6 +9,7 @@
 - Dump a section frame's **direct children** before its content tree. Decoration (corner marks, crosshairs, bleeding rules) lives there as siblings of the content and is missed by a walk of the nested structure.
 - An exported vector path is the node's unrotated geometry. Confirm orientation from the render or a pixel decode of the export before building an asymmetric shape.
 - Which page a section belongs to is the page frame it sits in, not the page being worked on. Walk up to it.
+- A page instance shows **one state**. Tabs, views and open/closed states usually live as other variants of the same component set (the handover's Components section, desktop and mobile). Before calling a view "not designed" or a ticket "blocked on design", walk up from the instance to its main component and list every variant (Oct 2026: a Table / Line graph switch reported as blocked was two variants of one set).
 
 ## Mapping to CSS
 

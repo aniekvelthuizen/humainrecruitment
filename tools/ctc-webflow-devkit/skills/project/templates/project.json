@@ -1,6 +1,6 @@
 {
   "client": "{{client}}",
-  "production": true,
+  "production": false,
   "branching": false,
   "site": {
     "id": "{{siteId}}",
@@ -17,6 +17,12 @@
     "system": "lumos",
     "prefix": "",
     "notes": ""
+  },
+  "library": null,
+  "clickup": {
+    "folderId": "",
+    "feedbackListId": "",
+    "statuses": { "open": "new", "fixed": "in review", "waiting": "forwarded" }
   },
   "dumpedAt": "",
   "references": {

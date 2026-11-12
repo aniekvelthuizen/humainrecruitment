@@ -13,6 +13,9 @@ The small-screen layout is the one a reader expects, reached with the techniques
 
 Reaching for 4 first is the common mistake — a row of three cards does not become a slider, it becomes a column. When in doubt, stack.
 
+- Every block is responsive when first built, never on request: checked at every screen size, no overflow.
+- Two layouts at different widths = one responsive block. Two layouts an editor chooses = a variant ([components.md](components.md)).
+
 ## The six techniques
 
 1. **Wrap horizontal flexboxes.** The browser decides when to wrap; longer translations and bigger fonts still fit.
@@ -48,6 +51,8 @@ flex-direction: var(--row-medium, column);  /* horizontal on medium screens */
 grid-template-columns: repeat(calc(6 * var(--_responsive---large) + 4 * var(--_responsive---medium) + 2 * var(--_responsive---small) + 1 * var(--_responsive---xsmall)), minmax(0,1fr));
 ```
 
+*(house)* **Not through the API.** `--flex-medium` and friends are refused ("Invalid style property") and a `calc()` with two or more variables keeps only the first ([webflow-mcp.md](../webflow-mcp.md) §2). Type these values in the Designer UI ([designer/README.md](../designer/README.md) "Manual routes") and read the published CSS back; an API refusal is never a reason for a code embed ([lumos-rules.md](../lumos-rules.md) §0).
+
 Style both states on the main breakpoint first (the grid's columns and gap, the flex's direction and alignment), then paste the custom property; after that the Designer's own controls for alignment, column count and gap no longer apply. Add `flex-wrap: wrap` when the flexbox may wrap.
 
 *(house)* Whether a `medium` switch also covers the smaller sizes is decided by the site's Global Styles CSS, not by these docs; read it once per site and record it in `decisions/site.md`.
@@ -60,4 +65,4 @@ Style both states on the main breakpoint first (the grid's columns and gap, the 
 
 ## Screen heights *(house)*
 
-A sticky full-screen stage behind scrolling content (a photo that stays while a list scrolls over it) is `100lvh`, not `100svh`: with `svh` iOS shows a strip of the next section under the photo once the toolbar collapses (PMS). `dvh` for panels that must fit the visible screen (a nav panel).
+A sticky full-screen stage behind scrolling content (a photo that stays while a list scrolls over it) is `100lvh`, not `100svh`: with `svh` iOS shows a strip of the next section under the photo once the toolbar collapses. `dvh` for panels that must fit the visible screen (a nav panel).

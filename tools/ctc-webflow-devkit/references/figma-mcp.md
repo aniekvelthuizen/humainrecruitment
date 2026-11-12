@@ -10,7 +10,7 @@ Four tools do all the reading. Everything else on the server (code generation, C
 | Variables and styles used in a node | `get_variable_defs` with `nodeId` | Maps design tokens to names; match them to `references/variables.json`. |
 | Images and icons out of the design | `download_assets`, up to 20 nodes, `defaultFormat` png/svg, `defaultScale` | Returns export URLs. Feed them to Webflow with `asset_tool > upload_image_by_url` straight away; the URLs expire. |
 
-**Check an `export` before uploading it.** For a rotated or container-sized node (a group rotated −90° inside a `container-type: size` frame, e.g. background line art), `download_assets` returned an `export` that was a placeholder — a grey rectangle plus one huge frame path, none of the vectors. The `svgAssets` entry had the real vectors, unrotated. Take that one and apply the node's rotation yourself: wrap the content in `<g transform="translate(0 H) rotate(-90)">` (H = original width) and swap width and height. Upload a local file with `data_assets_tool > create_asset` + the S3 POST (webflow-mcp.md §9).
+**Check an `export` before uploading it.** For a rotated or container-sized node (a group rotated −90° inside a `container-type: size` frame, e.g. background line art), `download_assets` returned an `export` that was a placeholder — a grey rectangle plus one huge frame path, none of the vectors. The `svgAssets` entry had the real vectors, unrotated. Take that one and apply the node's rotation yourself: wrap the content in `<g transform="translate(0 H) rotate(-90)">` (H = original width) and swap width and height. Upload a local file with `data_assets_tool > create_asset` + the S3 POST (webflow-mcp.md §7).
 
 ## Node ids
 

@@ -2,8 +2,9 @@
   "name": "webflow-devkit-fixture",
   "private": true,
   "type": "module",
-  "description": "Load a published Webflow page, patch a pending change into it, measure and screenshot it at each width.",
+  "description": "Load a published Webflow page, patch a pending change into it, measure and screenshot it at each width. axe-core for the accessibility check.",
   "dependencies": {
+    "axe-core": "^4.14.0",
     "playwright-core": "^1.50.0"
   }
 }

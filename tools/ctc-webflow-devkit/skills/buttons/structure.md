@@ -2,12 +2,12 @@
 
 ## 1. Reuse the site's button
 
-A Lumos starter ships `Button Main` (group Button): `button_main_wrap` (`data-trigger="hover focus"`) › Clickable (link/button cover) + `button_main_element` (`data-button`) › `button_main_text` (+ `u-text-style-*`) + icon. Restyle it in place: every existing instance gets the design, and editors keep one thing to drag. Before removing anything from the definition (an empty icon slot, an underline element), check that no instance uses it (`query_elements` with `component_filter` on each page that has instances).
+A Lumos starter ships `Button Main` (group Button): `button_main_wrap` (`data-trigger="hover focus"` in the starter; set it to `hover`, motion.md §1) › Clickable (link/button cover) + `button_main_element` (`data-button`) › `button_main_text` (+ `u-text-style-*`) + icon. Restyle it in place: every existing instance gets the design, and editors keep one thing to drag. Before removing anything from the definition (an empty icon slot, an underline element), check that no instance uses it (`query_elements` with `component_filter` on each page that has instances).
 
 Final tree:
 
 ```
-button_main_wrap            data-trigger="hover focus"   ← colours, width, hover pseudo
+button_main_wrap            data-trigger="hover"         ← colours, width, hover pseudo
 ├─ Clickable                (Lumos, absolute cover; screen-reader text = Text prop)
 └─ button_main_element      data-button                  ← layout: padding, gap, lines, min-height
    ├─ button_main_text      + u-text-style-<base>  [data-roll]  ← label (Text prop)
@@ -35,7 +35,7 @@ Values below are the shape; the numbers come from the design.
 | Class | Base (default look) | Typical overrides per variant |
 |---|---|---|
 | `button_main_wrap` | `position: relative`; width per design (`100%` when Figma sizes it FILL, else `inline-block` auto); `background-color` + `color` = theme vars (the wrap carries the colours: the Clickable covers the element, so only the wrap gets `:hover`); `border-*-color` = theme border var (no border style here — the element draws it); `font-weight` = font weight var; radius from the design (a starter has `radius/round`); transition = the **hover-out** timing (`transition-property: all`, see §6) | width, display, colours, radius |
-| `button_main_wrap:hover` and `:focus-within` | only what the design changes on hover (colour, weight) + transition = the **hover-in** timing (the state being entered decides the transition) | per variant, or removed |
+| `button_main_wrap:hover` | only what the design changes on hover (colour, weight) + transition = the **hover-in** timing (the state being entered decides the transition) | per variant, or removed |
 | `button_main_element` | `display: flex; align-items: center`; `justify-content` (`space-between` when text and icon sit at opposite ends); padding, gap from variables (`space/*`); **`min-height: button-size/medium`** for the design height (§4); borders with `border-*-color: inherit` (none when the design has none); `border-radius: inherit` | borders off, padding, gap, min-height `0` for inline text buttons |
 | `button_main_text` | `flex-grow: 1` when spaced apart; **no `line-height`** (see §5); a hover shift as a trigger transform (motion.md §3) | `flex-grow: 0` |
 | `.button_main_text.u-text-style-<base>` (combo) | Text Style **mode** for the default look; `font-weight: inherit` | another Text Style mode per variant |

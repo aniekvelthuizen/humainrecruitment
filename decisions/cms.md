@@ -9,6 +9,7 @@ Collections on Humain (`6ae35364a38b2d71cab8c607`). Field list per collection: `
 | Rates | `6aec7e0776c2f357ba063c82` | `rates` | `6aec7e0776c2f357ba063cca` |
 | FAQ | `6aec7e08d367294edf22387c` | `faq` | `6aec7e08d367294edf2238c5` |
 | Team | `6aec7e093f98170046290894` | `team` | `6aec7e093f981700462908c0` |
+| Client Logos | `6af611306da4efb79ce4a646` | `client-logos` | — |
 | Experts (untouched) | `6ae719db261aa6a726507c82` | `experts` | `6ae719db261aa6a726507c88` |
 
 ## Field slugs
@@ -125,3 +126,6 @@ Open: for the owner, as this is not settled by the API alone; see the unit repor
 
 ## 2026-11-12 — Reviews collection
 Collection Reviews (`6af5eab6b7bd7e385981a9f8`, slug `reviews`): name, slug, quote (RichText), role, company, avatar. Used by `Reviews · picked` (`decisions/components/reviews-picked.md`). Its template page `/reviews/<slug>` answered 404 on staging on 2026-11-12 (reviewer). Aniek Velthuizen, via Claude.
+
+## 2026-11-12 — Client Logos collection
+Collection Client Logos (`6af611306da4efb79ce4a646`, slug `client-logos`): name, slug, logo (Image), order (Number). Used by `Client Logos · all` in Logo Marquee (`decisions/components/hero-experts.md`). Field slugs: `name`, `slug`, `logo`, `order`. Aniek Velthuizen, via Claude.

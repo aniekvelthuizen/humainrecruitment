@@ -14,6 +14,14 @@
           { "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/guard.py\"" }
         ]
       }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "mcp__(plugin_[a-z-]+_|claude_ai_)?[Ww]ebflow__data_(element_tool|element_builder|component_builder|whtml_builder)",
+        "hooks": [
+          { "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/library-site.py\"" }
+        ]
+      }
     ]
   }
 }

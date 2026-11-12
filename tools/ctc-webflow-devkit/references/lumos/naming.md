@@ -15,7 +15,7 @@ footer_link_wrap      a child group inside footer_wrap; its children are footer_
 ```
 
 - The type prefix is unique per component; the element names (`layout`, `content`, `visual`, `title`, `text`) repeat everywhere.
-- Exceptions to "every element gets a custom class": a slot carrying `u-display-contents`, and a base component of only one or two elements that lives on a utility (the Image component).
+- Exceptions to "every element gets a custom class": a slot carrying `u-display-contents` (installing a Shared Library: also `data-display`, [library-sites.md](../library-sites.md)), and a base component of only one or two elements that lives on a utility (the Image component).
 - *(house)* Some sites carry a project prefix in front of every custom class. `project.json` → `css.prefix` and `references/classes.txt` show what this site does; follow it exactly. Lumos itself has no prefix.
 
 ## Utility class — a reusable bundle of styles

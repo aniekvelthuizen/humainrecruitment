@@ -20,7 +20,7 @@ Read first: `project.json`, `decisions/site.md`, `references/log.md`, `reference
 
 ## 2. The Feedback list
 
-- `project.json` → `clickup.feedbackListId` when it is there.
+- `project.json` → `clickup.feedbackListId` when it is filled (the project scaffold creates the key empty).
 - Otherwise find it: the client's folder (`clickup_search` on the client name, or `clickup_get_workspace_hierarchy`), the list named like *Feedback*. A board link from the user carries the list id (`/li/<id>`). Read its statuses with `clickup_get_list`.
 - Map three statuses: **open** (`new`), **fixed** (`in review`), **waiting on someone else** (`forwarded`). Different names: pick the closest, say them in one line, carry on.
 - Write it to `project.json` so the next run asks nothing:
@@ -30,9 +30,11 @@ Read first: `project.json`, `decisions/site.md`, `references/log.md`, `reference
 
 - `clickup_filter_tasks` with `list_ids: [<list>]`, `statuses: ["new"]`. Count them and say the number.
 - Per ticket: `clickup_get_task` with description, attachments and comments. Marker.io tickets carry the page URL, browser, window width and pixel ratio in the description, and the screenshot with the red marker as an attachment. A ticket that came **back** to new: read its latest comments first, it is a fix the reporter rejected.
-- Many tickets: one general-purpose agent downloads every screenshot (`clickup_download_task_attachment`) into `<scratchpad>/feedback/<taskid>-<n>.<ext>`, read-only on ClickUp. Write `<scratchpad>/feedback/index-<round>.md`: per ticket the custom id (FOR-12), task id, page, reporter's width, the ask in one line, the screenshot file.
+- Many tickets: one general-purpose agent downloads every screenshot (`clickup_download_task_attachment`) into `<scratchpad>/feedback/<taskid>-<n>.<ext>`, read-only on ClickUp. Write `<scratchpad>/feedback/index-<round>.md`: per ticket the custom id (e.g. ABC-12), task id, page, reporter's width, the ask in one line, the screenshot file.
 - The scratchpad is emptied when the session restarts: the plan file (§5) carries the index's content, and after a restart the same download brief refills the same paths. Resumed fixers are told that their evidence folder is gone.
 - Look at every screenshot yourself before sorting. The marker shows *which* element; the text is often three words.
+- **Marker.io file links** (`files.marker.io/f/…` in the description) return a login page to curl and to the ClickUp download. They open in the user's Chrome (a redirect to a signed S3 URL): open the link there and screenshot it to disk. To put such a file on the site, upload it from that tab ([webflow-mcp.md](../../references/webflow-mcp.md) §7).
+- Before sorting a ticket as `blocked` because a state or view seems undesigned, look for it as another variant of the component set ([figma-reading.md](../../references/figma-reading.md)).
 
 ## 4. Sort
 
@@ -44,7 +46,7 @@ Read first: `project.json`, `decisions/site.md`, `references/log.md`, `reference
 | Needs the user's OK (risky, see asking.md) | Asked in one numbered round with a recommendation; the ticket stays in new until answered. |
 | Same as another ticket | Fixed once; both get the comment. |
 
-**Never call a visual ticket a capture glitch, "not reproducible" or "waiting for assets" before you measured the live element against Figma at the reporter's width** — size, proportions, crop, position. Only a match after that comparison is "not reproducible", and the comment says what was compared. (Forest3, Oct 2026: two "squished image" tickets were forwarded as glitches; the images really were squished.)
+**Never call a visual ticket a capture glitch, "not reproducible" or "waiting for assets" before you measured the live element against Figma at the reporter's width** — size, proportions, crop, position. Only a match after that comparison is "not reproducible", and the comment says what was compared. (Oct 2026: two "squished image" tickets were forwarded as glitches; the images really were squished.)
 
 ## 5. Plan and fix
 
@@ -52,19 +54,19 @@ Read first: `project.json`, `decisions/site.md`, `references/log.md`, `reference
 - One `webflow-devkit:builder` agent per unit, in parallel. Brief: plugin root, the plan file and its unit, the index and screenshots, the evidence folder `<scratchpad>/feedback/fix/<unit>/`, and:
   - touch only owned components; a fix that needs another unit's component is reported, not done;
   - a change to a shared class reaches every use: check the instance count first, prefer a variant or combo when one use should change;
-  - verify with the fixture (change patched into staging) at 1440, 992, 768, 375 **and the reporter's width**, before/after crops saved;
+  - verify with the fixture (change patched into staging) at 1440, 992 (narrowest desktop), 768, 375 **and the reporter's width**, before/after crops saved;
   - Designer-only steps go to `references/designer-queue.md`, not done;
   - return per ticket: id, `fixed` / `designer` / `owner` / `blocked`, Was → Now measured, evidence file.
 - **One writer for shared site code.** The global custom-code component, site scripts and IX3 are written by this session only, from the source file under `references/`, read back identical. Fixers hand over the code; they don't write it: the source file in `references/` is updated and the log line says **ready to write embed `references/<block>/<file>.html` → <embed id>**. Write all hand-overs in one pass once the fixers that touch them are done. A large write (≈ 45 KB) failed to send from a helper agent: write those from this session.
 - Other sessions on the same site (`ListAgents`): tell them before you use the Designer, write shared code or publish, and wait for their "free". Their half-finished work goes live with your publish too. A message can sit unseen while the other session's user has to approve it (another permission mode): give it a fixed wait, tell the user which session has not answered, then go on with a staging-only publish.
 - **Long runs on a Mac:** sleep stops every running agent ("Your computer went to sleep mid-response"). At the start of a round run `caffeinate -dims` in the background (stop it at the end), and restart each agent that dropped as its notice comes in.
-- Designer-only steps: one pass after the API fixers, in the user's Chrome ([webflow-mcp.md](${CLAUDE_PLUGIN_ROOT}/references/webflow-mcp.md) §11). No Chrome on this machine: they stay on the user's list, and their tickets stay in new.
+- Designer-only steps: one pass after the API fixers, in the client's Designer Chrome ([designer/README.md](${CLAUDE_PLUGIN_ROOT}/references/designer/README.md) "Queue, then one pass"). No Chrome on this machine: they stay on the user's list, and their tickets stay in new.
 
 ## 6. Publish, review, close
 
-- **Publish once**, when every fixer and the Designer pass are done (a publish during a Designer pass ships its temporary steps). Staging only. Webflow allows one publish a minute.
+- **Publish once**, by the rule in [review](../review/SKILL.md) §6 (after every fixer and the Designer pass; staging only).
 - A **fresh** `webflow-devkit:reviewer` per unit, on the published staging: brief it with the tickets, their screenshots and the reporter's widths. It checks that each ask is met as the reporter sees it, compares with Figma, and checks the neighbours did not move. Up to four at a time.
-- **Pass** → status **fixed** (`clickup_execute_operator` `task.update_many` with `status_label`, or `clickup_update_task`), plus a comment per ticket: what changed in the reporter's words, Was → Now, the widths checked, side effects ("the same card on GOP got this too"). Anything only a human can prove (a real form submission, a Mac-only render) is asked for in the same comment.
+- **Pass** → status **fixed** (`clickup_execute_operator` `task.update_many` with `status_label`, or `clickup_update_task`), plus a comment per ticket: what changed in the reporter's words, Was → Now, the widths checked, side effects ("the same card on the About page got this too"). Anything only a human can prove (a real form submission, a Mac-only render) is asked for in the same comment.
 - **Fail** → back to its fixer with the reviewer's evidence; round 2 is published and reviewed the same way. Two failed fixes on the same ticket: stop and give the user options.
 - A ticket moves only after a live pass — never on the fixer's word, never on a patched-in test alone.
 

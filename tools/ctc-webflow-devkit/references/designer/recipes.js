@@ -4,8 +4,9 @@
 //   async () => { await wfd.ready(); return await wfd.bindProp('Text', 'Title'); }
 // Every helper returns a short string or object to read back; none takes a snapshot.
 // Status per helper: "proven" = the selectors and event sequence worked on PMS (Oct 2026, evidence in
-// README.md); "untested" = built from the same selectors but never run as one call. This file itself is a
-// clean rewrite of those snippets: until README.md lists a test run, treat every helper as to-be-confirmed.
+// README.md); "tested" = run as one call in the README's test run (16 Oct 2026, PMS, wfd 1.1.0);
+// "untested" = built from the same selectors but never run as one call. Helpers added or changed after that
+// run are to-be-confirmed until README.md lists a newer one.
 // A recipe that fails twice: do the item by hand, then fix it here.
 () => {
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));

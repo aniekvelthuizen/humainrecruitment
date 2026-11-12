@@ -10,6 +10,7 @@ Page(s): <name (id)> — Figma page frame: <frame name (node id)>
 Insertion: <parent element, before/after which element>
 Neighbours' system: <what the sections above/below on this page use>
 Responsive: <per breakpoint, how each part reflows — columns 4→2→1, rows wrap, columns stack. Name any scroller/slider and why reflow could not work>
+A11y: <per unit: landmark or section tag (named or not), heading levels, lists, the name of every icon-only control (fixed `aria-label` or `u-sr-only` prop), what opens and closes (native Webflow/Lumos part or custom, with Escape and focus return), decorative vs informative images, any autoplay and its pause button. Rules: skills/accessibility/SKILL.md §1>
 
 ## Reuse
 
