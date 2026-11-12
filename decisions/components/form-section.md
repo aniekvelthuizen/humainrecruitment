@@ -47,7 +47,7 @@ Placeholders on First and Last name: Figma's text is empty, so they are blank. C
 Button Main with Button Type off and Link set to an empty URL: Clickable renders `<button type="submit">` only when the URL is empty. `type: null` only reset it to the default `#`, which would render a link that does not submit. Check the published HTML.
 
 ## 2026-11-05 — Details, map, panel
-Details grid `repeat(auto-fit, minmax(min(100%, 17.5rem), 1fr))`: two columns at 1512, one when the email no longer fits. Values wrap anywhere on narrow phones. Plain text as Figma, no `mailto:` or `tel:`.
+Details grid `repeat(auto-fit, minmax(min(100%, 17.5rem), 1fr))`: two columns at 1512, one when the email no longer fits. Values wrap anywhere on narrow phones. Plain text as Figma, no `mailto:` or `tel:` (replaced 2026-11-12, see «Email and phone clickable»).
 Map asset `6aec90c88eaaba525302ea52`: the Figma image is a screenshot of a map tool with its panels, and the frame crops it. Cropped to the same part (1968 × 1007 from 870, 680, then 1352 wide), JPEG 183 KB. Figma's 13 px strip of the tool's panel at the left edge is left out. Height 346, 256 ≤ 767.
 Panel 676 wide; Figma's is 708, past the page margin.
 
@@ -82,3 +82,8 @@ On the class, not per variant (a variant cannot be targeted by the style API): C
 
 ## 2026-11-12 — Wider column gap (Aniek Velthuizen, via Claude)
 Owner: 40 px more space between the form and «Why join the pool?». `form-section_layout` column gap is now `calc(space/7 + 2.5rem)`: 32 → 72 at 1512, both columns 676 → 656. Row gap unchanged (one row on desktop; ≤ 991 the medium row gap `space/8` applies, 48 at 375). On the class, so Contact's details column moves 40 px too. Read-back shows only the variable; published as the calc, checked on staging at 1512, 1000 and 375.
+
+## 2026-11-12 — Email and phone clickable (Aniek Velthuizen, via Claude)
+Owner: «email en tel klikbaar maken». The Email and Phone value paragraphs now sit in a Link Block each (`form-section_detail-link`, Navigator «Email Link» / «Phone Link»), bound to two new Link props in Contact Details: **Email Link** (email mode, default `info@humainrecruitment.com`) and **Phone Link** (phone mode). Text and link are separate props because a Link prop cannot take its target from a text prop; the tooltips say to keep them equal.
+Look unchanged (block, colour inherit, no underline); underline on hover, 1 px, offset 0.2em, as the text links elsewhere. Resume variant hides `_details`, so it is not affected.
+Phone Link default is `+31000000000` until the real number is known: Webflow turned the placeholder `+31XXXXXXXXX` into `tel:+31999999999`, which could ring a real line; no Dutch number starts with 0 after +31. **To do when the number comes:** set Phone and Phone Link together.
