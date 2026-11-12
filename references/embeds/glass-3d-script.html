@@ -53,10 +53,11 @@
     host.appendChild(stage);
     // Follow the picture: re-measured every frame (not only on resize), so the stage stays on it
     // whatever moves the picture inside the section. Returns true when the size changed.
-    let box = '';
+    let box = '', S = null;
     const placeStage = () => {
       const r = img.getBoundingClientRect(), h = host.getBoundingClientRect();
-      const l = Math.round(r.left - h.left - host.clientLeft), tp = Math.round(r.top - h.top - host.clientTop);
+      const dy = S && S.offsetY ? S.offsetY(r) : 0;   // scroll-linked offset (sticky bars)
+      const l = Math.round(r.left - h.left - host.clientLeft), tp = Math.round(r.top - h.top - host.clientTop + dy);
       const w = Math.round(r.width), ht = Math.round(r.height), next = `${l},${tp},${w},${ht}`;
       if (next === box) return false;
       const sized = !box.endsWith(`,${w},${ht}`);
@@ -108,7 +109,7 @@
       });
     }
 
-    const S = kind === 'bars' ? bars() : donut();
+    S = kind === 'bars' ? bars() : donut();
     const fov = 2 * Math.atan(Math.tan(THREE.MathUtils.degToRad(S.fov) / 2) * GROW);
     const camera = new THREE.PerspectiveCamera(THREE.MathUtils.radToDeg(fov), 1, 0.1, 100);
     camera.position.copy(S.cam); camera.lookAt(S.target);
@@ -124,11 +125,12 @@
     addEventListener('resize', resize); resize();
 
     // Loop only while in view and the tab is visible; t counts visible time only.
-    let visible = false, raf = 0, last = 0, t = 0, shown = false;
+    let visible = false, raf = 0, last = 0, t = 0, shown = false, lastY = scrollY;
     const frame = (now) => {
-      t += Math.min((now - last) / 1000, 0.05); last = now;
+      const dt = Math.min((now - last) / 1000, 0.05); t += dt; last = now;
+      const scrollSpeed = dt ? (scrollY - lastY) / dt : 0; lastY = scrollY;   // px per second, + down / - up
       if (placeStage()) resize();
-      S.tick(t); renderer.render(scene, camera);
+      S.tick(t, dt, scrollSpeed); renderer.render(scene, camera);
       if (!shown) {   // cross-fade from the poster after the first real frame
         shown = true;
         img.style.transition = 'opacity .6s cubic-bezier(.22,1,.36,1)';
@@ -138,10 +140,11 @@
     };
     const update = () => {
       cancelAnimationFrame(raf);
-      if (visible && !document.hidden) { last = performance.now(); raf = requestAnimationFrame(frame); }
+      if (visible && !document.hidden) { last = performance.now(); lastY = scrollY; raf = requestAnimationFrame(frame); }
     };
-    new IntersectionObserver(([e]) => { visible = e.isIntersecting; update(); }, { rootMargin: '200px 0px' }).observe(img);   // the picture, not the stage: the stage follows it
+    new IntersectionObserver(([e]) => { visible = e.isIntersecting; update(); }, { rootMargin: '100% 0px' }).observe(img.parentElement);   // not the stage: the stage follows the picture
     document.addEventListener('visibilitychange', update);
+    if (S.offsetY) addEventListener('scroll', () => { if (visible) placeStage(); }, { passive: true });   // sticky: follow the scroll itself, not only the next frame
 
     /* Donut: 7 segments, pieces float together on first view, one turn per 40 s. */
     function donut() {
@@ -168,9 +171,16 @@
         pieces.push({ mesh, dir: new THREE.Vector3(Math.cos(mid), Math.sin(mid), 0), i: pieces.length });
         a = a0;
       }
+      // Spin: one turn per 40 s, clockwise. Scrolling down speeds it up clockwise (up to 7x), scrolling up
+      // turns it the other way (up to 5x); afterwards it eases back to the calm clockwise turn.
+      const BASE = Math.PI * 2 / 40, BOOST = 6, FULL = 1500;   // FULL: scroll speed (px/s) that gives the full boost
+      let angle = 0, boost = 0;
       return {
         fov: 30, cam: new THREE.Vector3(0, 0, 11)   /* owner: a little smaller than the text column */, target: new THREE.Vector3(0, 0, 0),
-        tick(t) {
+        tick(t, dt, scrollSpeed) {
+          const want = BOOST * Math.max(-1, Math.min(1, scrollSpeed / FULL));
+          boost += (want - boost) * (1 - Math.exp(-dt * (Math.abs(want) > Math.abs(boost) ? 6 : 1.4)));   // quick up, slow settle
+          angle += dt * BASE * (1 + boost);
           for (const p of pieces) {
             const off = 1 - easeOutQuint(clamp01((t - I.delay - p.i * I.gap) / I.dur));
             p.mesh.position.copy(p.dir).multiplyScalar(I.out * off);
@@ -178,7 +188,7 @@
             p.mesh.rotation.set(I.turn * off * p.dir.y, -I.turn * off * p.dir.x, 0);
             p.mesh.visible = t > I.delay + p.i * I.gap - 0.05;
           }
-          spin.rotation.z = -t * (Math.PI * 2 / 40);
+          spin.rotation.z = -angle;
           tilt.rotation.x = -0.38 + Math.sin(t * 0.35) * 0.03;
         }
       };
@@ -199,7 +209,17 @@
         return bar;
       });
       const UP_GAP = 0.16, UP = 0.75, HOLD = 4.6, DOWN_GAP = 0.08, DOWN = 0.45, LOOP = 6;
+      // Sticky (owner): the bars start over the title as designed; once their box is centred in the view
+      // they stay there while the page scrolls, until the box top sits OVERLAP of its height above the
+      // title's bottom: they end between the title and the text below, just over the title.
+      const OVERLAP = 0.3;
       return {
+        offsetY(r) {
+          const title = img.parentElement.getBoundingClientRect(), next = img.parentElement.nextElementSibling;
+          let end = title.bottom - r.height * OVERLAP - r.top;
+          if (next) end = Math.min(end, next.getBoundingClientRect().top - r.height * 0.95 - r.top);   // never onto the text below
+          return Math.max(0, Math.min(end, (innerHeight - r.height) / 2 - r.top));
+        },
         fov: 30, cam: new THREE.Vector3(-5.5, 6, 16), target: new THREE.Vector3(-0.3, 2.2, 0),
         tick(t) {
           const lt = t % LOOP;
