@@ -135,3 +135,9 @@ Why: the client fills the fields without formatting steps, CMS binding works, an
 
 ## 2026-11-05 — Embeds may hold JS (Aniek Velthuizen, via Claude)
 Section embeds hold CSS, and a small script when the block needs one to work (Stage Slider, Opportunity List). Variant-scoped `::before`/`::after` publish on this site as `.x:after:where()`, which matches nothing: use the section's embed for those.
+
+## 2026-11-12 — Favicon and webclip from one 256 px source (Aniek Velthuizen, via Claude)
+- Owner supplied `favicon.png` (24 × 24) and `webclip.png` (227 × 227). Webflow's Site settings › Icons now takes **one** square upload and generates every size (favicon light/dark 32, 48, apple-touch 180, 192, 512).
+- Uploaded `references/assets/icons/webclip-256.png` (the webclip scaled to 256) for all three slots; the 24 px favicon is kept as source only (`favicon-source-24.png`, `favicon-32.png`), since Webflow's downscale of the larger file is sharper than an upscaled 24.
+- 512 is upscaled from 256. For a crisper PWA/large icon, ask the owner for a ≥ 512 px original and re-upload in the same place.
+- Not settable through the Data API: done in the dashboard (Claude in Chrome).
