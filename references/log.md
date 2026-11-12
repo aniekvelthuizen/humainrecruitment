@@ -449,3 +449,4 @@
 - Round 3 (owner: one side higher, uneven space round the photo): skew replaced by a real 3D pose while moving (`--cards-3d-pose`, desktop and ≤ 767), turntable turn ±10°. Embed rewritten from the source, published to staging 1×.
 - 2026-11-12 (Aniek, via Claude): Team Fan scroll turn now runs out for about a second after the scroll stops (owner). Published to staging.
 - Round 4 (owner): zigzag added (`cards-3d-zig`, ±1rem / 7 s, ≤ 767 ±0.5rem). Embed rewritten from the source, published to staging 2×.
+- 2026-11-12 (Aniek, via Claude): owner: turquoise two-tone headings went dimmed → white → turquoise. Now only the `sticky-steps_accent` words dim and light up; the white part stays white. Embed `141a108e-…` read first (equal to the old source), rewritten from `references/embeds/muted-heading-sweep.html`, read back identical, published to staging 1×; `muted-heading-check.mjs` on Consulting Services and How it works passes. Record: `decisions/motion.md`.

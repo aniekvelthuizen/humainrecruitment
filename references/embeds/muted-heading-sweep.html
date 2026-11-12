@@ -1,12 +1,13 @@
 <style>
-/* Two-tone headings light up (decisions/motion.md): in a heading with a grey (_muted) or turquoise (sticky-steps_accent) part, and in the Card Grid closing statement and closing text, the words start dimmed (the grey of the _muted part; half the text colour where there is none). When the block scrolls into view the words light up one by one to their own colour; the _muted part stays grey. Runtime only; the Designer shows the finished colours. */
-html[data-muted-gate] :is(h1,h2,h3,h4,.card-grid_statement-text,.card-grid_closing-text):has(>[class*="_muted"],>.card-grid_statement-muted,>.sticky-steps_accent):not([data-muted])>:not([class*="_muted"],.card-grid_statement-muted){color:color-mix(in srgb,currentColor 50%,transparent)}
+/* Two-tone headings light up (decisions/motion.md): in a heading with a grey (_muted) part, and in the Card Grid closing statement and closing text, the words start dimmed (the grey of the _muted part). When the block scrolls into view the words light up one by one to their own colour; the _muted part stays grey. In a heading with a turquoise (sticky-steps_accent) part only the turquoise words start dimmed (half the heading colour) and light up; the rest of the heading stays as designed. Runtime only; the Designer shows the finished colours. */
+html[data-muted-gate] :is(h1,h2,h3,h4,.card-grid_statement-text,.card-grid_closing-text):has(>[class*="_muted"],>.card-grid_statement-muted):not([data-muted])>:not([class*="_muted"],.card-grid_statement-muted){color:color-mix(in srgb,currentColor 50%,transparent)}
+html[data-muted-gate] :is(h1,h2,h3,h4):has(>.sticky-steps_accent):not(:has(>[class*="_muted"])):not([data-muted])>.sticky-steps_accent{color:color-mix(in srgb,currentColor 50%,transparent)}
 [data-muted="ready"] [data-muted-word]{color:var(--mm-from)}
 [data-muted="in"] [data-muted-word]{transition:color .6s cubic-bezier(.45,0,.2,1) calc(var(--mm-delay,.1s) + var(--mm-i,0) * var(--mm-step,.14s))}
 </style>
 <script>
 (function(){
-var d=document,h=d.documentElement,SEL=':is(h1,h2,h3,h4,.card-grid_statement-text,.card-grid_closing-text):has(>[class*="_muted"],>.card-grid_statement-muted,>.sticky-steps_accent)',MUTED=':is([class*="_muted"],.card-grid_statement-muted)';
+var d=document,h=d.documentElement,SEL=':is(h1,h2,h3,h4,.card-grid_statement-text,.card-grid_closing-text):has(>[class*="_muted"],>.card-grid_statement-muted,>.sticky-steps_accent)',MUTED=':is([class*="_muted"],.card-grid_statement-muted)',ACCENT='.sticky-steps_accent';
 if(h.classList.contains('wf-design-mode')||!('IntersectionObserver' in window)||!(window.CSS&&CSS.supports&&CSS.supports('selector(:has(a))'))||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
 h.setAttribute('data-muted-gate','');
 var guard=setTimeout(function(){h.removeAttribute('data-muted-gate')},4000);
@@ -14,8 +15,8 @@ function rgba(c){var m=c.match(/[\d.]+/g)||[0,0,0];return[+m[0],+m[1],+m[2],m[3]
 function css(c){return'rgba('+c.join(',')+')'}
 function done(el){el.setAttribute('data-muted','done');['--mm-from','--mm-delay','--mm-step'].forEach(function(p){el.style.removeProperty(p)})}
 /* Split every text node outside the _muted part into word spans; returns the word count */
-function split(el){
-  var walk=d.createTreeWalker(el,NodeFilter.SHOW_TEXT,{acceptNode:function(t){var p=t.parentElement;return p&&p!==el&&p.closest(MUTED)&&el.contains(p.closest(MUTED))?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT}}),nodes=[],n,i=0;
+function split(el,only){
+  var walk=d.createTreeWalker(el,NodeFilter.SHOW_TEXT,{acceptNode:function(t){var p=t.parentElement,a;if(only){a=p&&p.closest(ACCENT);return a&&el.contains(a)?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT}return p&&p!==el&&p.closest(MUTED)&&el.contains(p.closest(MUTED))?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT}}),nodes=[],n,i=0;
   while((n=walk.nextNode()))nodes.push(n);
   nodes.forEach(function(t){
     if(!/\S/.test(t.nodeValue))return;
@@ -44,7 +45,8 @@ function init(){
     var m=el.querySelector(':scope>'+MUTED),from;
     if(m){var cs=getComputedStyle(m),c=rgba(cs.color);c[3]*=+cs.opacity;from=c}
     else{from=rgba(getComputedStyle(el).color);from[3]*=.5}
-    var n=split(el);
+    /* Turquoise heading without a grey part: only the accent words dim and light up */
+    var n=split(el,!m&&!!el.querySelector(':scope>'+ACCENT));
     if(!n){done(el);return}
     el._mmWords=n;
     el.style.setProperty('--mm-from',css(from));
