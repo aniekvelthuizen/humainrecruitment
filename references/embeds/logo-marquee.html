@@ -1,0 +1,17 @@
+<style>
+@keyframes logo-marquee{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+@keyframes logo-marquee-belt{from{transform:translateX(0)}to{transform:translateX(calc(var(--logo-marquee-shift,100%)*-1))}}
+[data-logo-marquee-list]{animation:logo-marquee 40s linear infinite}
+[data-logo-marquee-belt]{display:flex;flex:none;animation:logo-marquee-belt 40s linear infinite}
+[data-logo-marquee-belt]>[data-logo-marquee-list]{animation:none}
+@media (prefers-reduced-motion:reduce){[data-logo-marquee-list]{animation:none;flex:1 1 100%;flex-wrap:wrap;justify-content:center}[data-logo-marquee-belt]{display:contents;animation:none}[data-logo-marquee-clone]{display:none}}
+</style>
+<script>
+(function(){
+function belt(t){var b=t.querySelector('[data-logo-marquee-belt]');if(b)return b;b=document.createElement('div');b.setAttribute('data-logo-marquee-belt','');t.querySelectorAll('[data-logo-marquee-list]').forEach(function(l){b.appendChild(l)});t.appendChild(b);return b}
+function fill(t){var l=t.querySelector('[data-logo-marquee-list]:not([data-logo-marquee-clone])');if(!l)return;var b=belt(t),w=l.getBoundingClientRect().width;if(w<100)return;b.style.setProperty('--logo-marquee-shift',w+'px');var need=Math.ceil(t.clientWidth/w)+1,have=b.querySelectorAll('[data-logo-marquee-list]').length;for(var i=have;i<need;i++){var c=l.cloneNode(true);c.setAttribute('data-logo-marquee-clone','');c.setAttribute('aria-hidden','true');c.removeAttribute('role');c.querySelectorAll('img').forEach(function(m){m.alt='';m.removeAttribute('loading')});c.querySelectorAll('[role]').forEach(function(r){r.removeAttribute('role')});b.appendChild(c)}}
+function all(){document.querySelectorAll('[data-logo-marquee-track]').forEach(fill)}
+document.querySelectorAll('[data-logo-marquee-list] img').forEach(function(m){if(m.loading==='lazy')m.loading='eager';if(!m.complete)m.addEventListener('load',all)});
+all();window.addEventListener('load',all);var to;window.addEventListener('resize',function(){clearTimeout(to);to=setTimeout(all,200)});
+})();
+</script>
