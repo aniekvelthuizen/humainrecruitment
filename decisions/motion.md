@@ -196,3 +196,6 @@ Owner (Aniek): a round outline button with only an icon (no label) fills complet
 - **Where:** style API on both classes; the Stage Slider CSS embed (`3838b604-…be48`) got the two colours in its `transition` line (it overrides the class transition), source `references/embeds/stage-slider-style.html`. The API read-back shows a single variable for `color-mix`; the published CSS has the full value (same lesson as the button shadow).
 - Measured on staging: Stage Slider next arrow transparent → white, icon white → `#030b1b`, half-way at 150 ms, nudge +4 px; prev at the start (disabled) stays empty. Testimonial (Home, Hire an Expert) transparent → `#030b1b`, arrow → white; dark example white fill. Not checked: Safari, touch devices.
 - A new round icon-only outline button should reuse the same two `color-mix` lines.
+
+## 2026-11-12 — Exception: Team Fan turns with the scroll (owner)
+Owner (Aniek): the Project Controls fan «een heel klein beetje draaien tijdens het scrollen», down = right, up = left. Half a fan step over the whole pass, scroll-linked, desktop with a mouse only, off for reduced motion. Done by Aniek Velthuizen with Claude. Details: `decisions/components/team-fan.md`.

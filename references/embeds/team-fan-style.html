@@ -1,0 +1,27 @@
+<style>
+[data-team-fan][data-space-top="main" i] { padding-top: var(--_spacing---section-space--main); }
+[data-team-fan][data-space-top="none" i] { padding-top: 0; }
+/* The fan needs room and a mouse: a touch screen cannot bring a card forward. decisions/components/team-fan.md */
+@media (min-width: 1200px) and (hover: hover) {
+  .team-fan_item:nth-child(1) { --i: 1; } .team-fan_item:nth-child(2) { --i: 2; } .team-fan_item:nth-child(3) { --i: 3; } .team-fan_item:nth-child(4) { --i: 4; } .team-fan_item:nth-child(5) { --i: 5; } .team-fan_item:nth-child(6) { --i: 6; } .team-fan_item:nth-child(7) { --i: 7; } .team-fan_item:nth-child(8) { --i: 8; } .team-fan_item:nth-child(9) { --i: 9; }
+  .team-fan_item:nth-last-child(1) { --j: 1; } .team-fan_item:nth-last-child(2) { --j: 2; } .team-fan_item:nth-last-child(3) { --j: 3; } .team-fan_item:nth-last-child(4) { --j: 4; } .team-fan_item:nth-last-child(5) { --j: 5; } .team-fan_item:nth-last-child(6) { --j: 6; } .team-fan_item:nth-last-child(7) { --j: 7; } .team-fan_item:nth-last-child(8) { --j: 8; } .team-fan_item:nth-last-child(9) { --j: 9; }
+  /* --fan-shift (−0.5 … 0.5, set by the scroll script on the list) turns the fan like a wheel: half a step per pass. */
+  .team-fan_item {
+    --n: calc((var(--i) - var(--j)) / 2 + var(--fan-shift, 0));
+    --t: calc(var(--n) * min(1, 2.5 / max(1, (var(--i) + var(--j) - 2) / 2)));
+    position: relative;
+    z-index: calc(20 - 2 * max(var(--n), -1 * var(--n)));
+    transform: translate(calc(var(--t) * min(23.0625rem, 24.4vw)), calc(var(--t) * var(--t) * 1.075rem)) rotate(calc(var(--t) * 5deg));
+  }
+  .team-fan_item:hover { z-index: 30; }
+}
+/* Swipe row: below 1200, and on a touch screen at any width. */
+@media (max-width: 1199px), (hover: none) {
+  .team-fan_list { display: flex; justify-content: flex-start; justify-content: safe center; column-gap: var(--_spacing---space--7); padding-right: var(--site--margin); padding-bottom: 0; padding-left: var(--site--margin); overflow-x: auto; scroll-snap-type: x proximity; }
+  .team-fan_item { flex: 0 0 19.6875rem; max-width: calc(100vw - 4rem); scroll-snap-align: center; }
+}
+@media (hover: none) {
+  .team-fan_list { scrollbar-width: none; }
+  .team-fan_list::-webkit-scrollbar { display: none; }
+}
+</style>
