@@ -340,3 +340,8 @@
 ## 2026-11-12 — SEO titles and descriptions, static pages — Aniek Velthuizen with Claude
 - Owner request after spotting «Website Name» in the tab. 14 public static pages: title + description from the page's own copy, Open Graph "Same as SEO" (`bulk_update_pages`). Record: `decisions/site.md` › SEO.
 - Published to staging 1×. `seo-check.mjs`: all 14 titles ≤ 60 and descriptions 120–160, no placeholders, no duplicates; remaining errors are only «no og:image» (not done) and the Opportunities items (no description, no suffix, duplicate titles — CMS SEO fields needed).
+
+## 2026-11-12 — Quotes reveal word by word — Aniek Velthuizen with Claude
+- Owner request: GSAP word stagger on quotes only. Record: `decisions/motion.md` › Exception: quotes.
+- Attribute map (revert = remove): `data-quote-reveal=""` on `spotlight-grid_quote-text` (Spotlight Grid `4f869313-…-525a63bf2e43`) and `split-content_quote-text` (Split Content `410b9fa3-…-ddee2f03adfb`).
+- Script + CSS in a new third embed of `Global | Custom Code` (`61fdba5b-e2d3-5b70-a803-be8306cc84a7`). First written into the empty second embed (`ab7c2a2d-…`), but a parallel session (arrow-link hover) wrote its CSS there at the same time and replaced it; that embed is theirs, untouched by this change. Source `references/embeds/quote-reveal-script.html`.
