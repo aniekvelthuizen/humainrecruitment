@@ -442,3 +442,4 @@
 
 ## 2026-11-12 — Hire an Expert: Split cards in 3D (Aniek, via Claude)
 - Owner: the tilted expert cards turn slowly in 3D and come in one by one on load. Prototyped by injecting CSS on staging, then built: `data-cards-3d` on `page-header_visual` (Page Header `864e1322-…ca626`), rules appended to the Page Header embed (`…ca628`, source `references/embeds/page-header-style.html`, earlier code kept verbatim). Published to staging 1×. Revert: remove the attribute and the «Cards 3D» block. Record: `decisions/motion.md` › «Cards 3D».
+- 2026-11-12 (Aniek, via Claude): Stage Slider photo tile (Project Delivery Experts) follows the mouse like the Spotlight Grid photos. Photo-parallax embed `9991f8f0-…` read first (equal to the old source), rewritten from `references/embeds/photo-parallax.html`, read back identical, published to staging 1×. `parallax-check.mjs` (now also tiles, `INJECT=1`) passes on PDE and Home. Record: `decisions/motion.md`.
