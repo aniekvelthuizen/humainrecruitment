@@ -50,6 +50,7 @@ Owner (Aniek, screenshot «← Back to opportunities»): «de link hoeft niet te
 - **Was:** Button Main's hover look on Tertiary + Arrow Left: wrap lifts 2 px (`translateY(-0.125rem * --_trigger---off)`), arrow nudges 4 px right, underline grows, text white → mint.
 - **Now:** lift and arrow nudge off (`transform: none` on the wrap and `.button_main_icon`), only for Tertiary with Icon **Arrow Left**. Underline (grows in 600 ms) and the colour change stay, from the variant itself. Keyboard focus the same.
 - **Where:** same embed as the arrow links (`ab7c2a2d-…` in `Global | Custom Code`), source `references/embeds/arrow-link-style.html`. Primary/Secondary keep their lift; the "→ View" links are unchanged.
+- **Underline like the nav and footer links (owner, same day):** the menu links' line grows to the right and shrinks back to the left, to where it started (`background-size` 0 → 100 %, 600 ms `cubic-bezier(.65,.05,.36,1)`). Button Main's line flipped its origin on leave, so it ran off to the right. The back link's `.button_main_line` now has a fixed `transform-origin: 0 100%`; timing and easing were already the same (600 ms, same curve).
 
 ## 2026-11-12 — Exception: quotes reveal word by word (owner)
 Owner (Aniek): «alle quotes animeren met een stagger animation van GSAP, dat de woorden één voor één invliegen. Alleen bij quotes, niet bij alle titels.» A second explicit exception to «no scroll reveals». Built by Aniek Velthuizen with Claude.

@@ -48,6 +48,10 @@
 [data-wf--button-main--button-variant="tertiary"]:has([data-wf--icon-set--variant="arrow-left"]) .button_main_icon {
   transform: none;
 }
+/* Underline like the nav and footer links: grows to the right, shrinks back to the left (fixed left origin). */
+[data-wf--button-main--button-variant="tertiary"]:has([data-wf--icon-set--variant="arrow-left"]) .button_main_line {
+  transform-origin: 0 100%;
+}
 @media (prefers-reduced-motion: reduce) {
   [data-wf--button-main--button-variant="tertiary"]:has([data-wf--icon-set--variant="arrow-right"]) .button_main_element::after,
   [data-wf--button-main--button-variant="tertiary"]:has([data-wf--icon-set--variant="arrow-right"]) :is(.button_main_icon, .button_main_text) { transition-duration: 0s; transition-delay: 0s; }
