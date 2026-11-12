@@ -340,3 +340,6 @@
 ## 2026-11-12 — SEO titles and descriptions, static pages — Aniek Velthuizen with Claude
 - Owner request after spotting «Website Name» in the tab. 14 public static pages: title + description from the page's own copy, Open Graph "Same as SEO" (`bulk_update_pages`). Record: `decisions/site.md` › SEO.
 - Published to staging 1×. `seo-check.mjs`: all 14 titles ≤ 60 and descriptions 120–160, no placeholders, no duplicates; remaining errors are only «no og:image» (not done) and the Opportunities items (no description, no suffix, duplicate titles — CMS SEO fields needed).
+
+## 2026-11-12 — Arrow link hover (Aniek Velthuizen, via Claude)
+- Tertiary + Arrow Right: arrow swaps from left to right on hover; CSS embed added in `Global | Custom Code` (`decisions/motion.md`).
