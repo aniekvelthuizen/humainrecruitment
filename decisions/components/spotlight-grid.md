@@ -75,3 +75,6 @@ Review: `references/audit/2026-11-02-testimonials-review.md` (fresh reviewer, no
 - Tablet (768–991): the stacked cards ran 820+ px wide (lines of ~100 characters). Reviews `_layout` at `medium`: max-width 40rem, centred (cards 640 at 767–991; 402 unchanged).
 - Hidden base quote copy was in the Reviews HTML: Quote, Name, Role, Company emptied on the Home instance; Quote tooltip says it is not shown in Reviews.
 - Left for the owner: narrow columns 992–1279 (names on three lines; Expertise kept the same columns), Text Large 20 on phones (Figma 16, site-wide), card chevron 16 vs 24 and role opacity .5 vs .34 (Card Testimonial), photo to WebP, rating «4.9» next to three 5-star cards (copy).
+
+## 2026-11-12 — List Role prop
+Prop **List Role** (`c2d3da65-242a-1ceb-8800-7c2ab71ea1a1`, string, folder Settings, default `list`) is bound to the `role` attribute of `spotlight-grid_list` ×2 and `spotlight-grid_center-list`. `none` when the slots hold a CMS list (`Reviews · picked`), because Webflow's Collection List is a `role="list"` itself. Set to `none` on the Reviews instances of Home, Hire an expert and Clients. Aniek Velthuizen, via Claude.

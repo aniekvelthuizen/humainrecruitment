@@ -210,3 +210,6 @@ Owner (Aniek): «hij moet veel langzamer bewegen», «als je naar rechts beweegt
 - **Direction inverted:** cursor right → person left; the mint light behind goes with the cursor (the opposite of the person, so the depth stays).
 - **Slower:** easing 0.08 → **0.02** per frame (slider «Snelheid» 0.005–0.080).
 - **Default variant B Depth**, strength 8 px. Still a prototype; not built on the site.
+
+## 2026-11-12 — Upload ✕ turns on hover (Aniek Velthuizen, via Claude)
+Owner: the remove ✕ on a chosen CV turns on hover. 90° (`rotate`, not `transform`), 0.3 s, the site's ease-out `cubic-bezier(.22,1,.36,1)`; back the same way. Hover only on pointer devices (`hover:hover`), so a tap does not leave it turned; also on keyboard focus. Reduced motion: no transition. In the first embed of `Global | Custom Code`, so Resume and Opportunity Detail both get it. Checked on staging /submit-resume: 90deg on hover.

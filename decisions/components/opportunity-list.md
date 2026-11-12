@@ -76,3 +76,8 @@ Owner: the hover border sat too high around the text and could be lighter.
 - Hover (not focus) border in this bar: `swatch/brand-300` instead of `brand-500`. Focus keeps `brand-500` and its outline, as Form Section.
 - The field's `padding-top: .5rem` is gone (text now centred in the box) and the box moves down with `transform: translateY(.25rem)`, so the text stays where it was (as Figma) and the border sits evenly around it. Layout and bar height do not change; the chevron keeps its own `.25rem` shift and now matches the box centre (692 / 692 at 1512).
 Source `references/embeds/opportunity-list-style.html`, embed `7a34be19-…605e` read first (matched), rewritten, published to staging 1×. Checked at 1512 (hover seen) and 402 (field to line 12, no sideways scroll). Safari not checked.
+
+## 2026-11-12 — Hover and focus subtler (Aniek Velthuizen, via Claude)
+Owner, after the entry above: border still too dark, and too thick once something is selected (a select keeps focus after choosing, so that was the focus state: brand-500 border plus the 2 px outline from `form_field:focus`).
+Replaces the hover colour above. In this bar only: hover `swatch/brand-200`; focus 1 px `swatch/brand-300`, `outline: none`. Focus is still visible: the border goes from transparent to brand-300 (about 5:1 on white). Contact, Resume and the other forms keep the shared hover and focus.
+Embed `7a34be19-…605e` rewritten from the source, published to staging 1×. Checked at 1512 with a real click: focus border 1 px, rgb(124, 102, 155), no outline.
