@@ -8,6 +8,9 @@ Sticky Steps: variant Plain, Nav Colour light, Space Top small, List Align end. 
 Link: Browse open roles → `/opportunities`.
 
 ## 2026-11-05 — Kept or changed from Figma
-- Header text is Contact's («Contact», «Let's talk.», …): Figma has that on this frame. Kept, on the owner's list.
+- Header text is Contact's («Contact», «Let's talk.», …): Figma has that on this frame. Kept, on the owner's list. Replaced 2026-11-12, see below.
 - Placeholder kept: Sticky Steps text is lorem («In viverra lorem…»).
 - No phone design: reflows as the components do.
+
+## 2026-11-12 — Header copy from the wireframe (Aniek Velthuizen, via Claude)
+Owner: the header still read Contact's copy. Page Header props now as `wireframes/submit-resume.html`: Eyebrow «For Talent · Open application», Title «Analyse my Resume.», Text «Submit your CV once. Our AI benchmarks it against the live market and our recruiters match you to roles — often before they're even posted.» Figma's frame still shows the Contact copy; the wireframe wins here. SEO title (Analyse My Resume | HumAIn) was already right. Published to staging, checked in the HTML.
