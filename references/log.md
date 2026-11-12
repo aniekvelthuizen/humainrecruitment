@@ -340,3 +340,7 @@
 ## 2026-11-12 — SEO titles and descriptions, static pages — Aniek Velthuizen with Claude
 - Owner request after spotting «Website Name» in the tab. 14 public static pages: title + description from the page's own copy, Open Graph "Same as SEO" (`bulk_update_pages`). Record: `decisions/site.md` › SEO.
 - Published to staging 1×. `seo-check.mjs`: all 14 titles ≤ 60 and descriptions 120–160, no placeholders, no duplicates; remaining errors are only «no og:image» (not done) and the Opportunities items (no description, no suffix, duplicate titles — CMS SEO fields needed).
+
+## 2026-11-12 — Sticky Steps Plain: steps stick and pile up — Aniek Velthuizen with Claude
+- Owner request with two screenshots (Home «From requirement to shortlist in days.»): the steps must stick and end up under each other. Section embed of Sticky Steps (`73b7ce70-…b381`) rewritten from `references/embeds/sticky-steps.html`, read back identical. Record: `decisions/components/sticky-steps.md` › 2026-11-12.
+- Published to staging 2× (second: `hold()` on `resize`). Measured at 1512: Home 1930 and How It Works 4400 unchanged, heads at 112 / 209 / 306 (/ 403 / 500), pile and intro leave together; 402: static, no inline styles, How It Works 2344 as before.
