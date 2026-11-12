@@ -1,7 +1,10 @@
 <style>
-/* Photo parallax (decisions/motion.md, 2026-11-12): the cut-out person in a [data-photo-parallax] panel moves slowly against the mouse, a faint mint light behind moves with it. Runtime only (mouse, no reduced motion); the Designer and touch show the static photo. */
+/* Photo parallax (decisions/motion.md, 2026-11-12): the cut-out person in a [data-photo-parallax] panel moves slowly against the mouse, a faint mint light behind moves with it. Runtime only (mouse, no reduced motion); the Designer and touch show the static photo.
+   Image tiles (2026-11-12): a whole photo in an image wrapper (Stage Slider's photo tile) moves the same way; it is scaled 1.06 so the edges never show, and the light sits on top (screen). */
 [data-photo-parallax-on]{isolation:isolate}
 [data-photo-parallax-on] [data-photo-parallax-photo]{will-change:translate}
+[data-photo-parallax-on=image] [data-photo-parallax-photo]{scale:1.06}
+[data-photo-parallax-on=image] .photo-parallax_glow{z-index:1;mix-blend-mode:screen;background:radial-gradient(40% 35% at 50% 45%,rgba(0,255,204,.12),transparent 70%)}
 .photo-parallax_glow{position:absolute;inset:-15%;z-index:-1;pointer-events:none;background:radial-gradient(40% 35% at 50% 45%,rgba(0,255,204,.18),transparent 70%);will-change:translate}
 </style>
 <script>
@@ -10,17 +13,19 @@ var d=document,h=d.documentElement;
 if(h.classList.contains('wf-design-mode')||!('IntersectionObserver' in window))return;
 if(!matchMedia('(hover: hover) and (pointer: fine)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
 var M=8,EASE=0.02,DROP=6; /* px at the edge, share per frame, px the photo sits lower so an upward move opens no gap */
-function setup(panel){
-  var fg=panel.querySelector('[data-photo-parallax-photo]');if(!fg)return;
+var TILES='[data-stage-slider] .slider_list > .u-image-wrapper'; /* image tiles: the wrapper is the panel, its img the photo */
+function setup(panel,tile){
+  var fg=tile?panel.querySelector('img'):panel.querySelector('[data-photo-parallax-photo]');if(!fg)return;
+  var drop=tile?0:DROP;if(tile)fg.setAttribute('data-photo-parallax-photo','');
   var area=panel.closest('section')||panel,glow=d.createElement('span');
   glow.className='photo-parallax_glow';glow.setAttribute('aria-hidden','true');
-  panel.insertBefore(glow,panel.firstChild);panel.setAttribute('data-photo-parallax-on','');
+  tile?panel.appendChild(glow):panel.insertBefore(glow,panel.firstChild);panel.setAttribute('data-photo-parallax-on',tile?'image':'');
   var tx=0,ty=0,x=0,y=0,raf=0,inView=false;
   function c(v){return v<-1?-1:v>1?1:v}
   function kick(){if(!raf)raf=requestAnimationFrame(tick)}
   function tick(){
     raf=0;x+=(tx-x)*EASE;y+=(ty-y)*EASE;
-    fg.style.translate=(-x*M).toFixed(2)+'px '+(DROP-y*M*.6).toFixed(2)+'px';
+    fg.style.translate=(-x*M).toFixed(2)+'px '+(drop-y*M*.6).toFixed(2)+'px';
     glow.style.translate=(x*M*2).toFixed(2)+'px '+(y*M*1.5).toFixed(2)+'px';
     if(Math.abs(tx-x)>5e-4||Math.abs(ty-y)>5e-4)kick();
   }
@@ -31,9 +36,9 @@ function setup(panel){
   });
   area.addEventListener('pointerleave',function(){tx=ty=0;kick()});
   new IntersectionObserver(function(es){inView=es[0].isIntersecting;if(!inView){tx=ty=0;kick()}}).observe(panel);
-  fg.style.translate='0px '+DROP+'px';
+  fg.style.translate='0px '+drop+'px';
 }
-function init(){d.querySelectorAll('[data-photo-parallax]').forEach(setup)}
+function init(){d.querySelectorAll('[data-photo-parallax]').forEach(function(p){setup(p)});d.querySelectorAll(TILES).forEach(function(p){setup(p,true)})}
 d.readyState==='loading'?d.addEventListener('DOMContentLoaded',init):init();
 })();
 </script>

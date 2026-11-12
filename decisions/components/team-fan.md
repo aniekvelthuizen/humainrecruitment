@@ -42,3 +42,19 @@ The swipe rules (local simulation, published page + these rules; not published y
 
 ## 2026-11-05 — Getty watermark
 All five photos carry it (plan, conflict 4; `decisions/cms.md`). Replace before go-live.
+
+## 2026-11-12 — The fan turns a little while you scroll (owner) (Aniek Velthuizen, via Claude)
+Owner (Aniek): «Kan dit blok een heel klein beetje draaien tijdens het scrollen? Naar beneden scrollen = naar rechts, naar boven = naar links. Dan moet er één extra kaartje bij.» An explicit exception to «no scroll motion» (`motion.md`), for this block only.
+- **Sixth card:** CMS Team item **Project Director** (`6af602387e51c012c76422e2`, group Discipline, Order 6), text from Figma's Home disciplines: «Leads delivery and owns the outcome of the project.» Photo: `case-sample-3.jpg` (Getty, same placeholder as the third case sample, so it shows twice on the site until real photos arrive). The wireframe's seventh discipline, Document Controller, is not added: its text is already on the Reporting card.
+- **Motion:** the cards slide along the fan's own curve, like a wheel: every card's step `t` gets `--fan-shift` added, from −0.5 (section just entering at the bottom) through 0 (section centred) to +0.5 (section leaving at the top). So half a step in total: about 23rem sideways and 5° of rotation over the whole pass. Scrolling down turns it right, up turns it left. Scroll-linked; since the same day with a run-out (below).
+- With 6 cards: at the start and end you see the Figma picture (straight centre card, half cards on both edges); in the middle the fan is symmetric at half steps and the outer cards are just slivers at the edge.
+- **Steps:** the outermost card may now go to ±2.5 steps (was ±2), so 6 cards keep Figma's exact steps instead of squeezing in. 7 and 9 cards still squeeze, a bit less than before (more overlap at the edges is now off-screen).
+- **z-index** follows the shifted position, so the card nearest the centre stays on top while it turns. Hover still brings a card forward (30).
+- **Where:** a second HTML embed in Team Fan (`3d8293d3-760b-a281-c9b7-ecc2f7240e22`, after the style embed) sets `--fan-shift` on `team-fan_list`, only while the section is in view (IntersectionObserver + rAF). Sources: `references/embeds/team-fan-style.html`, `references/embeds/team-fan-scroll.html`.
+- **Off:** below 1200, on touch screens (the swipe row), with reduced motion, without JavaScript and in the Designer → the static fan.
+
+## 2026-11-12 — Run-out after the scroll stops (owner) (Aniek Velthuizen, via Claude)
+Owner (Aniek), after seeing it: «hij mag nog wel wat meer … dat hij nog langer uitdraait wanneer ik ben gestopt met scrollen».
+- The fan now follows the scroll with a lag: each frame it covers 5 % of the remaining distance (`EASE = 0.05` in the script, at 60 fps, frame-rate independent). Measured at 1512 after a 300 px jump: 80 % there after 0.5 s, still after about 1–1.5 s.
+- Tuning: lower `EASE` (e.g. 0.03) = longer run-out, higher (0.1) = tighter. The size of the turn (half a step) is unchanged.
+- No run-out on page load: the fan starts at its scroll position. Check: `node references/team-fan-scroll-check.mjs` (includes the run-out samples).

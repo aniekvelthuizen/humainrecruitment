@@ -1,5 +1,7 @@
-// Headless check of the Spotlight Grid photo parallax (decisions/motion.md, 2026-11-12) on a published page (Node 22+, Chrome, no dependencies).
+// Headless check of the photo parallax (decisions/motion.md, 2026-11-12) on a published page (Node 22+, Chrome, no dependencies).
+// Spotlight Grid panels and Stage Slider photo tiles.
 //   WIDTH=1440 node references/parallax-check.mjs [url] [outdir]
+//   INJECT=1 also runs references/embeds/photo-parallax.html on the page (to test it before publishing).
 // Per panel: mouse right of the panel -> person left (negative x), light right; mouse left -> the other way; leave -> back to 0 6px.
 // Then reduced motion and touch: nothing set up. Console errors listed.
 import { spawn } from 'node:child_process';
@@ -34,16 +36,19 @@ await send('Runtime.enable');
 await send('Page.enable');
 await send('Emulation.setDeviceMetricsOverride', { width, height: 900, deviceScaleFactor: 1, mobile: width < 768 });
 const report = { url, width };
-const STATE = `(() => [...document.querySelectorAll('[data-photo-parallax]')].map((p) => ({ on: p.hasAttribute('data-photo-parallax-on'),
-  photo: p.querySelector('[data-photo-parallax-photo]').style.translate || null, glow: p.querySelector('.photo-parallax_glow')?.style.translate || null })))()`;
+const SEL = `[data-photo-parallax], [data-stage-slider] .slider_list > .u-image-wrapper`;
+const STATE = `(() => [...document.querySelectorAll('${SEL}')].map((p) => ({ on: p.getAttribute('data-photo-parallax-on'),
+  photo: p.querySelector('[data-photo-parallax-photo]')?.style.translate || null, glow: p.querySelector('.photo-parallax_glow')?.style.translate || null })))()`;
 const mouse = (x, y) => send('Input.dispatchMouseEvent', { type: 'mouseMoved', x, y, pointerType: 'mouse' });
-const load = async () => { await send('Page.navigate', { url: url + (url.includes('?') ? '&' : '?') + 'v=' + Date.now() }); await sleep(4000); };
+const embed = fs.readFileSync(new URL('./embeds/photo-parallax.html', import.meta.url), 'utf8');
+const injectCode = `(() => { document.querySelectorAll('.photo-parallax_glow').forEach((g) => g.remove()); const st = document.createElement('style'); st.textContent = ${JSON.stringify(embed.match(/<style>([\s\S]*?)<\/style>/)[1])}; document.head.appendChild(st); ${embed.match(/<script>([\s\S]*?)<\/script>/)[1]} })()`;
+const load = async () => { await send('Page.navigate', { url: url + (url.includes('?') ? '&' : '?') + 'v=' + Date.now() }); await sleep(4000); if (process.env.INJECT) { await ev(injectCode); await sleep(300); } };
 await load();
 report.atLoad = await ev(STATE);
 report.panels = [];
 const n = report.atLoad.length;
 for (let i = 0; i < n; i++) {
-  const r = await ev(`(() => { const p = document.querySelectorAll('[data-photo-parallax]')[${i}]; p.scrollIntoView({ block: 'center' }); const b = p.getBoundingClientRect(); return { l: b.left, r: b.right, t: b.top, b: b.bottom }; })()`);
+  const r = await ev(`(() => { const p = document.querySelectorAll('${SEL}')[${i}]; p.scrollIntoView({ block: 'center' }); const b = p.getBoundingClientRect(); return { l: b.left, r: b.right, t: b.top, b: b.bottom }; })()`);
   await sleep(600);
   const cy = Math.round((r.t + r.b) / 2), res = { i };
   await mouse(Math.round(r.r + 150), cy); await sleep(400); res.after400ms = (await ev(STATE))[i];
@@ -51,7 +56,7 @@ for (let i = 0; i < n; i++) {
   await shot(`panel${i}-right-${width}.png`);
   await mouse(Math.round(r.l - 150), cy); await sleep(3500); res.left = (await ev(STATE))[i];
   await shot(`panel${i}-left-${width}.png`);
-  await ev(`document.querySelectorAll('[data-photo-parallax]')[${i}].closest('section').dispatchEvent(new PointerEvent('pointerleave'))`);
+  await ev(`document.querySelectorAll('${SEL}')[${i}].closest('section').dispatchEvent(new PointerEvent('pointerleave'))`);
   await sleep(4000); res.leave = (await ev(STATE))[i];
   report.panels.push(res);
 }

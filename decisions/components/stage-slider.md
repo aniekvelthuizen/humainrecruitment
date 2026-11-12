@@ -36,3 +36,6 @@ Staging (review 2026-11-05, `references/audit/2026-11-05-phase-2.md`): the real 
 - **Phone slides capped:** below 768 a slide is `min(100% - 3rem, 22.125rem)`, the tile that minus the gap, in the embed. Before, slides doubled from 322 to 650 at 767 and the photo became a cropped close-up. Supersedes `calc(100% - 3rem)` under Slides. Simulated on the published page: 768 tile 322 × 498; 767, 600 and 480 tile 338 × 498; 402 tile 314 × 503; 320 tile 232 × 650. No sideways scroll, no text out of a card, arrows reach both ends. Not yet seen published.
 - **Arrow radius:** `stage-slider_arrow` bound to `radius/round` (same 100vw).
 - **Script stays in the embed:** the arrows need it per section instance (`document.currentScript`, then that section's Swiper), and it runs only where the block is used. `decisions/site.md` names only CSS for embeds, so this is the recorded exception; adding JS to that note is for whoever edits `site.md`.
+
+## 2026-11-12 — Photo tile follows the mouse (Aniek Velthuizen, via Claude)
+Owner asked for the same mouse motion as the Spotlight Grid photos. The global photo-parallax embed handles it (img scaled 1.06, moves ≤ 8 px against the mouse, mint light on top). Details: `decisions/motion.md` › Stage Slider photo tile.
