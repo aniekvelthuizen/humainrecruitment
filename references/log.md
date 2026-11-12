@@ -426,3 +426,4 @@
 
 ## 2026-11-12 — Upload error without focus ring — Aniek Velthuizen with Claude
 - Owner screenshot: black focus box around «Upload failed. Max size for files is 10 MB.». One rule added to the first embed of `Global | Custom Code` (read first), published to staging, checked on /submit-resume. Record: `decisions/components/form-section.md`.
+- 2026-11-12 (Aniek, via Claude): Opportunities filter bar — hover brand-200, focus 1 px brand-300 without the 2 px outline (owner: subtler). Staging published 1×, focus checked at 1512.
