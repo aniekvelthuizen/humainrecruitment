@@ -1,0 +1,49 @@
+<style>
+/* Quote reveal (decisions/motion.md): the words of a [data-quote-reveal] quote fly in one by one when it scrolls into view. Runtime only: the Designer shows the whole quote. */
+html[data-quote-gate] [data-quote-reveal]:not([data-quote-state]){visibility:hidden}
+[data-quote-word]{display:inline-block}
+</style>
+<script>
+(function(){
+var d=document,h=d.documentElement;
+if(h.classList.contains('wf-design-mode')||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+h.setAttribute('data-quote-gate','');
+var release=function(){h.removeAttribute('data-quote-gate')};
+var guard=setTimeout(release,4000);
+function split(el){
+  var walk=d.createTreeWalker(el,NodeFilter.SHOW_TEXT),nodes=[],n;
+  while((n=walk.nextNode()))nodes.push(n);
+  nodes.forEach(function(t){
+    var f=d.createDocumentFragment();
+    t.nodeValue.split(/([ \t\n\r]+)/).forEach(function(p){
+      if(!p)return;
+      if(/^[ \t\n\r]+$/.test(p)){f.appendChild(d.createTextNode(p));return}
+      var s=d.createElement('span');s.setAttribute('data-quote-word','');s.textContent=p;f.appendChild(s);
+    });
+    t.parentNode.replaceChild(f,t);
+  });
+  return el.querySelectorAll('[data-quote-word]');
+}
+function init(){
+  clearTimeout(guard);
+  var g=window.gsap,els=d.querySelectorAll('[data-quote-reveal]');
+  if(!g||!els.length){release();return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting)return;
+    io.unobserve(e.target);
+    var el=e.target,w=el._quoteWords;
+    g.to(w,{opacity:1,y:0,ease:'power3.out',
+      duration:parseFloat(el.getAttribute('data-quote-reveal-duration'))||0.6,
+      stagger:parseFloat(el.getAttribute('data-quote-reveal-stagger'))||0.08,
+      onComplete:function(){g.set(w,{clearProps:'opacity,transform'});el.setAttribute('data-quote-state','done')}});
+  })},{rootMargin:'0px 0px -15% 0px'});
+  els.forEach(function(el){
+    var w=el._quoteWords=split(el);
+    g.set(w,{opacity:0,y:24});
+    el.setAttribute('data-quote-state','ready');
+    io.observe(el);
+  });
+}
+d.readyState==='loading'?d.addEventListener('DOMContentLoaded',init):init();
+})();
+</script>

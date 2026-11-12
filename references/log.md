@@ -350,3 +350,7 @@
 
 ## 2026-11-12 — Two-tone heading sweep (Aniek Velthuizen with Claude)
 - Grey part of every two-tone heading starts black and sweeps to grey on scroll into view; third embed in `Global | Custom Code`. Tested on a patched copy of Home first (hero, Split Content), then published to staging. Record: `decisions/motion.md`.
+## 2026-11-12 — Quotes reveal word by word — Aniek Velthuizen with Claude
+- Owner request: GSAP word stagger on quotes only. Record: `decisions/motion.md` › Exception: quotes.
+- Attribute map (revert = remove): `data-quote-reveal=""` on `spotlight-grid_quote-text` (Spotlight Grid `4f869313-…-525a63bf2e43`) and `split-content_quote-text` (Split Content `410b9fa3-…-ddee2f03adfb`).
+- Script + CSS in a new, own embed of `Global | Custom Code` (`61fdba5b-e2d3-5b70-a803-be8306cc84a7`). First written into the empty second embed (`ab7c2a2d-…`), but a parallel session (arrow-link hover) wrote its CSS there at the same time and replaced it; that embed is theirs, untouched by this change. Source `references/embeds/quote-reveal-script.html`.
