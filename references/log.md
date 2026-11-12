@@ -396,3 +396,8 @@
 - Owner: the mint stage cards turn mint only when they come into view, in the slider and the overview (Project Delivery Experts). New embed `6885f746-…` in `Global | Custom Code` (source `references/embeds/stage-certified-glow.html`), published to staging 1×. `stage-glow-check.mjs` at 1440 / 402: white at load, fade on scroll (grid) and on slide (slider), reduced motion static, console clean. Record: `decisions/motion.md`.
 - Same day: Card Grid closing statement («Only proven performers reach clients») lights up too (owner). Embed rewritten, published to staging 1×; PDE check at 1440 (8/8) and 402 passes, console clean. The bars moving down is another chat's work, untouched here.
 - 2026-11-12 (Aniek, via Claude): Clients — Spotlight Grid Button Visibility off («See all clients» linked to the page itself).
+
+## 2026-11-12 — Header glow rises in on page load — Aniek Velthuizen with Claude
+- Owner: prototype on a local copy of Contact («erg tof»), then «integreer op alle pagina's». Record: `decisions/motion.md` › Header glow.
+- New (eighth) embed in `Global | Custom Code` (`24fbbfa8-a829-ddf7-dd9c-f6a6c5629743`), source `references/embeds/header-glow-style.html`. Tested on patched copies of 16 pages first, then published to staging 1×.
+- `glow-check.mjs` on staging at 1512, at 402 and with reduced motion: 13 headers pass (glow 0 → 1, header heights unchanged); Hire an Expert (Split) and Consulting (Light) untouched. Not checked: Safari, real devices.
