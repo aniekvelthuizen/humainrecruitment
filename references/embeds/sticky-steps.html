@@ -1,16 +1,25 @@
 <style>
 /* Sticky Steps: every card in the list (or in the slot inside it) sticks at the intro's height, so the next one slides over it (a tilted stack). Kept here, not on Card Primary, so any card dropped in the slot gets it. */
-[data-sticky-steps-list] > [role="listitem"], [data-sticky-steps-list] > * > [role="listitem"] { position: sticky; top: calc(var(--nav--height-total) + 2rem); rotate: -2deg; }
+/* Glass stack: cards and intro stick at --sticky-steps-top, below the nav even when its top row (Contact, Careers) is back on scrolling up (118 px at 1280 and up), with room to breathe (owner 2026-11-12). Plain keeps nav + 2rem. */
+[data-sticky-steps]:not(:has([data-process-step])) { --sticky-steps-top: calc(var(--nav--height-total) + 3rem); }
+@media (min-width: 1280px) { [data-sticky-steps]:not(:has([data-process-step])) { --sticky-steps-top: calc(var(--nav--height-total) + 5rem); } }
+[data-sticky-steps-list] > [role="listitem"], [data-sticky-steps-list] > * > [role="listitem"] { position: sticky; top: var(--sticky-steps-top, calc(var(--nav--height-total) + 2rem)); rotate: -2deg; }
 [data-sticky-steps-list] > [role="listitem"]:nth-child(even), [data-sticky-steps-list] > * > [role="listitem"]:nth-child(even) { rotate: 2deg; }
 /* As the next card covers a card (--sticky-steps-cover 0..1, set below), its glass tint and text fade out, so the pile shows one layer of white and no text hazing through, as in the design. Ring and edge stay. */
 [data-sticky-steps-list] [role="listitem"] .card_primary_element { background-color: color-mix(in srgb, var(--_theme---card--glass) calc((1 - var(--sticky-steps-cover, 0)) * 100%), transparent); }
 [data-sticky-steps-list] [role="listitem"] :is(.card_primary_badge, .card_primary_header, .card_primary_text, .card_primary_list) { opacity: calc(1 - var(--sticky-steps-cover, 0)); }
+/* A fully covered card needs no blur of its own (the card on top blurs the pile): eight stacked backdrop blurs made the page flash white while scrolling. */
+[data-sticky-steps-list] [data-sticky-steps-covered] .card_primary_element { -webkit-backdrop-filter: none; backdrop-filter: none; }
+/* Glass stack: the gradient's light end stays in the bottom padding, under the last card (the middle stop moves down when the stack is long), so the last card's text stays on the dark part (owner 2026-11-12). Short stacks keep Figma's 80 %. */
+[data-sticky-steps]:not(:has([data-process-step])) { background-image: linear-gradient(180deg, var(--_theme---gradient--brand-start) 0%, var(--_theme---gradient--brand-middle) max(80%, calc(100% - var(--_spacing---section-space--main))), var(--_theme---gradient--brand-end) 100%); }
 /* Space Top medium / small and List Align end: off unless an instance sets them. Below 992 the section stays at section-space/main. */
 /* Process Step (variant Plain): the design's growing white distance per step, only while the intro sticks beside the steps. No list height: the next section follows as soon as the last step lands (owner 2026-11-12). */
 @media (min-width: 992px) {
 [data-sticky-steps][data-space-top="medium" i] { padding-top: 11rem; }
 [data-sticky-steps][data-space-top="small" i] { padding-top: 8rem; }
 [data-sticky-steps][data-list-align="end" i] [data-sticky-steps-list] { margin-left: auto; }
+[data-sticky-steps]:not(:has([data-process-step])) .sticky-steps_intro { top: var(--sticky-steps-top); }
+[data-sticky-steps]:not(:has([data-process-step])) { background-image: linear-gradient(180deg, var(--_theme---gradient--brand-start) 0%, var(--_theme---gradient--brand-middle) max(80%, calc(100% - var(--_spacing---section-space--large) - var(--sticky-steps-tail, 0px))), var(--_theme---gradient--brand-end) 100%); }
 /* Card stack: the list ends at the last card, so the stack and the section's bottom move on as soon as the last card lands (no hold). The space below the list (--sticky-steps-tail = intro height - last card height, set below) keeps the intro in place until then, and both leave together. */
 [data-sticky-steps-list]:not(:has([data-process-step])) { align-self: start; margin-bottom: var(--sticky-steps-tail, 0px); }
 [data-sticky-steps-list] > * > [data-process-step]:nth-child(2) { padding-top: 13.75rem; }
@@ -44,6 +53,7 @@
           cover = Math.min(1, Math.max(0, (a.bottom - b.top) / a.height));
         }
         card.style.setProperty('--sticky-steps-cover', cover.toFixed(3));
+        card.toggleAttribute('data-sticky-steps-covered', cover > 0.999);
       });
     });
   };
@@ -52,7 +62,8 @@
     const cards = cardsOf(list), last = cards[cards.length - 1];
     const intro = list.closest('[data-sticky-steps]')?.querySelector('.sticky-steps_intro');
     if (!last || !intro) return;
-    list.style.setProperty('--sticky-steps-tail', Math.max(0, intro.offsetHeight - last.offsetHeight) + 'px');
+    /* On the section, so the list (margin) and the section's gradient both read it. */
+    intro.closest('[data-sticky-steps]').style.setProperty('--sticky-steps-tail', Math.max(0, intro.offsetHeight - last.offsetHeight) + 'px');
   });
   /* Process Steps: each step box is stretched (padding-bottom, pulled back with the next step's margin-top, so the layout does not move) until all stuck boxes and the intro end on the same line (the intro too). Then the pile and the intro leave together instead of the last step sliding up over the heads. */
   const hold = () => lists().forEach((list) => {
