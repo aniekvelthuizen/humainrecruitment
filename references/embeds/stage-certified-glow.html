@@ -1,0 +1,25 @@
+<style>
+/* Stage Certified glow (decisions/motion.md): the mint stage card starts white like the other stage cards and turns mint when it comes into view (scroll or slide). Runtime only; the Designer shows the finished gradient. */
+html[data-stage-gate] [data-wf--card-primary--variant="stage-certified"] .card_primary_element,[data-stage-glow]{background-image:none;background-color:var(--_theme---background-2)}
+[data-stage-glow]::before{content:"";position:absolute;inset:0;border-radius:inherit;background-image:linear-gradient(to bottom right,#fff 0%,#00ffd5 100%);opacity:0;pointer-events:none}
+[data-stage-glow="in"]::before{opacity:1;transition:opacity 1.4s cubic-bezier(.45,0,.2,1) .15s}
+</style>
+<script>
+(function(){
+var d=document,h=d.documentElement,SEL='[data-wf--card-primary--variant="stage-certified"] .card_primary_element';
+if(h.classList.contains('wf-design-mode')||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+h.setAttribute('data-stage-gate','');
+var guard=setTimeout(function(){h.removeAttribute('data-stage-gate')},4000);
+function init(){
+  clearTimeout(guard);
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting)return;
+    io.unobserve(e.target);
+    e.target.setAttribute('data-stage-glow','in');
+  })},{rootMargin:'0px 0px -10% 0px',threshold:.6});
+  d.querySelectorAll(SEL).forEach(function(el){el.setAttribute('data-stage-glow','ready');io.observe(el)});
+  h.removeAttribute('data-stage-gate');
+}
+d.readyState==='loading'?d.addEventListener('DOMContentLoaded',init):init();
+})();
+</script>

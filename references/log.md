@@ -391,3 +391,6 @@
 ## 2026-11-12 — Two-tone headings reversed: dimmed words light up — Aniek Velthuizen with Claude
 - Owner: start dimmed, words light up; also on the Card Grid closing text. Embed `141a108e-…` in `Global | Custom Code` rewritten from `references/embeds/muted-heading-sweep.html` (old version read back first). Record: `decisions/motion.md`.
 - Tested on patched copies of Home, How It Works and Project Delivery Experts, published to staging 1×. New `references/muted-heading-check.mjs`: PDE 7/7, Home 9/9, How It Works 4/4 at 1440, PDE at 402; reduced motion static; console clean. Not checked: Safari, real devices.
+
+## 2026-11-12 — Stage Certified: mint on scroll into view (Aniek Velthuizen with Claude)
+- Owner: the mint stage cards turn mint only when they come into view, in the slider and the overview (Project Delivery Experts). New embed `6885f746-…` in `Global | Custom Code` (source `references/embeds/stage-certified-glow.html`), published to staging 1×. `stage-glow-check.mjs` at 1440 / 402: white at load, fade on scroll (grid) and on slide (slider), reduced motion static, console clean. Record: `decisions/motion.md`.
