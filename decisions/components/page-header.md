@@ -60,3 +60,6 @@ Opportunities template was empty: built the same shell. Its `page_main` is a pla
 
 ## 2026-11-12 — Glow rises in on load (Aniek Velthuizen, via Claude)
 The pink end of the gradient rises in on page load (base, Vertical, Opportunity, Search). Record and the variant list to keep up to date: `decisions/motion.md` › «Header glow».
+
+## 2026-11-12 — Opportunity: apply button on phones only (Aniek Velthuizen, via Claude)
+Owner: on a phone the form is far below the hero, so the hero gets a jump button. Uses the existing Buttons row, no new element: on the Opportunities template **Buttons Visibility** on, **Primary Text** "Apply for this role", **Primary Link** `#apply` (anchor in Opportunity Detail, see `opportunity-detail.md`). In the Opportunity variant `page-header_actions` is `display: none`, and `flex` at `small` (≤ 767): from 768 the form sits next to or right under the text, and the button would be noise. Other variants untouched. Copy is English like the rest of the template; the Dutch locale needs its own text once it goes live.

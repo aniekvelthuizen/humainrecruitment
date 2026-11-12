@@ -63,3 +63,6 @@ Not published; checked by API read-back and a local simulation (published page +
 - **Role without text:** from 992 the layout is one column of 27.5rem, centred, `_content` hidden. Replaces the 794 px blank column noted above. Senior Cost Engineer at 1512, 1200, 992: card 440 wide, centre on the page centre. Project Controls Manager at 1512: unchanged, 1190, card at x 1008.
 - **Turnstile:** its unclassed div is `position: absolute`, as Form Section's embed. Card 725, no 32 px gap under Submit. This closes the open line under "Measured".
 - **Phone top:** 48 at 767 and below (`space/8`), as m13. Section 1981 at 402 (m13 1978 with Figma's own upload height).
+
+## 2026-11-12 — Anchor `#apply` for the phone button (Aniek Velthuizen, via Claude)
+Target of the hero's "Apply for this role" (Page Header, see `page-header.md`). The id sits on an empty `div.opportunity-detail_anchor`, first child of `_aside` (now `position: relative`): absolute, `top: -5.5rem`, 0 × 0. Not on the card itself: Webflow's smooth scroll ignores `scroll-margin` (as `vacancy-list.md`), and on the card the form landed at 0, under the 64 px nav. With the anchor 88 above the card, it lands 88 from the top on phones (24 under the nav), the same landing as the vacancy list. No layout change: the anchor takes no space and no clicks.
