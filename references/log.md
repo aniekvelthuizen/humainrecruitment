@@ -456,3 +456,5 @@
 ## 2026-11-12 — Back link hover: no movement — Aniek Velthuizen with Claude
 - Owner: «Back to opportunities» should not move on hover; only underline + colour. Lift and arrow nudge off for Tertiary + Arrow Left via the arrow-link embed (`ab7c2a2d-…` in `Global | Custom Code`), read back identical to `references/embeds/arrow-link-style.html`. Record: `decisions/motion.md` › Back link.
 - 2026-11-12 (Aniek, via Claude): Opportunities filter bar — Search button replaced by Reset (Secondary), cross in the search field to empty it; phone bar loses its round search button. Record: `decisions/components/opportunity-list.md`. Staging published 1×, checked at 1512, 1100 and 402.
+- Same day (owner): back link underline now grows right and shrinks back left like the nav/footer links (fixed left origin on `.button_main_line`), same embed, published to staging.
+- 2026-11-12 (Aniek, via Claude): Contact email/phone links get the footer's growing hover line (owner); trim-off added to the links so Email/Phone match Office/Hours again. Staging published, measured. Record: `decisions/components/form-section.md`.

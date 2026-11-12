@@ -85,5 +85,11 @@ Owner: 40 px more space between the form and «Why join the pool?». `form-secti
 
 ## 2026-11-12 — Email and phone clickable (Aniek Velthuizen, via Claude)
 Owner: «email en tel klikbaar maken». The Email and Phone value paragraphs now sit in a Link Block each (`form-section_detail-link`, Navigator «Email Link» / «Phone Link»), bound to two new Link props in Contact Details: **Email Link** (email mode, default `info@humainrecruitment.com`) and **Phone Link** (phone mode). Text and link are separate props because a Link prop cannot take its target from a text prop; the tooltips say to keep them equal.
-Look unchanged (block, colour inherit, no underline); underline on hover, 1 px, offset 0.2em, as the text links elsewhere. Resume variant hides `_details`, so it is not affected.
+Look unchanged at rest (colour inherit, no underline). Resume variant hides `_details`, so it is not affected.
 Phone Link default is `+31000000000` until the real number is known: Webflow turned the placeholder `+31XXXXXXXXX` into `tel:+31999999999`, which could ring a real line; no Dutch number starts with 0 after +31. **To do when the number comes:** set Phone and Phone Link together.
+
+## 2026-11-12 — Contact links: growing line on hover (owner; Aniek Velthuizen, via Claude)
+Owner: «mooie text links … lijnanimatie zoals de rest». Replaces the plain hover underline above. `form-section_detail-link` now has the footer link line, value for value: 1 px `currentColor` line, `background-size` 0 → 100 % on hover and `:focus-visible`, 600 ms `cubic-bezier(.65,.05,.36,1)`, from the left and back to the left. `inline-block` so the line is as wide as the text, not the column.
+Distance: the footer text is trimmed, so its line sits 0.5rem under the baseline. Here the value is untrimmed (30 px line box, `u-text-trim-off`), so the line sits at the bottom of the line box with no extra padding: about the same distance under the text as the footer.
+Trim: Lumos' `.u-text-trim-off > *` only reaches direct children, so after the wrap the values got trimmed (14 px high instead of 30; Email and Phone sat closer to the next label than Office and Hours). The links now also carry `u-text-trim-off` (combo `form-section_detail-link.u-text-trim-off`, no properties of its own). Measured on staging: all four details 58 high, label → value 10.
+Footer's `outline-offset` variable is not copied: the style API refuses a length variable there; Lumos' global focus outline applies.
