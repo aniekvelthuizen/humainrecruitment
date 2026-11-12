@@ -72,3 +72,6 @@ Form title 48 from the header at 767 and below (`space/8`), was 20. No phone fra
 
 ## 2026-11-12 — Email error text (Aniek Velthuizen, via Claude)
 Under the email field the line now reads «Please enter a valid email address» (global rule, `decisions/site.md`). Other fields unchanged.
+
+## 2026-11-12 — No focus ring on the upload error (Aniek Velthuizen, via Claude)
+Owner: «Upload failed …» showed a thick black box. webflow.js puts `tabindex="-1"` on `.w-file-upload-error` and focuses it so screen readers announce the message; Lumos rings every `[tabindex]:focus-visible`. The message is no control, so the ring goes: `.w-file-upload-error[tabindex]:is(:focus,:focus-visible) { outline: none; }` in the first embed of `Global | Custom Code` (also covers Opportunity Detail's upload). Focus itself stays, for the announcement. Checked on staging /submit-resume after a Tab press: focused, `:focus-visible`, outline none.

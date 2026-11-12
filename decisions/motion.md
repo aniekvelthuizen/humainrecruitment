@@ -197,3 +197,16 @@ Owner (Aniek), after a prototype on Contact: «ik vind het wel erg tof! integree
 - **Where:** the eighth HTML embed in **`Global | Custom Code`** (`24fbbfa8-a829-ddf7-dd9c-f6a6c5629743`), CSS only; source `references/embeds/header-glow-style.html`. Pages without `Global | Custom Code` keep the static gradient.
 - **Off:** reduced motion, no JavaScript (`html.w-mod-js` gate) and the Designer show the finished glow. Revert: remove the embed.
 - Check: `node references/glow-check.mjs` (`WIDTH=402`, `REDUCED=1`).
+
+## 2026-11-12 — Spotlight Grid photo follows the mouse: prototype (open)
+Owner (Aniek) asked whether the person in the brand-gradient photo panels could move slightly with the mouse. Prototype by Aniek Velthuizen with Claude: `references/prototypes/photo-parallax.html` (both panels: Reviews and Expertise, the real staging photos).
+- Possible without new assets: both photos are already cut-outs on top of the panel gradient (`spotlight-grid_visual` › `_image`), so only the person moves and the gradient stays.
+- Variants in the prototype: **A Drift** (person moves ±strength px x, 0.6× that in y), **B Depth** (A + a faint mint light behind her moving the other way), **C Tilt** (small 3D turn). Default strength 8 px, easing 0.08 per frame.
+- Rules in the prototype, meant for the build: the whole section listens (not just the photo); mouse only (`hover: hover` and `pointer: fine`), off for reduced motion; glides back to the centre on leave and when the panel leaves the view; `requestAnimationFrame` only while moving. The photo sits 16 px below the panel edge so an upward move never opens a gap (on the site: `bottom: -1rem` on `_visual`, the panel clips it).
+- Not chosen yet: variant and strength. Not built on the site.
+
+### 2026-11-12 — Prototype round 2 (owner feedback)
+Owner (Aniek): «hij moet veel langzamer bewegen», «als je naar rechts beweegt met de muis, moet hij juist naar links bewegen», «Diepte effect is leuk!».
+- **Direction inverted:** cursor right → person left; the mint light behind goes with the cursor (the opposite of the person, so the depth stays).
+- **Slower:** easing 0.08 → **0.02** per frame (slider «Snelheid» 0.005–0.080).
+- **Default variant B Depth**, strength 8 px. Still a prototype; not built on the site.

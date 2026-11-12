@@ -70,3 +70,9 @@ Not published; checked by API read-back and a local simulation (published page +
 
 ## 2026-11-05 — Search also reads location and discipline (Aniek Velthuizen, via Claude; not published, local simulation at 1512 and 402)
 Replaces the choice in "Fixes after the phase 4 audit" that these values are not searched. The card shows the exact location, a visitor types the region. "netherlands" 6, "international" 3, "rotterdam" 3, "view" and "apply" 0. Source: `references/embeds/opportunity-list-script.html`.
+
+## 2026-11-12 — Hover border lighter, box centred on the text (Aniek Velthuizen, via Claude)
+Owner: the hover border sat too high around the text and could be lighter.
+- Hover (not focus) border in this bar: `swatch/brand-300` instead of `brand-500`. Focus keeps `brand-500` and its outline, as Form Section.
+- The field's `padding-top: .5rem` is gone (text now centred in the box) and the box moves down with `transform: translateY(.25rem)`, so the text stays where it was (as Figma) and the border sits evenly around it. Layout and bar height do not change; the chevron keeps its own `.25rem` shift and now matches the box centre (692 / 692 at 1512).
+Source `references/embeds/opportunity-list-style.html`, embed `7a34be19-…605e` read first (matched), rewritten, published to staging 1×. Checked at 1512 (hover seen) and 402 (field to line 12, no sideways scroll). Safari not checked.

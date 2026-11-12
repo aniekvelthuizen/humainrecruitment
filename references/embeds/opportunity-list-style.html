@@ -2,9 +2,10 @@
 <style>
 html:not(.w-mod-js) .opportunity-list_filters { display: none; }
 .opportunity-list_form .form_label_text { margin-bottom: 0; }
-.opportunity-list_form .form_field { flex: none; width: calc(100% + .75rem); margin-left: -.75rem; padding-top: .5rem; padding-right: .5rem; text-overflow: ellipsis; }
+.opportunity-list_form .form_field { flex: none; width: calc(100% + .75rem); margin-left: -.75rem; padding-right: .5rem; text-overflow: ellipsis; transform: translateY(.25rem); }
 .opportunity-list_form select.form_field { padding-right: 2rem; }
 .opportunity-list_form .form_field:not(:hover, :focus) { border-color: transparent; }
+.opportunity-list_form .form_field:hover:not(:focus) { border-color: var(--swatch--brand-300); }
 .opportunity-list_form select.form_field:has(option:first-child:checked) { color: var(--swatch--dark-900-o50); }
 .opportunity-list_form .form_select_icon { transform: translateY(.25rem); }
 @media screen and (min-width: 992px) {

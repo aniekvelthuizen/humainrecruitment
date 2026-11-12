@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Foto-parallax · prototype</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* Prototype by Aniek Velthuizen with Claude, 2026-11-12.
+     Spotlight Grid panels as on staging: brand gradient, cut-out photo. */
+  :root {
+    --brand-start: #250059;
+    --brand-middle: #0082a6;
+    --brand-end: #e5bbb7;
+    --light-200: #edf1f7;
+    --ink: #030b1b;
+    --mint: #00ffcc;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Onest, system-ui, sans-serif; background: var(--light-200); color: var(--ink); }
+
+  .bar { position: sticky; top: 0; z-index: 5; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center;
+         padding: 14px 24px; background: rgba(255,255,255,.92); backdrop-filter: blur(8px); border-bottom: 1px solid #dde3ec; font-size: 14px; }
+  .bar strong { font-weight: 500; }
+  .seg { display: inline-flex; border: 1px solid #c9d2df; border-radius: 99px; overflow: hidden; }
+  .seg button { font: inherit; border: 0; background: none; padding: 7px 14px; cursor: pointer; color: var(--ink); }
+  .seg button[aria-pressed="true"] { background: var(--brand-start); color: #fff; }
+  .bar label { display: inline-flex; gap: 8px; align-items: center; }
+  .bar output { min-width: 3.5em; font-variant-numeric: tabular-nums; }
+  .note { color: #5b6577; }
+
+  .intro { max-width: 1384px; margin: 40px auto 0; padding: 0 24px; }
+  .intro h1 { font-weight: 500; font-size: 28px; margin: 0 0 8px; }
+  .intro p { margin: 0; max-width: 60ch; line-height: 1.5; color: #3a4456; }
+
+  /* section = the area that listens to the mouse (like the real section) */
+  .section { max-width: 1384px; margin: 0 auto; padding: 48px 24px 96px;
+             display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; align-items: center; }
+  .card { background: #fff; border-radius: 8px; padding: 32px; box-shadow: 0 20px 60px rgba(3,11,27,.06); line-height: 1.5; font-size: 18px; }
+  .card .q { width: 46px; height: 40px; background: var(--mint); clip-path: polygon(18% 0, 46% 0, 30% 100%, 0 100%, 18% 0, 54% 0, 82% 0, 66% 100%, 36% 100%, 54% 0); margin-bottom: 20px; }
+  .card small { display: block; margin-top: 24px; color: #7a8394; font-size: 15px; }
+  .stack { display: flex; flex-direction: column; gap: 32px; }
+
+  .panel { position: relative; overflow: hidden; border-radius: 8px; color: #fff;
+           background: linear-gradient(180deg, var(--brand-start) 0%, var(--brand-middle) 70.19%, var(--brand-end) 100%); }
+  .panel.reviews { min-height: 440px; }
+  .panel.expertise { min-height: 766px; padding: 64px 24px 0; }
+  .panel blockquote { margin: 0; font-size: 28px; line-height: 1.25; font-weight: 500; text-wrap: balance; position: relative; z-index: 2; }
+  .panel .person { margin-top: 32px; position: relative; z-index: 2; }
+  .panel .person p { margin: 0; }
+  .panel .person .role { opacity: .5; font-size: 15px; }
+  .panel .person .co { margin-top: 8px; font-size: 15px; text-transform: uppercase; }
+
+  /* background light layer: only used by "Diepte" */
+  .glow { position: absolute; inset: -15%; pointer-events: none; opacity: 0; transition: opacity .4s;
+          background: radial-gradient(40% 35% at 50% 45%, rgba(0,255,204,.18), transparent 70%); }
+  [data-mode="depth"] .glow { opacity: 1; }
+
+  /* photo: bottom -16px so a small upward move never opens a gap at the bottom edge */
+  .visual { position: absolute; bottom: -16px; will-change: transform; transform-origin: 50% 100%; }
+  .reviews .visual { left: 50%; width: 17.3125rem; margin-left: calc(-17.3125rem / 2); }
+  .expertise .visual { left: 50%; width: 37.375rem; margin-left: calc(-37.375rem * .35); }
+  .visual img { display: block; width: 100%; height: auto; }
+
+  .label { position: absolute; top: 12px; left: 12px; z-index: 3; font-size: 12px; padding: 4px 8px; border-radius: 99px;
+           background: rgba(0,0,0,.35); color: #fff; pointer-events: none; }
+
+  @media (max-width: 991px) {
+    .section { grid-template-columns: 1fr; max-width: 40rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bar" role="group" aria-label="Instellingen">
+  <strong>Variant</strong>
+  <span class="seg" id="modes">
+    <button type="button" data-mode="off">Uit</button>
+    <button type="button" data-mode="drift">A · Drift</button>
+    <button type="button" data-mode="depth" aria-pressed="true">B · Diepte</button>
+    <button type="button" data-mode="tilt">C · Kantelen</button>
+  </span>
+  <label>Sterkte <input id="strength" type="range" min="2" max="24" step="1" value="8"> <output id="strengthOut">8 px</output></label>
+  <label>Snelheid <input id="ease" type="range" min="5" max="80" step="1" value="20"> <output id="easeOut">0.020</output></label>
+  <label><input id="invert" type="checkbox" checked> Tegen de muis in</label>
+  <span class="note" id="rm"></span>
+</div>
+
+<div class="intro">
+  <h1>Persoon beweegt mee met de muis</h1>
+  <p>Beweeg over het blok (niet alleen over de foto). Het verloop blijft staan, alleen de vrijgestelde persoon schuift een paar pixels mee. Op touch en bij <em>reduced motion</em> staat het uit.</p>
+</div>
+
+<section class="section" data-parallax-section>
+  <div class="stack">
+    <div class="card"><div class="q"></div>For several years, a talented, driven team that go above and beyond.<small>Chance Lipshutz · Covestro</small></div>
+  </div>
+  <div class="stack">
+    <div class="card"><div class="q"></div>They found us the right planner within a week, and he is still with us.<small>Jocelyn Westervelt · Chief Operations Officer</small></div>
+    <div class="panel reviews">
+      <span class="label">Reviews</span>
+      <div class="glow" data-layer="bg"></div>
+      <div class="visual" data-layer="fg">
+        <img src="https://cdn.prod.website-files.com/6ae35364a38b2d71cab8c607/6ae8e75f8896a7d6a926091c_testimonials-reviews-man.png" alt="Smiling man holding a tablet, looking up">
+      </div>
+    </div>
+  </div>
+  <div class="stack">
+    <div class="card"><div class="q"></div>With the project delivered on time, our brand-new site opened as planned.<small>Marcus Levin · Google</small></div>
+  </div>
+</section>
+
+<section class="section" data-parallax-section>
+  <div class="stack">
+    <div class="card">Project controls<small>Planning, cost and risk experts</small></div>
+    <div class="card">Engineering<small>Discipline leads on demand</small></div>
+  </div>
+  <div class="panel expertise">
+    <span class="label">Expertise</span>
+    <div class="glow" data-layer="bg"></div>
+    <blockquote>“HumAIn is our go‑to partner for high‑quality project people.”</blockquote>
+    <div class="person"><p>Lisette</p><p class="role">Project Director</p><p class="co">Company</p></div>
+    <div class="visual" data-layer="fg">
+      <img src="https://cdn.prod.website-files.com/6ae35364a38b2d71cab8c607/6ae8d856812d3edb22206286_spotlight-expertise-lisette.webp" alt="Smiling businesswoman with curly hair looking up">
+    </div>
+  </div>
+  <div class="stack">
+    <div class="card">Construction<small>Site and package managers</small></div>
+    <div class="card">Commissioning<small>Start-up and handover</small></div>
+  </div>
+</section>
+
+<script>
+(() => {
+  const fine = matchMedia('(hover: hover) and (pointer: fine)');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+  // invert: cursor right → person left (owner, 2026-11-12); the light behind goes with the cursor
+  const state = { mode: 'depth', strength: 8, ease: 0.02, invert: true };
+  document.getElementById('rm').textContent =
+    reduce.matches ? 'Let op: je systeem vraagt om minder beweging — op de site staat het dan uit (hier aan voor de demo).' :
+    !fine.matches ? 'Touch-apparaat: op de site staat het hier uit.' : '';
+
+  // UI
+  document.querySelectorAll('#modes button').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('#modes button').forEach(x => x.setAttribute('aria-pressed', x === b));
+    state.mode = b.dataset.mode;
+    document.body.dataset.mode = state.mode;
+    panels.forEach(p => p.kick());
+  }));
+  document.body.dataset.mode = state.mode;
+  const s = document.getElementById('strength'), so = document.getElementById('strengthOut');
+  s.addEventListener('input', () => { state.strength = +s.value; so.textContent = s.value + ' px'; });
+  const e = document.getElementById('ease'), eo = document.getElementById('easeOut');
+  e.addEventListener('input', () => { state.ease = e.value / 1000; eo.textContent = state.ease.toFixed(3); });
+  const inv = document.getElementById('invert');
+  inv.addEventListener('change', () => { state.invert = inv.checked; panels.forEach(p => p.kick()); });
+
+  // One controller per panel. The whole section listens; the target is the cursor
+  // relative to the panel centre, normalised and clamped to -1..1.
+  const panels = [...document.querySelectorAll('.panel')].map(panel => {
+    const section = panel.closest('[data-parallax-section]');
+    const fg = panel.querySelector('[data-layer="fg"]');
+    const bg = panel.querySelector('[data-layer="bg"]');
+    let tx = 0, ty = 0, x = 0, y = 0, raf = 0, inView = true;
+
+    const clamp = v => Math.max(-1, Math.min(1, v));
+    function onMove(ev) {
+      const r = panel.getBoundingClientRect();
+      // reach = how far from the centre the cursor must be for full movement
+      tx = clamp((ev.clientX - (r.left + r.width / 2)) / (r.width * 0.9));
+      ty = clamp((ev.clientY - (r.top + r.height / 2)) / (r.height * 0.9));
+      kick();
+    }
+    function onLeave() { tx = 0; ty = 0; kick(); }
+    function kick() { if (!raf) raf = requestAnimationFrame(tick); }
+    function tick() {
+      raf = 0;
+      x += (tx - x) * state.ease;
+      y += (ty - y) * state.ease;
+      const m = state.strength * (state.invert ? -1 : 1), mode = state.mode;
+      if (mode === 'off') {
+        fg.style.transform = ''; bg.style.transform = '';
+      } else if (mode === 'drift') {
+        fg.style.transform = `translate3d(${x * m}px, ${y * m * 0.6}px, 0)`;
+        bg.style.transform = '';
+      } else if (mode === 'depth') {
+        fg.style.transform = `translate3d(${x * m}px, ${y * m * 0.6}px, 0)`;
+        bg.style.transform = `translate3d(${-x * m * 2}px, ${-y * m * 1.5}px, 0)`;
+      } else if (mode === 'tilt') {
+        fg.style.transform = `perspective(900px) translate3d(${x * m * 0.6}px, ${y * m * 0.3}px, 0) rotateY(${x * m * 0.25}deg) rotateX(${-y * m * 0.12}deg)`;
+        bg.style.transform = '';
+      }
+      if (Math.abs(tx - x) > 0.0005 || Math.abs(ty - y) > 0.0005) raf = requestAnimationFrame(tick);
+    }
+    section.addEventListener('pointermove', ev => { if (ev.pointerType === 'mouse' && inView) onMove(ev); });
+    section.addEventListener('pointerleave', onLeave);
+    new IntersectionObserver(([en]) => { inView = en.isIntersecting; if (!inView) onLeave(); }).observe(panel);
+    return { kick };
+  });
+})();
+</script>
+</body>
+</html>
