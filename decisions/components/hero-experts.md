@@ -123,3 +123,12 @@ Owner (Aniek): «Graag hier een cms collection van maken.» Until now the 8 logo
 - Checked on staging: Home, Clients, How it works render 8 logos in Order with the company names as alt, tiles without a role; `marquee-check.mjs` maxGap 0 at 1512 and 402, normal and slow network.
 - **Editing:** CMS › Client Logos: new item (Name, Logo, Order), publish. Nothing in the Designer.
 - Template page `/client-logos/<slug>` answered 404 on staging (2026-11-12), as Reviews.
+
+## 2026-11-12 — Every hero text is a prop (owner; Aniek Velthuizen, via Claude)
+Owner: a marketer could not change the title, the buttons, «250+ experts…» or the line above the logos. This replaces "Props" of 2026-10-31: the hero is no longer an edit-inside-the-component block (the kit's home-hero exception does not apply here).
+- **Content:** Text (existing), **Title** (white part of the H1), **Title Muted** (faded part). H1 = `span`[Title] + `span`(space) + `span.hero-experts_muted`[Title Muted]; no `wbr`/`br` and no Title Break, the line breaks as before.
+- **Buttons:** Primary Visibility / Primary Text / Primary Link, Secondary Visibility / Secondary Text / Secondary Link, bound to the two `Button Main` instances (Text, Link, Visibility). Defaults: «Request a shortlist» → /hire-an-expert, «See how we select» → /how-it-works.
+- **Stat:** Stat Visibility (on the paragraph), **Stat Number** («250+»), **Stat Text** (faded rest), same three-span build as the title.
+- **Logos:** Logos Visibility (on the reveal wrapper `[data-hero-reveal=logos]`), **Logos Title** bound to Logo Marquee's Title. The logos themselves come from CMS › Client Logos (other session, same day).
+- Defaults = the old texts, so Home did not change. The reveal script targets the `data-hero-reveal` elements, which stayed. Verified on staging: H1, stat, both buttons (text + href) and the logo title render identical; no console errors.
+- Not done (Designer only): "show only when filled" conditions on Title Muted and Stat Text; empty means an empty span.

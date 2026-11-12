@@ -66,3 +66,6 @@ Not published; checked by API read-back and a local simulation (published page +
 
 ## 2026-11-12 — Anchor `#apply` for the phone button (Aniek Velthuizen, via Claude)
 Target of the hero's "Apply for this role" (Page Header, see `page-header.md`). The id sits on an empty `div.opportunity-detail_anchor`, first child of `_aside` (now `position: relative`): absolute, `top: -5.5rem`, 0 × 0. Not on the card itself: Webflow's smooth scroll ignores `scroll-margin` (as `vacancy-list.md`), and on the card the form landed at 0, under the 64 px nav. With the anchor 88 above the card, it lands 88 from the top on phones (24 under the nav), the same landing as the vacancy list. No layout change: the anchor takes no space and no clicks.
+
+## 2026-11-12 — Form messages are props (owner; Aniek Velthuizen, via Claude)
+**Messages** › Success Message, Error Message: a bound `div` in the `w-form-done` / `w-form-fail` blocks of the apply form. Defaults = the old texts; verified on /opportunities/project-controls-manager. Field labels and the upload texts stay in the definition, as in Form Section.
