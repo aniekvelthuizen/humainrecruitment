@@ -336,3 +336,7 @@
 - Owner request. Site settings › Icons (Claude in Chrome): one upload of `references/assets/icons/webclip-256.png`, applied to Favicon light, Favicon dark and Webclip. Record: `decisions/site.md`.
 - Published to staging 1× (claude.ai Webflow connector; the local `webflow` MCP returns 404 for this site). Staging HTML carries icon links 32 (light + dark), 48, 192, 512 and apple-touch-icon 180.
 - Owner round: dark-mode favicon replaced with the owner's lighter version (`webclip-dark-256.png`, Favicon dark slot only). Published to staging 1×; staging HTML: light 32 = original, dark 32 = new file.
+
+## 2026-11-12 — SEO titles and descriptions, static pages — Aniek Velthuizen with Claude
+- Owner request after spotting «Website Name» in the tab. 14 public static pages: title + description from the page's own copy, Open Graph "Same as SEO" (`bulk_update_pages`). Record: `decisions/site.md` › SEO.
+- Published to staging 1×. `seo-check.mjs`: all 14 titles ≤ 60 and descriptions 120–160, no placeholders, no duplicates; remaining errors are only «no og:image» (not done) and the Opportunities items (no description, no suffix, duplicate titles — CMS SEO fields needed).
