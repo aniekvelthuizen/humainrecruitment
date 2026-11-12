@@ -1,5 +1,5 @@
 <style>
-/* Stagger Cards (base) motion — owner (Aniek), 2026-11-12: cards rise in one by one, the icons move (clock turns, route draws in, loupe searches).
+/* Stagger Cards motion (all variants) — owner (Aniek), 2026-11-12: cards rise in one by one, the icons keep moving.
    The script embed next to this one sets data-stagger-motion on the section; without it (Designer, reduced motion, no JS) nothing here applies.
    Off: remove the script embed. */
 [data-stagger-motion] .stagger-cards_list > * > * { transition: translate .8s cubic-bezier(.22,1,.36,1) var(--stagger-delay, 0s); }
@@ -36,4 +36,14 @@
   50% { transform: translate(0, -.9px) rotate(0deg); }
   75% { transform: translate(.9px, -.5px) rotate(10deg); }
 }
+/* Shield breathes (2.8 s); ticks and clipboard rows draw, hold, fade, redraw; handshake shakes; outbound arrow leaves and returns. */
+[data-icon-part="shield"] { transform-origin: 17.6px 16.7px; animation: stagger-breath 2.8s ease-in-out infinite; }
+[data-icon-part="tick"], [data-icon-part="row"] { stroke-dasharray: 1.02 2; animation: stagger-draw 3.2s cubic-bezier(.45,0,.2,1) var(--rd, 0s) infinite backwards; }
+[data-icon-part="row"] { animation-duration: 4s; }
+[data-icon-part="shake"] { transform-origin: 12px 12px; animation: stagger-shake 3.6s ease-in-out infinite; }
+[data-icon-part="out"] { animation: stagger-out 2.8s ease-in-out infinite; }
+@keyframes stagger-breath { 0%, 100% { scale: 1; } 50% { scale: 1.12; } }
+@keyframes stagger-draw { 0% { stroke-dashoffset: 1.03; opacity: 1; } 22% { stroke-dashoffset: 0; } 80% { stroke-dashoffset: 0; opacity: 1; } 94% { stroke-dashoffset: 0; opacity: 0; } 95%, 100% { stroke-dashoffset: 1.03; opacity: 0; } }
+@keyframes stagger-shake { 0%, 32%, 100% { rotate: 0deg; } 8% { rotate: -6deg; } 16% { rotate: 5deg; } 24% { rotate: -3deg; } }
+@keyframes stagger-out { 0%, 100% { translate: 0 0; } 50% { translate: .8px -.8px; } }
 </style>

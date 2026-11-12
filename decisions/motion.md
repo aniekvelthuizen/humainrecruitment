@@ -70,3 +70,15 @@ Owner (Aniek): the grey part of the black/grey titles starts black and turns gre
 - **Off:** reduced motion, no IntersectionObserver, no JavaScript, and the Designer → the colours as designed.
 - **Where:** an embed in `Global | Custom Code` (`141a108e-8c89-7794-a75a-166d962024d9`), so it is on every page. Source: `references/embeds/muted-heading-sweep.html`.
 - To exclude a heading later: give the span a class not ending in `_muted`, or add `:not(...)` to the selector in the embed. Another colour accent: add its class next to `.sticky-steps_accent` (CSS gate and `SEL` in the script).
+
+## 2026-11-12 — Stagger Cards motion on every stair section (owner)
+Owner (Aniek): «alle blokken die in een trappetje staan en dit soort icons hebben, mogen dezelfde animatie hebben» — looping icons, cards in one by one like a stair. Done by Aniek Velthuizen with Claude. This widens the exception above from the base variant to **every Stagger Cards section** (base, plain, gradient): Home «The risk» and «Engagement models», Hire an Expert, How It Works.
+- **Cards:** unchanged (24 px rise + fade, 0.8 s, 0.15 s apart).
+- **New icon loops** (all calm, same 0.7 stroke at 24, redrawn from the site's icon files):
+  - `person-shield`: the shield breathes, scale 1 → 1.12 → 1, 2.8 s.
+  - `person-check`, `check-circle`, `list-check`: the tick draws (0.7 s), holds, fades and redraws, 3.2 s per round.
+  - `assignment`: the three clipboard rows write in one after another (0.25 s apart), hold, fade, 4 s per round.
+  - `handshake`: a short shake (−6°, 5°, −3°) every 3.6 s, then still.
+  - `outbound`: the arrow moves 0.8 / 24 out to the corner and back, 2.8 s.
+- **Mechanism:** the script no longer filters on the variant; it runs on every `[data-stagger-cards]`. An icon without an `ICONS` entry stays a static mask; add an entry to animate it.
+- Measured on staging at 1440 and 402 on all four sections: cards in at ~0.8 s each, list height unchanged, reduced motion static and visible, console clean.

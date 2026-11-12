@@ -369,3 +369,7 @@
 
 ## 2026-11-12 — Two-tone headings: words one by one (Aniek Velthuizen with Claude)
 - Owner: words one by one instead of the sweep, and the turquoise Sticky Steps titles too. Tested on a patched copy of Home (Sticky Steps, light and dark), published to staging, re-checked on How It Works.
+
+## 2026-11-12 — Stagger Cards motion on every stair section — Aniek Velthuizen with Claude
+- Owner: every stair block with these icons gets the same motion. Script runs on every `[data-stagger-cards]`; ICONS + CSS for person-shield, person-check, assignment, list-check, handshake, check-circle, outbound. Same two embeds (`396ecf23-…`, `2f7ccac8-…`); published code on staging is byte-identical to `references/embeds/stagger-cards-motion-*.html`.
+- Tested on patched copies of Home, Hire an Expert and How It Works, then published to staging 1×. `SECTION=n node references/stagger-motion-check.mjs` (now takes the section index) on all four sections at 1440 / 402 and reduced motion: all pass, console clean.

@@ -1,5 +1,5 @@
-// Headless check of the Stagger Cards (base) motion: card reveal and icon animation (Node 22+, Chrome, no dependencies).
-//   node references/stagger-motion-check.mjs [url] [outdir]
+// Headless check of the Stagger Cards motion: card reveal and icon animation (Node 22+, Chrome, no dependencies).
+//   [SECTION=n] node references/stagger-motion-check.mjs [url] [outdir]   (n = which Stagger Cards section on the page, default 0)
 // Per width: state before scrolling, card opacity/translate sampled after the section scrolls into view, the icons' moving
 // parts over time, layout (list height) before vs after, then the same page with reduced motion. Screenshots of the section.
 import { spawn } from 'node:child_process';
@@ -8,6 +8,7 @@ import path from 'node:path';
 
 const url = process.argv[2] || 'https://humain-dev.webflow.io';
 const out = process.argv[3] || './stagger-motion-out';
+const SECTION = +(process.env.SECTION || 0);
 const widths = (process.env.WIDTHS || '1440,402').split(',').map(Number);
 fs.mkdirSync(out, { recursive: true });
 const chromePath = process.env.CHROME || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
@@ -32,7 +33,7 @@ await send('Runtime.enable');
 await send('Page.enable');
 
 const state = `(() => {
-  const sec = document.querySelector('[data-stagger-cards][data-wf--stagger-cards--variant="base"]');
+  const sec = document.querySelectorAll('[data-stagger-cards]')[${SECTION}];
   const cards = [...sec.querySelectorAll('.stagger-cards_list > * > *')];
   const r2 = (n) => Math.round(n * 100) / 100;
   const part = (p) => { const el = sec.querySelector('[data-icon-part="' + p + '"]'); if (!el) return null; const cs = getComputedStyle(el);
@@ -45,7 +46,7 @@ const state = `(() => {
 })()`;
 
 const shot = async (name) => {
-  const box = await ev(`(() => { const b = document.querySelector('[data-stagger-cards] .stagger-cards_list').getBoundingClientRect(); return [b.left, b.top + scrollY - 40, b.width, b.height + 120]; })()`);
+  const box = await ev(`(() => { const b = document.querySelectorAll('[data-stagger-cards]')[${SECTION}].querySelector('.stagger-cards_list').getBoundingClientRect(); return [b.left, b.top + scrollY - 40, b.width, b.height + 120]; })()`);
   const s = await send('Page.captureScreenshot', { format: 'png', clip: { x: Math.max(0, box[0] - 20), y: box[1], width: box[2] + 40, height: box[3], scale: 1 }, captureBeyondViewport: false });
   fs.writeFileSync(path.join(out, name + '.png'), Buffer.from(s.result.data, 'base64'));
 };
@@ -59,7 +60,7 @@ for (const w of widths) {
     await send('Page.navigate', { url });
     await sleep(4000);
     const r = { before: await ev(state), samples: {} };
-    await ev(`(() => { const l = document.querySelector('[data-stagger-cards] .stagger-cards_list'); scrollTo(0, l.getBoundingClientRect().top + scrollY - 200); })()`);
+    await ev(`(() => { const l = document.querySelectorAll('[data-stagger-cards]')[${SECTION}].querySelector('.stagger-cards_list'); scrollTo(0, l.getBoundingClientRect().top + scrollY - 200); })()`);
     const t0 = Date.now();
     for (const t of [150, 450, 800, 1300, 2200, 3200]) {
       await sleep(t - (Date.now() - t0));
