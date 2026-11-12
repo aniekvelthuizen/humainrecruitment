@@ -206,3 +206,8 @@ Owner (Aniek), screenshot of round 2 next to the design: one side of the cards w
 - **Turn:** like an object on a turntable (vertical screen axis, applied after the pose), **±10°** (was 14), 9 s each way, perspective 120rem. A turn around the cards' own axis was tried and tipped them too far back at −10…−14°.
 - **Changing the tilt in Webflow** now needs a new pose in the embed (same calculation). Reduced motion and the Designer still show the Webflow skew; head-on the two are identical.
 - Checked on staging at 1024: pose + turn applied, no sideways scroll. Not checked: Safari, phones after this round.
+
+### 2026-11-12 — Cards 3D round 4: zigzag (owner)
+Owner (Aniek): «Ja goed nu! kunnen ze naast draaien ook nog een beetje zigzaggen van elkaar? middelste langzaam naar rechts, de andere naar links en dan weer terug». Round 3 approved.
+- **Zigzag:** the middle card drifts right, the top and bottom card left, then back: **±1rem** along the cards' own width (`translate` in the 3D pose), **7 s** each way, ease-in-out, endless. Starts at 1.5 s, when the last card is in, from 0, so it never jumps. 7 s against the turn's 9 s, so the two never repeat in step. ≤ 767 **±0.5rem**: at ±0.75 a card came within 7 px of the screen edge.
+- Checked on staging: entrance first (translate 0 40 → 0), then ±16 px at 1024; at 375 no sideways scroll.

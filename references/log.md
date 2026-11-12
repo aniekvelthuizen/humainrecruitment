@@ -448,3 +448,4 @@
 - 2026-11-12 (Aniek, via Claude): Team Fan turns a little while scrolling (down = right); sixth Discipline card Project Director in the CMS; scroll script as a second embed in Team Fan; fan cap ±2.5 steps. Published to staging. Details `decisions/components/team-fan.md`.
 - Round 3 (owner: one side higher, uneven space round the photo): skew replaced by a real 3D pose while moving (`--cards-3d-pose`, desktop and ≤ 767), turntable turn ±10°. Embed rewritten from the source, published to staging 1×.
 - 2026-11-12 (Aniek, via Claude): Team Fan scroll turn now runs out for about a second after the scroll stops (owner). Published to staging.
+- Round 4 (owner): zigzag added (`cards-3d-zig`, ±1rem / 7 s, ≤ 767 ±0.5rem). Embed rewritten from the source, published to staging 2×.
