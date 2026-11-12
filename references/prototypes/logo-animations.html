@@ -60,7 +60,8 @@ main{max-width:68rem;margin:0 auto;padding:1.5rem 1rem 4rem;display:grid;gap:1.5
 
 /* ---------- 3. Lijn tekent het logo ---------- */
 .a3 path{stroke:currentColor;stroke-width:1.2;stroke-dasharray:1.02 2;stroke-dashoffset:0;vector-effect:non-scaling-stroke}
-.a3.play path{animation:a3-draw 1.2s cubic-bezier(.45,0,.2,1) both, a3-fill .5s var(--ease) both;animation-delay:calc(var(--i) * 80ms), calc(1s + var(--i) * 40ms)}
+/* v2 (owner: intekenen en inkleuren sneller achter elkaar): korter tekenen, elke letter kleurt in zodra zijn eigen lijn bijna rond is */
+.a3.play path{animation:a3-draw .8s cubic-bezier(.45,0,.2,1) both, a3-fill .4s var(--ease) both;animation-delay:calc(var(--i) * 60ms), calc(.55s + var(--i) * 60ms)}
 @keyframes a3-draw{from{stroke-dashoffset:1.03}to{stroke-dashoffset:0}}
 @keyframes a3-fill{from{fill-opacity:0}to{fill-opacity:1}}
 .a3:hover path{animation:a3-hover .9s cubic-bezier(.45,0,.2,1) both;animation-delay:calc(var(--i) * 30ms);stroke:var(--accent)}
@@ -131,7 +132,7 @@ document.documentElement.style.setProperty("--logo-mask", `url("data:image/svg+x
 const IDEAS = [
  {k:"a1", t:"Letters komen omhoog", load:"Elke letter komt 40 % omhoog en vervaagt in, één voor één (0,06 s ertussen), 0,7 s. Klaar na 1 s.", hover:"Een klein golfje door de letters van links naar rechts.", calm:true},
  {k:"a2", t:"AI licht op", load:"Het logo vervaagt in; daarna lichten de A en I kort mint op en gaan terug. Vertelt de naam: Hum<b>AI</b>n.", hover:"A en I worden mint, de andere letters dimmen naar 35 %.", calm:true},
- {k:"a3", t:"Lijn tekent het logo", load:"Een dunne lijn trekt de letters na, daarna vult de kleur zich. Klaar na ~1,5 s.", hover:"De vulling valt weg en een mint lijn tekent het logo opnieuw; bij weggaan vult hij weer.", calm:false},
+ {k:"a3", t:"Lijn tekent het logo", load:"Een dunne lijn trekt de letters na (0,8 s, 0,06 s ertussen); elke letter kleurt in zodra zijn lijn bijna rond is. Klaar na ~1,25 s (was ~1,9 s).", hover:"De vulling valt weg en een mint lijn tekent het logo opnieuw; bij weggaan vult hij weer.", calm:false},
  {k:"a4", t:"Lichtstreep", load:"Het logo veegt van links naar rechts in, daarna glijdt er één mint lichtstreep overheen.", hover:"De lichtstreep glijdt nog een keer over het logo.", calm:true},
  {k:"a5", t:"Hum + AIn komen samen", load:"‘HUM’ schuift van links in, ‘AIN’ van rechts; ze ontmoeten elkaar in het midden.", hover:"De letters schuiven een fractie uit elkaar, de A en I worden mint.", calm:true},
  {k:"a6", t:"Scherpstellen + magnetisch", load:"De letters stellen één voor één scherp (blur 8 px → 0) en krimpen naar hun maat.", hover:"De letters bij de muis komen een stukje omhoog en volgen de cursor.", calm:false},
