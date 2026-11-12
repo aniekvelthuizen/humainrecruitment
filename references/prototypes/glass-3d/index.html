@@ -60,6 +60,8 @@ const C = {
   pink: '#f2a9b6', white: '#e6e9f4', sky: '#a9d3ef', mint: '#3fe0cf',
   blue: '#2c86c2', lavender: '#a57fdb', purple: '#4b1ba8'
 };
+// Glass on a white page loses its light tints, so the donut uses a little more colour.
+const D = { ...C, white: '#c3cbe6', sky: '#8cc4ee', pink: '#ee98aa', blue: '#1f86cc' };
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // Glass = a clear shell with a coloured core inside, like the renders.
@@ -74,6 +76,16 @@ function coreMat(hex) {
   return new THREE.MeshPhysicalMaterial({
     color: hex, roughness: 0.25, metalness: 0, clearcoat: 0.6, sheen: 0.4, sheenColor: new THREE.Color('#ffffff'),
     transparent: true, opacity: 0.9, envMapIntensity: 0.6
+  });
+}
+
+// Real glass: one transmissive body per piece (light passes through, tinted by its thickness).
+function glassMat(hex) {
+  return new THREE.MeshPhysicalMaterial({
+    color: new THREE.Color(hex).lerp(new THREE.Color('#ffffff'), 0.25), metalness: 0, roughness: 0.1,
+    transmission: 1, thickness: 0.7, ior: 1.5,
+    attenuationColor: new THREE.Color(hex), attenuationDistance: 2.2, dispersion: 0.4,
+    clearcoat: 1, clearcoatRoughness: 0.04, specularIntensity: 1, envMapIntensity: 1.2
   });
 }
 
@@ -138,24 +150,17 @@ function mountDonut(el) {
   const R0 = 1.75, R1 = 2.85, DEPTH = 0.55, GAP = 0.035; // gap in radians
   const tilt = new THREE.Group();       // fixed viewing angle
   const spin = new THREE.Group();       // turns slowly
-  tilt.rotation.set(-0.38, 0.42, 0.05);
+  tilt.rotation.set(-0.38, -0.42, -0.05); // face turned towards the text (left), as the render
   tilt.add(spin); ctx.scene.add(tilt);
 
   let a = Math.PI / 2; // start at 12 o'clock, go clockwise (negative angle)
   for (const [name, deg] of parts) {
     const a1 = a, a0 = a - THREE.MathUtils.degToRad(deg);
-    const shellGeo = new THREE.ExtrudeGeometry(sector(R0, R1, a0 + GAP, a1 - GAP), {
-      depth: DEPTH, bevelEnabled: true, bevelThickness: 0.07, bevelSize: 0.06, bevelSegments: 4, curveSegments: 64
+    const geo = new THREE.ExtrudeGeometry(sector(R0, R1, a0 + GAP, a1 - GAP), {
+      depth: DEPTH, bevelEnabled: true, bevelThickness: 0.09, bevelSize: 0.07, bevelSegments: 6, curveSegments: 64
     });
-    shellGeo.translate(0, 0, -DEPTH / 2);
-    const coreGeo = new THREE.ExtrudeGeometry(sector(R0 + 0.12, R1 - 0.12, a0 + GAP + 0.04, a1 - GAP - 0.04), {
-      depth: DEPTH - 0.18, bevelEnabled: true, bevelThickness: 0.04, bevelSize: 0.03, bevelSegments: 3, curveSegments: 64
-    });
-    coreGeo.translate(0, 0, -(DEPTH - 0.18) / 2);
-    const core = new THREE.Mesh(coreGeo, coreMat(C[name]));
-    const shell = new THREE.Mesh(shellGeo, shellMat(C[name]));
-    shell.renderOrder = 1;
-    spin.add(core, shell);
+    geo.translate(0, 0, -DEPTH / 2);
+    spin.add(new THREE.Mesh(geo, glassMat(D[name])));
     a = a0;
   }
 
