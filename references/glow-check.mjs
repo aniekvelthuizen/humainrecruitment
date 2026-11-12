@@ -1,6 +1,6 @@
 // Headless check of the header glow (pink end of the brand gradient rising in on load). Node 22+, Chrome, no dependencies.
 //   node references/glow-check.mjs [base-url]
-// Per page: which sections paint the pink end (#e5bbb7), whether they carry the glow layer, its opacity/transform
+// Per page: which sections paint the pink end (#e5bbb7) or run header-glow-rise; 'op' = pink present (1) or not (0)
 // at 0.1 s and 3 s after load, height unchanged, console errors. REDUCED=1 emulates prefers-reduced-motion.
 import { spawn } from 'node:child_process';
 import fs from 'node:fs';
@@ -35,11 +35,11 @@ const probe = `(() => {
   const out = [];
   for (const el of document.querySelectorAll('section, header, footer, div')) {
     const cs = getComputedStyle(el);
-    const pinkBefore = getComputedStyle(el, '::before').backgroundImage.includes('229, 187, 183');
-    if (!cs.backgroundImage.includes('229, 187, 183') && !pinkBefore) continue;
+    const anim = cs.animationName.includes('header-glow-rise');
+    const pink = cs.backgroundImage.includes('229, 187, 183');
+    if (!anim && !pink) continue;
     if (el.closest('footer, .footer_wrap')) { out.push({ cls: el.className.split(' ')[0], footer: true }); continue; }
-    const b = getComputedStyle(el, '::before');
-    out.push({ cls: el.className.split(' ')[0], glow: pinkBefore, bg: cs.backgroundImage.slice(0, 90), op: b.opacity, tf: b.transform, h: el.offsetHeight });
+    out.push({ cls: el.className.split(' ')[0], glow: anim, op: pink ? '1' : '0', tf: 'none', h: el.offsetHeight });
   }
   return out;
 })()`;
