@@ -370,3 +370,8 @@
 
 ## 2026-11-12 — Two-tone headings: words one by one (Aniek Velthuizen with Claude)
 - Owner: words one by one instead of the sweep, and the turquoise Sticky Steps titles too. Tested on a patched copy of Home (Sticky Steps, light and dark), published to staging, re-checked on How It Works.
+
+## 2026-11-12 — Glass 3D donut and bars on staging — Aniek Velthuizen with Claude
+- Owner approved the Three.js prototype (`references/prototypes/glass-3d/`). Sixth embed in `Global | Custom Code`: `6303987b-0b4d-b1fd-aa63-b199bc953fbf`, source `references/embeds/glass-3d-script.html`, read back identical. No attributes added in the Designer; runtime only: `data-glass3d-on` on the pictures, `[data-glass-3d-stage]` overlay. Revert: remove that embed.
+- Published to staging; `references/glass-3d-check.mjs` on Project Delivery Experts at 1440 / 402: both pictures 3D, no overflow, console clean, reduced motion keeps the PNGs. Record: `decisions/motion.md` › Glass 3D on the site.
+
