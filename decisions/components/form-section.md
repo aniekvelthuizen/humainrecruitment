@@ -79,3 +79,6 @@ Owner: «Upload failed …» showed a thick black box. webflow.js puts `tabindex
 ## 2026-11-12 — Aside sticky on desktop (Aniek Velthuizen, via Claude)
 Owner: «why join the pool mag sticky zijn» (/submit-resume). `form-section_aside` is now `position: sticky`, `top: calc(nav/height-total + 2rem)` as `sticky-steps_intro`; static ≤ 991 (one column). The layout already has `align-items: start`, so the aside is only as tall as its content and sticks within the form's height.
 On the class, not per variant (a variant cannot be targeted by the style API): Contact's aside (details + map) sticks too; measured at 1512: aside 590, form 670, so it moves only ~80 px there. Read-back shows only the variable for `top`, published as the calc, as Sticky Steps.
+
+## 2026-11-12 — Wider column gap (Aniek Velthuizen, via Claude)
+Owner: 40 px more space between the form and «Why join the pool?». `form-section_layout` column gap is now `calc(space/7 + 2.5rem)`: 32 → 72 at 1512, both columns 676 → 656. Row gap unchanged (one row on desktop; ≤ 991 the medium row gap `space/8` applies, 48 at 375). On the class, so Contact's details column moves 40 px too. Read-back shows only the variable; published as the calc, checked on staging at 1512, 1000 and 375.
