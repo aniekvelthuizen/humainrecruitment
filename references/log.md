@@ -385,3 +385,8 @@
 - Owner round (Hire an Expert): the draw-in showed double lines → embed `34374c77-…` emptied (comment only), staging published. Overview page for agreeing per-icon motion: `docs/icon-motion/icon-motion.html`, published as https://claude.ai/artifact/6inrfQ3yQvrD2bVi1KuNYi.
 - Owner chose a motion per icon (#01–#28). Preview rebuilt from cut-out parts (no outline strokes), published as version 2 of https://claude.ai/artifact/6inrfQ3yQvrD2bVi1KuNYi; checked at nine moments per loop in headless Chrome, console clean. Site unchanged.
 - Owner round 2: #11 Action Key reworked (four circles gather, only the handle wiggles); preview version 3. Rest approved by the owner.
+
+## 2026-11-12 — Glass 3D donut and bars on staging — Aniek Velthuizen with Claude
+- Owner approved the Three.js prototype (`references/prototypes/glass-3d/`). Sixth embed in `Global | Custom Code`: `6303987b-0b4d-b1fd-aa63-b199bc953fbf`, source `references/embeds/glass-3d-script.html`, read back identical. No attributes added in the Designer; runtime only: `data-glass3d-on` on the pictures, `[data-glass-3d-stage]` overlay. Revert: remove that embed.
+- Published to staging; `references/glass-3d-check.mjs` on Project Delivery Experts at 1440 / 402: both pictures 3D, no overflow, console clean, reduced motion keeps the PNGs. Record: `decisions/motion.md` › Glass 3D on the site.
+

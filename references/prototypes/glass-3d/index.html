@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glass 3D prototype</title>
+<!-- Prototype: real-3D glass donut (slow spin) and bar chart (bars pop up one by one, looping).
+     Built by Aniek Velthuizen with Claude, 2026-11-12. Three.js 0.169 from jsDelivr. -->
+<style>
+  :root { --navy: #1e0057; --ink: #0b0d1f; --muted: #7d8190; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: #fff; }
+  section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 4rem; align-items: center;
+            padding: 6rem max(1rem, 5vw); min-height: 80vh; position: relative; overflow: hidden; }
+  .light { background: radial-gradient(120% 70% at 50% 120%, #9ef0ee 0%, #c9f6f5 35%, #fff 70%); }
+  .dark { background: var(--navy); color: #fff; }
+  .eyebrow { letter-spacing: .12em; text-transform: uppercase; font-size: .875rem; margin: 0 0 1rem; }
+  h2 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.05; margin: 0 0 1.5rem; }
+  h2 span { color: var(--muted); }
+  .dark h2 span { color: #a493c9; }
+  p { font-size: 1.125rem; line-height: 1.6; max-width: 34rem; }
+  .stage { width: 100%; aspect-ratio: 1 / 1; max-width: 40rem; justify-self: end; }
+  .stage { position: relative; }
+  .stage canvas { display: block; width: 100%; height: 100%; }
+  /* Bleed: the canvas runs past the stage on every side, so pieces that move out are never cut off. */
+  .stage[data-glass-bleed] canvas { position: absolute; top: calc(var(--bleed) * -100%); left: calc(var(--bleed) * -100%); width: calc((1 + 2 * var(--bleed)) * 100%); height: calc((1 + 2 * var(--bleed)) * 100%); pointer-events: none; }
+  @media (max-width: 767px) { section { grid-template-columns: 1fr; gap: 2rem; } .stage { justify-self: center; } }
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+
+<section class="light">
+  <div>
+    <p class="eyebrow">The bar</p>
+    <h2>What HumAIn-qualified<br><span>means here.</span></h2>
+    <p>A pre-qualified expert isn't just available, they're evidenced. We assess delivery track record, technical depth and fit before they enter the pool, and we keep that assessment current.</p>
+  </div>
+  <div class="stage" data-glass-3d="donut"></div>
+</section>
+
+<section class="dark">
+  <div>
+    <p class="eyebrow">Growth</p>
+    <h2>Reach clients<br><span>that fit.</span></h2>
+    <p>The bars rise one by one, hold for a moment, sink back and start again.</p>
+  </div>
+  <div class="stage" data-glass-3d="bars"></div>
+</section>
+
+<script type="module">
+import * as THREE from 'three';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+
+// Colours sampled from the Figma renders.
+const C = {
+  pink: '#f2a9b6', white: '#e6e9f4', sky: '#a9d3ef', mint: '#3fe0cf',
+  blue: '#2c86c2', lavender: '#a57fdb', purple: '#4b1ba8'
+};
+// Glass on a white page loses its light tints, so the donut uses a little more colour.
+const D = { ...C, white: '#c3cbe6', sky: '#8cc4ee', pink: '#ee98aa', blue: '#1f86cc' };
+// On navy the darkest purple sinks into the background, so the bars use a brighter one.
+const B = { ...C, purple: '#5a2fd4' };
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Real glass: one transmissive body per piece (light passes through, tinted by its thickness).
+// On a dark section real glass mostly shows the dark behind it, so there it lets less through
+// (transmission) and glows softly in its own colour (glow), to read as lit glass like the render.
+// `dark`: on a dark section the white edge reflection reads as a light outline, so the
+// reflection takes the piece's own colour, the clearcoat is weaker and the rainbow fringe is off.
+function glassMat(hex, { transmission = 1, glow = 0, tint = 0.25, dark = false } = {}) {
+  const own = new THREE.Color(hex);
+  return new THREE.MeshPhysicalMaterial({
+    color: own.clone().lerp(new THREE.Color('#ffffff'), tint), metalness: 0, roughness: 0.1,
+    transmission, thickness: 0.7, ior: 1.5,
+    emissive: own, emissiveIntensity: glow,
+    attenuationColor: own, attenuationDistance: 2.2, dispersion: dark ? 0 : 0.4,
+    clearcoat: dark ? 0.35 : 1, clearcoatRoughness: dark ? 0.12 : 0.04,
+    specularIntensity: dark ? 0.6 : 1, specularColor: dark ? own.clone().lerp(new THREE.Color('#ffffff'), 0.35) : new THREE.Color('#ffffff'),
+    envMapIntensity: dark ? 0.75 : 1.2
+  });
+}
+
+function makeScene(el, { fov, camPos, target, bleed = 0, backdrop = null }) {
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  // Glass refracts what is drawn behind it. On a transparent canvas Three fills that with
+  // half-white (setClearColor(0xffffff, 0.5) in its transmission pass), which turns glass milky
+  // on a dark section. With a backdrop, that fill uses the section colour instead.
+  if (backdrop) {
+    const set = renderer.setClearColor.bind(renderer);
+    renderer.setClearColor = (c, a) => (c === 0xffffff && a === 0.5) ? set(backdrop, 0.5) : set(c, a);
+  }
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  renderer.toneMapping = THREE.NeutralToneMapping;
+  renderer.toneMappingExposure = 1.0;
+  el.appendChild(renderer.domElement);
+
+  const scene = new THREE.Scene();
+  const pmrem = new THREE.PMREMGenerator(renderer);
+  scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+  if (!backdrop) {
+    // Light page: a bright white room, as a studio render.
+    const key = new THREE.DirectionalLight('#ffffff', 1.4); key.position.set(-3, 6, 5); scene.add(key);
+    scene.add(new THREE.AmbientLight('#ffffff', 0.35));
+  } else {
+    // Dark section: the white room is dimmed (it drew white outlines on every edge), the fill is
+    // the section's own violet, and a soft lavender light from behind gives the glass its edge.
+    scene.environmentIntensity = 0.45;
+    const key = new THREE.DirectionalLight('#efeaff', 1.5); key.position.set(-4, 7, 6); scene.add(key);
+    const rim = new THREE.DirectionalLight('#9d82ff', 1.1); rim.position.set(5, 4, -7); scene.add(rim);
+    scene.add(new THREE.HemisphereLight('#7a5cff', '#1e0057', 0.5));
+  }
+
+  // With bleed the canvas is (1 + 2·bleed) × the stage; widen the view by the same factor so the object keeps its size.
+  const grow = 1 + 2 * bleed;
+  if (bleed) { el.dataset.glassBleed = ''; el.style.setProperty('--bleed', bleed); }
+  fov = THREE.MathUtils.radToDeg(2 * Math.atan(Math.tan(THREE.MathUtils.degToRad(fov) / 2) * grow));
+  const camera = new THREE.PerspectiveCamera(fov, 1, 0.1, 100);
+  camera.position.copy(camPos); camera.lookAt(target);
+
+  const resize = () => {
+    const w = el.clientWidth * grow, h = el.clientHeight * grow;
+    if (!w || !h) return;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h; camera.updateProjectionMatrix();
+  };
+  new ResizeObserver(resize).observe(el); resize();
+  return { renderer, scene, camera };
+}
+
+// Run the loop only while the stage is on screen and the tab is visible.
+function run(el, ctx, tick) {
+  let visible = false, raf = 0, last = performance.now(), t = 0;
+  const frame = (now) => {
+    t += Math.min((now - last) / 1000, 0.05); last = now;
+    tick(t); ctx.renderer.render(ctx.scene, ctx.camera);
+    raf = requestAnimationFrame(frame);
+  };
+  const update = () => {
+    cancelAnimationFrame(raf);
+    if (visible && !document.hidden && !reduced) { last = performance.now(); raf = requestAnimationFrame(frame); }
+  };
+  new IntersectionObserver(([e]) => { visible = e.isIntersecting; update(); }).observe(el);
+  document.addEventListener('visibilitychange', update);
+  if (reduced) { tick(null); ctx.renderer.render(ctx.scene, ctx.camera); new ResizeObserver(() => ctx.renderer.render(ctx.scene, ctx.camera)).observe(el); }
+}
+
+/* ---------- Donut ---------- */
+// Ring sector whose two straight sides are pulled in by d (parallel to the radius),
+// so the gap between two pieces is equally wide from the inner to the outer edge.
+function sector(r0, r1, a0, a1, d) {
+  const i0 = Math.asin(d / r0), i1 = Math.asin(d / r1);
+  const s = new THREE.Shape();
+  s.absarc(0, 0, r1, a0 + i1, a1 - i1, false);
+  s.absarc(0, 0, r0, a1 - i0, a0 + i0, true);
+  s.closePath();
+  return s;
+}
+const easeOutQuint = (x) => 1 - (1 - x) ** 5;
+
+function mountDonut(el) {
+  const ctx = makeScene(el, { fov: 30, camPos: new THREE.Vector3(0, 0, 13.5), target: new THREE.Vector3(0, 0, 0), bleed: 0.25 });
+  // Clockwise from 12 o'clock, sizes in degrees (as the render).
+  const parts = [
+    ['purple', 92], ['lavender', 62], ['blue', 66], ['mint', 52], ['sky', 36], ['white', 38], ['pink', 14]
+  ];
+  const R0 = 1.75, R1 = 2.85, DEPTH = 0.55;
+  const BEVEL = 0.07, GAP = 0.07;            // visible gap between pieces (scene units), same everywhere
+  const tilt = new THREE.Group();       // fixed viewing angle
+  const spin = new THREE.Group();       // turns slowly
+  tilt.rotation.set(-0.38, -0.42, -0.05); // face turned towards the text (left), as the render
+  tilt.add(spin); ctx.scene.add(tilt);
+
+  // Intro: the pieces start apart and float together, one after another.
+  const INTRO = { delay: 0.15, gap: 0.12, dur: 1.9, out: 0.8, lift: 0.5, turn: 0.25 };
+  const pieces = [];
+  let a = Math.PI / 2; // start at 12 o'clock, go clockwise (negative angle)
+  for (const [name, deg] of parts) {
+    const a1 = a, a0 = a - THREE.MathUtils.degToRad(deg);
+    // The bevel grows the shape by BEVEL on every side, so pull each side in by half the gap plus the bevel.
+    const geo = new THREE.ExtrudeGeometry(sector(R0, R1, a0, a1, GAP / 2 + BEVEL), {
+      depth: DEPTH, bevelEnabled: true, bevelThickness: 0.09, bevelSize: BEVEL, bevelSegments: 6, curveSegments: 64
+    });
+    geo.translate(0, 0, -DEPTH / 2);
+    const mesh = new THREE.Mesh(geo, glassMat(D[name]));
+    const mid = (a0 + a1) / 2;
+    const dir = new THREE.Vector3(Math.cos(mid), Math.sin(mid), 0);
+    spin.add(mesh);
+    pieces.push({ mesh, dir, i: pieces.length });
+    a = a0;
+  }
+
+  const place = (t) => {
+    for (const p of pieces) {
+      const k = t === null ? 1 : easeOutQuint(clamp01((t - INTRO.delay - p.i * INTRO.gap) / INTRO.dur));
+      const off = 1 - k;
+      p.mesh.position.copy(p.dir).multiplyScalar(INTRO.out * off);
+      p.mesh.position.z = INTRO.lift * off * (p.i % 2 ? 1 : -1);
+      p.mesh.rotation.set(INTRO.turn * off * p.dir.y, -INTRO.turn * off * p.dir.x, 0);
+      p.mesh.visible = t === null || t > INTRO.delay + p.i * INTRO.gap - 0.05;
+    }
+  };
+
+  run(el, ctx, (t) => {
+    place(t);
+    if (t === null) return;               // reduced motion: still, assembled
+    spin.rotation.z = -t * (Math.PI * 2 / 40);   // one turn per 40 s
+    tilt.rotation.x = -0.38 + Math.sin(t * 0.35) * 0.03; // a slow breath
+  });
+}
+
+/* ---------- Bars ---------- */
+const easeOutBack = (x) => { const c1 = 1.9, c3 = c1 + 1; return 1 + c3 * (x - 1) ** 3 + c1 * (x - 1) ** 2; };
+const easeInCubic = (x) => x * x * x;
+const clamp01 = (x) => Math.min(1, Math.max(0, x));
+
+function mountBars(el) {
+  const ctx = makeScene(el, { fov: 30, camPos: new THREE.Vector3(-5.5, 6, 16), target: new THREE.Vector3(-0.3, 2.2, 0), bleed: 0.25, backdrop: '#1e0057' });
+  const order = ['pink', 'white', 'sky', 'mint', 'blue', 'lavender', 'purple'];
+  const heights = [1.5, 2.1, 2.6, 3.0, 3.4, 4.1, 4.8];
+  const W = 0.95, GAP = 0.22, n = order.length;
+  const group = new THREE.Group(); ctx.scene.add(group);
+  const bars = order.map((name, i) => {
+    const h = heights[i];
+    const geo = new RoundedBoxGeometry(W, h, W, 6, 0.1); geo.translate(0, h / 2, 0);
+    const bar = new THREE.Group();
+    bar.add(new THREE.Mesh(geo, glassMat(B[name], { transmission: 0.6, glow: 0.3, tint: 0, dark: true })));
+    bar.position.x = (i - (n - 1) / 2) * (W + GAP);
+    group.add(bar);
+    return bar;
+  });
+
+  // Timeline (seconds), repeats every LOOP.
+  const UP_GAP = 0.16, UP = 0.75, HOLD_UNTIL = 4.6, DOWN_GAP = 0.08, DOWN = 0.45, LOOP = 6.0;
+  run(el, ctx, (t) => {
+    if (t === null) { bars.forEach(b => b.scale.y = 1); return; }
+    const lt = t % LOOP;
+    bars.forEach((bar, i) => {
+      const up = easeOutBack(clamp01((lt - i * UP_GAP) / UP));
+      const down = easeInCubic(clamp01((lt - HOLD_UNTIL - i * DOWN_GAP) / DOWN));
+      const bob = 1 + Math.sin(t * 2.2 - i * 0.6) * 0.012;  // keeps moving while held
+      const k = up * (1 - down);
+      bar.visible = k > 0.01;            // no flat tiles while a bar is down
+      bar.scale.y = Math.max(0.001, k * bob);
+    });
+    group.rotation.y = Math.sin(t * 0.3) * 0.05;
+  });
+}
+
+document.querySelectorAll('[data-glass-3d="donut"]').forEach(mountDonut);
+document.querySelectorAll('[data-glass-3d="bars"]').forEach(mountBars);
+</script>
+</body>
+</html>
