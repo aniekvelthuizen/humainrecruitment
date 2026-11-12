@@ -154,3 +154,6 @@ Done by Aniek Velthuizen with Claude. The card icon motion (`decisions/motion.md
 
 ## 2026-11-12 — Three.js for the glass 3D pictures (Aniek Velthuizen, via Claude)
 Library on the site besides Webflow's own GSAP: **Three.js 0.169.0** from jsDelivr (`+esm` modules), loaded on demand by the sixth embed of `Global | Custom Code` (`6303987b-…`) only on pages that show the glass ring or bar picture, and only when it comes near the view. Nothing in `<head>`, no site or page custom code. Details: `decisions/motion.md` › Glass 3D on the site.
+
+## 2026-11-12 — Email field has its own error line (Aniek Velthuizen, via Claude)
+Owner: «Please check this field» was too general under the email field. One rule added in the first embed of `Global | Custom Code`: `.form_label_wrap:has(.form_field[type="email"]:user-invalid)::after` says «Please enter a valid email address», for an empty and for a malformed address alike. Other fields keep «Please check this field». Every form gets it (Contact, Resume, Opportunity Detail).
