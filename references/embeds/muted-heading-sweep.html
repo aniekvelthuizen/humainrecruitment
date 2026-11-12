@@ -1,0 +1,42 @@
+<style>
+/* Muted heading sweep (decisions/motion.md): the grey part of a two-tone heading starts in the heading's own colour and turns grey with a soft left-to-right sweep when it scrolls into view. Runtime only; the Designer shows the finished colours. */
+html[data-muted-gate] :is(h1,h2,h3,h4)>[class*="_muted"]:not([data-muted]){color:inherit;opacity:1}
+[data-muted="ready"],[data-muted="in"]{opacity:1;-webkit-text-fill-color:transparent;background-image:linear-gradient(90deg,var(--mm-to) 0 45%,var(--mm-from) 55% 100%);background-size:300% 100%;background-position:100% 0;background-repeat:no-repeat;-webkit-background-clip:text;background-clip:text}
+[data-muted="in"]{background-position:0 0;transition:background-position 1.4s cubic-bezier(.45,0,.2,1) var(--mm-delay,.1s)}
+</style>
+<script>
+(function(){
+var d=document,h=d.documentElement;
+if(h.classList.contains('wf-design-mode')||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+h.setAttribute('data-muted-gate','');
+var guard=setTimeout(function(){h.removeAttribute('data-muted-gate')},4000);
+function rgba(c){var m=c.match(/[\d.]+/g)||[0,0,0];return[+m[0],+m[1],+m[2],m[3]==null?1:+m[3]]}
+function done(el){el.setAttribute('data-muted','done');['--mm-from','--mm-to','--mm-delay'].forEach(function(p){el.style.removeProperty(p)})}
+function init(){
+  clearTimeout(guard);
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting)return;
+    var el=e.target;io.unobserve(el);
+    requestAnimationFrame(function(){requestAnimationFrame(function(){
+      el.setAttribute('data-muted','in');
+      var end=function(){if(el.getAttribute('data-muted')==='in')done(el)};
+      el.addEventListener('transitionend',end,{once:true});
+      setTimeout(end,2600);
+    })});
+  })},{rootMargin:'0px 0px -15% 0px'});
+  d.querySelectorAll(':is(h1,h2,h3,h4)>[class*="_muted"]').forEach(function(el){
+    el.setAttribute('data-muted','probe');
+    var cs=getComputedStyle(el),t=rgba(cs.color),op=+cs.opacity,from=getComputedStyle(el.parentElement).color;
+    var to='rgba('+t[0]+','+t[1]+','+t[2]+','+(t[3]*op)+')';
+    if(rgba(to).join()===rgba(from).join()){done(el);return}
+    el.style.setProperty('--mm-from',from);
+    el.style.setProperty('--mm-to',to);
+    if(el.closest('[data-hero-reveal]'))el.style.setProperty('--mm-delay','.6s');
+    el.setAttribute('data-muted','ready');
+    io.observe(el);
+  });
+  h.removeAttribute('data-muted-gate');
+}
+d.readyState==='loading'?d.addEventListener('DOMContentLoaded',init):init();
+})();
+</script>
