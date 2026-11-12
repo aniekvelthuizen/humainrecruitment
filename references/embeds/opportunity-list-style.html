@@ -9,6 +9,13 @@ html:not(.w-mod-js) .opportunity-list_filters { display: none; }
 .opportunity-list_form .form_field:focus { border-color: var(--swatch--brand-300); outline: none; }
 .opportunity-list_form select.form_field:has(option:first-child:checked) { color: var(--swatch--dark-900-o50); }
 .opportunity-list_form .form_select_icon { transform: translateY(.25rem); }
+.opportunity-list_search { position: relative; display: block; }
+.opportunity-list_search .form_field { padding-right: 2.75rem; }
+.opportunity-list_search_clear { position: absolute; top: 50%; right: .25rem; width: 2.5rem; height: 2.5rem; padding: 0; border: 0; border-radius: 50%; background: transparent; color: var(--swatch--dark-900-o50); cursor: pointer; transform: translateY(calc(-50% + .25rem)); transition: color 200ms ease; }
+.opportunity-list_search_clear[hidden] { display: none; }
+.opportunity-list_search_clear::before { content: ""; position: absolute; inset: 0; margin: auto; width: 1.25rem; height: 1.25rem; background-color: currentColor; -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath d='m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath d='m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z'/%3E%3C/svg%3E") center / contain no-repeat; }
+.opportunity-list_search_clear:hover, .opportunity-list_search_clear:focus-visible { color: var(--swatch--dark-900); }
+.opportunity-list_search_clear:focus-visible { outline: .125rem solid var(--swatch--brand-300); outline-offset: -.25rem; }
 @media screen and (min-width: 992px) {
   .opportunity-list_form > .opportunity-list_line:nth-last-child(2) { display: none; }
 }
@@ -20,19 +27,13 @@ html:not(.w-mod-js) .opportunity-list_filters { display: none; }
   .opportunity-list_toggle .button_main_wrap { min-height: 2.75rem; margin-block: -.375rem; padding-block: .375rem; }
   .opportunity-list_field { margin-bottom: .5rem; }
   .opportunity-list_line { margin-bottom: 1.25rem; }
-  .opportunity-list_filters:not([data-open]) .opportunity-list_field:first-child { grid-column: 1; margin-bottom: 1rem; }
+  .opportunity-list_filters:not([data-open]) .opportunity-list_field:first-child { margin-bottom: 1rem; }
   .opportunity-list_filters:not([data-open]) .opportunity-list_line:nth-child(2) { margin-bottom: 1rem; }
   .opportunity-list_filters:not([data-open]) .opportunity-list_field:not(:first-child),
   .opportunity-list_filters:not([data-open]) .opportunity-list_line:not(:nth-child(2)) { display: none; }
-  .opportunity-list_filters:not([data-open]) .opportunity-list_submit { grid-column: 2; grid-row: 1; margin-bottom: 1rem; }
+  .opportunity-list_filters:not([data-open]) .opportunity-list_field:first-child { grid-column: 1 / -1; }
+  .opportunity-list_filters:not([data-open]) .opportunity-list_submit { display: none; }
   .opportunity-list_filters:not([data-open]) .opportunity-list_toggle { grid-column: 1 / -1; }
-  .opportunity-list_filters:not([data-open]) .opportunity-list_submit .button_main_wrap { width: 3rem; height: 3rem; min-height: 3rem; }
-  .opportunity-list_filters:not([data-open]) .opportunity-list_submit .button_main_element { padding: 0; }
-  .opportunity-list_filters:not([data-open]) .opportunity-list_submit .button_main_text { display: none; }
-  .opportunity-list_filters:not([data-open]) .opportunity-list_submit .icon_set_wrap {
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath d='M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z'/%3E%3C/svg%3E");
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath d='M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z'/%3E%3C/svg%3E");
-  }
 }
 </style>
 
