@@ -376,4 +376,5 @@
 - Published to staging; `references/glass-3d-check.mjs` on Project Delivery Experts at 1440 / 402: both pictures 3D, no overflow, console clean, reduced motion keeps the PNGs. Record: `decisions/motion.md` › Glass 3D on the site.
 - Owner round: donut larger (camera 11), bars stayed in place while scrolling → stage now follows the picture every frame. Embed `6303987b-…` updated twice, byte-identical in the published HTML of the three pages; `glass-3d-check.mjs` got a scroll sweep and a shift test.
 - Owner round: bars sticky between title and text, donut spin follows scroll speed and direction. Embed `6303987b-…` updated, byte-identical on the three pages, published to staging.
+- Owner round: poster hidden from first paint (gate), bars start over «reach clients» and end centred between title and text. Embed `6303987b-…` updated, byte-identical on the three pages, published to staging; CDN-blocked run shows the PNG again.
 
