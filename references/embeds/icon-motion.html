@@ -1,0 +1,10 @@
+<style>
+/* Card icon motion (decisions/motion.md, 2026-11-12): every Card Primary icon gets its own loop, agreed per icon with the owner.
+   Runtime only: the Designer, reduced motion and a failed script show the plain mask icon. Source: docs/icon-motion/src/. */
+[data-icon]{-webkit-mask:none!important;mask:none!important;background:none!important}
+[data-icon]>svg{display:block;width:100%;height:100%;overflow:visible}
+[data-icon] svg *{transform-box:fill-box}
+[data-icon-legacy] svg *{transform-box:view-box}
+[data-icon]:not([data-icon-run]) svg *{animation-play-state:paused!important}
+</style>
+<!-- script: run gen-embed.mjs <commit> after committing icon-motion.js -->

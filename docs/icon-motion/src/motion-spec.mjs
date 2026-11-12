@@ -3,7 +3,7 @@
 // its original thickness; four icons that are one connected shape are redrawn as .7 strokes on the same grid.
 export function build(parts, legacy) {
   const P = (v, i) => parts[v].parts[i].d;
-  const outer = (d) => d.split(/(?=M)/)[0];
+  const outer = (d) => (d || '').split(/(?=M)/)[0];
   const F = (d, a = '') => `<path d="${d}" ${a}/>`;
   const S = 'fill="none" stroke="currentColor" stroke-width=".7"';
   const rest = (v, skip) => parts[v].parts.map((p, i) => skip.includes(i) ? '' : F(p.d)).join('');
@@ -203,7 +203,7 @@ ${k('shield-alert')} [data-a="mark"]{animation:sa-mark 6s ease-in-out infinite b
 @keyframes sy-turn{0%,15%{rotate:0deg}45%,100%{rotate:360deg}}` };
 
   // 28 Table: the frame and its lines draw, the cells fill one by one, then it clears and rebuilds. 7 s.
-  const cells = [5, 3, 4, 1, 2].map((i, n) => F(outer(parts['table'].parts[0].d.split(/(?=M)/)[i]), `data-a="cell" style="animation-delay:${1 + n * .35}s"`)).join('');
+  const cells = [5, 3, 4, 1, 2].map((i, n) => F(outer((parts['table'].parts[0].d || '').split(/(?=M)/)[i]), `data-a="cell" style="animation-delay:${1 + n * .35}s"`)).join('');
   I['table'] = { svg: `${cells}<g ${S}><rect data-a="frame" pathLength="1" x="4.65" y="4.65" width="14.7" height="14.7" rx="1.15"/><path data-a="ln" pathLength="1" d="M5 8.35H19"/><path data-a="ln" pathLength="1" d="M5 13.875H19"/><path data-a="ln" pathLength="1" d="M12 8.7V19"/></g>`,
     css: `${k('table')} [data-a="frame"]{stroke-dasharray:1.02 2;animation:tb-draw 7s cubic-bezier(.45,0,.2,1) infinite both}
 ${k('table')} [data-a="ln"]{stroke-dasharray:1.02 2;animation:tb-draw 7s cubic-bezier(.45,0,.2,1) .5s infinite both}
