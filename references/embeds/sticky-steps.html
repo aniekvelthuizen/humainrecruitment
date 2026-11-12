@@ -20,6 +20,13 @@
 [data-sticky-steps-list]:has([data-process-step]) { min-height: 97.625rem; }
 [data-sticky-steps-list]:has([data-process-step]:nth-child(4)) { min-height: 174.3125rem; }
 [data-sticky-steps-list]:has([data-process-step]:nth-child(5)) { min-height: 251rem; }
+/* Process Steps stick and pile up under each other: step n sticks one head lower (--sticky-steps-pitch = divider + 24 + 48 number + 24) than step n-1, and its white covers the body of the step above, so only the heads stay in view. top = intro top + (n-1) pitch - the step's own padding-top. */
+[data-sticky-steps-list] > * > [data-process-step] { --sticky-steps-base: calc(var(--nav--height-total) + 2rem); --sticky-steps-pitch: calc(6rem + 1px); position: sticky; top: var(--sticky-steps-base); }
+[data-sticky-steps-list] > * > [data-process-step]:nth-child(2) { top: calc(var(--sticky-steps-base) + var(--sticky-steps-pitch) - 13.75rem); }
+[data-sticky-steps-list] > * > [data-process-step]:nth-child(3) { top: calc(var(--sticky-steps-base) + 2 * var(--sticky-steps-pitch) - 19.5rem); }
+[data-sticky-steps-list] > * > [data-process-step]:nth-child(4) { top: calc(var(--sticky-steps-base) + 3 * var(--sticky-steps-pitch) - 25.25rem); }
+[data-sticky-steps-list] > * > [data-process-step]:nth-child(n+5) { top: calc(var(--sticky-steps-base) + 4 * var(--sticky-steps-pitch) - 31rem); }
+[data-sticky-steps-list] > * > [data-process-step] .process-step_element { background-color: var(--_theme---background); }
 }
 </style>
 <script>
@@ -50,19 +57,42 @@
     if (!last || !intro) return;
     list.style.setProperty('--sticky-steps-tail', Math.max(0, intro.offsetHeight - last.offsetHeight) + 'px');
   });
+  /* Process Steps: each step box is stretched (padding-bottom, pulled back with the next step's margin-top, so the layout does not move) until all stuck boxes and the intro end on the same line (the intro too). Then the pile and the intro leave together instead of the last step sliding up over the heads. */
+  const hold = () => lists().forEach((list) => {
+    const steps = [...list.querySelectorAll(':scope > * > [data-process-step]')];
+    const intro = list.closest('[data-sticky-steps]')?.querySelector('.sticky-steps_intro');
+    steps.forEach((s) => { s.style.paddingBottom = ''; s.style.marginTop = ''; });
+    if (intro && steps.length) intro.style.paddingBottom = '';
+    if (!steps.length || getComputedStyle(steps[0]).position !== 'sticky') return;
+    const bottoms = steps.map((s) => parseFloat(getComputedStyle(s).top) + s.offsetHeight);
+    let end = Math.max(...bottoms);
+    const introSticks = intro && getComputedStyle(intro).position === 'sticky';
+    const introBottom = introSticks ? parseFloat(getComputedStyle(intro).top) + intro.offsetHeight : 0;
+    end = Math.max(end, introBottom);
+    /* The intro is stretched the same way (its cell is as tall as the list, so the layout does not move). */
+    if (introSticks && end > introBottom) intro.style.paddingBottom = `calc(${getComputedStyle(intro).paddingBottom} + ${Math.round(end - introBottom)}px)`;
+    steps.forEach((s, i) => {
+      const x = Math.round(end - bottoms[i]);
+      if (x <= 0) return;
+      s.style.paddingBottom = x + 'px';
+      if (steps[i + 1]) steps[i + 1].style.marginTop = -x + 'px';
+    });
+  });
   const start = () => {
-    tail(); update();
+    tail(); hold(); update();
     if ('ResizeObserver' in window) {
-      const ro = new ResizeObserver(() => { tail(); queue(); });
+      const ro = new ResizeObserver(() => { tail(); hold(); queue(); });
       lists().forEach((list) => {
         const cards = cardsOf(list), intro = list.closest('[data-sticky-steps]')?.querySelector('.sticky-steps_intro');
         if (intro) ro.observe(intro);
         if (cards.length) ro.observe(cards[cards.length - 1]);
+        list.querySelectorAll(':scope > * > [data-process-step] .process-step_element').forEach((el) => ro.observe(el));
       });
     } else addEventListener('resize', tail);
   };
   addEventListener('scroll', queue, { passive: true });
-  addEventListener('resize', queue);
+  /* hold() on resize too, not only through the ResizeObserver: crossing 992 must clear the stretch at once. */
+  addEventListener('resize', () => { hold(); queue(); });
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();
 </script>

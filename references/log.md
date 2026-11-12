@@ -360,3 +360,7 @@
 - Stagger Cards: + style embed `396ecf23-…`, + script embed `2f7ccac8-…` (sources `references/embeds/stagger-cards-motion-*.html`). Runtime attributes only (`data-stagger-motion`, `data-stagger-in`, `data-stagger-paused`, `data-icon-motion`, `data-icon-part`); no Designer attributes added. Revert: remove both embeds.
 - Tested locally (patched staging HTML), then published to staging 2× (second: dash gap fix for two specks before the route draws in). `stagger-motion-check.mjs` at 1440 and 402: cards 0 → 1 in ~0.8 s each, 0.15 s apart; list height unchanged; route drawn by ~1.3 s; loops pause out of view; reduced motion = static and visible; console clean.
 - Owner: the route icon's circle did not close. Circle + line now one path (Chrome's `pathLength` on `<circle>` left a gap), dash 1.02 / offset 1.03. Checked at 4× zoom locally and on staging.
+
+## 2026-11-12 — Sticky Steps Plain: steps stick and pile up — Aniek Velthuizen with Claude
+- Owner request with two screenshots (Home «From requirement to shortlist in days.»): the steps must stick and end up under each other. Section embed of Sticky Steps (`73b7ce70-…b381`) rewritten from `references/embeds/sticky-steps.html`, read back identical. Record: `decisions/components/sticky-steps.md` › 2026-11-12.
+- Published to staging 2× (second: `hold()` on `resize`). Measured at 1512: Home 1930 and How It Works 4400 unchanged, heads at 112 / 209 / 306 (/ 403 / 500), pile and intro leave together; 402: static, no inline styles, How It Works 2344 as before.
