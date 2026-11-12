@@ -373,3 +373,7 @@
 
 ## 2026-11-12 — Testimonial cards: entrance — Aniek Velthuizen with Claude
 - Owner round: word reveal tried on Card Testimonial text (stagger 0.03), then replaced at the owner's request by a card entrance — quote mark pops, stars light up, text fades as one block, cards 0.15 s apart left to right. Attributes on Card Testimonial (`data-card-reveal` on `card_testimonial_element` `a9dd8c48-…`, `data-card-reveal-part` icon `07f447fb-…` / stars `af02a6ac-…` / text `4c967389-…`); `data-quote-reveal*` removed from the text again. Published to staging 2× more; `quote-reveal-check.mjs` at 1512 / 402: hidden before view, order left to right, heights unchanged, no leftover inline styles, reduced motion static, console clean.
+
+## 2026-11-12 — Stagger Cards motion on every stair section — Aniek Velthuizen with Claude
+- Owner: every stair block with these icons gets the same motion. Script runs on every `[data-stagger-cards]`; ICONS + CSS for person-shield, person-check, assignment, list-check, handshake, check-circle, outbound. Same two embeds (`396ecf23-…`, `2f7ccac8-…`); published code on staging is byte-identical to `references/embeds/stagger-cards-motion-*.html`.
+- Tested on patched copies of Home, Hire an Expert and How It Works, then published to staging 1×. `SECTION=n node references/stagger-motion-check.mjs` (now takes the section index) on all four sections at 1440 / 402 and reduced motion: all pass, console clean.

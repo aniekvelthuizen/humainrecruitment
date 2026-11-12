@@ -81,3 +81,15 @@ Owner (Aniek): first asked for the word reveal on the cards too, faster (stagger
 - The card itself is not moved: its hover lift and dark quote mark (`card_testimonial_quote-hover`) stay as they were; all inline styles are cleared at the end.
 - **Attributes** (Card Testimonial `19e313dd-…`): `data-card-reveal` on `card_testimonial_element`; `data-card-reveal-part="icon"` on `card_testimonial_quote`, `"stars"` on `card_testimonial_stars`, `"text"` on `card_testimonial_text`. Off: remove `data-card-reveal`. Same embed, gate and fallbacks as the quote reveal.
 - The quote reveal also learned `data-quote-reveal-next` (default 0.3 s): quotes entering the view together start one after another, left to right.
+
+## 2026-11-12 — Stagger Cards motion on every stair section (owner)
+Owner (Aniek): «alle blokken die in een trappetje staan en dit soort icons hebben, mogen dezelfde animatie hebben» — looping icons, cards in one by one like a stair. Done by Aniek Velthuizen with Claude. This widens the exception above from the base variant to **every Stagger Cards section** (base, plain, gradient): Home «The risk» and «Engagement models», Hire an Expert, How It Works.
+- **Cards:** unchanged (24 px rise + fade, 0.8 s, 0.15 s apart).
+- **New icon loops** (all calm, same 0.7 stroke at 24, redrawn from the site's icon files):
+  - `person-shield`: the shield breathes, scale 1 → 1.12 → 1, 2.8 s.
+  - `person-check`, `check-circle`, `list-check`: the tick draws (0.7 s), holds, fades and redraws, 3.2 s per round.
+  - `assignment`: the three clipboard rows write in one after another (0.25 s apart), hold, fade, 4 s per round.
+  - `handshake`: a short shake (−6°, 5°, −3°) every 3.6 s, then still.
+  - `outbound`: the arrow moves 0.8 / 24 out to the corner and back, 2.8 s.
+- **Mechanism:** the script no longer filters on the variant; it runs on every `[data-stagger-cards]`. An icon without an `ICONS` entry stays a static mask; add an entry to animate it.
+- Measured on staging at 1440 and 402 on all four sections: cards in at ~0.8 s each, list height unchanged, reduced motion static and visible, console clean.
