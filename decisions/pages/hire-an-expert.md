@@ -15,3 +15,6 @@ Deviates or open:
 - CTA button «Hire an Expert» → `/contact` (2026-11-05, Aniek Velthuizen, via Claude: it linked to this same page). Figma has no target.
 - Placeholders kept as Figma: «From €XX», «€XX» on the pricing cards.
 - Company «Google» as Home; Figma writes «GOOGLE» on this page.
+
+## 2026-11-12 — Reviews from the CMS
+The three Card Testimonials are now three `Reviews · picked` (Chance, Jocelyn, Marcus; link `/clients`). Avatar Alt is empty now, as on Home. See `decisions/components/reviews-picked.md`. Aniek Velthuizen, via Claude.

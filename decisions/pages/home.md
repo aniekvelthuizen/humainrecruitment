@@ -47,3 +47,6 @@ Page now: `page_main` › Hero Experts · Stagger Cards · Sticky Steps · Split
 
 ## 2026-11-05 — Split Content #2 Space Top none (Aniek Velthuizen, via Claude)
 Back to `none`: its neighbour is now the white 3 UBRS, and the frame has 192. Block 643 at 1512, as the frame (simulated, not published).
+
+## 2026-11-12 — Reviews from the CMS
+The three Card Testimonials in Spotlight Grid (Reviews) are now three `Reviews · picked` (Chance, Jocelyn, Marcus; link `/clients`). See `decisions/components/reviews-picked.md`. Aniek Velthuizen, via Claude.

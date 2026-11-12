@@ -122,3 +122,6 @@ Conflict: the plan wants the templates without a design (Cases, Rates, FAQ, Team
 Seen: the API refuses. `update_page_settings` answers 400 "Collection template pages can't be drafted". `bulk_update_pages` answers success but changes nothing: `draft` reads back false on all four.
 Result: each item in these collections gets an empty page on publish (`/cases/<slug>`, `/rates/<slug>`, `/faq/<slug>`, `/team/<slug>`). Opportunities keeps its template. Experts already works this way.
 Open: for the owner, as this is not settled by the API alone; see the unit report.
+
+## 2026-11-12 — Reviews collection
+Collection Reviews (`6af5eab6b7bd7e385981a9f8`, slug `reviews`): name, slug, quote (RichText), role, company, avatar. Used by `Reviews · picked` (`decisions/components/reviews-picked.md`). Its template page renders empty, as the other templates without a design. Aniek Velthuizen, via Claude.
