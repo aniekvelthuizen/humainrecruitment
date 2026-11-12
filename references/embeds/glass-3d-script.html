@@ -241,6 +241,9 @@
       };
       return {
         offsetY(r) {
+          // Mobile (owner, 2026-11-12: «komt niet over»): no sticky path below 768 px; the bars stay on
+          // their picture, which the Card Grid CSS places in the flow between the title and the text.
+          if (innerWidth < 768) return 0;
           const [a, b] = extent(), barsH = (b - a) * r.height;
           const title = img.parentElement.getBoundingClientRect(), next = img.parentElement.nextElementSibling;
           const start = title.top + START * title.height;
