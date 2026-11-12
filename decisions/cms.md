@@ -124,4 +124,4 @@ Result: each item in these collections gets an empty page on publish (`/cases/<s
 Open: for the owner, as this is not settled by the API alone; see the unit report.
 
 ## 2026-11-12 — Reviews collection
-Collection Reviews (`6af5eab6b7bd7e385981a9f8`, slug `reviews`): name, slug, quote (RichText), role, company, avatar. Used by `Reviews · picked` (`decisions/components/reviews-picked.md`). Its template page renders empty, as the other templates without a design. Aniek Velthuizen, via Claude.
+Collection Reviews (`6af5eab6b7bd7e385981a9f8`, slug `reviews`): name, slug, quote (RichText), role, company, avatar. Used by `Reviews · picked` (`decisions/components/reviews-picked.md`). Its template page `/reviews/<slug>` answered 404 on staging on 2026-11-12 (reviewer). Aniek Velthuizen, via Claude.
