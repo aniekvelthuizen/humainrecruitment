@@ -104,14 +104,50 @@
       setOpen(!bar.hasAttribute('data-open'));
     });
 
-    clickable(empty && empty.querySelector('[data-opportunity-list-clear]'), function () {
+    var clearButton;
+
+    function syncClear() {
+      if (clearButton) clearButton.hidden = !search.value;
+    }
+
+    function resetAll(focusSearch) {
       if (search) search.value = '';
       selects.forEach(function (select) { select.selectedIndex = 0; });
+      syncClear();
       apply();
-      if (search) search.focus();
-    });
+      if (search && focusSearch) search.focus();
+    }
 
-    clickable(bar && bar.querySelector('.opportunity-list_submit'), apply);
+    function clearSearch() {
+      search.value = '';
+      syncClear();
+      apply();
+      search.focus();
+    }
+
+    /* The cross in the search field. Made here: without JavaScript the whole bar is hidden. */
+    if (search) {
+      var holder = document.createElement('span');
+      holder.className = 'opportunity-list_search';
+      search.parentNode.insertBefore(holder, search);
+      holder.appendChild(search);
+      clearButton = document.createElement('button');
+      clearButton.type = 'button';
+      clearButton.className = 'opportunity-list_search_clear';
+      clearButton.setAttribute('aria-label', 'Clear search');
+      clearButton.hidden = true;
+      holder.appendChild(clearButton);
+      clearButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        clearSearch();
+      });
+    }
+
+    clickable(empty && empty.querySelector('[data-opportunity-list-clear]'), function () { resetAll(true); });
+
+    /* Reset in the bar: filters apply by themselves, so the bar needs no Search button.
+       Focus stays on Reset, so a phone keyboard does not pop up. */
+    clickable(bar && bar.querySelector('.opportunity-list_submit'), function () { resetAll(false); });
 
     clickable(more, function () {
       var first = matches[shown];
@@ -131,11 +167,18 @@
       form.addEventListener('change', apply);
       if (search) {
         search.addEventListener('input', function () {
+          syncClear();
           clearTimeout(timer);
           timer = setTimeout(apply, 200);
         });
         search.addEventListener('keydown', function (event) {
-          if (event.key !== 'Enter' || event.isComposing) return;
+          if (event.isComposing) return;
+          if (event.key === 'Escape' && search.value) {
+            event.preventDefault();
+            clearSearch();
+            return;
+          }
+          if (event.key !== 'Enter') return;
           event.preventDefault();
           apply();
         });
@@ -143,6 +186,7 @@
     }
 
     readUrl();
+    syncClear();
     setOpen(selects.some(function (select) { return select.selectedIndex > 0; }));
     filter();
   }

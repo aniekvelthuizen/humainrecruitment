@@ -45,6 +45,13 @@ Owner (Aniek): links with an arrow before the text ("→ View") animate: the lef
 - Searched all 31 published pages (incl. 13 opportunity pages) for any visible arrow next to short text: only these links. «Back to opportunities» (Arrow Left) is left out: a back link should not swap direction.
 - The `::after` arrow uses the CDN URL of `icon-arrow-right.svg`; if that asset is replaced, update the URL in the embed.
 
+## 2026-11-12 — Back link: underline and colour only, nothing moves (Aniek Velthuizen, via Claude)
+Owner (Aniek, screenshot «← Back to opportunities»): «de link hoeft niet te bewegen en de pijl ook niet. Het is meer dat er een onderlijning komt en dat de kleur verandert.»
+- **Was:** Button Main's hover look on Tertiary + Arrow Left: wrap lifts 2 px (`translateY(-0.125rem * --_trigger---off)`), arrow nudges 4 px right, underline grows, text white → mint.
+- **Now:** lift and arrow nudge off (`transform: none` on the wrap and `.button_main_icon`), only for Tertiary with Icon **Arrow Left**. Underline (grows in 600 ms) and the colour change stay, from the variant itself. Keyboard focus the same.
+- **Where:** same embed as the arrow links (`ab7c2a2d-…` in `Global | Custom Code`), source `references/embeds/arrow-link-style.html`. Primary/Secondary keep their lift; the "→ View" links are unchanged.
+- **Underline like the nav and footer links (owner, same day):** the menu links' line grows to the right and shrinks back to the left, to where it started (`background-size` 0 → 100 %, 600 ms `cubic-bezier(.65,.05,.36,1)`). Button Main's line flipped its origin on leave, so it ran off to the right. The back link's `.button_main_line` now has a fixed `transform-origin: 0 100%`; timing and easing were already the same (600 ms, same curve).
+
 ## 2026-11-12 — Exception: quotes reveal word by word (owner)
 Owner (Aniek): «alle quotes animeren met een stagger animation van GSAP, dat de woorden één voor één invliegen. Alleen bij quotes, niet bij alle titels.» A second explicit exception to «no scroll reveals». Built by Aniek Velthuizen with Claude.
 - **What:** once, when the quote enters the view (15 % above the bottom edge), each word rises 24 px and fades in: 0.6 s per word, `power3.out`, 0.08 s between words. A ten-word quote is done in about 1.3 s.
@@ -167,6 +174,7 @@ Owner (Aniek), looking at the Card Grid closing text on Project Delivery Experts
 - **Timing:** each word 0.6 s, `cubic-bezier(.45,0,.2,1)`, 0.14 s apart, first word at 0.1 s (0.6 s inside a hero). Long texts are capped: the step shrinks so the last word starts within 1.8 s (closing text: 15 words, 0.129 s apart).
 - **Mechanism:** only the words outside `_muted` are split into `span[data-muted-word]`. In `ready` they carry `--mm-from`; in `in` that colour is dropped and they transition to the inherited colour, so the final colour is always the designed one. Gate (`html[data-muted-gate]`) dims the lit parts with `color-mix(currentColor 50%)` until set-up, 4 s guard. Needs `:has()`; without it, reduced motion, no IntersectionObserver, no JavaScript or in the Designer → static colours as designed.
 - **Card Grid closing statement** («Only proven performers reach clients», display text over the bars) added the same day (owner: «daar moet het effect ook in»). Its grey part is `card-grid_statement-muted` (a hyphen, so `[class*="_muted"]` misses it): named explicitly in the gate, `SEL` and `MUTED`. 3 words, 0.14 s apart.
+- **Turquoise headings (owner, 2026-11-12):** on Consulting Services («Request in, Expert out») the owner first saw three steps — dimmed, white, then turquoise: «iets te veel van het goede». Then: «de hele tekst moet gewoon eerst wit zijn, daarna wordt er een gedeelte turquoise, bij een witte tekst heb je dus nooit uitgedimde tekst». So in a heading with a `sticky-steps_accent` part and no `_muted` part nothing is ever dimmed: the whole heading starts in the heading colour (white), only the turquoise words are split and turn from white to turquoise one by one (same timing). Gate: the accent span takes `color:inherit` until set-up. Measured headless on staging: «Request in,» white throughout, «Expert» and «out» white → #00ffd5 in about 0.8 s, then `done`; console clean. (`muted-heading-check.mjs` reports this heading as not ok because it expects a dimmed start — expected.) Done by Aniek Velthuizen with Claude.
 - **Not included:** other `_muted` spans in paragraphs (Hero stat). To add a paragraph: put its class next to `.card-grid_closing-text` in both the CSS gate and `SEL` (and its grey class in `MUTED` if it does not contain `_muted`).
 - Same embed (`141a108e-…`), source `references/embeds/muted-heading-sweep.html`; check: `node references/muted-heading-check.mjs [url]`.
 
@@ -261,3 +269,8 @@ Owner (Aniek), screenshot of round 2 next to the design: one side of the cards w
 - **Turn:** like an object on a turntable (vertical screen axis, applied after the pose), **±10°** (was 14), 9 s each way, perspective 120rem. A turn around the cards' own axis was tried and tipped them too far back at −10…−14°.
 - **Changing the tilt in Webflow** now needs a new pose in the embed (same calculation). Reduced motion and the Designer still show the Webflow skew; head-on the two are identical.
 - Checked on staging at 1024: pose + turn applied, no sideways scroll. Not checked: Safari, phones after this round.
+
+### 2026-11-12 — Cards 3D round 4: zigzag (owner)
+Owner (Aniek): «Ja goed nu! kunnen ze naast draaien ook nog een beetje zigzaggen van elkaar? middelste langzaam naar rechts, de andere naar links en dan weer terug». Round 3 approved.
+- **Zigzag:** the middle card drifts right, the top and bottom card left, then back: **±1rem** along the cards' own width (`translate` in the 3D pose), **7 s** each way, ease-in-out, endless. Starts at 1.5 s, when the last card is in, from 0, so it never jumps. 7 s against the turn's 9 s, so the two never repeat in step. ≤ 767 **±0.5rem**: at ±0.75 a card came within 7 px of the screen edge.
+- Checked on staging: entrance first (translate 0 40 → 0), then ±16 px at 1024; at 375 no sideways scroll.
