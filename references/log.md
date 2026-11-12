@@ -406,3 +406,4 @@
 - Owner asked for the quote word reveal on the Facts Row figures. Record: `decisions/motion.md` › Facts Row figures.
 - Quote-reveal embed (`61fdba5b-…` in `Global | Custom Code`) read first (matched the source), then extended with `[data-facts-row] .card_primary_title`; source `references/embeds/quote-reveal-script.html`. `quote-reveal-check.mjs` now includes the figures. Published to staging 1×.
 - Check on Hire an Expert at 1512 and 402: figures hidden before view, words in within ~0.75 s, heights unchanged (60 / 38), no leftover inline styles, reduced motion static, console clean. About Us uses the same component, not separately checked; Safari and real devices not checked.
+- 2026-11-12 (Aniek, via Claude): Clients — the three Card Testimonials no longer link (Link + Screen Reader Text emptied; they pointed to /clients itself). Staging published, checked in the HTML.
