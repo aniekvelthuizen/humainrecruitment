@@ -1,7 +1,7 @@
 <style>
-/* Two-tone headings light up (decisions/motion.md): in a heading with a grey (_muted) part, and in the Card Grid closing statement and closing text, the words start dimmed (the grey of the _muted part). When the block scrolls into view the words light up one by one to their own colour; the _muted part stays grey. In a heading with a turquoise (sticky-steps_accent) part only the turquoise words start dimmed (half the heading colour) and light up; the rest of the heading stays as designed. Runtime only; the Designer shows the finished colours. */
+/* Two-tone headings light up (decisions/motion.md): in a heading with a grey (_muted) part, and in the Card Grid closing statement and closing text, the words start dimmed (the grey of the _muted part). When the block scrolls into view the words light up one by one to their own colour; the _muted part stays grey. In a heading with a turquoise (sticky-steps_accent) part nothing is dimmed: the whole heading starts in its own colour (white) and the turquoise words take their colour one by one. Runtime only; the Designer shows the finished colours. */
 html[data-muted-gate] :is(h1,h2,h3,h4,.card-grid_statement-text,.card-grid_closing-text):has(>[class*="_muted"],>.card-grid_statement-muted):not([data-muted])>:not([class*="_muted"],.card-grid_statement-muted){color:color-mix(in srgb,currentColor 50%,transparent)}
-html[data-muted-gate] :is(h1,h2,h3,h4):has(>.sticky-steps_accent):not(:has(>[class*="_muted"])):not([data-muted])>.sticky-steps_accent{color:color-mix(in srgb,currentColor 50%,transparent)}
+html[data-muted-gate] :is(h1,h2,h3,h4):has(>.sticky-steps_accent):not(:has(>[class*="_muted"])):not([data-muted])>.sticky-steps_accent{color:inherit}
 [data-muted="ready"] [data-muted-word]{color:var(--mm-from)}
 [data-muted="in"] [data-muted-word]{transition:color .6s cubic-bezier(.45,0,.2,1) calc(var(--mm-delay,.1s) + var(--mm-i,0) * var(--mm-step,.14s))}
 </style>
@@ -44,8 +44,8 @@ function init(){
     el.setAttribute('data-muted','probe');
     var m=el.querySelector(':scope>'+MUTED),from;
     if(m){var cs=getComputedStyle(m),c=rgba(cs.color);c[3]*=+cs.opacity;from=c}
-    else{from=rgba(getComputedStyle(el).color);from[3]*=.5}
-    /* Turquoise heading without a grey part: only the accent words dim and light up */
+    else from=rgba(getComputedStyle(el).color);
+    /* Turquoise heading without a grey part: only the accent words animate, from the heading colour (no dimming) */
     var n=split(el,!m&&!!el.querySelector(':scope>'+ACCENT));
     if(!n){done(el);return}
     el._mmWords=n;
