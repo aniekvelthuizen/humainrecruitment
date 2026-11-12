@@ -151,3 +151,6 @@ Section embeds hold CSS, and a small script when the block needs one to work (St
 
 ## 2026-11-12 — First script served from this repo (jsDelivr, pinned + SRI)
 Done by Aniek Velthuizen with Claude. The card icon motion (`decisions/motion.md`) is 33 KB, too long to paste into an embed safely, so the fifth `Global | Custom Code` embed (`34374c77-…`) loads `references/embeds/icon-motion.js` from `cdn.jsdelivr.net/gh/aniekvelthuizen/humainrecruitment@<commit>` with `integrity` (sha384) and `crossorigin`. A change needs a new commit and a new URL + hash in the embed (`gen-embed.mjs <sha>` writes both). The repo must stay public for this to load; if it ever goes private, paste the script into the embed instead.
+
+## 2026-11-12 — Three.js for the glass 3D pictures (Aniek Velthuizen, via Claude)
+Library on the site besides Webflow's own GSAP: **Three.js 0.169.0** from jsDelivr (`+esm` modules), loaded on demand by the sixth embed of `Global | Custom Code` (`6303987b-…`) only on pages that show the glass ring or bar picture, and only when it comes near the view. Nothing in `<head>`, no site or page custom code. Details: `decisions/motion.md` › Glass 3D on the site.
