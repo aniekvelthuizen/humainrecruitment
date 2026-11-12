@@ -109,3 +109,6 @@ Embed `5f31b436-…177c` in Logo Marquee rewritten from `references/embeds/logo-
 
 ## 2026-11-12 — Phones: text 16 px closer to the title (Aniek Velthuizen, via Claude)
 Owner: on phones the text under the title in every hero moves up 16 px. `hero-experts_text` margin-top at `small` (≤ 767): `space/8` (48) → **`space/7` (32)**. From 768 still 48 (measured on staging at 402, 764, 987, 1276).
+
+## 2026-11-12 — Spacing as the site rhythm (Aniek Velthuizen, via Claude)
+Text margin-top now 2.0625rem / phones 1.625rem (replaces 48 / 32), see `decisions/site.md` › «One rhythm for eyebrow → title → text».

@@ -66,3 +66,6 @@ Owner: on a phone the form is far below the hero, so the hero gets a jump button
 
 ## 2026-11-12 — Phones: text 16 px closer to the title (Aniek Velthuizen, via Claude)
 Owner: on phones the text under the title in every hero moves up 16 px. `page-header_layout` row gap at `small` (≤ 767): `space/6` (24) → **`space/2` (8)**, so whatever comes first under the H1 (text, or the tags on Opportunity) sits 8 below it. Only Split has a visible visual; `page-header_visual` gets `margin-top: space/4` at `small`, so its cards keep their 24 px from the text. Measured on staging: 402 and 764 wide 8, 987 wide 24, 1276 wide 48 (the last two unchanged). No overflow at 402 and 767.
+
+## 2026-11-12 — Spacing as the site rhythm (Aniek Velthuizen, via Claude)
+Replaces the phone values of «text 16 px closer» above (row gap 8, visual margin 16). Eyebrow → title → text now follows the house rhythm in `decisions/site.md` › «One rhythm for eyebrow → title → text»: content gap tablet 0.8125rem / phones 0.6875rem, Search and Split variant gap removed, layout row gap tablet 1rem / phones 0.6875rem, Vertical and Split aside padding-top 0.9375rem on desktop, Split layout rows `auto 1fr`, Split visual phones margin-top 0.8125rem.

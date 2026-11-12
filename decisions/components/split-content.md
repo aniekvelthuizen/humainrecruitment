@@ -90,3 +90,6 @@ Owner (Aniek): the rising glow was hardly visible and not an improvement → rem
 
 ## 2026-11-12 — Step List block vertically centred (owner request, Aniek Velthuizen via Claude)
 Owner (Aniek), with a screenshot of PDE «Why This Matters»: text and step rows centred vertically. Embed rule `[data-split-content]:has([data-step-list]) .split-content_layout { align-items: center; }` — only blocks with a Step List in the Visual slot; photo and Score Chart blocks keep `start`. Source `references/embeds/split-content-style.html` (also synced the Image Transparent line that was live but missing locally). Published to staging; at 1512 the middle of text (424 high) and steps (390 high) both at y 354.
+
+## 2026-11-12 — Spacing as the site rhythm (Aniek Velthuizen, via Claude)
+Title and text margin-top 0.8125rem / phones 0.75rem (were 16 / 24), see `decisions/site.md` › «One rhythm for eyebrow → title → text».
