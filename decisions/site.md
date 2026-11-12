@@ -142,3 +142,9 @@ Section embeds hold CSS, and a small script when the block needs one to work (St
 - 512 is upscaled from 256. For a crisper PWA/large icon, ask the owner for a ≥ 512 px original and re-upload in the same place.
 - Not settable through the Data API: done in the dashboard (Claude in Chrome).
 - 2026-11-12, owner round: the first icon's navy top blended into dark browser tab bars. Owner supplied a lighter version for dark mode; `webclip-dark-256.png` (from `webclip-dark-source-227.png`) is on **Favicon — dark only** (Light and Webclip unticked in the upload dialog). Light favicon and webclip keep the original.
+
+## SEO (2026-11-12, Aniek Velthuizen, via Claude)
+- Settings (kit default, owner not asked separately): title `<Page> | HumAIn` ≤ 60, description 120–160 whole sentences in English, Open Graph title/description "Same as SEO", share image 1200 × 630 JPG/PNG. No secondary locales.
+- The 14 public static pages have their own title and description, written from each page's own copy (`references/seo-static-pages.json`). Home's Lumos placeholders («Website Name», «Place website meta description here») are gone. Provisional copy: the owner/client may rewrite.
+- Internal pages for launch (noindex + out of sitemap, or draft): Styleguide, Example Components, Search Results, Standard Page (already draft), and the CMS templates without visitor use (Team, FAQ, Rates, Cases, Experts — see owner list).
+- Open: share images on every page (none yet; `make-og.mjs`); Opportunities template SEO is bound to content fields (`name`, `intro`) → title without «| HumAIn», empty description when Intro is empty, three items share one title. Needs the SEO field group from the seo skill §3 (CMS change).
