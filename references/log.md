@@ -459,3 +459,4 @@
 - Same day (owner): back link underline now grows right and shrinks back left like the nav/footer links (fixed left origin on `.button_main_line`), same embed, published to staging.
 - 2026-11-12 (Aniek, via Claude): Contact email/phone links get the footer's growing hover line (owner); trim-off added to the links so Email/Phone match Office/Hours again. Staging published, measured. Record: `decisions/components/form-section.md`.
 - 2026-11-12 (Aniek, via Claude): Contact link line ran past the text (owner); `align-self: flex-start` on `form-section_detail-link`. Staging published, measured at 1024 and 375.
+- 2026-11-12 (Aniek, via Claude): Step List rows white on phones (≤ 767, `swatch/light-100`), owner: grey on the mint glow clashed. Record: `decisions/components/step-list.md`.
