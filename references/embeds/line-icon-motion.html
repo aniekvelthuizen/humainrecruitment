@@ -1,7 +1,7 @@
 <style>
 /* Line icons (decisions/motion.md, 2026-11-12): card icons draw in once when they enter the view, then a light runs along the line every few seconds.
    Runtime only: the Designer, reduced motion and a failed script show the plain mask icon. */
-html[data-line-icon-gate] .card_primary_icon>.icon_set_wrap:not([data-line-icon]){visibility:hidden}
+html[data-line-icon-gate] .card_primary_icon>.icon_set_wrap:not([data-line-icon]):not([data-icon-motion]){visibility:hidden}
 [data-line-icon]{-webkit-mask:none!important;mask:none!important;background:none!important}
 [data-line-icon]>svg{display:block;width:100%;height:100%;overflow:visible}
 [data-line-icon] [data-li="fill"]{fill:currentColor;opacity:0}
@@ -24,8 +24,8 @@ var d=document,h=d.documentElement;
 if(window.lineIconMotion)return;window.lineIconMotion=1;
 if(h.classList.contains('wf-design-mode')||!('IntersectionObserver' in window)||!window.fetch||!window.DOMParser||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
 var SEL='.card_primary_icon>.icon_set_wrap';
-/* Icons with their own motion (Stagger Cards base: clock, route, loupe) are left to that script. */
-var SKIP='[data-icon-motion],[data-stagger-cards][data-wf--stagger-cards--variant="base"] *';
+/* Icons that already have their own loop (Stagger Cards script, data-icon-motion) are left to that script. */
+var SKIP='[data-icon-motion]';
 h.setAttribute('data-line-icon-gate','');
 var release=function(){h.removeAttribute('data-line-icon-gate')};
 var guard=setTimeout(release,4000);
@@ -74,6 +74,8 @@ function init(){
     load(m[1]).then(function(src){build(el,src);io.observe(el)}).catch(function(){}).then(done);
   });
 }
-d.readyState==='loading'?d.addEventListener('DOMContentLoaded',init):init();
+/* One tick after DOMContentLoaded, so the Stagger Cards script has marked its icons first. */
+var start=function(){setTimeout(init,0)};
+d.readyState==='loading'?d.addEventListener('DOMContentLoaded',start):start();
 })();
 </script>

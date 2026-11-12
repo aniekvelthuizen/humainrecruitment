@@ -77,3 +77,4 @@ The glass adds 20 % white, so even the pure middle colour stays under 4.5:1 behi
 
 ## 2026-11-12 — Motion on the base variant (owner) — Aniek Velthuizen with Claude
 Two embeds after the CSS embed: style `396ecf23-136f-0831-889f-68a8291a7a6f`, script `2f7ccac8-9d8b-76b6-f278-c303e73e0c8b` (both `u-embed-css`). Cards rise one by one, three icons animate. Numbers, scope and off switch: `decisions/motion.md` › 2026-11-12.
+- 2026-11-12 (later): motion now on every variant (owner); seven more icons animated. `decisions/motion.md` › «Stagger Cards motion on every stair section».

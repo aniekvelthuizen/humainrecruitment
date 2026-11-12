@@ -374,7 +374,12 @@
 ## 2026-11-12 — Testimonial cards: entrance — Aniek Velthuizen with Claude
 - Owner round: word reveal tried on Card Testimonial text (stagger 0.03), then replaced at the owner's request by a card entrance — quote mark pops, stars light up, text fades as one block, cards 0.15 s apart left to right. Attributes on Card Testimonial (`data-card-reveal` on `card_testimonial_element` `a9dd8c48-…`, `data-card-reveal-part` icon `07f447fb-…` / stars `af02a6ac-…` / text `4c967389-…`); `data-quote-reveal*` removed from the text again. Published to staging 2× more; `quote-reveal-check.mjs` at 1512 / 402: hidden before view, order left to right, heights unchanged, no leftover inline styles, reduced motion static, console clean.
 
+## 2026-11-12 — Stagger Cards motion on every stair section — Aniek Velthuizen with Claude
+- Owner: every stair block with these icons gets the same motion. Script runs on every `[data-stagger-cards]`; ICONS + CSS for person-shield, person-check, assignment, list-check, handshake, check-circle, outbound. Same two embeds (`396ecf23-…`, `2f7ccac8-…`); published code on staging is byte-identical to `references/embeds/stagger-cards-motion-*.html`.
+- Tested on patched copies of Home, Hire an Expert and How It Works, then published to staging 1×. `SECTION=n node references/stagger-motion-check.mjs` (now takes the section index) on all four sections at 1440 / 402 and reduced motion: all pass, console clean.
+
 ## 2026-11-12 — Card line icons: draw-in + running light — Aniek Velthuizen with Claude
 - Owner request (screenshot of the stage cards): loop animation on all line icons site-wide, a load-in that ends in a loop. Record: `decisions/motion.md` › «card line icons».
 - `Global | Custom Code` (`4fa331b7-…`): + HTML embed `34374c77-8fd3-e7ff-4e13-be88b06bb0cd` (fifth), code from `references/embeds/line-icon-motion.html`, read back identical. No Designer attributes; runtime attributes only (`data-line-icon`, `data-line-icon-paused`, `data-li`, `html[data-line-icon-gate]`). Revert: remove the embed.
 - Tested locally first (`line-icon-check.mjs`, PATCH=1, 4× close-ups), then published to staging. Staging: Home 3/6 (base Stagger Cards skipped), How It Works 5/5, Project Controls 9/9, reduced motion static, console clean.
+- Owner round (Hire an Expert): the draw-in showed double lines → embed `34374c77-…` emptied (comment only), staging published. Overview page for agreeing per-icon motion: `docs/icon-motion/icon-motion.html`, published as https://claude.ai/artifact/6inrfQ3yQvrD2bVi1KuNYi.
