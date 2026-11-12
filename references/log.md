@@ -439,3 +439,6 @@
 - 2026-11-12 (Aniek, via Claude): Spotlight Grid slots: Allowed components (Card Primary, Card Testimonial, Reviews · picked) + tooltips, description; marketer test passed.
 - 2026-11-12 — Aniek (via Claude): owner: arrow before the active link. Arrow Right mask as `::before` (0.875em, text colour) on the current nav bar, dropdown and footer links; same two embeds rewritten from the sources, read back, published to staging 1×; checked at 1440 (bar, About us card, footer) and the mobile panel at 402.
 - 2026-11-12 (Aniek, via Claude): Form Section column gap +40 px (32 → 72 at 1512), also on Contact. Staging published 1×, checked. Record: `decisions/components/form-section.md`.
+
+## 2026-11-12 — Hire an Expert: Split cards in 3D (Aniek, via Claude)
+- Owner: the tilted expert cards turn slowly in 3D and come in one by one on load. Prototyped by injecting CSS on staging, then built: `data-cards-3d` on `page-header_visual` (Page Header `864e1322-…ca626`), rules appended to the Page Header embed (`…ca628`, source `references/embeds/page-header-style.html`, earlier code kept verbatim). Published to staging 1×. Revert: remove the attribute and the «Cards 3D» block. Record: `decisions/motion.md` › «Cards 3D».

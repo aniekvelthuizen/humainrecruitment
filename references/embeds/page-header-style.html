@@ -1,0 +1,23 @@
+<style>
+/* Page Header: what the style API cannot write. decisions/components/page-header.md */
+.page-header_eyebrow:empty,.page-header_muted:empty,.page-header_tag:empty,.page-header_text:empty{display:none}
+.page-header_meta-item:has(.page-header_meta-text:empty){display:none}
+/* Visual slot (Split): cards 27.5rem, the middle one 1rem to the left */
+.page-header_visual>*,.page-header_visual>.u-display-contents>*{width:27.5rem;max-width:100%}
+.page-header_visual>:nth-child(2),.page-header_visual>.u-display-contents>:nth-child(2){transform:translateX(-1rem)}
+/* Logo Marquee in the Row slot: Figma 2rem above and below, label untrimmed at 130 % with no gap under it */
+.page-header_row .logo-marquee_wrap{padding-top:var(--_spacing---space--7);padding-bottom:var(--_spacing---space--7)}
+.page-header_row .logo-marquee_title{text-box:normal;line-height:var(--_typography---line-height--large);margin-bottom:var(--_spacing---space--0)}
+/* Cards 3D (Split, data-cards-3d): cards come in one by one, then the stack sways slowly in 3D around one axis. decisions/motion.md › «Cards 3D» */
+@property --cards-3d-turn{syntax:"<angle>";inherits:true;initial-value:0deg}
+@keyframes cards-3d-in{from{opacity:0;translate:0 2.5rem;scale:.94}}
+@keyframes cards-3d-sway{from{--cards-3d-turn:-14deg}to{--cards-3d-turn:14deg}}
+@media (prefers-reduced-motion:no-preference){
+html.w-mod-js:not(.wf-design-mode) body [data-cards-3d][data-hero-reveal]{animation:cards-3d-sway 9s ease-in-out -4.5s infinite alternate}
+html.w-mod-js:not(.wf-design-mode) [data-cards-3d]{perspective:90rem}
+html.w-mod-js:not(.wf-design-mode) [data-cards-3d]>.u-display-contents>*{rotate:.12 1 0 var(--cards-3d-turn);animation:cards-3d-in .9s cubic-bezier(.22,1,.36,1) var(--cards-3d-delay,.3s) backwards;will-change:rotate}
+html.w-mod-js:not(.wf-design-mode) [data-cards-3d]>.u-display-contents>:nth-child(1){transform-origin:50% calc(150% + 1rem) -3rem;--cards-3d-delay:.3s}
+html.w-mod-js:not(.wf-design-mode) [data-cards-3d]>.u-display-contents>:nth-child(2){--cards-3d-delay:.45s}
+html.w-mod-js:not(.wf-design-mode) [data-cards-3d]>.u-display-contents>:nth-child(3){transform-origin:50% calc(-50% - 1rem) 3rem;--cards-3d-delay:.6s}
+}
+</style>
