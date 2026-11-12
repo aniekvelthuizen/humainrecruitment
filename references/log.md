@@ -377,3 +377,6 @@
 ## 2026-11-12 — Stagger Cards motion on every stair section — Aniek Velthuizen with Claude
 - Owner: every stair block with these icons gets the same motion. Script runs on every `[data-stagger-cards]`; ICONS + CSS for person-shield, person-check, assignment, list-check, handshake, check-circle, outbound. Same two embeds (`396ecf23-…`, `2f7ccac8-…`); published code on staging is byte-identical to `references/embeds/stagger-cards-motion-*.html`.
 - Tested on patched copies of Home, Hire an Expert and How It Works, then published to staging 1×. `SECTION=n node references/stagger-motion-check.mjs` (now takes the section index) on all four sections at 1440 / 402 and reduced motion: all pass, console clean.
+
+## 2026-11-12 — Split Content: Step List block centred (Aniek)
+- PDE «Why This Matters»: text and step rows vertically centred via one rule in the Split Content style embed (only with a Step List). Published to staging, measured at 1512. Record: `decisions/components/split-content.md`.
