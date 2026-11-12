@@ -19,10 +19,10 @@
 @keyframes stagger-spin { to { rotate: 360deg; } }
 
 /* Route: draws in from the circle to the arrow, then the crosses land; every 5 s the crosses turn and the arrow nudges forward. */
-[data-icon-part="line"] { stroke-dasharray: 1 2; stroke-dashoffset: 0; transition: stroke-dashoffset 1s cubic-bezier(.45,0,.2,1) calc(var(--stagger-delay, 0s) + .3s); }
+[data-icon-part="line"] { stroke-dasharray: 1.02 2; stroke-dashoffset: 0; transition: stroke-dashoffset 1s cubic-bezier(.45,0,.2,1) calc(var(--stagger-delay, 0s) + .3s); }
 [data-icon-part="arrow"] { transition: opacity .3s ease calc(var(--stagger-delay, 0s) + 1.15s); animation: stagger-nudge 5s ease-in-out calc(var(--stagger-delay, 0s) + 2.4s) infinite; }
 [data-icon-part="cross"] { transform-origin: var(--o); transition: scale .5s cubic-bezier(.22,1,.36,1) calc(var(--stagger-delay, 0s) + var(--cd)), opacity .3s ease calc(var(--stagger-delay, 0s) + var(--cd)); animation: stagger-turn 5s cubic-bezier(.65,0,.35,1) calc(var(--stagger-delay, 0s) + 2s + var(--cd)) infinite; }
-[data-stagger-motion="ready"] .stagger-cards_list > * > :not([data-stagger-in]) [data-icon-part="line"] { stroke-dashoffset: 1; }
+[data-stagger-motion="ready"] .stagger-cards_list > * > :not([data-stagger-in]) [data-icon-part="line"] { stroke-dashoffset: 1.03; }
 [data-stagger-motion="ready"] .stagger-cards_list > * > :not([data-stagger-in]) [data-icon-part="arrow"] { opacity: 0; }
 [data-stagger-motion="ready"] .stagger-cards_list > * > :not([data-stagger-in]) [data-icon-part="cross"] { opacity: 0; scale: .3; }
 @keyframes stagger-turn { 0% { rotate: 0deg; } 14%, 100% { rotate: 180deg; } }
