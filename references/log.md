@@ -429,3 +429,6 @@
 - 2026-11-12 (Aniek, via Claude): Opportunities filter bar — hover brand-200, focus 1 px brand-300 without the 2 px outline (owner: subtler). Staging published 1×, focus checked at 1512.
 - Same day: the upload's remove ✕ turns 90° on hover and keyboard focus (owner). Same embed, published to staging, checked. Record: `decisions/motion.md`.
 - 2026-11-12 (Aniek, via Claude): review fixes Reviews CMS: Spotlight Grid List Role prop (none on Reviews), root data-display; staging checked.
+
+## 2026-11-12 — Spotlight Grid photo parallax (Aniek, with Claude)
+- Owner liked prototype round 2 (`references/prototypes/photo-parallax.html`): against the mouse, slow, Depth variant. Built: attributes `data-photo-parallax` (`spotlight-grid_panel` `4f869313-…-525a63bf2e41`) and `data-photo-parallax-photo` (`spotlight-grid_visual` `…2e4c`) in the Spotlight Grid definition; ninth embed in `Global | Custom Code` (`9991f8f0-…`), read back identical to `references/embeds/photo-parallax.html`. Published to staging 1× (two tries hit the 1-per-minute limit from another session). `parallax-check.mjs` passed. Record: `decisions/motion.md`.

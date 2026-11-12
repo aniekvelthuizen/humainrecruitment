@@ -78,3 +78,6 @@ Review: `references/audit/2026-11-02-testimonials-review.md` (fresh reviewer, no
 
 ## 2026-11-12 — List Role prop
 Prop **List Role** (`c2d3da65-242a-1ceb-8800-7c2ab71ea1a1`, string, folder Settings, default `list`) is bound to the `role` attribute of `spotlight-grid_list` ×2 and `spotlight-grid_center-list`. `none` when the slots hold a CMS list (`Reviews · picked`), because Webflow's Collection List is a `role="list"` itself. Set to `none` on the Reviews instances of Home, Hire an expert and Clients. Aniek Velthuizen, via Claude.
+
+## 2026-11-12 — Photo follows the mouse
+The panel carries `data-photo-parallax` and the visual `data-photo-parallax-photo`: on mouse devices the person moves slowly against the cursor with a faint light behind (`decisions/motion.md`, same date). Remove the panel attribute to switch it off for this component.

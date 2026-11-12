@@ -1,0 +1,39 @@
+<style>
+/* Photo parallax (decisions/motion.md, 2026-11-12): the cut-out person in a [data-photo-parallax] panel moves slowly against the mouse, a faint mint light behind moves with it. Runtime only (mouse, no reduced motion); the Designer and touch show the static photo. */
+[data-photo-parallax-on]{isolation:isolate}
+[data-photo-parallax-on] [data-photo-parallax-photo]{will-change:translate}
+.photo-parallax_glow{position:absolute;inset:-15%;z-index:-1;pointer-events:none;background:radial-gradient(40% 35% at 50% 45%,rgba(0,255,204,.18),transparent 70%);will-change:translate}
+</style>
+<script>
+(function(){
+var d=document,h=d.documentElement;
+if(h.classList.contains('wf-design-mode')||!('IntersectionObserver' in window))return;
+if(!matchMedia('(hover: hover) and (pointer: fine)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var M=8,EASE=0.02,DROP=6; /* px at the edge, share per frame, px the photo sits lower so an upward move opens no gap */
+function setup(panel){
+  var fg=panel.querySelector('[data-photo-parallax-photo]');if(!fg)return;
+  var area=panel.closest('section')||panel,glow=d.createElement('span');
+  glow.className='photo-parallax_glow';glow.setAttribute('aria-hidden','true');
+  panel.insertBefore(glow,panel.firstChild);panel.setAttribute('data-photo-parallax-on','');
+  var tx=0,ty=0,x=0,y=0,raf=0,inView=false;
+  function c(v){return v<-1?-1:v>1?1:v}
+  function kick(){if(!raf)raf=requestAnimationFrame(tick)}
+  function tick(){
+    raf=0;x+=(tx-x)*EASE;y+=(ty-y)*EASE;
+    fg.style.translate=(-x*M).toFixed(2)+'px '+(DROP-y*M*.6).toFixed(2)+'px';
+    glow.style.translate=(x*M*2).toFixed(2)+'px '+(y*M*1.5).toFixed(2)+'px';
+    if(Math.abs(tx-x)>5e-4||Math.abs(ty-y)>5e-4)kick();
+  }
+  area.addEventListener('pointermove',function(e){
+    if(e.pointerType!=='mouse'||!inView)return;
+    var r=panel.getBoundingClientRect();
+    tx=c((e.clientX-r.left-r.width/2)/(r.width*.9));ty=c((e.clientY-r.top-r.height/2)/(r.height*.9));kick();
+  });
+  area.addEventListener('pointerleave',function(){tx=ty=0;kick()});
+  new IntersectionObserver(function(es){inView=es[0].isIntersecting;if(!inView){tx=ty=0;kick()}}).observe(panel);
+  fg.style.translate='0px '+DROP+'px';
+}
+function init(){d.querySelectorAll('[data-photo-parallax]').forEach(setup)}
+d.readyState==='loading'?d.addEventListener('DOMContentLoaded',init):init();
+})();
+</script>
