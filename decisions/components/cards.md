@@ -543,3 +543,8 @@ Removed from `card_primary_action_outline` in Pricing Outline: `::before`, `::af
 
 ## 2026-11-05 — Card Opportunity: outer notch corners stay square (Aniek Velthuizen, via Claude)
 Choice: the two outer corners at the notch stay square; Figma rounds them, the concave corner is right. The audit offered rounding them in the mask on `card_opportunity_element` or recording this. It shows on every list with Card Opportunity.
+
+## 2026-11-12 — Card Bullet: tick on the first line
+Owner (Aniek): the tick must always sit on the first line, also when the text wraps (Project Delivery Experts, "Examples by discipline"). It was centred on the whole text (`card_bullet` `align-items: center`).
+Choice: the Text Style mode moved from `card_bullet_text.u-text-trim-off` to the root `card_bullet` (Text Small in the base, Text Medium in Large; the text inherits the variables). `card_bullet` `align-items: flex-start`. `card_bullet_icon` reads the Text Style font-size and line-height variables and is `height: 1lh`, `display: flex`, `align-items: center`, so the icon box is one text line high and the tick sits in its middle at every fluid size.
+Checked on staging, Project Delivery Experts at 1024 and 402 (72 bullets, Small and Large, 33–36 wrapping): tick centre within 0.7 px of the first line's centre; one-line bullets keep their height (27 Large, 21 Small). Done by Aniek Velthuizen with Claude.
