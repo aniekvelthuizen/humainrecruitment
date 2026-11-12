@@ -21,3 +21,6 @@ The embed also sets the card's side padding to 0, only inside this row. Figma's 
 ## 2026-11-05 — Placed
 About Us instance `7c0004ad-564f-602e-1590-e4fee7d65445`, Hire an Expert instance `74aa8729-df69-abcf-e777-ca38659f2d73`, both at the end of `page_main` until the pages are composed. Copy as Figma, the same on both pages, «-25 / 30%» included.
 Simulated locally (published CSS + these rules; nothing published yet) at 1512: cards at x 64 / 426 / 788 / 1150, 298 wide as Figma; 170 high against Figma's 168, so the section is 362 against 360 (Stat's known 2 px, `cards.md`).
+
+## 2026-11-12 — Figures fly in on scroll (owner)
+The figures reveal word by word like the quotes, 0.3 s apart left to right. Lives in the global quote-reveal embed, not in this component: `decisions/motion.md` › Facts Row figures. Done by Aniek Velthuizen with Claude.

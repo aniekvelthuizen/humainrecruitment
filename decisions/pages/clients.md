@@ -10,13 +10,16 @@ Figma frame 7 `2292:8938`, export `references/figma/rest-of-site/pages/07-client
 - **CTA Split:** Space Top `large` (Figma 744 = 192 + 360 + 192, it follows the grey Reviews section), Title Muted empty.
 - **Cases Grid:** Space Top `main`, cards not clickable (Figma draws no button on them).
 - **Page Header:** the Opportunity-only props are emptied on this instance.
-- **Links:** Hire an expert → `/hire-an-expert`, Contact us → `/contact`, See all clients and the three testimonial arrows → `/clients`.
+- **Links:** Hire an expert → `/hire-an-expert`, Contact us → `/contact`, See all clients and the three testimonial arrows → `/clients` (both removed 2026-11-12, below).
 
 ## Open
-- The testimonial arrows still link to `/clients` (the page they are on); the arrow only renders on a clickable card, so removing the link also removes the drawn arrow. Not yet decided.
+- If HumAIn has an external review page (Google Reviews, Trustpilot), the Clients cards can link there and get their arrow back. Needs the URL from the client.
 
 ## 2026-11-12 — «See all clients» button off
 Owner: the button goes, you are already on that page. Spotlight Grid instance on Clients: **Button Visibility** off (prop override, component unchanged; Home keeps its button). Done by Aniek Velthuizen, via Claude.
+
+## 2026-11-12 — Testimonial cards not clickable
+Owner: the three Card Testimonial arrows linked to `/clients` as well; there is no reviews page or case detail page to send them to (reviews are not a CMS collection, the Cases template has no design). On this page **Link** and **Screen Reader Text** are emptied on all three cards, so they are not clickable and the arrow does not render (deviates from Figma). Home and Hire an expert keep their links to `/clients`. Done by Aniek Velthuizen, via Claude.
 
 ## Deviates from Figma
 - Company «Google» as on Home; Figma has «GOOGLE» here.

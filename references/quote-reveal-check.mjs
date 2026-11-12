@@ -10,6 +10,7 @@ import path from 'node:path';
 const url = process.argv[2] || 'https://humain-dev.webflow.io/';
 const out = process.argv[3] || './quote-reveal-out';
 const width = Number(process.env.WIDTH || 1512);
+const QSEL = '[data-quote-reveal],[data-facts-row] .card_primary_title'; // quotes + Facts Row figures
 fs.mkdirSync(out, { recursive: true });
 const chromePath = process.env.CHROME || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const port = 9300 + Math.floor(Math.random() * 500);
@@ -64,7 +65,7 @@ report.cards = await ev(`(async () => {
 })()`);
 await send('Page.navigate', { url: url + (url.includes('?') ? '&' : '?') + 'v=' + Date.now() });
 await sleep(4000);
-const sels = await ev(`[...document.querySelectorAll('[data-quote-reveal]')].filter((q) => q.offsetHeight > 0).map((q, i) => (q.setAttribute('data-qcheck', i), '[data-qcheck="' + i + '"]'))`);
+const sels = await ev(`[...document.querySelectorAll('${QSEL}')].filter((q) => q.offsetHeight > 0).map((q, i) => (q.setAttribute('data-qcheck', i), '[data-qcheck="' + i + '"]'))`);
 for (const sel of sels) {
   const before = await ev(`(() => { const q = document.querySelector('${sel}'); const w = q.querySelectorAll('[data-quote-word]');
     return { text: q.textContent.trim().slice(0, 60), state: q.dataset.quoteState, words: w.length, visibleWords: [...w].filter((s) => +getComputedStyle(s).opacity > 0.01).length, h: q.offsetHeight }; })()`);
@@ -84,7 +85,7 @@ for (const sel of sels) {
 await send('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: 'reduce' }] });
 await send('Page.navigate', { url: url + (url.includes('?') ? '&' : '?') + 'v=' + Date.now() });
 await sleep(4000);
-report.reduced = await ev(`({ gate: document.documentElement.hasAttribute('data-quote-gate'), quotes: [...document.querySelectorAll('[data-quote-reveal]')].filter((q) => q.offsetHeight > 0).map((q) => ({ words: q.querySelectorAll('[data-quote-word]').length, visibility: getComputedStyle(q).visibility, h: q.offsetHeight })) })`);
+report.reduced = await ev(`({ gate: document.documentElement.hasAttribute('data-quote-gate'), quotes: [...document.querySelectorAll('${QSEL}')].filter((q) => q.offsetHeight > 0).map((q) => ({ words: q.querySelectorAll('[data-quote-word]').length, visibility: getComputedStyle(q).visibility, h: q.offsetHeight })) })`);
 report.errors = errors;
 fs.writeFileSync(path.join(out, 'report.json'), JSON.stringify(report, null, 1));
 console.log(JSON.stringify(report, null, 1));
