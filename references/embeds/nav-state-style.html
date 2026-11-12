@@ -30,7 +30,11 @@
 .nav_component .nav_links_link.w--current,
 .nav_component .nav_dropdown_link.w--current { text-decoration: none; }
 .nav_component .nav_links_link.w--current .nav_links_text,
-.nav_component .nav_dropdown_link.w--current { font-weight: var(--_typography---font--primary-semibold); }
+.nav_component .nav_dropdown_link.w--current { font-weight: var(--_typography---font--primary-semibold); white-space: nowrap; }
+/* ...with the site's Arrow Right icon before the text (mask in the text colour, 0.875em, 0.375em gap). nowrap keeps arrow and word together in the bar. */
+.nav_component .nav_links_link.w--current .nav_links_text { white-space: nowrap; }
+.nav_component .nav_links_link.w--current .nav_links_text::before,
+.nav_component .nav_dropdown_link.w--current::before { content: ""; display: inline-block; width: 0.875em; height: 0.875em; margin-right: 0.375em; vertical-align: -0.0625em; background-color: currentColor; -webkit-mask: url("https://cdn.prod.website-files.com/6ae35364a38b2d71cab8c607/6ae36cceffdd1ab2d2dbee0b_icon-arrow-right.svg") center / contain no-repeat; mask: url("https://cdn.prod.website-files.com/6ae35364a38b2d71cab8c607/6ae36cceffdd1ab2d2dbee0b_icon-arrow-right.svg") center / contain no-repeat; }
 /* Phones (small breakpoint): hamburger 28 x 14 instead of 32 x 16. The gap is a custom property (the style API refuses those); the cross reads the same value. Bar, logo and hit area are Designer styles on the small breakpoint. */
 @media (max-width: 767px) { .nav_component .nav_button_wrap { --nav--hamburger-gap: 0.625rem; } }
 @media (prefers-reduced-motion: reduce) { .nav_component, .nav_component * { transition-duration: 1ms !important; animation-duration: 1ms !important; } }

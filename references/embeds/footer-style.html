@@ -6,6 +6,7 @@
   [data-footer-group][data-footer-open] .footer_group_icon { transform: rotate(180deg); }
 }
 /* Active page (Webflow's w--current on the Footer Link): semibold, as in the nav. On the text element because u-text-style-main sets its own weight. */
-.footer_link_wrap.w--current .footer_link_text { font-weight: var(--_typography---font--primary-semibold); }
+.footer_link_wrap.w--current .footer_link_text { font-weight: var(--_typography---font--primary-semibold); white-space: nowrap; }
+.footer_link_wrap.w--current .footer_link_text::before { content: ""; display: inline-block; width: 0.875em; height: 0.875em; margin-right: 0.375em; vertical-align: -0.0625em; background-color: currentColor; -webkit-mask: url("https://cdn.prod.website-files.com/6ae35364a38b2d71cab8c607/6ae36cceffdd1ab2d2dbee0b_icon-arrow-right.svg") center / contain no-repeat; mask: url("https://cdn.prod.website-files.com/6ae35364a38b2d71cab8c607/6ae36cceffdd1ab2d2dbee0b_icon-arrow-right.svg") center / contain no-repeat; }
 @media (prefers-reduced-motion: reduce) { .footer_wrap, .footer_wrap * { transition-duration: 1ms !important; } }
 </style>
