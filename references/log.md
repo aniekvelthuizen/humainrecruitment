@@ -348,6 +348,7 @@
 ## 2026-11-12 — Arrow link hover (Aniek Velthuizen, via Claude)
 - Tertiary + Arrow Right: arrow swaps from left to right on hover; CSS embed added in `Global | Custom Code` (`decisions/motion.md`).
 - v2 after owner feedback («rommelig»): own switch instead of the Lumos trigger, so no lift and no underline; arrows and label slide as one, 400 ms both ways. Published to staging.
+- Styleguide and Example Components now carry `Global | Custom Code` at the top of `page_wrap` (owner), published to staging; the 4 example links measured OK.
 
 ## 2026-11-12 — Two-tone heading sweep (Aniek Velthuizen with Claude)
 - Grey part of every two-tone heading starts black and sweeps to grey on scroll into view; third embed in `Global | Custom Code`. Tested on a patched copy of Home first (hero, Split Content), then published to staging. Record: `decisions/motion.md`.
