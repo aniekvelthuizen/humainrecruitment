@@ -408,3 +408,4 @@
 
 ## 2026-11-12 — Stage Certified: mint on scroll into view (Aniek Velthuizen with Claude)
 - Owner: the mint stage cards turn mint only when they come into view, in the slider and the overview (Project Delivery Experts). New embed `6885f746-…` in `Global | Custom Code` (source `references/embeds/stage-certified-glow.html`), published to staging 1×. `stage-glow-check.mjs` at 1440 / 402: white at load, fade on scroll (grid) and on slide (slider), reduced motion static, console clean. Record: `decisions/motion.md`.
+- Same day: Card Grid closing statement («Only proven performers reach clients») lights up too (owner). Embed rewritten, published to staging 1×; PDE check at 1440 (8/8) and 402 passes, console clean. The bars moving down is another chat's work, untouched here.
