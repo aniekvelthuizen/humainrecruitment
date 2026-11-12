@@ -5,6 +5,8 @@
 .split-content_actions:empty { display: none; }
 .split-content_slot:not(:has(> * > *)) { display: none; }
 [data-split-content]:has(.split-content_slot > * > *) .split-content_visual { display: none; }
+[data-split-content]:has([data-step-list]) .split-content_layout { align-items: center; }
+[data-split-content][data-image-transparent="true" i] .u-image-wrapper { background-color: transparent; }
 [data-split-content][data-glow="true" i] { background-image: radial-gradient(58.28% 52.94% at 50% 105.94%, var(--_theme---glow--mint) 49.5%, transparent 100%); }
 @media screen and (max-width: 767px) {
   [data-split-content][data-glow="true" i] { background-image: radial-gradient(162.5% 44.8% at 50% 87.3%, var(--_theme---glow--mint) 10%, transparent 100%); }
