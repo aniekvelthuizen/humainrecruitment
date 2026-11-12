@@ -336,3 +336,7 @@
 - Owner request. Site settings › Icons (Claude in Chrome): one upload of `references/assets/icons/webclip-256.png`, applied to Favicon light, Favicon dark and Webclip. Record: `decisions/site.md`.
 - Published to staging 1× (claude.ai Webflow connector; the local `webflow` MCP returns 404 for this site). Staging HTML carries icon links 32 (light + dark), 48, 192, 512 and apple-touch-icon 180.
 - Owner round: dark-mode favicon replaced with the owner's lighter version (`webclip-dark-256.png`, Favicon dark slot only). Published to staging 1×; staging HTML: light 32 = original, dark 32 = new file.
+
+## 2026-11-12 — Sticky Steps: no empty space under the stack — Aniek Velthuizen with Claude
+- Owner request (screenshot Home "Our method"). Hold block under the last card removed; the list ends at the last card and a script-set tail keeps the intro in place until card 3 lands, then everything moves on together. Record: `decisions/components/sticky-steps.md`.
+- Published to staging 1× (claude.ai Webflow connector). Measured headless at 1512 / 1280 / 991 / 767 / 402 on Home, plus How It Works, Consulting, Project Delivery Experts, Submit Resume. Not checked: Safari, real touch devices.

@@ -1,0 +1,68 @@
+<style>
+/* Sticky Steps: every card in the list (or in the slot inside it) sticks at the intro's height, so the next one slides over it (a tilted stack). Kept here, not on Card Primary, so any card dropped in the slot gets it. */
+[data-sticky-steps-list] > [role="listitem"], [data-sticky-steps-list] > * > [role="listitem"] { position: sticky; top: calc(var(--nav--height-total) + 2rem); rotate: -2deg; }
+[data-sticky-steps-list] > [role="listitem"]:nth-child(even), [data-sticky-steps-list] > * > [role="listitem"]:nth-child(even) { rotate: 2deg; }
+/* As the next card covers a card (--sticky-steps-cover 0..1, set below), its glass tint and text fade out, so the pile shows one layer of white and no text hazing through, as in the design. Ring and edge stay. */
+[data-sticky-steps-list] [role="listitem"] .card_primary_element { background-color: color-mix(in srgb, var(--_theme---card--glass) calc((1 - var(--sticky-steps-cover, 0)) * 100%), transparent); }
+[data-sticky-steps-list] [role="listitem"] :is(.card_primary_badge, .card_primary_header, .card_primary_text, .card_primary_list) { opacity: calc(1 - var(--sticky-steps-cover, 0)); }
+/* Space Top medium / small and List Align end: off unless an instance sets them. Below 992 the section stays at section-space/main. */
+/* Process Step (variant Plain): the design's growing white distance per step and the list height, only while the intro sticks beside the steps. */
+@media (min-width: 992px) {
+[data-sticky-steps][data-space-top="medium" i] { padding-top: 11rem; }
+[data-sticky-steps][data-space-top="small" i] { padding-top: 8rem; }
+[data-sticky-steps][data-list-align="end" i] [data-sticky-steps-list] { margin-left: auto; }
+/* Card stack: the list ends at the last card, so the stack and the section's bottom move on as soon as the last card lands (no hold). The space below the list (--sticky-steps-tail = intro height - last card height, set below) keeps the intro in place until then, and both leave together. */
+[data-sticky-steps-list]:not(:has([data-process-step])) { align-self: start; margin-bottom: var(--sticky-steps-tail, 0px); }
+[data-sticky-steps-list] > * > [data-process-step]:nth-child(2) { padding-top: 13.75rem; }
+[data-sticky-steps-list] > * > [data-process-step]:nth-child(3) { padding-top: 19.5rem; }
+[data-sticky-steps-list] > * > [data-process-step]:nth-child(4) { padding-top: 25.25rem; }
+[data-sticky-steps-list] > * > [data-process-step]:nth-child(n+5) { padding-top: 31rem; }
+[data-sticky-steps-list]:has([data-process-step]) { min-height: 97.625rem; }
+[data-sticky-steps-list]:has([data-process-step]:nth-child(4)) { min-height: 174.3125rem; }
+[data-sticky-steps-list]:has([data-process-step]:nth-child(5)) { min-height: 251rem; }
+}
+</style>
+<script>
+(() => {
+  if (window.__stickySteps) return; window.__stickySteps = true;
+  const cardsOf = (list) => [...list.querySelectorAll(':scope > [role="listitem"], :scope > * > [role="listitem"]')];
+  const lists = () => document.querySelectorAll('[data-sticky-steps-list]');
+  let queued = false;
+  const update = () => {
+    queued = false;
+    lists().forEach((list) => {
+      const cards = cardsOf(list);
+      cards.forEach((card, i) => {
+        const next = cards[i + 1];
+        let cover = 0;
+        if (next) {
+          const a = card.getBoundingClientRect(), b = next.getBoundingClientRect();
+          cover = Math.min(1, Math.max(0, (a.bottom - b.top) / a.height));
+        }
+        card.style.setProperty('--sticky-steps-cover', cover.toFixed(3));
+      });
+    });
+  };
+  const queue = () => { if (!queued) { queued = true; requestAnimationFrame(update); } };
+  const tail = () => lists().forEach((list) => {
+    const cards = cardsOf(list), last = cards[cards.length - 1];
+    const intro = list.closest('[data-sticky-steps]')?.querySelector('.sticky-steps_intro');
+    if (!last || !intro) return;
+    list.style.setProperty('--sticky-steps-tail', Math.max(0, intro.offsetHeight - last.offsetHeight) + 'px');
+  });
+  const start = () => {
+    tail(); update();
+    if ('ResizeObserver' in window) {
+      const ro = new ResizeObserver(() => { tail(); queue(); });
+      lists().forEach((list) => {
+        const cards = cardsOf(list), intro = list.closest('[data-sticky-steps]')?.querySelector('.sticky-steps_intro');
+        if (intro) ro.observe(intro);
+        if (cards.length) ro.observe(cards[cards.length - 1]);
+      });
+    } else addEventListener('resize', tail);
+  };
+  addEventListener('scroll', queue, { passive: true });
+  addEventListener('resize', queue);
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+})();
+</script>
