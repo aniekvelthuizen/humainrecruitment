@@ -6,7 +6,7 @@
 [data-sticky-steps-list] [role="listitem"] .card_primary_element { background-color: color-mix(in srgb, var(--_theme---card--glass) calc((1 - var(--sticky-steps-cover, 0)) * 100%), transparent); }
 [data-sticky-steps-list] [role="listitem"] :is(.card_primary_badge, .card_primary_header, .card_primary_text, .card_primary_list) { opacity: calc(1 - var(--sticky-steps-cover, 0)); }
 /* Space Top medium / small and List Align end: off unless an instance sets them. Below 992 the section stays at section-space/main. */
-/* Process Step (variant Plain): the design's growing white distance per step and the list height, only while the intro sticks beside the steps. */
+/* Process Step (variant Plain): the design's growing white distance per step, only while the intro sticks beside the steps. No list height: the next section follows as soon as the last step lands (owner 2026-11-12). */
 @media (min-width: 992px) {
 [data-sticky-steps][data-space-top="medium" i] { padding-top: 11rem; }
 [data-sticky-steps][data-space-top="small" i] { padding-top: 8rem; }
@@ -17,9 +17,6 @@
 [data-sticky-steps-list] > * > [data-process-step]:nth-child(3) { padding-top: 19.5rem; }
 [data-sticky-steps-list] > * > [data-process-step]:nth-child(4) { padding-top: 25.25rem; }
 [data-sticky-steps-list] > * > [data-process-step]:nth-child(n+5) { padding-top: 31rem; }
-[data-sticky-steps-list]:has([data-process-step]) { min-height: 97.625rem; }
-[data-sticky-steps-list]:has([data-process-step]:nth-child(4)) { min-height: 174.3125rem; }
-[data-sticky-steps-list]:has([data-process-step]:nth-child(5)) { min-height: 251rem; }
 /* Process Steps stick and pile up under each other: step n sticks one head lower (--sticky-steps-pitch = divider + 24 + 48 number + 24) than step n-1, and its white covers the body of the step above, so only the heads stay in view. top = intro top + (n-1) pitch - the step's own padding-top. */
 [data-sticky-steps-list] > * > [data-process-step] { --sticky-steps-base: calc(var(--nav--height-total) + 2rem); --sticky-steps-pitch: calc(6rem + 1px); position: sticky; top: var(--sticky-steps-base); }
 [data-sticky-steps-list] > * > [data-process-step]:nth-child(2) { top: calc(var(--sticky-steps-base) + var(--sticky-steps-pitch) - 13.75rem); }

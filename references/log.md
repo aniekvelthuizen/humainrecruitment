@@ -365,6 +365,7 @@
 ## 2026-11-12 — Sticky Steps Plain: steps stick and pile up — Aniek Velthuizen with Claude
 - Owner request with two screenshots (Home «From requirement to shortlist in days.»): the steps must stick and end up under each other. Section embed of Sticky Steps (`73b7ce70-…b381`) rewritten from `references/embeds/sticky-steps.html`, read back identical. Record: `decisions/components/sticky-steps.md` › 2026-11-12.
 - Published to staging 2× (second: `hold()` on `resize`). Measured at 1512: Home 1930 and How It Works 4400 unchanged, heads at 112 / 209 / 306 (/ 403 / 500), pile and intro leave together; 402: static, no inline styles, How It Works 2344 as before.
+- Owner round: no hold under the pile. List `min-height` removed from the section embed, read back identical, published to staging. Home 1635 (was 1930), How It Works 3599 (was 4400); the next section follows as soon as the last step lands. Record: `decisions/components/sticky-steps.md` › «No hold under the Process Step pile».
 
 ## 2026-11-12 — Two-tone headings: words one by one (Aniek Velthuizen with Claude)
 - Owner: words one by one instead of the sweep, and the turquoise Sticky Steps titles too. Tested on a patched copy of Home (Sticky Steps, light and dark), published to staging, re-checked on How It Works.

@@ -107,3 +107,9 @@ Owner (Aniek), with two screenshots of Home's «From requirement to shortlist in
 - Source: `references/embeds/sticky-steps.html` (the version before this change is that file in commit 5bb6a5c). Glass card stack (Home «Our method»): no rule or script line of it changed.
 Measured on staging at 1512 × 900. Home: section 1930 (unchanged); stuck at 112 / 209 / 306, held ≈ 150 px of scroll, then steps and intro leave in the same frame. How It Works (5 steps): 4400 (unchanged); 112 / 209 / 306 / 403 / 500, full pile held ≈ 700 px (the list `min-height` from Figma), leaves together.
 **Known limit:** the last step's stuck bottom on How It Works is at ≈ 802 px; on a window lower than that, the end of step 5's checklist is under the fold until the pile moves on.
+
+## 2026-11-12 — No hold under the Process Step pile (owner, Aniek Velthuizen, via Claude)
+Owner (Aniek), with a screenshot of the landed pile and white below it: as in the card stack, the next section must come right after the last step, without a stretch of white to scroll away.
+Choice: the list `min-height` per number of steps (97.625 / 174.3125 / 251rem, Figma's fixed list height) is removed. The list now ends at the last step, and `hold()` makes all stuck steps and the intro end on one line, so the moment the last step lands the pile, the intro and the section's bottom move on together. The section keeps its own bottom padding (192).
+Supersedes in the 2026-11-05 entries: the list height per number of steps and the section heights that match Figma (How It Works 4400, Home 1930).
+Measured on staging at 1512 × 900: Home 1930 → 1635, step 3 lands at 306 and the pile leaves in the same scroll step, «Engagement models» already in view; How It Works 4400 → 3599, step 5 lands at 500 and the pile leaves at once. Below 992 unchanged (no min-height there).
