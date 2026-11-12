@@ -1,29 +1,31 @@
 <style>
-/* Arrow link swap (decisions/motion.md, 2026-11-12). Tertiary Button Main with the Arrow Right icon only:
-   on hover/focus the left arrow leaves, the label slides left, an arrow comes in on the right.
-   Driven by the Lumos trigger (--_trigger---off: 0 rest, 1 hover/focus), so card hovers drive it too. */
+/* Arrow link swap (decisions/motion.md, 2026-11-12). Tertiary Button Main with the Arrow Right icon only.
+   On hover/focus of the link, or of the clickable card around it, arrow + label + a second arrow slide
+   left together by one step (icon + gap): the left arrow fades out, the right one fades in.
+   Own switch --arrow-link (0/1), not the Lumos trigger, so the button's lift and underline stay off. */
 [data-wf--button-main--button-variant="tertiary"]:has([data-wf--icon-set--variant="arrow-right"]) {
-  --arrow-link-shift: calc(1rem + 0.5rem); /* icon width + gap */
-  --arrow-link-ease: cubic-bezier(.65,.05,.36,1);
-  --arrow-link-time: calc(250ms + 200ms * var(--_trigger---off, 0)); /* in 450 ms, out 250 ms */
+  --arrow-link: 0;
+  --arrow-link-step: 1.5rem; /* icon 1rem + gap 0.5rem */
+  --arrow-link-move: 400ms cubic-bezier(.65,.05,.36,1);
+  transform: none;
 }
-/* Inside a clickable card the card's link layer covers the button, so the card's hover/focus plays it */
+[data-wf--button-main--button-variant="tertiary"]:has([data-wf--icon-set--variant="arrow-right"]):is(:hover, :focus-within),
 :is([data-trigger~="hover"], [data-trigger~="hover-if-clickable"]:has(.clickable_wrap:not(.w-condition-invisible))):hover [data-wf--button-main--button-variant="tertiary"]:has([data-wf--icon-set--variant="arrow-right"]),
 [data-trigger~="focus"]:is(:focus-visible, :has(:focus-visible)) [data-wf--button-main--button-variant="tertiary"]:has([data-wf--icon-set--variant="arrow-right"]) {
-  --_trigger---on: 0;
-  --_trigger---off: 1;
+  --arrow-link: 1;
 }
+[data-wf--button-main--button-variant="tertiary"]:has([data-wf--icon-set--variant="arrow-right"]) .button_main_line { display: none; }
+/* Left arrow: moves with the label, gone in the first half */
 [data-wf--button-main--button-variant="tertiary"]:has([data-wf--icon-set--variant="arrow-right"]) .button_main_icon {
-  transform: translateX(calc(-0.75rem * var(--_trigger---off, 0)));
-  opacity: calc(1 - var(--_trigger---off, 0));
-  transition: transform var(--arrow-link-time) var(--arrow-link-ease), opacity var(--arrow-link-time) ease;
+  transform: translateX(calc(-1 * var(--arrow-link-step) * var(--arrow-link)));
+  opacity: calc(1 - var(--arrow-link));
+  transition: transform var(--arrow-link-move), opacity 200ms linear calc(200ms * (1 - var(--arrow-link)));
 }
-[data-wf--button-main--button-variant="tertiary"]:has([data-wf--icon-set--variant="arrow-right"]) :is(.button_main_text, .button_main_line) {
-  translate: calc(-1 * var(--arrow-link-shift) * var(--_trigger---off, 0)) 0;
-  transition-property: translate, transform, color;
-  transition-duration: var(--arrow-link-time), 600ms, 200ms;
-  transition-timing-function: var(--arrow-link-ease);
+[data-wf--button-main--button-variant="tertiary"]:has([data-wf--icon-set--variant="arrow-right"]) .button_main_text {
+  transform: translateX(calc(-1 * var(--arrow-link-step) * var(--arrow-link)));
+  transition: transform var(--arrow-link-move), color 200ms ease;
 }
+/* Right arrow: starts one step to the right, slides in with the label, shows in the second half */
 [data-wf--button-main--button-variant="tertiary"]:has([data-wf--icon-set--variant="arrow-right"]) .button_main_element::after {
   content: "";
   position: absolute;
@@ -35,13 +37,13 @@
   background-color: currentColor;
   -webkit-mask: url("https://cdn.prod.website-files.com/6ae35364a38b2d71cab8c607/6ae36cceffdd1ab2d2dbee0b_icon-arrow-right.svg") center / contain no-repeat;
   mask: url("https://cdn.prod.website-files.com/6ae35364a38b2d71cab8c607/6ae36cceffdd1ab2d2dbee0b_icon-arrow-right.svg") center / contain no-repeat;
-  opacity: var(--_trigger---off, 0);
-  transform: translateX(calc(-0.75rem * (1 - var(--_trigger---off, 0))));
-  transition: transform var(--arrow-link-time) var(--arrow-link-ease), opacity var(--arrow-link-time) ease;
+  transform: translateX(calc(var(--arrow-link-step) * (1 - var(--arrow-link))));
+  opacity: var(--arrow-link);
+  transition: transform var(--arrow-link-move), opacity 200ms linear calc(200ms * var(--arrow-link));
   pointer-events: none;
 }
 @media (prefers-reduced-motion: reduce) {
   [data-wf--button-main--button-variant="tertiary"]:has([data-wf--icon-set--variant="arrow-right"]) .button_main_element::after,
-  [data-wf--button-main--button-variant="tertiary"]:has([data-wf--icon-set--variant="arrow-right"]) :is(.button_main_icon, .button_main_text, .button_main_line) { transition-duration: 0s; }
+  [data-wf--button-main--button-variant="tertiary"]:has([data-wf--icon-set--variant="arrow-right"]) :is(.button_main_icon, .button_main_text) { transition-duration: 0s; transition-delay: 0s; }
 }
 </style>

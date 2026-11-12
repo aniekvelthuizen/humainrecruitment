@@ -343,3 +343,4 @@
 
 ## 2026-11-12 — Arrow link hover (Aniek Velthuizen, via Claude)
 - Tertiary + Arrow Right: arrow swaps from left to right on hover; CSS embed added in `Global | Custom Code` (`decisions/motion.md`).
+- v2 after owner feedback («rommelig»): own switch instead of the Lumos trigger, so no lift and no underline; arrows and label slide as one, 400 ms both ways. Published to staging.
