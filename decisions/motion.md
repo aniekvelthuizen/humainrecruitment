@@ -213,3 +213,11 @@ Owner (Aniek): «hij moet veel langzamer bewegen», «als je naar rechts beweegt
 
 ## 2026-11-12 — Upload ✕ turns on hover (Aniek Velthuizen, via Claude)
 Owner: the remove ✕ on a chosen CV turns on hover. 90° (`rotate`, not `transform`), 0.3 s, the site's ease-out `cubic-bezier(.22,1,.36,1)`; back the same way. Hover only on pointer devices (`hover:hover`), so a tap does not leave it turned; also on keyboard focus. Reduced motion: no transition. In the first embed of `Global | Custom Code`, so Resume and Opportunity Detail both get it. Checked on staging /submit-resume: 90deg on hover.
+
+## 2026-11-12 — Spotlight Grid photo follows the mouse: built (owner)
+Owner (Aniek): «Ja, bouwen» after prototype round 2. Built by Aniek Velthuizen with Claude. Both Spotlight Grid panels (Expertise: Home; Reviews: Home, Hire an expert, Clients).
+- **What moves:** the cut-out person, **against** the mouse (cursor right → person left), at most **8 px** x and 4.8 px y; a faint mint light behind her (created by the script, `span.photo-parallax_glow`, under the content) moves with the cursor, 2× / 1.5× that. Easing **0.02 per frame** (about 3 s to settle). The whole section listens. Leaving the section or the panel leaving the view → glides back to the centre.
+- **Photo 6 px lower** while it is on (mouse devices), so an upward move never shows a gap at the panel's bottom edge; the panel clips it. Touch, reduced motion and the Designer show the photo exactly as before.
+- **Mechanism:** attributes on the Spotlight Grid definition: `data-photo-parallax` on `spotlight-grid_panel`, `data-photo-parallax-photo` on `spotlight-grid_visual`. Script + CSS in the ninth embed of `Global | Custom Code` (`9991f8f0-2c16-c586-f1b6-a72f248e63bf`), source `references/embeds/photo-parallax.html`. Moves with the CSS `translate` property, so the visual's own `transform` (centring) is untouched. `requestAnimationFrame` only while moving.
+- **Tuning:** `M`, `EASE`, `DROP` at the top of the script. **Off:** remove `data-photo-parallax` from the panel (per component), or the embed (everywhere). Another photo panel: give it the same two attributes.
+- **Check:** `node references/parallax-check.mjs [url] [outdir]` — on staging (1440): both panels right −7.7 px / light +15.5 px, left +7.4 / −14.8, back to 0 after leaving; reduced motion and touch not set up; console clean.
