@@ -65,18 +65,25 @@ const C = {
 };
 // Glass on a white page loses its light tints, so the donut uses a little more colour.
 const D = { ...C, white: '#c3cbe6', sky: '#8cc4ee', pink: '#ee98aa', blue: '#1f86cc' };
+// On navy the darkest purple sinks into the background, so the bars use a brighter one.
+const B = { ...C, purple: '#5a2fd4' };
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // Real glass: one transmissive body per piece (light passes through, tinted by its thickness).
 // On a dark section real glass mostly shows the dark behind it, so there it lets less through
 // (transmission) and glows softly in its own colour (glow), to read as lit glass like the render.
-function glassMat(hex, { transmission = 1, glow = 0, tint = 0.25 } = {}) {
+// `dark`: on a dark section the white edge reflection reads as a light outline, so the
+// reflection takes the piece's own colour, the clearcoat is weaker and the rainbow fringe is off.
+function glassMat(hex, { transmission = 1, glow = 0, tint = 0.25, dark = false } = {}) {
+  const own = new THREE.Color(hex);
   return new THREE.MeshPhysicalMaterial({
-    color: new THREE.Color(hex).lerp(new THREE.Color('#ffffff'), tint), metalness: 0, roughness: 0.1,
+    color: own.clone().lerp(new THREE.Color('#ffffff'), tint), metalness: 0, roughness: 0.1,
     transmission, thickness: 0.7, ior: 1.5,
-    emissive: new THREE.Color(hex), emissiveIntensity: glow,
-    attenuationColor: new THREE.Color(hex), attenuationDistance: 2.2, dispersion: 0.4,
-    clearcoat: 1, clearcoatRoughness: 0.04, specularIntensity: 1, envMapIntensity: 1.2
+    emissive: own, emissiveIntensity: glow,
+    attenuationColor: own, attenuationDistance: 2.2, dispersion: dark ? 0 : 0.4,
+    clearcoat: dark ? 0.35 : 1, clearcoatRoughness: dark ? 0.12 : 0.04,
+    specularIntensity: dark ? 0.6 : 1, specularColor: dark ? own.clone().lerp(new THREE.Color('#ffffff'), 0.35) : new THREE.Color('#ffffff'),
+    envMapIntensity: dark ? 0.75 : 1.2
   });
 }
 
@@ -98,8 +105,18 @@ function makeScene(el, { fov, camPos, target, bleed = 0, backdrop = null }) {
   const scene = new THREE.Scene();
   const pmrem = new THREE.PMREMGenerator(renderer);
   scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
-  const key = new THREE.DirectionalLight('#ffffff', 1.4); key.position.set(-3, 6, 5); scene.add(key);
-  scene.add(new THREE.AmbientLight('#ffffff', 0.35));
+  if (!backdrop) {
+    // Light page: a bright white room, as a studio render.
+    const key = new THREE.DirectionalLight('#ffffff', 1.4); key.position.set(-3, 6, 5); scene.add(key);
+    scene.add(new THREE.AmbientLight('#ffffff', 0.35));
+  } else {
+    // Dark section: the white room is dimmed (it drew white outlines on every edge), the fill is
+    // the section's own violet, and a soft lavender light from behind gives the glass its edge.
+    scene.environmentIntensity = 0.45;
+    const key = new THREE.DirectionalLight('#efeaff', 1.5); key.position.set(-4, 7, 6); scene.add(key);
+    const rim = new THREE.DirectionalLight('#9d82ff', 1.1); rim.position.set(5, 4, -7); scene.add(rim);
+    scene.add(new THREE.HemisphereLight('#7a5cff', '#1e0057', 0.5));
+  }
 
   // With bleed the canvas is (1 + 2·bleed) × the stage; widen the view by the same factor so the object keeps its size.
   const grow = 1 + 2 * bleed;
@@ -214,7 +231,7 @@ function mountBars(el) {
     const h = heights[i];
     const geo = new RoundedBoxGeometry(W, h, W, 6, 0.1); geo.translate(0, h / 2, 0);
     const bar = new THREE.Group();
-    bar.add(new THREE.Mesh(geo, glassMat(C[name], { transmission: 0.7, glow: 0.14, tint: 0 })));
+    bar.add(new THREE.Mesh(geo, glassMat(B[name], { transmission: 0.6, glow: 0.3, tint: 0, dark: true })));
     bar.position.x = (i - (n - 1) / 2) * (W + GAP);
     group.add(bar);
     return bar;
