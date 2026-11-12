@@ -354,3 +354,9 @@
 - Owner request: GSAP word stagger on quotes only. Record: `decisions/motion.md` › Exception: quotes.
 - Attribute map (revert = remove): `data-quote-reveal=""` on `spotlight-grid_quote-text` (Spotlight Grid `4f869313-…-525a63bf2e43`) and `split-content_quote-text` (Split Content `410b9fa3-…-ddee2f03adfb`).
 - Script + CSS in a new, own embed of `Global | Custom Code` (`61fdba5b-e2d3-5b70-a803-be8306cc84a7`). First written into the empty second embed (`ab7c2a2d-…`), but a parallel session (arrow-link hover) wrote its CSS there at the same time and replaced it; that embed is theirs, untouched by this change. Source `references/embeds/quote-reveal-script.html`.
+
+## 2026-11-12 — Home «The risk»: card reveal and moving icons — Aniek Velthuizen with Claude
+- Owner feedback: cards rise subtly one by one; clock keeps turning, route arrow and crosses animate, loupe sways. Record: `decisions/motion.md` › 2026-11-12.
+- Stagger Cards: + style embed `396ecf23-…`, + script embed `2f7ccac8-…` (sources `references/embeds/stagger-cards-motion-*.html`). Runtime attributes only (`data-stagger-motion`, `data-stagger-in`, `data-stagger-paused`, `data-icon-motion`, `data-icon-part`); no Designer attributes added. Revert: remove both embeds.
+- Tested locally (patched staging HTML), then published to staging 2× (second: dash gap fix for two specks before the route draws in). `stagger-motion-check.mjs` at 1440 and 402: cards 0 → 1 in ~0.8 s each, 0.15 s apart; list height unchanged; route drawn by ~1.3 s; loops pause out of view; reduced motion = static and visible; console clean.
+- Owner: the route icon's circle did not close. Circle + line now one path (Chrome's `pathLength` on `<circle>` left a gap), dash 1.02 / offset 1.03. Checked at 4× zoom locally and on staging.

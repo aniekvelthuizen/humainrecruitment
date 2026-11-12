@@ -1,0 +1,56 @@
+<script>
+/* Stagger Cards (base) motion — owner (Aniek), 2026-11-12. Cards rise in one by one when they scroll into view; three icons get moving parts.
+   CSS lives in the style embed next to this one. Off: remove this embed. Nothing happens with reduced motion or without IntersectionObserver. */
+(function () {
+  if (window.staggerMotionReady) return;
+  window.staggerMotionReady = true;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+  var S = ' fill="none" stroke="currentColor" stroke-width=".7"';
+  var ICONS = {
+    'schedule-outline':
+      '<circle cx="12" cy="12" r="8.35"' + S + '/>' +
+      '<line data-icon-part="hour" x1="12" y1="12" x2="16" y2="16"' + S + '/>' +
+      '<line data-icon-part="minute" x1="12" y1="12.35" x2="12" y2="7"' + S + '/>',
+    'project-controls':
+      '<g transform="translate(4.3 3.3)">' +
+      '<path data-icon-part="line" pathLength="1" d="M4.35 14.05A2 2 0 1 1 .35 14.05A2 2 0 1 1 4.35 14.05C5.6 14 6.5 13.6 7.1 12.95C7.65 12.4 7.95 11.6 7.95 10.7V7.075A4 4 0 0 1 11.95 3.075H14.85"' + S + '/>' +
+      '<path data-icon-part="arrow" d="M12.075 .25L14.9 3.075L12.075 5.9"' + S + '/>' +
+      '</g>' +
+      '<g data-icon-part="cross" style="--o:6.375px 6.375px;--cd:.35s"' + S + '><path d="M4.55 4.55L8.2 8.2M8.2 4.55L4.55 8.2"/></g>' +
+      '<g data-icon-part="cross" style="--o:17.625px 17.625px;--cd:1.25s"' + S + '><path d="M15.8 15.8L19.45 19.45M19.45 15.8L15.8 19.45"/></g>',
+    'person-search':
+      '<g transform="translate(4.3 5.8)" fill="currentColor">' +
+      '<path d="M6.7 5.4C5.9575 5.4 5.32192 5.13567 4.79325 4.607C4.26442 4.07817 4 3.4425 4 2.7C4 1.9575 4.26442 1.32183 4.79325 .793C5.32192 .264333 5.9575 0 6.7 0C7.4425 0 8.07817 .264333 8.607 .793C9.13567 1.32183 9.4 1.9575 9.4 2.7C9.4 3.4425 9.13567 4.07817 8.607 4.607C8.07817 5.13567 7.4425 5.4 6.7 5.4ZM6.7 4.7C7.25 4.7 7.72083 4.50417 8.1125 4.1125C8.50417 3.72083 8.7 3.25 8.7 2.7C8.7 2.15 8.50417 1.67917 8.1125 1.2875C7.72083 .895833 7.25 .7 6.7 .7C6.15 .7 5.67917 .895833 5.2875 1.2875C4.89583 1.67917 4.7 2.15 4.7 2.7C4.7 3.25 4.89583 3.72083 5.2875 4.1125C5.67917 4.50417 6.15 4.7 6.7 4.7Z"/>' +
+      '<path d="M0 12.4V11.1C0 10.7167 .1125 10.3708 .3375 10.0625C.5625 9.75417 .866667 9.5 1.25 9.3C1.93333 8.96667 2.8625 8.64167 4.0375 8.325C5.2125 8.00833 6.475 7.91667 7.825 8.05C7.75833 8.18333 7.696 8.3015 7.638 8.4045C7.58017 8.50767 7.53417 8.6145 7.5 8.725C6.25 8.625 5.08333 8.72917 4 9.0375C2.91667 9.34583 2.11667 9.63333 1.6 9.9C1.31667 10.0333 1.09583 10.2056 .9375 10.4168C.779167 10.6278 .7 10.8555 .7 11.1V11.7H7.2C7.21667 11.8 7.24167 11.9125 7.275 12.0375C7.30833 12.1625 7.34167 12.2833 7.375 12.4H0Z"/>' +
+      '</g>' +
+      '<g data-icon-part="loupe"' + S + '><circle cx="16.5" cy="16.5" r="2.75"/><path d="M18.44 18.44L21.2 21.2"/></g>'
+  };
+  function icon(el) {
+    var name = el.getAttribute('data-wf--icon-set--variant');
+    if (!ICONS[name]) return;
+    el.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">' + ICONS[name] + '</svg>';
+    el.setAttribute('data-icon-motion', name);
+  }
+  function setup(section) {
+    var cards = [].slice.call(section.querySelectorAll('.stagger-cards_list > * > *'));
+    if (!cards.length || section.hasAttribute('data-stagger-motion')) return;
+    [].forEach.call(section.querySelectorAll('[data-wf--icon-set--variant]'), icon);
+    section.setAttribute('data-stagger-motion', 'ready');
+    var io = new IntersectionObserver(function (entries) {
+      var batch = entries.filter(function (e) { return e.isIntersecting; }).map(function (e) { return e.target; });
+      batch.sort(function (a, b) { return cards.indexOf(a) - cards.indexOf(b); });
+      batch.forEach(function (card, i) { io.unobserve(card); card.style.setProperty('--stagger-delay', (i * 0.15) + 's'); });
+      if (batch.length) requestAnimationFrame(function () { requestAnimationFrame(function () {
+        batch.forEach(function (card) { card.setAttribute('data-stagger-in', ''); });
+      }); });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.2 });
+    cards.forEach(function (card) { io.observe(card); });
+    new IntersectionObserver(function (entries) {
+      section.toggleAttribute('data-stagger-paused', !entries[0].isIntersecting);
+    }).observe(section);
+  }
+  function run() { [].forEach.call(document.querySelectorAll('[data-stagger-cards][data-wf--stagger-cards--variant="base"]'), setup); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
+  else run();
+})();
+</script>
