@@ -1,0 +1,37 @@
+<style>
+/* Header glow: the pink end of the brand gradient rises in on page load (decisions/motion.md, 2026-11-12).
+   Background ends in blue; a ::before layer paints the pink bottom 29.81 % (70.19 % → 100 %, the same blend as the
+   original gradient) and slides up from below. Without the animation (Designer, reduced motion, no JS) it simply sits there.
+   Page Header: base, Vertical, Opportunity. Not Light / Split (own background) and not Search (gradient on _top). */
+.hero-experts_wrap,
+.page-header_wrap:not(.w-variant-b8b2b4b4-5b82-4110-9cfb-ecc8eb7d219a, .w-variant-d882de9f-fac5-8823-1f14-1b87c802037e, .w-variant-f7e9ecff-6956-1a07-9a3d-da348da0246f),
+.page-header_top.w-variant-f7e9ecff-6956-1a07-9a3d-da348da0246f {
+  background-image: linear-gradient(180deg, var(--_theme---gradient--brand-start) 0%, var(--_theme---gradient--brand-middle) 70.19%, var(--_theme---gradient--brand-middle) 100%);
+  isolation: isolate;
+}
+.hero-experts_wrap::before,
+.page-header_wrap:not(.w-variant-b8b2b4b4-5b82-4110-9cfb-ecc8eb7d219a, .w-variant-d882de9f-fac5-8823-1f14-1b87c802037e, .w-variant-f7e9ecff-6956-1a07-9a3d-da348da0246f)::before,
+.page-header_top.w-variant-f7e9ecff-6956-1a07-9a3d-da348da0246f::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 29.81%;
+  background-image: linear-gradient(180deg, transparent, var(--_theme---gradient--brand-end));
+  z-index: -1;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html.w-mod-js:not(.wf-design-mode) .hero-experts_wrap::before,
+  html.w-mod-js:not(.wf-design-mode) .page-header_wrap:not(.w-variant-b8b2b4b4-5b82-4110-9cfb-ecc8eb7d219a, .w-variant-d882de9f-fac5-8823-1f14-1b87c802037e, .w-variant-f7e9ecff-6956-1a07-9a3d-da348da0246f)::before,
+  html.w-mod-js:not(.wf-design-mode) .page-header_top.w-variant-f7e9ecff-6956-1a07-9a3d-da348da0246f::before {
+    animation: header-glow-rise 1.8s cubic-bezier(.22, 1, .36, 1) .5s both;
+  }
+}
+@keyframes header-glow-rise {
+  /* the clip keeps the moving layer inside the header, so nothing needs overflow: clip */
+  from { transform: translateY(100%); clip-path: inset(0 0 100% 0); opacity: 0; }
+  to { transform: none; clip-path: inset(0); opacity: 1; }
+}
+</style>

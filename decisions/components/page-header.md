@@ -57,3 +57,6 @@ Opportunities template was empty: built the same shell. Its `page_main` is a pla
 - **Marquee in Row:** label `text-box: normal`, line height `line-height/large` (Figma 130 %), no margin under it (Figma: logos directly under the 21 px label), in the embed because it is a nested selector. Home keeps its own values.
 - **Intro text:** `text-wrap: wrap` on `page-header_text`. "project-controls" can still break at its hyphen at some widths (360, 375); that needs a non-breaking hyphen in the copy.
 - **Props:** Nav Colour moved from folder Section to **Settings**; the move also placed it last in the prop order, so no drag was needed.
+
+## 2026-11-12 — Glow rises in on load (Aniek Velthuizen, via Claude)
+The pink end of the gradient rises in on page load (base, Vertical, Opportunity, Search). Record and the variant list to keep up to date: `decisions/motion.md` › «Header glow».

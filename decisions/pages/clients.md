@@ -13,7 +13,10 @@ Figma frame 7 `2292:8938`, export `references/figma/rest-of-site/pages/07-client
 - **Links:** Hire an expert → `/hire-an-expert`, Contact us → `/contact`, See all clients and the three testimonial arrows → `/clients`.
 
 ## Open
-- «See all clients» and the testimonial arrows link to the page they are on. Figma draws them and the plan's target for clients is `/clients`; kept, for the owner to decide.
+- The testimonial arrows still link to `/clients` (the page they are on); the arrow only renders on a clickable card, so removing the link also removes the drawn arrow. Not yet decided.
+
+## 2026-11-12 — «See all clients» button off
+Owner: the button goes, you are already on that page. Spotlight Grid instance on Clients: **Button Visibility** off (prop override, component unchanged; Home keeps its button). Done by Aniek Velthuizen, via Claude.
 
 ## Deviates from Figma
 - Company «Google» as on Home; Figma has «GOOGLE» here.
