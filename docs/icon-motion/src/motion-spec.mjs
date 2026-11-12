@@ -53,13 +53,15 @@ ${k('person-shield')} [data-a="fill"]{animation:ps-fill 5.6s ease-in-out infinit
 @keyframes ps-breath{0%,100%{scale:1}50%{scale:1.12}}
 @keyframes ps-fill{0%,15%{opacity:0}35%,65%{opacity:1}85%,100%{opacity:0}}` };
 
-  // 11 Action Key: the three circles move together and back; the loupe sways as if it is searching. 4 s / 3.6 s.
-  I['action-key'] = { svg: F(P('action-key', 2), 'data-a="tl"') + F(P('action-key', 3), 'data-a="tr"') + F(P('action-key', 1), 'data-a="bl"') + F(P('action-key', 0), 'data-a="loupe"'),
-    css: `${k('action-key')} [data-a="tl"]{--x:1.1px;--y:1.1px}${k('action-key')} [data-a="tr"]{--x:-2.2px;--y:1.1px}${k('action-key')} [data-a="bl"]{--x:1.1px;--y:-2.2px}
-${k('action-key')} [data-a="tl"],${k('action-key')} [data-a="tr"],${k('action-key')} [data-a="bl"]{animation:ak-gather 4s cubic-bezier(.65,0,.35,1) infinite}
-${k('action-key')} [data-a="loupe"]{transform-origin:38% 38%;animation:ak-search 3.6s ease-in-out infinite}
+  // 11 Action Key: all four circles move towards each other and apart again; only the loupe's handle wiggles. 4 s / 1.2 s.
+  // The loupe is one shape in the original, so it is redrawn as a .7 ring plus a .7 handle (laid over the original: identical).
+  I['action-key'] = { svg: F(P('action-key', 2), 'data-a="tl"') + F(P('action-key', 3), 'data-a="tr"') + F(P('action-key', 1), 'data-a="bl"') +
+      `<g data-a="br" ${S}><circle cx="16.1" cy="16.1" r="2.8"/><path data-a="handle" d="M18.1 18.1L20.95 20.95"/></g>`,
+    css: `${k('action-key')} [data-a="tl"]{--x:1.45px;--y:1.45px}${k('action-key')} [data-a="tr"]{--x:-1.45px;--y:1.45px}${k('action-key')} [data-a="bl"]{--x:1.45px;--y:-1.45px}${k('action-key')} [data-a="br"]{--x:-1.45px;--y:-1.45px}
+${k('action-key')} [data-a="tl"],${k('action-key')} [data-a="tr"],${k('action-key')} [data-a="bl"],${k('action-key')} [data-a="br"]{animation:ak-gather 4s cubic-bezier(.65,0,.35,1) infinite}
+${k('action-key')} [data-a="handle"]{transform-box:view-box;transform-origin:18.1px 18.1px;animation:ak-handle 1.2s ease-in-out infinite}
 @keyframes ak-gather{0%,12%,88%,100%{translate:0 0}38%,62%{translate:var(--x) var(--y)}}
-@keyframes ak-search{0%,100%{translate:0 0;rotate:0deg}25%{translate:-.5px -.3px;rotate:-9deg}50%{translate:0 -.5px;rotate:0deg}75%{translate:.5px -.3px;rotate:9deg}}` };
+@keyframes ak-handle{0%,100%{rotate:0deg}25%{rotate:-14deg}75%{rotate:14deg}}` };
 
   // 12 Analytics: three views of data take turns inside the frame: bars, a pie, a line graph. 9 s.
   const views = (v, a, b, c) => `${a}${b}${c}`;

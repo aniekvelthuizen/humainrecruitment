@@ -30,7 +30,7 @@ const WISH = {
  'person-shield':'Schild kleurt in en weer uit; het ademen blijft.',
  'project-controls':'Blijft zo.',
  'schedule-outline':'Blijft zo.',
- 'action-key':'Rondjes bewegen naar elkaar toe en terug; de loep zwaait heen en weer.',
+ 'action-key':'Alle vier de rondjes bewegen naar elkaar toe en weer uit elkaar; alleen het steeltje van de loep wiebelt.',
  'analytics':'Wisselende data: staafjes, dan een taartdiagram, dan een lijngrafiek.',
  'average-time':'Een hartslaglijn loopt door de wijzerplaat; af en toe wordt de knop ingedrukt.',
  'calendar':'Om de paar seconden een nieuwe datum.',

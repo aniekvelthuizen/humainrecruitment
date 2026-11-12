@@ -384,3 +384,4 @@
 - Tested locally first (`line-icon-check.mjs`, PATCH=1, 4× close-ups), then published to staging. Staging: Home 3/6 (base Stagger Cards skipped), How It Works 5/5, Project Controls 9/9, reduced motion static, console clean.
 - Owner round (Hire an Expert): the draw-in showed double lines → embed `34374c77-…` emptied (comment only), staging published. Overview page for agreeing per-icon motion: `docs/icon-motion/icon-motion.html`, published as https://claude.ai/artifact/6inrfQ3yQvrD2bVi1KuNYi.
 - Owner chose a motion per icon (#01–#28). Preview rebuilt from cut-out parts (no outline strokes), published as version 2 of https://claude.ai/artifact/6inrfQ3yQvrD2bVi1KuNYi; checked at nine moments per loop in headless Chrome, console clean. Site unchanged.
+- Owner round 2: #11 Action Key reworked (four circles gather, only the handle wiggles); preview version 3. Rest approved by the owner.
