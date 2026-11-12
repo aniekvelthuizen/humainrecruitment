@@ -45,6 +45,12 @@ Owner (Aniek): links with an arrow before the text ("→ View") animate: the lef
 - Searched all 31 published pages (incl. 13 opportunity pages) for any visible arrow next to short text: only these links. «Back to opportunities» (Arrow Left) is left out: a back link should not swap direction.
 - The `::after` arrow uses the CDN URL of `icon-arrow-right.svg`; if that asset is replaced, update the URL in the embed.
 
+## 2026-11-12 — Back link: underline and colour only, nothing moves (Aniek Velthuizen, via Claude)
+Owner (Aniek, screenshot «← Back to opportunities»): «de link hoeft niet te bewegen en de pijl ook niet. Het is meer dat er een onderlijning komt en dat de kleur verandert.»
+- **Was:** Button Main's hover look on Tertiary + Arrow Left: wrap lifts 2 px (`translateY(-0.125rem * --_trigger---off)`), arrow nudges 4 px right, underline grows, text white → mint.
+- **Now:** lift and arrow nudge off (`transform: none` on the wrap and `.button_main_icon`), only for Tertiary with Icon **Arrow Left**. Underline (grows in 600 ms) and the colour change stay, from the variant itself. Keyboard focus the same.
+- **Where:** same embed as the arrow links (`ab7c2a2d-…` in `Global | Custom Code`), source `references/embeds/arrow-link-style.html`. Primary/Secondary keep their lift; the "→ View" links are unchanged.
+
 ## 2026-11-12 — Exception: quotes reveal word by word (owner)
 Owner (Aniek): «alle quotes animeren met een stagger animation van GSAP, dat de woorden één voor één invliegen. Alleen bij quotes, niet bij alle titels.» A second explicit exception to «no scroll reveals». Built by Aniek Velthuizen with Claude.
 - **What:** once, when the quote enters the view (15 % above the bottom edge), each word rises 24 px and fades in: 0.6 s per word, `power3.out`, 0.08 s between words. A ten-word quote is done in about 1.3 s.
