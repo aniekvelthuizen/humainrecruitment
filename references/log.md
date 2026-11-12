@@ -344,3 +344,6 @@
 ## 2026-11-12 — Sticky Steps: no empty space under the stack — Aniek Velthuizen with Claude
 - Owner request (screenshot Home "Our method"). Hold block under the last card removed; the list ends at the last card and a script-set tail keeps the intro in place until card 3 lands, then everything moves on together. Record: `decisions/components/sticky-steps.md`.
 - Published to staging 1× (claude.ai Webflow connector). Measured headless at 1512 / 1280 / 991 / 767 / 402 on Home, plus How It Works, Consulting, Project Delivery Experts, Submit Resume. Not checked: Safari, real touch devices.
+
+## 2026-11-12 — Arrow link hover (Aniek Velthuizen, via Claude)
+- Tertiary + Arrow Right: arrow swaps from left to right on hover; CSS embed added in `Global | Custom Code` (`decisions/motion.md`).
