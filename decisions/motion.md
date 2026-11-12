@@ -48,7 +48,7 @@ Owner (Aniek): links with an arrow before the text ("→ View") animate: the lef
 ## 2026-11-12 — Exception: quotes reveal word by word (owner)
 Owner (Aniek): «alle quotes animeren met een stagger animation van GSAP, dat de woorden één voor één invliegen. Alleen bij quotes, niet bij alle titels.» A second explicit exception to «no scroll reveals». Built by Aniek Velthuizen with Claude.
 - **What:** once, when the quote enters the view (15 % above the bottom edge), each word rises 24 px and fades in: 0.6 s per word, `power3.out`, 0.08 s between words. A ten-word quote is done in about 1.3 s.
-- **Which quotes:** every element with `data-quote-reveal`. Set on the quote in **Spotlight Grid** (`spotlight-grid_quote-text`, Home «Expertise», Clients) and **Split Content** (`split-content_quote-text`, when Quote Visibility is on). Not on: the Hero Experts quote (already part of the hero intro and the expert switch, a third motion would fight it), the texts in Card Testimonial (body text in cards, not a feature quote), titles.
+- **Which quotes:** every element with `data-quote-reveal`. Set on the quote in **Spotlight Grid** (`spotlight-grid_quote-text`, Home «Expertise», Clients) and **Split Content** (`split-content_quote-text`, when Quote Visibility is on). Not on: the Hero Experts quote (already part of the hero intro and the expert switch, a third motion would fight it), titles. Card Testimonial gets its own entrance (below).
 - **Tuning per quote:** `data-quote-reveal-stagger="0.1"` and `data-quote-reveal-duration="0.7"` (seconds) on the same element. **Off:** remove `data-quote-reveal`.
 - **Mechanism:** script in its own embed of `Global | Custom Code` (`61fdba5b-e2d3-5b70-a803-be8306cc84a7`, the fourth; the second is the arrow-link hover, the third the two-tone headings), on Webflow's own GSAP 3.15; source `references/embeds/quote-reveal-script.html`. It splits the text nodes into `span[data-quote-word]` (inline-block; only real spaces split, so non-breaking hyphens like «go‑to» stay one word and lines wrap as before). A gate (`html[data-quote-gate]`) hides only the unsplit quote, so nothing flashes; it is released after 4 s, without GSAP, and never set with reduced motion, without IntersectionObserver or in the Designer — then the quote is simply static.
 
@@ -71,3 +71,13 @@ Owner (Aniek): the grey part of the black/grey titles starts black and turns gre
 - **Off:** reduced motion, no IntersectionObserver, no JavaScript, and the Designer → the colours as designed.
 - **Where:** an embed in `Global | Custom Code` (`141a108e-8c89-7794-a75a-166d962024d9`), so it is on every page. Source: `references/embeds/muted-heading-sweep.html`.
 - To exclude a heading later: give the span a class not ending in `_muted`, or add `:not(...)` to the selector in the embed. Another colour accent: add its class next to `.sticky-steps_accent` (CSS gate and `SEL` in the script).
+
+## 2026-11-12 — Testimonial cards: entrance instead of word reveal (owner)
+Owner (Aniek): first asked for the word reveal on the cards too, faster (stagger 0.03 s, cards one after another); after seeing it: «in die quote cards is deze animatie eigenlijk niet zo mooi … iets leuks met dat icoon … wel subtiel». Word reveal removed from the cards; instead, once per card when it enters the view:
+- **Quote mark** pops in: opacity 0 → 1, scale 0.6 → 1, rotation −12° → 0, 0.6 s, `back.out(2)` (a small overshoot).
+- **Stars** light up one by one from 0.15 s: opacity 0 → 1, scale 0.5 → 1, 0.35 s each, 0.06 s apart, `back.out(2.5)`.
+- **Quote text** fades in as one block from 0.25 s: rises 12 px, 0.6 s, `power3.out`. Footer (person, arrow) static.
+- Cards that come into view together start **0.15 s apart, left to right**. Measured at 1512: card 1 done after 0.6 s, card 3 after 0.9 s.
+- The card itself is not moved: its hover lift and dark quote mark (`card_testimonial_quote-hover`) stay as they were; all inline styles are cleared at the end.
+- **Attributes** (Card Testimonial `19e313dd-…`): `data-card-reveal` on `card_testimonial_element`; `data-card-reveal-part="icon"` on `card_testimonial_quote`, `"stars"` on `card_testimonial_stars`, `"text"` on `card_testimonial_text`. Off: remove `data-card-reveal`. Same embed, gate and fallbacks as the quote reveal.
+- The quote reveal also learned `data-quote-reveal-next` (default 0.3 s): quotes entering the view together start one after another, left to right.
