@@ -73,3 +73,6 @@ _Same day, owner:_ the current footer link also gets the Arrow Right icon before
 
 ## 2026-11-12 — More room above the brand title on phones (owner; Aniek Velthuizen, via Claude)
 Choice: below 768 px `footer_contain` padding-top 1.75rem → 4.25rem (+40 px above "HumAIn Recruitment"), on the owner's request; deviates from Figma mobile (28). Desktop and tablet unchanged (5.5rem).
+
+## 2026-11-12 — No divider above the copyright on phones (owner; Aniek Velthuizen, via Claude)
+Choice: below 768 px `footer_bottom_layout` has `border-top-style: none` (small breakpoint), so the line above "© 2026 HumAIn Recruitment" is gone; the last accordion row keeps its own line. Spacing unchanged (5rem + 2.375rem padding). Desktop and tablet keep the divider. Deviates from Figma mobile.
