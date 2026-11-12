@@ -387,3 +387,7 @@
 
 ## 2026-11-12 — Email error message — Aniek Velthuizen with Claude
 - Email fields show «Please enter a valid email address» instead of «Please check this field» (`Global | Custom Code`, first embed). Published to staging.
+
+## 2026-11-12 — Two-tone headings reversed: dimmed words light up — Aniek Velthuizen with Claude
+- Owner: start dimmed, words light up; also on the Card Grid closing text. Embed `141a108e-…` in `Global | Custom Code` rewritten from `references/embeds/muted-heading-sweep.html` (old version read back first). Record: `decisions/motion.md`.
+- Tested on patched copies of Home, How It Works and Project Delivery Experts, published to staging 1×. New `references/muted-heading-check.mjs`: PDE 7/7, Home 9/9, How It Works 4/4 at 1440, PDE at 402; reduced motion static; console clean. Not checked: Safari, real devices.
