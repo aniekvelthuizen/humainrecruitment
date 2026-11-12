@@ -126,3 +126,10 @@ Measured on staging (Home): 402 and 767 bar 64, logo 127 × 20.7 (round 2), burg
 
 ## 2026-11-12 — Logo spotlight (fifth embed)
 The logo gets a mint light on page load and on hover from a fifth embed at the end of `Nav` (`3a2f55f5-…f585`). Details, colours and timing: `decisions/motion.md` › Nav logo: mint spotlight. Built by Aniek Velthuizen with Claude.
+
+## 2026-11-12 — Active page: semibold instead of underline (owner; Aniek Velthuizen, via Claude)
+Replaces the Q5 underline (2026-10-30). Owner: the active page in the nav and the footer gets no underline, but bold or another highlight.
+Choice: the link of the current page is **semibold** (`--_typography---font--primary-semibold`, 600; Onest is a variable font, base text is 400), same text colour, no line. Bar links (`nav_links_link.w--current › .nav_links_text`), dropdown links (`nav_dropdown_link.w--current`), desktop and mobile alike. The hover line on dropdown links still shows on hover.
+How: two rules in the Nav state CSS embed (`a4e65ea1-…10db`, source `references/embeds/nav-state-style.html`): `text-decoration: none` on the current link (wins over the Designer's Current-state underline, specificity 0,3,0 vs 0,2,0) and the weight on the text element (`u-text-style-text-medium` sets its own weight, so weight on the parent link would not reach it).
+Why an embed: the style API has no Current state, and in the bar the weight must land on the child text, which a Designer state on the link cannot do. Leftover: the underline on the Current state of `nav_links_link` and `nav_dropdown_link` (+ `u-text-style-text-medium`) is now overridden; clear it in the Designer when convenient (queued).
+Dropdown toggles of a group holding the current page are still not marked.

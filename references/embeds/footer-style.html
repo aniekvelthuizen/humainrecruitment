@@ -1,0 +1,11 @@
+<style>
+/* HumAIn footer. Below 768 px the columns are accordions: the script in the next embed sets data-footer-open on [data-footer-group]. The drawer's padding is only there while open (padding in a 0fr row would still show). */
+@media (max-width: 767px) {
+  [data-footer-group][data-footer-open] .footer_group_drawer { grid-template-rows: 1fr; padding-top: 1.25rem; padding-bottom: 1.25rem; }
+  [data-footer-group][data-footer-open] .footer_group_list { visibility: visible; }
+  [data-footer-group][data-footer-open] .footer_group_icon { transform: rotate(180deg); }
+}
+/* Active page (Webflow's w--current on the Footer Link): semibold, as in the nav. On the text element because u-text-style-main sets its own weight. */
+.footer_link_wrap.w--current .footer_link_text { font-weight: var(--_typography---font--primary-semibold); }
+@media (prefers-reduced-motion: reduce) { .footer_wrap, .footer_wrap * { transition-duration: 1ms !important; } }
+</style>
