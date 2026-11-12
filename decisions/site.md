@@ -148,3 +148,6 @@ Section embeds hold CSS, and a small script when the block needs one to work (St
 - The 14 public static pages have their own title and description, written from each page's own copy (`references/seo-static-pages.json`). Home's Lumos placeholders («Website Name», «Place website meta description here») are gone. Provisional copy: the owner/client may rewrite.
 - Internal pages for launch (noindex + out of sitemap, or draft): Styleguide, Example Components, Search Results, Standard Page (already draft), and the CMS templates without visitor use (Team, FAQ, Rates, Cases, Experts — see owner list).
 - Open: share images on every page (none yet; `make-og.mjs`); Opportunities template SEO is bound to content fields (`name`, `intro`) → title without «| HumAIn», empty description when Intro is empty, three items share one title. Needs the SEO field group from the seo skill §3 (CMS change).
+
+## 2026-11-12 — Email field has its own error line (Aniek Velthuizen, via Claude)
+Owner: «Please check this field» was too general under the email field. One rule added in the first embed of `Global | Custom Code`: `.form_label_wrap:has(.form_field[type="email"]:user-invalid)::after` says «Please enter a valid email address», for an empty and for a malformed address alike. Other fields keep «Please check this field». Every form gets it (Contact, Resume, Opportunity Detail).

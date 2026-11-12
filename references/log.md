@@ -384,3 +384,6 @@
 ## 2026-11-12 — Sticky Steps glass stack: spacing, last card, flash — Aniek Velthuizen with Claude
 - Owner feedback with three PDE screenshots. Section embed `73b7ce70-…b381` rewritten from `references/embeds/sticky-steps.html` (tested first on a patched copy of PDE, Home and Consulting), published to staging 1×, published copy identical. Record: `decisions/components/sticky-steps.md` › «Glass stack: room under the nav, readable last card, no flash».
 - The Webflow MCP named `webflow` in this session only reaches other sites (Core, THDV, Wayfinder); the claude.ai Webflow connector reaches Humain.
+
+## 2026-11-12 — Email error message — Aniek Velthuizen with Claude
+- Email fields show «Please enter a valid email address» instead of «Please check this field» (`Global | Custom Code`, first embed). Published to staging.

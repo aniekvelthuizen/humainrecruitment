@@ -69,3 +69,6 @@ Now `domId` = `CV-2` on both inputs, set by API, case kept, read back. Nothing d
 
 ## 2026-11-05 — Top on phones (Aniek Velthuizen, via Claude; not published, local simulation)
 Form title 48 from the header at 767 and below (`space/8`), was 20. No phone frame for these pages: follows m13. Contact and Resume at 402: 48; at 1512: 64, unchanged.
+
+## 2026-11-12 — Email error text (Aniek Velthuizen, via Claude)
+Under the email field the line now reads «Please enter a valid email address» (global rule, `decisions/site.md`). Other fields unchanged.
