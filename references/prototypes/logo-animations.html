@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Logo-animaties Humain</title>
+<!-- Prototype: ideeën voor een logo-animatie bij page load en hover. Gemaakt door Aniek Velthuizen met Claude, 2026-11-12. Geen onderdeel van de site. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brand:#250059; --mint:#00ffd5; --mint-dark:#00806b; --dark:#030b1b; --muted:#6b6f7b;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --bg:#f4f2f7; --card:#fff; --ink:var(--dark); --logo:var(--dark); --accent:var(--mint-dark); --line:#e3dfea;
+  --logo-w:22rem;
+}
+body[data-bg="dark"]{ --card:#0f0024; --logo:#fff; --accent:var(--mint); --line:#2a1a45; }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.5 Onest,system-ui,sans-serif}
+header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid #e3dfea}
+.top-in{max-width:68rem;margin:0 auto;padding:1rem;display:flex;gap:.75rem;align-items:center;flex-wrap:wrap}
+.top h1{font-size:1.125rem;font-weight:600;margin:0 auto 0 0}
+button{font:inherit;font-size:.875rem;border:1px solid #cfc8db;background:#fff;color:var(--dark);border-radius:999px;padding:.4rem .9rem;cursor:pointer}
+button:hover{border-color:var(--brand)}
+button[aria-pressed="true"]{background:var(--brand);color:#fff;border-color:var(--brand)}
+main{max-width:68rem;margin:0 auto;padding:1.5rem 1rem 4rem;display:grid;gap:1.5rem}
+.intro{color:var(--muted);max-width:44rem;margin:0}
+.idea{display:grid;grid-template-columns:minmax(0,1fr) 20rem;background:#fff;border:1px solid #e3dfea;border-radius:1rem;overflow:hidden}
+.stage{background:var(--card);min-height:15rem;display:grid;place-items:center;padding:2rem;position:relative;transition:background .3s}
+.stage .replay{position:absolute;right:.75rem;bottom:.75rem}
+.info{padding:1.25rem 1.5rem;border-left:1px solid #e3dfea;font-size:.9375rem}
+.info h2{margin:0 0 .25rem;font-size:1.0625rem}
+.info .num{color:var(--brand);font-weight:600;margin-right:.35rem}
+.info dl{margin:.75rem 0 0;display:grid;gap:.5rem}
+.info dt{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.info dd{margin:0}
+.tag{display:inline-block;font-size:.75rem;border-radius:999px;padding:.1rem .55rem;margin-top:.75rem;background:#e8f8f4;color:#00664f}
+.tag.loud{background:#fbeee9;color:#9a3b22}
+@media (max-width:52rem){ .idea{grid-template-columns:1fr} .info{border-left:0;border-top:1px solid #e3dfea} }
+
+/* het logo */
+.logo{display:block;width:var(--logo-w);max-width:100%;color:var(--logo);cursor:pointer;transition:width .3s var(--ease)}
+.logo svg{display:block;width:100%;height:auto;overflow:visible}
+.logo path{transform-box:fill-box;transform-origin:50% 100%}
+
+/* ---------- 1. Letters komen omhoog ---------- */
+.a1.play path{animation:a1-in .7s var(--ease) both;animation-delay:calc(var(--i) * 60ms)}
+@keyframes a1-in{from{opacity:0;translate:0 40%}to{opacity:1;translate:0 0}}
+.a1:hover path{animation:a1-wave .5s var(--ease) both;animation-delay:calc(var(--i) * 40ms)}
+@keyframes a1-wave{0%,100%{translate:0 0}40%{translate:0 -10%}}
+
+/* ---------- 2. AI licht op ---------- */
+.a2 path{transition:fill .35s var(--ease),opacity .35s var(--ease)}
+.a2.play svg{animation:fade .6s var(--ease) both}
+.a2.play path.ai{animation:a2-ai 1.4s var(--ease) .6s both}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes a2-ai{0%,100%{fill:currentColor}30%,60%{fill:var(--accent)}}
+.a2:hover path.ai{fill:var(--accent)}
+.a2:hover path:not(.ai){opacity:.35}
+
+/* ---------- 3. Lijn tekent het logo ---------- */
+.a3 path{stroke:currentColor;stroke-width:1.2;stroke-dasharray:1.02 2;stroke-dashoffset:0;vector-effect:non-scaling-stroke}
+.a3.play path{animation:a3-draw 1.2s cubic-bezier(.45,0,.2,1) both, a3-fill .5s var(--ease) both;animation-delay:calc(var(--i) * 80ms), calc(1s + var(--i) * 40ms)}
+@keyframes a3-draw{from{stroke-dashoffset:1.03}to{stroke-dashoffset:0}}
+@keyframes a3-fill{from{fill-opacity:0}to{fill-opacity:1}}
+.a3:hover path{animation:a3-hover .9s cubic-bezier(.45,0,.2,1) both;animation-delay:calc(var(--i) * 30ms);stroke:var(--accent)}
+@keyframes a3-hover{0%{fill-opacity:1;stroke-dashoffset:0}35%{fill-opacity:0;stroke-dashoffset:1.03}100%{fill-opacity:0;stroke-dashoffset:0}}
+
+/* ---------- 4. Lichtstreep ---------- */
+.a4{position:relative;aspect-ratio:514.552/83.877;
+  -webkit-mask:var(--logo-mask) center/100% 100% no-repeat;mask:var(--logo-mask) center/100% 100% no-repeat;
+  background:linear-gradient(110deg,var(--logo) 0 42%,var(--accent) 50%,var(--logo) 58% 100%) 100% 0/300% 100% no-repeat;
+  transition:background-position 0s}
+.a4.play{animation:a4-wipe 1s var(--ease) both, a4-shine 1.1s cubic-bezier(.45,0,.2,1) .5s both}
+@keyframes a4-wipe{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes a4-shine{from{background-position:100% 0}to{background-position:0 0}}
+.a4:hover{animation:a4-shine .9s cubic-bezier(.45,0,.2,1) both}
+
+/* ---------- 5. Hum + AIn komen samen ---------- */
+.a5.play path{animation:a5-in .9s var(--ease) both}
+.a5.play path.hum{--from:-1.2rem}
+.a5.play path.ain{--from:1.2rem}
+@keyframes a5-in{from{opacity:0;translate:var(--from) 0}to{opacity:1;translate:0 0}}
+.a5 path{transition:translate .45s var(--ease),fill .45s var(--ease)}
+.a5:hover path{translate:calc((var(--i) - 2.5) * .35rem) 0}
+.a5:hover path.ai{fill:var(--accent)}
+
+/* ---------- 6. Scherpstellen + magnetisch ---------- */
+.a6.play path{animation:a6-in .9s var(--ease) both;animation-delay:calc(var(--i) * 70ms)}
+@keyframes a6-in{from{opacity:0;filter:blur(8px);scale:1.15}to{opacity:1;filter:blur(0);scale:1}}
+.a6 path{translate:0 var(--lift,0);transition:translate .35s var(--ease)}
+
+/* ---------- 7. Letters kantelen ---------- */
+.a7.play path{animation:a7-in .8s var(--ease) both;animation-delay:calc(var(--i) * 70ms);transform-origin:50% 100%}
+@keyframes a7-in{from{opacity:0;scale:1 0}to{opacity:1;scale:1 1}}
+.a7:hover path{animation:a7-flip .6s cubic-bezier(.45,0,.2,1) both;animation-delay:calc(var(--i) * 45ms);transform-origin:50% 50%}
+@keyframes a7-flip{0%{scale:1 1}50%{scale:1 -1}100%{scale:1 1}}
+
+@media (prefers-reduced-motion:reduce){ .logo *, .logo{animation:none!important;transition:none!important} }
+</style>
+</head>
+<body data-bg="dark">
+<header class="top"><div class="top-in">
+  <h1>Logo-animaties: ideeën</h1>
+  <button id="bg" aria-pressed="true">Donkere achtergrond</button>
+  <button id="size" aria-pressed="false">Op nav-formaat</button>
+  <button id="all">Alles opnieuw</button>
+</div></header>
+
+<main>
+  <p class="intro">Zeven ideeën voor het Humain-logo in de nav. Elk idee laat de inlaad-animatie zien zodra de pagina laadt (of met ↻); ga met de muis over het logo voor de hover. Easing en tempo volgen de hero-intro (<code>cubic-bezier(.22,1,.36,1)</code>, klaar binnen ~1,2 s). Groen label = past bij «rustig, geen kermis».</p>
+  <div id="ideas"></div>
+</main>
+
+<script>
+const PATHS = [
+ "M14.159 1.44043V34.4394H55.557V1.44043H69.836V82.4374H55.557V48.5984H14.159V82.4374H0V1.44043H14.159Z",
+ "M101.458 1.44043V55.5584C101.458 63.5984 105.538 68.2784 114.897 68.2784H129.296C138.416 68.2784 142.615 63.5984 142.615 55.5584V1.44043H156.534V56.6384C156.534 73.6774 147.534 82.4374 130.255 82.4374H113.215C95.9359 82.4374 87.0559 73.6774 87.0559 56.6384V1.44043H101.455H101.458Z",
+ "M187.521 82.437H173.482V18.119C173.482 7.319 179.841 0 192.921 0C204.441 0 211.041 5.76 213.32 15.959L224.719 65.518C225.439 68.398 227.119 70.078 230.119 70.078C233.119 70.078 234.799 68.398 235.518 65.518L246.917 15.959C249.197 5.76 255.197 0 266.837 0C279.916 0 286.275 7.319 286.275 18.119V82.436H272.236V18.839C272.236 15.719 270.196 13.679 266.476 13.679C263.117 13.679 261.436 15.359 260.836 17.999L249.196 67.558C246.676 78.238 241.156 83.877 229.997 83.877C218.718 83.877 212.838 77.997 210.438 67.558L198.918 17.999C198.318 15.359 196.518 13.679 193.278 13.679C189.558 13.679 187.518 15.719 187.518 18.839V82.437H187.521Z",
+ "M312.465 82.437H296.866L325.304 10.44C328.304 2.87998 333.824 0.000976562 342.343 0.000976562C350.743 0.000976562 356.263 2.88098 359.143 10.44L386.501 82.437H370.782L346.182 17.28C345.462 15.36 344.142 14.52 342.222 14.52C340.302 14.52 338.983 15.36 338.143 17.28L312.463 82.437H312.465Z",
+ "M411.116 1.44043V82.4374H396.957V1.44043H411.116Z",
+ "M442.555 82.437H428.396V17.639C428.396 7.079 434.396 0 446.995 0C458.275 0 463.315 5.76 466.675 14.999L490.314 66.718C491.274 68.638 492.835 70.077 495.474 70.077C498.474 70.077 500.274 68.277 500.274 65.517V1.44H514.553V66.117C514.553 76.797 508.433 83.877 495.954 83.877C484.674 83.877 479.515 78.117 476.154 68.877L452.515 17.159C451.435 14.759 449.994 13.679 447.475 13.679C444.235 13.679 442.555 15.479 442.555 18.359V82.437Z"
+];
+const CLS = ["hum","hum","hum","ain ai","ain ai","ain"];
+const svg = () => `<svg viewBox="0 0 514.552 83.877" fill="none" aria-hidden="true">${
+  PATHS.map((d,i)=>`<path d="${d}" fill="currentColor" pathLength="1" class="${CLS[i]}" style="--i:${i}"/>`).join("")}</svg>`;
+// masker voor idee 4 (één kleurvlak met het logo als uitsnede)
+const maskSvg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 514.552 83.877'>${PATHS.map(d=>`<path d='${d}'/>`).join("")}</svg>`;
+document.documentElement.style.setProperty("--logo-mask", `url("data:image/svg+xml,${encodeURIComponent(maskSvg)}")`);
+
+const IDEAS = [
+ {k:"a1", t:"Letters komen omhoog", load:"Elke letter komt 40 % omhoog en vervaagt in, één voor één (0,06 s ertussen), 0,7 s. Klaar na 1 s.", hover:"Een klein golfje door de letters van links naar rechts.", calm:true},
+ {k:"a2", t:"AI licht op", load:"Het logo vervaagt in; daarna lichten de A en I kort mint op en gaan terug. Vertelt de naam: Hum<b>AI</b>n.", hover:"A en I worden mint, de andere letters dimmen naar 35 %.", calm:true},
+ {k:"a3", t:"Lijn tekent het logo", load:"Een dunne lijn trekt de letters na, daarna vult de kleur zich. Klaar na ~1,5 s.", hover:"De vulling valt weg en een mint lijn tekent het logo opnieuw; bij weggaan vult hij weer.", calm:false},
+ {k:"a4", t:"Lichtstreep", load:"Het logo veegt van links naar rechts in, daarna glijdt er één mint lichtstreep overheen.", hover:"De lichtstreep glijdt nog een keer over het logo.", calm:true},
+ {k:"a5", t:"Hum + AIn komen samen", load:"‘HUM’ schuift van links in, ‘AIN’ van rechts; ze ontmoeten elkaar in het midden.", hover:"De letters schuiven een fractie uit elkaar, de A en I worden mint.", calm:true},
+ {k:"a6", t:"Scherpstellen + magnetisch", load:"De letters stellen één voor één scherp (blur 8 px → 0) en krimpen naar hun maat.", hover:"De letters bij de muis komen een stukje omhoog en volgen de cursor.", calm:false},
+ {k:"a7", t:"Letters kantelen", load:"Elke letter klapt vanaf de onderkant omhoog, als een bordje dat omvalt.", hover:"De letters draaien één keer rond hun as, één voor één.", calm:false},
+];
+
+const wrap = document.getElementById("ideas");
+IDEAS.forEach((it,n)=>{
+  const el = document.createElement("section");
+  el.className = "idea";
+  const inner = it.k==="a4" ? "" : svg();
+  el.innerHTML = `
+    <div class="stage">
+      <a class="logo ${it.k}" href="#" aria-label="Humain" onclick="return false">${inner}</a>
+      <button class="replay" type="button">↻ Opnieuw</button>
+    </div>
+    <div class="info">
+      <h2><span class="num">${n+1}</span>${it.t}</h2>
+      <dl><dt>Page load</dt><dd>${it.load}</dd><dt>Hover</dt><dd>${it.hover}</dd></dl>
+      <span class="tag ${it.calm?"":"loud"}">${it.calm?"Rustig":"Wat drukker"}</span>
+    </div>`;
+  wrap.appendChild(el);
+  const logo = el.querySelector(".logo");
+  el.querySelector(".replay").onclick = () => play(logo);
+  if(it.k==="a6") magnet(logo);
+});
+
+function play(logo){
+  clearTimeout(logo._t);
+  logo.classList.remove("play"); void logo.offsetWidth; logo.classList.add("play");
+  // na afloop weer weghalen, anders start de inlaad-animatie opnieuw zodra de hover stopt
+  logo._t = setTimeout(()=>logo.classList.remove("play"), 2600);
+}
+function playAll(){ document.querySelectorAll(".logo").forEach(play); }
+
+// idee 6: letters dichtbij de cursor komen omhoog
+function magnet(logo){
+  const paths=[...logo.querySelectorAll("path")];
+  logo.addEventListener("pointermove",e=>{
+    paths.forEach(p=>{
+      const r=p.getBoundingClientRect(), cx=r.left+r.width/2;
+      const d=Math.abs(e.clientX-cx)/logo.getBoundingClientRect().width;
+      const lift=Math.max(0,1-d*4);           // 1 vlak bij de cursor, 0 op een kwart logo afstand
+      p.style.setProperty("--lift",(-14*lift).toFixed(1)+"%");
+    });
+  });
+  logo.addEventListener("pointerleave",()=>paths.forEach(p=>p.style.setProperty("--lift","0%")));
+}
+
+const bg=document.getElementById("bg"), size=document.getElementById("size");
+bg.onclick=()=>{const dark=document.body.dataset.bg!=="dark";document.body.dataset.bg=dark?"dark":"light";bg.setAttribute("aria-pressed",dark);bg.textContent=dark?"Donkere achtergrond":"Lichte achtergrond";};
+size.onclick=()=>{const on=size.getAttribute("aria-pressed")!=="true";size.setAttribute("aria-pressed",on);document.documentElement.style.setProperty("--logo-w",on?"11.25rem":"22rem");playAll();};
+document.getElementById("all").onclick=playAll;
+requestAnimationFrame(playAll);
+</script>
+</body>
+</html>
