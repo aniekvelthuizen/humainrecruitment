@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glass 3D prototype</title>
+<!-- Prototype: real-3D glass donut (slow spin) and bar chart (bars pop up one by one, looping).
+     Built by Aniek Velthuizen with Claude, 2026-11-12. Three.js 0.169 from jsDelivr. -->
+<style>
+  :root { --navy: #1e0057; --ink: #0b0d1f; --muted: #7d8190; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: #fff; }
+  section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 4rem; align-items: center;
+            padding: 6rem max(1rem, 5vw); min-height: 80vh; position: relative; overflow: hidden; }
+  .light { background: radial-gradient(120% 70% at 50% 120%, #9ef0ee 0%, #c9f6f5 35%, #fff 70%); }
+  .dark { background: var(--navy); color: #fff; }
+  .eyebrow { letter-spacing: .12em; text-transform: uppercase; font-size: .875rem; margin: 0 0 1rem; }
+  h2 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.05; margin: 0 0 1.5rem; }
+  h2 span { color: var(--muted); }
+  .dark h2 span { color: #a493c9; }
+  p { font-size: 1.125rem; line-height: 1.6; max-width: 34rem; }
+  .stage { width: 100%; aspect-ratio: 1 / 1; max-width: 40rem; justify-self: end; }
+  .stage canvas { display: block; width: 100%; height: 100%; }
+  @media (max-width: 767px) { section { grid-template-columns: 1fr; gap: 2rem; } .stage { justify-self: center; } }
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+
+<section class="light">
+  <div>
+    <p class="eyebrow">The bar</p>
+    <h2>What HumAIn-qualified<br><span>means here.</span></h2>
+    <p>A pre-qualified expert isn't just available, they're evidenced. We assess delivery track record, technical depth and fit before they enter the pool, and we keep that assessment current.</p>
+  </div>
+  <div class="stage" data-glass-3d="donut"></div>
+</section>
+
+<section class="dark">
+  <div>
+    <p class="eyebrow">Growth</p>
+    <h2>Reach clients<br><span>that fit.</span></h2>
+    <p>The bars rise one by one, hold for a moment, sink back and start again.</p>
+  </div>
+  <div class="stage" data-glass-3d="bars"></div>
+</section>
+
+<script type="module">
+import * as THREE from 'three';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+
+// Colours sampled from the Figma renders.
+const C = {
+  pink: '#f2a9b6', white: '#e6e9f4', sky: '#a9d3ef', mint: '#3fe0cf',
+  blue: '#2c86c2', lavender: '#a57fdb', purple: '#4b1ba8'
+};
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Glass = a clear shell with a coloured core inside, like the renders.
+function shellMat(hex) {
+  const c = new THREE.Color(hex).lerp(new THREE.Color('#ffffff'), 0.12);
+  return new THREE.MeshPhysicalMaterial({
+    color: c, roughness: 0.06, metalness: 0, clearcoat: 1, clearcoatRoughness: 0.05,
+    transparent: true, opacity: 0.22, depthWrite: false, envMapIntensity: 0.9, side: THREE.DoubleSide
+  });
+}
+function coreMat(hex) {
+  return new THREE.MeshPhysicalMaterial({
+    color: hex, roughness: 0.25, metalness: 0, clearcoat: 0.6, sheen: 0.4, sheenColor: new THREE.Color('#ffffff'),
+    transparent: true, opacity: 0.9, envMapIntensity: 0.6
+  });
+}
+
+function makeScene(el, { fov, camPos, target }) {
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  renderer.toneMapping = THREE.NeutralToneMapping;
+  renderer.toneMappingExposure = 1.0;
+  el.appendChild(renderer.domElement);
+
+  const scene = new THREE.Scene();
+  const pmrem = new THREE.PMREMGenerator(renderer);
+  scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+  const key = new THREE.DirectionalLight('#ffffff', 1.4); key.position.set(-3, 6, 5); scene.add(key);
+  scene.add(new THREE.AmbientLight('#ffffff', 0.35));
+
+  const camera = new THREE.PerspectiveCamera(fov, 1, 0.1, 100);
+  camera.position.copy(camPos); camera.lookAt(target);
+
+  const resize = () => {
+    const w = el.clientWidth, h = el.clientHeight;
+    if (!w || !h) return;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h; camera.updateProjectionMatrix();
+  };
+  new ResizeObserver(resize).observe(el); resize();
+  return { renderer, scene, camera };
+}
+
+// Run the loop only while the stage is on screen and the tab is visible.
+function run(el, ctx, tick) {
+  let visible = false, raf = 0, last = performance.now(), t = 0;
+  const frame = (now) => {
+    t += Math.min((now - last) / 1000, 0.05); last = now;
+    tick(t); ctx.renderer.render(ctx.scene, ctx.camera);
+    raf = requestAnimationFrame(frame);
+  };
+  const update = () => {
+    cancelAnimationFrame(raf);
+    if (visible && !document.hidden && !reduced) { last = performance.now(); raf = requestAnimationFrame(frame); }
+  };
+  new IntersectionObserver(([e]) => { visible = e.isIntersecting; update(); }).observe(el);
+  document.addEventListener('visibilitychange', update);
+  if (reduced) { tick(null); ctx.renderer.render(ctx.scene, ctx.camera); new ResizeObserver(() => ctx.renderer.render(ctx.scene, ctx.camera)).observe(el); }
+}
+
+/* ---------- Donut ---------- */
+function sector(r0, r1, a0, a1) {
+  const s = new THREE.Shape();
+  s.absarc(0, 0, r1, a0, a1, false);
+  s.absarc(0, 0, r0, a1, a0, true);
+  s.closePath();
+  return s;
+}
+function mountDonut(el) {
+  const ctx = makeScene(el, { fov: 30, camPos: new THREE.Vector3(0, 0, 13.5), target: new THREE.Vector3(0, 0, 0) });
+  // Clockwise from 12 o'clock, sizes in degrees (as the render).
+  const parts = [
+    ['purple', 92], ['lavender', 62], ['blue', 66], ['mint', 52], ['sky', 36], ['white', 38], ['pink', 14]
+  ];
+  const R0 = 1.75, R1 = 2.85, DEPTH = 0.55, GAP = 0.035; // gap in radians
+  const tilt = new THREE.Group();       // fixed viewing angle
+  const spin = new THREE.Group();       // turns slowly
+  tilt.rotation.set(-0.38, 0.42, 0.05);
+  tilt.add(spin); ctx.scene.add(tilt);
+
+  let a = Math.PI / 2; // start at 12 o'clock, go clockwise (negative angle)
+  for (const [name, deg] of parts) {
+    const a1 = a, a0 = a - THREE.MathUtils.degToRad(deg);
+    const shellGeo = new THREE.ExtrudeGeometry(sector(R0, R1, a0 + GAP, a1 - GAP), {
+      depth: DEPTH, bevelEnabled: true, bevelThickness: 0.07, bevelSize: 0.06, bevelSegments: 4, curveSegments: 64
+    });
+    shellGeo.translate(0, 0, -DEPTH / 2);
+    const coreGeo = new THREE.ExtrudeGeometry(sector(R0 + 0.12, R1 - 0.12, a0 + GAP + 0.04, a1 - GAP - 0.04), {
+      depth: DEPTH - 0.18, bevelEnabled: true, bevelThickness: 0.04, bevelSize: 0.03, bevelSegments: 3, curveSegments: 64
+    });
+    coreGeo.translate(0, 0, -(DEPTH - 0.18) / 2);
+    const core = new THREE.Mesh(coreGeo, coreMat(C[name]));
+    const shell = new THREE.Mesh(shellGeo, shellMat(C[name]));
+    shell.renderOrder = 1;
+    spin.add(core, shell);
+    a = a0;
+  }
+
+  run(el, ctx, (t) => {
+    if (t === null) return;               // reduced motion: still
+    spin.rotation.z = -t * (Math.PI * 2 / 40);   // one turn per 40 s
+    tilt.rotation.x = -0.38 + Math.sin(t * 0.35) * 0.03; // a slow breath
+  });
+}
+
+/* ---------- Bars ---------- */
+const easeOutBack = (x) => { const c1 = 1.9, c3 = c1 + 1; return 1 + c3 * (x - 1) ** 3 + c1 * (x - 1) ** 2; };
+const easeInCubic = (x) => x * x * x;
+const clamp01 = (x) => Math.min(1, Math.max(0, x));
+
+function mountBars(el) {
+  const ctx = makeScene(el, { fov: 30, camPos: new THREE.Vector3(-5.5, 6, 16), target: new THREE.Vector3(-0.3, 2.2, 0) });
+  const order = ['pink', 'white', 'sky', 'mint', 'blue', 'lavender', 'purple'];
+  const heights = [1.5, 2.1, 2.6, 3.0, 3.4, 4.1, 4.8];
+  const W = 0.95, GAP = 0.22, n = order.length;
+  const group = new THREE.Group(); ctx.scene.add(group);
+  const bars = order.map((name, i) => {
+    const h = heights[i];
+    const shellGeo = new RoundedBoxGeometry(W, h, W, 4, 0.09); shellGeo.translate(0, h / 2, 0);
+    const coreGeo = new RoundedBoxGeometry(W - 0.1, h - 0.1, W - 0.1, 3, 0.06); coreGeo.translate(0, h / 2, 0);
+    const bar = new THREE.Group();
+    const shell = new THREE.Mesh(shellGeo, shellMat(C[name])); shell.renderOrder = 1;
+    bar.add(new THREE.Mesh(coreGeo, coreMat(C[name])), shell);
+    bar.position.x = (i - (n - 1) / 2) * (W + GAP);
+    group.add(bar);
+    return bar;
+  });
+
+  // Timeline (seconds), repeats every LOOP.
+  const UP_GAP = 0.16, UP = 0.75, HOLD_UNTIL = 4.6, DOWN_GAP = 0.08, DOWN = 0.45, LOOP = 6.0;
+  run(el, ctx, (t) => {
+    if (t === null) { bars.forEach(b => b.scale.y = 1); return; }
+    const lt = t % LOOP;
+    bars.forEach((bar, i) => {
+      const up = easeOutBack(clamp01((lt - i * UP_GAP) / UP));
+      const down = easeInCubic(clamp01((lt - HOLD_UNTIL - i * DOWN_GAP) / DOWN));
+      const bob = 1 + Math.sin(t * 2.2 - i * 0.6) * 0.012;  // keeps moving while held
+      const k = up * (1 - down);
+      bar.visible = k > 0.01;            // no flat tiles while a bar is down
+      bar.scale.y = Math.max(0.001, k * bob);
+    });
+    group.rotation.y = Math.sin(t * 0.3) * 0.05;
+  });
+}
+
+document.querySelectorAll('[data-glass-3d="donut"]').forEach(mountDonut);
+document.querySelectorAll('[data-glass-3d="bars"]').forEach(mountBars);
+</script>
+</body>
+</html>

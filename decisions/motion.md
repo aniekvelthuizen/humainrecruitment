@@ -71,3 +71,13 @@ Owner (Aniek): the grey part of the black/grey titles starts black and turns gre
 - **Off:** reduced motion, no IntersectionObserver, no JavaScript, and the Designer → the colours as designed.
 - **Where:** an embed in `Global | Custom Code` (`141a108e-8c89-7794-a75a-166d962024d9`), so it is on every page. Source: `references/embeds/muted-heading-sweep.html`.
 - To exclude a heading later: give the span a class not ending in `_muted`, or add `:not(...)` to the selector in the embed. Another colour accent: add its class next to `.sticky-steps_accent` (CSS gate and `SEL` in the script).
+
+## 2026-11-12 — Prototype: real-3D glass donut and bar chart (owner)
+Owner (Aniek): the glass donut («The bar», now a still render) and the glass bar chart may become real 3D. Donut: «rustig laten draaien». Bars: pop up one by one and keep looping, «dat ze altijd in beweging blijven». Not on the site yet; prototype only. Done by Aniek Velthuizen with Claude.
+- **Route:** procedural Three.js (0.169, jsDelivr) instead of Figma Weave / image-to-3D or Spline. The shapes are simple geometry (ring sectors, rounded boxes), so code gives clean edges, exact colours and control over the motion; AI image-to-3D gives messy meshes for hard-edged glass, Spline's runtime is > 1 MB.
+- **Look:** each piece is a clear shell (opacity 0.22, clearcoat) around a coloured core (opacity 0.9), lit by Three's RoomEnvironment, Neutral tone mapping. Colours sampled from the Figma renders.
+- **Donut:** 7 segments clockwise from 12 o'clock (purple 92°, lavender 62°, blue 66°, mint 52°, sky 36°, white 38°, pink 14°), fixed tilt, one turn per 40 s plus a slow ±0.03 rad breath.
+- **Bars:** 7 bars (pink → purple, heights 1.5 → 4.8). Loop 6 s: each bar rises with an overshoot (0.75 s, 0.16 s apart), holds with a small bob, sinks back (0.45 s, 0.08 s apart) at 4.6 s, then starts again.
+- **Off:** loops only while the stage is in view and the tab is visible; reduced motion → one still frame.
+- **Open for the site build:** keep the current PNG as poster until the 3D is ready (the module loads ~0.6 MB of Three.js; in the preview it took a few seconds), then cross-fade; load Three only when the section comes near the view.
+- Source: `references/prototypes/glass-3d/index.html`; run with `python3 -m http.server 4178 --directory references/prototypes` (also `.claude/launch.json` › `prototypes`).
