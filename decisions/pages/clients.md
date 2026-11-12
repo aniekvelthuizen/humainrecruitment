@@ -26,3 +26,6 @@ Owner: the three Card Testimonial arrows linked to `/clients` as well; there is 
 
 ## Placeholders kept
 Cases: three times the same Figma copy, and the photos carry a Getty watermark (`decisions/cms.md`; replace before go-live). Eyebrow «clients» in lower case as Figma.
+
+## 2026-11-12 — Reviews from the CMS
+The three Card Testimonials are now three `Reviews · picked` (Chance, Jocelyn, Marcus; no link). Avatar Alt is empty now, as on Home. See `decisions/components/reviews-picked.md`. Aniek Velthuizen, via Claude.
