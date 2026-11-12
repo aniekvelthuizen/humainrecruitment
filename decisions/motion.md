@@ -219,3 +219,13 @@ Owner (Aniek), screenshot of round 2 next to the design: one side of the cards w
 Owner (Aniek): «Ja goed nu! kunnen ze naast draaien ook nog een beetje zigzaggen van elkaar? middelste langzaam naar rechts, de andere naar links en dan weer terug». Round 3 approved.
 - **Zigzag:** the middle card drifts right, the top and bottom card left, then back: **±1rem** along the cards' own width (`translate` in the 3D pose), **7 s** each way, ease-in-out, endless. Starts at 1.5 s, when the last card is in, from 0, so it never jumps. 7 s against the turn's 9 s, so the two never repeat in step. ≤ 767 **±0.5rem**: at ±0.75 a card came within 7 px of the screen edge.
 - Checked on staging: entrance first (translate 0 40 → 0), then ±16 px at 1024; at 375 no sideways scroll.
+
+## 2026-11-12 — No hover lines on touch screens (owner) — Aniek Velthuizen, via Claude
+Problem: on a phone, tapping a link with a growing hover line (mobile menu, footer, Contact email/phone) showed the line under the tapped link. A tap leaves `:hover` stuck on touch devices.
+Choice: site-wide rule. On devices without real hover (`@media (hover: none)`) links get no hover line; desktop with a mouse keeps the line on hover and keyboard focus.
+- `nav_dropdown_link`: rule in the Nav state CSS embed (`a4e65ea1-…`, `references/embeds/nav-state-style.html`), see `decisions/components/nav.md`.
+- `footer_link_wrap` and `form-section_detail-link`: `background-image: none` in the arrow-link style embed in `Global | Custom Code` (`ab7c2a2d-…`, `references/embeds/arrow-link-style.html`).
+- Button Main's line (Tertiary, back link) needs nothing: Lumos only fires its hover trigger inside `@media (hover: hover)`.
+- Rich-text links are always underlined and only change the line colour on hover; left as is.
+A new link with a hover line goes into the same `(hover: none)` rule.
+Checked on staging /contact: at 375 with touch emulation the 44 nav, 15 footer and 2 Contact links have no line; at desktop width all of them still have it.

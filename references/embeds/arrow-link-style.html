@@ -56,4 +56,8 @@
   [data-wf--button-main--button-variant="tertiary"]:has([data-wf--icon-set--variant="arrow-right"]) .button_main_element::after,
   [data-wf--button-main--button-variant="tertiary"]:has([data-wf--icon-set--variant="arrow-right"]) :is(.button_main_icon, .button_main_text) { transition-duration: 0s; transition-delay: 0s; }
 }
+/* Touch screens (2026-11-12): no growing hover line on the footer links and the Contact email/phone links.
+   A tap leaves :hover stuck, so the line showed under the tapped link. Devices with a mouse keep it.
+   Nav dropdown links: same rule in the Nav state embed. Button Main's line already uses Lumos' (hover: hover) trigger. */
+@media (hover: none) { .footer_link_wrap, .form-section_detail-link { background-image: none; } }
 </style>
