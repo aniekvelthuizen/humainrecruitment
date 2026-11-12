@@ -88,6 +88,12 @@ Owner (Aniek), on the Facts Row («-25 / 30%», «2–4 days», «Top 5%», «10
 - **Mechanism:** the quote-reveal embed (`61fdba5b-…`) selects `[data-facts-row] .card_primary_title` next to `[data-quote-reveal]` (script and gate CSS). Selected through Facts Row rather than an attribute on Card Primary, so Stat cards elsewhere keep still. Same gate, 4 s guard and fallbacks.
 - **Off:** remove that selector from both places in `references/embeds/quote-reveal-script.html` and the embed. Check: `node references/quote-reveal-check.mjs <url>` (now includes the figures).
 
+## 2026-11-12 — Pricing Row prices fly in like the quotes (owner)
+Owner (Aniek), on the price cards («From €XX», «€XX», «Custom»): «maak dezelfde animatie voor de prijzen». Same word reveal as the quotes and the Facts Row figures. Done by Aniek Velthuizen with Claude.
+- **What:** the price (`card_primary_number`) of every card in a Pricing Row: words rise 24 px and fade in, 0.6 s, `power3.out`, 0.08 s apart; prices entering together start 0.3 s apart, left to right. The unit label («/ hour margin», «/ scope») stays still.
+- **Inside a hero** (Rates, where the row sits in the Page Header as `data-hero-reveal="row"`): the first price waits an extra 0.6 s, so it follows the row's own rise (measured: row in at ~1.0 s, prices done at ~1.9 s). This applies to any reveal target inside `[data-hero-reveal]`.
+- **Mechanism:** the quote-reveal embed (`61fdba5b-…`) selects `[data-pricing-row] .card_primary_number` (script and gate CSS), next to the Facts Row figures. Off: remove that selector in both places.
+
 ## 2026-11-12 — Stagger Cards motion on every stair section (owner)
 Owner (Aniek): «alle blokken die in een trappetje staan en dit soort icons hebben, mogen dezelfde animatie hebben» — looping icons, cards in one by one like a stair. Done by Aniek Velthuizen with Claude. This widens the exception above from the base variant to **every Stagger Cards section** (base, plain, gradient): Home «The risk» and «Engagement models», Hire an Expert, How It Works.
 - **Cards:** unchanged (24 px rise + fade, 0.8 s, 0.15 s apart).

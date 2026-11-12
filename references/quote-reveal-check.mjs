@@ -10,7 +10,7 @@ import path from 'node:path';
 const url = process.argv[2] || 'https://humain-dev.webflow.io/';
 const out = process.argv[3] || './quote-reveal-out';
 const width = Number(process.env.WIDTH || 1512);
-const QSEL = '[data-quote-reveal],[data-facts-row] .card_primary_title'; // quotes + Facts Row figures
+const QSEL = '[data-quote-reveal],[data-facts-row] .card_primary_title,[data-pricing-row] .card_primary_number'; // quotes + Facts Row figures + prices
 fs.mkdirSync(out, { recursive: true });
 const chromePath = process.env.CHROME || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const port = 9300 + Math.floor(Math.random() * 500);

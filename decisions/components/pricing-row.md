@@ -63,3 +63,6 @@ Pricing Outline's Secondary gets a white background and a dark label and chevron
 Why here: the route in `cards.md` (unit 3c) never published. A variant-scoped `::before` or `::after` publishes on this site as `.x:after:where()`, which matches nothing, so the fill never showed. **Do not use variant pseudo-elements on this site.**
 Label is now `#030b1b`, as a normal Secondary's hover (the old route's deviation `#000` is gone). The computed colours of the button do change, so a check can read them.
 Simulated on /pricing and /hire-an-expert at 1512, /pricing at 402, published page + this rule: rest transparent and white; hover and keyboard focus `#fff` and `rgb(3,11,27)` on label and chevron; halfway at 80 ms. Not published yet. Only inside Pricing Row: the two standalone test cards on Example Components keep the lift only.
+
+## 2026-11-12 — Prices fly in on scroll (owner)
+The prices reveal word by word like the quotes, 0.3 s apart left to right; in the Rates header after the row's own rise. Lives in the global quote-reveal embed: `decisions/motion.md` › Pricing Row prices. Done by Aniek Velthuizen with Claude.
