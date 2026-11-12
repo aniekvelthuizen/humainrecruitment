@@ -22,10 +22,11 @@
 .nav_component[data-nav-scrolled] .nav_desktop_logo { height: 3.5rem; }
 /* Scrolled: dropdown cards hang 0.5rem below the bar's bottom edge (toggle bottom to bar edge = 0.75rem row + 0.625rem padding = 1.375rem, plus 0.5rem) instead of 1.125rem below the toggle */
 .nav_component[data-nav-scrolled] .nav_desktop_wrap .nav_dropdown_main_scroll { margin-top: 1.875rem; }
-/* Desktop bar, scrolling down: the top row (Contact, Careers) folds away and fades out; scrolling up brings it back. The negative margin cancels the row's own 0.625rem bottom padding. The mobile panel keeps them. */
+/* Desktop bar, scrolling down: the top row (language switch, Contact, Careers) folds away and fades out; scrolling up brings it back. The negative margin cancels the row's own 0.625rem bottom padding. The mobile panel keeps them. */
 .nav_component .nav_desktop_wrap .nav_sub_wrap { transition: grid-template-rows 300ms ease, margin-bottom 300ms ease; }
 .nav_component[data-nav-scrolled][data-nav-direction="down"] .nav_desktop_wrap .nav_sub_wrap { grid-template-rows: 0fr; margin-bottom: -0.625rem; }
-.nav_component[data-nav-scrolled][data-nav-direction="down"] .nav_desktop_wrap .nav_sub_list { opacity: 0; visibility: hidden; }
+.nav_component[data-nav-scrolled][data-nav-direction="down"] .nav_desktop_wrap .nav_sub_list,
+.nav_component[data-nav-scrolled][data-nav-direction="down"] .nav_desktop_wrap .nav_links_item.is-locale { opacity: 0; visibility: hidden; }
 /* Active page (Webflow's w--current): semibold, no underline. Overrides the underline on the Designer's Current state; the weight sits on the text element because its text-style class sets its own weight. */
 .nav_component .nav_links_link.w--current,
 .nav_component .nav_dropdown_link.w--current { text-decoration: none; }
