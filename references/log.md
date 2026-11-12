@@ -466,3 +466,5 @@
 
 ## 2026-11-12 — Opportunity hero: "Apply for this role" on phones (Aniek Velthuizen, via Claude)
 Page Header Opportunity: Buttons row shown only ≤ 767; template Primary Text "Apply for this role", link `#apply`. Opportunity Detail: 0 × 0 anchor `#apply` 5.5rem above the form card (smooth scroll ignores scroll-margin). On staging; real click at 375 lands the card at 88 (nav 64). Open: Dutch text when the NL locale goes live.
+
+- 2026-11-12 (Aniek, via Claude): heroes on phones, title → text 16 px less (Page Header row gap space/2 + visual margin space/4; Hero Experts text margin space/7). Published to staging, measured. No review agents run (3 properties).
