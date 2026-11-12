@@ -425,3 +425,13 @@
 - 2026-11-12 (Aniek, via Claude): Clients — the three Card Testimonials no longer link (Link + Screen Reader Text emptied; they pointed to /clients itself). Staging published, checked in the HTML.
 - v2 (owner: «tijdelijk een harde lijn»): slide replaced by a soft-edged mask rising from the bottom edge, plus fade. Frames checked at 0.2 / 0.5 / 1.1 s on a local copy of Contact; embed `24fbbfa8-…` rewritten from the source and published to staging.
 - v3 (owner: v2 «alsof het twee keer een gradient omhoog komt», «veel smoother»): no layer or mask any more; the gradient's own last stops animate (registered properties), one ramp. Checked frame values 0–2 s on a local copy of Contact, published to staging; `glow-check.mjs` (now detects the animation on the header itself) passes at 1512, 402 and reduced motion.
+
+## 2026-11-12 — Nav logo spotlight — Aniek Velthuizen with Claude
+- Owner chose idea 4 (Spotlight) from logo prototype round 2. Record: `decisions/motion.md` › Nav logo: mint spotlight.
+- New fifth embed at the end of `Nav` (`3a2f55f5-1281-c34c-3b3a-8dc3ceb1f585`), source `references/embeds/nav-logo-spotlight.html`, read back identical. Tested first by injecting it into staging pages, then published to staging 1×.
+- `logo-spot-check.mjs`: Home, Contact, How It Works, Pricing, Opportunities at 1512; Home at 1024; Home, Contact at 402; reduced motion — all pass, console clean. Styleguide has no Nav. Not checked: Safari, real devices.
+
+## 2026-11-12 — Pricing Row prices fly in like the quotes — Aniek Velthuizen with Claude
+- Owner asked for the same reveal on the prices. Record: `decisions/motion.md` › Pricing Row prices.
+- Quote-reveal embed re-read (unchanged since the Facts Row write), extended with `[data-pricing-row] .card_primary_number` and a 0.6 s extra wait inside `[data-hero-reveal]`. Published to staging 1×.
+- `quote-reveal-check.mjs` on Hire an Expert and Rates at 1512 and 402: prices hidden before view, in within ~0.45 s, heights unchanged (48 / 36), no leftover inline styles, reduced motion static, console clean. Rates on load: row fades in to ~1.0 s, prices follow one by one, done ~1.9 s. Safari and real devices not checked.

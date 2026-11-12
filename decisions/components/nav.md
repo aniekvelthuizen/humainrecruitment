@@ -123,3 +123,6 @@ Choice: on the **small** breakpoint (≤ 767 px) only — tablet (768–1279) ke
 - Hamburger 28 × 14 (was 32 × 16, lines still 2 px): `nav_button_wrap` padding 0.9375rem / 0.5rem with the same negative margin, so the tap area stays 44 × 44; the gap is `--nav--hamburger-gap: 0.625rem` in a `@media (max-width: 767px)` rule in the Nav state CSS embed, because the style API refuses custom properties and the ✕ transform reads the same variable (lines meet exactly when open).
 Why: owner — logo and burger a little smaller on mobile, and the whole bar with them. Literal rem values: no matching step in the scales.
 Measured on staging (Home): 402 and 767 bar 64, logo 127 × 20.7 (round 2), burger 28 × 14 in a 44 × 44 button, ✕ centred; 768 and 991 unchanged (74 / 209 / 32 × 16); no sideways scroll, no console errors.
+
+## 2026-11-12 — Logo spotlight (fifth embed)
+The logo gets a mint light on page load and on hover from a fifth embed at the end of `Nav` (`3a2f55f5-…f585`). Details, colours and timing: `decisions/motion.md` › Nav logo: mint spotlight. Built by Aniek Velthuizen with Claude.

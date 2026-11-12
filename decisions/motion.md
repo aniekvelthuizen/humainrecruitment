@@ -88,6 +88,12 @@ Owner (Aniek), on the Facts Row («-25 / 30%», «2–4 days», «Top 5%», «10
 - **Mechanism:** the quote-reveal embed (`61fdba5b-…`) selects `[data-facts-row] .card_primary_title` next to `[data-quote-reveal]` (script and gate CSS). Selected through Facts Row rather than an attribute on Card Primary, so Stat cards elsewhere keep still. Same gate, 4 s guard and fallbacks.
 - **Off:** remove that selector from both places in `references/embeds/quote-reveal-script.html` and the embed. Check: `node references/quote-reveal-check.mjs <url>` (now includes the figures).
 
+## 2026-11-12 — Pricing Row prices fly in like the quotes (owner)
+Owner (Aniek), on the price cards («From €XX», «€XX», «Custom»): «maak dezelfde animatie voor de prijzen». Same word reveal as the quotes and the Facts Row figures. Done by Aniek Velthuizen with Claude.
+- **What:** the price (`card_primary_number`) of every card in a Pricing Row: words rise 24 px and fade in, 0.6 s, `power3.out`, 0.08 s apart; prices entering together start 0.3 s apart, left to right. The unit label («/ hour margin», «/ scope») stays still.
+- **Inside a hero** (Rates, where the row sits in the Page Header as `data-hero-reveal="row"`): the first price waits an extra 0.6 s, so it follows the row's own rise (measured: row in at ~1.0 s, prices done at ~1.9 s). This applies to any reveal target inside `[data-hero-reveal]`.
+- **Mechanism:** the quote-reveal embed (`61fdba5b-…`) selects `[data-pricing-row] .card_primary_number` (script and gate CSS), next to the Facts Row figures. Off: remove that selector in both places.
+
 ## 2026-11-12 — Stagger Cards motion on every stair section (owner)
 Owner (Aniek): «alle blokken die in een trappetje staan en dit soort icons hebben, mogen dezelfde animatie hebben» — looping icons, cards in one by one like a stair. Done by Aniek Velthuizen with Claude. This widens the exception above from the base variant to **every Stagger Cards section** (base, plain, gradient): Home «The risk» and «Engagement models», Hire an Expert, How It Works.
 - **Cards:** unchanged (24 px rise + fade, 0.8 s, 0.15 s apart).
@@ -172,12 +178,15 @@ Owner (Aniek): «dat deze groene kaartjes pas bij scroll in view groen worden»,
 - **Off:** reduced motion, no IntersectionObserver, no JavaScript and the Designer → the card is mint as designed. Remove the embed to switch it off everywhere.
 - Measured on staging (`node references/stage-glow-check.mjs`, 1440 and 402): both cards white at load; grid card veil 0 → 0.75 → 1 at 0.9 / 1.8 s after scrolling to it; slider card white with the row in view, mint after sliding to the end; reduced motion mint at once; console clean.
 
-## 2026-11-12 — Logo animation: still open (owner)
-Owner (Aniek) picked idea 3 from the prototype `references/prototypes/logo-animations.html` (seven ideas side by side), with drawing and filling closer together. Done by Aniek Velthuizen with Claude.
-- **Page load:** a thin outline traces each letter (stroke-dashoffset on `pathLength="1"`, dash `1.02 2`, as the Stagger Cards route icon), 0.8 s, `cubic-bezier(.45,0,.2,1)`, letters 0.06 s apart; each letter fills (fill-opacity 0 → 1, 0.4 s, hero easing) from 0.55 s + 0.06 s per letter, so it colours in just before its own line closes. Measured: fully filled at about 1.2 s (v1: 1.2 s draw + fill from 1 s, ~1.9 s; owner: too far apart).
-- **Hover (as in the prototype):** the fill drops away and an accent outline (mint on dark, `brand-accent-700` on light) traces the logo again, 0.9 s, letters 0.03 s apart; on leaving it fills again.
-- **Reopened the same day:** owner (Aniek): «van nog geen 1 weggeblazen… of geen animatie of nog ideeën». Round 2 with six bolder ideas (pixels forming the logo, scan line, two halves that match, cursor spotlight, decoding with the logo's own letters, liquid fill) plus «no animation» for comparison: `references/prototypes/logo-animations-2.html`. Idea 3 above stays as one of the options.
-- **Open:** not on the site yet. When built: the nav logo is part of the hero intro (see top of this file), reduced motion → static logo.
+## 2026-11-12 — Nav logo: mint spotlight (owner)
+Owner (Aniek) looked at two rounds of prototypes (`references/prototypes/logo-animations.html`, `logo-animations-2.html`; round 1 «nog geen 1 weggeblazen») and chose round 2 idea 4, «Spotlight»: «4 vind ik tof, doe die maar!». Built by Aniek Velthuizen with Claude.
+- **Page load:** 0.4 s after the page is ready a soft mint light slides once through the letters, left to right (centre −27 % → 127 % of the logo width), 1.3 s, `cubic-bezier(.65,0,.35,1)`. Every page load, every page with the Nav.
+- **Hover (mouse/trackpad only, `hover: hover` and `pointer: fine`):** the light grows in (320 ms, hero easing) where the cursor enters and follows it inside the letters; leaving shrinks it away. Touch: load sweep only.
+- **Size:** light radius 120 (sweep) / 110 (hover) of the 514-wide logo: 42 / 38.5 px on the 180 px desktop logo, 29.6 px on the 127 px phone logo.
+- **Colour:** `brand-accent-500` (#00ffd5) while the bar is transparent over a dark section (the same condition that makes the logo white); `brand-accent-700` (#00806b) on the white or scrolled bar. The light is gradient-only on top of the logo, so the logo itself keeps its own colour and colour transitions.
+- **Mechanism:** a fifth embed at the end of `Nav` (`3a2f55f5-1281-c34c-3b3a-8dc3ceb1f585`, class `u-embed-js`, CSS + script), source `references/embeds/nav-logo-spotlight.html`. The script adds `span.nav_logo_spot` over each nav logo svg (desktop and mobile), masked by the logo's own paths, and sets `data-state="sweep" | "hover"`; CSS animates registered custom properties (`@property --logo-spot-x/-y/-r`). No `requestAnimationFrame` (nav rule). The logo markup and size are untouched.
+- **Off:** reduced motion → no light. Remove the embed to switch it off. A replaced logo still works if it stays an inline svg in `.nav_desktop_logo` / `.nav_mobile_logo`.
+- Check: `node references/logo-spot-check.mjs` (Home, Contact, How It Works, Pricing, Opportunities at 1512, 1024, 402, reduced motion: all pass, console clean). Not checked: Safari, real devices, the white scrolled bar by eye.
 
 ## 2026-11-12 — Header glow rises in on page load (owner)
 Owner (Aniek), after a prototype on Contact: «ik vind het wel erg tof! integreer maar op alle pagina's». The pink end of the brand gradient (`gradient/brand-end`) no longer sits there from the first paint: the header starts blue and the glow rises from the bottom edge. Part of the page-load hero intro, so no exception to «no scroll reveals». Done by Aniek Velthuizen with Claude.
