@@ -1,0 +1,79 @@
+<style>
+/* Line icons (decisions/motion.md, 2026-11-12): card icons draw in once when they enter the view, then a light runs along the line every few seconds.
+   Runtime only: the Designer, reduced motion and a failed script show the plain mask icon. */
+html[data-line-icon-gate] .card_primary_icon>.icon_set_wrap:not([data-line-icon]){visibility:hidden}
+[data-line-icon]{-webkit-mask:none!important;mask:none!important;background:none!important}
+[data-line-icon]>svg{display:block;width:100%;height:100%;overflow:visible}
+[data-line-icon] [data-li="fill"]{fill:currentColor;opacity:0}
+[data-line-icon] [data-li="draw"]{fill:none;stroke:currentColor;stroke-width:.35;stroke-linejoin:round;stroke-dasharray:1.05 2;stroke-dashoffset:1.06}
+[data-line-icon] [data-li="glint"]{fill:none;stroke:var(--_theme---card--accent,#00806b);stroke-width:.7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:.1 2;stroke-dashoffset:.1;opacity:0}
+[data-line-icon="in"] [data-li="draw"]{animation:li-draw 1.1s cubic-bezier(.45,0,.2,1) var(--li-delay,0s) both,li-out .5s ease var(--li-fill,1s) both}
+[data-line-icon="in"] [data-li="fill"],[data-line-icon="loop"] [data-li="fill"]{animation:li-in .5s ease var(--li-fill,1s) both}
+[data-line-icon="loop"] [data-li="draw"]{opacity:0}
+[data-line-icon="loop"] [data-li="glint"]{opacity:1;animation:li-glint var(--li-cycle,7s) linear var(--li-phase,0s) infinite}
+[data-line-icon-paused] [data-li="glint"]{animation-play-state:paused!important}
+@keyframes li-draw{from{stroke-dashoffset:1.06}to{stroke-dashoffset:0}}
+@keyframes li-out{to{opacity:0}}
+@keyframes li-in{from{opacity:0}to{opacity:1}}
+/* The light runs once along every line in the first 1.8 s of each cycle, then rests. */
+@keyframes li-glint{0%{stroke-dashoffset:.1;opacity:0}3%{opacity:1}24%{opacity:1}26%,100%{stroke-dashoffset:-1;opacity:0}}
+</style>
+<script>
+(function(){
+var d=document,h=d.documentElement;
+if(window.lineIconMotion)return;window.lineIconMotion=1;
+if(h.classList.contains('wf-design-mode')||!('IntersectionObserver' in window)||!window.fetch||!window.DOMParser||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var SEL='.card_primary_icon>.icon_set_wrap';
+/* Icons with their own motion (Stagger Cards base: clock, route, loupe) are left to that script. */
+var SKIP='[data-icon-motion],[data-stagger-cards][data-wf--stagger-cards--variant="base"] *';
+h.setAttribute('data-line-icon-gate','');
+var release=function(){h.removeAttribute('data-line-icon-gate')};
+var guard=setTimeout(release,4000);
+var cache={};
+function load(url){
+  return cache[url]||(cache[url]=fetch(url).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(t){
+    var svg=new DOMParser().parseFromString(t,'image/svg+xml').documentElement;
+    if(!svg||svg.nodeName.toLowerCase()!=='svg'||!svg.querySelector('path'))throw 0;
+    return svg;
+  }));
+}
+function layer(src,name){
+  var g=d.createElementNS('http://www.w3.org/2000/svg','g');g.setAttribute('data-li',name);
+  [].forEach.call(src.childNodes,function(n){if(n.nodeType===1&&!/^(title|desc|defs|style)$/i.test(n.nodeName))g.appendChild(n.cloneNode(true))});
+  [].forEach.call(g.querySelectorAll('*'),function(n){n.removeAttribute('fill');n.removeAttribute('stroke');n.removeAttribute('style');n.removeAttribute('class');if(name!=='fill'&&/^(path|circle|rect|line|polyline|polygon|ellipse)$/i.test(n.nodeName))n.setAttribute('pathLength','1')});
+  return g;
+}
+function build(el,src){
+  var svg=d.createElementNS('http://www.w3.org/2000/svg','svg');
+  svg.setAttribute('viewBox',src.getAttribute('viewBox')||('0 0 '+(parseFloat(src.getAttribute('width'))||24)+' '+(parseFloat(src.getAttribute('height'))||24)));
+  svg.setAttribute('aria-hidden','true');svg.setAttribute('focusable','false');
+  svg.appendChild(layer(src,'fill'));svg.appendChild(layer(src,'draw'));svg.appendChild(layer(src,'glint'));
+  el.innerHTML='';el.appendChild(svg);el.setAttribute('data-line-icon','ready');
+}
+var byPlace=function(a,b){var r=a.boundingClientRect,s=b.boundingClientRect;return Math.abs(r.top-s.top)>8?r.top-s.top:r.left-s.left};
+var io=new IntersectionObserver(function(es){
+  es.filter(function(e){return e.isIntersecting}).sort(byPlace).forEach(function(e,i){
+    io.unobserve(e.target);
+    var el=e.target,delay=i*0.15,fill=delay+0.85;
+    el.style.setProperty('--li-delay',delay+'s');el.style.setProperty('--li-fill',fill+'s');
+    el.setAttribute('data-line-icon','in');
+    /* The first light comes 2 s after the icon is drawn, then every cycle; icons drawn together keep their 0.15 s offset. */
+    setTimeout(function(){el.style.setProperty('--li-phase','2s');el.setAttribute('data-line-icon','loop')},(fill+0.6)*1000);
+    vis.observe(el);
+  });
+},{rootMargin:'0px 0px -10% 0px',threshold:0.5});
+/* Loops pause while the icon is out of view. */
+var vis=new IntersectionObserver(function(es){es.forEach(function(e){e.target.toggleAttribute('data-line-icon-paused',!e.isIntersecting)})});
+function init(){
+  var els=[].filter.call(d.querySelectorAll(SEL),function(el){return !el.matches(SKIP)});
+  if(!els.length){clearTimeout(guard);release();return}
+  var left=els.length,done=function(){if(!--left){clearTimeout(guard);release()}};
+  els.forEach(function(el){
+    var m=/url\(["']?([^"')]+\.svg)["']?\)/.exec(getComputedStyle(el).webkitMaskImage||getComputedStyle(el).maskImage||'');
+    if(!m){done();return}
+    load(m[1]).then(function(src){build(el,src);io.observe(el)}).catch(function(){}).then(done);
+  });
+}
+d.readyState==='loading'?d.addEventListener('DOMContentLoaded',init):init();
+})();
+</script>
