@@ -141,3 +141,4 @@ Section embeds hold CSS, and a small script when the block needs one to work (St
 - Uploaded `references/assets/icons/webclip-256.png` (the webclip scaled to 256) for all three slots; the 24 px favicon is kept as source only (`favicon-source-24.png`, `favicon-32.png`), since Webflow's downscale of the larger file is sharper than an upscaled 24.
 - 512 is upscaled from 256. For a crisper PWA/large icon, ask the owner for a ≥ 512 px original and re-upload in the same place.
 - Not settable through the Data API: done in the dashboard (Claude in Chrome).
+- 2026-11-12, owner round: the first icon's navy top blended into dark browser tab bars. Owner supplied a lighter version for dark mode; `webclip-dark-256.png` (from `webclip-dark-source-227.png`) is on **Favicon — dark only** (Light and Webclip unticked in the upload dialog). Light favicon and webclip keep the original.

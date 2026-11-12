@@ -335,3 +335,4 @@
 ## 2026-11-12 — Favicon and webclip — Aniek Velthuizen with Claude
 - Owner request. Site settings › Icons (Claude in Chrome): one upload of `references/assets/icons/webclip-256.png`, applied to Favicon light, Favicon dark and Webclip. Record: `decisions/site.md`.
 - Published to staging 1× (claude.ai Webflow connector; the local `webflow` MCP returns 404 for this site). Staging HTML carries icon links 32 (light + dark), 48, 192, 512 and apple-touch-icon 180.
+- Owner round: dark-mode favicon replaced with the owner's lighter version (`webclip-dark-256.png`, Favicon dark slot only). Published to staging 1×; staging HTML: light 32 = original, dark 32 = new file.
