@@ -375,4 +375,5 @@
 - Owner approved the Three.js prototype (`references/prototypes/glass-3d/`). Sixth embed in `Global | Custom Code`: `6303987b-0b4d-b1fd-aa63-b199bc953fbf`, source `references/embeds/glass-3d-script.html`, read back identical. No attributes added in the Designer; runtime only: `data-glass3d-on` on the pictures, `[data-glass-3d-stage]` overlay. Revert: remove that embed.
 - Published to staging; `references/glass-3d-check.mjs` on Project Delivery Experts at 1440 / 402: both pictures 3D, no overflow, console clean, reduced motion keeps the PNGs. Record: `decisions/motion.md` › Glass 3D on the site.
 - Owner round: donut larger (camera 11), bars stayed in place while scrolling → stage now follows the picture every frame. Embed `6303987b-…` updated twice, byte-identical in the published HTML of the three pages; `glass-3d-check.mjs` got a scroll sweep and a shift test.
+- Owner round: bars sticky between title and text, donut spin follows scroll speed and direction. Embed `6303987b-…` updated, byte-identical on the three pages, published to staging.
 
