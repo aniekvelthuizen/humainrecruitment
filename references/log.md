@@ -340,3 +340,7 @@
 ## 2026-11-12 — SEO titles and descriptions, static pages — Aniek Velthuizen with Claude
 - Owner request after spotting «Website Name» in the tab. 14 public static pages: title + description from the page's own copy, Open Graph "Same as SEO" (`bulk_update_pages`). Record: `decisions/site.md` › SEO.
 - Published to staging 1×. `seo-check.mjs`: all 14 titles ≤ 60 and descriptions 120–160, no placeholders, no duplicates; remaining errors are only «no og:image» (not done) and the Opportunities items (no description, no suffix, duplicate titles — CMS SEO fields needed).
+
+## 2026-11-12 — Sticky Steps: no empty space under the stack — Aniek Velthuizen with Claude
+- Owner request (screenshot Home "Our method"). Hold block under the last card removed; the list ends at the last card and a script-set tail keeps the intro in place until card 3 lands, then everything moves on together. Record: `decisions/components/sticky-steps.md`.
+- Published to staging 1× (claude.ai Webflow connector). Measured headless at 1512 / 1280 / 991 / 767 / 402 on Home, plus How It Works, Consulting, Project Delivery Experts, Submit Resume. Not checked: Safari, real touch devices.

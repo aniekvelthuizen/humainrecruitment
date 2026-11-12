@@ -67,6 +67,7 @@ const measure = `(() => {
 })()`;
 
 // Scroll until the last card reaches its sticky top: all card tops should then be (nearly) equal = a stack.
+// Then 150 px further: everything should move with the page (no hold block, 2026-11-12).
 const stack = `(async () => {
   const s = document.querySelector('[data-sticky-steps]');
   const cards = [...s.querySelectorAll('[data-sticky-steps-list] [role="listitem"]')].filter((c) => !c.closest('.card_primary_items'));
@@ -74,8 +75,13 @@ const stack = `(async () => {
   const y0 = scrollY + last.getBoundingClientRect().top - parseFloat(getComputedStyle(last).top) ;
   scrollTo(0, y0 + 2); await new Promise((r) => setTimeout(r, 400));
   const intro = s.querySelector('.sticky-steps_intro');
-  return { scrolledTo: Math.round(y0), cardTops: cards.map((c) => Math.round(c.getBoundingClientRect().top)), introTop: Math.round(intro.getBoundingClientRect().top),
-    sectionTop: Math.round(s.getBoundingClientRect().top) };
+  const list = s.querySelector('[data-sticky-steps-list]');
+  const at = () => ({ cardTops: cards.map((c) => Math.round(c.getBoundingClientRect().top)), introTop: Math.round(intro.getBoundingClientRect().top),
+    introBottom: Math.round(intro.getBoundingClientRect().bottom), sectionTop: Math.round(s.getBoundingClientRect().top), sectionBottom: Math.round(s.getBoundingClientRect().bottom) });
+  const landed = at();
+  // 150 px further: with no hold, the stack, the intro (>= 992) and the section bottom have all moved up by 150.
+  scrollTo(0, y0 + 152); await new Promise((r) => setTimeout(r, 400));
+  return { scrolledTo: Math.round(y0), ...landed, after150: at(), holdAfter: getComputedStyle(list, '::after').content, tail: list.style.getPropertyValue('--sticky-steps-tail') };
 })()`;
 
 const results = {};
