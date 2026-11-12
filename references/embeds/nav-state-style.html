@@ -1,0 +1,41 @@
+<style>
+/* HumAIn nav states. The script in the next embed sets data-nav-theme, data-nav-scrolled, data-nav-direction, data-nav-menu-open and data-nav-ready on .nav_component. */
+.nav_component { --nav--menu-open-duration: 300ms; --nav--menu-close-duration: 300ms; --nav--dropdown-open-duration: 300ms; --nav--dropdown-close-duration: 300ms; }
+.nav_component[data-nav-ready] { transition: color 300ms ease; }
+/* Light text while the bar is transparent over a dark background. Not while the mobile menu is open or still closing (data-nav-menu-open stays until the 300 ms close is done). */
+.nav_component[data-nav-theme="dark"]:not([data-nav-scrolled]):not([data-nav-menu-open]) {
+  --_theme---text: var(--swatch--light-100);
+  --_theme---border: var(--swatch--light-100-o20);
+  --_theme---button-secondary--text: var(--swatch--light-100);
+  --_theme---button-secondary--text-hover: var(--swatch--dark-900);
+  --_theme---button-secondary--background-hover: var(--swatch--light-100);
+  --_theme---button-secondary--border: var(--swatch--light-100);
+  --_theme---button-secondary--border-hover: var(--swatch--light-100);
+  --_theme---button-secondary--accent: var(--swatch--light-100);
+  --_theme---button-secondary--accent-hover: var(--swatch--dark-900);
+}
+/* Scrolled: the nav background at 80 % with blur (white dropdown cards stand out against it), more compact (0.625rem = space/3) */
+.nav_component[data-nav-scrolled] .nav_desktop_wrap,
+.nav_component[data-nav-scrolled] .nav_mobile_layout { background-color: color-mix(in srgb, var(--_theme---nav--background) 80%, transparent); -webkit-backdrop-filter: blur(1rem); backdrop-filter: blur(1rem); }
+.nav_component[data-nav-scrolled][data-nav-menu-open] .nav_mobile_layout { background-color: var(--_theme---nav--background); }
+.nav_component[data-nav-scrolled] .nav_desktop_layout { padding-top: 0.625rem; padding-bottom: 0.625rem; }
+.nav_component[data-nav-scrolled] .nav_desktop_logo { height: 3.5rem; }
+/* Scrolled: dropdown cards hang 0.5rem below the bar's bottom edge (toggle bottom to bar edge = 0.75rem row + 0.625rem padding = 1.375rem, plus 0.5rem) instead of 1.125rem below the toggle */
+.nav_component[data-nav-scrolled] .nav_desktop_wrap .nav_dropdown_main_scroll { margin-top: 1.875rem; }
+/* Desktop bar, scrolling down: the top row (Contact, Careers) folds away and fades out; scrolling up brings it back. The negative margin cancels the row's own 0.625rem bottom padding. The mobile panel keeps them. */
+.nav_component .nav_desktop_wrap .nav_sub_wrap { transition: grid-template-rows 300ms ease, margin-bottom 300ms ease; }
+.nav_component[data-nav-scrolled][data-nav-direction="down"] .nav_desktop_wrap .nav_sub_wrap { grid-template-rows: 0fr; margin-bottom: -0.625rem; }
+.nav_component[data-nav-scrolled][data-nav-direction="down"] .nav_desktop_wrap .nav_sub_list { opacity: 0; visibility: hidden; }
+/* Active page (Webflow's w--current): semibold, no underline. Overrides the underline on the Designer's Current state; the weight sits on the text element because its text-style class sets its own weight. */
+.nav_component .nav_links_link.w--current,
+.nav_component .nav_dropdown_link.w--current { text-decoration: none; }
+.nav_component .nav_links_link.w--current .nav_links_text,
+.nav_component .nav_dropdown_link.w--current { font-weight: var(--_typography---font--primary-semibold); white-space: nowrap; }
+/* ...with the site's Arrow Right icon before the text (mask in the text colour, 0.875em, 0.375em gap). nowrap keeps arrow and word together in the bar. */
+.nav_component .nav_links_link.w--current .nav_links_text { white-space: nowrap; }
+.nav_component .nav_links_link.w--current .nav_links_text::before,
+.nav_component .nav_dropdown_link.w--current::before { content: ""; display: inline-block; width: 0.875em; height: 0.875em; margin-right: 0.375em; vertical-align: -0.0625em; background-color: currentColor; -webkit-mask: url("https://cdn.prod.website-files.com/6ae35364a38b2d71cab8c607/6ae36cceffdd1ab2d2dbee0b_icon-arrow-right.svg") center / contain no-repeat; mask: url("https://cdn.prod.website-files.com/6ae35364a38b2d71cab8c607/6ae36cceffdd1ab2d2dbee0b_icon-arrow-right.svg") center / contain no-repeat; }
+/* Phones (small breakpoint): hamburger 28 x 14 instead of 32 x 16. The gap is a custom property (the style API refuses those); the cross reads the same value. Bar, logo and hit area are Designer styles on the small breakpoint. */
+@media (max-width: 767px) { .nav_component .nav_button_wrap { --nav--hamburger-gap: 0.625rem; } }
+@media (prefers-reduced-motion: reduce) { .nav_component, .nav_component * { transition-duration: 1ms !important; animation-duration: 1ms !important; } }
+</style>

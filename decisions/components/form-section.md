@@ -75,3 +75,7 @@ Under the email field the line now reads «Please enter a valid email address» 
 
 ## 2026-11-12 — No focus ring on the upload error (Aniek Velthuizen, via Claude)
 Owner: «Upload failed …» showed a thick black box. webflow.js puts `tabindex="-1"` on `.w-file-upload-error` and focuses it so screen readers announce the message; Lumos rings every `[tabindex]:focus-visible`. The message is no control, so the ring goes: `.w-file-upload-error[tabindex]:is(:focus,:focus-visible) { outline: none; }` in the first embed of `Global | Custom Code` (also covers Opportunity Detail's upload). Focus itself stays, for the announcement. Checked on staging /submit-resume after a Tab press: focused, `:focus-visible`, outline none.
+
+## 2026-11-12 — Aside sticky on desktop (Aniek Velthuizen, via Claude)
+Owner: «why join the pool mag sticky zijn» (/submit-resume). `form-section_aside` is now `position: sticky`, `top: calc(nav/height-total + 2rem)` as `sticky-steps_intro`; static ≤ 991 (one column). The layout already has `align-items: start`, so the aside is only as tall as its content and sticks within the form's height.
+On the class, not per variant (a variant cannot be targeted by the style API): Contact's aside (details + map) sticks too; measured at 1512: aside 590, form 670, so it moves only ~80 px there. Read-back shows only the variable for `top`, published as the calc, as Sticky Steps.

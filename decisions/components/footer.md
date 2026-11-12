@@ -65,3 +65,8 @@ From `references/audit/2026-10-31-footer.md`.
 - **Accordion content:** the same links as desktop (confirmed).
 - Contrast of the bottom row and the phone column title: see the owner line under "Review fixes".
 - **LinkedIn** links to `https://www.linkedin.com/company/humain-recruitment/home/`, opens in a new tab; `aria-label` "HumAIn Recruitment on LinkedIn (opens in a new tab)".
+
+## 2026-11-12 — Active page semibold (owner; Aniek Velthuizen, via Claude)
+Conflict: Webflow put `w--current` on the Footer Link of the current page, but nothing styled it, so the footer showed no active page.
+Choice: as in the nav (`decisions/components/nav.md` › Active page: semibold), the current page's footer link text is semibold (`--_typography---font--primary-semibold`), no line. One rule in the Footer CSS embed (`d8c37aa8-…da63`, source `references/embeds/footer-style.html`): `.footer_link_wrap.w--current .footer_link_text`. On the text element because `u-text-style-main` sets its own weight. Webflow marks the link although the Link prop is a URL (`/about`), because the path matches the page.
+_Same day, owner:_ the current footer link also gets the Arrow Right icon before the text, same rule as the nav (`decisions/components/nav.md` › Active page): `::before` on `.footer_link_text`, 0.875em, 0.375em gap, text colour, `nowrap`. Checked on staging at 1440 (/about, /clients).

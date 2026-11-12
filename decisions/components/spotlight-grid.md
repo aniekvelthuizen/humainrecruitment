@@ -81,3 +81,6 @@ Prop **List Role** (`c2d3da65-242a-1ceb-8800-7c2ab71ea1a1`, string, folder Setti
 
 ## 2026-11-12 — Photo follows the mouse
 The panel carries `data-photo-parallax` and the visual `data-photo-parallax-photo`: on mouse devices the person moves slowly against the cursor with a faint light behind (`decisions/motion.md`, same date). Remove the panel attribute to switch it off for this component.
+
+## 2026-11-12 — Slot restrictions and tooltips
+All three slots allow only Card Primary, Card Testimonial and Reviews · picked; each has a tooltip (see `reviews-picked.md`). Marketer test on Clients passed. Aniek Velthuizen, via Claude.

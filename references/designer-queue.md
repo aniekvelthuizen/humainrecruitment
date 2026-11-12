@@ -42,6 +42,7 @@ Order matters inside A. Never publish during the pass. Read back through the API
 - [ ] Typography Heading / Paragraph components — add variants Text Medium, Label Large, Label linked to the new Text Style modes — API: no variant-to-mode binding — recipe: by hand — 2026-10-29
 - [ ] Styleguide page — visual pass of colours (Base / Dark / Brand) and type scale — 2026-10-29
 - [ ] Spotlight Grid › slot props — get_component still calls all three "Slot"; check the names List Start / List Center / List End in the Properties panel and set slot Allowed components (Card Primary for Expertise, Card Testimonial for Reviews) — API: slot names via display name only, Allowed components not writable — 2026-11-02 (Aniek, via Claude)
+- [ ] Nav › Current state of `nav_links_link` and `nav_dropdown_link` (+ `u-text-style-text-medium`) — remove the underline (text-decoration, offset, thickness); the Nav CSS embed already overrides it, so nothing changes visibly — API: no Current state in the style API — recipe: by hand — 2026-11-12 (Aniek, via Claude)
 
 ## Done
 - [x] Card Testimonial › `role="listitem"` — not a Designer fix after all: Role's On label is None, Off is List Item, and the Home cards were on the default (None). Set to List Item through the API — 2026-11-02 (Aniek, via Claude), read back: staging HTML 3 × `role="listitem"`
