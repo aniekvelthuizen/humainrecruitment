@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Logo-animaties ronde 2</title>
+<!-- Prototype ronde 2: ideeën voor een logo-animatie bij page load en hover. Gemaakt door Aniek Velthuizen met Claude, 2026-11-12. Geen onderdeel van de site. Ronde 1: logo-animations.html -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brand:#250059; --mint:#00ffd5; --mint-dark:#00806b; --dark:#030b1b; --muted:#6b6f7b;
+  --bg:#f4f2f7; --card:#fff; --ink:var(--dark); --logo:var(--dark); --accent:var(--mint-dark);
+  --logo-w:22rem;
+}
+body[data-bg="dark"]{ --card:#0f0024; --logo:#fff; --accent:var(--mint); }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.5 Onest,system-ui,sans-serif}
+header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid #e3dfea}
+.top-in{max-width:68rem;margin:0 auto;padding:1rem;display:flex;gap:.75rem;align-items:center;flex-wrap:wrap}
+.top h1{font-size:1.125rem;font-weight:600;margin:0 auto 0 0}
+.top a{color:var(--brand);font-size:.875rem}
+button{font:inherit;font-size:.875rem;border:1px solid #cfc8db;background:#fff;color:var(--dark);border-radius:999px;padding:.4rem .9rem;cursor:pointer}
+button:hover{border-color:var(--brand)}
+button[aria-pressed="true"]{background:var(--brand);color:#fff;border-color:var(--brand)}
+main{max-width:68rem;margin:0 auto;padding:1.5rem 1rem 4rem;display:grid;gap:1.5rem}
+.intro{color:var(--muted);max-width:46rem;margin:0}
+.idea{display:grid;grid-template-columns:minmax(0,1fr) 20rem;background:#fff;border:1px solid #e3dfea;border-radius:1rem;overflow:hidden}
+.stage{background:var(--card);min-height:16rem;display:grid;place-items:center;padding:2rem;position:relative;overflow:hidden;transition:background .3s}
+.stage .replay{position:absolute;right:.75rem;bottom:.75rem}
+.info{padding:1.25rem 1.5rem;border-left:1px solid #e3dfea;font-size:.9375rem}
+.info h2{margin:0 0 .25rem;font-size:1.0625rem}
+.info .num{color:var(--brand);font-weight:600;margin-right:.35rem}
+.info .story{color:var(--muted);margin:.25rem 0 0}
+.info dl{margin:.75rem 0 0;display:grid;gap:.5rem}
+.info dt{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.info dd{margin:0}
+.tag{display:inline-block;font-size:.75rem;border-radius:999px;padding:.1rem .55rem;margin-top:.75rem;background:#e8f8f4;color:#00664f}
+.tag.loud{background:#fbeee9;color:#9a3b22}
+.tag.ref{background:#eee;color:#444}
+@media (max-width:52rem){ .idea{grid-template-columns:1fr} .info{border-left:0;border-top:1px solid #e3dfea} }
+
+.logo{display:block;position:relative;width:var(--logo-w);max-width:100%;color:var(--logo);cursor:pointer;transition:width .3s}
+.logo svg{display:block;width:100%;height:auto;overflow:visible;transition:opacity .3s}
+.logo canvas{position:absolute;left:-20%;top:-150%;width:140%;height:400%;pointer-events:none;opacity:0;transition:opacity .3s}
+.logo[data-mode="dots"] svg{opacity:0}
+.logo[data-mode="dots"] canvas{opacity:1}
+</style>
+</head>
+<body data-bg="dark">
+<header class="top"><div class="top-in">
+  <h1>Logo-animaties: ronde 2</h1>
+  <a href="logo-animations.html">← ronde 1</a>
+  <button id="bg" aria-pressed="true">Donkere achtergrond</button>
+  <button id="size" aria-pressed="false">Op nav-formaat</button>
+  <button id="all">Alles opnieuw</button>
+</div></header>
+<main>
+  <p class="intro">Ronde 2: minder braaf, en elk idee vertelt iets over Humain (mens + AI, de juiste expert vinden). Ga met de muis over een logo voor de hover; bij 1, 4 en 5 reageert die op de plek van je cursor. Bovenaan ter vergelijking het logo zonder animatie.</p>
+  <div id="ideas"></div>
+</main>
+<script>
+const VB_W=514.552, VB_H=83.877;
+const PATHS = [
+ "M14.159 1.44043V34.4394H55.557V1.44043H69.836V82.4374H55.557V48.5984H14.159V82.4374H0V1.44043H14.159Z",
+ "M101.458 1.44043V55.5584C101.458 63.5984 105.538 68.2784 114.897 68.2784H129.296C138.416 68.2784 142.615 63.5984 142.615 55.5584V1.44043H156.534V56.6384C156.534 73.6774 147.534 82.4374 130.255 82.4374H113.215C95.9359 82.4374 87.0559 73.6774 87.0559 56.6384V1.44043H101.455H101.458Z",
+ "M187.521 82.437H173.482V18.119C173.482 7.319 179.841 0 192.921 0C204.441 0 211.041 5.76 213.32 15.959L224.719 65.518C225.439 68.398 227.119 70.078 230.119 70.078C233.119 70.078 234.799 68.398 235.518 65.518L246.917 15.959C249.197 5.76 255.197 0 266.837 0C279.916 0 286.275 7.319 286.275 18.119V82.436H272.236V18.839C272.236 15.719 270.196 13.679 266.476 13.679C263.117 13.679 261.436 15.359 260.836 17.999L249.196 67.558C246.676 78.238 241.156 83.877 229.997 83.877C218.718 83.877 212.838 77.997 210.438 67.558L198.918 17.999C198.318 15.359 196.518 13.679 193.278 13.679C189.558 13.679 187.518 15.719 187.518 18.839V82.437H187.521Z",
+ "M312.465 82.437H296.866L325.304 10.44C328.304 2.87998 333.824 0.000976562 342.343 0.000976562C350.743 0.000976562 356.263 2.88098 359.143 10.44L386.501 82.437H370.782L346.182 17.28C345.462 15.36 344.142 14.52 342.222 14.52C340.302 14.52 338.983 15.36 338.143 17.28L312.463 82.437H312.465Z",
+ "M411.116 1.44043V82.4374H396.957V1.44043H411.116Z",
+ "M442.555 82.437H428.396V17.639C428.396 7.079 434.396 0 446.995 0C458.275 0 463.315 5.76 466.675 14.999L490.314 66.718C491.274 68.638 492.835 70.077 495.474 70.077C498.474 70.077 500.274 68.277 500.274 65.517V1.44H514.553V66.117C514.553 76.797 508.433 83.877 495.954 83.877C484.674 83.877 479.515 78.117 476.154 68.877L452.515 17.159C451.435 14.759 449.994 13.679 447.475 13.679C444.235 13.679 442.555 15.479 442.555 18.359V82.437Z"
+];
+const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const ease = t => 1 - Math.pow(1 - t, 4);                       // ≈ cubic-bezier(.22,1,.36,1), zoals de hero
+const inout = t => t < .5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3) / 2;
+const clamp = (v,a=0,b=1) => Math.min(b, Math.max(a, v));
+let uid = 0; const nid = p => p + (++uid);
+const P = (attrs="", i) => PATHS.map((d,k) => `<path d="${d}" data-i="${k}" ${attrs}/>`).join("");
+const vbPoint = (svg, e) => { const r = svg.getBoundingClientRect(); return [(e.clientX - r.left) / r.width * VB_W, (e.clientY - r.top) / r.height * VB_H]; };
+const accent = () => getComputedStyle(document.body).getPropertyValue("--accent").trim();
+const logoColor = el => getComputedStyle(el).color;
+
+// tween met annuleer-token: tok.gen++ stopt alle lopende tweens van dat token
+function tween(tok, dur, fn, { e = ease, delay = 0 } = {}) {
+  const g = tok.gen;
+  return new Promise(res => {
+    const t0 = performance.now() + delay;
+    const f = now => {
+      if (tok.gen !== g) return res(false);
+      let t = (now - t0) / dur;
+      if (t < 0) { requestAnimationFrame(f); return; }
+      t = Math.min(1, t); fn(e(t), t);
+      t < 1 ? requestAnimationFrame(f) : res(true);
+    };
+    requestAnimationFrame(f);
+  });
+}
+
+/* ---------- 0. Geen animatie ---------- */
+function buildStatic(logo) { logo.innerHTML = `<svg viewBox="0 0 ${VB_W} ${VB_H}">${P('fill="currentColor"')}</svg>`; return () => {}; }
+
+/* ---------- 1. Data wordt mens (deeltjes) ---------- */
+function buildParticles(logo) {
+  logo.innerHTML = `<svg viewBox="0 0 ${VB_W} ${VB_H}">${P('fill="currentColor"')}</svg><canvas></canvas>`;
+  const svg = logo.querySelector("svg"), cv = logo.querySelector("canvas"), ctx = cv.getContext("2d");
+  let pts = [], W = 0, H = 0, S = 2, loop = 0, mx = -1e4, my = -1e4, loading = false, hovering = false;
+  function setup() {
+    const r = logo.getBoundingClientRect(); W = r.width; H = r.height; const dpr = devicePixelRatio || 1;
+    cv.width = W * 1.4 * dpr; cv.height = H * 4 * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, W * .2 * dpr, H * 1.5 * dpr);
+    const o = document.createElement("canvas"); o.width = Math.ceil(W); o.height = Math.ceil(H);
+    const c = o.getContext("2d"); c.scale(W / VB_W, H / VB_H); PATHS.forEach(d => c.fill(new Path2D(d)));
+    const data = c.getImageData(0, 0, o.width, o.height).data, step = Math.max(2.4, W / 150);
+    pts = [];
+    for (let y = step / 2; y < o.height; y += step) for (let x = step / 2; x < o.width; x += step)
+      if (data[(Math.floor(y) * o.width + Math.floor(x)) * 4 + 3] > 128) pts.push({ tx: x, ty: y, x, y, a: 1 });
+    S = step * .62;
+  }
+  function draw(color) {
+    ctx.clearRect(-W * .2, -H * 1.5, W * 1.4, H * 4); ctx.fillStyle = color;
+    for (const p of pts) { ctx.globalAlpha = p.a; ctx.fillRect(p.x - S / 2, p.y - S / 2, S, S); }
+    ctx.globalAlpha = 1;
+  }
+  function play() {
+    cancelAnimationFrame(loop); hovering = false; setup(); loading = true;
+    svg.style.transition = "none"; logo.dataset.mode = "dots"; requestAnimationFrame(() => svg.style.transition = "");
+    for (const p of pts) {
+      p.sx = p.tx + (Math.random() - .5) * W * .55; p.sy = p.ty + (Math.random() - .5) * H * 2.8;
+      p.d = p.tx / W * 380 + Math.random() * 160;
+    }
+    const t0 = performance.now(), col = logoColor(logo), DUR = 800;
+    const f = now => {
+      const el = now - t0;
+      for (const p of pts) { const t = clamp((el - p.d) / DUR), e = ease(t); p.x = p.sx + (p.tx - p.sx) * e; p.y = p.sy + (p.ty - p.sy) * e; p.a = clamp(t * 2.5); }
+      draw(col);
+      if (el < 540 + DUR) loop = requestAnimationFrame(f);
+      else { loading = false; logo.dataset.mode = ""; }   // pixels → het scherpe logo
+    };
+    loop = requestAnimationFrame(f);
+  }
+  logo.addEventListener("pointerenter", () => {
+    if (loading) return; hovering = true; setup(); logo.dataset.mode = "dots";
+    cancelAnimationFrame(loop);
+    const R = () => W * .1;
+    const f = () => {
+      let moving = false;
+      for (const p of pts) {
+        const dx = p.tx - mx, dy = p.ty - my, d = Math.hypot(dx, dy) || 1, rr = R();
+        let ox = 0, oy = 0; if (d < rr) { const k = (1 - d / rr) * rr * .55; ox = dx / d * k; oy = dy / d * k; }
+        const nx = p.x + (p.tx + ox - p.x) * .2, ny = p.y + (p.ty + oy - p.y) * .2;
+        if (Math.abs(nx - p.x) + Math.abs(ny - p.y) > .05) moving = true; p.x = nx; p.y = ny; p.a = 1;
+      }
+      draw(accent());
+      if (hovering || moving) loop = requestAnimationFrame(f); else logo.dataset.mode = "";
+    };
+    loop = requestAnimationFrame(f);
+  });
+  logo.addEventListener("pointermove", e => { const r = logo.getBoundingClientRect(); mx = e.clientX - r.left; my = e.clientY - r.top; });
+  logo.addEventListener("pointerleave", () => { hovering = false; mx = my = -1e4; });
+  return play;
+}
+
+/* ---------- 2. Scan ---------- */
+function buildScan(logo) {
+  const c = nid("sc"), b = nid("bd"), g = nid("bg");
+  logo.innerHTML = `<svg viewBox="0 0 ${VB_W} ${VB_H}">
+    <defs>
+      <clipPath id="${c}"><rect class="clip" x="-20" y="-10" width="${VB_W + 40}" height="104"/></clipPath>
+      <linearGradient id="${g}"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff"/></linearGradient>
+      <mask id="${b}" maskUnits="userSpaceOnUse" x="-100" y="-20" width="${VB_W + 200}" height="124"><rect class="band" x="-200" y="-10" width="90" height="104" fill="url(#${g})"/></mask>
+    </defs>
+    <g class="ghost" fill="none" stroke="currentColor" stroke-width="1" opacity="0">${P('vector-effect="non-scaling-stroke"')}</g>
+    <g clip-path="url(#${c})" fill="currentColor">${P()}</g>
+    <g mask="url(#${b})" style="fill:var(--accent)">${P()}</g>
+    <rect class="line" x="-200" y="-9" width="2" height="102" style="fill:var(--accent);filter:drop-shadow(0 0 6px var(--accent))" opacity="0"/>
+  </svg>`;
+  const q = s => logo.querySelector(s), clip = q(".clip"), band = q(".band"), line = q(".line"), ghost = q(".ghost");
+  const L = { gen: 0 }, H = { gen: 0 }; let busy = false;
+  const at = (x, withClip) => { line.setAttribute("x", x - 1); band.setAttribute("x", x - 90); if (withClip) clip.setAttribute("width", x + 20); };
+  async function sweep(tok, dur, withClip) {
+    busy = true; line.setAttribute("opacity", 1);
+    await tween(tok, dur, e => at(-10 + e * (VB_W + 20), withClip), { e: inout });
+    await tween(tok, 200, e => line.setAttribute("opacity", 1 - e));
+    at(-200, false); busy = false;
+  }
+  async function play() {
+    L.gen++; H.gen++;
+    clip.setAttribute("width", 0); ghost.setAttribute("opacity", 0);
+    tween(L, 250, e => ghost.setAttribute("opacity", .22 * e));
+    await sweep(L, 1000, true);
+    clip.setAttribute("width", VB_W + 40);
+    tween(L, 300, e => ghost.setAttribute("opacity", .22 * (1 - e)));
+  }
+  logo.addEventListener("pointerenter", () => { if (!busy) sweep(H, 650, false); });
+  return play;
+}
+
+/* ---------- 3. Match: twee helften klikken samen ---------- */
+function buildMatch(logo) {
+  const t = nid("t"), bo = nid("b"), MID = 42;
+  logo.innerHTML = `<svg viewBox="0 0 ${VB_W} ${VB_H}">
+    <defs><clipPath id="${t}"><rect x="-50" y="-20" width="${VB_W + 100}" height="${MID + 20}"/></clipPath>
+          <clipPath id="${bo}"><rect x="-50" y="${MID}" width="${VB_W + 100}" height="80"/></clipPath></defs>
+    <g class="top"><g clip-path="url(#${t})" fill="currentColor">${P()}</g></g>
+    <g class="bot"><g clip-path="url(#${bo})" fill="currentColor">${P()}</g></g>
+    <rect class="seam" x="0" y="${MID - .6}" width="${VB_W}" height="1.2" style="fill:var(--accent);filter:drop-shadow(0 0 4px var(--accent))" opacity="0"/>
+  </svg>`;
+  const top = logo.querySelector(".top"), bot = logo.querySelector(".bot"), seam = logo.querySelector(".seam");
+  const L = { gen: 0 }, H = { gen: 0 }; let h = 0;
+  const set = (slide, op, split) => {
+    top.setAttribute("transform", `translate(${-slide} ${-split})`); top.setAttribute("opacity", op);
+    bot.setAttribute("transform", `translate(${slide} ${split})`); bot.setAttribute("opacity", op);
+  };
+  const seamAt = (sx, op) => { seam.setAttribute("opacity", op); seam.setAttribute("transform", `translate(${VB_W / 2 * (1 - sx)} 0) scale(${sx} 1)`); };
+  async function play() {
+    L.gen++; H.gen++; h = 0; seamAt(0, 0);
+    await tween(L, 850, e => set(70 * (1 - e), clamp(e * 1.6), 0));
+    await tween(L, 260, e => seamAt(e, 1), { e: inout });      // klik: een mint naad licht op
+    await tween(L, 450, e => seamAt(1, 1 - e));
+  }
+  const hover = to => { H.gen++; const from = h; tween(H, 380, e => { h = from + (to - from) * e; set(0, 1, 3.2 * h); seamAt(1, h); }); };
+  logo.addEventListener("pointerenter", () => hover(1));
+  logo.addEventListener("pointerleave", () => hover(0));
+  return play;
+}
+
+/* ---------- 4. Spotlight ---------- */
+function buildSpot(logo) {
+  const gid = nid("sp");
+  logo.innerHTML = `<svg viewBox="0 0 ${VB_W} ${VB_H}">
+    <defs><radialGradient id="${gid}" gradientUnits="userSpaceOnUse" cx="0" cy="42" r="0">
+      <stop offset="0" style="stop-color:var(--accent)"/><stop offset=".35" style="stop-color:var(--accent);stop-opacity:.85"/><stop offset="1" stop-color="currentColor"/></radialGradient></defs>
+    <g fill="url(#${gid})">${P()}</g></svg>`;
+  const svg = logo.querySelector("svg"), gr = logo.querySelector("radialGradient");
+  const L = { gen: 0 }, H = { gen: 0 }; let r = 0;
+  const setR = v => { r = v; gr.setAttribute("r", v); };
+  async function play() {
+    L.gen++; H.gen++; svg.style.opacity = 0; gr.setAttribute("cy", 42);
+    tween(L, 500, e => svg.style.opacity = e);
+    setR(120);
+    await tween(L, 1300, e => gr.setAttribute("cx", -140 + e * (VB_W + 280)), { e: inout });
+    setR(0); svg.style.opacity = "";
+  }
+  const grow = to => { H.gen++; const from = r; tween(H, 320, e => setR(from + (to - from) * e)); };
+  logo.addEventListener("pointerenter", e => { L.gen++; svg.style.opacity = ""; const [x, y] = vbPoint(svg, e); gr.setAttribute("cx", x); gr.setAttribute("cy", y); grow(110); });
+  logo.addEventListener("pointermove", e => { const [x, y] = vbPoint(svg, e); gr.setAttribute("cx", x); gr.setAttribute("cy", y); });
+  logo.addEventListener("pointerleave", () => grow(0));
+  return play;
+}
+
+/* ---------- 5. Ontcijferen met de eigen letters ---------- */
+function buildDecode(logo) {
+  logo.innerHTML = `<svg viewBox="0 0 ${VB_W} ${VB_H}">${P('fill="currentColor"')}</svg>`;
+  const slots = [...logo.querySelectorAll("path")];
+  const cx = slots.map(p => { const b = p.getBBox(); return b.x + b.width / 2; });
+  const L = { gen: 0 }, H = { gen: 0 };
+  const show = (i, j, mint) => {
+    slots[i].setAttribute("d", PATHS[j]);
+    slots[i].setAttribute("transform", j === i ? "" : `translate(${cx[i] - cx[j]} 0)`);
+    slots[i].style.fill = mint ? "var(--accent)" : "";
+  };
+  function scramble(tok, idx, start, each, landAt, opacity) {
+    return Promise.all(idx.map((i, n) => new Promise(res => {
+      const g = tok.gen, t0 = performance.now() + start(n), end = t0 + landAt(n); let last = -1;
+      const f = now => {
+        if (tok.gen !== g) return res();
+        if (now < t0) { if (opacity) slots[i].style.opacity = 0; return requestAnimationFrame(f); }
+        slots[i].style.opacity = 1;
+        if (now >= end) { show(i, i, false); return res(); }
+        const step = Math.floor((now - t0) / each);
+        if (step !== last) { last = step; let j; do j = Math.floor(Math.random() * 6); while (j === i); show(i, j, true); }
+        requestAnimationFrame(f);
+      };
+      requestAnimationFrame(f);
+    })));
+  }
+  function play() { L.gen++; H.gen++; scramble(L, [0,1,2,3,4,5], n => n * 70, 55, n => 330 + n * 40, true); }
+  logo.addEventListener("pointerenter", () => { H.gen++; scramble(H, [3,4], n => n * 60, 55, () => 300, false); });
+  return play;
+}
+
+/* ---------- 6. Vloeistof ---------- */
+function buildLiquid(logo) {
+  const c1 = nid("lq"), c2 = nid("lm");
+  logo.innerHTML = `<svg viewBox="0 0 ${VB_W} ${VB_H}">
+    <defs><clipPath id="${c1}"><path class="w1"/></clipPath><clipPath id="${c2}"><path class="w2"/></clipPath></defs>
+    <g class="ghost" fill="none" stroke="currentColor" stroke-width="1" opacity="0">${P('vector-effect="non-scaling-stroke"')}</g>
+    <g clip-path="url(#${c2})" style="fill:var(--accent)">${P()}</g>
+    <g clip-path="url(#${c1})" fill="currentColor">${P()}</g>
+    <g class="over" clip-path="url(#${c2})" style="fill:var(--accent)" opacity="0">${P()}</g>
+  </svg>`;
+  const w1 = logo.querySelector(".w1"), w2 = logo.querySelector(".w2"), ghost = logo.querySelector(".ghost"), over = logo.querySelector(".over");
+  const wave = (level, phase, amp = 3.5) => {
+    let d = `M-30 ${VB_H + 30}`;
+    for (let x = -30; x <= VB_W + 30; x += 10) d += ` L${x} ${(level + Math.sin(x / 70 * Math.PI * 2 + phase) * amp).toFixed(2)}`;
+    return d + ` L${VB_W + 30} ${VB_H + 30}Z`;
+  };
+  const L = { gen: 0 }, H = { gen: 0 }; let lvl = VB_H + 10;
+  w1.setAttribute("d", wave(-20, 0, 0)); w2.setAttribute("d", wave(VB_H + 10, 0, 0));   // ruststand: vol logo, geen mint
+  async function play() {
+    L.gen++; H.gen++; over.setAttribute("opacity", 0);
+    tween(L, 250, e => ghost.setAttribute("opacity", .25 * e));
+    await tween(L, 1200, (e, t) => {
+      const y = VB_H + 8 - e * (VB_H + 18), amp = 4 * (1 - t * .7);
+      w2.setAttribute("d", wave(y - 6, t * 9, amp));      // mint rand loopt net voor de kleur uit
+      w1.setAttribute("d", wave(y, t * 9 + .6, amp));
+    }, { e: inout });
+    w1.setAttribute("d", wave(-20, 0, 0)); w2.setAttribute("d", wave(-20, 0, 0));
+    tween(L, 300, e => ghost.setAttribute("opacity", .25 * (1 - e)));
+  }
+  const fill = to => {
+    H.gen++; over.setAttribute("opacity", 1); const from = lvl, ph0 = performance.now();
+    tween(H, to < 0 ? 700 : 600, e => { lvl = from + (to - from) * e; w2.setAttribute("d", wave(lvl, (performance.now() - ph0) / 90, 3.5)); },
+      { e: inout }).then(done => { if (done && to > 0) over.setAttribute("opacity", 0); });
+  };
+  logo.addEventListener("pointerenter", () => { L.gen++; w1.setAttribute("d", wave(-20, 0, 0)); ghost.setAttribute("opacity", 0); lvl = VB_H + 8; fill(-10); });
+  logo.addEventListener("pointerleave", () => fill(VB_H + 8));
+  return play;
+}
+
+const IDEAS = [
+ { b: buildStatic, t: "Geen animatie", tag: ["ref", "Ter vergelijking"], story: "Gewoon het logo. Ook een goede keuze: de rest van de site beweegt al.", load: "—", hover: "—" },
+ { b: buildParticles, t: "Data wordt mens", tag: ["loud", "Opvallend"], story: "Losse pixels (data) vinden elkaar en worden het logo. Daarna wordt het gewoon het scherpe logo.", load: "Zo'n 1.500 pixels vliegen van links naar rechts naar hun plek, 0,8 s per pixel; klaar na ~1,35 s.", hover: "Het logo valt uiteen in mint pixels die voor je cursor wijken en terugveren." },
+ { b: buildScan, t: "Scan", tag: ["", "Rustig"], story: "Een mint scanlijn ‘leest’ het logo, zoals AI een profiel leest.", load: "Een lichte omtrek verschijnt; een gloeiende lijn gaat van links naar rechts en laat het volle logo achter, met een mint nagloed. 1 s.", hover: "De scanlijn gaat nog één keer over het logo (0,65 s)." },
+ { b: buildMatch, t: "Match", tag: ["", "Rustig"], story: "Twee helften schuiven naar elkaar en klikken vast: vraag en expert die matchen.", load: "Boven- en onderhelft schuiven van tegengestelde kanten in en sluiten; de naad licht kort mint op. ~1,5 s.", hover: "De helften gaan een paar pixels uit elkaar en de mint naad wordt zichtbaar." },
+ { b: buildSpot, t: "Spotlight", tag: ["", "Rustig"], story: "Een zacht mint licht in de letters dat de cursor volgt.", load: "Het logo komt op, er glijdt een mint licht door de letters van links naar rechts. 1,3 s.", hover: "Het licht volgt je cursor door de letters." },
+ { b: buildDecode, t: "Ontcijferen", tag: ["loud", "Opvallend"], story: "Elke letterplek flikkert door de andere logo-letters en ‘valt’ op zijn plek, alsof een systeem de naam ontcijfert.", load: "Van links naar rechts flikkeren de letters in mint en landen ze één voor één; klaar na ~0,7 s.", hover: "Alleen de A en I ontcijferen opnieuw." },
+ { b: buildLiquid, t: "Vloeistof", tag: ["loud", "Opvallend"], story: "Het logo loopt vol, met een golvend mint randje bovenop.", load: "Van onderen loopt het logo vol, met een golvend oppervlak; een mint rand gaat net voor de kleur uit. 1,2 s.", hover: "Mint vloeistof loopt het logo in; bij weggaan loopt het weer leeg." },
+];
+
+const wrap = document.getElementById("ideas"), plays = [];
+IDEAS.forEach((it, n) => {
+  const el = document.createElement("section"); el.className = "idea";
+  el.innerHTML = `
+    <div class="stage"><a class="logo" href="#" aria-label="Humain" onclick="return false"></a>${n ? '<button class="replay" type="button">↻ Opnieuw</button>' : ""}</div>
+    <div class="info"><h2>${n ? `<span class="num">${n}</span>` : ""}${it.t}</h2><p class="story">${it.story}</p>
+      <dl><dt>Page load</dt><dd>${it.load}</dd><dt>Hover</dt><dd>${it.hover}</dd></dl>
+      <span class="tag ${it.tag[0]}">${it.tag[1]}</span></div>`;
+  wrap.appendChild(el);
+  const play = it.b(el.querySelector(".logo")); plays.push(play);
+  el.querySelector(".replay")?.addEventListener("click", play);
+});
+const playAll = () => { if (!REDUCED) plays.forEach(p => p()); };
+const bg = document.getElementById("bg"), size = document.getElementById("size");
+bg.onclick = () => { const dark = document.body.dataset.bg !== "dark"; document.body.dataset.bg = dark ? "dark" : "light"; bg.setAttribute("aria-pressed", dark); bg.textContent = dark ? "Donkere achtergrond" : "Lichte achtergrond"; };
+size.onclick = () => { const on = size.getAttribute("aria-pressed") !== "true"; size.setAttribute("aria-pressed", on); document.documentElement.style.setProperty("--logo-w", on ? "11.25rem" : "22rem"); setTimeout(playAll, 350); };
+document.getElementById("all").onclick = playAll;
+(document.fonts?.ready || Promise.resolve()).then(() => requestAnimationFrame(playAll));
+</script>
+</body>
+</html>
