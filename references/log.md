@@ -343,3 +343,4 @@
 
 ## 2026-11-12 — Two-tone heading sweep (Aniek Velthuizen with Claude)
 - Grey part of every two-tone heading starts black and sweeps to grey on scroll into view; third embed in `Global | Custom Code`. Tested on a patched copy of Home first (hero, Split Content), then published to staging. Record: `decisions/motion.md`.
+- Same day, owner: words one by one instead of the sweep, and the turquoise Sticky Steps titles too. Tested on a patched copy of Home (Sticky Steps, light and dark), published to staging, re-checked on How It Works.
