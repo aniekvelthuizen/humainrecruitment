@@ -134,38 +134,64 @@ function run(el, ctx, tick) {
 }
 
 /* ---------- Donut ---------- */
-function sector(r0, r1, a0, a1) {
+// Ring sector whose two straight sides are pulled in by d (parallel to the radius),
+// so the gap between two pieces is equally wide from the inner to the outer edge.
+function sector(r0, r1, a0, a1, d) {
+  const i0 = Math.asin(d / r0), i1 = Math.asin(d / r1);
   const s = new THREE.Shape();
-  s.absarc(0, 0, r1, a0, a1, false);
-  s.absarc(0, 0, r0, a1, a0, true);
+  s.absarc(0, 0, r1, a0 + i1, a1 - i1, false);
+  s.absarc(0, 0, r0, a1 - i0, a0 + i0, true);
   s.closePath();
   return s;
 }
+const easeOutQuint = (x) => 1 - (1 - x) ** 5;
+
 function mountDonut(el) {
   const ctx = makeScene(el, { fov: 30, camPos: new THREE.Vector3(0, 0, 13.5), target: new THREE.Vector3(0, 0, 0) });
   // Clockwise from 12 o'clock, sizes in degrees (as the render).
   const parts = [
     ['purple', 92], ['lavender', 62], ['blue', 66], ['mint', 52], ['sky', 36], ['white', 38], ['pink', 14]
   ];
-  const R0 = 1.75, R1 = 2.85, DEPTH = 0.55, GAP = 0.035; // gap in radians
+  const R0 = 1.75, R1 = 2.85, DEPTH = 0.55;
+  const BEVEL = 0.07, GAP = 0.07;            // visible gap between pieces (scene units), same everywhere
   const tilt = new THREE.Group();       // fixed viewing angle
   const spin = new THREE.Group();       // turns slowly
   tilt.rotation.set(-0.38, -0.42, -0.05); // face turned towards the text (left), as the render
   tilt.add(spin); ctx.scene.add(tilt);
 
+  // Intro: the pieces start apart and float together, one after another.
+  const INTRO = { delay: 0.15, gap: 0.12, dur: 1.9, out: 1.3, lift: 0.9, turn: 0.35 };
+  const pieces = [];
   let a = Math.PI / 2; // start at 12 o'clock, go clockwise (negative angle)
   for (const [name, deg] of parts) {
     const a1 = a, a0 = a - THREE.MathUtils.degToRad(deg);
-    const geo = new THREE.ExtrudeGeometry(sector(R0, R1, a0 + GAP, a1 - GAP), {
-      depth: DEPTH, bevelEnabled: true, bevelThickness: 0.09, bevelSize: 0.07, bevelSegments: 6, curveSegments: 64
+    // The bevel grows the shape by BEVEL on every side, so pull each side in by half the gap plus the bevel.
+    const geo = new THREE.ExtrudeGeometry(sector(R0, R1, a0, a1, GAP / 2 + BEVEL), {
+      depth: DEPTH, bevelEnabled: true, bevelThickness: 0.09, bevelSize: BEVEL, bevelSegments: 6, curveSegments: 64
     });
     geo.translate(0, 0, -DEPTH / 2);
-    spin.add(new THREE.Mesh(geo, glassMat(D[name])));
+    const mesh = new THREE.Mesh(geo, glassMat(D[name]));
+    const mid = (a0 + a1) / 2;
+    const dir = new THREE.Vector3(Math.cos(mid), Math.sin(mid), 0);
+    spin.add(mesh);
+    pieces.push({ mesh, dir, i: pieces.length });
     a = a0;
   }
 
+  const place = (t) => {
+    for (const p of pieces) {
+      const k = t === null ? 1 : easeOutQuint(clamp01((t - INTRO.delay - p.i * INTRO.gap) / INTRO.dur));
+      const off = 1 - k;
+      p.mesh.position.copy(p.dir).multiplyScalar(INTRO.out * off);
+      p.mesh.position.z = INTRO.lift * off * (p.i % 2 ? 1 : -1);
+      p.mesh.rotation.set(INTRO.turn * off * p.dir.y, -INTRO.turn * off * p.dir.x, 0);
+      p.mesh.visible = t === null || t > INTRO.delay + p.i * INTRO.gap - 0.05;
+    }
+  };
+
   run(el, ctx, (t) => {
-    if (t === null) return;               // reduced motion: still
+    place(t);
+    if (t === null) return;               // reduced motion: still, assembled
     spin.rotation.z = -t * (Math.PI * 2 / 40);   // one turn per 40 s
     tilt.rotation.x = -0.38 + Math.sin(t * 0.35) * 0.03; // a slow breath
   });
