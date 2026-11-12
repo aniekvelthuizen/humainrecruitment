@@ -1,5 +1,6 @@
 // Headless check of the quote word reveal (decisions/motion.md, 2026-11-12) on a published page (Node 22+, Chrome, no dependencies).
 //   node references/quote-reveal-check.mjs [url] [outdir]
+// Cards: testimonial card entrance (quote mark, stars, text), left to right.
 // Per quote: hidden before it is in view, words fade in one by one after scrolling to it, height unchanged, ends «done».
 // Then with reduced motion: no split, quote visible at once. Console errors listed.
 import { spawn } from 'node:child_process';
@@ -38,7 +39,29 @@ await send('Runtime.enable');
 await send('Page.enable');
 await send('Emulation.setDeviceMetricsOverride', { width, height: 900, deviceScaleFactor: 1, mobile: width < 768 });
 
-const report = { url, width, quotes: [], reduced: null };
+const report = { url, width, cards: null, quotes: [], reduced: null };
+// Cards: testimonial cards in view together start left to right; per card when the quote mark, the stars and the text
+// are visible (opacity > 0.05) and settled (opacity > 0.95), height unchanged, hover veil and dark mark still work after.
+await send('Page.navigate', { url: url + (url.includes('?') ? '&' : '?') + 'v=' + Date.now() });
+await sleep(4000);
+report.cards = await ev(`(async () => {
+  const cards = [...document.querySelectorAll('[data-card-reveal]')].filter((c) => c.offsetHeight > 0);
+  if (!cards.length) return null;
+  const h0 = cards.map((c) => c.offsetHeight);
+  const parts = (c) => ({ icon: c.querySelector('[data-card-reveal-part="icon"]'), star: c.querySelector('[data-card-reveal-part="stars"] > :last-child'), text: c.querySelector('[data-card-reveal-part="text"]') });
+  const hiddenBefore = cards.map((c) => Object.values(parts(c)).filter(Boolean).every((e) => +getComputedStyle(e).opacity < 0.05));
+  const top = Math.min(...cards.map((c) => c.getBoundingClientRect().top + scrollY)), bottom = Math.max(...cards.map((c) => c.getBoundingClientRect().bottom + scrollY));
+  window.scrollTo(0, (top + bottom) / 2 - innerHeight / 2);
+  const t0 = performance.now(), seen = cards.map(() => ({}));
+  while (performance.now() - t0 < 3000) {
+    const t = Math.round(performance.now() - t0);
+    cards.forEach((c, i) => { for (const [k, e] of Object.entries(parts(c))) { if (!e) continue; const o = +getComputedStyle(e).opacity;
+      if (o > 0.05 && seen[i][k + 'In'] == null) seen[i][k + 'In'] = t; if (o > 0.95 && seen[i][k + 'Done'] == null) seen[i][k + 'Done'] = t; } });
+    await new Promise((r) => setTimeout(r, 25));
+  }
+  return cards.map((c, i) => ({ left: Math.round(c.getBoundingClientRect().left), hiddenBefore: hiddenBefore[i], ...seen[i], state: c.dataset.cardState,
+    heightSame: c.offsetHeight === h0[i], leftover: c.querySelectorAll('[data-card-reveal-part][style*="opacity"], [data-card-reveal-part] > [style*="opacity"]').length }));
+})()`);
 await send('Page.navigate', { url: url + (url.includes('?') ? '&' : '?') + 'v=' + Date.now() });
 await sleep(4000);
 const sels = await ev(`[...document.querySelectorAll('[data-quote-reveal]')].filter((q) => q.offsetHeight > 0).map((q, i) => (q.setAttribute('data-qcheck', i), '[data-qcheck="' + i + '"]'))`);
@@ -47,7 +70,7 @@ for (const sel of sels) {
     return { text: q.textContent.trim().slice(0, 60), state: q.dataset.quoteState, words: w.length, visibleWords: [...w].filter((s) => +getComputedStyle(s).opacity > 0.01).length, h: q.offsetHeight }; })()`);
   await ev(`window.scrollTo(0, document.querySelector('${sel}').getBoundingClientRect().top + scrollY - innerHeight / 2)`);
   const samples = [];
-  for (let t = 0; t <= 1800; t += 150) {
+  for (let t = 0; t <= 2700; t += 150) {
     samples.push(t + 'ms ' + (await ev(`[...document.querySelector('${sel}').querySelectorAll('[data-quote-word]')].map((s) => (+getComputedStyle(s).opacity).toFixed(1)).join(' ')`)));
     if (t === 450) await shotQuote(sel, `quote-${sels.indexOf(sel)}-mid.png`);
     await sleep(150);

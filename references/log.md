@@ -369,3 +369,6 @@
 
 ## 2026-11-12 — Two-tone headings: words one by one (Aniek Velthuizen with Claude)
 - Owner: words one by one instead of the sweep, and the turquoise Sticky Steps titles too. Tested on a patched copy of Home (Sticky Steps, light and dark), published to staging, re-checked on How It Works.
+
+## 2026-11-12 — Testimonial cards: entrance — Aniek Velthuizen with Claude
+- Owner round: word reveal tried on Card Testimonial text (stagger 0.03), then replaced at the owner's request by a card entrance — quote mark pops, stars light up, text fades as one block, cards 0.15 s apart left to right. Attributes on Card Testimonial (`data-card-reveal` on `card_testimonial_element` `a9dd8c48-…`, `data-card-reveal-part` icon `07f447fb-…` / stars `af02a6ac-…` / text `4c967389-…`); `data-quote-reveal*` removed from the text again. Published to staging 2× more; `quote-reveal-check.mjs` at 1512 / 402: hidden before view, order left to right, heights unchanged, no leftover inline styles, reduced motion static, console clean.
