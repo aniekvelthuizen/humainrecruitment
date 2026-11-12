@@ -77,12 +77,13 @@
   <strong>Variant</strong>
   <span class="seg" id="modes">
     <button type="button" data-mode="off">Uit</button>
-    <button type="button" data-mode="drift" aria-pressed="true">A · Drift</button>
-    <button type="button" data-mode="depth">B · Diepte</button>
+    <button type="button" data-mode="drift">A · Drift</button>
+    <button type="button" data-mode="depth" aria-pressed="true">B · Diepte</button>
     <button type="button" data-mode="tilt">C · Kantelen</button>
   </span>
   <label>Sterkte <input id="strength" type="range" min="2" max="24" step="1" value="8"> <output id="strengthOut">8 px</output></label>
-  <label>Traagheid <input id="ease" type="range" min="2" max="20" step="1" value="8"> <output id="easeOut">0.08</output></label>
+  <label>Snelheid <input id="ease" type="range" min="5" max="80" step="1" value="20"> <output id="easeOut">0.020</output></label>
+  <label><input id="invert" type="checkbox" checked> Tegen de muis in</label>
   <span class="note" id="rm"></span>
 </div>
 
@@ -134,7 +135,8 @@
 (() => {
   const fine = matchMedia('(hover: hover) and (pointer: fine)');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
-  const state = { mode: 'drift', strength: 8, ease: 0.08 };
+  // invert: cursor right → person left (owner, 2026-11-12); the light behind goes with the cursor
+  const state = { mode: 'depth', strength: 8, ease: 0.02, invert: true };
   document.getElementById('rm').textContent =
     reduce.matches ? 'Let op: je systeem vraagt om minder beweging — op de site staat het dan uit (hier aan voor de demo).' :
     !fine.matches ? 'Touch-apparaat: op de site staat het hier uit.' : '';
@@ -150,7 +152,9 @@
   const s = document.getElementById('strength'), so = document.getElementById('strengthOut');
   s.addEventListener('input', () => { state.strength = +s.value; so.textContent = s.value + ' px'; });
   const e = document.getElementById('ease'), eo = document.getElementById('easeOut');
-  e.addEventListener('input', () => { state.ease = e.value / 100; eo.textContent = state.ease.toFixed(2); });
+  e.addEventListener('input', () => { state.ease = e.value / 1000; eo.textContent = state.ease.toFixed(3); });
+  const inv = document.getElementById('invert');
+  inv.addEventListener('change', () => { state.invert = inv.checked; panels.forEach(p => p.kick()); });
 
   // One controller per panel. The whole section listens; the target is the cursor
   // relative to the panel centre, normalised and clamped to -1..1.
@@ -174,7 +178,7 @@
       raf = 0;
       x += (tx - x) * state.ease;
       y += (ty - y) * state.ease;
-      const m = state.strength, mode = state.mode;
+      const m = state.strength * (state.invert ? -1 : 1), mode = state.mode;
       if (mode === 'off') {
         fg.style.transform = ''; bg.style.transform = '';
       } else if (mode === 'drift') {
@@ -187,7 +191,7 @@
         fg.style.transform = `perspective(900px) translate3d(${x * m * 0.6}px, ${y * m * 0.3}px, 0) rotateY(${x * m * 0.25}deg) rotateX(${-y * m * 0.12}deg)`;
         bg.style.transform = '';
       }
-      if (Math.abs(tx - x) > 0.001 || Math.abs(ty - y) > 0.001) raf = requestAnimationFrame(tick);
+      if (Math.abs(tx - x) > 0.0005 || Math.abs(ty - y) > 0.0005) raf = requestAnimationFrame(tick);
     }
     section.addEventListener('pointermove', ev => { if (ev.pointerType === 'mouse' && inView) onMove(ev); });
     section.addEventListener('pointerleave', onLeave);
