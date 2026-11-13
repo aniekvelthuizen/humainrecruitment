@@ -162,3 +162,22 @@ Measured **ink to ink** (eyebrow baseline → title cap top, title baseline → 
 - Page Header: content gap tablet 0.8125rem, phones 0.6875rem; Search and Split lose their own eyebrow gap (now as base). Layout row gap tablet 1rem, phones 0.6875rem (replaces this morning's 8 px: the owner's newer ask wins). Vertical and Split: aside `padding-top` 0.9375rem on desktop; Split layout rows `auto 1fr` (the cards no longer stretch the title row). Split visual on phones `margin-top` 0.8125rem (cards keep 24 px from the text).
 Result on staging, all 14 pages at 402, 768, 991, 1280, 1512: every section within 3 px of the reference. Sticky Steps and Stagger Cards (trimmed, fixed gaps) stay as they are: 26–33 / 27–35, within 3 px. Page Header text and eyebrow are smaller on phones (Text Main, Label) by an earlier owner choice; only the spacing changed.
 A new section follows the reference build; with another title size, measure ink to ink against it.
+
+## 2026-11-13 — Every section and card slot is restricted, with a tooltip (Aniek Velthuizen, via Claude)
+Owner (Aniek): «marketer, hoe weten ze welke component daarin mag» → go through all components. Choice: every slot in our own components gets **Allowed components** (Designer › slot › Settings) and a **tooltip** on the slot prop (Properties › slot › Property settings). Webflow applies restrictions to the Marketer role only; Designers and the API still place anything. Slot tooltips cannot be set through the API ("not an updatable prop type"), so both live in the Designer only.
+Left open (Allow all, no tooltip): the Lumos wrappers and building blocks with free content — Section, Block, Content Wrapper, Grid, Layout, Button Wrapper, Form Fieldset, Form Select, Slider, Accordion List, Tab, Modal, Dropdown — and Footer Group (0 instances).
+
+| Component › slot | Allowed |
+|---|---|
+| Split Content › List · Visual | Card Bullet · Score Chart, Step List |
+| Card Primary › Items · Card Expert › Items · Process Step › Items | Card Bullet |
+| Score Chart › Items · Step List › Items | Score Item · Step Item |
+| Stagger Cards, Card Grid, Facts Row, Pricing Row, Values Grid (Start, Center, End) | Card Primary |
+| Sticky Steps › Steps | Card Primary, Process Step |
+| Spotlight Grid (3 slots, done 2026-11-12) | Card Primary, Card Testimonial, Reviews · picked |
+| Stage Slider › Slider | Slider |
+| Page Header › Row · Visual | Pricing Row, Opportunity List, Logo Marquee · Card Expert |
+| Team Grid · Team Fan · Cases Grid · Opportunity List · Vacancy List · Opportunity Row | its own «… Items» list (Opportunity Row: Opportunity Open Roles Items; Similar keeps its page-built list) |
+
+Tooltips name the variant to pick and the count where it matters (e.g. Stagger Cards: Base 3 × Glass, Plain 3 × Engagement, Gradient 5 × Journey; Facts Row four Stat cards), and for CMS lists where to edit the items. Read back through the API: all 27 slots carry their tooltip. Marketer test (`&simulateRole=marketer`, Home, Split Content › Visual): the Components panel says «This slot is restricted» and lists only Score Chart and Step List.
+**Rule from now on:** a new slot or a new component that belongs in an existing slot means updating that slot's Allowed list and tooltip in the Designer.

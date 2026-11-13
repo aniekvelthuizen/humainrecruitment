@@ -93,3 +93,6 @@ Owner (Aniek), with a screenshot of PDE «Why This Matters»: text and step rows
 
 ## 2026-11-12 — Spacing as the site rhythm (Aniek Velthuizen, via Claude)
 Title and text margin-top 0.8125rem / phones 0.75rem (were 16 / 24), see `decisions/site.md` › «One rhythm for eyebrow → title → text».
+
+## 2026-11-13 — Slots restricted for marketers (Aniek Velthuizen, via Claude)
+List: only Card Bullet; Visual: only Score Chart and Step List; both with a tooltip. Site-wide record: `decisions/site.md` › «Every section and card slot is restricted».
