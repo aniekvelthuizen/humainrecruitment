@@ -479,3 +479,4 @@ Page Header Opportunity: Buttons row shown only ≤ 767; template Primary Text "
 
 ## 2026-11-16 — Opportunities dummy content (Aniek Velthuizen, via Claude)
 All 12 Opportunities items now have intro, summary and four detail texts (English dummy copy). See `decisions/cms.md`, 2026-11-16. Published to staging.
+- 2026-11-16 (Aniek, via Claude): Vacancy List empty state built (title, text, Primary button to Submit resume, texts as props in Vacancy List Items › No Results), same look as Opportunity List's no-results box. Published to staging, checked by simulation at 1024 and 375. Record: `decisions/components/vacancy-list.md`. Review agent not run: the reviewer's Webflow connection does not reach this site.
