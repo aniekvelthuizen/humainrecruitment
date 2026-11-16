@@ -1,0 +1,17 @@
+name: Check kit
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check links, section references, version bump; report client names, duplicates and growth
+        run: node scripts/check-kit.mjs --base "${{ github.event.pull_request.base.sha || github.event.before }}"

@@ -22,13 +22,14 @@ Shape and rules in [structure.md](structure.md); the plan names:
 | Topic | Rule |
 |---|---|
 | Component | Rebuild the Lumos `Nav` (and its `Menu`) in place; keep Lumos class names. Never a second nav. |
-| Bar | One Webflow Navbar at every width when the design opens the same menu everywhere; remove the desktop/mobile split it no longer needs. |
+| Pattern | **A. Dropdowns on desktop, menu panel on mobile** (the Lumos starter as it ships: keep `nav_desktop_wrap`, its dropdowns and backdrop, and the mobile Navbar) or **B. one panel at every width** (one Webflow Navbar; remove the desktop/mobile split it no longer needs). The design decides; motion for both in [references/motion.md](${CLAUDE_PLUGIN_ROOT}/references/motion.md) §5. |
 | Links | Every link is the site's **button component** (variants for bar link, panel row, child row, contact link). Hover, roll and focus come with it. |
 | Link content | One `Menu` component holds every link; its variants (`Bar`, `Panel`) show the list each place needs. |
 | States | Page-top / scrolled = runtime state (scroll). Pages that start minimised = a Nav **Variant**. Never a variant for a breakpoint. |
 | Sizes | Nav height and side padding in the Lumos `nav/*` variables, fluid between the mobile and desktop design values (`clamp()` in the variable, [build/foundations.md](../build/foundations.md) §4). |
-| Code | Attribute contract `data-nav="…"`; motion in Webflow Interactions (IX3) where it can do it, the rest in `Global | Custom Code` ([motion.md](motion.md)). |
+| Code | Attribute contract `data-nav="…"`; mechanism by the ladder in [references/motion.md](${CLAUDE_PLUGIN_ROOT}/references/motion.md) §3 — Lumos' own nav CSS kept and tuned, IX3 only for scroll sequences that need no mid-way reversal, the rest in the custom-code block (pattern B details: [motion.md](motion.md)). |
 | Missing pages | Link targets that do not exist are created (copy of the site's standard page), or the plan asks. |
+| SEO | Every menu item a real `<a href>` in the served HTML, a dropdown's overview page as a link inside its panel, no `h1` in the nav ([seo-blocks.md](${CLAUDE_PLUGIN_ROOT}/references/seo-blocks.md) rules 1, 5). Check: `seo-audit.mjs <url>` (and `--mobile`) shows no `nav-js` or `nav-no-href`. |
 
 Bundle the questions (one round): hover (button hover vs the design's), missing pages, localization (needs a Webflow add-on), panel speed (Figma prototypes are often slow), how the prototype is read (scroll vs time). One OK. Plan to `references/plans/<date>-navigation.md`.
 
@@ -42,18 +43,19 @@ In this order, each read back after writing ([structure.md](structure.md) §2–
 4. **Menu**: clear the starter's demo links, build the panel list and the bar list, insert button instances, set their props.
 5. **Nav**: one bar (logo clip › link row › Navbar menu › Menu/Close button), the panel layout, attributes, variant(s).
 6. **Pages**: create missing link targets; SEO titles.
-7. **Motion** ([motion.md](motion.md)): scroll fold, colour over dark sections, panel slide and what happens inside the open panel, Menu/Close roll, hover.
+7. **Motion**, smooth from this first version: pattern A — [references/motion.md](${CLAUDE_PLUGIN_ROOT}/references/motion.md) §5A; pattern B — scroll fold, colour over dark sections, panel slide, inside the open panel, Menu/Close roll ([motion.md](motion.md)); both — hover (§5 there).
 
-Designer-only steps (a Locales list element, a navbar-trigger interaction, switching URL links to page links): queue them and do them in one Designer pass in the user's Chrome ([webflow-mcp.md](${CLAUDE_PLUGIN_ROOT}/references/webflow-mcp.md) §11 "Queue, then one pass"); otherwise give literal steps.
+Designer-only steps (a Locales list element, a navbar-trigger interaction, switching URL links to page links): queue them and do them in one Designer pass in the client's Designer Chrome ([designer/README.md](${CLAUDE_PLUGIN_ROOT}/references/designer/README.md) "Queue, then one pass"); otherwise give literal steps.
 
 ## 4. Verify
 
-The Designer snapshot only judges layout: the menu panel is hidden until opened (no snapshot), masks render as squares, and IX3 and custom code do not run on the canvas. Measure in a browser: [scripts/nav-check.mjs](scripts/nav-check.mjs) on the published staging page (publishing needs the user's OK), with `--dark` to inject a dark section when the site has none yet. Done when, at 1440, the link-row breakpoint, 991 and 375:
+The Designer snapshot only judges layout: the menu panel is hidden until opened (no snapshot), masks render as squares, and IX3 and custom code do not run on the canvas. Measure in a browser: [scripts/nav-check.mjs](scripts/nav-check.mjs) on the published staging page (publishing to staging needs no OK), with `--dark` to inject a dark section when the site has none yet. Done when, at 1440, the link-row breakpoint, 990 and 375:
 
 - top of page and scrolled states match the design; the return to the top restores everything; a quick down-and-up ends in the top state;
 - no link label changes height (wraps) during any animation, and hover moves no neighbour (shift < 0.5 px);
 - the Menu button is never visible next to the links at the top on desktop, and always reachable below the link-row breakpoint;
 - the panel opens and closes, list rows are equal height with one equal line between them, nothing overflows horizontally;
+- every moving part passes the motion test ([references/motion.md](${CLAUDE_PLUGIN_ROOT}/references/motion.md) §9); pattern A: dropdown A → B closes A fully before B opens, a click halfway turns around, Esc closes, Tab stays inside the open mobile menu;
 - over a dark section the bar is light, and dark again after it; with the panel open over a dark section the bar text is dark;
 - the logo's accent colour renders (structure.md §3); console clean.
 

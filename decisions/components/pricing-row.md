@@ -66,3 +66,6 @@ Simulated on /pricing and /hire-an-expert at 1512, /pricing at 402, published pa
 
 ## 2026-11-12 — Prices fly in on scroll (owner)
 The prices reveal word by word like the quotes, 0.3 s apart left to right; in the Rates header after the row's own rise. Lives in the global quote-reveal embed: `decisions/motion.md` › Pricing Row prices. Done by Aniek Velthuizen with Claude.
+
+## 2026-11-12 — Spacing as the site rhythm (Aniek Velthuizen, via Claude)
+Header gap 1.5625rem / phones 1.3125rem, intro gap phones 1.75rem, see `decisions/site.md` › «One rhythm for eyebrow → title → text».

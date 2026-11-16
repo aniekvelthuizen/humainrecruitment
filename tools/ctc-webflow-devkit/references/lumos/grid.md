@@ -18,18 +18,11 @@ The default way to lay out content: column count per breakpoint, gap, and varian
 
 Modes on the grid utilities: **Column Count** (max columns), **Gap** (both axes; override the vertical gap in the panel or with a utility), **Minimum Column Width** (custom property; when columns wrap).
 
-```html
-<style>
-@container (width < 40em) {
-	.blog_cms_list { --_column-count---value: 2 !important; }
-}
-@container (width < 20em) {
-	.blog_cms_list { --_column-count---value: 1 !important; }
-}
-</style>
-```
+The Lumos docs set `--_column-count---value` per container size in a `<style>` embed with `@container` rules. *(house)* That is styling in code ([lumos-rules.md](../lumos-rules.md) §0), and the API refuses custom properties on a class ([webflow-mcp.md](../webflow-mcp.md) §2): use the Grid component's column count, or set the value in the Designer UI.
 
 Column and row utilities on children set span, start and order.
+
+*(house)* Lumos `Layout` Columns is a 12-column grid with `:where()` spans: unequal columns are span overrides on the column classes, not max-width or flex. Lumos Layout and Grid respond to the **container** width, so a breakpoint-only override on top of them switches at a different width (seen ~830–991): set the override at the width the container query flips, or let the component do it.
 
 ## On a custom class (when the utilities do not fit) *(house)*
 

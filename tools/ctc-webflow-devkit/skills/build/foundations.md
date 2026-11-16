@@ -1,6 +1,6 @@
 # Source: the Figma design system (site foundations)
 
-Use when a Lumos site has to take over a Figma file's variables and text styles before any section is built: colours, themes, fonts, type scale, spacing, widths, radius, borders. Variables and a handful of `u-text-style-*` classes only; no elements. Webflow call shapes and refusals in [webflow-mcp.md §8](../../references/webflow-mcp.md#8-variables).
+Use when a Lumos site has to take over a Figma file's variables and text styles before any section is built: colours, themes, fonts, type scale, spacing, widths, radius, borders. Variables and a handful of `u-text-style-*` classes only; no elements. Webflow call shapes and refusals in [webflow-mcp.md §3](../../references/webflow-mcp.md#3-variables-and-modes).
 
 ## 1. Read both sides
 
@@ -29,7 +29,7 @@ Order: swatches → Theme (every mode) → Typography → Spacing → new collec
 
 Lumos keeps a fluid size as a `clamp()` formula **in the variable's own value** (a fresh starter still has it on `site/gutter`). Follow that: no Fluid Builder app, no `:root` block in custom code (the Variables panel would then show something the site does not do), no fixed values over Lumos' formulas without a formula to replace them.
 
-The API refuses formulas, so the agent types each formula from `fluid-values.md` into the Variables panel in the user's Chrome and reads it back (steps: [webflow-mcp.md](../../references/webflow-mcp.md) §11). Lumos form, MIN/MAX in rem:
+The API refuses formulas, so the agent types each formula from `fluid-values.md` into the Variables panel in the client's Designer Chrome and reads it back (steps: [designer/README.md](../../references/designer/README.md) "Manual routes"). Lumos form, MIN/MAX in rem:
 
 ```
 clamp(MIN * 1rem, ((MIN - ((MAX - MIN) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((MAX - MIN) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), MAX * 1rem)

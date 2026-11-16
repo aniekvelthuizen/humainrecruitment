@@ -14,7 +14,9 @@ Read, in order:
 3. The design: `references/figma/<page>/section-NN.png` / `.md` (or the frame from your brief; Figma calls cost quota, only when the file is missing)
 4. The plugin's `skills/review/checks.md` (every area, every line) and the rules it points to
 
-Then check, following checks.md: read the build from the API, render the published page in headless Chrome at every width (`sweep.mjs` for the page, the fixture's `measure.mjs` for the component's numbers, `interact.mjs` for anything a visitor can click, drag, hover or tab to), and compare with the design and the rules.
+Then check, following checks.md: read the build from the API, render the published page in headless Chrome at every width (`sweep.mjs` for the page, the fixture's `measure.mjs` for the component's numbers, `interact.mjs` for anything a visitor can click, drag, hover or tab to, the fixture's `seo-audit.mjs --block` for the component's SEO), and compare with the design and the rules.
+
+**SEO** (checks.md §1c): run the fixture's `seo-audit.mjs --block` on the component and keep its output in your evidence folder; an SEO ✅ without that run is `?`.
 
 **Look at it like the owner will.** Before you write the return, open every screenshot you took — at rest, during a drag, after each click — and ask: would a visitor find this ugly or confusing? Things sliding over text, a default grey state, something jumping, an empty band. Numbers that check out do not make an ugly picture fine; the owner finds these in ten seconds of scrolling, so you must find them first.
 

@@ -95,3 +95,7 @@ Owner, after the entry above: Reset dimmed and not clickable until a filter is s
 - **Reset:** inactive while search is empty (after trim) and all three selects are at "All …". Inactive = `data-inactive` on `_submit` (opacity .4, no pointer events, no hover lift) and `aria-disabled="true"` on its button; the click handler also does nothing then. `aria-disabled`, not `disabled`: a real disabled button drops focus to the page the moment Reset is used. Updates on every keystroke and select change, and on load from the URL.
 - **Cross:** turns 90° on hover and keyboard focus (300 ms, `cubic-bezier(.65,.05,.36,1)`, the site's motion curve) and turns in from −90° with a fade when it appears. Off under `prefers-reduced-motion`.
 Embeds `…605e` and `…606e` written from the sources and read back. **Not published yet:** session "Taalswitch naar design" asked for no publish while it works in the Designer.
+
+## 2026-11-12 — Empty state and load-more text are props (owner; Aniek Velthuizen, via Claude)
+**No Results** › Empty Title, Empty Text, Clear Button Text; **Buttons** › Load More Text. Bound to `opportunity-list_empty-title` / `_empty-text` and the two `Button Main` instances. Defaults = the old texts; verified on /opportunities.
+Kept in the definition: filter labels, select options (must match the CMS values the filter script compares), «Show all filters» / «Reset» (the script swaps their state) and «Open roles · sorted by newest».

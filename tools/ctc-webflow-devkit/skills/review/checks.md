@@ -1,6 +1,6 @@
 # What a review checks
 
-Seven areas, one column each in the report. Every line here is something that has shipped wrong before. The deeper rule behind each area is linked; read it when a line is unclear. A site's `decisions/` overrides the kit: an owner choice written there is not a finding.
+Nine areas, one column each in the report. Every line here is something that has shipped wrong before. The deeper rule behind each area is linked; read it when a line is unclear. A site's `decisions/` overrides the kit: an owner choice written there is not a finding.
 
 Widths: the design widths plus every breakpoint — **1440, 1280, 990, 768, 767, 479, 375** (990, not 991: the ≤ 991 rule may not match at 991 exactly). Also **900** when the section uses Lumos `Layout` or `Grid`: they switch on the container's width, so a breakpoint override on top can disagree between ~830 and 991.
 
@@ -22,17 +22,29 @@ Never submit a real form, click "buy", or send anything outward. Check a form by
 
 - **Use it like a visitor, then look at the pictures.** Every section with something interactive gets `node ${CLAUDE_PLUGIN_ROOT}/skills/review/interact.mjs <url> --section <selector> --out <evidence>/interact --widths 1440,768,375`: it clicks every tab, drags every slider both ways and past both ends, presses the arrows, hovers and tabs through with the keyboard, and photographs each step, also *during* a drag. Then open every picture. "It works" is not enough — it has to look right while it moves and after it stops.
 - Moving content never runs over fixed content: no slide, card or panel over the title, the text, the tab bar or the buttons next to it, during or after a drag or an arrow click (interact.mjs flags it; the pictures show what it misses). A slider that shows slides outside its column needs them hidden or faded where they meet other content.
-- Everything the design means to be interactive works: tabs switch, sliders move by drag, arrows and dots, accordions open and close, toggles toggle. Every tab or state keeps the same layout — the section does not grow, stack or jump (interact.mjs flags a height change). Check the tab with the fewest items too: a slider with nothing to slide hides its arrows, and a row that collapses lets the next thing (tab bar, button) ride up into the cards.
+- Everything the design means to be interactive works: tabs switch, sliders move by drag, arrows and dots, accordions open and close (smoothly, both ways, and turn around when clicked halfway), dropdowns and menus open and close the same way, toggles toggle. Every tab or state keeps the same layout — the section does not grow, stack or jump (interact.mjs flags a height change). Check the tab with the fewest items too: a slider with nothing to slide hides its arrows, and a row that collapses lets the next thing (tab bar, button) ride up into the cards.
 - No frame, ring or outline after a mouse click or drag; only keyboard focus draws one. The active tab, current dot and hovered card look designed, not like the browser's or Webflow's default (a grey block is Webflow's default `w--current`). Rest, hover and active each look different: active reads stronger than hover, and hover uses the site's own hover (the button's, in `decisions/`), not just a colour change that looks like active.
 - Every link goes somewhere real: no empty link, no `#`, no anchor that is not on the page, page links point to pages that exist. Buttons that should link do. After pages moved into a folder: Webflow 301s the old paths, but typed URLs in component link props keep them — grep the published HTML for the old paths.
 - An anchor jump lands with its heading below the nav **and** any sticky bar under it (`scroll-margin-top` per breakpoint), at phone width too.
-- Every page and CMS template has an SEO title and description: a template with empty SEO shows the site name as `<title>` on every item; Lumos ships the placeholder "Place website meta description here" on Home.
+- Every page and CMS template has an SEO title, description and JPG/PNG share image, in every locale, following the [seo](../seo/SKILL.md) skill: run its `seo-check.mjs` over the pages touched (it flags placeholders). A template with empty SEO shows the site name as `<title>` on every item. A CMS item's SEO comes from its own SEO fields, never a content field.
 - CMS: lists are bound, filtered the way the page needs (on a template: to the current item), sorted, and show the right items — not drafts, not "No items found." where content is expected. Text that exists as a CMS field is bound, not typed in.
 - Optional parts hide when empty (native "is set" conditions, visibility toggles): no empty band, no lone label, no number without its logo.
 - Nothing shows, then hides, then animates in on load. Nothing stays invisible when a reveal fails.
 - The first state is visible without scripts (first slide, active tab), so the Designer canvas reads right ([componentize](../componentize/SKILL.md) §2).
 - No console errors from the site's own code (sweep.mjs lists them).
-- A list built from a slot (`role=list` on the parent): every item root carries `role=listitem`, or screen readers read a list with no items.
+- A list built from a slot (`role=list` on the parent): every item root carries `role=listitem` (never the link itself), or screen readers read a list with no items.
+
+## 1b. A11y — [accessibility/criteria.md](../accessibility/criteria.md)
+
+- Once per page in scope: `node ${CLAUDE_PLUGIN_ROOT}/skills/accessibility/a11y-check.mjs <url> --out <evidence>/a11y`, then open the focus crops of this component. Every axe violation, Tab stop without a visible ring, focus on something hidden or under the sticky nav, toggle that does not close on Escape or hand focus back, and target under 24 px inside the component is a finding.
+- Through the API: tags and landmarks, heading levels, `role="listitem"` on item wrappers (never on links), `aria-label` or `u-sr-only` names on icon-only controls, alt or Decorative on images, `aria-hidden` only on decoration.
+- Contrast of the component in every Theme mode (and brand mode) it is used in, not only the one the page shows (criteria.md §5).
+- What a script cannot judge goes under "Not checked" with "hand check": whether alt texts and names are *good*, VoiceOver announcements.
+
+## 1c. SEO — [seo-blocks.md](${CLAUDE_PLUGIN_ROOT}/references/seo-blocks.md), [seo](../seo/SKILL.md) §7
+
+- Once per page in scope: `node ${CLAUDE_PLUGIN_ROOT}/references/fixture/seo-audit.mjs <url> [--overview <path>] --out <evidence>/seo`; per component `--block "<root>"` (`--allow-h1` for the page-heading block, `--overview-block` for an overview card grid). Every error is a finding.
+- The page's only `h1` in the page-heading block; no headings in overview cards; hero image not lazy, the rest lazy; nav links in the served HTML; FAQ sections with FAQPage and article templates with Article JSON-LD that parses; no CLS above 0.05 from the component. Headings, landmarks, alt and link names themselves are §1b.
 
 ## 2. Responsive — [lumos/responsive.md](${CLAUDE_PLUGIN_ROOT}/references/lumos/responsive.md)
 
@@ -41,6 +53,7 @@ Never submit a real form, click "buy", or send anything outward. Check a form by
 - Headings and card titles break into the same lines as the design at 1440 and 375; nothing wraps to an extra line by a pixel.
 - Text sizes, images and spacing step down sensibly between the design widths — no jump at one breakpoint, no 80 px title on a phone.
 - Tap targets on a phone are at least ~44 px; nothing overlaps.
+- Phone checks also in WebKit, not only Chrome at 375: split-text line height, modal focus after opening, hover after a tap ([verify.md](${CLAUDE_PLUGIN_ROOT}/references/verify.md) §2b). Run `interact.mjs … --webkit` (Playwright WebKit as `devices['iPhone 15']`; once per machine: `npx playwright-core install webkit` in `${CLAUDE_PLUGIN_ROOT}/references/fixture`). The other scripts (sweep, hover-matrix, nav-check) run Chrome only.
 
 ## 3. Spacing — [lumos/spacing.md](${CLAUDE_PLUGIN_ROOT}/references/lumos/spacing.md), [verify.md](${CLAUDE_PLUGIN_ROOT}/references/verify.md) §2c
 
@@ -54,10 +67,11 @@ Never submit a real form, click "buy", or send anything outward. Check a form by
 
 ## 4. Lumos — [lumos-rules.md](${CLAUDE_PLUGIN_ROOT}/references/lumos-rules.md)
 
-- The section is the Lumos Section build-up: `<name>_wrap` › Lumos `Section` (Theme, Padding, Height, Container Classes) › Background and Container slots with Lumos `Layout`, `Grid` and Typography. No hand-made shell. Closed into its own component.
+- A new section is flat: `<name>_wrap` › `<name>_contain` + `u-container` › plain elements with Lumos classes and variables, no Lumos `Section` / `Layout` / `Block` / `Typography` components (existing Section build-ups stay). Closed into its own component. **No content in a slot that is filled inside the definition**: every text, link and image is found by `query_elements` and writable ([lumos/components.md](${CLAUDE_PLUGIN_ROOT}/references/lumos/components.md), "Section build").
 - Content sits in `<name>_contain` + `u-container`, also where the design bleeds to the edge.
-- Short sections have Section Height `true` (auto); full-screen only where the design is full-screen.
-- Every text in a component is a Typography instance (Heading, Paragraph, Plain, Tag) or `Button Main` — no custom text elements, no custom header classes.
+- The component is on the Components page (`/components`): a Showcase Label with its Designer name and where it is used, the instance in its group, filled like its real page, same script versions as the source page.
+- On an existing Section build-up: Section Height `true` (auto) for short sections; full-screen only where the design is full-screen.
+- Every text in a section is a plain `Heading` / `Paragraph` with the Lumos text classes, bound to a prop or set in the definition; inside a card or `Button Main` a Typography instance. No font styling on custom classes, no custom header classes.
 - Class names: `type_element`, underscores, describe the pattern not the copy or page; at most ~4 utilities; combos only on the component's own class; utilities applied, never created. No edits to a Lumos original's own classes (`card_primary_*`, `button_main_*`) for one use.
 - Values from variables: colour from theme variables (no hex, no swatch where a theme variable fits), type, radius, border width, sizing. A colour without a variable is a question, not a hex.
 - Lumos `Layout` / `Grid` / grid utilities before hand-written grids; hand-written columns are `minmax(0, 1fr)`.
@@ -67,11 +81,11 @@ Never submit a real form, click "buy", or send anything outward. Check a form by
 ## 5. Code — [lumos-rules.md](${CLAUDE_PLUGIN_ROOT}/references/lumos-rules.md) §0, [interactions](../interactions/SKILL.md) §1
 
 - Custom code exists only where Lumos, Webflow styles and IX3 cannot do it — behaviour, never layout, sizing, spacing, colour or type. An API limit was never a reason for code.
-- All of it lives in `Global | Custom Code` (or the place `decisions/site.md` names): no embeds inside other components or on elements, no page custom code unless it must run in `<head>`.
+- It lives where [interactions](../interactions/SKILL.md) §1 says (on a library site [references/motion.md](${CLAUDE_PLUGIN_ROOT}/references/motion.md) §8, or where `decisions/site.md` names): no embeds inside other components or on elements, no page custom code unless it must run in `<head>`.
 - It targets `data-*` attributes, never classes or ids (exceptions only as listed in `decisions/site.md`). Its attribute contract is written in `decisions/`.
 - **No unneeded code:** selectors or attributes that match nothing on any page, code for a feature that was removed or rebuilt, two scripts doing the same thing, a library loaded twice, `console.log`s, CSS that repeats what a class already sets, inline `style` attributes set through the API.
 - **No unneeded build:** empty or wrapper divs that do nothing, elements hidden with no purpose, classes the build created that no element uses, the original section left on the page after it became a component, test pages or test instances.
-- Motion that IX3 can do is in IX3; IX3 and scripts find elements by attribute.
+- Motion follows [references/motion.md](${CLAUDE_PLUGIN_ROOT}/references/motion.md): the ladder (§3), smooth open/close that turns around halfway (§9), timings from `decisions/motion.md` or the kit tokens; IX3 and scripts find elements by attribute.
 
 ## 6. Props — what the editor gets — [componentize](../componentize/SKILL.md) §1, [cards/props.md](../cards/props.md)
 

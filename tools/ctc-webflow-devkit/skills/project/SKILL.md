@@ -17,15 +17,17 @@ Questions to the user follow [asking.md](${CLAUDE_PLUGIN_ROOT}/references/asking
 - Otherwise → **new**. Run `gh repo list Cut-the-Code-Agency --limit 200 --json name -q '.[].name | select(startswith("wf-"))'` and show any existing `wf-<client>` repos (`gh repo list` has no `--search`). If one matches this client, stop and tell the user to clone it instead of creating a second one.
   When that command fails (no `gh` login, no access to the organisation, offline), say so in one line, ask the user whether a repo for this client already exists, and continue with **new** on a no. Do not retry, do not stop the setup on it.
 
-## 2. Ask the five questions
+## 2. Ask the six questions
 
 Call `data_sites_tool > list_sites` first so Q1 is a pick-list. The Webflow MCP login (OAuth) holds **one workspace**: when the site is not in the list, the client repo needs its own `.mcp.json` with a server named `webflow` (the guard expects that name) and an extra header (e.g. `X-Claude-Workspace: <client>`), so Claude Code stores a separate login for it; then `claude mcp login webflow` in that folder and the user picks the client's workspace.
+Claude Code stores the login per server **name + config**, not per folder: two client folders whose `.mcp.json` has the same `webflow` name and the same URL share one login, and the last sign-in wins (a client folder was switched to another client's workspace that way, Nov 2026). Give **every** client folder a unique config, also when the account is the same: the header above, or a query on the URL (`https://mcp.webflow.com/mcp?project=<client>`). When `list_sites` shows another client's sites, check this first, not the user's login.
 
 1. **Site** — which site from the list.
 2. **Figma source** — `mcp` (a Figma URL the user can open) or `files` (exports, screenshots, specs the user drops into `references/figma/`).
 3. **Class prefix** — the namespace for new classes on this site. Lumos itself has **no** prefix (`type_element` custom classes, `u-` utilities, `is-` combos; a fresh Lumos site has no `c-`), so the default is `""`. Some sites carry their own prefix — offer what the dump in step 4 will confirm.
-4. **Production** — does this site publish to a live domain? Recommend `true` unless the user says otherwise; it turns on the mutation guard. A site still in development can start at `false` (no prompts) and flip to `true` at launch.
-5. **Branching** — work on Webflow page branches? Recommend `false` (branching has a known bug as of Sept 2026). Keep it a one-line change in `project.json`.
+4. **Production** — is this site live, with real visitors on its own domain? Recommend `false` while it is being built: no permission prompts. Flip it to `true` at launch; from then on the guard asks before changing anything that exists, in plain words ([guard.md](${CLAUDE_PLUGIN_ROOT}/references/guard.md)).
+5. **Branching** — work on Webflow page branches? Recommend `false` (branching has a bug: reported Sept 2026; re-test before relying on branches). Keep it a one-line change in `project.json`.
+6. **Shared library** — does this site install a library from another site, or is it the library for brand sites? Then fill `project.json` `library` as `{ "source": "<library site id>", "installers": ["<brand site id>", …] }` (site ids; leave it `null` when there is no library: the reminder hook then does nothing) and follow [library-sites.md](${CLAUDE_PLUGIN_ROOT}/references/library-sites.md): every Accept strips library classes from what the installing site owns. On an existing installing site, run its audit first.
 
 ## 3. Scaffold
 
@@ -37,10 +39,13 @@ CLAUDE.md              from templates/CLAUDE.md, placeholders filled
 project.json           from templates/project.json
 decisions/README.md    from templates/decisions-README.md
 decisions/site.md      empty, with the heading
+decisions/motion.md    "# Motion" and one line: "Kit defaults apply until this file says otherwise: references/motion.md in the webflow-devkit plugin."
 decisions/components/  decisions/pages/
-references/figma/      references/plans/
+references/figma/      references/plans/  references/copy/  references/audit/
 references/log.md      empty, with the heading
-references/designer-queue.md  "# Designer queue" with empty "## Open" and "## Done" (format: webflow-mcp.md §11)
+references/designer-queue.md  "# Designer queue" with empty "## Open" and "## Done" (format: designer/README.md "Queue, then one pass")
+references/scripts/designer-chrome.sh  from templates/designer-chrome.sh, client and a free port filled in (designer/README.md "Which Chrome"); record the port in decisions/site.md ("Designer Chrome: port <n>"), where the script points
+.mcp.json              add a server `chrome-<client>`: `npx -y chrome-devtools-mcp@latest --browserUrl http://127.0.0.1:<port>`
 .gitignore             with `.tmp/` (scratch: the Designer recipes are copied there to load them) and `.env` / `**/.env` (`webflow auth login` writes one)
 ```
 

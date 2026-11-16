@@ -18,17 +18,23 @@ When the snapshot is unavailable, the staging domain (`project.json` `site.stagi
 
 **After a publish, check the CSS hash first**: the HTML can already be new while the page still loads the previous `webflow.shared.*.css`; measuring then reports old values. Compare the stylesheet URL with a fresh load before measuring.
 
-A build since the last publish is not on staging — but it can still be checked without one. **Patch the pending change into the published page** with the kit's fixture: write `references/<block>/fixture.json` (URL, widths, the CSS the classes read back with, the markup and where it goes, what to measure) and run `node ${CLAUDE_PLUGIN_ROOT}/references/fixture/measure.mjs references/<block>/fixture.json`. It renders the real page in headless Chrome with the site's own fonts and neighbours around it, no publish and no Designer, and writes a screenshot, the measurements and a summary per width. Keep the spec in the client repo so it can be rerun after the next change. Setup and output: [fixture/README.md](fixture/README.md). Fixture CSS must use the **exact emitted variable names** (`--_spacing---section-space--small`, `--_text-space---…`): a grep for a short name matches it as a substring of the real one, and a wrong name silently resolves to nothing.
+A build since the last publish is not on staging, but it can still be checked: **patch the pending change into the published page** with the kit's fixture (`references/<block>/fixture.json` + `measure.mjs`), which renders the real page in headless Chrome with the site's own fonts and neighbours, no publish and no Designer, and writes a screenshot, measurements and a summary per width. Spec, command and pitfalls: [fixture/README.md](fixture/README.md).
 
-**Unpublished motion or scripts:** serve the published HTML with the new embed or the patched `webflow.*.js` swapped in (request interception; [webflow-mcp.md](webflow-mcp.md) §10 for IX3) and sample in headless Chrome. Also measure the page's load event: a script that loads heavy files before `load` delays every IX3 load interaction with it.
+**Unpublished motion or scripts:** serve the published HTML with the new embed or the patched `webflow.*.js` swapped in (request interception; [webflow-mcp.md](webflow-mcp.md) §8 for IX3) and sample in headless Chrome. Also measure the page's load event: a script that loads heavy files before `load` delays every IX3 load interaction with it.
 
-**Unpublished, but the Designer is open in the user's Chrome (Claude in Chrome or `chrome-devtools`, [webflow-mcp.md](webflow-mcp.md) §11):** the canvas is a same-origin iframe, so it can be measured at exact widths without a publish. In the Designer tab, `document.getElementById('site-iframe-next')` → set its inline `width`, `min-width` and `max-width` to the width (1440, 1280, 992, 990, 767, 375), wait ~1 s, read `getBoundingClientRect` / `getComputedStyle` / text ranges from its `contentDocument`, and clear the inline style afterwards (if the canvas then stays narrow, reload the Designer tab). Breakpoint rules apply, CSS masks and fonts render (unlike `element_snapshot_tool`); scripts, IX3 and hover do not. At exactly 991 px the ≤ 991 rule may not match in the canvas — use 990. **Reload the Designer tab before measuring after style or variant writes**: the open canvas keeps showing old computed values (e.g. a `set_variant_styles` change) until reloaded, even though the read-back is correct.
+**Unpublished, but the Designer is open in the client's Designer Chrome (`chrome-<client>`, [designer/README.md](designer/README.md) "Which Chrome"):** the canvas is a same-origin iframe, so it can be measured at exact widths without a publish. In the Designer tab, `document.getElementById('site-iframe-next')` → set its inline `width`, `min-width` and `max-width` to the width (1440, 1280, 992, 990, 767, 375), wait ~1 s, read `getBoundingClientRect` / `getComputedStyle` / text ranges from its `contentDocument`, and clear the inline style afterwards (if the canvas then stays narrow, reload the Designer tab). Breakpoint rules apply, CSS masks and fonts render (unlike `element_snapshot_tool`); scripts, IX3 and hover do not. At exactly 991 px the ≤ 991 rule may not match in the canvas — use 990. Reload the Designer tab before measuring after API writes ([designer/README.md](designer/README.md), "Reload").
 
-**Without touching the canvas** (another session uses the Designer, or the bridge is down): clone the canvas CSS into test frames. In a Designer tab, read the canvas document's stylesheets as CSSOM rules (not `<style>` textContent), write them plus the section's markup into `srcdoc` iframes at each width, and measure there. Give the test iframes `border: 0` (a border makes 992 measure as 988); test 990, not 991. The canvas only emits CSS for enabled breakpoints. In a **background** Chrome tab CSS transitions stall, so computed colours read the old value until transitions are disabled; `video.play()` can hang there too — test behaviour in headless Chrome instead.
+**Without touching the canvas** (another session uses the Designer, or the bridge is down): clone the canvas CSS into test frames. In a Designer tab, read the canvas document's stylesheets as CSSOM rules (not `<style>` textContent), write them plus the section's markup into `srcdoc` iframes at each width, and measure there. Give the test iframes `border: 0` (a border makes 992 measure as 988); test 990, not 991. The canvas only emits CSS for enabled breakpoints. Behaviour (transitions, video, motion) is tested in headless Chrome, not in a background tab ([designer/README.md](designer/README.md), "Background").
 
-**One Designer, several sessions** ([webflow-mcp.md](webflow-mcp.md) §10): no Designer clicks or page switches while another session is busy in it.
+**One Designer, several sessions** ([designer/README.md](designer/README.md) "Which Chrome"): no Designer clicks or page switches while another session is busy in it.
 
 Do not hand the user a menu of ways to check it, and never ask for a publish to verify your own work. If the user has published anyway, measure against the live URL.
+
+**Phone feedback is measured in WebKit too**: owners test on an iPhone (Safari). Re-measure every mobile complaint in Playwright `webkit` with `devices['iPhone 15']`, next to Chrome at 375 × 812 with touch. A difference between the two means the cause is in WebKit (Oct 2026: three complaints did not exist in Chrome — split-text line height, a modal's close button with a focus ring, a hover stuck after a tap; [interactions/patterns.md](../skills/interactions/patterns.md)).
+
+**Page transitions (View Transitions) are judged in Safari or a clean Chrome**: while `chrome-devtools` (or any debug connection) is attached to a Chrome, a new page gets a viewport a few px taller and Chrome aborts the transition ("Viewport size changed"), so it looks broken. Headless Chrome and Chrome with DevTools do not prerender either. Open a separate Chrome without a debug port: `open -na "Google Chrome" --args --user-data-dir=/tmp/<client>-clean --no-first-run <url>`.
+
+**Close only your own browsers.** A measuring script ends with `browser.close()`, or kills its own PID or profile path; never `pkill` or "all headless Chromes": other sessions measure at the same time (Oct 2026: a reviewer's `pkill -f headless` stopped another session's measurement). Headless Chromes left running also stop Chrome from opening via its Dock icon (macOS activates the invisible one); check `ps` for your own leftovers when that happens. Put "close only your own browsers, never pkill" literally in every brief to a subagent.
 
 When none of these is possible the unit stays unverified and you say so; no snapshot, no browser measurement and no fixture means not done.
 
@@ -67,11 +73,18 @@ Run it on every unit. Each line is a defect that has shipped past a screenshot b
 - [ ] Every link, icon link and form field has a hover and a focus state in the site's own language, even where Figma draws none: text links reuse the button hover (a `Button Main` variant, not a plain link), icon links a matching motion, form fields a designed focus (not the browser's box outline).
 - [ ] Text that sits directly in a padded or gapped container matches Figma's **box** height, not just its gaps (Figma boxes are untrimmed — [lumos/typography.md](lumos/typography.md)). Typical fix on the text's wrapper: `padding-block` ≈ 0.2em body, 0.35–0.4em small text.
 - [ ] No outline appears after a mouse click on a card, link or button (only `:focus-visible` draws one).
-- [ ] The section's content sits in its `u-container` (lumos-rules.md §5), also where Figma bleeds to the edge.
-- [ ] The section is the Lumos Section build-up (wrapper › Lumos Section › Layout + Typography), closed into a component; no custom header classes.
-- [ ] A short section's Lumos Section has Height `true`; a section that looks right only because its content is taller than the screen is a bug waiting.
-- [ ] Every text in a component is a Typography instance; heading levels (H1–H3) set in the Designer where the API wrote `<p>`.
+- [ ] The section's content sits in its `u-container`, also where Figma bleeds to the edge ([lumos/structure.md](lumos/structure.md)).
+- [ ] A new section is flat and closed into a component, no content in a slot filled inside the definition; on an existing Section build-up, Height `true` unless the design is full-screen ([lumos/components.md](lumos/components.md)).
+- [ ] Every text is a plain Heading/Paragraph with Lumos text classes, heading levels fixed ([lumos/typography.md](lumos/typography.md)); in the Designer where the API wrote `<p>`.
 - [ ] Repeated elements resolved to the component the site already has, or to a variant of it — no new twin of an existing component.
+
+**Accessibility** ([accessibility](../skills/accessibility/SKILL.md) §1)
+- [ ] Tabbed through the unit: every link, button and field is reached in reading order, shows a visible `:focus-visible` ring and is not hidden under the sticky nav.
+- [ ] Everything that opens (menu, dropdown, modal, accordion, tab) works with Enter/Space, closes with Escape, flips `aria-expanded` and hands focus back; while closed, nothing inside takes focus.
+- [ ] Every icon-only link or button has a name (`aria-label` in the definition, or `u-sr-only` text bound to a prop); no bare "Lees meer".
+- [ ] Every image has alt text or is set to Decorative; decorative SVGs carry `aria-hidden="true"`.
+- [ ] Section, nav, list and heading tags as the plan's A11y line says; repeated items are a list (`role="listitem"` on the item wrapper, never on the link).
+- [ ] Ran `a11y-check.mjs` on the published page (or noted "unpublished: not run") and fixed what it found in this unit.
 
 **Reach**
 - [ ] Before claiming a behaviour or a fix covers the page, swept the rendered page for every element that looks the same. Say what is included **and** what is excluded. "All 12 items" was wrong once because 36 more looked identical.
@@ -98,7 +111,7 @@ First establish canvas width and whether it is the page or a component definitio
 
 When style data and the screenshot disagree, three suspects in order: canvas width/breakpoint, definition view vs page, Designer canvas vs a real browser.
 
-**Say back what you think they mean before you measure it.** One line, naming the element and the direction — "the tick inside the box, moved sideways?". A one-sentence complaint about a small thing usually has two readings and two axes; picking one silently is how a 40-minute loop starts.
+Before measuring, say back in one line what you think they mean ([asking.md](asking.md)).
 
 **When the user contradicts a measurement, go and look again before defending it.** Their eye on the rendered page beats your number, and the number is usually measured against the wrong reference. Re-measure visually, then answer.
 
@@ -108,13 +121,11 @@ When the user points at something you missed, fix it, then add what caught you t
 
 ## 4. One change per correction
 
-One hypothesis, one write, one read-back. Whitespace: judge against the section PNG, move towards the design's value, report `Was | Now | Figma`. Corrections are reversible: keep a running list per session of element, class, property, was → now.
+One hypothesis, one write, one read-back. Whitespace: judge against the section PNG, move towards the design's value, report `Was | Now | Figma` ([asking.md](asking.md)). Corrections are reversible: keep a running list per session of element, class, property, was → now.
 
 ## 5. Stop after two failed fixes
 
-Count them. Every time the user repeats a complaint you have already tried to fix, that is a failed fix — a new theory about the same symptom is still the same complaint. On the second, stop mutating.
-
-Same thing wrong twice after two attempts: stop mutating. Present three to five structural options in a table (mechanism, dependency, failure mode, cost, which rule rejects it) with a recommendation, and wait for the user. That is the rule with the highest return in this whole kit.
+Count them. Every time the user repeats a complaint you have already tried to fix, that is a failed fix — a new theory about the same symptom is still the same complaint. On the second, stop mutating: present three to five structural options in a table (mechanism, dependency, failure mode, cost, which rule rejects it) with a recommendation, and wait for the user. That is the rule with the highest return in this whole kit.
 
 ## 6. Wide changes ask first
 

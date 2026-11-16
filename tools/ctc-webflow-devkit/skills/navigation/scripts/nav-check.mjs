@@ -3,7 +3,7 @@
 // Headless Chrome over CDP, no dependencies (Node 22+ for the global WebSocket). Uses the attribute
 // contract from structure.md §8 ([data-nav="component|bar|logo|links|panel|menu-button"], [data-section]).
 //
-//   node nav-check.mjs <url> [--widths 1440,991,375] [--dark] [--hover] [--out ./nav-out]
+//   node nav-check.mjs <url> [--widths 1440,990,375] [--dark] [--hover] [--out ./nav-out]
 //
 //   --dark   inject <section data-section="light|dark|light"> before </main> (tests the colour switch
 //            on a site that has no dark sections yet; the page's own scripts and IX3 see them at load)
@@ -17,10 +17,10 @@ import path from 'node:path';
 
 const args = process.argv.slice(2);
 const url = args.find((a) => !a.startsWith('--'));
-if (!url) { console.error('usage: node nav-check.mjs <url> [--widths 1440,991,375] [--dark] [--hover]'); process.exit(2); }
+if (!url) { console.error('usage: node nav-check.mjs <url> [--widths 1440,990,375] [--dark] [--hover]'); process.exit(2); }
 const opt = (n, d) => { const i = args.indexOf('--' + n); return i >= 0 && args[i + 1] && !args[i + 1].startsWith('--') ? args[i + 1] : d; };
 const flag = (n) => args.includes('--' + n);
-const widths = opt('widths', '1440,991,375').split(',').map(Number), out = opt('out', './nav-out');
+const widths = opt('widths', '1440,990,375').split(',').map(Number), out = opt('out', './nav-out');
 fs.mkdirSync(out, { recursive: true });
 
 const chromePath = process.env.CHROME || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';

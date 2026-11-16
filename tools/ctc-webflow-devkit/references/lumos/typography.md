@@ -6,8 +6,14 @@ Type is variables all the way down. The `Typography` collection holds the raw va
 
 - A text element is: custom class + `u-text-style-<style>`. Overrides (colour, max-width, margin) go on the custom class.
 - Every `u-text-style-*` class is `display: flow-root` and carries the line-height trim, which removes the space above and below the glyphs so text aligns and spaces consistently. *(house)* It also sets family and letter-spacing, so it goes on plain text elements only, never on an element with flex, grid or its own font. Lumos also applies the trim to every text element tag through Global Styles; on a site without that, a text class you build yourself has no trim, its box is taller than the glyphs, and that is where unexplained whitespace comes from.
-- *(house)* Size follows the design. Start from the text style whose size and line-height already equal the design's; when none does, override size and line-height on the custom class in `rem` so line breaks match the design, with smaller screens handled the way the site handles them (responsive variables, or breakpoint values when it has none). Measure each section's sizes: the same role (an eyebrow) can differ between two sections of one design.
+- *(house)* Size follows the design. Start from the text style whose size and line-height already equal the design's; when none does, override size and line-height on the custom class in `rem` (a literal, flagged) so line breaks match the design, with smaller screens handled the way the site handles them (responsive variables, or breakpoint values when it has none). Measure each section's sizes: the same role (an eyebrow) can differ between two sections of one design.
+- *(house)* Texts in a **section** are plain `Heading` / `Paragraph` elements carrying the Lumos text classes, each bound to a prop or set in the definition ([components.md](components.md), "Section build"); no font styling of their own on a custom class. Inside the small components Lumos ships (cards, `Button Main`) they stay Lumos Typography instances ([cards/typography.md](../../skills/cards/typography.md)).
+- A **Text Style variable mode** (Text 16, Text Large) on a wrapper also changes the `text-space/*` gaps inside it (kicker → title became 32 instead of the site's 28). Set the mode on the text element, not on the head or container that holds kicker and title.
 - The element's tag (`h2`) is set separately from its look (`u-text-style-h3`), which is how a hero title can be an `h2` styled as `h3`.
+
+## Heading levels *(house)*
+
+A heading's level is fixed in the component, not left to the editor: a title is a `Heading` element with its level set (`set_heading_level`, h2/h3) and a plain-text prop — in a card or an existing Section build-up, **Typography Heading (Plain Text)** with its Tag set in the Designer (the API cannot set that Tag). No rich-text prop through which an H2 can become an H3; a rich-text Heading only where the content itself carries structure.
 
 ## Figma boxes vs trimmed text *(house)*
 
@@ -31,7 +37,7 @@ Lumos's Heading and Paragraph components carry a bottom margin. Margins collapse
 
 ## Adding a size or style (in the Designer)
 
-1. New size variable in Typography → font-size, made fluid with a `clamp()` in its value *(house; Lumos docs use the Fluid Builder app)*: [build/foundations.md](../../skills/build/foundations.md) §4.
+1. New size variable in Typography → font-size, made fluid ([variables.md](variables.md), "Fluid values").
 2. New mode in Text Style; apply size, line-height, letter-spacing, transform, margin, family, weight, trim, text-wrap.
 3. Duplicate a `u-text-style-*` class and connect it to the new mode.
 4. In the Heading and Paragraph components, create a variant for the new size and connect it to the mode.
@@ -40,4 +46,4 @@ Lumos's Heading and Paragraph components carry a bottom margin. Margins collapse
 
 ## Fonts
 
-Each family needs its own trim values (the line-height-trim tool gives them). *(house)* Or compute them from the font file (`fontkit`, hhea ascent and descent as positive numbers, cap height, units per em `u`): `trim-top = (cap − (ascent − descent) / 2) / u` and `trim-bottom = (ascent − descent) / 2 / u`, in `em`. Jost: 0.3525 / 0.3475; Neue Regrade Medium: 0.39 / 0.31. A second family gets its own `font/<name>-trim-top|bottom`, and the Text Style modes that use it point there. Fonts that render differently on Windows and Mac get run through Font Squirrel's generator first. *(house)* Missing fonts go in the plan's "Missing" list.
+Each family needs its own trim values (the line-height-trim tool gives them). *(house)* Or compute them from the font file (`fontkit`, hhea ascent and descent as positive numbers, cap height, units per em `u`): `trim-top = (cap − (ascent − descent) / 2) / u` and `trim-bottom = (ascent − descent) / 2 / u`, in `em`. A second family gets its own `font/<name>-trim-top|bottom`, and the Text Style modes that use it point there. Fonts that render differently on Windows and Mac get run through Font Squirrel's generator first. *(house)* Missing fonts go in the plan's "Missing" list.

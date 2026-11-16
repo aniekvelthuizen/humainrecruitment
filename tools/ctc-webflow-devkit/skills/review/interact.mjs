@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 // Use a section like a visitor and photograph it while things move.
 //
-//   node interact.mjs <url> --section <selector> --out <dir> [--widths 1440,375] [--reduced-motion] [--headed]
+//   node interact.mjs <url> --section <selector> --out <dir> [--widths 1440,375] [--reduced-motion] [--webkit] [--headed]
+//
+// --webkit: Playwright WebKit emulating devices['iPhone 15'] (its width replaces --widths). Needs the WebKit
+// build once per machine: `npx playwright-core install webkit` in references/fixture.
 //
 // Per width, inside the section: click every tab, hover the first card or link, drag every slider
 // left, right and past both ends (mouse), press every arrow/dot button, then Tab through with the
@@ -23,20 +26,23 @@ import { resolve } from 'node:path';
 import { createRequire } from 'node:module';
 
 const require = createRequire(new URL('../../references/fixture/package.json', import.meta.url));
-const { chromium } = require('playwright-core');
+const { chromium, webkit, devices } = require('playwright-core');
 
 const args = process.argv.slice(2);
 const flag = (n) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : undefined; };
 const url = args.find(a => /^https?:/.test(a));
 const section = flag('--section');
 if (!url || !section || !flag('--out')) { console.error('usage: node interact.mjs <url> --section <selector> --out <dir> [--widths 1440,375]'); process.exit(2); }
-const widths = (flag('--widths') ?? '1440,375').split(',').map(Number);
+const useWebkit = args.includes('--webkit');
+const iphone = devices['iPhone 15'];
+const widths = useWebkit ? [iphone.viewport.width] : (flag('--widths') ?? '1440,375').split(',').map(Number);
 const out = resolve(flag('--out'));
 await mkdir(out, { recursive: true });
 
-const browser = await chromium.launch({ channel: 'chrome', headless: !args.includes('--headed') });
+const headless = !args.includes('--headed');
+const browser = useWebkit ? await webkit.launch({ headless }) : await chromium.launch({ channel: 'chrome', headless });
 const steps = [];
-const md = [`# Interact — ${url} \`${section}\``, ''];
+const md = [`# Interact — ${url} \`${section}\`${useWebkit ? ' (WebKit, iPhone 15)' : ''}`, ''];
 
 // Runs in the page: what is wrong right now inside the section.
 const inspect = ({ section, mouse }) => {
@@ -70,7 +76,7 @@ const inspect = ({ section, mouse }) => {
 };
 
 for (const w of widths) {
-  const page = await browser.newPage({ viewport: { width: w, height: 900 }, reducedMotion: args.includes('--reduced-motion') ? 'reduce' : 'no-preference' });
+  const page = await browser.newPage({ ...(useWebkit ? iphone : { viewport: { width: w, height: 900 } }), reducedMotion: args.includes('--reduced-motion') ? 'reduce' : 'no-preference' });
   // pages with a video or live embed never go network-idle: fall back to load + a pause
   await page.goto(url, { waitUntil: 'networkidle', timeout: 20000 }).catch(async () => { await page.goto(url, { waitUntil: 'load' }); await page.waitForTimeout(3000); });
   await page.evaluate(() => document.fonts.ready);

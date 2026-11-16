@@ -56,3 +56,6 @@ Other pages' instances (Figma `instances.txt`): Opportunities mobile hides the s
 ## 2026-11-05 — Title Break (Aniek Velthuizen, via Claude; not published, local simulation at 1512, 1280, 992, 768, 402, 320)
 Prop **Title Break** (boolean, Content, default off) binds the visibility of a `br` after the `wbr`, the same way as Split Content. On for About, Consulting Services, Project Controls, Rates, Careers: each frame breaks where its colour changes, and those titles were already split there, so no boundary moved. Off pages keep the default: Home, Hire, PDE, Clients, How It Works, Contact, Opportunities.
 Block at 1512 is 612 on all five, as the frames. Careers at 402: «Send an open / application.». Narrower than the frame a forced title can take three lines: Rates at 1280, 992, 768, 320 and Controls at 992, 768, 320.
+
+## 2026-11-12 — Spacing as the site rhythm (Aniek Velthuizen, via Claude)
+Text margin-top 0.8125rem / phones 0.75rem (was 16), see `decisions/site.md` › «One rhythm for eyebrow → title → text».

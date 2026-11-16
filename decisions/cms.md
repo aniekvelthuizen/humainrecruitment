@@ -9,6 +9,7 @@ Collections on Humain (`6ae35364a38b2d71cab8c607`). Field list per collection: `
 | Rates | `6aec7e0776c2f357ba063c82` | `rates` | `6aec7e0776c2f357ba063cca` |
 | FAQ | `6aec7e08d367294edf22387c` | `faq` | `6aec7e08d367294edf2238c5` |
 | Team | `6aec7e093f98170046290894` | `team` | `6aec7e093f981700462908c0` |
+| Client Logos | `6af611306da4efb79ce4a646` | `client-logos` | — |
 | Experts (untouched) | `6ae719db261aa6a726507c82` | `experts` | `6ae719db261aa6a726507c88` |
 
 ## Field slugs
@@ -125,3 +126,13 @@ Open: for the owner, as this is not settled by the API alone; see the unit repor
 
 ## 2026-11-12 — Reviews collection
 Collection Reviews (`6af5eab6b7bd7e385981a9f8`, slug `reviews`): name, slug, quote (RichText), role, company, avatar. Used by `Reviews · picked` (`decisions/components/reviews-picked.md`). Its template page `/reviews/<slug>` answered 404 on staging on 2026-11-12 (reviewer). Aniek Velthuizen, via Claude.
+
+## 2026-11-12 — Client Logos collection
+Collection Client Logos (`6af611306da4efb79ce4a646`, slug `client-logos`): name, slug, logo (Image), order (Number). Used by `Client Logos · all` in Logo Marquee (`decisions/components/hero-experts.md`). Field slugs: `name`, `slug`, `logo`, `order`. Aniek Velthuizen, via Claude.
+
+## 2026-11-16 — Dummy content in all 12 Opportunities items (Aniek Velthuizen, via Claude)
+Owner asked to fill every vacancy with dummy content. Written by Aniek Velthuizen, via Claude, in English (house rule), and published to staging.
+- **Filled:** `intro`, `summary`, `about`, `responsibilities`, `requirements`, `offer` on all 12 items. Before this, 9 items had no intro or detail text, and the 3 Project Controls Manager items still had lorem ipsum in their first paragraphs; that lorem is gone now.
+- **The same copy on each copy of a role:** the three Project Controls Manager, Senior Cost Engineer and Planning / Scheduling Engineer items are still copies of one Figma card each, so they share their text.
+- **Kept as they were:** name, slug, options, `location`, `experience`, `salary`, `featured`, and the intros already written for Project Controls Manager and `summary` on the internal vacancies. `discipline` and `salary` stay empty on the internal vacancies (see "How the Figma card maps onto the fields"). `bullhorn-id` stays empty.
+- **Made up and not from the client:** project details (brownfield upgrade, Amsterdam bridges and locks, team of six), tools (EcoSys, Cobra, P6), contract length, commission, equity, salary terms. All of it is sample copy and goes with the samples before go-live (see "Sample items to remove before go-live").

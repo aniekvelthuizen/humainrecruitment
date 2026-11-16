@@ -109,3 +109,26 @@ Embed `5f31b436-…177c` in Logo Marquee rewritten from `references/embeds/logo-
 
 ## 2026-11-12 — Phones: text 16 px closer to the title (Aniek Velthuizen, via Claude)
 Owner: on phones the text under the title in every hero moves up 16 px. `hero-experts_text` margin-top at `small` (≤ 767): `space/8` (48) → **`space/7` (32)**. From 768 still 48 (measured on staging at 402, 764, 987, 1276).
+
+## 2026-11-12 — Spacing as the site rhythm (Aniek Velthuizen, via Claude)
+Text margin-top now 2.0625rem / phones 1.625rem (replaces 48 / 32), see `decisions/site.md` › «One rhythm for eyebrow → title → text».
+
+## 2026-11-12 — Logos come from the CMS (owner)
+Owner (Aniek): «Graag hier een cms collection van maken.» Until now the 8 logos were `Logo Tile` instances inside the Logo Marquee definition, so a logo change needed the Designer. Built by Aniek Velthuizen, via Claude. Plan: `references/plans/2026-11-12-client-logos-cms.md`.
+- **Collection Client Logos** (`6af611306da4efb79ce4a646`, slug `client-logos`): Name (company, also the alt text), Logo (image), Order (number). All required, help texts on each. 8 items, today's logos in today's order (Agristo 1 … TotalEnergies 8).
+- **Component `Client Logos · all`** (`2c102730-1d81-8823-0d89-bc8a26122484`, group CMS lists): Collection List, all items, sort Order ascending. Wrapper `u-display-contents` + `data-display="contents"`; the list (`w-dyn-items`) carries `logo-marquee_list` + `data-logo-marquee-list`, so it **is** the marquee's moving list; item › `Logo Tile` (Logo → Logo, Logo Alt → Name, Role on = no role, the CMS item is the list item). Empty state `u-display-none`.
+- **Logo Marquee**: the old `logo-marquee_list` div with 8 tiles is removed; `Client Logos · all` sits in the track. Embed unchanged: the script moves the list into the belt and clones it as before.
+- Route: list built and bound on Clients by API, **Create component** in the Designer (Claude in Chrome; the API refuses a bound Collection List), inserted into Logo Marquee, page copy removed.
+- No pick per page and no «show» switch: the three pages draw the same row; Draft/Archive hides a logo.
+- Checked on staging: Home, Clients, How it works render 8 logos in Order with the company names as alt, tiles without a role; `marquee-check.mjs` maxGap 0 at 1512 and 402, normal and slow network.
+- **Editing:** CMS › Client Logos: new item (Name, Logo, Order), publish. Nothing in the Designer.
+- Template page `/client-logos/<slug>` answered 404 on staging (2026-11-12), as Reviews.
+
+## 2026-11-12 — Every hero text is a prop (owner; Aniek Velthuizen, via Claude)
+Owner: a marketer could not change the title, the buttons, «250+ experts…» or the line above the logos. This replaces "Props" of 2026-10-31: the hero is no longer an edit-inside-the-component block (the kit's home-hero exception does not apply here).
+- **Content:** Text (existing), **Title** (white part of the H1), **Title Muted** (faded part). H1 = `span`[Title] + `span`(space) + `span.hero-experts_muted`[Title Muted]; no `wbr`/`br` and no Title Break, the line breaks as before.
+- **Buttons:** Primary Visibility / Primary Text / Primary Link, Secondary Visibility / Secondary Text / Secondary Link, bound to the two `Button Main` instances (Text, Link, Visibility). Defaults: «Request a shortlist» → /hire-an-expert, «See how we select» → /how-it-works.
+- **Stat:** Stat Visibility (on the paragraph), **Stat Number** («250+»), **Stat Text** (faded rest), same three-span build as the title.
+- **Logos:** Logos Visibility (on the reveal wrapper `[data-hero-reveal=logos]`), **Logos Title** bound to Logo Marquee's Title. The logos themselves come from CMS › Client Logos (other session, same day).
+- Defaults = the old texts, so Home did not change. The reveal script targets the `data-hero-reveal` elements, which stayed. Verified on staging: H1, stat, both buttons (text + href) and the logo title render identical; no console errors.
+- Not done (Designer only): "show only when filled" conditions on Title Muted and Stat Text; empty means an empty span.
