@@ -27,3 +27,12 @@ At 1512: cards x 64 / 536 / 1008, y 349, 440 × 388 (Figma 385, known from `card
 - DOM id `open-positions` on `vacancy-list_wrap`, the target of Careers' «See open positions».
 - **Space Top** (string, Layout, default empty: keeps the section's own top), attribute `data-space-top`, embed rules as Fee List. Careers: `none`, so the gap above is 192 at 1512 and 96 at 991 and 402; section 737 (frame 734, card 388 known).
 - Anchor landing: Webflow's smooth scroll ignores `scroll-margin`, so with Space Top `none` the section starts higher (`padding-top` + negative `margin-top`, 120 from 992 up, 88 below), over the white of the block above. Measured on staging after a real click: eyebrow at 120 under a nav of 76 at 1512, 88 under 74 at 991, 88 under 64 at 402; gap above unchanged at 192 and 96.
+
+## 2026-11-16 — Empty state (owner; Aniek Velthuizen, via Claude)
+Was: `_none` hidden, so with no internal vacancies only "Open positions / Join the team" stayed, with nothing under it. Figma draws no empty state.
+Now the list's own empty block, in **Vacancy List Items** (`d3753a98-…`), in the look of Opportunity List's no-results box (`decisions/components/opportunity-list.md`):
+- `vacancy-list_none` (the `w-dyn-empty`): flex column, centred, padding `space/8` × `space/6`, gap `space/5`, `radius/small`, `swatch/light-200`, centred text. Same values as `opportunity-list_empty`, own class, because that one is `display: none` until its script turns it on.
+- h3 `vacancy-list_none-title.u-text-style-h4` (h3, not h2 as on Opportunities: the section's "Join the team" is the h2) · p `vacancy-list_none-text.u-text-style-main` (max 30rem) · div › **Button Main Primary** with arrow, link to page Submit resume (`/submit-resume`). Primary, not Secondary as Clear filters: here it is the one way forward.
+- Props on Vacancy List Items, folder **No Results**: Empty Title "No open positions right now", Empty Text "We're not hiring for a specific role at the moment, but we're always glad to meet good people. Send us your resume and we'll keep you in mind.", Button Text "Submit your resume". The link is fixed in the definition. The copy is a draft for the owner.
+- Shows only when no Opportunity has Internal on; Webflow leaves the block out of the HTML otherwise.
+- Checked: CSS read back on staging (published). The block itself cannot show on staging while 3 internal items exist, so checked by putting the published classes into the live Careers page: 935 × 264 at 1024, 335 × 326 at 375, no sideways scroll. Not seen with a real empty collection.
