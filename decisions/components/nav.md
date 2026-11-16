@@ -135,6 +135,11 @@ Why an embed: the style API has no Current state, and in the bar the weight must
 Dropdown toggles of a group holding the current page are still not marked.
 _Same day, owner: plus an arrow before the text._ The current link also gets the site's **Arrow Right** icon (`6ae36cceffdd1ab2d2dbee0b_icon-arrow-right.svg`, the Icon Set mask) as a `::before`: 0.875em square in the text colour, 0.375em gap, `vertical-align: -0.0625em`; on `.nav_links_text` in the bar and on `nav_dropdown_link` itself. `white-space: nowrap` on the current text, because in the bar the arrow otherwise dropped onto its own line above the word. Checked on staging at 1440 (bar: Clients; About us card: Vision & Team) and in the mobile panel at 402.
 
+## 2026-11-16 — No arrow on the active link in the main bar (owner; Aniek Velthuizen, via Claude)
+Changes the 2026-11-12 arrow addition. Owner: the arrow before the current page looks odd in the main bar ("→ Clients"); keep it in the dropdowns.
+Choice: the Arrow Right `::before` stays only on `nav_dropdown_link.w--current` (dropdown cards, mobile dropdown rows, language card). Top-level bar links (`nav_links_link.w--current › .nav_links_text`) are semibold only, desktop and mobile panel alike.
+How: the bar selector and its extra `white-space` rule removed from the Nav state CSS embed (`a4e65ea1-389b-5fbe-507b-5e5e21ee10db`, source `references/embeds/nav-state-style.html`); live code read first (identical to source), written, read back identical. Checked on staging /clients: "Clients" in bar and mobile panel `::before` none, weight 600; "English" in the language card still has the arrow.
+
 ## 2026-11-12 — Language switch EN / NL (owner; Aniek Velthuizen, via Claude)
 Replaces "Language switch hidden" (2026-10-29): the owner added Webflow Localization with a Dutch locale.
 - **Locale:** Dutch (`nl-NL`) on subdirectory **`/nl`** (was `/nl-nl`, owner choice), display name **Nederlands**. Publishing the locale is **off and locked**: Webflow says "Add Localize to your Site plan to publish multiple locales" (the site has no plan yet). Until then the switch only lists English on staging.
