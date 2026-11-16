@@ -1,0 +1,131 @@
+{
+  "_note": "Draft copy (placeholder) for the nine Expertise pages, written by Claude for Aniek Velthuizen on 2026-11-16. No design or client copy exists; owner/client may rewrite. Structure copied from Project Controls.",
+  "pages": [
+    {
+      "slug": "project-director", "title": "Project Director", "kind": "role",
+      "seo": {"title": "Hire a Project Director | HumAIn", "description": "Hire a pre-qualified Project Director who has led complex capital projects to completion, assessed on delivery track record, leadership and fit."},
+      "header": {"eyebrow": "Expertise · Roles", "title": "Project Director,", "muted": "proven on delivery.", "text": "A Project Director carries the outcome: scope, budget, schedule and the people who deliver them. We put forward directors who have led complex capital projects to completion, not just through kick-off."},
+      "split": {"eyebrow": "The role", "title": "One person accountable", "muted": "for the whole project.", "text": "The Project Director aligns client, contractors and the project team, sets the controls that keep delivery honest, and makes the calls when trade-offs get hard. We assess every candidate on what they actually delivered.", "bullets": ["End-to-end ownership of scope, cost and schedule", "Clear governance and decision-making", "Stakeholder trust from board to site"]},
+      "grid": {"eyebrow": "What they own", "title": "Where a Project Director makes the difference", "text": "The responsibilities we test for before a director enters our pool.", "cards": [
+        ["Project strategy", "Execution plan, contracting approach and delivery model."],
+        ["Governance", "Decision rights, stage gates and a reporting rhythm that works."],
+        ["Budget ownership", "Accountable for the final cost, not just the estimate."],
+        ["Schedule and milestones", "Keeps the critical path visible and protected."],
+        ["Risk and opportunity", "Sees exposure early and acts before it lands."],
+        ["Team leadership", "Builds and steers a multi-party delivery team."]]},
+      "cta": {"title": "Looking for a", "muted": "Project Director?"}
+    },
+    {
+      "slug": "cost-controller", "title": "Cost Controller", "kind": "role",
+      "seo": {"title": "Hire a Cost Controller | HumAIn", "description": "Hire a pre-qualified Cost Controller who keeps budget, commitments and forecast honest on complex projects, assessed on real delivery, not a polished resume."},
+      "header": {"eyebrow": "Expertise · Roles", "title": "Cost Controller,", "muted": "every euro accounted for.", "text": "A Cost Controller keeps budget, commitments and forecast in one honest picture. We match you with controllers who have run cost on complex projects and can show the numbers they owned."},
+      "split": {"eyebrow": "The role", "title": "Cost you can trust,", "muted": "every period.", "text": "From the first budget to the final account, the Cost Controller tracks what is committed, spent and still to come, and explains the gap before it becomes a surprise. We check that track record before they enter the pool.", "bullets": ["Budget, commitments and actuals in one view", "Forecasts that hold up under scrutiny", "Early warning on overruns"]},
+      "grid": {"eyebrow": "What they own", "title": "What a Cost Controller delivers", "text": "The artefacts and routines we expect a controller to run from day one.", "cards": [
+        ["Cost breakdown structure", "A budget structure that matches how the work is done."],
+        ["Commitment tracking", "Every order and contract tied to its budget line."],
+        ["Forecast at completion", "A defensible estimate of the final cost, updated each period."],
+        ["Earned value", "CPI and cost variance that show where money goes."],
+        ["Cost reports", "Clear period reports for the project team and leadership."],
+        ["Change cost impact", "The cost of every change priced and traced."]]},
+      "cta": {"title": "Looking for a", "muted": "Cost Controller?"}
+    },
+    {
+      "slug": "change-manager", "title": "Change Manager", "kind": "role",
+      "seo": {"title": "Hire a Change Manager | HumAIn", "description": "Hire a pre-qualified Change Manager who controls scope changes, variations and claims on complex projects, with a baseline that stays defensible."},
+      "header": {"eyebrow": "Expertise · Roles", "title": "Change Manager,", "muted": "scope under control.", "text": "Every project changes. A Change Manager makes sure each change is captured, priced, approved and traced, so the baseline stays defensible and nothing is lost between parties."},
+      "split": {"eyebrow": "The role", "title": "Changes captured", "muted": "before they cost you.", "text": "The Change Manager runs the process from the first notice to the agreed variation: impact on cost and schedule, the right approvals and a record that holds up later. We assess candidates on changes they actually managed.", "bullets": ["A clear change process from notice to approval", "Cost and schedule impact on every change", "A baseline that stays defensible"]},
+      "grid": {"eyebrow": "What they own", "title": "What a Change Manager delivers", "text": "The routines that keep scope, cost and schedule in step.", "cards": [
+        ["Change register", "Every change logged, owned and tracked to closure."],
+        ["Impact assessment", "Cost and schedule effects worked out before approval."],
+        ["Variations and claims", "Commercial changes priced and documented with the contract."],
+        ["Baseline control", "Approved changes reflected in budget and schedule."],
+        ["Trend reporting", "Shows where change is coming from and what it adds up to."],
+        ["Stakeholder alignment", "Client, contractors and team agree on what changed."]]},
+      "cta": {"title": "Looking for a", "muted": "Change Manager?"}
+    },
+    {
+      "slug": "project-controls-manager", "title": "Project Controls Manager", "kind": "role",
+      "seo": {"title": "Hire a Project Controls Manager | HumAIn", "description": "Hire a pre-qualified Project Controls Manager who leads cost, planning, risk and reporting as one function, assessed on real project delivery."},
+      "header": {"eyebrow": "Expertise · Roles", "title": "Project Controls Manager,", "muted": "one view of the truth.", "text": "A Project Controls Manager brings cost, planning, risk and reporting together into one function the project can steer by. We put forward managers who have built and led that function on complex projects."},
+      "split": {"eyebrow": "The role", "title": "Controls that steer,", "muted": "not just report.", "text": "The Project Controls Manager sets up the tools, routines and team that tell the project where it stands and where it is heading, and makes sure leadership acts on it. We assess every candidate on the controls they actually ran.", "bullets": ["Cost, schedule and risk in one integrated view", "A controls team that works to one rhythm", "Reporting leadership can act on"]},
+      "grid": {"eyebrow": "What they own", "title": "What a Project Controls Manager delivers", "text": "The function we expect a controls manager to stand up and lead.", "cards": [
+        ["Controls framework", "Procedures, tools and a monthly cycle for the whole project."],
+        ["Integrated baseline", "Budget and schedule built on the same structure."],
+        ["Performance measurement", "Earned value and trends that show real progress."],
+        ["Risk management", "Quantified risk linked to cost and schedule."],
+        ["Executive reporting", "One status picture for leadership, every period."],
+        ["Team leadership", "Planners, cost engineers and analysts working as one."]]},
+      "cta": {"title": "Looking for a", "muted": "Project Controls Manager?"}
+    },
+    {
+      "slug": "planner-scheduler", "title": "Planner / Scheduler", "kind": "role",
+      "seo": {"title": "Hire a Planner / Scheduler | HumAIn", "description": "Hire a pre-qualified Planner / Scheduler who builds and maintains realistic schedules in Primavera P6 and keeps the critical path in sight."},
+      "header": {"eyebrow": "Expertise · Roles", "title": "Planner / Scheduler,", "muted": "a schedule that holds.", "text": "A good schedule tells you what has to happen, in which order and what is at risk. We match you with planners who build realistic schedules in Primavera P6 and keep them alive through delivery."},
+      "split": {"eyebrow": "The role", "title": "The critical path,", "muted": "always in sight.", "text": "The Planner / Scheduler turns scope into a logic-linked schedule, sets the baseline, tracks progress and shows what slips and why. We check schedule quality and delivery record before anyone enters the pool.", "bullets": ["Logic-linked schedules in Primavera P6", "A baseline and progress you can rely on", "Delay analysis that explains the why"]},
+      "grid": {"eyebrow": "What they own", "title": "What a Planner / Scheduler delivers", "text": "The schedules and analyses we expect from a planner on day one.", "cards": [
+        ["Integrated schedule", "One logic-linked schedule across all parties."],
+        ["Baseline", "An agreed reference to measure progress against."],
+        ["Progress updates", "Status, forecast dates and float each period."],
+        ["Critical path analysis", "Shows which activities drive the end date."],
+        ["Look-ahead plans", "Short-term plans the site team can work from."],
+        ["Delay analysis", "What slipped, why, and what it means for completion."]]},
+      "cta": {"title": "Looking for a", "muted": "Planner / Scheduler?"}
+    },
+    {
+      "slug": "document-control", "title": "Document Control", "kind": "role",
+      "seo": {"title": "Hire a Document Controller | HumAIn", "description": "Hire a pre-qualified Document Controller who keeps project documentation controlled, traceable and audit-ready across every party involved."},
+      "header": {"eyebrow": "Expertise · Roles", "title": "Document Control,", "muted": "audit-ready from day one.", "text": "On a complex project the right document at the right revision is half the work. We match you with document controllers who keep every drawing, report and transmittal controlled and traceable."},
+      "split": {"eyebrow": "The role", "title": "The right revision,", "muted": "in the right hands.", "text": "The Document Controller sets up the numbering, workflows and system the project runs on, and makes sure every party works from the current version. We assess candidates on the projects and systems they actually ran.", "bullets": ["One controlled source for every document", "Clear review and approval workflows", "Ready for handover and audit"]},
+      "grid": {"eyebrow": "What they own", "title": "What a Document Controller delivers", "text": "The routines that keep project information controlled and findable.", "cards": [
+        ["Document register", "Every document numbered, owned and tracked."],
+        ["Revision control", "Always clear which version is current."],
+        ["Review workflows", "Comments and approvals routed to the right people."],
+        ["Transmittals", "A traceable record of what went to whom, and when."],
+        ["System setup", "The EDMS configured to how the project works."],
+        ["Handover dossier", "Complete, structured documentation at close-out."]]},
+      "cta": {"title": "Looking for a", "muted": "Document Controller?"}
+    },
+    {
+      "slug": "oil-gas", "title": "Oil & Gas", "kind": "sector",
+      "seo": {"title": "Project Controls Experts for Oil & Gas | HumAIn", "description": "Pre-qualified project delivery and project controls experts for oil and gas projects, from upstream development to brownfield modifications and turnarounds."},
+      "header": {"eyebrow": "Expertise · Sectors", "title": "Oil & Gas,", "muted": "where control is critical.", "text": "Oil and gas projects combine high stakes, strict safety rules and many parties. We put forward project delivery and controls experts who know that environment and have delivered in it."},
+      "split": {"eyebrow": "The sector", "title": "Complex assets,", "muted": "tight margins.", "text": "From greenfield developments to brownfield modifications and turnarounds, every day of delay is expensive. Our experts bring the cost, planning and reporting discipline these projects demand.", "bullets": ["Experience on upstream, midstream and downstream projects", "Used to strict safety and quality regimes", "Controls that hold up with many contractors"]},
+      "grid": {"eyebrow": "Where we help", "title": "Oil & Gas projects we support", "text": "The kinds of projects our experts have delivered in this sector.", "cards": [
+        ["Field developments", "Controls from concept through execution and start-up."],
+        ["Brownfield modifications", "Work on live assets with tight interfaces."],
+        ["Turnarounds and shutdowns", "Short, intense windows where every hour counts."],
+        ["Pipelines and terminals", "Long, multi-party projects with complex logistics."],
+        ["Decommissioning", "Scope, cost and risk for end-of-life assets."],
+        ["Energy transition projects", "Carbon capture, hydrogen and electrification on existing sites."]]},
+      "cta": {"title": "Hiring for an", "muted": "Oil & Gas project?"}
+    },
+    {
+      "slug": "data-centres", "title": "Data Centres", "kind": "sector",
+      "seo": {"title": "Project Controls Experts for Data Centres | HumAIn", "description": "Pre-qualified project delivery and project controls experts for data centre builds, where speed to capacity, power and tight handovers decide success."},
+      "header": {"eyebrow": "Expertise · Sectors", "title": "Data Centres,", "muted": "built against the clock.", "text": "Data centre projects are judged on speed to capacity. We put forward project delivery and controls experts who keep fast-track builds, power and equipment deliveries on schedule."},
+      "split": {"eyebrow": "The sector", "title": "Fast-track delivery,", "muted": "no room for slips.", "text": "Long-lead equipment, grid connections and phased handovers make data centres a planning challenge. Our experts bring the schedule, cost and change control that keep capacity coming online when promised.", "bullets": ["Fast-track and phased delivery experience", "Grip on long-lead equipment and power", "Clear handovers to operations"]},
+      "grid": {"eyebrow": "Where we help", "title": "Data centre projects we support", "text": "The kinds of projects our experts have delivered in this sector.", "cards": [
+        ["Hyperscale campuses", "Multi-phase builds with repeatable delivery."],
+        ["Colocation facilities", "Phased fit-out tied to customer demand."],
+        ["Power and cooling", "Electrical and mechanical scopes on the critical path."],
+        ["Grid connections", "Interfaces with utilities and permits under control."],
+        ["Procurement of long-lead items", "Generators, switchgear and chillers on time."],
+        ["Commissioning and handover", "Integrated testing and a clean handover to operations."]]},
+      "cta": {"title": "Hiring for a", "muted": "data centre project?"}
+    },
+    {
+      "slug": "energy", "title": "Energy", "kind": "sector",
+      "seo": {"title": "Project Controls Experts for Energy | HumAIn", "description": "Pre-qualified project delivery and project controls experts for energy projects: power generation, grids, renewables and storage."},
+      "header": {"eyebrow": "Expertise · Sectors", "title": "Energy,", "muted": "delivered on plan.", "text": "Power generation, grids, renewables and storage: energy projects are large, public and under pressure to deliver. We put forward experts who have delivered them and know what good controls look like there."},
+      "split": {"eyebrow": "The sector", "title": "The energy transition", "muted": "needs delivery discipline.", "text": "Grid capacity, permits and supply chains make energy projects hard to plan. Our experts bring the cost, schedule and risk control that turn ambitious programmes into assets that run.", "bullets": ["Experience on generation, grid and storage projects", "Grip on permits, interfaces and supply chains", "Reporting for public and private stakeholders"]},
+      "grid": {"eyebrow": "Where we help", "title": "Energy projects we support", "text": "The kinds of projects our experts have delivered in this sector.", "cards": [
+        ["Offshore wind", "Large marine programmes with many contractors."],
+        ["Solar and onshore wind", "Portfolio delivery across multiple sites."],
+        ["Grid and substations", "Transmission and distribution upgrades."],
+        ["Battery storage", "Fast-moving projects with tight connection dates."],
+        ["Power generation", "Conventional and new-build plants."],
+        ["Hydrogen", "First-of-a-kind projects with high uncertainty."]]},
+      "cta": {"title": "Hiring for an", "muted": "energy project?"}
+    }
+  ]
+}
