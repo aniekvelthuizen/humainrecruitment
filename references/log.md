@@ -476,3 +476,6 @@ Page Header Opportunity: Buttons row shown only ≤ 767; template Primary Text "
 - 2026-11-16 (Aniek, via Claude): new page `/hire-project-delivery-experts` as a duplicate of Hire an Expert (header and CTA title + SEO changed); nav «Hire project delivery experts» repointed. Published to staging; same sections as /hire-an-expert, one h1, nav text → href checked. Record: `decisions/pages/hire-project-delivery-experts.md`.
 - 2026-11-16 (Aniek, via Claude): `/hire-project-delivery-experts` copy rewritten for project delivery (header text, Sticky Steps, Stagger Cards, CTA text); facts, pricing and reviews unchanged. Published to staging, all new texts present.
 - 2026-11-16 (Aniek, via Claude): active-page arrow removed from the main nav bar links, kept in dropdowns (owner). Nav state CSS embed (`a4e65ea1-…`) updated from `references/embeds/nav-state-style.html`, read back identical, published to staging; checked on /clients. Record: `decisions/components/nav.md`.
+
+## 2026-11-16 — Opportunities dummy content (Aniek Velthuizen, via Claude)
+All 12 Opportunities items now have intro, summary and four detail texts (English dummy copy). See `decisions/cms.md`, 2026-11-16. Published to staging.
