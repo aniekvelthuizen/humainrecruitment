@@ -160,3 +160,6 @@ How: one rule in the Nav state CSS embed (`a4e65ea1-…10db`, source `references
 
 ## 2026-11-16 — Roles and sectors get their own pages (Aniek Velthuizen, via Claude)
 Replaces the placeholder targets of 2026-10-29 «Link targets». The six roles and three sectors in the Expertise dropdown link to their own static pages (`/project-director` … `/energy`), URL links like the rest of the nav. Details: `decisions/pages/expertise.md`.
+
+## 2026-11-16 — «Hire project delivery experts» gets its own page (Aniek Velthuizen, via Claude)
+The For business › Hiring link «Hire project delivery experts» now goes to `/hire-project-delivery-experts` (same build-up as `/hire-an-expert`). «How we select» stays on `/project-delivery-experts`. Details: `decisions/pages/hire-project-delivery-experts.md`.
